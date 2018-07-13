@@ -1,0 +1,92 @@
+# Useless folders and files cleaner by Jjck (+ Some1CP, Plailect, xHR)
+# Use only if you on B9S and Luma 8.0 +
+# Updated 22.02.2018
+
+#Copy luma3ds to CTRNAND
+rm -o -s 1:/rw/luma
+rm -o -s 1:/arm9loaderhax.bin
+cp -w -n 0:/luma 1:/rw/luma
+cp -w -n 0:/boot.firm 1:/boot.firm
+
+# A9LH
+
+set SUCCESSMSG "Cleanup completed successfully"
+set ERRORMSG "Cleanup failed"
+
+# allow SD modifications
+allow -a 0:/
+
+# A9LH 
+rm -o -s 0:/a9lh 
+rm -o -s 0:/files9
+
+# Otherapp 
+rm -o -s 0:/hblauncher_loader
+rm -o -s 0:/otherapp.bin
+
+# Installed .cias
+rm -o -s 0:/cias
+rm -o -s 0:/Homebr3w/Cache
+
+# Old .bin files 
+rm -o -s 0:/luma/payloads/GodMode9.bin
+rm -o -s 0:/arm9.bin
+rm -o -s 0:/arm9loaderhax.bin
+rm -o -s 0:/arm11.bin
+
+# Useless logs and dumps
+rm -o -s 0:/lumaupdater.log
+rm -o -s 0:/Decrypt9.log
+rm -o -s 0:/Hourglass9.log
+rm -o -s 0:/luma/dumps
+
+# Luma Updater backups
+rm -o -s 0:/boot.firm.bak
+rm -o -s 1:/boot.firm.bak
+
+# LFCS_B on SD 
+rm -o -s 0:/LocalFriendCodeSeed_B
+
+# Themely useless files
+rm -o -s 0:/3ds/Themely
+
+# Soundhax
+rm -o -s 0:/soundhax*.m4a
+rm -o -s 0:/otherapp.bin
+rm -o -s 0:/3ds/safehax.3dsx
+rm -o -s 0:/3ds/udsploit.3dsx
+rm -o -s 0:/safehaxpayload.bin
+
+# DSiWareHax
+rm -o -s 0:/public.sav
+rm -o -s 0:/boot.nds
+rm -o -s 0:/savedata
+rm -o -s 0:/sudoku_v0.app
+rm -o -s 0:/4swords.app
+
+# ntrboot_flasher
+rm -o -s 0:/luma/payloads/ntrboot_flasher.firm
+rm -o -s 0:/ntrboot
+rm -o -s 0:/ntrboot.firm
+
+# boot9strap
+rm -o -s 0:/luma/payloads/start_SafeB9SInstaller.bin
+rm -o -s 0:/boot9strap
+
+# gm9
+rm -o -s $[GM9OUT]
+
+# FBI 
+rm -o -s 0:/fbi/lasturls
+
+#Common files
+rm -o -s 0:/boot9strap
+rm -o -s 0:/cias
+rm -o -s 0:/gm9/scripts/setup_ctrnand_luma3ds.gm9
+rm -o -s "0:/gm9/scripts/Clean Setup Files.gm9"
+rm -o -s "0:/gm9/scripts/finalization.gm9"
+rm -o -s 0:/Badges
+rm -o -s 0:/*.log
+rm -o -s 0:/luma/payloads/*.bin
+rm -o -s 1:/rw/luma/payloads/*.bin
+rm -o -s 1:/*.log
