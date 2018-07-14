@@ -16,9 +16,11 @@ author_profile: true
 
 # Инструкция
 
-Для перемещения по меню используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
-1. Запустите пейлоад hekate с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+	Для перемещения по меню hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	{: .notice--info}
+	
 1. Перейдите в меню "Tools"
 1. Выберите "Dump package 1/2"
 	* Дождитесь окончания резервного копирования 

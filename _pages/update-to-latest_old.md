@@ -26,7 +26,7 @@ author_profile: true
 	* [FEX](https://fex.net/674993139076?fileId=586334025){:target="_blank"}
 * Свежая версия [ChoiDujour](https://switchtools.sshnuke.net/){:target="_blank"}
 * Свежая версия [memloader](https://switchtools.sshnuke.net/){:target="_blank"}
-* Свежая версия [brickmii](https://switchtools.sshnuke.net/){:target="_blank"}
+* Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
 * Свежая версия [Etcher](https://github.com/resin-io/etcher/releases/latest){:target="_blank"} для вашей платформы (для Windows - **exe x86**)
 * Свежая версия [HacDiskMount](https://switchtools.sshnuke.net/){:target="_blank"}
 
@@ -41,9 +41,9 @@ author_profile: true
 
 ## Часть II - Проверка количества сожжённых предохранителей
 
-1. Запустите пейлоад hekate с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
-	Для перемещения по меню используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	Для перемещения по меню hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
 
 1. Перейдите в меню "Console info..." -> "Print fuse info"
@@ -246,23 +246,23 @@ author_profile: true
 1. Перейдите в папку `NX-5.1.0`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `microSD` на смонтированный диск с заменой
 1. Перейдите в "Мой компьютер", вызовите контекстное меню на смонтированном диске и выберите "Извлечь"
 1. Выключите Switch, зажав кнопку (POWER) на 15 секунд, пока подсветка экрана не отключится
-1. Запустите пейлоад hekate с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
-	Для перемещения по меню используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	Для перемещения по меню hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
 
 1. Выберите "Launch firmware" -> "FS_510"
 1. Приставка должна загрузиться в меню приставки, если вы решили сохранить данные, либо в меню начальной настройки, если выбрали инициализацию. 
 1. Отключите приставку 
-1. Запустите пейлоад [brickmii](https://switchtools.sshnuke.net/){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
-1. На Switch откроется окно программы "brickmii" - эта программа создана для контроля режима AutoRCM 
+1. Запустите пейлоад [briccmii](https://switchtools.sshnuke.net/){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. На Switch откроется окно программы "briccmii" - эта программа создана для контроля режима AutoRCM 
 
 	AutoRCM - на консоли специальным образом портится BOOT0, вследствие чего консоль не может загрузиться прямо в систему и загружается автоматически в режим RCM. Достаточно просто включить консоли и она автоматически попадёт в режим восстановления. Не нужно зажимать комбинацию кнопок и использовать замыкатель!
 	{: .notice--info}
 
 1. Нажмите (VOL+) для отключения AutoRCM
 1. Нажмите (POWER) для перезагрузки консоли в режим RCM 
-1. Снова передайте пейлоад brickmii на консоль  
+1. Снова передайте пейлоад briccmii на консоль  
 1. Нажмите (VOL-) для включения AutoRCM
 1. Нажмите (POWER) для перезагрузки консоли в режим RCM 
 
