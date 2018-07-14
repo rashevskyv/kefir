@@ -1,6 +1,6 @@
 ---
 permalink: /atmos-games.html
-title: Использование FTP
+title: Запуск игр с помощью LayeredFS
 author_profile: true
 ---
 {% include toc title="Разделы" %}
