@@ -17,7 +17,6 @@ author_profile: true
 
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Свежая версия пейлоада [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
-* Свежая версия пейлоада [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
 * [Ключи](/files/keys.zip){:target="_blank"}, одинаковые для всех консолей
 * Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
 
@@ -34,7 +33,7 @@ author_profile: true
 
 1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
-	Для перемещения по меню hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
 	
 1. Перейдите в меню "Console info..." -> "Print fuse info"
@@ -66,7 +65,7 @@ author_profile: true
 	
 1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}, имея ввиду, что после выключения консоли вы автоматически попадаете в режим RCM 
 
-	Для перемещения по меню hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
 	
 1. Перейдите в "Launch firmware" 

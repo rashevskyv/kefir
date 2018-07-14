@@ -18,7 +18,7 @@ author_profile: true
 
 1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
-	Для перемещения по меню hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
 	
 1. Перейдите в меню "Tools"
