@@ -1,82 +1,26 @@
 # main links links
 main:
-  - title: "<b>Прошивка<br>WiiU, PS4</b>"
+  - title: "<b>Прошить<br>приставку</b>"
     url: http://customfw.xyz
   - title: "<i>Купить<br>прошитую</i>"
     url: https://3dscfw.olx.ua/
-  - title: "Проблемы и<br>их решения"
-    url: /troubleshooting
+  - title: "Кастомная<br>прошивка"
+    url: /launch-cfw
   - title: "FAQ"
     url: /faq
-  - title: "Установка<br>игр"
-    url: /games
-  - title: "Полезные<br>инструкции"
-    url: /addons
-  - title: "Обновление<br>Luma3DS"
-    url: /update-luma3ds
-  - title: "Переход с<br>a9lh на b9s"
-    url: /a9lh-to-b9s
-  - title: "NTRBoot"
-    url: /ntrboot
-  - title: "Хардмод"
-    url: /making-hardmod
-  - title: "Список ПО"
-    url: /soft
-  - title: "Freeshop"
-    url: /freeshop
-  - title: "Обновление<br>b9s"
-    url: /updating-b9s
-  - title: "Интеграция<br>FBI"
-    url: /fbi
-  - title: "Навигация по сайту"
+  - title: "Запуск<br>HBL"
+    url: /launch-hbl
+  - title: "Fusée<br>Gelée"
+    url: /fusee-gelee
+  - title: "Безопасное обновление<br>прошивки"
+    url: /update-to-latest
+  - title: "Резервное<br>копирование"
+    url: /backup-nand
+  - title: "Навигация<br>по сайту"
     url: /site-navigation
   - title: "Пожертвования"
     url: /donations
-  - title: "Благодарности"
-    url: /credits               
             
-addons:
-  - title: "FAQ для непрошитых"
-    url: /faq
-  - title: "FAQ для прошитых"
-    url: /faq-3ds
-  - title: "Установка freeshop"
-    url: /freeshop
-  - title: "Установка приложений и игр"
-    url: /games
-  - title: "Использование читов"
-    url: /cheats
-  - title: "Использование картриджа r4isdhc.com"
-    url: /r4
-  - title: "Установка и использование тем"
-    url: /themes
-  - title: "Установка и использование жетонов"
-    url: /badges
-  - title: "Обновление системного ПО"
-    url: /update-system
-  - title: "Обновление Luma3DS"
-    url: /update-luma3ds
-  - title: "Обновление b9s"
-    url: /updating-b9s
-  - title: "Переход с a9lh на b9s"
-    url: /a9lh-to-b9s
-  - title: "Использование GodMode9"
-    url: /godmode9-usage
-  - title: "Конвертация 3DS-ромов в CIA"
-    url: /godmode9-usage#конвертация-из-3ds-в-cia
-  - title: "Создание, редактирование и восстанавление резервных копий сохранения игр (англ.)"
-    url: https://gbatemp.net/threads/release-jks-savemanager-Homebrew-cia-save-manager.413143/
-  - title: "Эмуляция языка и региона в Luma3DS"
-    url: /lumalocales
-  - title: "Смена региона"
-    url: /region-changing
-  - title: "DSi / DS игры не работают после завершения руководства"
-    url: /troubleshooting#dsi--ds-игры-не-работают-после-завершения-руководства
-  - title: "Форматирование приставки или SD-карты"
-    url: /clean_sd
-    
 bottom:
-  - title: <div class="notice--warning">Гайд находится в процессе написания! Некоторых статей может не быть, а некоторые могут содержить ошибки и неточности! </div>
-  - title: Если вам помогло или просто понравилось это руководство, то я принимаю <a href="/donations" target="_blank">пожертвования</a> на карту Visa, или Bitcoin.
-  - title: По вопросам, касающимся взлома обращайтесь в <a href="https://vk.com/3ds_cfw" target="_blank">группу в вконтакте</a>, <a href="https://discord.gg/h2s4aP7" target="_blank">Discord</a> или <a href="https://t.me/homebrew_group" target="_blank">Telegram</a><br>Об ошибках и неточностях просьба писать в <a href="https://vk.com/3ds_cfw" target="_blank">группу руководства</a>, <a href="https://discord.gg/VKYYWmY" target="_blank">Discord</a> или в <a href="https://t.me/rashevskyv" target="_blank">Telegram</a>.
-  - title: Для использования <a href="https://en.wikipedia.org/wiki/Magnet_URI_scheme" target="_blank">magnet</a>-ссылок в этом руководстве необходим torrent-клиент, например <a href="http://dev.deluge-torrent.org/wiki/Download" target="_blank">Deluge</a><br>Для работы с файлами формата <code class="highlighter-rouge">.7z</code>, <code class="highlighter-rouge">.zip</code>, <code class="highlighter-rouge">.rar</code> используйте архиватор, например <a href="http://www.7-zip.org/" target="_blank">7-Zip</a> или <a href="https://theunarchiver.com/" target="_blank">The Unarchiver</a>. Соглашайтесь на замену файлов по запросу, если не указано иное. Если в гайде сказано что-то скопировать в папку, на на вашей SD-карте такой папки нет - создайте её!
+  - title: Если вам помогло или просто понравилось это руководство, то я принимаю <a href="/donations" target="_blank">пожертвования</a>
+  - title: По вопросам, касающимся взлома обращайтесь в <a href="https://vk.com/3ds_cfw" target="_blank">группу в вконтакте</a> или <a href="https://t.me/homebrew_group" target="_blank">Telegram</a><br>Об ошибках и неточностях просьба писать в <a href="https://vk.com/3ds_cfw" target="_blank">группу руководства</a> или в <a href="https://t.me/rashevskyv" target="_blank">Telegram</a>.

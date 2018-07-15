@@ -28,6 +28,6 @@ author_profile: true
 {: .notice--info}
 
 [![3ds_CFW]({{ "/images/donate/3ds_cfw.png" | absolute_url }}){:target="_blank"}{:height="64px" width="256px"}{: style="padding-bottom: .35em"}](http://vk.com/3ds_cfw){: .align-center}
-Перевод делался для группы [VK:3ds_CFW](http://vk.com/3ds_cfw){:target="_blank"}
+Гайд составлялся для группы [VK:3ds_CFW](http://vk.com/3ds_cfw){:target="_blank"}
 {: .text-center}
 {: .notice--info}
