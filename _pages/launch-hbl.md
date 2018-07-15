@@ -25,6 +25,14 @@ Homebrew Launcher (HBL) - среда для запуска самописных 
 
 ### Запуск HBL из SX OS
 
+#### Подготовительные работы
+
+1. Выключите Switch и вставьте его карту памяти в ПК 
+1. Скопируйте содержимое `.zip`-архива [SDFilesSwitch](https://github.com/tumGER/SDFilesSwitch/releases/latest){:target="_blank"} в корень карты памяти
+1. Вставьте карту памяти в консоль и [запустите SX OS](sxos){:target="_blank"}
+
+#### Запуск HBL
+
 1. Зажмите (R) и запустите Альбомы
 
 ## Часть II - Работа с HBL
