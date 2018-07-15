@@ -14,6 +14,7 @@ author_profile: true
 * [Игры](https://drive.google.com/drive/folders/1R28dVaYEkpd6mgK_arcQy26LHBC-0o48){:target="_blank"} в формате XCI 
 	* [Ещё](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"}
 * Игры в формате NSP
+* [Лицензия на SX OS или SX OS Pro](https://team-xecuter.com/where-to-buy/){:target="_blank"}
 
 # Установка и запуск игр в формате XCI 
 

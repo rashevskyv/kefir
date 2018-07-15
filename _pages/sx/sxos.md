@@ -14,6 +14,7 @@ SX OS - коммерческая система и требует покупки
 ## Что понадобится 
 
 * [boot.dat](https://sx.xecuter.com/download/SXOS_v1.3.zip){:target="_blank"} SX OS
+* [Лицензия на SX OS или SX OS Pro](https://team-xecuter.com/where-to-buy/){:target="_blank"}
 * Умение [вводить консоль в режим восстановления (RCM)](fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm){:target="_blank"}
 * Донгл, либо лицензия на SX OS
 * Для запуска без донгла: [payload.bin](https://sx.xecuter.com/download/payload.bin){:target="_blank"}
