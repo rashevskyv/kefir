@@ -11,16 +11,12 @@ author_profile: true
 
 ## Что понадобится 
 
-* Свежая версия [SDFilesSwitch](https://github.com/tumGER/SDFilesSwitch/releases/latest){:target="_blank"}
 * Свежая версия пейлоада [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
 
 ## Инструкция
 
 ### Запуск Atmosphere 
 
-1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Скопируйте содержимое `.zip`-архива SDFilesSwitch в корень карты памяти
-1. Вставьте карту памяти обратно в консоль
 1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
