@@ -23,6 +23,7 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Свежая версия пейлоада [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
 * [Ключи](/files/keys.zip){:target="_blank"}, одинаковые для всех консолей
+* Модуль системы [FS_510_exfat_nogc.kip1](files/fs510.zip){:target="_blank"}
 * Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
 
 # Инструкция
@@ -76,6 +77,7 @@ author_profile: true
 	{: .notice--info}
 	
 1. Выключите Switch и вставьте его карту памяти в ПК 
+1. Скопируйте в крень карты памяти файл `FS_510_exfat_nogc.kip1` из `.zip`-архива "fs510.zip"
 1. Откройте `hekate_ipl.ini` с помощью блокнота
 1. Добавьте строку `kip1=FS_510_exfat_nogc.kip1` в блок "[LayeredFS + Clear Log]" сразу перед строкой "atmosphere=1"	
 	* Должно получиться так: 
