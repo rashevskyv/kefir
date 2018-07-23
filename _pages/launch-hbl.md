@@ -19,7 +19,7 @@ Homebrew Launcher (HBL) - среда для запуска самописных 
 {: .text-center}
 {: .notice--info}
 
-### Запуск HBL из Atmosphere 
+### Запуск HBL из ReiNX или Atmosphere 
 
 1. Запустите Альбомы
 
