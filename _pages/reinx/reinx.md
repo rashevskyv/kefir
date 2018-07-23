@@ -33,7 +33,7 @@ ___
 
 # [Запуск Homebrew Launcher](launch-hbl#запуск-hbl-из-reinx-или-atmosphere)
 {: .notice--success}
-# [Запуск игр](nxshop)
+# [Запуск игр](reinx-games)
 {: .notice--success}
 # [Полезные инструкции](addons)
 {: .notice--success}
