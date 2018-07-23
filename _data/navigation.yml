@@ -4,8 +4,10 @@ main:
     url: http://customfw.xyz
   - title: "<i>Купить<br>прошитую</i>"
     url: https://3dscfw.olx.ua/
-  - title: "Кастомная<br>прошивка"
+  - title: "Кастомные<br>прошивки"
     url: /launch-cfw
+  - title: "Полезные<br>инструкции"
+    url: /addons
   - title: "NXShop"
     url: /nxshop
   - title: "FAQ"
@@ -24,6 +26,24 @@ main:
     url: /donations
   - title: "Благодарности"
     url: /credits
+
+addons:
+  - title: "FAQ"
+    url: /faq
+  - title: "Установка NXShop"
+    url: /nxshop
+  - title: "Безопасное обновление прошивки"
+    url: /update-to-latest
+  - title: "Резервное копирование NAND"
+    url: /backup-nand
+  - title: "Запуск пейлоадера через Fusée Gelée"
+    url: /fusee-gelee
+  - title: "Запуск Homebrew Launcher"
+    url: /launch-hbl
+  - title: "Кастомные прошивки"
+    url: /launch-cfw
+  - title: "Активация AutoRCM"
+    url: /autorcm
             
 bottom:
   - title: Если вам помогло или просто понравилось это руководство, то я принимаю <a href="/donations" target="_blank">пожертвования</a>

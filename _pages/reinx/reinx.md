@@ -35,3 +35,7 @@ ___
 {: .notice--success}
 # [Запуск игр](nxshop)
 {: .notice--success}
+# [Полезные инструкции](addons)
+{: .notice--success}
+# [Активация AutoRCM](autorcm)
+{: .notice--success}

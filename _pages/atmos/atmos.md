@@ -40,3 +40,7 @@ ___
 {: .notice--success}
 # [Запуск игр с помощью LayeredFS](atmos-games)
 {: .notice--success}
+# [Полезные инструкции](addons)
+{: .notice--success}
+# [Активация AutoRCM](autorcm)
+{: .notice--success}
