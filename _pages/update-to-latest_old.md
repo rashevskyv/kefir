@@ -18,7 +18,7 @@ author_profile: true
 * Включите [отображение расширений файлов](file-extensions-windows){:target="_blank"}, если у вас Windows
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Приставка должна быть полностью заряжена!
-* Свежая версия пейлоада [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
+* Свежая версия пейлоада {% include inc/hekate.txt %}
 * [Ключи](/files/keys.zip){:target="_blank"}, одинаковые для всех консолей
 * Прошивка 5.1.0:
 	* [ЯД](https://yadi.sk/d/F1jy8lin3Z2fgQ){:target="_blank"}
@@ -41,7 +41,7 @@ author_profile: true
 
 ## Часть II - Проверка количества сожжённых предохранителей
 
-1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
@@ -246,7 +246,7 @@ author_profile: true
 1. Перейдите в папку `NX-5.1.0`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `microSD` на смонтированный диск с заменой
 1. Перейдите в "Мой компьютер", вызовите контекстное меню на смонтированном диске и выберите "Извлечь"
 1. Выключите Switch, зажав кнопку (POWER) на 15 секунд, пока подсветка экрана не отключится
-1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}

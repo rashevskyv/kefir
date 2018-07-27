@@ -10,13 +10,13 @@ author_profile: true
 
 # Что понадобится
 
-* Свежая версия пейлоада [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
+* Свежая версия пейлоада {% include inc/hekate.txt %}
 * Работающая microSD с не менее чем 32 Гб свободного места, вставленная в Switch в формате exFAT 
 * Свежая версия пейлоада [biskeydump](https://switchtools.sshnuke.net/){:target="_blank"}
 
 # Инструкция
 
-1. Запустите пейлоад [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
