@@ -8,8 +8,8 @@ main:
     url: /launch-cfw
   - title: "Полезные<br>инструкции"
     url: /addons
-  - title: "NXShop"
-    url: /nxshop
+  - title: "FreeshopNX"
+    url: /freeshopnx
   - title: "FAQ"
     url: /faq
   - title: "Запуск<br>HBL"
@@ -30,8 +30,8 @@ main:
 addons:
   - title: "FAQ"
     url: /faq
-  - title: "Установка NXShop"
-    url: /nxshop
+  - title: "Установка FreeshopNX"
+    url: /freeshopnx
   - title: "Безопасное обновление прошивки"
     url: /update-to-latest
   - title: "Резервное копирование NAND"
