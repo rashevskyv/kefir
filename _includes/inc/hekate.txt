@@ -1,1 +1,1 @@
-[hekate от rajkosto](https://github.com/rajkosto/hekate/releases/latest){:target="_blank"}
+[hekate_fspatches от rajkosto](https://github.com/rajkosto/hekate/releases/latest){:target="_blank"}
