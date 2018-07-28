@@ -44,6 +44,10 @@ addons:
     url: /launch-cfw
   - title: "Активация AutoRCM"
     url: /autorcm
+  - title: "Закачка игр в формате NSP с помощью CDNSP GUI"
+    url: /download-nsp
+  - title: "Использование FTP"
+    url: /ftp
             
 bottom:
   - title: Если вам помогло или просто понравилось это руководство, то я принимаю <a href="/donations" target="_blank">пожертвования</a>

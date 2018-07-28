@@ -44,4 +44,4 @@ author_profile: true
 	* В меню "Download" -> "Select download location" можно выбрать папку, в которую будут складываться загруженные образы игр
 	* В меню "Options" выберите "Enable shorten name", чтобы при сохранении играм давались короткие имена, что позволит избежать ошибок в дальнейшем при установке
 	* В меню "Options" выберите "Disable Tinfoil Download"
-		* Если у вас в опциях "Disable Tinfoil Download", ничего нажимать не нужно	
+		* Если у вас в опциях "Enable Tinfoil Download", ничего нажимать не нужно	
