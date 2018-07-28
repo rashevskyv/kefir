@@ -34,7 +34,6 @@ author_profile: true
 	kip1=modules/oldlayered/loader.kip
 	kip1=modules/oldlayered/sm.kip
 	kip1=modules/oldlayered/fs_mitm.kip
-	kip1=modules/sys-ftpd.kip
 	kip1patch=nogc,nosigchk
 	atmosphere=1
 {% endhighlight %}
