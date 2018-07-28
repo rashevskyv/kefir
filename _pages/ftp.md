@@ -5,38 +5,27 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+Эта прогамма нужна для того, чтобы закидывать в приставку файлы не вынимая карты памяти. Скорость закачки в таком случае будет сильно меньше, но не придется перезапускать консоль и, как следствие, кастомную прошивку
+
 # Что понадобится
 
-* Запущенная CFW - [Atmosphere](atmos){:target="_blank"} или [SX OS](sxos){:target="_blank"}
+* Запущенная [CFW](launch-cfw){:target="_blank"}
+* Настроенный и работающий [Homebrew Launcher](launch-hbl){:target="_blank"}
+* Свежая версия [ftpd](https://github.com/WinterMute/ftpd/releases/latest){:target="_blank"}
 
 # Инструкция
 
-## Часть I - Запуск HBL
+## Часть I - Установка программы 
 
-Homebrew Launcher (HBL) - среда для запуска самописных приложений для Switch. 
+1. Выключите Switch и вставьте его карту памяти в ПК 
+1. Скопируйте `.nro`-файл ftpd в папку `switch` в корне карты памяти приставки
+1. Вставьте карту памяти в приставку и запустите [CFW](launch-cfw){:target="_blank"} 
 
-### Запуск HBL из Atmosphere 
+### Часть III - подключение к FTP-серверу 
 
-1. Запустите Альбомы
+Ваш IP-адрес будет показан на экране консоле в верхней строке
 
-### Запуск HBL из SX OS
-
-1. Зажмите (R) и запустите Альбомы и нажмите
-
-## Часть II - Работа с HBL
-
-1. Для установки приложений хоумбрю просто скопируйте файл .nro в папку /switch/ на SD-карте.
-	* Помните, что при извлечении карты памяти приставка перезагрузится и вам, после того, как вы скопируете приложения на карту и вставите её в Switch, снова придётся запускать CFW. Используйте [доступ по FTP](ftp){:target="_blank"}, чтобы избежать этого.
-1. Список доступных приложений ищите в [Switch Appstore](https://www.switchbru.com/appstore/#/){:target="_blank"}
-
-## Список полезных приложений 
-
-* [Homebrew Appstore](https://www.switchbru.com/appstore/#/app/appstore){:target="_blank"} - магазин приложений
-* [FTPD](https://www.switchbru.com/appstore/#/app/ftpd){:target="_blank"} - FTP-клиент
-* [Edizon](https://www.switchbru.com/appstore/#/app/Edizon){:target="_blank"} - программа для резервного копирования сохранений
-* [NX-shell](https://www.switchbru.com/appstore/#/app/NX-shell){:target="_blank"} - многофункциональный файловый менеджер 
-* [SDFileUpdater](https://www.switchbru.com/appstore/#/app/SDFileUpdater){:target="_blank"} - программа для обновления файлов Atmosphere на карте памяти
-* [Эмуляторы](https://www.switchbru.com/appstore/#/category/emulators){:target="_blank"} - богатый список эмуляторов ретро-консолей
+Подключитесь к серверу с адресом `указанный-ip:5000` любым удобным для вас способом. 
 
 ___
 
