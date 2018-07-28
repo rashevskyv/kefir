@@ -1,9 +1,10 @@
---
+---
 permalink: /download-nsp.html
 title: Закачка игр в формате NSP с помощью CDNSP GUI
 author_profile: true
 ---
 {% include toc title="Разделы" %}
+
 
 ### Что понадобится
 
