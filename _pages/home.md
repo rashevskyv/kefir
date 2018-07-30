@@ -7,7 +7,7 @@ header:
   overlay_image: images/home-page-feature.jpg
   overlay_filter: 0.5
   caption:
-excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 28 июля 2018'
+excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 30 июля 2018'
 ---
 
 {% include toc title="Разделы" %}
