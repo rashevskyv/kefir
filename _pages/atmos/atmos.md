@@ -22,20 +22,20 @@ author_profile: true
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
 1. Скопируйте содержимое `.zip`-архива [SDFilesSwitch](https://github.com/tumGER/SDFilesSwitch/releases/latest){:target="_blank"} в корень карты памяти
-1. Скопируйте содержимое `.zip`-архива [с изменённым модулем es-sysmodule](https://github.com/tumGER/SDFilesSwitch/releases/latest){:target="_blank"} в корень карты памяти
+1. Скопируйте содержимое `.zip`-архива [с изменённым модулем es-sysmodule](files/es-sysmodule.zip){:target="_blank"} в корень карты памяти
 	* Проверьте, что в папке `atmosphere/titles` есть папка `0100000000000033`
 1. Откройте `hekate_ipl.ini` с помощью блокнота
 1. Создайте новый блок сразу после блока `[Config]` со следующим содержимым, затем вставьте карту обратно в консоль:
 
 {% highlight markdown %}
 
-	[CFW + Sig Patches + Clear Log]
-	kip1=modules/nx-dreport.kip
-	kip1=modules/oldlayered/loader.kip
-	kip1=modules/oldlayered/sm.kip
-	kip1=modules/oldlayered/fs_mitm.kip
-	kip1patch=nogc,nosigchk
-	atmosphere=1
+[CFW + Sig Patches + Clear Log]
+kip1=modules/nx-dreport.kip
+kip1=modules/oldlayered/loader.kip
+kip1=modules/oldlayered/sm.kip
+kip1=modules/oldlayered/fs_mitm.kip
+kip1patch=nogc,nosigchk
+atmosphere=1
 {% endhighlight %}
 	
 ![]({{ base_path }}/images/screenshots/hekate_settings_patched.png) 
