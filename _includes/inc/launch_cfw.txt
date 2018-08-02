@@ -1,0 +1,25 @@
+# Что понадобится 
+
+* Умение [вводить консоль в режим восстановления (RCM)](fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm){:target="_blank"}
+* Свежая версия пейлоада {% include inc/hekate.txt %}
+* Свежая версия [SDFiles от rashevskyv](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+
+# Инструкция
+
+## Подготовительные работы 
+
+1. Выключите Switch и вставьте его карту памяти в ПК 
+1. Скопируйте содержимое `.zip`-архива [SDFiles от rashevskyv](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} в корень карты памяти с заменой
+
+## Запуск {{ include.cfw }}
+
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+
+	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	{: .notice--info}
+	
+1. На экране приставки выберите **{{ include.hekname }}**
+	* Если вы делали безопасное обновление прошивки с прошивки ниже, чем 4.0.0, то выберите **{{ include.hekname }} + nogc**
+
+Обратите внимание, что при выборе **{{ include.hekname }} + nogc** у вас перестанет работать слот картриджа на прошивке 5.1.0. Это не ошибка, это сделано намеренно, чтобы не дать прошивке слота вашего картриджа обновиться! 
+{: .notice--warning}

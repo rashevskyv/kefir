@@ -12,8 +12,7 @@ author_profile: true
 # Подготовительные работы
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Скопируйте содержимое `.zip`-архива [SDFilesSwitch](https://github.com/tumGER/SDFilesSwitch/releases/latest){:target="_blank"} в корень карты памяти
-	* Если вы делали [безопасное обновление системы](update-to-latest){:target="_blank"} с прошивки ниже. чем 4.0.0, ничего копировать не нужно! Заменив файл `hekate_ipl.ini` вы не сможете сохранить работоспособность вашего слота для картриджей на прошивках ниже, чем 4.0.0 (подробнее в разделе о [безопасном обновлении системы](update-to-latest){:target="_blank"})
+1. Скопируйте содержимое `.zip`-архива [SDFiles от rashevskyv](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} в корень карты памяти
 1. Вставьте карту памяти в консоль и запустите [выбранный кастом](launch-cfw){:target="_blank"}
 
 # Инструкция
@@ -22,14 +21,21 @@ author_profile: true
 
 Homebrew Launcher (HBL) - среда для запуска самописных приложений для Switch. 
 
-1. Запустите Альбом, чтобы попасть в HBL
+Запустите Альбом, чтобы попасть в HBL
 
 	![]({{ base_path }}/images/screenshots/gallery.jpg) 
 	{: .text-center}
 	{: .notice--info}
+
+**Для пользователей [ReiNX](reinx){:target="_blank"}**
+1. Запустите Альбом, чтобы попасть в HBL
 	
-**Для пользователей [SX OS 1.4](#обновление-sx-os){:target="_blank"} и выше:**
+**Для пользователей [SX OS 1.4](sxos#обновление-sx-os){:target="_blank"} и выше:**
 1. С помощью (R) листайте на вкладку HOMEBREW 
+
+**Для пользователей [Atmosphere](atmos){:target="_blank"}**
+1. Зажмите кнопку (R) и не отпуская её запустите Альбомы
+
 
 ## Часть II - Работа с HBL
 

@@ -9,11 +9,16 @@ author_profile: true
 
 * Не выходите онлайн с запущенной пиратской игрой - чревато баном 
 * Игру можно обновить через eShop, но я крайне не рекомендую этого делать. Рекомендация не выходить в интернет по прежнему актуальна
-* Обновление игры можно скачать в формате NSP и установить [вручную](#с-помощью-sx-os){:target="_blank"}
+* Обновление игры в формате XCI можно скачать в формате NSP и установить [вручную](#способ_ii_-_вручную){:target="_blank"}
 
 # Что понадобится
 
+* Настроенная и работающая [SX OS](sxos){:target="_blank"}
 * [Лицензия на SX OS или SX OS Pro](https://team-xecuter.com/where-to-buy/){:target="_blank"}
+* Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
+* [Devmenu](files/devmenu.zip){:target="_blank"} (опционально)
+* [Игры в формате NSP](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
+	* Так же можно качать с серверов Nintendo [этим способом](sxos-games#часть-ii---закачка-игр-в-формате-nsp){:target="_blank"}
 
 ## Игры 
 
