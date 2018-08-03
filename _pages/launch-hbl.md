@@ -23,9 +23,9 @@ Homebrew Launcher (HBL) - среда для запуска самописных 
 
 Запустите Альбом, чтобы попасть в HBL
 
-	![]({{ base_path }}/images/screenshots/gallery.jpg) 
-	{: .text-center}
-	{: .notice--info}
+![]({{ base_path }}/images/screenshots/gallery.jpg) 
+{: .text-center}
+{: .notice--info}
 
 **Для пользователей [ReiNX](reinx){:target="_blank"}**
 1. Запустите Альбом, чтобы попасть в HBL
