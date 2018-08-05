@@ -12,7 +12,7 @@ author_profile: true
 # Подготовительные работы
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Скопируйте содержимое `.zip`-архива [SDFiles от rashevskyv](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} в корень карты памяти
+1. Скопируйте содержимое `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} в корень карты памяти
 1. Вставьте карту памяти в консоль и запустите [выбранный кастом](launch-cfw){:target="_blank"}
 
 # Инструкция
