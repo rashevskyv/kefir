@@ -1,1 +1,1 @@
-[hekate_fspatches от rajkosto](https://github.com/rajkosto/hekate/releases/latest){:target="_blank"}
+`hekate.bin` из `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
