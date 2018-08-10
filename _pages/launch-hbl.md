@@ -8,6 +8,7 @@ author_profile: true
 # Что понадобится
 
 * [Запущенная CFW](launch-cfw){:target="_blank"}
+* Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 
 # Подготовительные работы
 
@@ -27,7 +28,7 @@ Homebrew Launcher (HBL) - среда для запуска самописных 
 {: .text-center}
 {: .notice--info}
 
-**Для пользователей [ReiNX](reinx){:target="_blank"}**
+**Для пользователей [ReiNX](reinx){:target="_blank"} и [RajNX](rajnx){:target="_blank"}**
 1. Запустите Альбом, чтобы попасть в HBL
 	
 **Для пользователей [SX OS 1.4](sxos#обновление-sx-os){:target="_blank"} и выше:**

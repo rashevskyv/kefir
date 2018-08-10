@@ -25,12 +25,6 @@ author_profile: true
 NSP - дампы игр из eShop. Можно выкачать самые последние версии, с DLC. Иным образом обновить игру у вас не получится, поскольку для этого понадобится выйти в eShop, что не безопасно и чревато баном. Обычно занимают меньше места.
 
 {% include inc/install-nsp.txt 
-
-	sxos="" 
-
-	cfw_link="ReiNX](reinx" 
+	cfw_link="Atmosphere](atmos" 
 	
-	cfw="**Homebrew Launcher**
-1. Выберите **RomMenu**" 
-
 %}

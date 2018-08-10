@@ -8,8 +8,7 @@ author_profile: true
 
 ### Что понадобится
 
-* Свежая версия программы [CDNSP GUI](https://darkumbra.net/forums/topic/174904-app-cdnsp-gui-v31-no-setup-needed-simply-double-click-and-use-beginner-friendly-fixed-cert-error-made-in-python-by-bob-rex123a1/?tab=comments#comment-1155841){:target="_blank"}
-	* Для того, чтобы скачать эту программу вам придётся зарегистрироваться на сайте darkumbra.net
+* Свежая версия программы [CDNSP GUI](files/CDNSP-GUI.zip){:target="_blank"}
 * [Python 3.7.0](https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe){:target="_blank"}
 
 #### Часть I - Подготовительные работы

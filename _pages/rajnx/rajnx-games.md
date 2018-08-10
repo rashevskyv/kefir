@@ -29,9 +29,6 @@ NSP - дампы игр из eShop. Можно выкачать самые по�
 
 {% include inc/install-nsp.txt 
 
-	cfw_link="ReiNX](reinx" 
-	
-	cfw="**Homebrew Launcher**
-1. Выберите **RomMenu**" 
+	cfw_link="RajNX](rajnx" 
 
 %}
