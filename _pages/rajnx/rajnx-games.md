@@ -12,7 +12,7 @@ author_profile: true
 
 # Что понадобится
 
-* Настроенная и работающая [ReiNX](reinx){:target="_blank"}
+* Настроенная и работающая [RajNX](rajnx){:target="_blank"}
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * [Devmenu](files/devmenu.zip){:target="_blank"} (опционально)
 * [Игры в формате NSP](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
