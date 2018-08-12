@@ -95,7 +95,7 @@ ___
 
 ___
 
-
+{% comment %} 
 ## [Atmosphere](atmos){:target="_blank"}
 
 Atmosphere - open source проект. Она состоит из пяти основных модулей, каждый из которых наделён своими функциями:
@@ -128,3 +128,10 @@ ___
 | RajNX | ReiNX | SX OS | Atmosphere |
 |:-:|:-:|
 | [![RajNX](/images/rajnx.png)](rajnx) | [![ReiNX](/images/reinx.png)](reinx) | [![SX OS](/images/sxos.png)](sxos) | [![Atmosphere](/images/atmos.png)](atmos) | 
+{% endcomment %}
+
+# Выберите кастомную прошивку
+
+| RajNX | ReiNX | SX OS |
+|:-:|:-:|
+| [![RajNX](/images/rajnx.png)](rajnx) | [![ReiNX](/images/reinx.png)](reinx) | [![SX OS](/images/sxos.png)](sxos) |
