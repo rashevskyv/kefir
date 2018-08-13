@@ -6,7 +6,7 @@
 
 # Инструкция
 
-## Подготовительные работы 
+### Подготовительные работы 
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
 1. Скопируйте содержимое `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} в корень карты памяти с заменой
@@ -14,7 +14,7 @@
 1. {{ include.payload_name }} из `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} - это пейлоад, который вы будете запускать для запуска прошивки с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}. Скопируйте его на ПК.
 1. Вставьте карту в консоль
 
-## Запуск {{ include.cfw }}
+### Запуск {{ include.cfw }}
 
 1. Запустите пейлоад {{ include.payload_name }} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 {{ include.if_hekate }}	
