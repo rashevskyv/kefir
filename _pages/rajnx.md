@@ -1,31 +1,33 @@
 ---
-permalink: /atmos.html
-title: Запуск Atmosphere
+permalink: /rajnx.html
+title: RajNX
 author_profile: true
 ---
 {% include toc title="Разделы" %}
 
-Хоть в текущем виде эту CFW и не следовало бы называть Atmosphere, для удобства мы будем продолжать это делать. В данный момент это скорее официальная прошивка с запущенными модулями от Atmosphere
+RajNX - бесплатная модульная кастомная прошивка. В качестве основного отличия можно выделить перехватчик логов, который складывает их на карту памяти, вместо того, чтобы отправлять в Nintendo. 
 
-[Подробнее про Atmosphere](launch-cfw#atmosphere){:target="_blank"}
+[Подробнее про RajNX](launch-cfw#rajnx){:target="_blank"}
+
+# Запуск RajNX
 
 {% include inc/launch_cfw.txt
  
-	cfw="Atmosphere" 
+	cfw="RajNX" 
 
-	hekname="CFW" 
+	hekname="RajNX" 
 	
 	payload_name='`hekate.bin`'
 
 	if_hekate='	* Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)'
-
+	
 %}
-
+	
 ___
 
 # [Запуск Homebrew Launcher](launch-hbl#запуск-hbl-из-reinx-или-atmosphere)
 {: .notice--success}
-# [Запуск игр](atmos-games)
+# [Запуск игр](games)
 {: .notice--success}
 # [Полезные инструкции](addons)
 {: .notice--success}

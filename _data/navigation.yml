@@ -12,6 +12,8 @@ main:
     url: /freeshopnx
   - title: "FAQ"
     url: /faq
+  - title: "Установка<br>игр"
+    url: /games
   - title: "Запуск<br>HBL"
     url: /launch-hbl
   - title: "Fusée<br>Gelée"
@@ -32,6 +34,8 @@ addons:
     url: /faq
   - title: "Установка FreeshopNX"
     url: /freeshopnx
+  - title: "Установка игр, DLC, обновлений"
+    url: /games
   - title: "Безопасное обновление прошивки"
     url: /update-to-latest
   - title: "Резервное копирование NAND"
