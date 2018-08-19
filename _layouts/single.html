@@ -47,16 +47,17 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
+		
+	<!-- Yandex.RTB R-A-290538-1 -->
+	<div id="yandex_rtb_R-A-290538-1"></div>
+		
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
     </div>
-	
-	<!-- Yandex.RTB R-A-290538-1 -->
-	<div id="yandex_rtb_R-A-290538-1"></div>
-	
+		
     {% if site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
