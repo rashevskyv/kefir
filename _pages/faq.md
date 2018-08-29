@@ -72,7 +72,7 @@ author_profile: true
 	* `sudo chflags -R arch /Volumes/SDNAME`, где SDNAME - название вашей карты памяти.
 	
 * Если у вас Win, то необходимо снять архивные атрибуты с файлов на карте памяти (в первую очередь с файлов в папке switch).Правая кнопка мыши -> свойства.
-* Или на самом switch'е через hekate (во вкладке tools есть соответствующая опция).
+* Или на самом switch'е через hekate (во вкладке **tools** выберите **Unset archive bit (all sd files)**).
 
 ## SX OS
 
