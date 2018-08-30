@@ -20,6 +20,7 @@ author_profile: true
 * [Запуск игр в SX OS](sxos-games)           
 * [Запуск игр в Atmosphere](atmos-games)            
 * [Запуск пейлоадера через Fusée Gelée](fusee-gelee)  
+* [Инструкция по прошивке донгла r4s Dongle](r4)  
 * [Использование FTP](ftp)            
 * [Кастомная прошивка](launch-cfw)            
 * [Начнём](get-started)             
