@@ -4,25 +4,25 @@ main:
     url: http://customfw.xyz
   - title: "<i>Купить<br>прошитую</i>"
     url: https://3dscfw.olx.ua/
-  - title: "Кастомные<br>прошивки"
+  - title: "Кастомные прошивки"
     url: /launch-cfw
-  - title: "Полезные<br>инструкции"
+  - title: "Полезные инструкции"
     url: /addons
   - title: "FreeshopNX"
     url: /freeshopnx
   - title: "FAQ"
     url: /faq
-  - title: "Установка<br>игр"
+  - title: "Установка игр"
     url: /games
-  - title: "Запуск<br>HBL"
+  - title: "Запуск HBL"
     url: /launch-hbl
-  - title: "Fusée<br>Gelée"
+  - title: "Fusée Gelée"
     url: /fusee-gelee
   - title: "Безопасное обновление<br>прошивки"
     url: /update-to-latest
   - title: "Резервное<br>копирование"
     url: /backup-nand
-  - title: "Навигация<br>по сайту"
+  - title: "Навигация по сайту"
     url: /site-navigation
   - title: "Пожертвования"
     url: /donations

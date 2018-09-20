@@ -7,7 +7,7 @@ header:
   overlay_image: images/home-page-feature.jpg
   overlay_filter: 0.5
   caption:
-excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 15 сентября 2018'
+excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 20 сентября 2018'
 ---
 
 {% include toc title="Разделы" %}
@@ -19,6 +19,9 @@ excerpt: 'Полное руководство по прошивке Nintendo Swi
 {: .notice--danger}
 
 Если вы не хотите возиться с прошивкой сами, то всё это можно проделать и за денежку. В Украине можете обращаться ко [мне](https://vk.com/rashevskyv){:target="_blank"}, в РФ к [Николаю Скотникову](https://vk.com/skotnikovnn){:target="_blank"}
+
+Перед началом работы убедитесь, что ваша приставка поддаётся взлому. Для этого найдите серийный номер внизу коробки и убедитесь, что он не соответствует ни одному диапазонув разделе "Serial numbers of patched Switches", указанному на [этой](https://gbatemp.net/threads/switch-informations-by-serial-number.481215/){:target="_blank"} странице!
+{: .notice--warning}
 
 ## Что такое Homebrew? 
 
