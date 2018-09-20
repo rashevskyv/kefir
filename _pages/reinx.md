@@ -15,7 +15,7 @@ ReiNX - бесплатная модульная кастомная прошив�
 
 	hekname="Payloads... -> ReiNX.bin**" 
 	
-	payload_name='`hekate.bin`'
+	payload_name='`payload.bin`'
 
 	autoboot ='**More configs...** -> **ReiNX**"'
 %}
