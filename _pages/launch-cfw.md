@@ -59,6 +59,7 @@ ___
 
 ### Минусы
 + Не умеет монтировать XCI
++ не работает на 6.0.0
 
 [Github](https://github.com/Reisyukaku/ReiNX){:target="_blank"}
 
