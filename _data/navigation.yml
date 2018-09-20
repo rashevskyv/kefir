@@ -6,7 +6,8 @@ main:
     url: https://3dscfw.olx.ua/
   - title: "Кастомные<br>прошивки"
     url: /launch-cfw
-  - title: "Полезные<br>инструкции"
+  - title: "Полезные<br>
+  инструкции"
     url: /addons
   - title: "FreeshopNX"
     url: /freeshopnx
@@ -20,7 +21,7 @@ main:
     url: /fusee-gelee
   - title: "Безопасное обновление<br>прошивки"
     url: /update-to-latest
-  - title: "Резервное<br>копирование"
+  - title: "Резервное копирование"
     url: /backup-nand
   - title: "Навигация по сайту"
     url: /site-navigation
