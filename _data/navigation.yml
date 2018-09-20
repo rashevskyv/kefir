@@ -4,9 +4,9 @@ main:
     url: http://customfw.xyz
   - title: "<i>Купить<br>прошитую</i>"
     url: https://3dscfw.olx.ua/
-  - title: "Кастомные прошивки"
+  - title: "Кастомные<br>прошивки"
     url: /launch-cfw
-  - title: "Полезные инструкции"
+  - title: "Полезные<br>инструкции"
     url: /addons
   - title: "FreeshopNX"
     url: /freeshopnx
