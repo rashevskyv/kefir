@@ -17,19 +17,25 @@ AutoRCM - на консоли специальным образом портит
 
 ## Установка AutoRCM
 
-1. Запустите пейлоад [brickmii](https://switchtools.sshnuke.net/){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
-1. На Switch откроется окно программы "brickmii" - эта программа создана для контроля режима AutoRCM 
-1. Нажмите (VOL-) для включения AutoRCM
-1. Нажмите (POWER) для перезагрузки консоли в режим RCM
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+
+	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	{: .notice--info}
+	
+1. Перейдите в раздел "**Tools**" -> "**autoRCM**" и выберите "**Enable AutoRCM**", затем нажмите любую кнопку и выберите "**Back**" для возвращения в главное меню
+1. [Запустите кастомную прошивку](launch-cfw) 
 
 ## Удаление AutoRCM 
 
 Категорически не рекомендуется удалять AutoRCM, если вы делали [безопасное обновление системы](update-to-latest){:target="_blank"} - [сожжёте предохранители](update-to-latest#%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%87%D0%B0%D1%81%D1%82%D1%8C){:target="_blank"}
 
-1. Запустите пейлоад [brickmii](https://switchtools.sshnuke.net/){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
-1. На Switch откроется окно программы "brickmii" - эта программа создана для контроля режима AutoRCM 
-1. Нажмите (VOL+) для отключения AutoRCM
-1. Нажмите (POWER) для перезагрузки консоли в режим RCM 
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+
+	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
+	{: .notice--info}
+	
+1. Перейдите в раздел "**Tools**" -> "**autoRCM**" и выберите "**Disable AutoRCM**", затем нажмите любую кнопку и выберите "**Back**" для возвращения в главное меню
+1. [Запустите кастомную прошивку](launch-cfw) 
 
 # SX OS
 
