@@ -175,7 +175,7 @@ author_profile: true
 	{: .text-center}
 	{: .notice--info}
 
-1. Выберите `BCPKG2-1-Normal-Main.bin`, который находится в папке `NX-5.1.0`, которую мы сгенерировали в Части III 
+1. Выберите `BCPKG2-1-Normal-Main.bin`, который находится в папке `NX-{% include /vars/sys_version.txt %}`, которую мы сгенерировали в Части III 
 1. Нажмите кнопку "Start"
 1. После окончания загрузки закройте окно (не программу!)
 1. Повторите то же самое для `BCPKG2-2-Normal-Sub`, `BCPKG2-3-SafeMode-Main` и `BCPKG2-4-SafeMode-Sub`
