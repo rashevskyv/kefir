@@ -9,8 +9,6 @@ main:
   - title: "Полезные<br>
   инструкции"
     url: /addons
-  - title: "FreeshopNX"
-    url: /freeshopnx
   - title: "FAQ"
     url: /faq
   - title: "Установка игр"
@@ -33,10 +31,10 @@ main:
 addons:
   - title: "FAQ"
     url: /faq
-  - title: "Установка FreeshopNX"
-    url: /freeshopnx
   - title: "Установка игр, DLC, обновлений"
     url: /games
+  - title: "Где брать игры"
+    url: /games#где-брать-игры
   - title: "Безопасное обновление прошивки"
     url: /update-to-latest
   - title: "Резервное копирование NAND"
@@ -49,8 +47,6 @@ addons:
     url: /launch-cfw
   - title: "Активация AutoRCM"
     url: /autorcm
-  - title: "Закачка игр в формате NSP с помощью CDNSP GUI"
-    url: /download-nsp
   - title: "Использование FTP"
     url: /ftp
             
