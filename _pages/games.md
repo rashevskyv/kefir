@@ -62,6 +62,7 @@ author_profile: true
 1. Вставьте карту памяти в ПК
 1. Обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
 1. Скопируйте скачанную игру в формате `.xci` в папку `tinfoil/zerotwoxci` 
+1. Скопируйте `keys.txt` с общими ключами и ключами TSEC, [который мы делали в процессе создания резервной копии](backup-nand#дампим-tsec-и-общие-ключи-консоли){:target="_blank"} в корень кары памяти и переименуйте его в `prod.keys`
 1. Вставьте карту памяти в консоль и запустите [RajNX](rajnx){:target="_blank"} или [ReiNX](reinx){:target="_blank"}
 1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
 1. Запустите "**ZeroTwoXCI**"
