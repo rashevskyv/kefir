@@ -23,6 +23,7 @@ author_profile: true
 ## Где брать игры
 
 * [Игры в формате NSP](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
+* [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
 
 ## Игры 
 
