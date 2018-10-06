@@ -1,5 +1,5 @@
 ---
-title: "Пожертвования"
+title: Пожертвования
 permalink: /donations.html
 author_profile: true
 ---
