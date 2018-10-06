@@ -1,7 +1,6 @@
 ---
-"Карта сайта" #
-sitemap: false
-permalink: site-navigation
+title: "Карта сайта"
+permalink: /site-navigation.html
 author_profile: true
 ---
 
