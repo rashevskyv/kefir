@@ -1,1 +1,1 @@
-[boot.dat](https://sx.xecuter.com/download/SXOS_v2.0.zip){:target="_blank"}
+[boot.dat](https://sx.xecuter.com/download/SXOS_v2.0.1.zip){:target="_blank"}
