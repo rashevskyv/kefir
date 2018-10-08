@@ -17,7 +17,7 @@ author_profile: true
 * [Запуск Homebrew Launcher](launch-hbl){:target="_blank"}
 * [Запуск игр в SX OS](sxos-games){:target="_blank"}
 * [Запуск пейлоадера через Fusée Gelée](fusee-gelee){:target="_blank"}
-* [Инструкция по прошивке донгла R4S Dongle](r4){:target="_blank"}
+* [Инструкция по использованию чипованных консолей](hardmoded){:target="_blank"}
 * [Использование FTP](ftp){:target="_blank"}
 * [Кастомная прошивка](launch-cfw){:target="_blank"}
 * [Начнём](get-started){:target="_blank"}

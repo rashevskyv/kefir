@@ -5,20 +5,22 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
-ReiNX - бесплатная модульная кастомная прошивка. Поддерживает RomMenu, идентичный такому же из SX OS, но не умеет монтировать XCI 
-
-[Подробнее про ReiNX](launch-cfw#reinx){:target="_blank"}
+ReiNX - бесплатная модульная кастомная прошивка. Поддерживает RomMenu, идентичный такому же из SX OS, но не умеет монтировать XCI             
+[Подробнее про ReiNX...](launch-cfw#reinx){:target="_blank"}
 
 {% include inc/launch_cfw.txt
  
 	cfw="ReiNX" 
 
-	hekname="Payloads... -> ReiNX.bin**" 
+	hekname="More configs... -> ReiNX**" 
 	
 	payload_name='`payload.bin`'
 
 	autoboot ='**More configs...** -> **ReiNX**"'
 %}
+
+По-умолчанию прошивка запускается с параметром [NOGC](update-to-latest#зачем-нужна-nogc){:target="_blank"}. Чтобы отключить NOGC - удалите файл `nogc` из папки `/ReiNX/`
+{: .notice--info}
 	
 ___
 
