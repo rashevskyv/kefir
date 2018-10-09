@@ -136,6 +136,6 @@ ZeroTwoXCI - форк tinfoil
 * Для RajNX нужно в загрузочном меню hekate выбрать пункт "**RajNX LayeredFS**" (или "**RajNX with nogc-patch LayeredFS**", если вы безопасно обновлялись с прошивки ниже, чем 4.1.0). 
 * Для ReiNX нужно перейти в папку `/ReiNX/sysmodules.dis` и перенести файл `fs_mitm.kip` в папку `/ReiNX/sysmodules`
 	* Верните файл назад, если нужно будет отключить LFS
-* В SX OS LayeredFS отключается через меню настройки
+* В SX OS LayeredFS отключить нельзя
 
 Далее следуйте инструкции, которая поставляется с каждым переводом.
