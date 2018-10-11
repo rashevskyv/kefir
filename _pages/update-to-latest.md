@@ -31,9 +31,9 @@ author_profile: true
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
 * Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %}:
-	* [ЯД](https://yadi.sk/d/EuJBod23mLZApA){:target="_blank"}
-	* [MEGA](https://mega.nz/#!9otxzJ5S!6bl7KV_vL-Yz_MZltt6HTJ-XFahqXkW2aBOq4uBDsdI){:target="_blank"}
-	* [FEX](https://fex.net/674993139076?fileId=765948552){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/PNPLOnS3NtKuJw){:target="_blank"}
+	* [MEGA](https://mega.nz/#!Ep8SHAjJ!VM8H3BEXfIlGpGa4LdgvT2fQ8AG_bGNaQmCr1K1uc0A){:target="_blank"}
+	* [FEX](https://fex.net/674993139076?fileId=847196292){:target="_blank"}
 * MicroSD в формате exFAT (такой формат необходим для бекапа, далее мы отформатируем карту обратно в FAT32)
 
 # Инструкция
