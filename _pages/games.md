@@ -20,11 +20,12 @@ author_profile: true
 * Игры в формате NSP (где их брать - ниже)
 * Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 	
-## Где брать игры
+## Где брать игры и обновления
 
-* [Игры в формате NSP](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
+* [Игры на Google Drive](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
 * [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
 * [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
+* [Обновления](https://darkumbra.net/forums/topic/195500-mega-all-updates/){:target="_blank"}
 
 ## Игры 
 
