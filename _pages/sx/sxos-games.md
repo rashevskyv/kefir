@@ -28,8 +28,10 @@ author_profile: true
 
 * [Игры](https://drive.google.com/drive/folders/1R28dVaYEkpd6mgK_arcQy26LHBC-0o48){:target="_blank"} в формате XCI 
 	* [Ещё](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"}
-* [Игры в формате NSP](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
-	* Так же можно качать с серверов Nintendo [этим способом](download-nsp){:target="_blank"}
+* [Игры в NSP на Google Drive](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
+* [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
+* [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
+* [Обновления](https://darkumbra.net/forums/topic/195500-mega-all-updates/){:target="_blank"}
 
 # Установка и запуск игр в формате XCI 
 
