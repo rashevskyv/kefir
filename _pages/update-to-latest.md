@@ -29,7 +29,6 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [любую кастомную прошивку](launch-cfw){:target="_blank"}
 * Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
-* Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %}:
 	* [ЯД](https://yadi.sk/d/PNPLOnS3NtKuJw){:target="_blank"}
 	* [MEGA](https://mega.nz/#!Ep8SHAjJ!VM8H3BEXfIlGpGa4LdgvT2fQ8AG_bGNaQmCr1K1uc0A){:target="_blank"}

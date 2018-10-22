@@ -11,7 +11,6 @@ AutoRCM - на консоли специальным образом портит
 # Что понадобится
 
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
-* Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
 
 # Рекомендуемый способ 
 
