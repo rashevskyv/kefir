@@ -26,9 +26,8 @@ author_profile: true
 * XCI - дампы картриджей. Как правило, не обновлённые версии. Обычно для таких игр нужно ещё выкачивать из eShop обновления или дополнительный контент. Занимают больше места, чем дампы игр из eShop
 * NSP - дампы игр из eShop. Можно выкачать самые последние версии, с DLC. Иным образом обновить игру у вас не получится, поскольку для этого понадобится выйти в eShop, что не безопасно и чревато баном. Обычно занимают меньше места. DLC и обновления распространяются только в формате nsp
 
-* [Игры](https://drive.google.com/drive/folders/1R28dVaYEkpd6mgK_arcQy26LHBC-0o48){:target="_blank"} в формате XCI 
-	* [Ещё](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"}
-* [Игры в NSP на Google Drive](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
+* [Игры](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"} в формате XCI 
+* [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
 * [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
 * [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
 * [Обновления](https://darkumbra.net/forums/topic/195500-mega-all-updates/){:target="_blank"}

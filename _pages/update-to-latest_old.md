@@ -38,7 +38,7 @@ author_profile: true
 * Свежая версия [ChoiDujour](https://switchtools.sshnuke.net/){:target="_blank"}
 * Свежая версия [memloader](https://switchtools.sshnuke.net/){:target="_blank"}
 * Свежая версия [briccmii](https://switchtools.sshnuke.net/){:target="_blank"}
-* Свежая версия [Etcher](https://github.com/resin-io/etcher/releases/latest){:target="_blank"} для вашей платформы (для Windows - **exe x86**)
+* Свежая версия [Etcher](https://github.com/resin-io/etcher/releases/latest){:target="_blank"} качайте версию Portable для вашей платформы (для Windows - **exe x86**)
 * Свежая версия [HacDiskMount](https://switchtools.sshnuke.net/){:target="_blank"}
 
 # Инструкция
