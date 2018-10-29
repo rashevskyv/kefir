@@ -31,6 +31,8 @@ main:
 addons:
   - title: "FAQ"
     url: /faq
+  - title: "Блокировка серверов Nintendo"
+    url: /get-started#блокировка-доступа-к-сервисам-nintendo
   - title: "Установка игр, DLC, обновлений"
     url: /games
   - title: "Где брать игры"
