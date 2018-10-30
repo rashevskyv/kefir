@@ -123,6 +123,7 @@ Atmosphere - open source проект. Она состоит из пяти ос�
 + Не умеет монтировать XCI
 
 [Github](https://github.com/Atmosphere-NX/Atmosphere){:target="_blank"}
+{% endcomment %}
 
 ___
 
