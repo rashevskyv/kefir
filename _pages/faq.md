@@ -86,10 +86,8 @@ author_profile: true
 ### **В:** Каков шанс брика? 
 **О:** Зависит от того, как чётко вы следуете инструкциям. Обязательно сделайте [бекап](backup-nand){:target="_blank"}! 
 
-### **В:** В Homebrew Menu нет ни одного приложения, хотя на карте они есть
-**О:** 
-
-* На switch'е через hekate во вкладке **tools** выберите **Unset archive bit (all sd files)**.
+### **В:** В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть
+**О:** На switch'е через hekate во вкладке **tools** выберите **Unset archive bit (all sd files)**.
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}
