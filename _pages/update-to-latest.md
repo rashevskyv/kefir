@@ -30,8 +30,8 @@ author_profile: true
 * Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %}:
-	* [ЯД](https://yadi.sk/d/PNPLOnS3NtKuJw){:target="_blank"}
-	* [MEGA](https://mega.nz/#!Ep8SHAjJ!VM8H3BEXfIlGpGa4LdgvT2fQ8AG_bGNaQmCr1K1uc0A){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/Qaaj2QznA1wc_g){:target="_blank"}
+	* [MEGA](https://mega.nz/#!otVQCagA!OzSENIs6Z8oNMVJPQFKhQSYu3rre01xRejZNKCkc40o){:target="_blank"}
 	* [FEX](https://fex.net/674993139076?fileId=847196292){:target="_blank"}
 * MicroSD в формате exFAT (такой формат необходим для бекапа, далее мы отформатируем карту обратно в FAT32)
 
