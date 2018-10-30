@@ -125,8 +125,6 @@ Atmosphere - open source проект. Она состоит из пяти ос�
 [Github](https://github.com/Atmosphere-NX/Atmosphere){:target="_blank"}
 {% endcomment %}
 
-___
-
 # Выберите кастомную прошивку
 
 | ReiNX | RajNX | SX OS |
