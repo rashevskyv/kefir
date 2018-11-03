@@ -38,7 +38,6 @@ author_profile: true
 
 ### Минусы
 + Не умеет монтировать XCI
-+ **Не запускает игры на 6.1.0**
 
 [gbatemp](https://gbatemp.net/threads/rajnx-currently-the-best-and-most-user-friendly-free-starter-pack-for-nintendo-switch.513785/){:target="_blank"}
 
