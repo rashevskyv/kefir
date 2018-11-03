@@ -41,13 +41,16 @@ Homebrew Launcher (HBL) - среда для запуска самописных 
 1. Список доступных приложений ищите в [Switch Appstore](https://www.switchbru.com/appstore/#/){:target="_blank"}
 1. Для того, чтобы запустить галерею, зажмите (L) при запуске HBL
 
+{% capture notice-7 %}
 Если в списке приложений пусто, снимите с файлов архивные атрибуты: 
-
 
 * В hekata перейдите в меню **Tools** выберите **Unset archive bit (all sd files)**
 
 Не меняйте атрибуты папки Nintendo!
-{: .notice--warning}
+{: .notice--danger}
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-7 | markdownify }}</div>
 
 
 ## Список полезных приложений 
