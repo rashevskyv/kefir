@@ -27,7 +27,7 @@ author_profile: true
 ### Где брать игры и обновления
 
 * [Игры](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"} в формате XCI 
-* [Торрент с играми в формате XCI](magnet:?xt=urn:btih:908C89A01FC903A3493302042F86E80F10C50958){:target="_blank"}
+* [Торрент с играми в формате XCI](magnet:?xt=urn:btih:0AE1FEEFDA52CDC4B8834A7F830F122DCB4F1B00&dn=_leech){:target="_blank"}
 * [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
 * [Торрент с играми в формате NSP](magnet:?xt=urn:btih:B8538BD1A8025219383CE10622B817B4EFFDC2A4&dn=_NSPOUT){:target="_blank"}
 * [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
