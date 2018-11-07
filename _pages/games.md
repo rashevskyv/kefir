@@ -26,12 +26,15 @@ author_profile: true
 	
 ### Где брать игры и обновления
 
-* [Игры](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"} в формате XCI 
-* [Торрент с играми в формате XCI](magnet:?xt=urn:btih:0AE1FEEFDA52CDC4B8834A7F830F122DCB4F1B00&dn=_leech){:target="_blank"}
-* [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
-* [Торрент с играми в формате NSP](magnet:?xt=urn:btih:B8538BD1A8025219383CE10622B817B4EFFDC2A4&dn=_NSPOUT){:target="_blank"}
+XCI: 
+	* [Игры](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"} в формате XCI 
+	* [Торрент с играми в формате XCI](magnet:?xt=urn:btih:0AE1FEEFDA52CDC4B8834A7F830F122DCB4F1B00&dn=_leech){:target="_blank"}
+NSP:
+	* [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
+	* [Игры](https://drive.google.com/drive/folders/1Pj_iG4yu_GjhYWnnbJZdJb9fZPi2G3yD){:target="_blank"} в формате NSP на GD
+	* [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, на YD, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
+	* [Торрент с играми в формате NSP](magnet:?xt=urn:btih:B8538BD1A8025219383CE10622B817B4EFFDC2A4&dn=_NSPOUT){:target="_blank"}
 * [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
-* [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
 * [Обновления](https://darkumbra.net/forums/topic/195500-mega-all-updates/){:target="_blank"}
 
 ## Подготовительные работы 
@@ -91,7 +94,7 @@ author_profile: true
 1. Выберите куда именно хотите установить игру
 	* microSD storage - карта памяти 
 	* System storage - внутренняя память
-1. Выберите "**Yes**", если у вас прошивка 5.1.0 или выше и "**Yes**", если ниже
+1. Выберите "**Yes**"
 1. Выберите "**Yes**" для удаления `nsp-файлов` после установки
 1. По завершению нажмите (A) и выберите следующий файл для установки
 	* Если при установке возникает ошибка:
@@ -171,7 +174,7 @@ ZeroTwoXCI - форк tinfoil
 1. Подключите Switch к ПК с помощью кабеля
 	* Вы должны увидеть надпись `USB is ready. Waiting for header...` на приставке, если она правильно определилась компьютером
 		* Если надписи нет, переустановите драйвера на ПК, перезагрузите компьютер и Switch, затем пробуйте снова
-1. Запустите [AluminumFoil.x86_64.exe](https://github.com/nosmokingbandit/AluminumFoil/releases){:target="_blank"}
+1. Запустите [AluminumFoil.x86_64.exe](https://github.com/nosmokingbandit/AluminumFoil/releases){:target="_blank"} от имени администратора
 1. Программа должна написать <br>`Connected to Switch`<br>`? NSP Directory:`
 	* Если вместо этого вы видите надпись <br>`Unable to open USB connection to Switch`<br>`Press Enter to exit`<br> или другую ошибку ,переустановите драйвера на ПК, перезагрузите компьютер и Switch, затем пробуйте снова
 1. На компьютере перейдите в папку, в которой хранятся ваши игры и скопируйте её адрес в буфер обмена
@@ -187,6 +190,7 @@ ZeroTwoXCI - форк tinfoil
 	* microSD storage - карта памяти 
 	* System storage - внутренняя память
 1. Выберите "**Yes**" (это позволит игре запускаться на пршивках версии ниже той, для которой игра разрабатывалась)1. После завершения установки вернитесь на домашний экран, нажатием кнопки (HOME)
+	* Если установка не идёт, отключите брендмауер и антивирус и перезагрузите пк
 
 При возникновении каких-либо проблем или ошибок, попробуйте обновить [Tinfoil](https://bsnx.lavatech.top/tinfoil/){:target="_blank"}, заменив `tinfoil.nro` в папке `switch` на `tinfoil.nro` из архива с обновлением
 	
