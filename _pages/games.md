@@ -32,7 +32,7 @@ author_profile: true
 * **NSP**:
 	* [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
 	* [Игры](https://drive.google.com/drive/folders/1Pj_iG4yu_GjhYWnnbJZdJb9fZPi2G3yD){:target="_blank"} в формате NSP на GD
-	* [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, на YD, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
+	* [Облако на Яндекс.Диск](https://yadi.sk/d/G4tZ-iQfOWagEA){:target="_blank"}, на YD, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
 	* [Торрент с играми в формате NSP](magnet:?xt=urn:btih:B8538BD1A8025219383CE10622B817B4EFFDC2A4&dn=_NSPOUT){:target="_blank"}
 * [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
 * [Обновления](https://darkumbra.net/forums/topic/195500-mega-all-updates/){:target="_blank"}
