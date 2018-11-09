@@ -26,10 +26,10 @@ author_profile: true
 	
 ### Где брать игры и обновления
 
-XCI: 
+* **XCI**: 
 	* [Игры](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"} в формате XCI 
 	* [Торрент с играми в формате XCI](magnet:?xt=urn:btih:0AE1FEEFDA52CDC4B8834A7F830F122DCB4F1B00&dn=_leech){:target="_blank"}
-NSP:
+* **NSP**:
 	* [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
 	* [Игры](https://drive.google.com/drive/folders/1Pj_iG4yu_GjhYWnnbJZdJb9fZPi2G3yD){:target="_blank"} в формате NSP на GD
 	* [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, на YD, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
