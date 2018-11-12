@@ -41,8 +41,8 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти в ПК
-1. Обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
-1. Скопируйте скачанную игру в формате `.nsp` в папку `tinfoil/nsp` или игру в формате `.xci` в папку `tinfoil/xci`
+1. Обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки, если не делали этого ранее
+1. Скопируйте скачанную игру в формате `.nsp` в папку `tinfoil/nsp` или игру в формате `.xci` в папку `tinfoil/xci`, если собираетесь устанавливать игры через карту 
 1. Вставьте карту памяти в консоль и запустите [RajNX](rajnx){:target="_blank"} или [ReiNX](reinx){:target="_blank"}
 1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
 
@@ -106,6 +106,7 @@ author_profile: true
 
 * Свежая версия [BOOP](https://github.com/miltoncandelero/Boop/releases/latest){:target="_blank"} (запускается на вашем ПК)
 
+1. Выполните [подготовительные работы](#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
 1. Запустите "**Tinfoil**"
 	* В свежем паке есть два "**Tinfoil**". Используйте тот, на иконке которого есть значок USB. Если у вас один Tinfoil - обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
 1. Выберите "**Title managment -> Network Install NSP**"
@@ -148,6 +149,7 @@ author_profile: true
 
 * Свежая версия [AluminumFoil](https://github.com/nosmokingbandit/AluminumFoil/releases){:target="_blank"} (запускается на вашем ПК)
 
+1. Выполните [подготовительные работы](#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
 1. Запустите "**Tinfoil**"
 	* В свежем паке есть два "**Tinfoil**". Используйте тот, версия которого 0.2.1. Если у вас один Tinfoil - обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
 1. Выберите "**Title managment -> USB Install NSP**"
