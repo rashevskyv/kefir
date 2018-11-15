@@ -16,9 +16,7 @@ author_profile: true
 * Настроенная и работающая [SX OS](sxos){:target="_blank"}
 * [Лицензия на SX OS или SX OS Pro](https://team-xecuter.com/where-to-buy/){:target="_blank"}
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
-* [Devmenu](files/devmenu.zip){:target="_blank"} (опционально)
 * [Игры в формате NSP](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"}
-	* Так же можно качать с серверов Nintendo [этим способом](sxos-games#часть-ii---закачка-игр-в-формате-nsp){:target="_blank"}
 
 ## Игры 
 
@@ -26,11 +24,9 @@ author_profile: true
 * XCI - дампы картриджей. Как правило, не обновлённые версии. Обычно для таких игр нужно ещё выкачивать из eShop обновления или дополнительный контент. Занимают больше места, чем дампы игр из eShop
 * NSP - дампы игр из eShop. Можно выкачать самые последние версии, с DLC. Иным образом обновить игру у вас не получится, поскольку для этого понадобится выйти в eShop, что не безопасно и чревато баном. Обычно занимают меньше места. DLC и обновления распространяются только в формате nsp
 
-* [Игры](https://www.reddit.com/r/SwitchPirates/comments/8s2e2t/download_switch_roms_from_here_the_sooner_you_do/){:target="_blank"} в формате XCI 
-* [Игры](https://www.reddit.com/r/switchroms/comments/8xjo94/multihost_eshop_dlc_download_index/){:target="_blank"} в формате NSP
-* [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
-* [Облако на Яндекс.Диск](https://yadi.sk/d/TEtr00SMAgG56A){:target="_blank"}, для пользователей из Украины необходим запущенный [VPN](http://zaborona.info){:target="_blank"}
-* [Обновления](https://darkumbra.net/forums/topic/195500-mega-all-updates/){:target="_blank"}
+### Где брать игры и обновления
+
+{% include /inc/games.txt %}
 
 # Установка и запуск игр в формате XCI 
 
@@ -64,3 +60,6 @@ author_profile: true
 	* Если при установке возникает ошибка,
 		* дайте файлам короткое имя. Чаще всего длинные имена файлов приводят к ошибкам
 		* перекачайте файл, возможно он битый. 
+		
+Так же вы можете пользоваться и другими инструментами для запуска игр, [описанными здесь](games)
+{: .notice--info}

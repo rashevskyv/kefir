@@ -18,13 +18,12 @@ SX OS - коммерческая система и требует покупки
 * Загрузчик прошивки в виде {% include /vars/sxos.txt %} SX OS
 * [Лицензия на SX OS или SX OS Pro](https://www.olx.ua/obyavlenie/proshivka-nintendo-switch-sx-os-IDBWMzh.html){:target="_blank"} ([Купить в группе Вконтакте](https://vk.com/market-125012133?w=product-125012133_1764882%2Fquery){:target="_blank"})
 * Умение [вводить консоль в режим восстановления (RCM)](fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm){:target="_blank"}
-* Донгл, либо лицензия на SX OS
 * Для запуска без донгла: [payload.bin](https://sx.xecuter.com/download/payload.bin){:target="_blank"}
 
 ## Часть I - Подготовительные работы
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Поместите {% include /vars/sxos.txt %} в корень карты памяти приставки, если еще этого не сделали
+1. Поместите {% include /vars/sxos.txt %} в корень карты памяти приставки, если ещё этого не сделали
 1. Вставьте карту памяти обратно в консоль
 
 ## Часть II - Запуск SX OS
