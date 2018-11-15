@@ -6,9 +6,8 @@ author_profile: true
 
 **Все страницы**
  
+* [Atmosphere](atmos){:target="_blank"}
 * [AutoRCM](autorcm){:target="_blank"}
-* [RajNX](rajnx){:target="_blank"}
-* [ReiNX](reinx){:target="_blank"}
 * [SX OS](sxos){:target="_blank"}
 * [Безопасное обновление прошивки вручную](update-to-latest_old){:target="_blank"}
 * [Безопасное обновление прошивки](update-to-latest){:target="_blank"}
@@ -24,5 +23,5 @@ author_profile: true
 * [Расширения файлов (Windows)](file-extensions-windows){:target="_blank"}
 * [Резервное копирование NAND](backup-nand){:target="_blank"}
 * [Список полезных после прошивки инструкций](addons){:target="_blank"}
-* [Установка игр, DLC, обновлений в RajNX и ReiNX](games){:target="_blank"}
+* [Установка игр, DLC, обновлений](games){:target="_blank"}
 * [Часто задаваемые вопросы](faq){:target="_blank"}

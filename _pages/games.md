@@ -1,6 +1,6 @@
 ---
 permalink: /games.html
-title: Установка игр, DLC, обновлений в RajNX и ReiNX
+title: Установка игр, DLC, обновлений
 author_profile: true
 ---
 {% include toc title="Разделы" %}

@@ -53,7 +53,7 @@ author_profile: true
 
 ___
 
-# [Запуск Homebrew Launcher](launch-hbl#запуск-hbl-из-reinx-или-atmosphere)
+# [Запуск Homebrew Launcher](launch-hbl)
 {: .notice--success}
 # [Запуск игр](games)
 {: .notice--success}
