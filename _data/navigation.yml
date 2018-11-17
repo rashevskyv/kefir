@@ -11,15 +11,15 @@ main:
     url: /addons
   - title: "FAQ"
     url: /faq
-  - title: "Установка игр"
+  - title: "Установка<br>игр"
     url: /games
-  - title: "Запуск HBL"
+  - title: "Запуск<br>HBL"
     url: /launch-hbl
   - title: "Fusée Gelée"
     url: /fusee-gelee
-  - title: "Безопасное обновление<br>прошивки"
+  - title: "Безопасное<br>обновление"
     url: /update-to-latest
-  - title: "Резервное копирование"
+  - title: "Резервное<br>копирование"
     url: /backup-nand
   - title: "Навигация по сайту"
     url: /site-navigation

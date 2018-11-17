@@ -28,7 +28,7 @@ author_profile: true
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
 	{: .notice--info}
 	
-1. Перейдите в меню "**Backup**"
+1. Перейдите в меню "**Tools**" -> "**Backup**"
 1. Нажмите любую кнопку для выхода в меню
 1. Выберите "**Backup eMMC RAW GPP**"
 	* Дождитесь окончания резервного копирования
@@ -85,7 +85,6 @@ ___
 ##### Что понадобится
 
 * Свежая версия [TegraRcmGUI](https://github.com/eliboa/TegraRcmGUI/releases/latest){:target="_blank"}
-* Свежая версия [HackDiskMount](https://switchtools.sshnuke.net/){:target="_blank"}
 * Свежая версия [HDD Raw Copy Tool](http://hddguru.com/software/HDD-Raw-Copy-Tool/HDDRawCopy1.10Portable.exe){:target="_blank"}
 
 ##### Установка драйверов 
