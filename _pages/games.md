@@ -47,7 +47,7 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти в ПК
-1. Обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки, если не делали этого ранее
+1. Обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
 1. Скопируйте скачанную игру в формате `.nsp` в папку `tinfoil/nsp` или игру в формате `.xci` в папку `tinfoil/xci`, если собираетесь устанавливать игры через карту 
 1. Вставьте карту памяти в консоль и запустите [Atmosphere](atmos){:target="_blank"}
 1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
