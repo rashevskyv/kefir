@@ -1,0 +1,10 @@
+<script src="https://customfw.xyz/ismyswitchhackable/vercheck.js"></script>
+<link rel="stylesheet" type="text/css" href="https://customfw.xyz/ismyswitchhackable/main.css">
+
+Введите первые 9 символов серийного номера консоли.
+<div class="checker">
+	<input class="inputtext" type="text" id="nxsn" name="country_code" pattern="[xX][aA][wWjJ](1|4|7)[0-9]+"
+		   placeholder="XAW100000"
+		   onkeyup="myFunction()">
+	<p id="result" class="blocktext"></p>
+</div>

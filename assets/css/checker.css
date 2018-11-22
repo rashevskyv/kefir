@@ -1,0 +1,40 @@
+.unknown {
+    color: dimgrey;
+    font-weight: bolder;
+}
+
+.passed {
+    color: green;
+    font-weight: bolder;
+}
+
+.maybe {
+    color: goldenrod;
+    font-weight: bolder;
+}
+
+.failed {
+    color: darkred;
+    font-weight: bolder;
+}
+
+input[type=text], select {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 18px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div.checker {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+p#result {
+    padding: 0 0 0 20px;
+    margin: 0;
+}
