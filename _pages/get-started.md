@@ -54,7 +54,7 @@ author_profile: true
   <tbody>
     <tr>
       <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">5.1.0</td>
+      <td style="text-align: center; font-weight: bold;">6.0.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
