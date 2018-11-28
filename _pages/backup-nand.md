@@ -139,7 +139,7 @@ ___
 
 ### Дампим biskeys
 
-1. Запустите пейлоад biskeydump с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}. Не забудьте предварительно разархивировать пейлоад!
+1. Запустите пейлоад [biskeydump](https://switchtools.sshnuke.net/){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}. Не забудьте предварительно разархивировать пейлоад!
 1. Отсканируйте появившийся на экране приставки QR-код с помощью смартфона (для Android рекомендую [эту](https://play.google.com/store/apps/details?id=com.teacapps.barcodescanner&hl=ru){:target="_blank"} программу) и отправьте на ПК полученные ключи
 	* Если вы используйте "TegraRcmSmash", вы можете передать пейлоад через командную строку и получить ключи прямо в ней: `TegraRcmSmash.exe -w -r biskeydump.bin`
 1. Сохраните полученные ключи в надёжном месте (например, в текстовом файле `keys_bis.txt` и положите его в папку с остальными бекапами)
