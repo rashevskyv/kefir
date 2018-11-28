@@ -33,7 +33,7 @@ author_profile: true
 * Прошивка {% include /vars/sys_version.txt %}:
 	* [ЯД](https://yadi.sk/d/Qaaj2QznA1wc_g){:target="_blank"}
 	* [MEGA](https://mega.nz/#!otVQCagA!OzSENIs6Z8oNMVJPQFKhQSYu3rre01xRejZNKCkc40o){:target="_blank"}
-	* [FEX](https://fex.net/674993139076?fileId=847196292){:target="_blank"}
+	* [FEX](https://fex.net/674993139076/777094612?fileId=922898890){:target="_blank"}
 * Карта памяти 
 
 # Инструкция
