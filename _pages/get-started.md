@@ -26,7 +26,7 @@ author_profile: true
 
 ## Выберите прошивку
 
-Версию прошивки можно посмотреть в меню "Системные настройки", "Система"
+Версию прошивки можно посмотреть в меню "**Системные настройки**" -> "**Система**"
 {: .notice--success}
 
 ![]({{ base_path }}/images/screenshots/system-version.jpg) 
@@ -58,12 +58,9 @@ author_profile: true
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;">{% include /vars/sys_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;">6.2.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="launch-cfw">Запуск кастомной прошивки</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">6.2 и выше</td>
-      <td style="text-align: center; font-weight: bold;">Взлом невозможен</td>
     </tr>
   </tbody>
 </table>
