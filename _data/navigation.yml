@@ -57,4 +57,3 @@ addons:
 bottom:
   - title: Если вам помогло или просто понравилось это руководство, то я принимаю <a href="/donations" target="_blank">пожертвования</a>
   - title: По вопросам, касающимся взлома обращайтесь в <a href="https://vk.com/3ds_cfw" target="_blank">группу в вконтакте</a> или <a href="https://t.me/homebrew_group" target="_blank">Telegram</a><br>Об ошибках и неточностях просьба писать в <a href="https://vk.com/3ds_cfw" target="_blank">группу руководства</a> или в <a href="https://t.me/rashevskyv" target="_blank">Telegram</a>.
-  - title: <div class="notice--danger">Ночью вышла прошивка 6.2. <i>НЕ ОБНОВЛЯЙТЕСЬ</i> на неё ни в коем случае! Кастомная прошивка перестанет на ней работать! <a href="https://vk.com/3ds_cfw?w=wall-125012133_52600%2Fall" target="_blank">Подробнее</a></div>
