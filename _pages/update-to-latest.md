@@ -64,7 +64,11 @@ author_profile: true
 1. После окончания установки нажмите "**Reboot**", "**Reboot now!**", чтобы выключить приставку 
 
 Вы можете удалить папку с прошивкой {% include /vars/sys_version.txt %} с карты памяти. 
-{: .notice--warning}
+{: .notice--info}
+
+Вы можете отформатировать карту памяти обратно в exFAT через ПК
+{: .notice--info}
+
 
 ## Часть IV - AutoRCM
 
