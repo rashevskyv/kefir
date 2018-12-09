@@ -22,7 +22,6 @@ author_profile: true
 	* На прошивках ниже, чем **{% include /vars/sys_version.txt %}** прошивка будет работать, но возможны глюки разного рода
 1. Выключите Switch и вставьте его карту памяти в ПК 
 1. Установите `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
-	* Помните, что это действие перезапишет ваш конфиг. Если вы изменяли его - не забудьте внести изменения в новый конфиг! 
 1. `payload.bin` из `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} - это hekate, с её помощью мы будем запускать прошивку через [Fusée Gelée](fusee-gelee){:target="_blank"}. 
 1. Вставьте карту в консоль
 
