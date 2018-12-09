@@ -20,7 +20,7 @@
   {% else %}
 	{% assign domain = site.url | append: site.baseurl %}
   {% endif %}
-  <div class ="notice"><b>{{ link.title }}</b></div>
+  {{ link.title }}
 {% endfor %}
 
 <hr>
