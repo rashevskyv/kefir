@@ -71,7 +71,7 @@ $(document).ready(function(){
   }).on('mouseenter', function() {
     // Mouse is back, cancel the timer
     clearTimeout(timer);
-  })
+  });
 
   check();
 

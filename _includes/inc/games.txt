@@ -5,7 +5,7 @@
 
 ## Как узнать безопасно ли устанавливать игру
 
-Для этого существует полезный скрипт - [switch_game_checker](){:target="_blank"}. Скрипт работает как с XCI-, так и с NSP-образами. 
+Для этого существует полезный скрипт - [switch_game_checker](https://github.com/rashevskyv/switch_game_checker){:target="_blank"}. Скрипт работает как с XCI-, так и с NSP-образами. 
 
 1. Нажмите зелёную кнопку "**Clone or download**"
 1. Нажмите "**Download ZIP**" и сохраните архив в удобное место
