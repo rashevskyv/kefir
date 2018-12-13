@@ -24,9 +24,9 @@ author_profile: true
 * Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %}:
-	* [ЯД](https://yadi.sk/d/Qaaj2QznA1wc_g){:target="_blank"}
-	* [MEGA](https://mega.nz/#!cwVjlCbK!OzSENIs6Z8oNMVJPQFKhQSYu3rre01xRejZNKCkc40o){:target="_blank"}
-	* [FEX](https://fex.net/674993139076/777094612?fileId=922898890){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/NBGdQ-d68KlWxw){:target="_blank"}
+	* [MEGA](https://mega.nz/#!Jh1UkAbA!2F8wqFXFNIeNZu5Epf7iUuVwcJ5qZuIN2UIMSPFk9Qg){:target="_blank"}
+	* [FEX](https://fex.net/674993139076/777094612?fileId=1011164219){:target="_blank"}
 * Карта памяти 
 
 # Инструкция
