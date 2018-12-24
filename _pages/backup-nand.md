@@ -32,6 +32,7 @@ author_profile: true
 {: .notice--info}
 
 1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
 	{: .notice--info}
@@ -140,6 +141,7 @@ ___
 ## Часть II - Дампим BOOT0/1
 
 1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
 	{: .notice--info}
@@ -158,6 +160,7 @@ ___
 ### Дампим biskeys
 
 1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
 	{: .notice--info}
@@ -185,6 +188,7 @@ ___
 	* Если папок нет, например из-за того, что резервную копию делали через ПК, просто сделайте бекап чего-либо не большого (BOOT1, например) в гекате и папки появятся
 1. Переместите папку `backup` в корень карты памяти вашей консоли
 1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}

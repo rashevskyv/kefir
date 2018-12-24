@@ -225,6 +225,7 @@ AutoRCM - на консоли специальным образом портит
 {: .notice--info}
 
 1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), для выбора - (POWER)
 	{: .notice--info}
