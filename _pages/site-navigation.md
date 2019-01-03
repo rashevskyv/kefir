@@ -18,6 +18,7 @@ author_profile: true
 * [Инструкция по использованию чипованных консолей](hardmoded){:target="_blank"}
 * [Использование FTP](ftp){:target="_blank"}
 * [Кастомная прошивка](launch-cfw){:target="_blank"}
+* [Мультиплеер на прошитой консоли (LAN Play)](lanplay){:target="_blank"}
 * [Начнём](get-started){:target="_blank"}
 * [Пожертвования](donations){:target="_blank"}
 * [Расширения файлов (Windows)](file-extensions-windows){:target="_blank"}
