@@ -38,7 +38,7 @@ author_profile: true
 **О:** Да
 
 ### **В:** В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть
-**О:** На switch'е через hekate во вкладке **tools** выберите **Unset archive bit (all sd files)**.
+**О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}
@@ -119,7 +119,7 @@ author_profile: true
 **О:** Для обновления достаточно заменить файл `boot.dat` на карте памяти и перезапустить взлом через RCM.
 
 ### **В:** Игры не отображаются в альбоме.
-**О:** На switch'е через hekate во вкладке **tools** выберите **Unset archive bit (all sd files)**.
+**О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}

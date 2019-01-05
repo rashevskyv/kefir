@@ -44,7 +44,7 @@ Homebrew Launcher (HBL) - среда для запуска самописных 
 {% capture notice-7 %}
 Если в списке приложений пусто, снимите с файлов архивные атрибуты: 
 
-* В hekata перейдите в меню **Tools** выберите **Unset archive bit (all sd files)**
+* В hekata перейдите в меню **Tools** выберите **Fix archive bit (except Nintendo folder)**
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--danger}
