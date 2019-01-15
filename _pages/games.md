@@ -139,7 +139,11 @@ author_profile: true
 * Свежая версия [`Zadig.exe`](https://zadig.akeo.ie/){:target="_blank"}
 Эти драйвера отличаются от тех, что используются для передачи пейлоада на switch! Если вы ни разу не устанавливали игры этим методом, ставить драйвера нужно обязательно!
 
-1. Запустите [`Zadig.exe`](https://zadig.akeo.ie/){:target="_blank"} от имени Администратора 
+1. Выполните [подготовительные работы](#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
+1. На свитче запустите "**Tinfoil**"
+	* В свежем паке есть два "**Tinfoil**". Используйте тот, версия которого 0.2.1. Если у вас один Tinfoil - обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
+1. Выберите "**Title managment -> USB Install NSP**"
+1. На ПК запустите [`Zadig.exe`](https://zadig.akeo.ie/){:target="_blank"} от имени Администратора 
 1. В верхнем поле (на изображении '1') вы должны увидеть строку "**libnx USB comms**" 
 	* Если вместо "**libnx USB comms**" вы видите "**Unknown Device**", подключите switch в другой USB и перезапустите ПК, после чего вернитесь к установке драйвера 
 	* Если там ничего нет, пробуйте подключиться в другой USB-порт, перезагрузить ПК, сменить кабель
@@ -156,11 +160,8 @@ author_profile: true
 
 * Свежая версия [AluminumFoil](https://github.com/nosmokingbandit/AluminumFoil/releases){:target="_blank"} (запускается на вашем ПК)
 
-1. Выполните [подготовительные работы](#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
-1. Запустите "**Tinfoil**"
-	* В свежем паке есть два "**Tinfoil**". Используйте тот, версия которого 0.2.1. Если у вас один Tinfoil - обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
-1. Выберите "**Title managment -> USB Install NSP**"
 1. Подключите Switch к ПК с помощью кабеля
+	* **Tinfoil** должен быть запущен и должна быть выбрана опция "**Title managment -> USB Install NSP**"
 	* Вы должны увидеть надпись `USB is ready. Waiting for header...` на приставке, если она правильно определилась компьютером
 		* Если надписи нет, переустановите драйвера на ПК, перезагрузите компьютер и Switch, затем пробуйте снова
 1. Запустите [AluminumFoil.x86_64.exe](https://github.com/nosmokingbandit/AluminumFoil/releases){:target="_blank"} от имени администратора
