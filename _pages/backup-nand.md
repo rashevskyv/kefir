@@ -22,7 +22,6 @@ author_profile: true
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
 1. Установите `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
-1. Вставьте карту в консоль
 
 ## Часть I - Дампим NAND
 
@@ -32,7 +31,7 @@ author_profile: true
 {: .notice--info}
 
 1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
-1. Удерживайте кнопку (VOL-), пока не появится hekate 
+1. Вставьте карту в консоль
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
 	{: .notice--info}
