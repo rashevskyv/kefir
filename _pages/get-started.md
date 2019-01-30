@@ -96,7 +96,7 @@ author_profile: true
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">7.0.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="launch-cfw">В данный момент прошить невозможно. Ждите, работы ведутся </a></td>
+      <td style="text-align: center; font-weight: bold;"><b>В данный момент прошить невозможно. Ждите, работы ведутся</b></td>
     </tr>
   </tbody>
 </table>
