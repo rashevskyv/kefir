@@ -233,8 +233,7 @@ ___
 После успешного выполнения `nxboot` вы увидите на экране следующий текст `success: payload was run. exiting, fair winds!`
 Можете доставать замыкатель
 
-2. *В автоматическом режиме*
-#### Как запустить `payload` через PayloadStarter
+2. *В автоматическом режиме.* Запуск `payload` через PayloadStarter
 * Приставка должна быть в [режиме RCM](fusee-gelee#часть-i---вход-в-rcm){:target="_blank"}
 * Подключить Switch к компьютеру
 * Запустить PayloadStarter
