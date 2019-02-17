@@ -16,19 +16,19 @@ SX OS - коммерческая система и требует покупки
 ## Что понадобится 
 
 * Умение [вводить консоль в режим восстановления (RCM)](fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm){:target="_blank"}
-* Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * [Лицензия на SX OS или SX OS Pro](https://www.olx.ua/obyavlenie/proshivka-nintendo-switch-sx-os-IDBWMzh.html){:target="_blank"} ([Купить в группе Вконтакте](https://vk.com/market-125012133?w=product-125012133_1764882%2Fquery){:target="_blank"})
 
 ## Часть I - Подготовительные работы
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Установите `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
-1. `payload.bin` из `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} - это hekate, с её помощью мы будем запускать прошивку
+1. Установите `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
+1. `payload.bin` из `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} - это hekate, с её помощью мы будем запускать прошивку
 1. Вставьте карту в консоль
 
 ## Часть II - Запуск SX OS
 
-1. Запустите пейлоад `payload.bin` из `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"} или вставив донгл в приставку
+1. Запустите пейлоад `payload.bin` из `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"} или вставив донгл в приставку
 1. Приставка должна загрузиться в SX OS
 	* Если загрузка зависла на белом экране, или в любом другом месте, перегрузите консоль, удерживая кнопку (POWER) 15 секунд и повторите запуск снова
 

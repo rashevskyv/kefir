@@ -24,7 +24,7 @@ author_profile: true
 ## Подготовительные работы 
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Установите `.zip`-архива [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
+1. Установите `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
 
 ## Часть I - Дампим NAND
 

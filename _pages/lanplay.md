@@ -15,7 +15,7 @@ author_profile: true
 
 ## Что понадобится
 
-* Свежая версия [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия программы [Lan-Play-Server-Manager](https://github.com/Urferu/Lan-Play-Server-Manager/releases/latest){:target="_blank"}
 	* Пользователи MacOS и Linux могут воспользоваться программой [lan-play-GUI](https://gbatemp.net/threads/lan-play-gui-a-graphical-interface-for-lan-play-updated-v1-0-0.525900/){:target="_blank"}
 * Драйвера [WinPCap](https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe){:target="_blank"}
@@ -37,7 +37,7 @@ author_profile: true
 
 ### Часть II - Настраиваем Switch
 
-1. Обновите [SDFiles от VK:3ds_cfw](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
+1. Обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
 1. Включите приставку и перейдите в "**Системные настройки**" -> "**Интернет**" -> "**Интернет-настройки**"
 1. Подключитесь к вашей WiFi-сети 
 1. После успешного подключения снова перейдите в "**Интернет-настройки**" и выберите вашу WiFi-сеть 
