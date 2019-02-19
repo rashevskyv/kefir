@@ -95,7 +95,8 @@ author_profile: true
       <td style="text-align: center; font-weight: bold;"><a href="launch-cfw">Запуск кастомной прошивки</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">7.0.0</td>
+      <td style="text-align: center; font-weight: bold;">7.0.0</td>
+      <td style="text-align: center; font-weight: bold;">7.0.1</td>
       <td style="text-align: center; font-weight: bold;"><a href="downgrade_fw">Даунгрейд прошивки до 6.1</a></td>
     </tr>
   </tbody>
