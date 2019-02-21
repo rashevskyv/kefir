@@ -7,7 +7,7 @@ header:
   overlay_image: images/home-page-feature.jpg
   overlay_filter: 0.5
   caption:
-excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 19 февраля'
+excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 20 февраля'
 ---
 
 {% include toc title="Разделы" %}
@@ -30,7 +30,7 @@ excerpt: 'Полное руководство по прошивке Nintendo Swi
 
 + Вы можете обратиться к [специалистам](https://docs.google.com/document/d/1qr0Dy1IKvnOpbHmC2chiHPgJmUi9jywjXHDeO0df3JI/edit?usp=sharing){:target="_blank"}
 + Вы можете купить уже прошитую приставку [у меня, если живете в Украине](https://3dscfw.olx.ua/){:target="_blank"}, или же у ребят из списка выше
-+ Если у вас возникли трудности при прошивке, или нужна помощь в выборе приставки - обращайтесь в [группу](http://vk.com/nin_cfw){:target="_blank"} этого руководства.
++ Если у вас возникли трудности при прошивке, или нужна помощь в выборе приставки - обращайтесь в [группу](http://vk.com/nincfw){:target="_blank"} этого руководства.
 
 ## Что такое Homebrew? 
 
