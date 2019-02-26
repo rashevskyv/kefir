@@ -97,7 +97,7 @@ author_profile: true
     <tr>
       <td style="text-align: center; font-weight: bold;">7.0.0</td>
       <td style="text-align: center; font-weight: bold;">7.0.1</td>
-      <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Даунгрейд прошивки до 6.2</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
     </tr>
   </tbody>
 </table>
