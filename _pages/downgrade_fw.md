@@ -16,6 +16,7 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Приставка должна быть полностью заряжена!
 * Свежая версия пейлоада {% include inc/hekate.txt %}
+* [notepad++](https://notepad-plus-plus.org/download/v7.6.3.html){:target="_blank"}
 * [Ключи](/files/keys.zip){:target="_blank"}, одинаковые для всех консолей
 * Прошивка 6.1.0:
 	* [ЯД](https://yadi.sk/d/Qaaj2QznA1wc_g){:target="_blank"}
@@ -40,9 +41,9 @@ author_profile: true
 1. Распакуйте `.zip-архив` с [ChoiDujour](https://switchtools.sshnuke.net/){:target="_blank"} в удобную папку
 1. Распакуйте `.zip-архив` с ключами в папку `ChoiDujour` таким образом, чтобы файл `keys.txt` лежал в той же директории, что и `ChoiDujour.exe`
 1. Распакуйте `.zip-архив` с прошивкой 6.1.0 в папку `ChoiDujour` таким образом, чтобы папка с прошивкой лежала в той же директории, что и `ChoiDujour.exe`
-1. Откройте файлы `keys.txt` и `biskeys.txt`, который у вас получился в ходе выполнения "Части I"
-1. Скопируйте значение строки "**SBK**" из файла `biskeys.txt` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**secure_boot_key**" в файле `keys.txt`
-1. Скопируйте значение строки "**TSEC KEY**" из файла `biskeys.txt` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**tsec_key**" в файле `keys.txt`
+1. Откройте файлы `keys.txt` и `device.keys` с помощью программы [notepad++](https://notepad-plus-plus.org/download/v7.6.3.html){:target="_blank"}, который у вас получился в ходе выполнения "Части I"
+1. Скопируйте значение строки "**SBK**" из файла `device.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**secure_boot_key**" в файле `keys.txt`
+1. Скопируйте значение строки "**TSEC KEY**" из файла `device.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**tsec_key**" в файле `keys.txt`
 
 	![]({{ base_path }}/images/screenshots/keys.png) 
 	{: .text-center}
@@ -106,17 +107,17 @@ author_profile: true
 	{: .notice--info}
 	
 1. Дважды нажмите на `PRODINFO`
-1. Откройте файл `biskeys.txt`, который мы получили при создании дампа ключей в Части I
-1. В разделе "**BIS Key 0**" есть два поля - "**Crypto**" и "**Tweak**". В файле с ключами ключи делятся попарно. В каждой паре есть так же ключ с меткой "**Crypto**" (crypt) и "**Tweak**" (tweak). 
+1. Откройте файл `device.keys`, который мы получили при создании дампа ключей в Части I
+1. В разделе "**bis_key_00**" есть длинная 64-х символьная последовательность,  первые 32 символа - это - "**Crypto**", последние - "**Tweak**". В файле с ключами ключи делятся попарно. В каждой паре есть так же ключ с меткой "**Crypto**" (crypt) и "**Tweak**" (tweak). 
 
 	![]({{ base_path }}/images/screenshots/hdm_key_test.png) 
 	{: .text-center}
 	{: .notice--info}
 	
-1. Скопируйте ключи соответственно их меткам  из текстового файла `biskeys.txt` в окно программы и нажмите кнопку "**Test**"
+1. Скопируйте ключи соответственно их меткам  из текстового файла `device.keys` в окно программы и нажмите кнопку "**Test**"
 1. Рядом с кнопкой высветится надпись зелёного цвета (**OK! Enthropy: (tested)**), то люч скопирован верно - нажмите кнопку "**Save**" и закройте окно (не программу!)
 	* Если после тестирования надпись красная - вы скопировали не верную пару!
-1. Повторите ту же самую процедуру для разделов `SAFE`, `SYSTEM` и `USER`, прописав им пары "**BIS KEY 1**", "**IS KEY 2**" и "**BIS KEY 3**" соответственно 
+1. Повторите ту же самую процедуру для разделов `SAFE`, `SYSTEM` и `USER`, прописав им пары "**bis_key_01**", "**bis_key_02**" и "**bis_key_03**" (два последних кюча одинаковые - это нормально) соответственно 
 	* Обращайте внимание на результат тестирования и не забывайте нажимать кнопку "**Save**"
 1. Дважды нажмите на `PRODINFO`
 1. В открывшемся окошке уже будут вбиты ключи. Протестируйте их и удостоверьтесь, что результат зелёный. Закройте окно не сохраняя.
