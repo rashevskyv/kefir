@@ -18,6 +18,7 @@ author_profile: true
 * [Запуск пейлоадера через Fusée Gelée](fusee-gelee){:target="_blank"}
 * [Инструкция по использованию чипованных консолей](hardmoded){:target="_blank"}
 * [Использование FTP](ftp){:target="_blank"}
+* [Использование читов в EdiZon](cheats){:target="_blank"}
 * [Кастомная прошивка](launch-cfw){:target="_blank"}
 * [Мультиплеер на прошитой консоли (LAN Play)](lanplay){:target="_blank"}
 * [Начнём](get-started){:target="_blank"}
