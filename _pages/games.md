@@ -33,7 +33,7 @@ author_profile: true
 	* Пользователям SX OS рекомендую ознакомиться с [родным методом установки игр](sxos-games){:target="_blank"}
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Игры в формате NSP
-* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 	
 ## Игры 
 
@@ -48,7 +48,7 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти в ПК
-1. Обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
+1. Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
 1. Скопируйте скачанную игру в формате `.nsp` в папку `tinfoil/nsp` или игру в формате `.xci` в папку `tinfoil/xci`, если собираетесь устанавливать игры через карту 
 1. Вставьте карту памяти в консоль и запустите [Atmosphere](atmos){:target="_blank"}
 1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
@@ -138,7 +138,7 @@ author_profile: true
 
 1. Выполните [подготовительные работы](#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
 1. Запустите "**Tinfoil**"
-	* В свежем паке есть два "**Tinfoil**". Используйте тот, на иконке которого есть значок USB. Если у вас один Tinfoil - обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
+	* В свежем паке есть два "**Tinfoil**". Используйте тот, на иконке которого есть значок USB. Если у вас один Tinfoil - обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
 1. Выберите "**Title managment -> Network Install NSP**"
 1. Запускаем [Boop](https://github.com/miltoncandelero/Boop/releases/latest){:target="_blank"}.exe
 1. В графе "**IP Adress**" введите IP, написанный на нижнем экране приставки. 
@@ -166,7 +166,7 @@ author_profile: true
 
 1. Выполните [подготовительные работы](#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
 1. На свитче запустите "**Tinfoil**"
-	* В свежем паке есть два "**Tinfoil**". Используйте тот, версия которого 0.2.1. Если у вас один Tinfoil - обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
+	* В свежем паке есть два "**Tinfoil**". Используйте тот, версия которого 0.2.1. Если у вас один Tinfoil - обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из ссылки
 1. Выберите "**Title managment -> USB Install NSP**"
 1. На ПК запустите [`Zadig.exe`](https://zadig.akeo.ie/){:target="_blank"} от имени Администратора 
 1. В верхнем поле (на изображении '1') вы должны увидеть строку "**libnx USB comms**" 

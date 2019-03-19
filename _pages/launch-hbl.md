@@ -8,12 +8,12 @@ author_profile: true
 # Что понадобится
 
 * [Запущенная CFW](launch-cfw){:target="_blank"}
-* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 
 # Подготовительные работы
 
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Установите `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
+1. Установите `.7z`-архив [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
 1. Вставьте карту памяти в консоль и запустите [выбранный кастом](launch-cfw){:target="_blank"}
 
 # Инструкция

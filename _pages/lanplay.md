@@ -15,7 +15,7 @@ author_profile: true
 
 ## Что понадобится
 
-* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия программы [Lan-Play-Server-Manager](https://github.com/Urferu/Lan-Play-Server-Manager/releases/latest){:target="_blank"}
 	* Пользователи MacOS и Linux могут воспользоваться программой [lan-play-GUI](https://gbatemp.net/threads/lan-play-gui-a-graphical-interface-for-lan-play-updated-v1-0-0.525900/){:target="_blank"}
 * Драйвера [WinPCap](https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe){:target="_blank"}
@@ -37,7 +37,7 @@ author_profile: true
 
 ### Часть II - Настраиваем Switch
 
-1. Обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
+1. Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
 1. [Воспользуйтесь этой инструкцией, чтобы заблокировать обновления](get-started#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9)
 1. Если вы используете [SX OS](){:target="_blank"}, откройте меню SXOS (альбомы) и во вкладке "**Options**" активируйте "**Internet Local Wireless Play**"
 	* Необходимо активировать заново после каждой перезагрузки приставки

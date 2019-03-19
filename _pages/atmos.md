@@ -12,7 +12,7 @@ author_profile: true
 ## Что понадобится 
 
 * Умение [вводить консоль в режим восстановления (RCM)](fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm){:target="_blank"}
-* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 
 ## Инструкция
 
@@ -21,8 +21,8 @@ author_profile: true
 1. [Обновите приставку до **{% include /vars/sys_version.txt %}**](update-to-latest){:target="_blank"}? если версия вашей текущей прошивки ниже 
 	* На прошивках ниже, чем **{% include /vars/sys_version.txt %}** прошивка будет работать, но возможны глюки разного рода
 1. Выключите Switch и вставьте его карту памяти в ПК 
-1. Установите `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
-1. `payload.bin` из `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} - это hekate, с её помощью мы будем запускать прошивку через [Fusée Gelée](fusee-gelee){:target="_blank"}. 
+1. Установите `.7z`-архив [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
+1. `payload.bin` из `.7z`-архива [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} - это hekate, с её помощью мы будем запускать прошивку через [Fusée Gelée](fusee-gelee){:target="_blank"}. 
 1. Вставьте карту в консоль
 
 ### Запуск Atmosphere

@@ -11,7 +11,7 @@ Edizon работает только на Atmosphere! В SXOS есть свой 
 
 1. Выключите консоль
 1. Вставьте карту памяти в ПК
-1. Обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
+1. Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
 1. Скачайте [edizon_cheats.zip](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} из репозитория и переместите все папки из архива на карту памяти с заменой
 
 ## Работа с читами

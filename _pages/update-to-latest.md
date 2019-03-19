@@ -31,7 +31,7 @@ author_profile: true
 # Что понадобится
 
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [кастомную прошивку](launch-cfw){:target="_blank"}
-* Свежая версия [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %}:
 	* [ЯД](https://yadi.sk/d/NBGdQ-d68KlWxw){:target="_blank"}
@@ -58,7 +58,7 @@ author_profile: true
 	* Это удалит все данные с карты. Сделайте резервные копию всех важных данных, перед форматированием!
 	* Можете просто использовать любую другую карту в fat32, 4ГБ хватит с головой для обновления 
 	* Форматируйте карту [таким](https://3ds.customfw.xyz/clean_sd#ii-%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-sd-%D0%BA%D0%B0%D1%80%D1%82%D1%8B){:target="_blank"} способом, если не удаётся сделать этого прямо через Windows
-1. Установите `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
+1. Установите `.7z`-архив [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
 1. Скопируйте содержимое `.zip`-архива с прошивкой {% include /vars/sys_version.txt %} в корень карты памяти
 
 ## Часть III - Обновление прошивки

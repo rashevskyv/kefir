@@ -1,1 +1,1 @@
-`payload.bin` из `.zip`-архива [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+`payload.bin` из `.7z`-архива [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}

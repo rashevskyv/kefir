@@ -30,7 +30,7 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти в ПК
-1. Обновите [SDFiles](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
+1. Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
 1. Верните карту памяти в приставку
 1. Вставьте замыкатель вместо правого джойкона
 
