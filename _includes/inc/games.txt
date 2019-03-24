@@ -1,10 +1,14 @@
-* [XCI от релиз групп](magnet:?xt=urn:btih:21FFC9D82747366C93F4947139C63197F1CFACC1){:target="_blank"} (раздача в архивах, распакуйте любой из многих, чтобы получить XCI)
-* [CXCI с обновлениями и DLC от 08.03.2019](magnet:?xt=urn:btih:7F972798E2F0D5E447413528FC41BAFCD339FFE6){:target="_blank"} (CXCI - это кастомный XCI, в игру уже вшиты обновления и DLC!)
-* [NSP](magnet:?xt=urn:btih:A7B442873D578F2D2766298C78D2D3999BC02282&dn=_NSPOUT){:target="_blank"} (полный дамп eSHOP от 16.11.2018, включая обновления и DLC, сделанный через CDNSP)
-* [Discord](https://discord.io/homebrew){:target="_blank"} (канал #request_bot )
-* [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
-* [Softcobra](https://www.softcobra.com/ntdo/ntdo-swh/){:target="_blank"}
-* [Romstorage](https://romstorage.com){:target="_blank"}
+* [Discord](https://discord.io/homebrew){:target="_blank"}
+	* Именно тут первыми появляются все новые игры и обновления. Этот метод считается самым актуальным и рекомендуется к использованию! 
+	* Перейдите на канал **#request_bot** и введите !help для того, чтобы узнать все команды, которые поддерживает бот
+* Торренты: 
+	* [CXCI с обновлениями и DLC от 08.03.2019](magnet:?xt=urn:btih:7F972798E2F0D5E447413528FC41BAFCD339FFE6){:target="_blank"} (CXCI - это кастомный XCI, в игру уже вшиты обновления и DLC!)
+	* [XCI от релиз групп](magnet:?xt=urn:btih:21FFC9D82747366C93F4947139C63197F1CFACC1){:target="_blank"} (раздача в архивах, распакуйте любой из многих, чтобы получить XCI)
+	* [NSP](magnet:?xt=urn:btih:A7B442873D578F2D2766298C78D2D3999BC02282&dn=_NSPOUT){:target="_blank"} (полный дамп eSHOP от 16.11.2018, включая обновления и DLC, сделанный через CDNSP)
+* Сайты с играми:
+	* [Darkumbra](https://darkumbra.net/forums/forum/195-switch-games/){:target="_blank"}
+	* [Softcobra](https://www.softcobra.com/ntdo/ntdo-swh/){:target="_blank"}
+	* [Romstorage](https://romstorage.com){:target="_blank"}
 * [Установка игр с помощью Tinfoil 1.1 прямо из интернета](games#установка-с-помощью-tinfoil-11-из-интернета)
 
 ## Как узнать безопасно ли устанавливать игру

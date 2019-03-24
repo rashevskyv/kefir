@@ -27,4 +27,6 @@ author_profile: true
 * [Резервное копирование NAND](backup-nand){:target="_blank"}
 * [Список полезных после прошивки инструкций](addons){:target="_blank"}
 * [Установка игр, DLC, обновлений](games){:target="_blank"}
+* [Установка игр, DLC, обновлений через DBI](dbi){:target="_blank"}
+* [Установка игр, DLC, обновлений с помощью Tinfoil 1.1, он же /hbg/shop](tinfoil){:target="_blank"}
 * [Часто задаваемые вопросы](faq){:target="_blank"}
