@@ -20,6 +20,7 @@ author_profile: true
 * [Использование FTP](ftp){:target="_blank"}
 * [Использование читов в EdiZon](cheats){:target="_blank"}
 * [Кастомная прошивка](launch-cfw){:target="_blank"}
+* [Конвертирование XCI в NSP](xci-convert){:target="_blank"}
 * [Мультиплеер на прошитой консоли (LAN Play)](lanplay){:target="_blank"}
 * [Начнём](get-started){:target="_blank"}
 * [Пожертвования](http://customfw.xyz/donations){:target="_blank"}
