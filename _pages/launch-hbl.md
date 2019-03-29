@@ -20,7 +20,7 @@ author_profile: true
 
 ## Часть I - Запуск HBL
 
-Homebrew Launcher (HBL) - среда для запуска самописных приложений для Switch. 
+Homebrew Launcher (launch-hbl) - среда для запуска самописных приложений для Switch. 
 
 ![]({{ base_path }}/images/screenshots/gallery.jpg) 
 {: .text-center}

@@ -21,7 +21,7 @@ author_profile: true
 1. Запустите программу 
 1. Положите в папку с программой `keys.dat`, которые находятся в корне карты памяти вашей консоли, и переименуйте их в `keys.txt`
 1. В окошечке слева от кнопки *Scan* введите адрес папки, в которой находятся ваши игры и нажмите **Scan**
-1. На приставке запустите **Tinfoil 1.1**, он же /hbg/shop, через [Homebrew Launcher](HBL){:target="_blank"}
+1. На приставке запустите **Tinfoil 1.1**, он же /hbg/shop, через [Homebrew Launcher](launch-hbl){:target="_blank"}
 1. Перейдите во вкладку "**Options**" и выберите "**Ignore Soft Firmware Check**" и "**Install Unsigned Code**" если они находятся в положении "**No**"
 	* При выборе второго пункта программа попросит ввести код - (UP)(UP)(DOWN)(DOWN)(LEFT)(RIGHT)(LEFT)(RIGHT)(B)(A)(+)
 	
