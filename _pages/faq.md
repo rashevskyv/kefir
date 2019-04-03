@@ -50,6 +50,9 @@ author_profile: true
 ### **В:** Смогу ли я устанавливать цифровые релизы? 
 **О:** Да
 
+### **В:** Можно ли запустить игры, требующие привязанного аккаунта, не привязывая аккаунт?
+**О:** Нужно взять и скопировать по пути `SYSTEM/save` файлы [8000000000000010](https://fex.net/s/par7dx4){:target="_blank"} и [8000000000000011](https://fex.net/s/dea0ezl){:target="_blank"}
+
 ### **В:** При запуске прошивки получаю ошибку "Fatal Error: [NXBOOT]: Failed to detect target firmware"
 **О:** Обновите kefir(https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 
