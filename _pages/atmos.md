@@ -18,7 +18,7 @@ author_profile: true
 
 ### Подготовительные работы 
 
-1. [Обновите приставку до **{% include /vars/sys_version.txt %}**](update-to-latest){:target="_blank"}? если версия вашей текущей прошивки ниже 
+1. [Обновите приставку до **{% include /vars/sys_version.txt %}**](update-to-latest){:target="_blank"}, если версия вашей текущей прошивки ниже 
 	* На прошивках ниже, чем **{% include /vars/sys_version.txt %}** прошивка будет работать, но возможны глюки разного рода
 1. Выключите Switch и вставьте его карту памяти в ПК 
 1. Установите `.7z`-архив [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого

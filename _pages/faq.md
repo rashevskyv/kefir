@@ -54,9 +54,14 @@ author_profile: true
 **О:** Нужно взять и скопировать по пути `SYSTEM/save` файлы [8000000000000010](https://fex.net/s/par7dx4){:target="_blank"} и [8000000000000011](https://fex.net/s/dea0ezl){:target="_blank"}
 
 ### **В:** При запуске прошивки получаю ошибку "Fatal Error: [NXBOOT]: Failed to detect target firmware"
-**О:** Обновите kefir(https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+**О:** Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 
 ### **В:** Не удаляется игра после установки, не могу удалить и через NX-shell
+**О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
+
+Не меняйте атрибуты папки Nintendo!
+{: .notice--warning}
+
 ### **В:** В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть
 **О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
 
