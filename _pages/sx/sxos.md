@@ -43,7 +43,7 @@ SX OS - коммерческая система и требует покупки
 1. Нажмите "**Boot Custom FW**"
 1. Нажмите ""**Continue**"
 1. Вставьте карту памяти приставки в ПК
-1. Перейдите на [сайт активации SX OS](https://sx.xecuter.com/sxos-license.html){:target="_blank"}
+1. Перейдите на [сайт активации SX OS](https://sx.xecuter.rocks/sxos-license.html){:target="_blank"}
 1. Нажмите кнопку "**Browse**" и выберите сгенерированный `license-request.dat`
 1. Введите ключ активации
 1. Нажмите "**Retrieve License**" и выберите в качестве места сохранения корень карты памяти приставки
