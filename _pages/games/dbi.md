@@ -46,7 +46,7 @@ author_profile: true
 1. На приставке запустите **DBI** через [Homebrew Launcher](launch-hbl){:target="_blank"}
 1. Подключите консоль к ПК 
 1. Выберите пункт "**Install title from USB**"
-1. Запустите `[ns-usbloader](https://github.com/developersu/ns-usbloader/releases/latest){:target="_blank"}.jar`
+1. Запустите [`ns-usbloader.jar`](https://github.com/developersu/ns-usbloader/releases/latest){:target="_blank"}
 	* Убедитесь, что в программе выбран **Tinfoil** и **USB**
 		![]({{ base_path }}/images/screenshots/nsu.png) 
 		{: .text-center}

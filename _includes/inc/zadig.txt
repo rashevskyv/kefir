@@ -8,7 +8,7 @@
 
 1. Выполните [подготовительные работы](games#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
 1. Подключите switch к ПК по USB 
-1. Запустите [Homebrew Launcher](hbl){:target="_blank"}
+1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
 1. Выберите **DBI**
 1. Выберите пункт "**Install title from USB**"
 1. На ПК запустите [`Zadig.exe`](https://zadig.akeo.ie/){:target="_blank"} от имени Администратора 
