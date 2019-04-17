@@ -85,7 +85,7 @@ Atmosphere - open source проект. Она состоит из пяти ос�
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
-      <td style="text-align: center; font-weight: bold;">Запуск кастомной прошивки невозможен!</td>
+      <td style="text-align: center; font-weight: bold;"><a href="downgrade_fw">Понижение версии системного ПО до 6.1</a></td>
     </tr>
   </tbody>
 </table>
@@ -151,7 +151,7 @@ ___
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
-      <td style="text-align: center; font-weight: bold;">Запуск кастомной прошивки невозможен!</td>
+      <td style="text-align: center; font-weight: bold;"><a href="downgrade_fw">Понижение версии системного ПО до 6.1</a></td>
     </tr>
   </tbody>
 </table>
