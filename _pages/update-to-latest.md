@@ -25,7 +25,7 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [кастомную прошивку](launch-cfw){:target="_blank"}
 * Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
-* Прошивка {% include /vars/sys_version.txt %}:
+* Прошивка {% include /vars/sys_version.txt %} (скачайте по любой из ссылок):
 	* [ЯД](https://yadi.sk/d/8xgh7xlo-5tAVw){:target="_blank"}
 	* [GD](https://drive.google.com/open?id=1wIc1yDNSzgU5YRvZDRXXRc4IxNY5DrCN){:target="_blank"}
 	* [MEGA](https://mega.nz/#!NkcRBQAY!FQDEXsQW13AV5FG2l4G_1IkqSb97X0EtdmE367NPtZk){:target="_blank"}
@@ -56,7 +56,8 @@ author_profile: true
 		1. Скопируйте в корень карты памяти приставки **содержимое** архива [`_old.7z`](https://github.com/rashevskyv/switch/releases/download/kefir22/old.7z)
 		1. После того, как вы удачно обновите системное ПО, обязательно **ещё раз установите kefir**
 
-1. Скопируйте содержимое `.7z`-архива с прошивкой {% include /vars/sys_version.txt %} в корень карты памяти
+1. Скопируйте содержимое архива `{% include /vars/sys_version.txt %}.zip` с прошивкой в корень карты памяти
+	* Не с кефиром, с прошивкой. Ссылки на прошивку в разделе [Что понадобится](#что-понадобится)
 
 ## Часть III - Обновление прошивки
 
