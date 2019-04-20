@@ -35,6 +35,8 @@ author_profile: true
 {: .notice--danger}
 
 1. Создайте [резервную копию NAND](backup-nand){:target="_blank"} консоли и поместите её в надёжное место 
+1. Установите `.7z`-архив [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
+
 
 ## Часть II - Перепаковка прошивки под вашу систему
 
