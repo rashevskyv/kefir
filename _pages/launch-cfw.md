@@ -82,12 +82,8 @@ Atmosphere - open source проект. Она состоит из пяти ос�
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
-      <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
-    </tr>
-    <tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="downgrade_fw">Понижение версии системного ПО до 6.1</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
     </tr>
   </tbody>
 </table>
@@ -150,12 +146,8 @@ ___
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">7.0.1</td>
-      <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
-    </tr>
-    <tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="downgrade_fw">Понижение версии системного ПО до 6.1</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
     </tr>
   </tbody>
 </table>
