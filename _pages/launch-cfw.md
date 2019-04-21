@@ -118,9 +118,11 @@ ___
 + Полностью закрытая
 + В версии до 1.3 содержала в себе бриккод, шифрующий eMMC при попытке взлома прошивки. Кто его знает какие ещё сюрпризы там остались
 + Основана на коде Atmosphere, что нарушает лицензию последней (строго этический момент, на работу это, разумеется, не влияет)
-+ В данный момент старые сайты прошивки заблокированы. Активация проходится через зеркало. Атоматическая активация не доступна. 
 + Не поддерживает эмуляцию amiibo 
 + Не поддерживает разгон процессора и видеокарты 
++ Не поддерживает 8.0.0
++ Очень долго и редко обновляется
++ Стабильная ветка поддерживает только старые прошивки
 
 ### Установка
 Для установки выберите в таблице версию прошивки, соответствующую вашей. 
@@ -145,8 +147,11 @@ ___
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
     </tr>
-  </tbody>
+    <tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
+      <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск прошивки невозможен. Устанавливайте Atmosphere </a></td>
+    </tr>  </tbody>
 </table>
