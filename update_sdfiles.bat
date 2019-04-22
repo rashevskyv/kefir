@@ -556,6 +556,7 @@ if exist "%sd%:\atmosphere\titles\0100000000001000" (mkdir %sd%:\_themebkp\01000
 if exist "%sd%:\atmosphere\titles\0100000000001000" (xcopy "%sd%:\atmosphere\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
 if exist "%sd%:\atmosphere\titles\0100000000001000" (RD /s /q "%sd%:\atmosphere\titles\0100000000001000")
 if exist "%sd%:\switch\NxThemesInstaller.nro" (del "%sd%:\switch\NxThemesInstaller.nro")
+if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 
 :install_pack
 
