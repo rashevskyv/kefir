@@ -152,6 +152,6 @@ ___
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.0.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="atmo">Запуск прошивки невозможен. Устанавливайте Atmosphere </a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Понижение прошивки до 7.0.1 с помощью Atmosphere</a></td>
     </tr>  </tbody>
 </table>
