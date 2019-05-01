@@ -82,7 +82,8 @@ Atmosphere - open source проект. Она состоит из пяти ос�
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/last_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;">7.0.1</td>
+      <td style="text-align: center; font-weight: bold;">{% include /vars/last_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
     </tr>
   </tbody>
@@ -120,9 +121,8 @@ ___
 + Основана на коде Atmosphere, что нарушает лицензию последней (строго этический момент, на работу это, разумеется, не влияет)
 + Не поддерживает эмуляцию amiibo 
 + Не поддерживает разгон процессора и видеокарты 
-+ Не поддерживает 8.0.0
 + Очень долго и редко обновляется
-+ Стабильная ветка поддерживает только старые прошивки
++ Новые прошивки запускают только beta релизы
 
 ### Установка
 Для установки выберите в таблице версию прошивки, соответствующую вашей. 
@@ -147,11 +147,9 @@ ___
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;">{% include /vars/sys_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;">{% include /vars/last_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
     </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/last_version.txt %}</td>
-      <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Понижение прошивки до 7.0.1 с помощью Atmosphere</a></td>
-    </tr>  </tbody>
+  </tbody>
 </table>
