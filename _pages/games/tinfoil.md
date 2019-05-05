@@ -20,8 +20,8 @@ author_profile: true
 {: .notice--warning}
 
 1. Скачайте свежую версия [nut](https://github.com/blawar/nut/releases/latest){:target="_blank"} на ваш ПК и распакуйте в удобное место
-1. Запустите **nut** 
 1. Положите в папку с программой `keys.dat`, которые находятся в корне карты памяти вашей консоли, и переименуйте их в `keys.txt`
+1. Запустите **nut** 
 1. В окошечке слева от кнопки *Scan* введите адрес папки, в которой находятся ваши игры и нажмите **Scan**
 1. На приставке запустите **Tinfoil**, он же /hbg/shop, через [Homebrew Launcher](launch-hbl){:target="_blank"}
 1. Перейдите во вкладку "**Options**" и переключите "**Ignore Soft Firmware Check**" и "**Install Unsigned Code**"в положение "**Yes**", если они находятся в положении "**No**"

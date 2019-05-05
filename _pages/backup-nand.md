@@ -142,7 +142,7 @@ ___
 
 ## Часть II - Дампим BOOT0/1
 
-1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}, если находитесь не в hekate 
 1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
@@ -161,7 +161,7 @@ ___
 
 ### Дампим biskeys
 
-1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
+1. Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}, если находитесь не в hekate 
 1. Удерживайте кнопку (VOL-), пока не появится hekate 
 
 	Для перемещения по меню, hekata используйте клавиши (VOL-) и (VOL+), (POWER) для выбора
