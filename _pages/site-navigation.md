@@ -9,7 +9,6 @@ author_profile: true
 * [Atmosphere](atmos){:target="_blank"}
 * [AutoRCM](autorcm){:target="_blank"}
 * [SX OS](sxos){:target="_blank"}
-* [Безопасное обновление прошивки вручную](update-to-latest_old){:target="_blank"}
 * [Безопасное обновление прошивки](update-to-latest){:target="_blank"}
 * [Благодарности](credits){:target="_blank"}
 * [Блокировка обновлений и доступа к серверам Nintendo](block-update){:target="_blank"}
