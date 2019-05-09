@@ -12,6 +12,7 @@ author_profile: true
 * [Безопасное обновление прошивки вручную](update-to-latest_old){:target="_blank"}
 * [Безопасное обновление прошивки](update-to-latest){:target="_blank"}
 * [Благодарности](credits){:target="_blank"}
+* [Блокировка обновлений и доступа к серверам Nintendo](block-update){:target="_blank"}
 * [Даунгрейд и восстановление прошивки](downgrade_fw){:target="_blank"}
 * [Запуск Homebrew Launcher](launch-hbl){:target="_blank"}
 * [Запуск игр в SX OS](sxos-games){:target="_blank"}
