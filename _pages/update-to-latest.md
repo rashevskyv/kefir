@@ -58,7 +58,7 @@ author_profile: true
 	* Если у вас нет драйвера exFAT, то вы не сможете запустить приставку с помощью exFAT-карты памяти 
 1. Установите `.7z`-архив [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}, согласно инструкции в репозитории, если ещё не делали этого
 	* Если версия вашего системного ПО ниже, чем 3.0.0 включительно, то вместо установки кефира вы делаете: 
-		1. Скопируйте в корень карты памяти приставки **содержимое** архива [`_old.7z`](https://github.com/rashevskyv/switch/releases/download/kefir22/old.7z){:target="_blank"}
+		1. Скопируйте в корень карты памяти приставки **содержимое** архива [`_old.7z`](https://github.com/rashevskyv/switch/releases/download/kefir28/old.7z){:target="_blank"}
 		1. После того, как вы удачно обновите системное ПО, обязательно **ещё раз установите kefir**
 
 1. Скопируйте **содержимое** архива `{% include /vars/sys_version.txt %}.zip` с прошивкой в корень карты памяти
