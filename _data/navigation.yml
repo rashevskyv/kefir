@@ -57,6 +57,8 @@ addons:
     url: /ftp
   - title: "Особенности использования чипованной приставки"
     url: /hardmoded
+  - title: "Эмуляция Amiibo с помощью модуля emuiibo"
+    url: /emuiibo
             
 bottom:
   - title: <div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>

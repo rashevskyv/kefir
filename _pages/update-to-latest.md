@@ -30,10 +30,10 @@ author_profile: true
 * Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %} (скачайте по любой из ссылок):
-	* [ЯД](https://yadi.sk/d/8xgh7xlo-5tAVw){:target="_blank"}
-	* [GD](https://drive.google.com/open?id=1wIc1yDNSzgU5YRvZDRXXRc4IxNY5DrCN){:target="_blank"}
-	* [MEGA](https://mega.nz/#!NkcRBQAY!FQDEXsQW13AV5FG2l4G_1IkqSb97X0EtdmE367NPtZk){:target="_blank"}
-	* [FEX](https://fex.net/912191309314/1157451339?fileId=1265814350){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/ESAF1SHdXUVTXQ){:target="_blank"}
+	* [GD](https://drive.google.com/open?id=1u-vTIDp1KsS2xcfUZVcwsR_BeGUo6D46){:target="_blank"}
+	* [MEGA](https://mega.nz/#!tsdgmQ7K!Kt4aO7GDb9jTi1l4r7lccSAm7ULza_T4qfTUicEJSfc){:target="_blank"}
+	* [FEX](https://fex.net/s/d2fkdnk){:target="_blank"}
 * Карта памяти 
 
 # Инструкция

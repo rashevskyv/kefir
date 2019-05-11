@@ -78,12 +78,11 @@ Atmosphere - open source проект. Она состоит из пяти ос�
   <tbody>
     <tr>
       <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">7.0.0</td>
+      <td style="text-align: center; font-weight: bold;">8.0.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;">7.0.1</td>
-      <td style="text-align: center; font-weight: bold;">{% include /vars/last_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
     </tr>
   </tbody>
@@ -122,7 +121,8 @@ ___
 + Не поддерживает эмуляцию amiibo 
 + Не поддерживает разгон процессора и видеокарты 
 + Очень долго и редко обновляется
-+ Новые прошивки запускают только beta релизы
++ С новыми версиями системного ПО умеют работать **только** beta-версии прошивки
++ Не умеет правильно выключать приставку и перезагружаться в систему
 
 ### Установка
 Для установки выберите в таблице версию прошивки, соответствующую вашей. 
@@ -143,12 +143,11 @@ ___
   <tbody>
     <tr>
       <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">7.0.0</td>
+      <td style="text-align: center; font-weight: bold;">8.0.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до {% include /vars/sys_version.txt %}</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;">{% include /vars/sys_version.txt %}</td>
-      <td style="text-align: center; font-weight: bold;">{% include /vars/last_version.txt %}</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
     </tr>
   </tbody>

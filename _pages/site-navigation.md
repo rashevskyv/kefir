@@ -31,3 +31,4 @@ author_profile: true
 * [Установка игр, DLC, обновлений через DBI](dbi){:target="_blank"}
 * [Установка игр, DLC, обновлений с помощью Tinfoil 1.1, он же /hbg/shop](tinfoil){:target="_blank"}
 * [Часто задаваемые вопросы](faq){:target="_blank"}
+* [Эмуляция Amiibo с помощью модуля emuiibo](emuiibo){:target="_blank"}

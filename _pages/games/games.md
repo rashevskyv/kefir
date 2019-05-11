@@ -79,4 +79,6 @@ DBI не работает на прошивке 8.0.0! Для установки
 1. Выберите **Fix archive bit (except Nintendo folder)** и дождитесь окончания установки 
 1. Выберите **Back** -> **Launch** - >**YOUR_OS_NAME**
 
-* [Список игр на русском](https://docs.google.com/spreadsheets/d/1J17m3iwvKKUi7X5PpLe05fDYxIxeJAkpG2ug6_y7JU8/edit#gid=0){:target="_blank"}
+## Полезные ссылки 
+* [Cписок игр на русском](https://4pda.ru/forum/index.php?s=&showtopic=937297&view=findpost&p=81163808){:target="_blank"}
+* [Эмуляция Amiibo с помощью модуля emuiibo](emuiibo){:target="_blank"}
