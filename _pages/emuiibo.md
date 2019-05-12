@@ -19,9 +19,9 @@ author_profile: true
 
 1. Выключите приставку и вставьте карту памяти консоли в ПК
 1. Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория
-1. Скопируйте нужные Amiibo из архива [Amiibo.rar](files/Amiibo.rar){:target="_blank"} в папку `emuiibo` в корне вашей карты памяти
+1. Скопируйте нужные Amiibo в папку `emuiibo` в корне вашей карты памяти
 	* Рекомендую копировать только необходимые, поскольку Amiibo переключаются циклически и если вы скопируете все сразу, будет очень сложно ориентироваться в дампах 
-	* Что дают Amiibo можно посмотреть в официальном [гайде от Nintendo](https://www.nintendo.com/Amiibo/compatibility/#Amiibo){:target="_blank"}
+	* Что дают Amiibo можно посмотреть в официальном [гайде от Nintendo](https://www.nintendo.com/amiibo/compatibility/#amiibo){:target="_blank"}
 1. Вставьте карту памяти в консоль и запустите [прошивку](launch-cfw){:target="_blank"}
 	
 ### Использование emuiibo
