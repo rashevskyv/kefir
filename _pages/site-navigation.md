@@ -24,6 +24,7 @@ author_profile: true
 * [Мультиплеер на прошитой консоли (LAN Play)](lanplay){:target="_blank"}
 * [Начнём](get-started){:target="_blank"}
 * [Пожертвования](http://customfw.xyz/donations){:target="_blank"}
+* [Проблемы и их решения](troubleshooting){:target="_blank"}
 * [Расширения файлов (Windows)](file-extensions-windows){:target="_blank"}
 * [Резервное копирование NAND](backup-nand){:target="_blank"}
 * [Список полезных после прошивки инструкций](addons){:target="_blank"}

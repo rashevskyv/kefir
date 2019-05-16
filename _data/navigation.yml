@@ -11,6 +11,8 @@ main:
     url: /addons
   - title: "FAQ"
     url: /faq
+  - title: "Проблемы и<br>их решение"
+    url: /troubleshooting
   - title: "Установка<br>игр"
     url: /games
   - title: "Запуск<br>HBL"
