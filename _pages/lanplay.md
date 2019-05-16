@@ -15,7 +15,7 @@ author_profile: true
 
 ## Что понадобится
 
-* Свежая версия [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+* Свежая версия <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr>
 * Свежая версия [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm/releases/latest){:target="_blank"} (ldn_mitm_vx.x.x.zip)
 	* Рекомендуется качать из [hb appstore](https://www.switchbru.com/appstore/#/app/ldm_mitm){:target="_blank"} (раздел toolsб написано с ошибкой - ldm mitm)
 * Свежая версия программы [Lan-Play-Server-Manager](https://github.com/Urferu/Lan-Play-Server-Manager/releases/latest){:target="_blank"}
@@ -39,7 +39,7 @@ author_profile: true
 
 ### Часть II - Настраиваем Switch
 
-1. Обновите [kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} по инструкции из репозитория, если не делали этого ранее
+1. Обновите <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr> по инструкции из репозитория, если не делали этого ранее
 1. Включите приставку и перейдите в "**Системные настройки**" -> "**Интернет**" -> "**Интернет-настройки**"
 1. Выберите ваше текущее подключение, нажмите на нём (A) и выберите "**Изменить настройки**"
 1. Выберите пункт "**Настройки IP-адреса**" -> "**Ручной ввод**"
