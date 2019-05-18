@@ -79,8 +79,6 @@ excerpt: 'Полное руководство по прошивке Nintendo Swi
 + Ваша карта памяти должна быть [SDHC](https://ru.wikipedia.org/wiki/Secure_Digital){:target="_blank"} или лучше, с [MBR](https://allerror.ru/zhelezo/v-chyom-raznica-mezhdu-gpt-i-mbr-pri-sozdanii-razdelov-na-diske.html){:target="_blank"}, [отформатированная в exFAT или FAT32](https://3ds.customfw.xyz/clean_sd#ii-%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-sd-%D0%BA%D0%B0%D1%80%D1%82%D1%8B){:target="_blank"}. Карты памяти с GPT работать не будут
 + Карта памяти должна быть [отформатирована в FAT32 или exFAT](faq#в-что-лучше-fat32-или-exfat){:target="_blank"}. Для поддержки последнего Switch попросит обновление. Просто следуйте руководству и вы безопасно обновите Switch таким образом, чтобы приставка поддерживала exFAT
 
-http://customfw.xyz/format_sd
-
 + Вам понадобится:
 	+ Карта памяти с не менее чем 4Гб объёма
 		+ Если вы планируете устанавливать с неё игры, или делать на неё резервную копию, карта должна быть не менее 32Гб
