@@ -1,1 +1,1 @@
-`payload.bin` из `.7z`-архива <abbr title=">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
+`payload.bin` из `.7z`-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr>
