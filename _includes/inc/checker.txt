@@ -1,5 +1,5 @@
-<script src="https://customfw.xyz/ismyswitchhackable/vercheck.js"></script>
-<link rel="stylesheet" type="text/css" href="https://customfw.xyz/ismyswitchhackable/main.css">
+<script src="https://check.customfw.xyz/vercheck.js"></script>
+<link rel="stylesheet" type="text/css" href="https://check.customfw.xyz/main.css">
 
 Если версия системного ПО вашей приставки меньше, чем 4.1.0 (то есть 4.0.1 и ниже), то ваш свитч <strong>ТОЧНО</strong> прошиваемый!
 Введите первые 9 символов серийного номера консоли.
