@@ -24,8 +24,6 @@ author_profile: true
 1. Создайте [резервную копию NAND](backup-nand){:target="_blank"} консоли и поместите её в надёжное место 
 1. Запустите прошивку
 1. Сделайте [резервные копии сохранений](backup-saves){:target="_blank"} со всех ваших аккаунтов
-1. Подключите приставку к интернету 
-	* Воспользуйтесь одним из представленных методов для [блокировки серверов Nintendo](block-update){:target="_blank"}, если ещё не сделали этого
 1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
 1. Запустите **Kefir Updater**
 1. Выберите пункт **"Add linked account"**
