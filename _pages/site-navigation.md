@@ -27,6 +27,8 @@ author_profile: true
 * [Проблемы и их решения](troubleshooting){:target="_blank"}
 * [Расширения файлов (Windows)](file-extensions-windows){:target="_blank"}
 * [Резервное копирование NAND](backup-nand){:target="_blank"}
+* [Резервное копирование и восстановление сохранений с помощью Checkpoint](backup-saves){:target="_blank"}
+* [Связывание учётной записи консоли с аккаунтом Nintendo](link-account){:target="_blank"}
 * [Список полезных после прошивки инструкций](addons){:target="_blank"}
 * [Установка игр, DLC, обновлений](games){:target="_blank"}
 * [Установка игр, DLC, обновлений через DBI](dbi){:target="_blank"}

@@ -79,3 +79,4 @@ author_profile: true
 ## Полезные ссылки 
 * [Cписок игр на русском](https://4pda.ru/forum/index.php?s=&showtopic=937297&view=findpost&p=81163808){:target="_blank"}
 * [Эмуляция Amiibo с помощью модуля emuiibo](emuiibo){:target="_blank"}
+* [Связывание учётной записи консоли с аккаунтом Nintendo](link-account){:target="_blank"}

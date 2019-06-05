@@ -52,8 +52,7 @@ author_profile: true
 **О:** Да
 
 ### **В:** Можно ли запустить игры, требующие привязанного аккаунта, не привязывая аккаунт?
-**О:** Нужно взять и скопировать по пути `SYSTEM/save` файлы [8000000000000010](http://switch.customfw.xyz/files/8000000000000010){:target="_blank"} и [8000000000000011](http://switch.customfw.xyz/files/8000000000000011){:target="_blank"}
-Работает не у всех
+**О:** Воспользуйтесь [этой инструкцией](link-account){:target="_blank"}
 
 ### **В:** Не удаляется игра после установки, не могу удалить и через NX-shell
 **О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
