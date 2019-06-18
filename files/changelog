@@ -1,5 +1,7 @@
-* [Updated] Atmosphere 0.8.10
+* [Updated] [Atmosphere 0.9](https://github.com/Atmosphere-NX/Atmosphere/releases/latest)
 * [Updated] Kefir Updater 0.3.0
+* [Updated] DBI-15
+* [Updated] [/hbg/shop 1.6.1](https://discord.io/homebrew)
 
-* [Обновлено] Atmosphere 0.8.10
-* [Обновлено] Kefir Updater 0.3.0
+* DBI научился корректно удалять предыдущий патч перед установкой нового, так же, как это делает DevMenu 
+* В /hbg/shop 1.6.1 добавлены зеркала для того, чтобы пользователи кефира сталкивались с квотой как можно реже
