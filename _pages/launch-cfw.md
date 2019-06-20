@@ -87,10 +87,10 @@ Atmosphere - open source проект. Она состоит из пяти ос�
       <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
     </tr>
-    <tr>
+    <!--<tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.1.0</td>
       <td style="text-align: center; font-weight: bold;"><strong>Запуск Atmosphere невозможен</strong></td>
-    </tr>
+    </tr>-->
   </tbody>
 </table>
 
@@ -156,9 +156,9 @@ ___
       <td style="text-align: center; font-weight: bold;" colspan="2">{% include /vars/sys_version.txt %}</td>
       <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
     </tr>
-	<tr>
+	<!--<tr>
       <td style="text-align: center; font-weight: bold;" colspan="2">8.1.0</td>
       <td style="text-align: center; font-weight: bold;"><strong>Запуск SX OS невозможен</strong></td>
-    </tr>
+    </tr>-->
   </tbody>
 </table>

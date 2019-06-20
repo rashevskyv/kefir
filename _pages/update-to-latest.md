@@ -30,10 +30,11 @@ author_profile: true
 * Свежая версия <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr>
 * Свежая версия [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"}
 * Прошивка {% include /vars/sys_version.txt %} (скачайте по любой из ссылок):
-	* [ЯД](https://yadi.sk/d/ESAF1SHdXUVTXQ){:target="_blank"}
-	* [GD](https://drive.google.com/open?id=1u-vTIDp1KsS2xcfUZVcwsR_BeGUo6D46){:target="_blank"}
-	* [MEGA](https://mega.nz/#!tsdgmQ7K!Kt4aO7GDb9jTi1l4r7lccSAm7ULza_T4qfTUicEJSfc){:target="_blank"}
-	* [FEX](https://fex.net/s/d2fkdnk){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:C9A180DC1BAC1093BE3B2EC4DDDC599E8F7AD98D){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/iKnZNBr1WgOZBw){:target="_blank"}
+	* [GD](https://drive.google.com/file/d/1xoB896cBnBECd9Th0AXlgh8Anlq2V0Xy/view?usp=sharing){:target="_blank"}
+	* [MEGA](https://mega.nz/#!glFyCCYR!uVSsoGMLBXfShJ8onvQbxSb5g6j9vKeZf2Umg3qO8gw){:target="_blank"}
+	* [FEX](https://fex.net/s/n71n3ka){:target="_blank"}
 * Карта памяти 
 
 # Инструкция
