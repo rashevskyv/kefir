@@ -44,8 +44,8 @@ author_profile: true
 1. Распакуйте `.zip-архив` с ключами в папку `ChoiDujour` таким образом, чтобы файл `keys.txt` лежал в той же директории, что и `ChoiDujour.exe`
 1. Распакуйте `.zip-архив` с прошивкой 6.1.0 в папку `ChoiDujour` таким образом, чтобы папка с прошивкой лежала в той же директории, что и `ChoiDujour.exe`
 1. Откройте файлы `keys.txt` и `prod.keys` (бекап ваших ключей) с помощью программы [notepad++](https://notepad-plus-plus.org/download/v7.6.3.html){:target="_blank"}, который у вас получился в ходе выполнения "Части I"
-1. Скопируйте значение строки "**bis_kek_source**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**secure_boot_key**" в файле `keys.txt`
-1. Скопируйте значение строки "**device_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**tsec_key**" в файле `keys.txt`
+1. Скопируйте значение строки "**secure_boot_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**secure_boot_key**" в файле `keys.txt`
+1. Скопируйте значение строки "**tsec_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**tsec_key**" в файле `keys.txt`
 
 	![]({{ base_path }}/images/screenshots/keys.png) 
 	{: .text-center}
