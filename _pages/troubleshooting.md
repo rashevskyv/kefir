@@ -35,7 +35,7 @@ author_profile: true
 **О:** Обновите <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr>
 
 ### **В:** В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть
-**О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
+**О:** {% include /inc/fixatributes.txt %}
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}

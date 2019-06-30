@@ -73,8 +73,8 @@ author_profile: true
 1. Запустите приставку без карты памяти с помощью `payload.bin`
 1. Кнопками громкости и кнопкой включения перейдите в меню **tools**
 1. Вставьте карту памяти в приставку
-1. Выберите **Fix archive bit (except Nintendo folder)** и дождитесь окончания установки 
-1. Выберите **Back** -> **Launch** - >**YOUR_OS_NAME**
+1. {% include /inc/fixatributes.txt %}
+1. Выберите **Home** -> **Launch** - >**YOUR_OS_NAME**
 
 ## Полезные ссылки 
 * [Cписок игр на русском](https://4pda.ru/forum/index.php?s=&showtopic=937297&view=findpost&p=81163808){:target="_blank"}

@@ -55,7 +55,7 @@ author_profile: true
 **О:** Воспользуйтесь [этой инструкцией](link-account){:target="_blank"}
 
 ### **В:** Не удаляется игра после установки, не могу удалить и через NX-shell
-**О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
+**О:** {% include /inc/fixatributes.txt %}
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}

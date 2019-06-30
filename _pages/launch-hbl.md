@@ -48,7 +48,7 @@ Homebrew Launcher (launch-hbl) - среда для запуска самопис
 {% capture notice-7 %}
 Если в списке приложений пусто, снимите с файлов архивные атрибуты: 
 
-* В hekata перейдите в меню **Tools** выберите **Fix archive bit (except Nintendo folder)**
+* {% include /inc/fixatributes.txt %}
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--danger}

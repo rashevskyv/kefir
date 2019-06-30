@@ -1,0 +1,1 @@
+Запустите hekate и перейдите в меню **Tools**, переключитесь на вкладку **Archive bit - AutoRCM** (в нижней части экрана), выберите **Fix archive bit (except Nintendo folder)**
