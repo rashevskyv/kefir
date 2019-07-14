@@ -17,7 +17,7 @@ author_profile: true
 
 * Свежая версия <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr>
 * Свежая версия [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm/releases/latest){:target="_blank"} (ldn_mitm_vx.x.x.zip)
-	* Рекомендуется качать из [hb appstore](https://www.switchbru.com/appstore/#/app/ldm_mitm){:target="_blank"} (раздел toolsб написано с ошибкой - ldm mitm)
+	* Рекомендуется качать из [hb appstore](https://www.switchbru.com/appstore/#/app/ldm_mitm){:target="_blank"} (раздел tools, написано с ошибкой - ldm mitm)
 * Свежая версия программы [Lan-Play-Server-Manager](https://github.com/Urferu/Lan-Play-Server-Manager/releases/latest){:target="_blank"}
 	* Пользователи MacOS и Linux могут воспользоваться программой [lan-play-GUI](https://gbatemp.net/threads/lan-play-gui-a-graphical-interface-for-lan-play-updated-v1-0-0.525900/){:target="_blank"}
 * Драйвера [WinPCap](https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe){:target="_blank"}
