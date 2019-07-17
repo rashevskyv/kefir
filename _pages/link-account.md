@@ -22,6 +22,7 @@ author_profile: true
 1. Обновите <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}</abbr> по инструкции из репозитория, если не делали этого ранее
 1. Обновите [прошивку приставки](update-to-latest){:target="_blank"}
 1. Создайте [резервную копию NAND](backup-nand){:target="_blank"} консоли и поместите её в надёжное место 
+1. [Заблокируйте доступ к серверам Nintendo](block-update){:target="_blank"}
 1. Запустите прошивку
 1. Сделайте [резервные копии сохранений](backup-saves){:target="_blank"} со всех ваших аккаунтов
 1. Запустите [Homebrew Launcher](launch-hbl){:target="_blank"}
