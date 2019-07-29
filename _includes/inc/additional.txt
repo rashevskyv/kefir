@@ -1,0 +1,8 @@
+* [Часто задаваемые вопросы](faq){: target="blank_"}
+* [Проблемы и их решения](troubleshooting)
+* [Использование читов в EdiZon](cheats){: target="blank_"}
+* [Резервное копирование и восстановление сохранений с помощью Checkpoint](backup-saves){: target="blank_"}
+* [Онлайн для прошитых и забаненных](lanplay){: target="blank_"}
+* [Запуск Homebrew Launcher](hbl){: target="blank_"}
+* [Эмуляция Amiibo с помощью модуля emuiibo](emuiibo){: target="blank_"}
+* [Инструкции на сайте 4pda](https://4pda.ru/forum/index.php?act=findpost&pid=73214535&anchor=Spoil-73214535-3){: target="blank_"}

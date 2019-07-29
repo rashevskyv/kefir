@@ -5,7 +5,7 @@ main:
   - title: "<i>Купить<br>прошитую</i>"
     url: https://3dscfw.olx.ua/
   - title: "Кастомные<br>прошивки"
-    url: /launch-cfw
+    url: /cfw
   - title: "Полезные<br>
   инструкции"
     url: /addons
@@ -16,9 +16,9 @@ main:
   - title: "Установка<br>игр"
     url: /games
   - title: "Запуск<br>HBL"
-    url: /launch-hbl
-  - title: "Fusée Gelée"
-    url: /fusee-gelee
+    url: /hbl
+  - title: "Методы <br>взлома"
+    url: /exploits
   - title: "Безопасное<br>обновление"
     url: /update-to-latest
   - title: "Резервное<br>копирование"
@@ -41,6 +41,8 @@ addons:
     url: /games#%D0%B3%D0%B4%D0%B5-%D0%B1%D1%80%D0%B0%D1%82%D1%8C-%D0%B8%D0%B3%D1%80%D1%8B-%D0%B8-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F
   - title: "Связывание учётной записи консоли с аккаунтом Nintendo"
     url: /link-account
+  - title: "Использование EmuNAND для уже прошившихся ранее"
+    url: /preparation-white
   - title: "Использование читов в EdiZon"
     url: /cheats
   - title: "Резервное копирование и восстановление сохранений с помощью Checkpoint"
@@ -56,7 +58,7 @@ addons:
   - title: "Запуск Homebrew Launcher"
     url: /launch-hbl
   - title: "Кастомные прошивки"
-    url: /launch-cfw
+    url: /cfw
   - title: "Активация AutoRCM"
     url: /autorcm
   - title: "Использование FTP"
@@ -68,6 +70,5 @@ addons:
             
 bottom:
   - title: <div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
-  - title: <div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.</div>
-  - title: <div class="notice">По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a>.</div>
-  - title: <div class="notice--warning">Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</div>
+  - title: <div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br>По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+  - title: <div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>

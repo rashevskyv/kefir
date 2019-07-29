@@ -41,5 +41,5 @@ author_profile: true
 
 ___
 	
-Вернитесь к [Началу](get-started){:target="_blank"}
+Вернитесь к [Началу](/){:target="_blank"}
 {: .notice--success}

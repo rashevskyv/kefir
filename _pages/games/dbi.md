@@ -11,7 +11,7 @@ author_profile: true
 Всё, что имеет формат `.nsp` устанавливается одинаково по этой инструкции
 
 1. Выполните [подготовительные работы](games#подготовительные-работы){:target="_blank"}, если ещё не сделали этого
-1. Запустите "**DBI**" через [Homebrew Launcher](launch-hbl){:target="_blank"}
+1. Запустите "**DBI**" через [Homebrew Launcher](hbl){:target="_blank"}
 1. Выберите "**Browse SD Card**"
 1. Перейдите в папку, в которой находятся игры в формате `.nsp`
 	* В руководстве рекомендуется использовать папку `games` для порядка. По факту, папка может быть любая
@@ -41,7 +41,7 @@ author_profile: true
 
 ## Установка игр 
 
-1. На приставке запустите **DBI** через [Homebrew Launcher](launch-hbl){:target="_blank"}
+1. На приставке запустите **DBI** через [Homebrew Launcher](hbl){:target="_blank"}
 1. Подключите консоль к ПК 
 1. Выберите пункт "**Install title from USB**"
 1. Запустите [`ns-usbloader.jar`](https://github.com/developersu/ns-usbloader/releases/latest){:target="_blank"}
