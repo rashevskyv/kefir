@@ -1,0 +1,637 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Switch Hack Guide - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo SwitchПоследнее изменение: 30 июля">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Switch Hack Guide">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/">
+  <meta property="og:url" content="https://switch.customfw.xyz/">
+
+
+
+  <meta property="og:description" content="Полное руководство по прошивке Nintendo SwitchПоследнее изменение: 30 июля">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="https://switch.customfw.xyz/images/home-page-feature.jpg">
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #5e616c; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://switch.customfw.xyz/images/home-page-feature.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          Switch Hack Guide
+
+        
+      </h1>
+      
+        <p class="page__lead">Полное руководство по прошивке Nintendo Switch<br /><strong>Последнее изменение:</strong> 30 июля
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Switch Hack Guide">
+    <meta itemprop="description" content="Полное руководство по прошивке Nintendo SwitchПоследнее изменение: 30 июля">
+    
+    
+    <div class="page__inner-wrap">
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#как-читать-это-руководство" id="markdown-toc-как-читать-это-руководство">Как читать это руководство</a></li>
+  <li><a href="#я-не-хочу-прошивать-приставку-сам" id="markdown-toc-я-не-хочу-прошивать-приставку-сам">Я не хочу прошивать приставку сам</a></li>
+  <li><a href="#основные-термины" id="markdown-toc-основные-термины">Основные термины</a></li>
+  <li><a href="#как-работает-взлом" id="markdown-toc-как-работает-взлом">Как работает взлом?</a></li>
+  <li><a href="#что-устанавливается-в-этом-руководстве" id="markdown-toc-что-устанавливается-в-этом-руководстве">Что устанавливается в этом руководстве?</a></li>
+  <li><a href="#что-нужно-знать-перед-тем-как-начать" id="markdown-toc-что-нужно-знать-перед-тем-как-начать">Что нужно знать перед тем, как начать?</a></li>
+  <li><a href="#вам-понадобится" id="markdown-toc-вам-понадобится">Вам понадобится</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<h2 id="как-читать-это-руководство">Как читать это руководство</h2>
+
+<p>Руководство построено линейно. То есть подразумевается что его будут читать начиная с этой страницы и до тех пор, пока не получится желаемого результата.</p>
+
+<p>Первым делом рекомендуется прочитать руководство полностью, мысленно выполняя все действия, которые вы будете делать во время прошивки. Ознакомьтесь с <a href="faq" target="_blank">FAQ</a>. Так вам будет гораздо проще понять чего от вас добиваются во время прохождения гайда в реальной обстановке. Руководство большое и комплексное, часто включающее в себя много незнакомых для новичка терминов и перекрёстных ссылок. Много информации, встречающейся  руководстве, может показаться вам лишней, поскольку целью руководства было охватить наибольшее количество пользователей и их конфигураций. Невозможно одновременно помочь каждому и оставить гайд доступным для понимания даже маленькому ребёнку. Желаете прошить - разбирайтесь.</p>
+
+<p>Рекомендую открыть руководство в отдельном окне браузера, поскольку во время его выполнения будет открываться много дополнительных вкладок. Если вы видите в руководстве ссылку - переходите по ней, они там не просто так. Практически все ссылки, кроме тех, что переводят на следующий шаг инструкции, будут открываться в новой вкладке. После того, как вы выполните инструкцию по этой ссылке, закройте её и вернитесь к той странице, с которой эту ссылку открыли</p>
+
+<h2 id="я-не-хочу-прошивать-приставку-сам">Я не хочу прошивать приставку сам</h2>
+
+<ul>
+  <li>Вы можете обратиться к <a href="https://docs.google.com/document/d/1qr0Dy1IKvnOpbHmC2chiHPgJmUi9jywjXHDeO0df3JI/edit?usp=sharing" target="_blank">специалистам</a></li>
+  <li>Вы можете купить уже прошитую приставку <a href="https://3dscfw.olx.ua/" target="_blank">у меня, если живёте в Украине</a>, или же у ребят из списка выше</li>
+  <li>Если у вас возникли трудности при прошивке, или нужна помощь в выборе приставки - обращайтесь в <a href="http://vk.com/nincfw" target="_blank">группу</a> этого руководства.</li>
+</ul>
+
+<h2 id="основные-термины">Основные термины</h2>
+
+<p>В процессе прошивки вы столкнётесь с множеством новых терминов, знания о которых вам будут необходимы как в процессе прохождения руководства, так и в общении с единомышленниками в группе в ВК или дискорде. Ознакомьтесь с ними и постарайтесь понять. В случае, если вы забудете какой-то термин, просто вернитесь на главную страницу сайта и освежите память.</p>
+
+<details class="spoiler"><summary class="spoiler-title">AutoRCM</summary><div class="spoiler-body">
+<p>Специальный режим, при котором консоль не может включится нормальным образом, а сразу переходит в режим RCM, используется, чтобы не замыкать контакты при каждом выключении консоли.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">EmuNAND, emuMMC</summary><div class="spoiler-body">
+<p>Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Fuse (фьюз, предохранитель)</summary><div class="spoiler-body">
+<p>Предохранитель из специального массива, указывающий на версию консоли. «Сжигается» при обновлении прошивки на определённые версии, бережётся владельцами консолей со старыми версиями прошивок для возможного взлома без использования аппаратной уязвимости.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Hekate (хеката)</summary><div class="spoiler-body">
+<p>Кастомный загрузчик, заменяющий собой таковой от Nintendo. Благодаря hekate мы можем сильно упростить себе запуск кастомной прошивки, сделать резервное копирование приставки на случай сбоя, установить и настроить эмунанд, а так же запускать различные пейлоады.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Homebrew (хомбрю)</summary><div class="spoiler-body">
+<p>Под словом <a href="https://ru.wikipedia.org/wiki/homebrew_(%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D0%B8%D0%B3%D1%80%D1%8B)" target="_blank"><strong>Homebrew (хомбрю)</strong></a> обычно подразумевают программное обеспечение не авторизованное Nintendo. В качестве примера можно привести разные самописные игры, программы для бэкапа и редактирования сохранений и эмуляторы консолей предыдущих поколений. Homebrew запускается через специальный загрузчик - Homebrew Launcher.</p>
+
+<p>Во многих случаях запуск Homebrew на 100% бесплатен и использует только аппаратную уязвимость Fusée Gelée и загрузчик Hekate.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">NAND (внутренняя память)</summary><div class="spoiler-body">
+<p>Внутренняя память консоли, физически находящаяся на NAND-чипе на материнской плате приставки.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Official firmware (OFW, прошивка, стоковая прошивка, системное ПО)</summary><div class="spoiler-body">
+<p>Как правило, под этим термином подразумевается прошивка без внесённых модификаций. Приставка из магазина будет идти именно с такой прошивкой (без модификаций). Поэтому чаще всего её называют официальной. Так же может встречаться термин SysNAND, который часто (не не всегда) подразумевает обычно ровно это же</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Payload (пейлоад)</summary><div class="spoiler-body">
+<p>Файл с разрешением *.bin, содержащий различные инструменты для запуска кастома на вашей консоли, используя уязвимость в защите приставки.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">RCM (recovery mode, рцм)</summary><div class="spoiler-body">
+<p>Режим восстановления консоли, позволяет отправить на консоль пейлоадер. В режим RCM консоль вводят путём замыкания нужных контактов в салазке, в которую входит правый джойкон. Стоит помнить, что любую консоль можно ввести в режим восстановления, но не любая «примет» код из пейлоада. Используется только с аппаратным эксплойтом.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">SysNAND</summary><div class="spoiler-body">
+<p>Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
+Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Донгл (dongle)</summary><div class="spoiler-body">
+<p>Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.Используется только с аппаратным эксплойтом.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Замыкатель (скрепка)</summary><div class="spoiler-body">
+<p>Для использование уязвимости Fusée Gelée приставку необходимо ввести в режим RCM, для чего необходимо замкнуть определённым образом контакты в салазке правого джойкона на консоли. Любое приспособление, используемое для этого для простоты название скрепкой. <a href="fusee-gelee#замыкатель" target="blank_">Подробнее..</a></p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Кастомная прошивка (CFW, кастом)</summary><div class="spoiler-body">
+<p>Кастомная прошивка позволяет пользоваться всеми возможностями приставки и делать вещи не доступные простым пользователям хомбрю. Например, можно устанавливать не подписанное ПО и запускать его прямо с домашнего экрана. На данный момент в разработке всего одна кастомная прошивка - Atmosphere. Однако, уже в текущем своём состоянии она пригодна для работы и позволяет запускать коммерческие игры и хомбрю. На базе исходного кода Atmosphere была создана коммерческая прошивка SX OS, а так же две бесплатные ReiNX и RajNX, разработка которых в данный момент прекращена из-за того, что даже на текущей стадии атмосфера может всё то же самое, но лучше.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Не прошивайка (пропатченная приставка)</summary><div class="spoiler-body">
+<p>Приставка, в которой была закрыта аппаратная уязвимость Fusée Gelée. Такую приставку можно прошить ТОЛЬКО если её прошивка 4.1.0 или ниже.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Прошивайка (не патченная приставка, старая приставка, приставка первой ревизии)</summary><div class="spoiler-body">
+<p>Приставка, в которой не закрыта аппаратная уязвимость Fusée Gelée, в следствии чего такую приставку можно прошить с помощью скрепки, кабеля и компьютера.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Прошивка (установка кастома)</summary><div class="spoiler-body">
+<p>Процесс, в ходе которого на приставку устанавливают кастомную прошивку. Именно этому процессу посвящается данное руководство.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Уязвимость (эксплойт)</summary><div class="spoiler-body">
+<p>Брешь в защите приставки, которую хакеры используют для получения экстра прав на приставке и для запуска не подписанного кода. Уязвимости бывают аппаратными и программными. Первые требуют взаимодействия с приставкой на физическом уровне, вторые на программном.</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Хост (payload sender)</summary><div class="spoiler-body">
+<p>Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл. Используется только с аппаратным эксплойтом.</p>
+</div></details>
+
+<h2 id="как-работает-взлом">Как работает взлом?</h2>
+
+<p>В данный момент взлом на приставке не «привязной». То есть каждый раз, после выключения или перезагрузки вам нужно будет запускать его заново. Для запуска взлома нужно каким-то образом отправлять в приставку пейлоадер, файл с исполняемым кодом, который будет запускаться на приставке. Сделать это можно с использованием одного из двух существующих эксплойтов. О каждом эксплойте подробно будет рассказано немного позже.</p>
+
+<p>На текущей стадии разработки взлома нельзя говорить о настоящей кастомной прошивке. Всё что сейчас есть - модификация официальной прошивки в оперативной памяти приставки в реальном времени. При запуске прошивки через загрузчик, который мы отправляем в приставку в виде пейлоада, мы патчим имеющуюся в приставке прошивку таким образом, чтобы она больше не считала нужным проверять подлинность исполняемого кода. То есть благодаря патчам, мы можем запускать игры или самоделки разной полезности. Ещё раз — всё это делается в памяти поверх оригинальной прошивки. <strong>То есть взлом нужно активировать после каждой перезагрузки приставки.</strong> Поэтому правильно говорите не “прошитая приставка”, а “приставка с запущенным взломом”</p>
+
+<p>Для простоты и чтобы избежать путаницы с официальной прошивкой, в дальнейшем взлом мы будет продолжать называть кастомной прошивкой, хотя он и не является таковой, а приставку с запущенным взломом, прошитой.</p>
+
+<h2 id="что-устанавливается-в-этом-руководстве">Что устанавливается в этом руководстве?</h2>
+
+<p>С помощью этого руководства мы научимся</p>
+
+<ul>
+  <li>Делать бекап NAND консоли</li>
+  <li>Делать EmuNAND</li>
+  <li>Запускать кастомную прошивку</li>
+  <li>Запускать Homebrew</li>
+  <li>Обновлять прошивку приставки таким образом, чтобы оставить возможность даунгрейда на будущее</li>
+  <li>И наконец, запускать пиратские игры</li>
+</ul>
+
+<p>Именно последний пункт и является нашей конечной целью. Для её достижения, если ваша приставка находится на прошивке ниже 8.1.0, мы будем обновлять её хитрым способом - оставляя целыми предохранители в консоли. Дело в том, что при каждом обновлении прошивки Switch сжигает по одному предохранителю из специального массива, созданного именно для целей контроля версий.</p>
+
+<h2 id="что-нужно-знать-перед-тем-как-начать">Что нужно знать перед тем, как начать?</h2>
+
+<ul>
+  <li>Взлом все ещё находится в активной разработке. Поэтому некоторые элементы его могут показаться нетривиальными и потребуют сноровки и технических знаний</li>
+  <li>
+    <p>После каждой перезагрузки приставки вам нужно будет запускать взлом заново. <a href="http://3dscfw.olx.ua" target="_blank">Специальный <span class="tooltip">донгл
+  <span class="bottom">
+      Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+</span></a> или <a href="http://3dscfw.olx.ua" target="_blank">модчип</a> существенно упростят вам жизнь (только в случае наличия аппаратной уязвимости)</p>
+  </li>
+  <li>В любой момент вы можете получить бан, даже если ваша цель всего лишь запуск Homebrew
+    <ul>
+      <li>Единожды хотя бы запустив хомбрю на приставке, вы оставляете на ней логи, которые будут отправлены в Nintendo сразу же при подключении интернета. В данный момент все кастомы умеют сохранять логи на карте памяти, вместо того, чтобы отправлять их в Nintendo, однако даже это не даёт 100% гарантии, что вас не забанят. Если вас забанят, всё, что вы потеряете - это доступ к сервисам Nintendo. Ровно этого же вы лишитесь, если намеренно отключите себя от интернета в попытке избежать бана.</li>
+      <li>Все методы защиты от бана чисто теоритические, нет никакой гарантии, что они сработают</li>
+      <li>Наиболее действенным методом против бана на данный момент является использование нелицензионного ПО в EmuNAND. Мы создадим его в ходе выполнения руководства.</li>
+      <li>Используйте EmuNAND для запуска нелицензионного ПО и SysNAND для онлайна</li>
+      <li>После прохождения руководства вы сможете безопасно использовать интернет, но по прежнему не сможете играть в онлайн-игры не купив их.</li>
+    </ul>
+  </li>
+  <li>Ваша карта памяти должна быть <a href="https://ru.wikipedia.org/wiki/Secure_Digital" target="_blank">SDHC</a> или лучше, с <a href="https://allerror.ru/zhelezo/v-chyom-raznica-mezhdu-gpt-i-mbr-pri-sozdanii-razdelov-na-diske.html" target="_blank">MBR</a>, <a href="http://customfw.xyz/format_sd" target="_blank">отформатированная в exFAT или FAT32</a>. Карты памяти с GPT работать не будут</li>
+  <li>Карта памяти должна быть <a href="faq#в-что-лучше-fat32-или-exfat" target="_blank">отформатирована в FAT32 или exFAT</a>. Для поддержки последнего Switch попросит обновление. Просто следуйте руководству и вы безопасно обновите Switch таким образом, чтобы приставка поддерживала exFAT</li>
+</ul>
+
+<h2 id="вам-понадобится">Вам понадобится</h2>
+
+<ul>
+  <li>Карта памяти с не менее чем 4Гб объёма
+    <ul>
+      <li>Желательно не менее 64Гб. 4 - это минимум</li>
+      <li>Если вы планируете устанавливать с неё игры, или делать на неё резервную копию, карта должна быть не менее 32Гб</li>
+    </ul>
+  </li>
+  <li>Возможность залить на карту памяти файлы прошивки (через телефон, картридер, и т. п.)</li>
+  <li><a href="fusee-gelee#%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D1%82%D0%B5%D0%BB%D1%8C" target="_blank">Замыкатель</a></li>
+  <li>USB type C кабель для подключения Switch к вашему <span class="tooltip">хосту
+  <span class="bottom">
+      Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+  </span>
+</span> (это может быть как ПК, так и мобильный телефон)
+    <ul>
+      <li>Не нужно для чипованных или для приставок с софтверной уязвимостью</li>
+    </ul>
+  </li>
+  <li>Доступ к <span class="tooltip">хосту
+  <span class="bottom">
+      Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+  </span>
+</span>. В качестве хоста могут выступать:
+    <ul>
+      <li>ПК</li>
+      <li>Телефон с поддержкой OTG на Android или iOS</li>
+      <li><a href="rcmloader" target="_blank">Специальный <span class="tooltip">донгл
+  <span class="bottom">
+  Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+</span></a></li>
+      <li><a href="https://vk.com/market-125012133?w=product-125012133_1694792%2Fquery" target="_blank">Модчип</a></li>
+    </ul>
+  </li>
+  <li>Доступ к интернету</li>
+  <li>Доступ к устройству, через которое вы сможете закидывать файлы на карту памяти</li>
+</ul>
+
+<hr />
+
+<center class="notice--success"><a href="exploits" style="margin:20px auto; text-align:center; display:block; width:200px;" class="btn btn--short">Начнем!!</a></center>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

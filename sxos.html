@@ -1,0 +1,552 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>SX OS - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="SX OS">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/sxos.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/sxos.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SX OS">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">SX OS
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#запуск-sx-os" id="markdown-toc-запуск-sx-os">Запуск SX OS</a>    <ul>
+      <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
+      <li><a href="#первый-запуск-и-активация-sx-os" id="markdown-toc-первый-запуск-и-активация-sx-os">Первый запуск и активация SX OS</a>        <ul>
+          <li><a href="#часть-i---подготовительные-работы" id="markdown-toc-часть-i---подготовительные-работы">Часть I - Подготовительные работы</a></li>
+          <li><a href="#часть-ii---первый-запуск-и-активация-sx-os" id="markdown-toc-часть-ii---первый-запуск-и-активация-sx-os">Часть II - Первый запуск и активация SX OS</a></li>
+          <li><a href="#часть-iii---создание-emunand" id="markdown-toc-часть-iii---создание-emunand">Часть III - Создание EmuNAND</a></li>
+          <li><a href="#факты-об-emunand" id="markdown-toc-факты-об-emunand">Факты об EmuNAND</a></li>
+        </ul>
+      </li>
+      <li><a href="#часть-ii---запуск-sx-os" id="markdown-toc-часть-ii---запуск-sx-os">Часть II - Запуск SX OS</a></li>
+      <li><a href="#обновление-sx-os" id="markdown-toc-обновление-sx-os">Обновление SX OS</a></li>
+    </ul>
+  </li>
+  <li><a href="#запуск-homebrew-launcher" id="markdown-toc-запуск-homebrew-launcher">Запуск Homebrew Launcher</a></li>
+  <li><a href="#запуск-игр" id="markdown-toc-запуск-игр">Запуск игр</a></li>
+  <li><a href="#полезные-инструкции" id="markdown-toc-полезные-инструкции">Полезные инструкции</a></li>
+  <li><a href="#активация-autorcm" id="markdown-toc-активация-autorcm">Активация AutoRCM</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<p>SX OS - коммерческая система и требует покупки лицензии. Без покупки лицензии функционал системы будет строго ограничен запуском Homebrew Launcher.</p>
+
+<p>Сама OC может быть приобретена в двух видах - физическом и в виде лицензии. В первом случае вы получаете на руки <abbr title="Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.">донгл</abbr> для запуска Fusée Gelée и замыкатель. Во втором только код, который необходимо будет активировать на консоли.</p>
+
+<p>Единственная фишка, ради которой стоит покупать в данный момент эту ОС - это Emunand. Коротко говоря, на вашей карте\в NAND консоли создаётся специальный раздел-песочница, в который делается копия вашей системы. В итоге вы будете иметь возможность запускать Emunand и играть в нем в пиратку с выключенным WiFi, а в SysNAND играть в лицензию. Что примечательно, SysNAND может иметь прошивку выше, чем EmuNAND, что и даёт вам возможность играть онлайн и безопасно пиратить одновременно.</p>
+
+<p><a href="launch-cfw#sx-os" target="_blank">Подробнее про SX OS</a></p>
+
+<h1 id="запуск-sx-os">Запуск SX OS</h1>
+
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li><a href="update-to-latest" target="_blank">Обновите приставку до <strong>8.1.0</strong></a>, если ещё не делали этого</li>
+  <li>Умение <a href="fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm" target="_blank">вводить консоль в режим восстановления (RCM)</a></li>
+  <li>Свежая версия <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr></li>
+  <li><a href="https://www.olx.ua/obyavlenie/proshivka-nintendo-switch-sx-os-IDBWMzh.html" target="_blank">Лицензия на SX OS или SX OS Pro</a> (<a href="https://vk.com/im?sel=-178659422" target="_blank">Купить в группе Вконтакте</a>)</li>
+</ul>
+
+<h2 id="первый-запуск-и-активация-sx-os">Первый запуск и активация SX OS</h2>
+
+<h3 id="часть-i---подготовительные-работы">Часть I - Подготовительные работы</h3>
+
+<ol>
+  <li>Выключите Switch и вставьте его карту памяти в ПК</li>
+  <li>Установите <code class="highlighter-rouge">.7z</code>-архив <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr>, согласно инструкции в репозитории, если ещё не делали этого</li>
+  <li><code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr> - это hekate, с её помощью мы будем запускать прошивку</li>
+  <li>Вставьте карту в консоль</li>
+</ol>
+
+<h3 id="часть-ii---первый-запуск-и-активация-sx-os">Часть II - Первый запуск и активация SX OS</h3>
+
+<p>При первом запуске прошивки на карте памяти будет создан уникальный для каждой консоли файл <code class="highlighter-rouge">license-request.dat</code> на основе которого будет сгенерирована лицензия.</p>
+
+<ol>
+  <li><a href="update-to-latest" target="_blank">Обновите приставку до <strong>8.1.0</strong></a>, если версия вашей текущей прошивки ниже
+    <ul>
+      <li>На прошивках ниже, чем <strong>8.1.0</strong> прошивка будет работать, но возможны глюки разного рода</li>
+      <li>Если вы перешли сюда из инструкции по обновлению прошивки, то, очевидно, вам не нужно снова переходить в инструкцию по обновлению прошивик. Просто запустите кастом, а потом вернитесь к выполнению инструкции по обновлению. Меня очень беспокоит то, что это нужно объяснять.</li>
+    </ul>
+  </li>
+  <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или вставив <abbr title="Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.">донгл</abbr> в приставку</li>
+  <li>Приставка должна загрузиться в загрузчик SX OS
+    <ul>
+      <li>Если загрузка зависла на белом экране, или в любом другом месте, перегрузите консоль, удерживая кнопку (POWER) 15 секунд и повторите запуск снова</li>
+    </ul>
+  </li>
+  <li>Нажмите “<strong>Boot Custom FW</strong>”</li>
+  <li>Нажмите ““<strong>Continue</strong>”</li>
+  <li>Вставьте карту памяти приставки в ПК</li>
+  <li>Перейдите на <a href="https://sx.xecuter.rocks/sxos-license.html" target="_blank">сайт активации SX OS</a></li>
+  <li>Нажмите кнопку “<strong>Browse</strong>” и выберите сгенерированный <code class="highlighter-rouge">license-request.dat</code></li>
+  <li>Введите ключ активации</li>
+  <li>Нажмите “<strong>Retrieve License</strong>” и выберите в качестве места сохранения корень карты памяти приставки</li>
+  <li>Удалите файл <code class="highlighter-rouge">license-request.dat</code></li>
+  <li>Верните карту памяти обратно в консоль</li>
+  <li>Нажмите “<strong>Back</strong>” -&gt; “<strong>Options</strong>” -&gt; “<strong>Power Off</strong>”</li>
+</ol>
+
+<h3 id="часть-iii---создание-emunand">Часть III - Создание EmuNAND</h3>
+
+<p>Крайне рекомендую все-таки сидеть с эмунанда. Если у вас ну очень уж маленькая карта, отдайте эмунанду 5Гб (это минимум) в NAND и работайте так. В теории, использование пиратки в эмунанд убережёт вас от бана. Но это не точно.</p>
+
+<p>Если вам не нужен EmuNAND, просто пропустите эту часть.</p>
+
+<p>EmuNAND не защитит вас от бана в том случае, если вы уже запускали SX OS, играли на ней в игры, выходили в интернет (в любом из перечисленных)</p>
+
+<p class="notice--warning">EmuNAND можно создать только на активированной SX OS</p>
+
+<ol>
+  <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или вставив <abbr title="Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.">донгл</abbr> в приставку</li>
+  <li><strong>Удерживайте (VOL+) при появлении сплешскрина SX OS</strong></li>
+  <li>Приставка должна загрузиться в загрузчик SX OS
+    <ul>
+      <li>Если загрузка зависла на белом экране, или в любом другом месте, перегрузите консоль, удерживая кнопку (POWER) 15 секунд и повторите запуск снова</li>
+    </ul>
+  </li>
+  <li>Нажмите “<strong>Options</strong>” -&gt; “<strong>EmuNAND</strong>” -&gt; “<strong>Create EmuNAND</strong>”</li>
+  <li>Выберите понравившийся тип EmuNAND:
+    <ol>
+      <li><strong>Hidden Partition on microSD</strong> - на вашей карте памяти будет создан скрытый раздел, в котором и будут хранится данные EmuNAND. <strong>ВНИМАНИЕ!</strong> Создание скрытого раздела потребует форматирование карты памяти! Её отображаемый раздел уменьшится на 30Гб и все данные будет утеряны! Не рекомендуется к использованию на картах класса ниже, чем High Endurance! При таком способе есть немаленький шанс выхода карты памяти из строя! Самое непрактичное решение. В случае замены карты памяти перенос EmuNAND рискует превратится в ад.</li>
+      <li><strong>Files on MicroSD</strong> - на карте памяти будет создана папка <code class="highlighter-rouge">/sxos/emunand</code> в которой будут хранится файлы EmuNAND. Не рекомендуется к использованию на картах класса ниже, чем High Endurance! При таком способе есть немаленький шанс выхода карты памяти из строя!</li>
+      <li><strong>Files on System Storage</strong> - в NAND-памяти приставки будет создан раздел, в котором будут располагаться файлы эмунанда. Наиболее приемлемый метод, поскольку будет использована eMMC-память, как раз рассчитанная на использование в качестве системного хранилища и устойчивая к постоянным циклам записи-чтения. Так же при использовании этого метода у вас есть возможность выбрать размер своего емунанда.</li>
+    </ol>
+  </li>
+  <li>После того, как EmuNAND будет создан вы сможете грузиться напрямую в него при загрузке SX OS. При необходимости загрузки в SysNAND, вы можете отключить загрузку EmuNAND в опциях загрузчика SX OS (EmuNAND disable)</li>
+</ol>
+
+<h3 id="факты-об-emunand">Факты об EmuNAND</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* EmuNAND отвязан от SysNAND, это значит, что любые изменения, внесённые в SysNAТВ не влияют на EmuNAND и наоборот
+* Форматирование (восстановление до заводских) SysNAND не влияет на EmuNAND, даже если последний находится в SysNAND 
+* Ваш SysNAND может быть на самой последней версии прошивки и вы даже можете использовать его для игры онлайн
+* В данный момент последняя поддерживаемая версия EmuNAND - 8.1.0	
+</code></pre></div></div>
+
+<h2 id="часть-ii---запуск-sx-os">Часть II - Запуск SX OS</h2>
+
+<p class="notice--warning">Если после запуска прошивки приставка не видит карту и требует обновить прошивку для её работы - вам нужно установить драйвера exFAT, <a href="update-to-latest" target="_blank">обновив прошивку следующим образом</a>! Даже если у вас уже установлена последняя прошивка, но нет драйверов exFAT, обновите приставку указанным образом!</p>
+
+<ol>
+  <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или вставив <abbr title="Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.">донгл</abbr> в приставку</li>
+  <li>Приставка должна загрузиться в SX OS (по умолчанию приставка грузится в EmuNAND, если он не отключен в загрузчике)
+    <ul>
+      <li>Если загрузка зависла на белом экране, или в любом другом месте, перегрузите консоль, удерживая кнопку (POWER) 15 секунд и повторите запуск снова</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="обновление-sx-os">Обновление SX OS</h2>
+
+<ol>
+  <li>Выключите Switch и вставьте его карту памяти в ПК</li>
+  <li>Установите <code class="highlighter-rouge">.7z</code>-архив <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr>, согласно инструкции в репозитории, если ещё не делали этого</li>
+  <li><code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr> - это hekate, с её помощью мы будем запускать прошивку</li>
+  <li>Вставьте карту в консоль</li>
+</ol>
+
+<hr />
+
+<h1 class="notice--success" id="запуск-homebrew-launcher"><a href="launch-hbl#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-hbl-%D0%B8%D0%B7-sx-os">Запуск Homebrew Launcher</a></h1>
+<h1 class="notice--success" id="запуск-игр"><a href="sxos-games">Запуск игр</a></h1>
+<h1 class="notice--success" id="полезные-инструкции"><a href="addons">Полезные инструкции</a></h1>
+<h1 class="notice--success" id="активация-autorcm"><a href="autorcm">Активация AutoRCM</a></h1>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,492 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Эмуляция Amiibo с помощью модуля emuiibo - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Эмуляция Amiibo с помощью модуля emuiibo">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/emuiibo.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/emuiibo.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Эмуляция Amiibo с помощью модуля emuiibo">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Эмуляция Amiibo с помощью модуля emuiibo
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
+  <li><a href="#установка-emuiibo" id="markdown-toc-установка-emuiibo">Установка emuiibo</a></li>
+  <li><a href="#использование-emuiibo" id="markdown-toc-использование-emuiibo">Использование emuiibo</a></li>
+  <li><a href="#обратите-внимание" id="markdown-toc-обратите-внимание">Обратите внимание:</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<p class="notice--warning">Эмуляцию Amiibo поддерживают <strong>только</strong> Atmosphere и ReiNX!</p>
+
+<h3 id="что-понадобится">Что понадобится</h3>
+
+<ul>
+  <li>Свежая версия <a href="https://github.com/XorTroll/emuiibo/releases/latest" target="_blank">emuiibo</a></li>
+  <li>Дампы Amiibo у <a href="https://discord.io/homebrew" target="_blank">бота в Discord</a>
+    <ul>
+      <li>Канал request-bot, команда <code class="highlighter-rouge">!Amiibo</code> для закачки архива со всеми всех Amiibo
+        <ul>
+          <li>Команда <code class="highlighter-rouge">!Amiibo</code> %название_Amiibo% для получения дампа конкретной фигурки</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="установка-emuiibo">Установка emuiibo</h3>
+
+<ol>
+  <li>Выключите приставку и вставьте карту памяти консоли в ПК</li>
+  <li>Обновите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
+ <span class="bottom">
+     Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+ </span>
+</span> по инструкции из репозитория.</li>
+  <li>Перейдите в папку <code class="highlighter-rouge">atmosphere/titles</code> и удалите из неё папку <code class="highlighter-rouge">0100000000000352</code></li>
+  <li>Скачайте свежую версию <a href="https://github.com/XorTroll/emuiibo/releases/latest" target="_blank">emuiibo</a> и переместите папку <code class="highlighter-rouge">atmosphere</code> из архива в корень вашей карты памяти</li>
+  <li>Скопируйте нужные Amiibo в папку <code class="highlighter-rouge">emuiibo</code> в корне вашей карты памяти
+    <ul>
+      <li>Рекомендую копировать только необходимые, поскольку Amiibo переключаются циклически и если вы скопируете все сразу, будет очень сложно ориентироваться в дампах</li>
+      <li>Что дают Amiibo можно посмотреть в официальном <a href="https://www.nintendo.com/amiibo/compatibility/#amiibo" target="_blank">гайде от Nintendo</a></li>
+    </ul>
+  </li>
+  <li>Вставьте карту памяти в консоль и запустите <a href="cfw" target="_blank">прошивку</a></li>
+</ol>
+
+<h3 id="использование-emuiibo">Использование emuiibo</h3>
+
+<ol>
+  <li>Запустите игру, в которой собираетесь использовать Amiibo и перейдите в режим использования Amiibo, если это необходимо
+    <ul>
+      <li>Помните, что в некоторых играх использование Amiibo доступно только при определённых условиях, или требует включения в настройках игры. Если не знаете как активировать Amiibo в конкретной игре, найдите ролик на youtube с примером использования фигруки</li>
+    </ul>
+  </li>
+  <li>Работа с Emuiibo осуществляется с помощью горячих клавиш:
+    <ul>
+      <li><strong>Для включения эмуляции Amiibo</strong> нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Up</strong>)</li>
+      <li><strong>Для отключения</strong> нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Down</strong>)</li>
+      <li><strong>Для единоразового включения</strong> эмуляции Amiibo один раз нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Right</strong>). Эмулирует ваш дамп Amiibo, после чего Emuiibo отключается автоматически
+        <ul>
+          <li>Эмулируется последняя активированная amiibo. В этом режиме вы не сможете переключать дампы, поскольку сразу после активации Emuiibo останавливает работу.</li>
+        </ul>
+      </li>
+      <li><strong>Для переключения Amiibo</strong> нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Left</strong>). Переключается на следующий Amiibo в вашей emuiibo директории.
+        <ul>
+          <li>Эффект есть только тогда, когда включена эмуляция Amiibo (первый пункт)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="обратите-внимание">Обратите внимание:</h3>
+
+<ul>
+  <li>Emuiibo не поддерживает SX OS</li>
+  <li>Если Emuiibo активирован правильно, то на правом джой-коне моргнёт светодиод</li>
+  <li>Если ваш дамп Amiibo имеет больше 10 букв в названии, он будет закодирован в Emuiibo</li>
+  <li>Дамп Amiibo должен быть в <code class="highlighter-rouge">.bin</code> формате, и весить 540 байт (может чуть больше)
+    <ul>
+      <li>В архиве в Discord все дампы корректные</li>
+    </ul>
+  </li>
+  <li>Дампы Amiibo должны хранится исключительно в папке <code class="highlighter-rouge">emuiibo</code> в корне SD карты</li>
+</ul>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

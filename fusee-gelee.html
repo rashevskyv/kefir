@@ -1,0 +1,1028 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Запуск пейлоадера через Fusée Gelée - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Запуск пейлоадера через Fusée Gelée">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/fusee-gelee.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/fusee-gelee.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Запуск пейлоадера через Fusée Gelée">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Запуск пейлоадера через Fusée Gelée
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#информация-об-fusée-gelée" id="markdown-toc-информация-об-fusée-gelée">Информация об Fusée Gelée</a></li>
+  <li><a href="#что-такое-rcm" id="markdown-toc-что-такое-rcm">Что такое RCM</a></li>
+  <li><a href="#как-все-это-происходит" id="markdown-toc-как-все-это-происходит">Как все это происходит</a>    <ul>
+      <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a>        <ul>
+          <li><a href="#замыкатель" id="markdown-toc-замыкатель">Замыкатель</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#инструкция" id="markdown-toc-инструкция">Инструкция</a>    <ul>
+      <li><a href="#часть-i---вход-в-rcm" id="markdown-toc-часть-i---вход-в-rcm">Часть I - Вход в RCM</a></li>
+      <li><a href="#часть-ii---использование-fusée-gelée" id="markdown-toc-часть-ii---использование-fusée-gelée">Часть II - Использование Fusée Gelée</a></li>
+    </ul>
+  </li>
+  <li><a href="#следующий-шаг-подготовительные-работы" id="markdown-toc-следующий-шаг-подготовительные-работы">Следующий шаг: Подготовительные работы</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<h2 id="информация-об-fusée-gelée">Информация об Fusée Gelée</h2>
+
+<p>Некоторые мобильные процессоры NVIDIA Tegra, выпущенные до 2016 года, содержат Уязвимость переполнения буфера в режиме восстановления BootROM (<span class="tooltip">RCM
+	<span class="bottom">
+		Режим восстановления на устройствах с процессором Nvidia Tegra, коим является и Switch. Конкретно в свитче вызывается с помощью одновременного нажатия кнопки включения, кнопки увеличения громкости и замыкания с помощью специального замыкателя определённых контактов в планшете. RCM есть во всех Nintendo Switch, но не каждую можно из этого режима прошить.
+	</span>
+</span>). Злоумышленник с физическим доступом к USB-порту устройства и возможностью принудительной перезагрузки устройства в <span class="tooltip">RCM
+	<span class="bottom">
+		Режим восстановления на устройствах с процессором Nvidia Tegra, коим является и Switch. Конкретно в свитче вызывается с помощью одновременного нажатия кнопки включения, кнопки увеличения громкости и замыкания с помощью специального замыкателя определённых контактов в планшете. RCM есть во всех Nintendo Switch, но не каждую можно из этого режима прошить.
+	</span>
+</span>, может использовать уязвимость для выполнения непроверенного кода.</p>
+
+<p>Fusée Gelée - это цепочка эксплойтов для Nintendo Switch, построенная вокруг аппаратной уязвимости чипа Nvidia Tegra. С её помощью можно будет запускать не подписанный код на Nintendo Switch. Поскольку уязвимость аппаратная, её невозможно закрыть на текущей ревизии железа. Последние версии приставки, однако, лишены этой дыры, поэтому будьте внимательны при покупке устройства для прошивки. Узнать прошивается ли ваша приставка можно <a href="exploits" target="_blank">тут</a></p>
+
+<h2 id="что-такое-rcm">Что такое RCM</h2>
+
+<p>RCM - это штатный режим восстановления на Tegra-устройствах. Для того, чтобы войти в него, нужно выключить консоли, а затем зажать (POWER) + (VOL+) + (HOME). Но не тот (HOME), что мы видим на правом джойконе, а кнопку которую NVIDIA Tegra считает таковой. К сожалению, на самой приставке её нет. Нам понадобится отключить консоль, замкнуть определённый контакт на месте крепления правого joy-con и землю (для этого используется замыкатель), подключить консоль к ПК и отправить на неё пейлоадер любым удобным способом. Ниже мы рассмотрим подробнее как это делать.</p>
+
+<h2 id="как-все-это-происходит">Как все это происходит</h2>
+
+<p>В общем виде цепочка такая - вы вставляете <a href="#замыкатель">замыкатель</a> в приставку, вводите её в <span class="tooltip">RCM
+	<span class="bottom">
+		Режим восстановления на устройствах с процессором Nvidia Tegra, коим является и Switch. Конкретно в свитче вызывается с помощью одновременного нажатия кнопки включения, кнопки увеличения громкости и замыкания с помощью специального замыкателя определённых контактов в планшете. RCM есть во всех Nintendo Switch, но не каждую можно из этого режима прошить.
+	</span>
+</span>, подключаете к <span class="tooltip">хосту
+	<span class="bottom">
+		Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+	</span>
+</span> (ПК, смартфон, донгл - все это хосты, чип тоже хост, но к нему подключать не нужно - он подключён всегда и отправит <span class="tooltip">пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span> сам в нужный момент) и загружаете через хост на приставку <span class="tooltip">пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span>, который уже и запускает пропатченные модули внутри официальной прошивки.
+Фундаментальный минус в том, что каждый раз для запуска прошивки на приставке вам нужно иметь доступ к хосту, что не всегда удобно. Например, в поездку с собой брать приставку накладно - в случае зависания придётся доставать телефон, кабеля и запускать <span class="tooltip">пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span>. Выхода в данный момент два - покупка <a href="http://vk.customfw.xyz" target="_blank"><span class="tooltip">донгла
+	<span class="bottom">
+		Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+	</span>
+</span></a> и установка в приставку чипа. Установку чипа в Украине <a href="https://www.olx.ua/obyavlenie/proshivka-nintendo-switch-ustanovka-nastroyka-chipovka-IDBbLSh.html" target="_blank">можно заказать у меня</a>.</p>
+
+<h3 id="что-понадобится">Что понадобится</h3>
+
+<p class="notice--info"><span class="tooltip">Хост
+	<span class="bottom">
+		Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+	</span>
+</span> - устройство, с которого приставка будет получать <span class="tooltip">пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span>. В качетсве хоста может выступать компьютер, донгл, модчип или телефон с которого вы будете передавать <span class="tooltip">пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span>  на Switch.</p>
+
+<ul>
+  <li><a href="#%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D1%82%D0%B5%D0%BB%D1%8C">Замыкатель</a></li>
+  <li>Карта памяти не менее 64Гб, поскольку мы будем настраивать на ней <span class="tooltip">EmuNAND
+  <span class="bottom">
+      Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+  </span>
+</span></li>
+  <li><a href="#%D1%87%D0%B0%D1%81%D1%82%D1%8C-ii---%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-fus%C3%A9e-gel%C3%A9e">Хост</a> с подготовленным пейлоадом и возможность подключить к нему Switch (например, если хост - ПК, понадобится кабель USB type-C) (подробнее ниже)</li>
+</ul>
+
+<h4 id="замыкатель">Замыкатель</h4>
+
+<p>Для корректной активации цепочки нам понадобится замкнуть между собой 9-й и 10-й контакты (либо 7-й и 10-й, или 1-й и 10-й, все варианты работают одинаково хорошо) на месте установки правого контроллера. Это можно сделать несколькими способами:</p>
+
+<ul>
+  <li>Использовать обычную <a href="https://www.reddit.com/r/SwitchHacks/comments/8f0ugz/hardwarediy_switch_paperclip_jig_for_rcm_mode/" target="_blank">канцелярскую скрепку</a></li>
+  <li>Использовать <a href="https://xghostboyx.github.io/RCM-Guide/#tin_foil" target="_blank">кусочек фольги</a></li>
+  <li>Спаять между собой контакты непосредственно в самом joy-con <a href="https://xghostboyx.github.io/RCM-Guide/#soldered_joycon_710" target="_blank">напрямую, или через резистор</a></li>
+  <li><a href="https://www.reddit.com/r/SwitchHaxing/comments/8ho4h0/modded_my_joycon_to_have_a_clear_case_and_home/" target="_blank">Вмонтировать в правый joy-con кнопку</a></li>
+  <li>Использовать <a href="https://www.thingiverse.com/thing:2877484" target="_blank">замыкатель, распечатанный на 3D-принтере</a> (вы можете купить уже готовый: <a href="https://www.olx.ua/obyavlenie/nintendo-switch-rcm-jig-IDAWSI6.html" target="_blank"><img src="/images/ua.png" alt="Украина" style="vertical-align: baseline !important;" /></a>, <a href="https://vk.com/market-102933233?w=product-102933233_2039087_23eff2d92b12968546" target="_blank"><img src="/images/ru.png" alt="Россия" style="vertical-align: baseline !important;" /></a>)</li>
+  <li>И другие <a href="https://xghostboyx.github.io/RCM-Guide/" target="_blank">более странные методы</a></li>
+</ul>
+
+<p>Далее в инструкции под словом “замыкатель” будет подразумеваться любой из этих способов</p>
+
+<h2 id="инструкция">Инструкция</h2>
+
+<h3 id="часть-i---вход-в-rcm">Часть I - Вход в RCM</h3>
+
+<p class="notice--warning">Если вы используете AutoRCM, переходите сразу к <a href="#%D1%87%D0%B0%D1%81%D1%82%D1%8C-ii---%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-fus%C3%A9e-gel%C3%A9e">следующей части</a></p>
+
+<ol>
+  <li>Если в приставку вставлен картридж - вытащите его</li>
+  <li>Выключите консоль</li>
+  <li>Отсоедините правый joy-con</li>
+  <li>Вставьте <a href="#замыкатель">замыкатель</a> в направляющую правого джойкона до упора
+    <ul>
+      <li>При активированном <a href="autorcm" target="_blank">AutoRCM</a> замыкатель вставлять не нужно</li>
+    </ul>
+
+    <p class="text-center notice--info"><img src="https://cdn.thingiverse.com/renders/a7/54/70/c4/3a/52e69bd058c5f59ef94f53c6d81c93c2_preview_featured.jpg" alt="" /></p>
+  </li>
+  <li>Зажмите (VOL+) и вставьте ваш USB type C кабель, подключённый к <span class="tooltip">хосту
+ <span class="bottom">
+     Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+ </span>
+</span>, в Switch
+    <ul>
+      <li>Если у вас <span class="tooltip">донгл
+ <span class="bottom">
+  Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+ </span>
+</span> - просто вставьте его в консоль</li>
+    </ul>
+  </li>
+</ol>
+
+<p>На экране приставки не должно ничего происходить. Если после подключения кабеля экран остаётся чёрным, то вы все делаете правильно! Если экран загорается надписью Nintendo - отключите консоль и повторите всё заново.</p>
+
+<p class="notice--info">В общем случае переход в RCM осуществляется одновременным зажатием (POWER) + (VOL+) на выключенной приставке при вставленном замыкателе. В этой инструкции вставленный кабель, подключенный к <span class="tooltip">хосту
+	<span class="bottom">
+		Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+	</span>
+</span>, включает приставку, что эквивалентно нажатию кнопки (POWER)</p>
+
+<p>Может не получаться по следующим причинам:</p>
+<ul>
+  <li>Замкнуты не те контакты</li>
+  <li>Замыкатель ничего не замыкает, например проволока порвалась и контакты не замыкаются, или он изначально собран с ошибками</li>
+  <li>Кнопки зажаты не одновременно. Пробуйте зажимать вначале (VOL+), а затем, не отпуская её, нажмите (POWER)</li>
+</ul>
+
+<p class="notice--success">В случае успеха на экране не будет происходить ничего. В случае неудачи запустится официальная прошивка</p>
+
+<h3 id="часть-ii---использование-fusée-gelée">Часть II - Использование Fusée Gelée</h3>
+
+<p>Выберите платформу, которая будет использоваться в качестве <span class="tooltip">хоста
+	<span class="bottom">
+		Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+	</span>
+</span>:</p>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск через донгл</summary><div class="spoiler-body">
+<p>Донгл - это автономное устройство, которое создано исключительно для удобного запуска взлома.</p>
+
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<p class="notice--warning"><span class="tooltip">Донгл
+	<span class="bottom">
+		Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+	</span>
+</span> необходимо зарядить комплектным кабелем, либо вставить во <strong>включённую</strong> приставку</p>
+
+<ul>
+  <li>Сам <a href="http://vk.customfw.xyz" target="_blank"><span class="tooltip">донгл
+  <span class="bottom">
+      Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+</span></a></li>
+  <li>Установленная на донгле <span class="tooltip">hekate
+  <span class="bottom">
+      Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  </span>
+</span>
+    <ul>
+      <li>Инструкция для <a href="r4#прошивка-донгла" target="_blank">R4S</a></li>
+      <li>Инструкция для <a href="rcmloader#прошивка-донгла" target="_blank">RCMLoader</a></li>
+    </ul>
+  </li>
+  <li>Приставка должна находиться в режиме <a href="#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm">RCM</a></li>
+</ul>
+
+<h2 id="инструкция">Инструкция</h2>
+
+<ul>
+  <li>Для запуска кастомной прошивки вставьте донгл в приставку
+    <ul>
+      <li>В приставке уже должна находиться карта памяти с установленным на ней <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
+  <span class="bottom">
+  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  </span>
+</span></li>
+      <li>Приставка должна находиться в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a>.</li>
+    </ul>
+  </li>
+  <li>Для запуска <span class="tooltip">hekate
+  <span class="bottom">
+      Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  </span>
+</span> просто вставьте <span class="tooltip">донгл
+  <span class="bottom">
+      Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+</span> в приставку, когда в ней нет карты памяти
+    <ul>
+      <li>В приставке уже должна находиться карта памяти с установленным на ней <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
+  <span class="bottom">
+  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  </span>
+</span></li>
+    </ul>
+  </li>
+  <li>Для запуска любого другого пейлоада читайте дальше</li>
+</ul>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск любого пейлоада на донгле с hekate</summary><div class="spoiler-body">
+<h4 id="что-понадобится">Что понадобится</h4>
+
+<ul>
+  <li><span class="tooltip">Пейлоад
+  <span class="bottom">
+      Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+  </span>
+</span>, который вы собираетесь запускать
+    <ul>
+      <li>Для запуска <span class="tooltip">hekate
+  <span class="bottom">
+  Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  </span>
+</span> она должна быть прошита в <span class="tooltip">донгл
+  <span class="bottom">
+  Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+</span>, дополнительно её никуда не нужно скидывать</li>
+    </ul>
+  </li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<p>Ниже описан метод запуска вообще любого пейлоада с помощью <span class="tooltip">донгла
+	<span class="bottom">
+		Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+	</span>
+</span>, на котором прошита <span class="tooltip">hekate
+	<span class="bottom">
+		Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+	</span>
+</span>. Если в вашем донгле не <span class="tooltip">hekate
+	<span class="bottom">
+		Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+	</span>
+</span>, а SX OS, <a href="fusee-gelee#sx-os-pro--r4s-dongle-с-прошитым-пейлоадом-от-sx-os">метод запуска</a> будет отличаться.</p>
+
+<ol>
+  <li>Вставьте карту памяти приставки в ПК
+    <ul>
+      <li>Приставка находится в режиме RCM, вы можете свободно извлекать из неё карту безо всяких дополнительных манипуляций. Выключать для извлечения карты приставку не нужно, иначе придётся снова вводить её в режим RCM</li>
+    </ul>
+  </li>
+  <li>Поместите <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span>, который вы собираетесь запускать в папку <code class="highlighter-rouge">bootloader/payloads</code></li>
+  <li>Вставьте карту памяти обратно в консоль</li>
+  <li>Вставьте <span class="tooltip">донгл
+ <span class="bottom">
+     Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+ </span>
+</span> в консоль
+    <ul>
+      <li>Для запуска <span class="tooltip">hekate
+ <span class="bottom">
+  Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+ </span>
+</span> <span class="tooltip">донгл
+ <span class="bottom">
+  Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+ </span>
+</span> быть должен быть прошит. hekate запустится сразу, как только вы вставили донгл в консоль в режиме RCM. Если ваша цель была запуск hekate - вы её достигли, можете доставать <a href="#замыкатель">замыкатель</a></li>
+    </ul>
+  </li>
+  <li>На экране приставки появится меню загрузчика hekate</li>
+  <li>Выберите <strong>Payloads… -&gt; %ваш_пейлоад%.bin</strong></li>
+  <li><span class="tooltip">Пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> запустится на консоли</li>
+  <li>Можете доставать <a href="#замыкатель">замыкатель</a></li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск любого пейлоада на донгле с SX OS</summary><div class="spoiler-body">
+<h3 id="что-понадобится">Что понадобится</h3>
+
+<ul>
+  <li>Xecuter Dongle, входящий в комплект SX PRO
+    <ul>
+      <li>Либо любой другой <a href="hhttp://vk.customfw.xyz" target="_blank"><span class="tooltip">донгл
+  <span class="bottom">
+  Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+</span></a> с [прошитым пейлоадом от SX OS]
+        <ul>
+          <li>Инструкция для <a href="r4#прошивка-донгла" target="_blank">R4S</a></li>
+          <li>Инструкция для <a href="rcmloader#прошивка-донгла" target="_blank">RCMLoader</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="tooltip">Пейлоад
+  <span class="bottom">
+      Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+  </span>
+</span>, который вы собираетесь запускать</li>
+  <li>Поместите <a href="https://sx.xecuter.com/download/SXOS_beta_v2.8.zip" target="_blank">boot.dat</a> SX OS в корень карты памяти приставки</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<p class="notice--warning"><span class="tooltip">донгл
+	<span class="bottom">
+		Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+	</span>
+</span> необходимо зарядить комплектным кабелем, либо вставить во <strong>включённую</strong> приставку</p>
+
+<h3 id="запуск-пейлоада">Запуск пейлоада</h3>
+
+<p class="notice--info">Приставка должна находиться в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a>!</p>
+
+<ol>
+  <li>Вставьте карту памяти приставки в ПК
+    <ul>
+      <li>Приставка находится в режиме RCM, вы можете свободно извлекать из неё карту безо всяких дополнительных манипуляций. Выключать для извлечения карты приставку не нужно, иначе придётся снова вводить её в режим RCM</li>
+    </ul>
+  </li>
+  <li>Поместите <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span>, который вы собираетесь запускать в корень карты памяти</li>
+  <li>Вставьте карту памяти обратно в консоль</li>
+  <li>Вставьте <span class="tooltip">донгл
+ <span class="bottom">
+     Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+ </span>
+</span> в консоль</li>
+  <li>При появлении загрузочного экрана SX OS, зажмите и удерживайте (VOL+) до тех пор, пока не появится меню прошивки (<a href="#замыкатель">замыкатель</a> должен быть вставлен в Switch)
+    <ul>
+      <li>При активированном <a href="autorcm" target="_blank">AutoRCM</a> замыкатель вставлять не нужно</li>
+    </ul>
+  </li>
+  <li>Приставка загрузится в меню SX OS</li>
+  <li>Выберите “Options”</li>
+  <li>Выберите “Launch external payload”</li>
+  <li>Выберите <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span>, который хотите запустить</li>
+  <li><span class="tooltip">Пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> запустится на консоли</li>
+  <li>Можете доставать замыкатель</li>
+</ol>
+</div></details>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск на Windows</summary><div class="spoiler-body">
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li>Свежая версия <a href="https://github.com/eliboa/TegraRcmGUI/releases/latest" target="_blank">TegraRcmGUI</a></li>
+  <li><span class="tooltip">Пейлоад
+  <span class="bottom">
+      Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+  </span>
+</span>, который вы собираетесь запускать на приставке</li>
+  <li>USB type-С на USB type-A кабель для подключения Switch к ПК</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<h2 id="установка-драйверов">Установка драйверов</h2>
+
+<p>Если драйвера уже были установлены, пропустите эту часть</p>
+
+<ol>
+  <li>Запустите <a href="https://github.com/eliboa/TegraRcmGUI/releases/latest" target="_blank"><code class="highlighter-rouge">TegraRcmGUI.exe</code></a> от имени Администратора</li>
+  <li>Перейдите во вкладку <code class="highlighter-rouge">Settings</code> и нажмите “<strong>Install Driver</strong>”</li>
+  <li>Установите драйвер</li>
+  <li>После успешной установки драйвера закройте программу</li>
+</ol>
+
+<h2 id="запуск-пейлоада">Запуск пейлоада</h2>
+
+<ol>
+  <li>Подключите приставку, находящуюся в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a> к ПК</li>
+  <li>Запустите <a href="https://github.com/eliboa/TegraRcmGUI/releases/latest" target="_blank"><code class="highlighter-rouge">TegraRcmGUI.exe</code></a> от имени Администратора</li>
+</ol>
+
+<p class="text-center notice--info"><img src="/images/screenshots/tegrarcmgui.png" alt="" /></p>
+
+<ol>
+  <li>Нажмите на кнопку <img src="/images/screenshots/search.png" alt="" /> и выберите <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span>, который собираетесь запустить</li>
+  <li>Нажмите на кнопку “<strong>Inject Payload</strong>”, чтобы отправить <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> на консоль</li>
+  <li><span class="tooltip">Пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> запустится на консоли
+    <ul>
+      <li>Если <span class="tooltip">пейлоад
+ <span class="bottom">
+  Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> не запускается проверьте правильно ли установлены драйвера. Правильно установленный драйвер устройства будет отображаться в диспетчере устройств в списке <code class="highlighter-rouge">libusbK USB Devices</code></li>
+      <li>Попробуйте передать <span class="tooltip">пейлоад
+ <span class="bottom">
+  Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> ещё раз</li>
+      <li>Кнопкой <img src="/images/screenshots/add_to_fav.png" alt="" /> можно добавить <span class="tooltip">пейлоад
+ <span class="bottom">
+  Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> в избранное</li>
+    </ul>
+  </li>
+  <li>Можете доставать замыкатель</li>
+</ol>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск на macOS</summary><div class="spoiler-body">
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li><span class="tooltip">Пейлоад
+  <span class="bottom">
+      Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+  </span>
+</span>, который вы собираетесь запускать на приставке</li>
+  <li>USB type-С на USB type-A для подключения Switch к Маку</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<h2 id="установка-nxboot">Установка NXBoot</h2>
+
+<p>Установить и запустить NXBoot можно двумя способами:</p>
+
+<h3 id="в-ручном-режиме"><em>В ручном режиме.</em></h3>
+
+<p>Для установки утилиты NXBoot, с помощью которой пейлоадеры будут доставляться на консоль, необходимо открыть программу Terminal и вставить следующий код:</p>
+
+<p><code class="highlighter-rouge">sudo curl -L https://mologie.de/~oliver/mologie.github.io/nxboot/bin/nxboot -o /usr/local/bin/nxboot &amp;&amp; sudo chmod +x /usr/local/bin/nxboot</code></p>
+
+<p>Таким образом, за одну операцию с <a href="https://mologie.github.io/nxboot/" target="_blank">официального сайта</a> скачивается утилита, сохраняется в директории <code class="highlighter-rouge">/usr/local/bin/</code> для того, чтоб не указывать путь до файла при запуске, и задаются права на исполнение.</p>
+
+<h3 id="автоматически"><em>Автоматически.</em></h3>
+
+<p>Для автоматической загрузки NXBoot и доставки пейлоада на консоль необходимо запустить программу <a href="https://github.com/KnightOfSteel/payload_starter/releases" target="_blank">PayloadStarter</a> и выбрать нужный <span class="tooltip">пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span>.</p>
+
+<h2 id="запуск-пейлоада">Запуск пейлоада</h2>
+
+<p>Запустить <span class="tooltip">Пейлоад
+	<span class="bottom">
+		Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+	</span>
+</span> можно также двумя способами:</p>
+
+<h3 id="в-ручном-режиме-1"><strong>В ручном режиме.</strong></h3>
+
+<p class="notice--warning">Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></p>
+
+<ol>
+  <li>Откройте программу Terminal и выполните следующую команду: <code class="highlighter-rouge">nxboot /путь/до/пейлоада</code>
+    <ul>
+      <li>Путь должен быть прописан непосредственно до <code class="highlighter-rouge">.bin</code>-файла пейлоада</li>
+      <li>Чтоб не прописывать путь вручную, можно написать в терминале <code class="highlighter-rouge">nxboot</code> и перетянуть туда мышкой <code class="highlighter-rouge">.bin</code>-файл пейлоада</li>
+      <li>Если <span class="tooltip">пейлоад
+ <span class="bottom">
+  Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> не запускается, скорее всего консоль находится не в режиме RCM</li>
+    </ul>
+  </li>
+  <li>После успешного выполнения <code class="highlighter-rouge">nxboot</code> вы увидите на экране следующий текст <code class="highlighter-rouge">success: payload was run. exiting, fair winds!</code></li>
+  <li>Можете доставать замыкатель</li>
+</ol>
+
+<h3 id="в-автоматическом-режиме"><strong>В автоматическом режиме.</strong></h3>
+
+<p class="notice--warning">Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></p>
+
+<ol>
+  <li>Подключите Switch к компьютеру</li>
+  <li>Запустите <strong>PayloadStarter</strong></li>
+  <li>Выберите требуемый <code class="highlighter-rouge">payload.bin</code></li>
+  <li>Дождитесь завершения процесса (зависит от вашего интернет-соединения и быстродействия компьютера)</li>
+  <li>Если все прошло успешно, то на вашем Switch запуститься выбранный payload и можно достать замыкатель</li>
+</ol>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск на Android</summary><div class="spoiler-body">
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li><span class="tooltip">Пейлоад
+  <span class="bottom">
+      Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+  </span>
+</span>, который вы собираетесь запускать на приставке</li>
+  <li>Устройство на базе Android, работающий с OTG</li>
+  <li>USB type-С на USB type-С для подключения Switch к устройству на Android, либо OTG-переходник</li>
+  <li>Установленная программа <a href="https://github.com/MenosGrante/Rekado/releases/latest" target="_blank">Rekado</a></li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<h2 id="запуск-пейлоада">Запуск пейлоада</h2>
+
+<ol>
+  <li>Запустите Rekado на вашем Android-смартфоне</li>
+  <li>Перейдите в раздел “<strong>Payloads</strong>” и дайте права на работу с накопителем, есои программа их попросит</li>
+  <li>Нажмите на кнопку <code class="highlighter-rouge">+</code> и выберите необходимый для запуска <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span></li>
+  <li>Подключите Switch к вашему устройству с помощью кабеля</li>
+  <li>Телефон спросит использовать ли Rekado для подклбчения по умолчанию. Ответьте утвердительно</li>
+  <li>Нажмите “<strong>Boot Payload</strong>” и выберите ваш <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span></li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск на любой платформе, на которой есть браузер</summary><div class="spoiler-body">
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li><span class="tooltip">Пейлоад
+  <span class="bottom">
+      Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+  </span>
+</span>, который вы собираетесь запускать на приставке</li>
+  <li>USB type-С на USB type-A кабель для подключения Switch к <span class="tooltip">хосту
+  <span class="bottom">
+      Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+  </span>
+</span></li>
+  <li>Браузер Chrome (с другими браузерами работать не будет!)</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<h2 id="запуск-пейлоада">Запуск пейлоада</h2>
+
+<p class="notice--info">Приставка должна находиться в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a>!</p>
+
+<ol>
+  <li>Откройте эту <a href="https://elijahzawesome.github.io/web-cfw-loader/" target="_blank">веб-страницу</a> и включите Русский язык</li>
+  <li>В части “<strong>Настройки отправки пейлоада</strong>” выберите <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> из списка “<strong>Загрузить свой <span class="tooltip">пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span></strong>”, нажмите “<strong>Выберите файл</strong>”, после чего выберите <code class="highlighter-rouge">.bin</code>-файл вашего пейлоада
+    <ul>
+      <li>Не выбирайте <span class="tooltip">пейлоад
+ <span class="bottom">
+  Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> из списка! Используйте тот, что в архиве, иначе вы рискуете получить ошибку на том или ином этапе прошивки!</li>
+    </ul>
+  </li>
+  <li>Нажмите “<strong>Deliver payload!</strong>”</li>
+  <li>В открывшемся окне выберите “<strong>APX</strong>” и нажмите “<strong>Подключение</strong>”</li>
+  <li><span class="tooltip">Пейлоад
+ <span class="bottom">
+     Файл с исполняемым кодом в формате <code class="highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+ </span>
+</span> запустится на консоли</li>
+  <li>Можете доставать замыкатель</li>
+</ol>
+</div></details>
+
+<hr />
+
+<h1 class="notice--success" id="следующий-шаг-подготовительные-работы">Следующий шаг: <a href="preparation-fuse">Подготовительные работы</a></h1>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>
