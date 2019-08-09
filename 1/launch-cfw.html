@@ -1,0 +1,598 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Кастомная прошивка - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Кастомная прошивка">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/launch-cfw.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/launch-cfw.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Кастомная прошивка">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Кастомная прошивка
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#подготовка-к-запуску-cfw" id="markdown-toc-подготовка-к-запуску-cfw">Подготовка к запуску <abbr title="Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так">CFW</abbr></a></li>
+  <li><a href="#кастомные-прошивки" id="markdown-toc-кастомные-прошивки">Кастомные прошивки</a>    <ul>
+      <li><a href="#atmosphere" id="markdown-toc-atmosphere">Atmosphere</a>        <ul>
+          <li><a href="#плюсы" id="markdown-toc-плюсы">Плюсы</a></li>
+          <li><a href="#минусы" id="markdown-toc-минусы">Минусы</a></li>
+          <li><a href="#установка" id="markdown-toc-установка">Установка</a></li>
+        </ul>
+      </li>
+      <li><a href="#sx-os" id="markdown-toc-sx-os">SX OS</a>        <ul>
+          <li><a href="#плюсы-1" id="markdown-toc-плюсы-1">Плюсы</a></li>
+          <li><a href="#минусы-1" id="markdown-toc-минусы-1">Минусы</a></li>
+          <li><a href="#установка-1" id="markdown-toc-установка-1">Установка</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<h1 id="подготовка-к-запуску-cfw">Подготовка к запуску <abbr title="Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так">CFW</abbr></h1>
+
+<p class="notice--warning">Этот пункт нужно делать <strong>обязательно</strong>! Вы можете пропустить его лишь в том случае, если у вас <strong>уже</strong> есть резервная копия!</p>
+
+<ol>
+  <li>Создайте <a href="backup-nand" target="_blank">резервную копию NAND</a> консоли, если ещё не делали этого</li>
+  <li>
+    <p>Определите версию вашего системного ПО</p>
+
+    <p class="notice--success">Версию системного ПО можно посмотреть в меню “<strong>Системные настройки</strong>” -&gt; “<strong>Система</strong>”</p>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/system-version.jpg" alt="" /></p>
+
+    <p class="notice--warning">Если версия прошивки не отображается и Switch пишет, что он готов к обновлению, выключите консоль, достаньте картридж, зажмите (vol+) + (vol-) и не отпуская кнопки громкости, включите приставку. Вы попадёте в меню восстановления в котором будет отображаться текущая версия прошивки. После перезагрузки приставки скачанное обновление удалится.</p>
+  </li>
+</ol>
+
+<p>Если версия вашего системного ПО уже 8.1.0, то привяжите аккаунт к приставке. Для этого зайдите в eSHOP и создайте новый аккаунт, если он ещё не создан, либо привяжите уже имеющийся.</p>
+
+<h1 id="кастомные-прошивки">Кастомные прошивки</h1>
+
+<p>В данный момент под кастомной прошивкой понимается официальная прошивка с рядом патчей, которые позволяют запускать не подписанный код и добавляют в прошивку ряд уникальных функций, например LayeredFS. Наиболее важными можно считать Atmosphere, из которой отпочковались RajNX, ReiNX и SX OS. Последняя базируется на исходных кодах первой и является более дружественной к пользователю. Однако, она не бесплатная.</p>
+
+<p>Установка кастомной прошивки может варьироваться в зависимости от неё самой и версии вашего текущего системного ПО</p>
+
+<h2 id="atmosphere"><a href="atmos" target="_blank">Atmosphere</a></h2>
+<p><a href="https://github.com/Atmosphere-NX/Atmosphere" target="_blank">Github</a></p>
+
+<p>Atmosphere - open source проект. Она состоит из пяти основных модулей, каждый из которых наделён своими функциями:</p>
+
+<ul>
+  <li><strong>Fusée</strong> - загрузчик первого этапа. Он отвечает за запуск и проверку второго этапа (кастомный TrustZone) и package2 (ядро и системные модули), а так же за патчинг их по мере необходимости (<strong>реализован</strong>)</li>
+  <li><strong>Exosphère</strong> - изменённый TrustZone, необходимый для запуска Secure Monitor (<strong>реализован</strong>)</li>
+  <li><strong>Thermosphère</strong> - модуль, обеспечивающий поддержку EmuNAND (<strong>не реализован</strong>)</li>
+  <li><strong>Stratosphère</strong> - изменённые системные модули. Будет что-то типа Rosalina на 3DS, что позволит расширить возможности ядра и предоставит новые функции (<strong>частично реализован</strong>)</li>
+  <li><strong>Troposphère</strong> - патчи для реализации запланированных функций кастомной прошивки. Уровень взаимодействия с приложениями (<strong>не реализован</strong>)</li>
+</ul>
+
+<p>Позволяет устанавливать игры в формате NSP, устанавливать к ним обновления, DLC. Прошивка имеет ряд уникальных функций и ее использования не является незаконным, поскольку она не модифицирует файлы оригинальной прошивки ни коим образом.</p>
+
+<h3 id="плюсы">Плюсы</h3>
+<ul>
+  <li>Бесплатная</li>
+  <li>Постоянно развивается</li>
+  <li>Умеет запускать образы eShop-игр</li>
+  <li>Поддерживает LayeredFS</li>
+  <li>С открытым исходным кодом</li>
+  <li>Модульная архитектура</li>
+  <li>Наиболее защищённая</li>
+  <li>Работает на всех версиях системного ПО</li>
+  <li>Умеет перезагружаться в hekate без проброса пейлоада (то есть после перезагрузки вы сразу попадаете в hekate или Atmosphere)</li>
+  <li>Поддерживает эмуляцию amiibo</li>
+  <li>Поддерживает разгон процессора и видеочипа</li>
+</ul>
+
+<h3 id="минусы">Минусы</h3>
+<ul>
+  <li>Не умеет монтировать XCI? но умеет устанавливать</li>
+</ul>
+
+<h3 id="установка">Установка</h3>
+<p>Для установки выберите в таблице версию прошивки, соответствующую вашей.</p>
+
+<table>
+  <colgroup>
+    <col span="1" style="width: 10%;" />
+    <col span="1" style="width: 10%;" />
+    <col span="1" style="width: 80%;" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="text-align: center">От</th>
+      <th style="text-align: center">До</th>
+      <th style="text-align: center">Способ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">1.0.0</td>
+      <td style="text-align: center; font-weight: bold;">8.0.0</td>
+      <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до 8.1.0</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">8.1.0</td>
+      <td style="text-align: center; font-weight: bold;"><a href="atmos">Запуск Atmosphere</a></td>
+    </tr>
+    <!--<tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">8.1.0</td>
+      <td style="text-align: center; font-weight: bold;"><strong>Запуск Atmosphere невозможен</strong></td>
+    </tr>-->
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="sx-os"><a href="sxos" target="_blank">SX OS</a></h2>
+<p><a href="https://sx.xecuter.rocks/" target="_blank">Официальный сайт</a></p>
+
+<p>Коммерческая операционная система, созданная китайскими разработчиками на основе исходных кодов Atmosphere. Распространяется в двух комплектациях:</p>
+
+<ul>
+  <li>
+    <p><strong>SX OS Pro</strong> - физический релиз. Включает в себя лицензию на ОС, замыкатель и <abbr title="Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.">донгл</abbr>, с помощью которого можно запустить SX OS из режима восстановления автономно, то есть без использования ПК или смартфона. Разумеется, для каждого запуска требует наличия донгла в консоли.</p>
+  </li>
+  <li>
+    <p><strong>SX OS</strong> - распространяется исключительно в виде лицензии. Для запуска требуется войти в RCM с помощью ПК или смартфона.</p>
+  </li>
+</ul>
+
+<p>Несмотря на общую базу с Atmosphere, SX OS более прост в установке и эксплуатации для конечного пользователя. Сразу из коробки позволяет запускать дампы в формате XCI прямо с карты памяти. Так же имеет поддержку LayeredFS и умеет запускать дампы игр, распространяющихся через eShop. Имеется поддержка читов, а так же возможность запускать игры с подключённого в док USB-носителя. Самым же важным я считаю изолированный EmuNAND, который, при правильном использовании, может гарантированно предотвратить бан при этом позволив запускать официальную прошивку . в которой можно играть онлайн.</p>
+
+<p>Помимо платной версии есть ещё и бесплатная, дающая исключительно доступ к Homebrew.</p>
+
+<h3 id="плюсы-1">Плюсы</h3>
+<ul>
+  <li>Умеет запускать образы eShop-игр</li>
+  <li>Поддерживает LayeredFS</li>
+  <li>Встроенный установщик NSP</li>
+  <li>Монтирование образов XCI</li>
+  <li>Встроенный HBL</li>
+  <li>Умеет устанавливать игры с USB-носителя и на USB-носитель</li>
+  <li>Поддерживает читы</li>
+  <li>Emunand, что теоретически позволит играть пиратку в специально выделенной закрытой песочнице и не наследить в NAND. То есть для запуска пиратки вы используете EmaNAND, а для запуска лицензии и игры онлайн - SysNAND</li>
+</ul>
+
+<h3 id="минусы-1">Минусы</h3>
+<ul>
+  <li>Стоит денег</li>
+  <li>Полностью закрытая</li>
+  <li>В версии до 1.3 содержала в себе бриккод, шифрующий eMMC при попытке взлома прошивки. Кто его знает какие ещё сюрпризы там остались</li>
+  <li>Основана на коде Atmosphere, что нарушает лицензию последней (строго этический момент, на работу это, разумеется, не влияет)</li>
+  <li>Не поддерживает эмуляцию amiibo</li>
+  <li>Не поддерживает разгон процессора и видеокарты</li>
+  <li>Очень долго и редко обновляется</li>
+  <li>С новыми версиями системного ПО умеют работать <strong>только</strong> beta-версии прошивки</li>
+  <li>Не умеет правильно выключать приставку и перезагружаться в систему</li>
+</ul>
+
+<h3 id="установка-1">Установка</h3>
+<p>Для установки выберите в таблице версию прошивки, соответствующую вашей.</p>
+
+<table>
+  <colgroup>
+    <col span="1" style="width: 10%;" />
+    <col span="1" style="width: 10%;" />
+    <col span="1" style="width: 80%;" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="text-align: center">От</th>
+      <th style="text-align: center">До</th>
+      <th style="text-align: center">Способ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">1.0.0</td>
+      <td style="text-align: center; font-weight: bold;">8.0.0</td>
+      <td style="text-align: center; font-weight: bold;"><a href="update-to-latest">Обновление до 8.1.0</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">8.1.0</td>
+      <td style="text-align: center; font-weight: bold;"><a href="sxos">Запуск SX OS</a></td>
+    </tr>
+	<!--<tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">8.1.0</td>
+      <td style="text-align: center; font-weight: bold;"><strong>Запуск SX OS невозможен</strong></td>
+    </tr>-->
+  </tbody>
+</table>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

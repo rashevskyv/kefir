@@ -1,0 +1,452 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Проблемы и их решения - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Проблемы и их решения">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/troubleshooting.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/troubleshooting.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Проблемы и их решения">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Проблемы и их решения
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        <p>В этом разделе только самые частые проблемы и их решения. Раздел, в котором собраны ответы на самые часто задаваемые вопросы находится здесь - <a href="faq" target="_blank">FAQ</a></p>
+
+<details class="spoiler"><summary class="spoiler-title">После проброса плейлоада и появления сплешскрина Nintendo, консоль висит в черном экране.</summary><div class="spoiler-body">
+<p><strong>О:</strong> Вам нужно установить драйвер exFAT. Для этого проделайте <a href="update-to-latest" target="_blank">безопасное обновление прошивки</a>. Его нужно делать даже в том случае, если у вас и так стоит последняя версия взламываемой прошивки! Повторное обновление просто установит отсутствующий драйвер.
+Если не помогает, переустановите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
+	<span class="bottom">
+		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+	</span>
+</span> начисто. Для этого на втором экране скрипта установки нажмите O, чтобы войти в опции и выберите чистую установку. Если устанавливаете вручную - создайте в корне карты памяти папку “backup” и перенесите в неё содержимое корня карты памяти, кроме папки Nintendo, а уже после этого устанавливайте kefir</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Не могу закинуть на карту игру более 4х Гб, что делать?</summary><div class="spoiler-body">
+<p><strong>О:</strong> Вам нужно установить драйвер exFAT. Для этого проделайте <a href="update-to-latest" target="_blank">безопасное обновление прошивки</a>. Его нужно делать даже в том случае, если у вас и так стоит последняя версия взламываемой прошивки! Повторное обновление просто установит отсутствующий драйвер. После обновления драйвера отформатируйте карту памяти в exFAT. Если на карте есть важные файлы, не забудьте сделать их резервную копию, а потом вернуть обратно, поскольку форматирование удалит все файлы с карты памяти</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Приставка не видит карту в формате exFAT и просит обновить прошивку</summary><div class="spoiler-body">
+<p><strong>О:</strong> Вам нужно установить драйвер exFAT. Для этого проделайте <a href="update-to-latest" target="_blank">безопасное обновление прошивки</a>. Его нужно делать даже в том случае, если у вас и так стоит последняя версия взламываемой прошивки! Повторное обновление просто установит отсутствующий драйвер.</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Не могу включить приставку</summary><div class="spoiler-body">
+<p><strong>О:</strong> Отключите приставку от источника питания\вытащите из нее USB, 30 секунд удерживайте кнопку (POWER), после этого нажмите на кнопку (POWER) единожды и запускайте прошивку. Если не помогает, снова 30 секунд удерживайте кнопку (POWER), ставьте консоль на зарядку не менее, чем на 3 часа в оригинальный док или ЗУ, после чего отключите приставку от источника питания\вытащите из нее USB, 30 секунд удерживайте кнопку (POWER), после этого нажмите на кнопку (POWER) единожды и запускайте прошивку.</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Как удалить скачанную, но ещё не установленную прошивку?</summary><div class="spoiler-body">
+<p><strong>О:</strong> На прошитой приставке выключите консоль, достаньте картридж, запустите <a href="fusee-gelee" target="_blank">hekate</a>, выберите “<strong>Launch</strong>” -&gt; “<strong>ваша_прошивка</strong>” и сразу после выбора зажмите (vol+) + (vol-) и не отпускайте их, пока не попадёте в меню восстановления. После сплешскрина Atmosphere, Nintendo и логотипа Switch, вы попадёте в меню восстановления в котором будет отображаться текущая версия прошивки. После перезагрузки приставки скачанное обновление удалиться. Посмотреть как это делается можно <a href="https://www.youtube.com/watch?v=9W3Dypvn67I" target="_blank">здесь</a></p>
+
+<p>Если ваша приставка еще не прошита, просто выключите ее и включите с зажатыми кнопками громкости</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">У меня последняя прошивка, но при запуске некоторых игр я вижу, что "доступно обновление системы". Почему так происходит?</summary><div class="spoiler-body">
+<p><strong>О:</strong> Имеется ввиду обновление игры. Скачайте его и установите как обычную игру. Либо установите <a href="/files/dm.nsp" target="_blank">DevMenu</a>, выберите игру, потом перейдите в меню “<strong>Manage</strong>” -&gt; “<strong>Reset Requiered Version</strong>”. Если не помагает - включите интернет</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">При запуске прошивки получаю ошибку "Fatal Error: [NXBOOT]"</summary><div class="spoiler-body">
+<p><strong>О:</strong> Обновите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
+	<span class="bottom">
+		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+	</span>
+</span></p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть</summary><div class="spoiler-body">
+<p><strong>О:</strong> Запустите hekate и перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Archive bit - AutoRCM</strong> (в нижней части экрана), выберите <strong>Fix archive bit (except Nintendo folder)</strong></p>
+
+<p class="notice--warning">Не меняйте атрибуты папки Nintendo!</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Возникают ошибки при установке NSP-файлов</summary><div class="spoiler-body">
+<p><strong>О:</strong> 
+	* Дайте файлам короткое имя. 
+	* Если не помогло - перекачайте файлы, возможно они не докачаны. 
+	* На switch’е через hekate во вкладке <strong>tools</strong> выберите <strong>Fix archive bit (except Nintendo folder)</strong>.</p>
+</div></details>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

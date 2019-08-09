@@ -1,0 +1,503 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.6.0 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Переход на EmuNAND для уже прошитых - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Переход на EmuNAND для уже прошитых">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/preparation-white.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/preparation-white.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://3dscfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/cfw">Кастомные<br>прошивки</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      <li><a href="https://vk.com/" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Вконтакте
+</a></li>
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Переход на EmuNAND для уже прошитых">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Переход на EmuNAND для уже прошитых
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        <p class="notice--info">Эта инструкция для уже прошитых пользователей, которые сделали перед прошивкой бекап чистой системы, а только потом устанавливали кастом. Если вы из таких, то следуя этой инструкции вы сможете скопировать свою текущую прошивку в EmuNAND, а затем восстановить оригинальную, бекап который был сделан до прошивки, и уже с неё играть в официальные игры и выходить онлайн.</p>
+
+<p>С появлением <span class="tooltip">EmuNAND
+	<span class="bottom">
+		Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+	</span>
+</span> в кастомных прошивках, мы можем разделить наши пиратские нужды и официальную прошивку. Для этого необходимо, чтобы у вас был бекап оригинальной прошивки, иначе затея не имеет смысла. Что мы будем делать - мы перенесём наш прошитый SysNAND в EmuNAND и будем запускать <span class="tooltip">кастом
+	<span class="bottom">
+		Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+	</span>
+</span> из него, а в системный раздел, в NAND, мы восстановим наш чистенький бекап, из которого уже будем запускать лицензию.</p>
+
+<p>Если вашу приставку забанили, нет необходимости следовать этой инструкции. Можете использовать вашу прошивку так же, как использовали до этого. Вы ничего не выиграете от создания EmuNAND.</p>
+
+<p>Для запуска приставки в SysNAND мы всё равно будем использовать Atmosphere, чтобы защитить предохранители в случае случайного обновления прошивки. Это делается для того, чтобы вы всегда имели возможность откатиться на последнюю рабочую прошивку в том случае, если после случайного обновления кастом ещё не будет поддерживать новую версию системного ПО. Так же это сохранит AutoRCM, если он включён, после обновления прошивки через интернет. Atmosphere будет использована, даже если у вас SXOS, поскольку последний не умеет защищать предохранители после установки обновления через интернет. В запущенном таким образом SysNAND вы не сможете использовать пиратку, даже если очень захотите, однако <a href="hbl" target="blank_">HBL</a> будет доступен, что позволит нам провести безопасное обновление прошивки.</p>
+
+<p>В данный момент ещё нет всех необходимый инструментов, чтобы запускать SysNAND без кастома и пользоваться всеми преимуществами, которые он даёт для безопасности при обновлении, сохранении фьюзов и прочее. Поэтому, если вы считаете, что запуск Atmosphere приведёт вас к бану (а в теории это не так, Atmosphere никак себя не выдаёт при правильном её использовании, хотя всякое конечно может быть), дождитесь других инструментов и не используйте онлайн!</p>
+
+<p class="notice--warning">После выполнения каждой инструкции из нижеследующего списка, возвращайтесь на эту страницу и переходите к следующему пункту. Если какие-то из действий вы уже выполняли, повторно их делать не нужно.</p>
+
+<ol>
+  <li><a href="emunand" target="blank_">Создание EmuNAND</a>
+    <ul>
+      <li>Пользователям <span class="tooltip">Caffeine
+ <span class="bottom">
+   <a href="exploits" target="blank_">Это эксплойт</a>, позволяющая запустить hekate из браузера на приставке с прошивкой 4.1.0. В данный момент это единственный способ запустить прошивку на патченных юнитах. Работает ТОЛЬКО при запуске из официальной прошивки, поэтому сильно важно, чтобы официальная прошивка всегда оставалась с версией системного ПО 4.1.0
+ </span>
+</span> придётся создать ещё один EmuNAND для запуска официальной прошивки, причём такую возможность поддерживает только Atmosphere</li>
+    </ul>
+  </li>
+  <li><a href="backup-nand#восстановление-резервной-копии" target="blank_">Восстановление резервной копии оригинальной прошивки</a>
+    <ul>
+      <li>Пользователям <span class="tooltip">Caffeine
+ <span class="bottom">
+   <a href="exploits" target="blank_">Это эксплойт</a>, позволяющая запустить hekate из браузера на приставке с прошивкой 4.1.0. В данный момент это единственный способ запустить прошивку на патченных юнитах. Работает ТОЛЬКО при запуске из официальной прошивки, поэтому сильно важно, чтобы официальная прошивка всегда оставалась с версией системного ПО 4.1.0
+ </span>
+</span> для игры в лицензию нужно будет запускать не <span class="tooltip">SysNAND
+ <span class="bottom">
+ Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
+ Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.
+ </span>
+</span>, а <span class="tooltip">EmuNAND
+ <span class="bottom">
+  Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+ </span>
+</span>, созданный специально для лицензии</li>
+    </ul>
+  </li>
+  <li><a href="cfw" target="blank_">Запуск кастомной прошивки</a> - теперь запуск кастома делается через <span class="tooltip">EmuNAND
+ <span class="bottom">
+     Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+ </span>
+</span>, а запуск лицензии - через <span class="tooltip">SysNAND
+ <span class="bottom">
+ Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
+ Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.
+ </span>
+</span> или <span class="tooltip">EmuNAND
+ <span class="bottom">
+     Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+ </span>
+</span>, созданный специально для лицензии. Забыли как запускать первое и второе? Вернитесь к <a href="emunand" target="blank_">инструкции по созданию эмунанда</a> и освежите себе память.</li>
+  <li><a href="update-to-latest" target="blank_">Обновление официальной прошивки до последней версии системного ПО</a>
+    <ul>
+      <li><strong>ВНИМАНИЕ!!! НИКОГДА НЕ ОБНОВЛЯЙТЕ ПРОШИВКУ в <span class="tooltip">SysNAND
+ <span class="bottom">
+ Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
+ Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.
+ </span>
+</span>, если используете <span class="tooltip">Caffeine
+ <span class="bottom">
+   <a href="exploits" target="blank_">Это эксплойт</a>, позволяющая запустить hekate из браузера на приставке с прошивкой 4.1.0. В данный момент это единственный способ запустить прошивку на патченных юнитах. Работает ТОЛЬКО при запуске из официальной прошивки, поэтому сильно важно, чтобы официальная прошивка всегда оставалась с версией системного ПО 4.1.0
+ </span>
+</span></strong>. Сделайте себе копию SysNAND в отдельном emuMMC и обновляйте его там, его же используйте для запуска официальной прошивки!</li>
+      <li>Всегда загружайте прошивку через hekate!</li>
+      <li>Это может быть обычный <span class="tooltip">SysNAND
+ <span class="bottom">
+ Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
+ Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.
+ </span>
+</span>, в случае работы с <span class="tooltip">Fusée Gelée
+ <span class="bottom">
+  Этот не привязной эксплойт использует уязвимость в штатном режиме восстановления Nintendo Switch. Для его работы требуется внешнее устройство, хост, с помощью которого на приставке и будет запускаться кастомная прошивка. Делать это будет необходимо при каждой перезагрузке консоли. В качестве хоста может использоваться ПК, мобильный телефон на Android или iOS или специальное устройство, донгл. 
+ </span>
+</span>, или ещё один EmuNAND, в случае работы с <span class="tooltip">Caffeine
+ <span class="bottom">
+   <a href="exploits" target="blank_">Это эксплойт</a>, позволяющая запустить hekate из браузера на приставке с прошивкой 4.1.0. В данный момент это единственный способ запустить прошивку на патченных юнитах. Работает ТОЛЬКО при запуске из официальной прошивки, поэтому сильно важно, чтобы официальная прошивка всегда оставалась с версией системного ПО 4.1.0
+ </span>
+</span>.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Если ваша оригинальная прошивка имела версию ниже, чем 4.0.1, то, вероятнее всего, у вас включен NoGC-патч, из-за которого на прошивке может не работать слот для картриджей. Отключите NoGC через настройки hekate</p>
+
+<hr />
+
+<details class="spoiler"><summary class="spoiler-title">Материалы для самостоятельного изучения</summary><div class="spoiler-body">
+<ul>
+  <li><a href="faq" target="blank_">Часто задаваемые вопросы</a></li>
+  <li><a href="troubleshooting">Проблемы и их решения</a></li>
+  <li><a href="preparation-white" target="blank_">Перенос SysNAND в EmuNAND для восстановления возможности играть онлайн в купленные и бесплатные игры</a></li>
+  <li><a href="cheats" target="blank_">Использование читов в EdiZon</a></li>
+  <li><a href="backup-saves" target="blank_">Резервное копирование и восстановление сохранений с помощью Checkpoint</a></li>
+  <li><a href="lanplay" target="blank_">Онлайн для прошитых и забаненных</a></li>
+  <li><a href="hbl" target="blank_">Запуск Homebrew Launcher</a></li>
+  <li><a href="emuiibo" target="blank_">Эмуляция Amiibo с помощью модуля emuiibo</a></li>
+  <li><a href="https://4pda.ru/forum/index.php?act=findpost&amp;pid=73214535&amp;anchor=Spoil-73214535-3" target="blank_">Инструкции на сайте 4pda</a></li>
+</ul>
+
+</div></details>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <a href="#" class="scrollup">Наверх</a>
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>
