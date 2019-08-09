@@ -1,4 +1,1 @@
-Mirrors that were added for kefir users should be safe and stay on kefir!
-If you download directly from these mirrors, then all this will simply fail. As a result, everyone will suffer. The author, if he will know that someone use mirrors directly, would simply remove the mirrors.
-
-Regards, The Nincfw Team
+123213
