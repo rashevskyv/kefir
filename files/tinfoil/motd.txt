@@ -1,4 +1,4 @@
-Зеркала, которые добавлены для пользователей кефира должны в кефире и остаться! 
-Смысл простой - их не много, но достаточно для того, чтобы покрыть квоту, которая возникает на серверах hbgshop. Однако, если качать напрямую из этих зеркал, то вся затея просто проваливается, поскольку зеркала уже будут закачаны по самое не хочу. В итоге пострадают все. И те, у кого квота на серверах hbg и те, кто решил скачать напрямую. Не будьте гадами, качайте так, как это придумал автор,Ю иначе автор просто удалит зеркала.
+Mirrors that were added for kefir users should be safe and stay on kefir!
+If you download directly from these mirrors, then all this will simply fail. As a result, everyone will suffer. The author, if he will know that someone use mirrors directly, would simply remove the mirrors.
 
-С уважением, команда nincfw 
+Regards, The Nincfw Team
