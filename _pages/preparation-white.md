@@ -3,8 +3,6 @@ permalink: /preparation-white.html
 title: Переход на EmuNAND для уже прошитых
 author_profile: true
 ---
-{% include toc title="Разделы" %}
-
 Эта инструкция для уже прошитых пользователей, которые сделали перед прошивкой бекап чистой системы, а только потом устанавливали кастом. Если вы из таких, то следуя этой инструкции вы сможете скопировать свою текущую прошивку в EmuNAND, а затем восстановить оригинальную, бекап который был сделан до прошивки, и уже с неё играть в официальные игры и выходить онлайн. 
 {: .notice--info}
 
@@ -20,10 +18,10 @@ author_profile: true
 {: .notice--warning}
 
 1. [Создание EmuNAND](emunand){:target="blank_"}
-	* Пользователям {% include abbr/caffeine.txt abbr="Caffeine" %} придётся создать ещё один EmuNAND для запуска официальной прошивки, причём такую возможность поддерживает только Atmosphere 
+	* Пользователям {% include abbr/caffeine.txt abbr="Caffeine" %} придётся создать ещё один EmuNAND для запуска официальной прошивки, причём такую возможность поддерживает только Atmosphere. 
 1. [Восстановление резервной копии оригинальной прошивки](backup-nand#восстановление-резервной-копии){:target="blank_"}
 	* Пользователям {% include abbr/caffeine.txt abbr="Caffeine" %} для игры в лицензию нужно будет запускать не {% include abbr/sysnand.txt abbr="SysNAND" %}, а {% include abbr/emunand.txt abbr="EmuNAND" %}, созданный специально для лицензии
-1. [Запуск кастомной прошивки](cfw){:target="blank_"} - теперь запуск кастома делается через {% include abbr/emunand.txt abbr="EmuNAND" %}, а запуск лицензии - через {% include abbr/sysnand.txt abbr="SysNAND" %} или {% include abbr/emunand.txt abbr="EmuNAND" %}, созданный специально для лицензии
+1. [Запуск кастомной прошивки](cfw){:target="blank_"} - теперь запуск кастома делается через {% include abbr/emunand.txt abbr="EmuNAND" %}, а запуск лицензии - через {% include abbr/sysnand.txt abbr="SysNAND" %} или {% include abbr/emunand.txt abbr="EmuNAND" %}, созданный специально для лицензии. Забыли как запускать первое и второе? Вернитесь к [инструкции по созданию эмунанда](emunand){:target="blank_"} и освежите себе память. 
 1. [Обновление официальной прошивки до последней версии системного ПО](update-to-latest){:target="blank_"}
 	* **ВНИМАНИЕ!!! НИКОГДА НЕ ОБНОВЛЯЙТЕ ПРОШИВКУ в {% include abbr/sysnand.txt abbr="SysNAND" %}, если используете {% include abbr/caffeine.txt abbr="Caffeine" %}**. Сделайте себе копию SysNAND в отдельном emuMMC и обновляйте его там, его же используйте для запуска официальной прошивки!
 	* Всегда загружайте прошивку через hekate!
