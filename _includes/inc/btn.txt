@@ -1,1 +1,0 @@
-<img src="/images/buttons/{{ include.btn }}.png" alt="({{ include.btn }})">

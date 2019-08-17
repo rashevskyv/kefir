@@ -1,5 +1,0 @@
-<span class="tooltip">{{ include.abbr }}
-	<span class="bottom">
-		Файл с исполняемым кодом в формате `.bin`, которые мы загружаем в приставку, чаще всего - загрузчик
-	</span>
-</span>
