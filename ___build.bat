@@ -1,0 +1,212 @@
+@echo off
+chcp 866 >nul 2>&1
+
+COLOR 0F
+
+
+set wd=E:\Switch\_kefir
+set bd=E:\Switch\_kefir\build
+set sd=%bd%\atmo
+if exist "%bd%" (RD /s /q "%bd%")
+rem if exist "%wd%\atmo.zip" (del "%wd%\atmo.zip")
+rem if exist "%wd%\sxos.zip" (del "%wd%\sxos.zip")
+rem if exist "%wd%\_kefir.7z" (del "%wd%\_kefir.7z")
+rem "C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!.git -xr!edizon_cheats.zip -xr!version E:\Switch\_kefir\_kefir.7z E:\Switch\_kefir\*
+set clear=0
+set cfw=ATMOS
+set cfwname=Atmosphere
+set lang=0
+set bootscrn=1
+set theme=0
+set caffeine=0
+
+mkdir %wd%\build
+mkdir %wd%\build\atmo
+
+xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
+xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
+
+:cfw_ATMOS
+xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
+
+if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
+if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
+if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
+if exist "%sd%\switch\sx.nro" (del "%sd%\switch\sx.nro")
+if exist "%sd%\bootloader\ini\sxos.ini" (del "%sd%\bootloader\ini\sxos.ini")
+if exist "%sd%\bootloader\hekate_ipl_both.ini" (del "%sd%\bootloader\hekate_ipl_both.ini")
+if exist "%sd%\bootloader\hekate_ipl_misc.ini" (del "%sd%\bootloader\hekate_ipl_misc.ini")
+if exist "%sd%\bootloader\hekate_ipl_sx.ini" (del "%sd%\bootloader\hekate_ipl_sx.ini")
+if exist "%sd%\bootloader\hekate_ipl_hm.ini" (del "%sd%\bootloader\hekate_ipl_hm.ini")
+if exist "%sd%\bootloader\hekate_ipl_atmo.ini" (copy "%sd%\bootloader\hekate_ipl_atmo.ini" "%sd%\bootloader\hekate_ipl.ini")
+if exist "%sd%\bootloader\hekate_ipl_atmo.ini" (del "%sd%\bootloader\hekate_ipl_atmo.ini")
+if exist "%sd%\sxos\titles" (xcopy %sd%\sxos\titles\* %sd%\atmosphere\titles\  /Y /S /E /H /R /D)
+if exist "%sd%\sxos\games" (move /Y %sd%\sxos\games\* %sd%\games)
+if exist "%sd%\sxos" (RD /s /q "%sd%\sxos")
+if exist "%sd%\switch\sx" (RD /s /q "%sd%\switch\sx")
+if exist "%sd%\switch\themes" (RD /s /q "%sd%\switch\themes")
+if exist "%sd%\titles" (xcopy "%wd%\titles\*" "%sd%\atmosphere\titles" /H /Y /C /R /S /E)
+if exist "%sd%\titles" (RD /s /q "%sd%\titles")
+
+if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
+if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
+
+if exist "%sd%\atmosphere" (
+	attrib -A /S /D %sd%\atmosphere\*
+	attrib -A %sd%\atmosphere)
+if exist "%sd%\atmosphere\titles" (
+	attrib -A /S /D %sd%\atmosphere\titles*
+	attrib -A %sd%\atmosphere\titles)
+if exist "%sd%\sept" (
+	attrib -A /S /D %sd%\sept\*
+	attrib -A %sd%\sept)
+if exist "%sd%\bootloader" (
+	attrib -A /S /D %sd%\bootloader\*
+	attrib -A %sd%\bootloader)
+if exist "%sd%\config" (
+	attrib -A /S /D %sd%\config\*
+	attrib -A %sd%\config)
+if exist "%sd%\switch" (
+	attrib -A /S /D %sd%\switch\*
+	attrib -A %sd%\switch)
+if exist "%sd%\tinfoil" (
+	attrib -A /S /D %sd%\tinfoil\*
+	attrib -A %sd%\tinfoil)
+if exist "%sd%\games" (
+	attrib -A /S /D %sd%\games\*
+	attrib -A %sd%\games)
+if exist "%sd%\themes" (
+	attrib -A /S /D %sd%\themes\*
+	attrib -A %sd%\themes)
+if exist "%sd%\emuiibo" (
+	attrib -A /S /D %sd%\emuiibo\*
+	attrib -A %sd%\emuiibo)
+if exist "%sd%\_backup" (
+	attrib -A /S /D %sd%\_backup\*
+	attrib -A %sd%\_backup)
+if exist "%sd%\hbmenu.nro" (attrib -A %sd%\hbmenu.nro)
+if exist "%sd%\keys.dat" (attrib -A %sd%\keys.dat)
+if exist "%sd%\boot.dat" (attrib -A %sd%\boot.dat)
+if exist "%sd%\payload.bin" (attrib -A %sd%\payload.bin)
+if exist "%sd%\sxos" (
+	attrib -A /S /D %sd%\sxos\*
+	attrib -A %sd%\sxos)
+if exist "%sd%\sxos" (
+	attrib -A /S /D %sd%\pegascape\*
+	attrib -A %sd%\pegascape)
+if exist "%sd%\switch\fakenews-injector" (
+	attrib -A /S /D %sd%\switch\fakenews-injector\*
+	attrib -A %sd%\switch\fakenews-injector)
+    
+    
+rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.zip E:\Switch\_kefir\build\atmo\*
+    
+COLOR 0F
+
+
+set wd=E:\Switch\_kefir
+set bd=E:\Switch\_kefir\build
+set sd=%bd%\sxos
+set cfw=SXOS
+set cfwname=sxos
+
+mkdir %wd%\build\sxos
+
+xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
+xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
+
+:cfw_ATMOS
+xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
+
+xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
+xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
+if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
+if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
+if exist "%sd%:\bootloader\hekate_ipl_misc.ini" (del "%sd%:\bootloader\hekate_ipl_misc.ini")
+if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
+if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_both.ini")
+if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (copy "%sd%:\bootloader\hekate_ipl_sx.ini" "%sd%:\bootloader\hekate_ipl.ini")
+if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
+if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
+if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
+
+if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
+if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
+
+if exist "%sd%\atmosphere" (
+	attrib -A /S /D %sd%\atmosphere\*
+	attrib -A %sd%\atmosphere)
+if exist "%sd%\atmosphere\titles" (
+	attrib -A /S /D %sd%\atmosphere\titles*
+	attrib -A %sd%\atmosphere\titles)
+if exist "%sd%\sept" (
+	attrib -A /S /D %sd%\sept\*
+	attrib -A %sd%\sept)
+if exist "%sd%\bootloader" (
+	attrib -A /S /D %sd%\bootloader\*
+	attrib -A %sd%\bootloader)
+if exist "%sd%\config" (
+	attrib -A /S /D %sd%\config\*
+	attrib -A %sd%\config)
+if exist "%sd%\switch" (
+	attrib -A /S /D %sd%\switch\*
+	attrib -A %sd%\switch)
+if exist "%sd%\tinfoil" (
+	attrib -A /S /D %sd%\tinfoil\*
+	attrib -A %sd%\tinfoil)
+if exist "%sd%\games" (
+	attrib -A /S /D %sd%\games\*
+	attrib -A %sd%\games)
+if exist "%sd%\themes" (
+	attrib -A /S /D %sd%\themes\*
+	attrib -A %sd%\themes)
+if exist "%sd%\emuiibo" (
+	attrib -A /S /D %sd%\emuiibo\*
+	attrib -A %sd%\emuiibo)
+if exist "%sd%\_backup" (
+	attrib -A /S /D %sd%\_backup\*
+	attrib -A %sd%\_backup)
+if exist "%sd%\hbmenu.nro" (attrib -A %sd%\hbmenu.nro)
+if exist "%sd%\keys.dat" (attrib -A %sd%\keys.dat)
+if exist "%sd%\boot.dat" (attrib -A %sd%\boot.dat)
+if exist "%sd%\payload.bin" (attrib -A %sd%\payload.bin)
+if exist "%sd%\sxos" (
+	attrib -A /S /D %sd%\sxos\*
+	attrib -A %sd%\sxos)
+if exist "%sd%\sxos" (
+	attrib -A /S /D %sd%\pegascape\*
+	attrib -A %sd%\pegascape)
+if exist "%sd%\switch\fakenews-injector" (
+	attrib -A /S /D %sd%\switch\fakenews-injector\*
+	attrib -A %sd%\switch\fakenews-injector)    
+    
+rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\sxos.zip E:\Switch\_kefir\build\sxos\*
+
+echo ------------------------------------------------------------------------
+echo.
+echo                                    DONE
+echo.
+echo ------------------------------------------------------------------------
+echo.
+
+if exist "%bd%" (RD /s /q "%bd%")
+
+set CUR_YYYY=%date:~10,4%
+set CUR_MM=%date:~4,2%
+set CUR_DD=%date:~7,2%
+
+git add .
+git commit -m "%CUR_DD%.%CUR_MM%"
+
+
+:END
+if %lang%==1 (
+	echo. 
+	echo Нажмите любую клавишу для выхода
+) else (
+	echo. 
+	echo Press any button for exit
+)
+
+pause>nul 2>&1
+exit

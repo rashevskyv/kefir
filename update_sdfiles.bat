@@ -4,13 +4,12 @@ chcp 866 >nul 2>&1
 COLOR 0F
 
 set wd=%temp%\sdfiles
-set theme=0
 set clear=0
 set cfw=ATMOS
 set cfwname=Atmosphere
 set lang=0
 set bootscrn=1
-set fw=0
+set theme=0
 set caffeine=0
 
 :disclaimer
@@ -201,8 +200,8 @@ if %lang%==1 (
 set st=
 set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (set fw=0)
-for %%A in ("2") do if "%st%"==%%A (set fw=1)
+for %%A in ("1") do if "%st%"==%%A (set theme=0)
+for %%A in ("2") do if "%st%"==%%A (set theme=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :caffeine
@@ -359,7 +358,7 @@ cls
 if %lang%==0 (
 	ECHO --------------------------------------------------------------
 	ECHO  Old backup folder was founded. Remove it? 
-	ECHO  If you have any important files there, copy them right now!
+	ECHO  If you has any important files there, copy them right now!
 	ECHO ---------------------------------------------------------------
 	ECHO  Найдена старая папка с бекапом, созданная, вероятно, при 
 	ECHO  установке начисто. Рекомендуется её удалить. Если там остались 
@@ -480,10 +479,10 @@ if %lang%==1 (
 	echo ------------------------------------------------------------------------
 )
 
-if exist "%sd%:\ReiNX\titles\010000000000100D" (RD /s /q "%sd%:\ReiNX\titles\010000000000100D")
-if exist "%sd%:\ReiNX\titles" (xcopy %sd%:\ReiNX\titles\* %sd%:\atmosphere\titles\ /Y /S /E /H /R /D) >nul 2>&1
-if exist "%sd%:\ReiNX" (RD /s /q "%sd%:\ReiNX")
-if exist "%sd%:\RajNX" (RD /s /q "%sd%:\RajNX")
+    if exist "%sd%:\ReiNX\titles\010000000000100D" (RD /s /q "%sd%:\ReiNX\titles\010000000000100D")
+    if exist "%sd%:\ReiNX\titles" (xcopy %sd%:\ReiNX\titles\* %sd%:\atmosphere\titles\ /Y /S /E /H /R /D) >nul 2>&1
+    if exist "%sd%:\ReiNX" (RD /s /q "%sd%:\ReiNX")
+    if exist "%sd%:\RajNX" (RD /s /q "%sd%:\RajNX")
 
 echo                                    DONE
 echo ------------------------------------------------------------------------
@@ -609,7 +608,7 @@ if exist "%sd%:\switch\gag-order.nro" (del "%sd%:\switch\gag-order.nro")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 
 :check_fw
-if %fw%==1 (goto rem_theme) else (goto install_pack)
+if %theme%==1 (goto rem_theme) else (goto install_pack)
 
 :rem_theme
 if exist "%sd%:\atmosphere\titles\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
@@ -857,7 +856,7 @@ if %lang%==1 (
 ) else (
 	echo ========================================================================
 	echo.
-	echo                  DONE! Insert you SD to console!
+	echo                 DONE! Insert you SD into the console!
 	echo.
 	echo ========================================================================
 	echo ========================================================================
