@@ -11,7 +11,7 @@ author_profile: true
 
 * Запущенная [{% include abbr/cfw.txt abbr="CFW" %}](cfw){:target="_blank"}
 * Настроенный и работающий [Homebrew Launcher](hbl){:target="_blank"}
-* Свежая версия [ftpd](https://github.com/WinterMute/ftpd/releases/latest){:target="_blank"}
+* Свежая версия [ftpd](https://github.com/mtheall/ftpd/releases/latest){:target="_blank"} (**NRO**)
 
 # Инструкция
 
