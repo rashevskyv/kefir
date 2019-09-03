@@ -137,9 +137,9 @@ REM "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.
 REM "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\sxos.zip E:\Switch\_kefir\build\sxos\*
 
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R /S /E
-xcopy "%wd%\version" "%kefir_ver%\" /H /Y /C /R /S /E
+xcopy "%wd%\version" "%site_files%\" /H /Y /C /R /S /E
 xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R /S /E
-xcopy "%wd%\changelog" "%kefir_ver%\" /H /Y /C /R /S /E
+xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R /S /E
 
 
 echo ------------------------------------------------------------------------
