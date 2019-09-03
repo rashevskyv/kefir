@@ -11,7 +11,7 @@ if exist "%bd%" (RD /s /q "%bd%")
 if exist "%wd%\atmo.zip" (del "%wd%\atmo.zip")
 if exist "%wd%\sxos.zip" (del "%wd%\sxos.zip")
 if exist "%wd%\_kefir.7z" (del "%wd%\_kefir.7z")
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!.git -xr!edizon_cheats.zip -xr!version E:\Switch\_kefir\_kefir.7z E:\Switch\_kefir\*
+REM "C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!.git -xr!edizon_cheats.zip -xr!version E:\Switch\_kefir\_kefir.7z E:\Switch\_kefir\*
 set clear=0
 set cfw=ATMOS
 set cfwname=Atmosphere
@@ -19,7 +19,7 @@ set lang=0
 set bootscrn=1
 set theme=0
 set caffeine=0
-set kefir_ver=F:\git\site\switch\_includes\inc\kefir
+set site_inc=F:\git\site\switch\_includes\inc\kefir
 set site_files=F:\git\site\switch\files
 
 mkdir %wd%\build
@@ -133,11 +133,14 @@ if exist "%sd%\switch\fakenews-injector" (
 	attrib -A /S /D %sd%\switch\fakenews-injector\*
 	attrib -A %sd%\switch\fakenews-injector)    
     
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.zip E:\Switch\_kefir\build\atmo\*
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\sxos.zip E:\Switch\_kefir\build\sxos\*
+REM "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.zip E:\Switch\_kefir\build\atmo\*
+REM "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\sxos.zip E:\Switch\_kefir\build\sxos\*
 
-xcopy "%kefir_ver%\*" "%wd%\" /H /Y /C /R /S /E
-xcopy "%kefir_ver%\*" "%site_files%\" /H /Y /C /R /S /E
+xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R /S /E
+xcopy "%wd%\version" "%kefir_ver%\" /H /Y /C /R /S /E
+xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R /S /E
+xcopy "%wd%\changelog" "%kefir_ver%\" /H /Y /C /R /S /E
+
 
 echo ------------------------------------------------------------------------
 echo.
