@@ -20,6 +20,7 @@ set bootscrn=1
 set theme=0
 set caffeine=0
 set kefir_ver=F:\git\site\switch\_includes\inc\kefir
+set site_files=F:\git\site\switch\files
 
 mkdir %wd%\build
 mkdir %wd%\build\atmo
@@ -136,6 +137,7 @@ REM "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.
 REM "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\sxos.zip E:\Switch\_kefir\build\sxos\*
 
 xcopy "%kefir_ver%\*" "%wd%\" /H /Y /C /R /S /E
+xcopy "%kefir_ver%\*" "%site_files%\" /H /Y /C /R /S /E
 
 echo ------------------------------------------------------------------------
 echo.
