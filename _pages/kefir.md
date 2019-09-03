@@ -9,7 +9,7 @@ author_profile: true
 
 В контексте этого руководства - сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Подробнее про кефир [здесь](https://vk.com/@switchopen-sostav-kefirachast-pervaya-obschaya-informaciya-o-sostave){:target="_blank"}
 
-![bootlogo (1)](https://user-images.githubusercontent.com/18294541/63849040-d27b8380-c999-11e9-8329-945c9f17ef0f.png){: width="70%"}
+![kefir](/images/kefir.png){: width="70%"}
 {: .text-center}
 
 ### **ВНИМАНИЕ!**
