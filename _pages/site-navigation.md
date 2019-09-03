@@ -39,3 +39,8 @@ author_profile: true
 * [Установка игр, DLC, обновлений с помощью Tinfoil, он же /hbg/shop](tinfoil){:target="_blank"}
 * [Часто задаваемые вопросы](faq){:target="_blank"}
 * [Эмуляция Amiibo с помощью модуля emuiibo](emuiibo){:target="_blank"}
+
+___
+
+[Закрыть страницу](javascript:window.close();)
+{: .notice--success}

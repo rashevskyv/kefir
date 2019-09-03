@@ -82,3 +82,8 @@ author_profile: true
 ### Ошибка 2155-8007 при подключении к серверам Nintendo
 
 Вам и не нужно к ним подключаться
+
+___
+
+[Закрыть страницу](javascript:window.close();)
+{: .notice--success}

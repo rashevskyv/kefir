@@ -40,6 +40,6 @@ author_profile: true
     {: .notice--info}
 
 ___
-	
-Вернитесь к [Началу](/){:target="_blank"}
+
+[Закрыть страницу](javascript:window.close();)
 {: .notice--success}
