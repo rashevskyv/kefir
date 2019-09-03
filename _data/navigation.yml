@@ -17,7 +17,9 @@ main:
     url: /troubleshooting
   - title: "Установка<br>игр"
     url: /games
-  - title: "Запуск HBL"
+  - title: "Kefir"
+    url: /kefir
+  - title: "Запуск<br>HBL"
     url: /hbl
   - title: "Методы<br>взлома"
     url: /exploits
