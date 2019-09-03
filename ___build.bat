@@ -51,56 +51,7 @@ if exist "%sd%\titles" (RD /s /q "%sd%\titles")
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
-if exist "%sd%\atmosphere" (
-	attrib -A /S /D %sd%\atmosphere\*
-	attrib -A %sd%\atmosphere)
-if exist "%sd%\atmosphere\titles" (
-	attrib -A /S /D %sd%\atmosphere\titles*
-	attrib -A %sd%\atmosphere\titles)
-if exist "%sd%\sept" (
-	attrib -A /S /D %sd%\sept\*
-	attrib -A %sd%\sept)
-if exist "%sd%\bootloader" (
-	attrib -A /S /D %sd%\bootloader\*
-	attrib -A %sd%\bootloader)
-if exist "%sd%\config" (
-	attrib -A /S /D %sd%\config\*
-	attrib -A %sd%\config)
-if exist "%sd%\switch" (
-	attrib -A /S /D %sd%\switch\*
-	attrib -A %sd%\switch)
-if exist "%sd%\tinfoil" (
-	attrib -A /S /D %sd%\tinfoil\*
-	attrib -A %sd%\tinfoil)
-if exist "%sd%\games" (
-	attrib -A /S /D %sd%\games\*
-	attrib -A %sd%\games)
-if exist "%sd%\themes" (
-	attrib -A /S /D %sd%\themes\*
-	attrib -A %sd%\themes)
-if exist "%sd%\emuiibo" (
-	attrib -A /S /D %sd%\emuiibo\*
-	attrib -A %sd%\emuiibo)
-if exist "%sd%\_backup" (
-	attrib -A /S /D %sd%\_backup\*
-	attrib -A %sd%\_backup)
-if exist "%sd%\hbmenu.nro" (attrib -A %sd%\hbmenu.nro)
-if exist "%sd%\keys.dat" (attrib -A %sd%\keys.dat)
-if exist "%sd%\boot.dat" (attrib -A %sd%\boot.dat)
-if exist "%sd%\payload.bin" (attrib -A %sd%\payload.bin)
-if exist "%sd%\sxos" (
-	attrib -A /S /D %sd%\sxos\*
-	attrib -A %sd%\sxos)
-if exist "%sd%\sxos" (
-	attrib -A /S /D %sd%\pegascape\*
-	attrib -A %sd%\pegascape)
-if exist "%sd%\switch\fakenews-injector" (
-	attrib -A /S /D %sd%\switch\fakenews-injector\*
-	attrib -A %sd%\switch\fakenews-injector)
-    
-    
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.zip E:\Switch\_kefir\build\atmo\*
-    
+  
 COLOR 0F
 
 
@@ -180,6 +131,7 @@ if exist "%sd%\switch\fakenews-injector" (
 	attrib -A /S /D %sd%\switch\fakenews-injector\*
 	attrib -A %sd%\switch\fakenews-injector)    
     
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\atmo.zip E:\Switch\_kefir\build\atmo\*
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw E:\Switch\_kefir\sxos.zip E:\Switch\_kefir\build\sxos\*
 
 echo ------------------------------------------------------------------------
