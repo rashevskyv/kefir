@@ -10,6 +10,5 @@
 "serialized_out_addrinfos_max_size": 4096,
 "serialized_out_hostent_max_size": 512,
 "bypass_nsd": 0,
-"dns_timeout": 0,
-"priority": 10
+"dns_timeout": 0
 }

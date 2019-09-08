@@ -718,7 +718,16 @@ if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_i
 if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
 if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\titles\  /Y /S /E /H /R /D)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
+
+if exist "%sd%:\sxos\emunand" (
+if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
+move /Y %sd%:\sxos\emunand\* %sd%:\sxos_\emunand
 if exist "%sd%:\sxos" (RD /s /q "%sd%:\sxos")
+if not exist "%sd%:\sxos\" (mkdir %sd%:\sxos\emunand)
+if exist "%sd%:\sxos_\emunand" (move /Y %sd%:\sxos_\emunand\* %sd%:\sxos\emunand)
+if exist "%sd%:\sxos_" (RD /s /q "%sd%:\sxos_")
+)
+
 if exist "%sd%:\switch\sx" (RD /s /q "%sd%:\switch\sx")
 if exist "%sd%:\switch\themes" (RD /s /q "%sd%:\switch\themes")
 if exist "%sd%:\titles" (xcopy "%wd%\titles\*" "%sd%:\atmosphere\titles" /H /Y /C /R /S /E)
