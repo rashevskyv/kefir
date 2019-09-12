@@ -69,7 +69,7 @@ author_profile: true
 	* Если вы не можете перейти в папку (папка отображается как файл), значит ваша папка имеет неверные атрибуты (чаще всего архивный). {% include /inc/fixatributes.txt %}, после чего продолжайте прошивку
 1. Выберите "**{% include /vars/sys_version.txt %} (exFAT)**"
 1. Дождитесь окончания обработки прошивки и нажмите "**Select firmware**"
-	* **ВНИМАНИЕ!** Если вы прошиваетесь через [Caffeine](caffeine){:target="_blank"} **обязательно** убедитесь, что вы находитесь в EMUNAND? так же проверьте, чтобы в поле "**Target firmware**" стояла версия устанавливаемой прошивки - "**{% include /vars/sys_version.txt %} (exFAT)**", а так же, что перед строкой "**Prevent fuse burning (enable AutoRCM)**" стоит **крестик**! 
+	* **ВНИМАНИЕ!** Если вы прошиваетесь через [Caffeine](caffeine){:target="_blank"} **обязательно** убедитесь, что вы находитесь в EMUNAND, так же проверьте, чтобы в поле "**Target firmware**" стояла версия устанавливаемой прошивки - "**{% include /vars/sys_version.txt %} (exFAT)**", а так же, что перед строкой "**Prevent fuse burning (enable AutoRCM)**" стоит **крестик**! 
 
 	![]({{ base_path }}/images/screenshots/choi_caff.png) 
 	{: .text-center}
