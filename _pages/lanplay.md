@@ -11,11 +11,12 @@ author_profile: true
 
 Выход нашли в локальной сетевой игре. Некоторые игры поддерживают LAN-play, что позволяет нам перенаправить данные, которые посылает консоль на ПК и через специальный сервер направить их другим приставкам. Все подключенные к одному серверу консоли будут считать, что они соединены напрямую. И да, этот метод даст возможность поиграть даже тем, кого забанили.
 
-Самый существенный минус этого способа - это необходимость договариваться заранее со всеми участниками игры. В русскоязычном сегменте это делается в Discord на канале [Switch Open | Пиратский онлайн](https://discordapp.com/invite/By4JA4C){:target="_blank"}. С игроками со всего мира можно пообщаться [здесь](https://discordapp.com/invite/KAFHaWj){:target="_blank"}. Договоритесь с другими игроками во что будете играть, и на каком сервере.
+Самый существенный минус этого способа - это необходимость договариваться заранее со всеми участниками игры. В русскоязычном сегменте это делается в Discord на канале [Switch Open - Пиратский онлайн](https://discordapp.com/invite/By4JA4C){:target="_blank"}. С игроками со всего мира можно пообщаться [здесь](https://discordapp.com/invite/KAFHaWj){:target="_blank"}. Договоритесь с другими игроками во что будете играть, и на каком сервере.
 
 ## Что понадобится
 
-* Свежая версия {% include abbr/kefir_addr.txt %}* Свежая версия [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm/releases/latest){:target="_blank"} (ldn_mitm_vx.x.x.zip)
+* Свежая версия {% include abbr/kefir_addr.txt %}
+* Свежая версия [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm/releases/latest){:target="_blank"} (ldn_mitm_vx.x.x.zip)
 	* Рекомендуется качать из [hb appstore](https://www.switchbru.com/appstore/#/app/ldm_mitm){:target="_blank"} (раздел tools, написано с ошибкой - ldm mitm)
 * Свежая версия программы [Lan-Play-Server-Manager](https://github.com/Urferu/Lan-Play-Server-Manager/releases/latest){:target="_blank"}
 	* Пользователи MacOS и Linux могут воспользоваться программой [lan-play-GUI](https://gbatemp.net/threads/lan-play-gui-a-graphical-interface-for-lan-play-updated-v1-0-0.525900/){:target="_blank"}
