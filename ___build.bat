@@ -22,6 +22,9 @@ set caffeine=0
 set site_inc=F:\git\site\switch\_includes\inc\kefir
 set site_files=F:\git\site\switch\files
 
+xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
+xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
+
 mkdir %bd%
 mkdir %bd%\atmo
 

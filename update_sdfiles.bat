@@ -32,7 +32,6 @@ ECHO.
 ECHO    For enter Homebrew Menu on new Atmosphere version hold R button while start any game
 ECHO    Choose clean install on options if any errors on launch CFW
 ECHO    Choose Caffeine in an options if you use it
-ECHO    If your OFW version is 8.x.x, you need procide to options and choose it
 ECHO.
 ECHO    Press J and Enter if you has read this information and ready to proceed to installation
 ECHO.
