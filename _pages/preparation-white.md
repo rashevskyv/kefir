@@ -26,6 +26,7 @@ author_profile: true
 	* **ВНИМАНИЕ!!! НИКОГДА НЕ ОБНОВЛЯЙТЕ ПРОШИВКУ в {% include abbr/sysnand.txt abbr="SysNAND" %}, если используете {% include abbr/caffeine.txt abbr="Caffeine" %}**. Сделайте себе копию SysNAND в отдельном emuMMC и обновляйте его там, его же используйте для запуска официальной прошивки!
 	* Всегда загружайте прошивку через hekate!
 	* Это может быть обычный {% include abbr/sysnand.txt abbr="SysNAND" %}, в случае работы с {% include abbr/fusegele.txt abbr="Fusée Gelée" %}, или ещё один EmuNAND, в случае работы с {% include abbr/caffeine.txt abbr="Caffeine" %}.
+1. [Использование уже прошитой приставки](usage)
 	
 Если ваша оригинальная прошивка имела версию ниже, чем 4.0.1, то, вероятнее всего, у вас включен NoGC-патч, из-за которого на прошивке может не работать слот для картриджей. Отключите NoGC через настройки hekate 
 

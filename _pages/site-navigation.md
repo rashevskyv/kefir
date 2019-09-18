@@ -15,6 +15,7 @@ author_profile: true
 * [Запуск игр в SX OS](sxos-games){:target="_blank"}
 * [Запуск пейлоадера через Caffeine](caffeine){:target="_blank"}
 * [Запуск пейлоадера через Fusée Gelée](fusee-gelee){:target="_blank"}
+* [Инструкция по использованию уже прошитой приставки](usage){:target="_blank"}
 * [Инструкция по прошивке донгла R4S Dongle](r4){:target="_blank"}
 * [Инструкция по прошивке донгла RCMLoader](rcmloader){:target="_blank"}
 * [Использование FTP](ftp){:target="_blank"}

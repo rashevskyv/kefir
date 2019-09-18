@@ -35,6 +35,8 @@ main:
     url: http://customfw.xyz/contacts
 
 addons:
+  - title: "Инструкция по использованию уже прошитой приставкой"
+    url: /usage
   - title: "FAQ"
     url: /faq
   - title: "Блокировка серверов Nintendo, защита от бана"
