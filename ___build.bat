@@ -3,7 +3,6 @@ chcp 866 >nul 2>&1
 
 COLOR 0F
 
-
 set reldir=E:\Switch\_kefir\release
 set wd=E:\Switch\_kefir
 set bd=%wd%\build
@@ -21,6 +20,12 @@ set theme=0
 set caffeine=0
 set site_inc=F:\git\site\switch\_includes\inc\kefir
 set site_files=F:\git\site\switch\files
+
+xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
+xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
+xcopy "%wd%\version" "%wd%\base\switch\kefirupdater" /H /Y /C /R
+xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R
+xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
@@ -136,14 +141,13 @@ if exist "%sd%\switch\fakenews-injector" (
 	attrib -A /S /D %sd%\switch\fakenews-injector\*
 	attrib -A %sd%\switch\fakenews-injector)    
     
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd %reldir%\_kefir.7z %wd%\*
+if exist "%bd%" (
+	attrib -A /S /D %bd%e\*
+	attrib -A %bd%)
+    
+"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\atmo.zip %bd%\atmo\*
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\sxos.zip %bd%\sxos\*
-
-xcopy "%reldir%\version" "%site_inc%\" /H /Y /C /R
-xcopy "%reldir%\version" "%site_files%\" /H /Y /C /R
-xcopy "%reldir%\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%reldir%\changelog" "%site_files%\" /H /Y /C /R
 
 
 echo ------------------------------------------------------------------------
