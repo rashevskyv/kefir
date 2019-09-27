@@ -7,6 +7,7 @@ set reldir=E:\Switch\_kefir\release
 set wd=E:\Switch\_kefir
 set bd=%wd%\build
 set sd=%bd%\atmo
+set site=F:\git\site\switch
 if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
 if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
@@ -158,6 +159,12 @@ echo ------------------------------------------------------------------------
 echo.
 
 if exist "%bd%" (RD /s /q "%bd%")
+
+git add .
+git commit -m "%date:~3,8%"
+git push
+
+chdir /d %site%
 
 git add .
 git commit -m "%date:~3,8%"
