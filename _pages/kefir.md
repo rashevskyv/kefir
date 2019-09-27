@@ -23,7 +23,7 @@ ____
 
 ### Состав kefir 
     
-* [Atmosphere 0.9.4](atmo){:target="_blank"} или [SXOS 2.8 beta](sxos){:target="_blank"} 
+* Atmosphere 0.9.4 или SXOS 2.8 beta
 * Поддерживает запуск через [Fusée Gelée](fusee-gelee){:target="_blank"} или [Caffeine](caffeine){:target="_blank"}
 * [hekate 5](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} и [ACID-патчи для неё](https://github.com/Joonie86/hekate/releases/latest){:target="_blank"}
 * Homebrew 
