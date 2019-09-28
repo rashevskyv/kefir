@@ -7,7 +7,7 @@ header:
   overlay_image: images/home-page-feature.jpg
   overlay_filter: 0.5
   caption:
-excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 27 сентября'
+excerpt: 'Полное руководство по прошивке Nintendo Switch<br />**Последнее изменение:** 28 сентября'
 ---
 
 {% include toc title="Разделы" %}
@@ -146,6 +146,8 @@ excerpt: 'Полное руководство по прошивке Nintendo Swi
 + Карта памяти с не менее чем 4Гб объёма
 	+ Желательно не менее 64Гб. 4 - это минимум
 	+ Если вы планируете устанавливать с неё игры, или делать на неё резервную копию, карта должна быть не менее 32Гб
+    + Прежде чем начать, рекомендуется проверить свою SD-карту на ошибки с помощью [H2testw (Windows)](http://3ds.customfw.xyz/h2testw-windows){:target="_blank"}, [F3 (Linux)](http://3ds.customfw.xyz/f3-linux){:target="_blank"}, или [F3X (Mac)](http://3ds.customfw.xyz/f3x-mac){:target="_blank"}!
+
 + Возможность залить на карту памяти файлы прошивки (через телефон, картридер, и т. п.)
 + [Замыкатель](fusee-gelee#%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D1%82%D0%B5%D0%BB%D1%8C){:target="_blank"}
 + USB type C кабель для подключения Switch к вашему {% include abbr/host.txt abbr="хосту" %} (это может быть как ПК, так и мобильный телефон)

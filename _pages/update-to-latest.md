@@ -5,8 +5,8 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
-В данный момент последней прошивкой является {% include /vars/sys_version.txt %}, однако, поскольку она вышла не так давно, не рекомендуется пока на неё обновляться. Если же вы уже на ней и вам нужно установить драйвера exfat, вы можете скачать её по [этой](https://drive.google.com/file/d/1t1m2JadUMeNK9rwoy_SgiJm78dl-5Ens){:target="_blank"} ссылке и установить по инструкции ниже!
-{: .notice--warning}
+<!--В данный момент последней прошивкой является {% include /vars/sys_version.txt %}, однако, поскольку она вышла не так давно, не рекомендуется пока на неё обновляться. Если же вы уже на ней и вам нужно установить драйвера exfat, вы можете скачать её по [этой](https://drive.google.com/file/d/1t1m2JadUMeNK9rwoy_SgiJm78dl-5Ens){:target="_blank"} ссылке и установить по инструкции ниже!
+{: .notice--warning}-->
 
 # Важная информация
 
@@ -21,18 +21,21 @@ author_profile: true
 
 **В данный момент количество сожжённых предохранителей не важно для кастомных прошивок. Вы сможете откатиться на любую прошивку при условии использования загрузчика hekate.** Официальная же прошивка просто не запуститься, если версия установленной прошивки ниже, чем на то указывают предохранители. Если выше, то OFW сожжёт предохранители, чтобы они соответствовали запущенной версии прошивки 
 
-По этой инструкции можно менять версию своего ПО на любую, а не только на {% include /vars/update_version.txt %}. Другие версии ПО Switch можно найти [здесь](https://darthsternie.net/index.php/switch-firmwares/){:target="_blank"} 
+По этой инструкции можно менять версию своего ПО на любую, а не только на {% include /vars/update_version.txt %}. 
+
+Другие версии ПО Switch можно найти [здесь](https://darthsternie.net/index.php/switch-firmwares/){:target="_blank"} 
+{: .notice--info}
 
 # Что понадобится
 
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [{% include abbr/cfw.txt abbr="кастомную прошивку" %}](cfw){:target="_blank"}
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
-	* [magnet](magnet:?xt=urn:btih:C9A180DC1BAC1093BE3B2EC4DDDC599E8F7AD98D){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/iKnZNBr1WgOZBw){:target="_blank"}
-	* [GD](https://drive.google.com/file/d/1xoB896cBnBECd9Th0AXlgh8Anlq2V0Xy/view?usp=sharing){:target="_blank"}
-	* [MEGA](https://mega.nz/#!glFyCCYR!uVSsoGMLBXfShJ8onvQbxSb5g6j9vKeZf2Umg3qO8gw){:target="_blank"}
-	* [FEX](https://fex.net/s/n71n3ka){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:306E15BDC7F3A342E96983BE69AF7FFE9FA5A520&dn=9.0.0.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/Kf1jqP1ABiI4LA){:target="_blank"}
+	* [GD](https://drive.google.com/open?id=1Yop9gIYucma0Tbq4FgBeFF_xqPBtVQUH){:target="_blank"}
+	* [MEGA](https://mega.nz/#!NwEjAYpA!gsfqV9JduGDL4iTzHRpl-NIzixVR2jGPq5XNA37RDYc){:target="_blank"}
+	* [FEX](https://fex.net/s/9kkzbcr){:target="_blank"}
 * Карта памяти 
 
 # Инструкция

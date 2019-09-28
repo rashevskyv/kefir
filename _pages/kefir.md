@@ -13,7 +13,6 @@ author_profile: true
 {: .text-center}
 
 ### **ВНИМАНИЕ!**
-  * SXOS в данный момент не работает на прошивке 9.0.0!
   * Ручной запуск кастома теперь производится через `hekate -> Launch -> %ваш кастом%`
   * Перезагрузка в hekate происходит прямо из HOS через обычное меню перезагрузки/ Просто зажмите (VOL-) во время сплешскрина кефира
   * В hekate можно вынуть карту из приставки, а затем, вставив обратно, запустить прошивку через `hekate -> Launch -> Atmosphere`
@@ -23,7 +22,7 @@ ____
 
 ### Состав kefir 
     
-* Atmosphere 0.9.4 или SXOS 2.8 beta
+* Atmosphere 0.9.4 или SXOS 2.9 beta
 * Поддерживает запуск через [Fusée Gelée](fusee-gelee){:target="_blank"} или [Caffeine](caffeine){:target="_blank"}
 * [hekate 5](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} и [ACID-патчи для неё](https://github.com/Joonie86/hekate/releases/latest){:target="_blank"}
 * Homebrew 
