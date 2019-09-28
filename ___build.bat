@@ -7,7 +7,8 @@ set reldir=E:\Switch\_kefir\release
 set wd=E:\Switch\_kefir
 set bd=%wd%\build
 set sd=%bd%\atmo
-set ps=C:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
+set img=F:\VK\kefir
+set site=F:\git\site\switch
 if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
 if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
@@ -19,8 +20,9 @@ set lang=0
 set bootscrn=1
 set theme=0
 set caffeine=0
-set site_inc=F:\git\site\switch\_includes\inc\kefir
-set site_files=F:\git\site\switch\files
+set site_inc=%site%\_includes\inc\kefir
+set site_files=%site%\files
+set site_img=%site%\images
 
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
@@ -30,6 +32,9 @@ xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
+xcopy "%wd%\base\switch\tinfoil\locations.conf" "%wd%\sxos\switch\sx\locations.conf" /H /Y /C /R
+xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
+xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo.bmp" /H /Y /C /R
 
 mkdir %bd%
 mkdir %bd%\atmo
@@ -164,7 +169,13 @@ git add .
 git commit -m "%date:~3,8%"
 git push
 
-powershell -file %ps%
+chdir /d %site%
+
+git add .
+git commit -m "%date:~3,8%"
+git push
+
+rem powershell -file %ps%
 
 :END
 if %lang%==1 (
