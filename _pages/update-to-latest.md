@@ -8,7 +8,7 @@ author_profile: true
 <!--В данный момент последней прошивкой является {% include /vars/sys_version.txt %}, однако, поскольку она вышла не так давно, не рекомендуется пока на неё обновляться. Если же вы уже на ней и вам нужно установить драйвера exfat, вы можете скачать её по [этой](https://drive.google.com/file/d/1t1m2JadUMeNK9rwoy_SgiJm78dl-5Ens){:target="_blank"} ссылке и установить по инструкции ниже!
 {: .notice--warning}-->
 
-**НЕ ОБНОВЛЯЙТЕСЬ ДО ПРОШИВКИ 9.0 НА SXOS 2.9b! ИНАЧЕ ВЫ РИСКУЕТЕ ПОЛУЧИТЬ БРИК! Установите [предыдущую версию kefir](https://github.com/rashevskyv/switch/releases/tag/kefir312){:target="_blank"}, содержащую SXOS 2.8b, после чего обновляйте прошивку! **
+**НЕ ОБНОВЛЯЙТЕСЬ ДО ПРОШИВКИ 9.0 НА SXOS 2.9b! ИНАЧЕ ВЫ РИСКУЕТЕ ПОЛУЧИТЬ БРИК! Установите [предыдущую версию kefir](https://github.com/rashevskyv/switch/releases/tag/kefir312){:target="_blank"}, содержащую SXOS 2.8b, после чего обновляйте прошивку!**
 {: .notice--danger}
 
 ## Важная информация
