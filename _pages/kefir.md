@@ -31,7 +31,6 @@ ____
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
   * [pplay 2.1](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
   * [{% include /inc/tinfoil.txt %}](https://discord.io/homebrew){:target="_blank"} - программа, позволяющая [качать игры](tinfoil){:target="_blank"} для приставки прямо из сети 
-  * [incognito fork](https://github.com/Kronos2308/incognito/releases/latest){:target="_blank"} - программа, [удаляющая серийный номер приставки](block-update){:target="_blank"}, в следствии чего приставка теряет возможность доступа к серверам Nintendo
   * [ChoiDujourNX 1.0.2](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
   * [nxmtp](https://github.com/liuervehc/nxmtp/releases/latest){:target="_blank"} - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу 
   * [NXThemes Installer 2.1.0](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
