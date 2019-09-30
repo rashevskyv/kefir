@@ -9,6 +9,7 @@ set bd=%wd%\build
 set sd=%bd%\atmo
 set img=F:\VK\kefir
 set site=F:\git\site\switch
+set ps=C:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
 if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
 if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
@@ -146,9 +147,8 @@ if exist "%sd%\sxos" (
 if exist "%sd%\switch\fakenews-injector" (
 	attrib -A /S /D %sd%\switch\fakenews-injector\*
 	attrib -A %sd%\switch\fakenews-injector)    
-    
 if exist "%bd%" (
-	attrib -A /S /D %bd%e\*
+	attrib -A /S /D %bd%\*
 	attrib -A %bd%)
     
 "C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
