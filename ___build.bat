@@ -169,13 +169,13 @@ git add .
 git commit -m "%date:~3,8%"
 git push
 
-chdir /d %site%
+REM chdir /d %site%
 
-git add .
-git commit -m "%date:~3,8%"
-git push
+REM git add .
+REM git commit -m "%date:~3,8%"
+REM git push
 
-rem powershell -file %ps%
+powershell -file %ps%
 
 :END
 if %lang%==1 (
