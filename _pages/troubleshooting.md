@@ -66,12 +66,11 @@ author_profile: true
 
 {% endspoiler %}
 
-
 {% spoiler При запуске прошивки получаю ошибку "Fatal Error: [NXBOOT]" %}
 **О:** Обновите {% include abbr/kefir_addr.txt %}
 {% endspoiler %}
 
-{% spoiler В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть %}
+{% spoiler Проблемы после копирования файлов на карту на маке / В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть %}
 **О:** {% include /inc/fixatributes.txt %}
 
 Не меняйте атрибуты папки Nintendo!
