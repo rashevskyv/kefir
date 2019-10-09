@@ -76,6 +76,8 @@ author_profile: true
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}
 
+Если вы пользователь MacOS и вам не помог способ выше, выполните следующую команду: `sudo chflags -R arch /Volumes/<name of SD card>`
+
 {% endspoiler %}
 
 {% spoiler Возникают ошибки при установке NSP-файлов  %}
