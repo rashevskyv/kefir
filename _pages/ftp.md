@@ -32,5 +32,5 @@ author_profile: true
 
 ___
 
-# Следующий шаг: [Запуск взлома](start-hen) 
+# Следующий шаг: [Запуск взлома](exploits) 
 {: .notice--success}
