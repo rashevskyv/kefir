@@ -134,7 +134,7 @@ author_profile: true
 {% endspoiler %}
 
 {% spoiler Во время установки игр приставка гасит экран. Что делать? %}
-**О:** Используйте [DBI](dbi){:target="_blank"} для установки
+**О:** Используйте [DBI](games){:target="_blank"} для установки
 
 {% endspoiler %}
 

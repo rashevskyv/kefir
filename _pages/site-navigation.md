@@ -36,8 +36,6 @@ author_profile: true
 * [Существующие методы взлома](exploits){:target="_blank"}
 * [Установка EmuNAND](emunand){:target="_blank"}
 * [Установка игр, DLC, обновлений](games){:target="_blank"}
-* [Установка игр, DLC, обновлений через DBI](dbi){:target="_blank"}
-* [Установка игр, DLC, обновлений с помощью Tinfoil, он же /hbg/shop](tinfoil){:target="_blank"}
 * [Часто задаваемые вопросы](faq){:target="_blank"}
 * [Эмуляция Amiibo с помощью модуля emuiibo](emuiibo){:target="_blank"}
 

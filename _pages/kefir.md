@@ -34,7 +34,7 @@ ____
   * [ChoiDujourNX 1.0.2](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
   * [nxmtp](https://github.com/liuervehc/nxmtp/releases/latest){:target="_blank"} - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу 
   * [NXThemes Installer 2.1.0](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
-  * DBI-19 for NSP-installing - программа для [установки игр по USB](dbi#установка-приложений-в-формате-nsp-по-usb){:target="_blank"} или [с карты памяти](dbi#установка-приложений-в-формате-nsp-с-карты-памяти){:target="_blank"}
+  * DBI-19 for NSP-installing - программа для [установки игр](games){:target="_blank"} по USB или с карты памяти
   * [SXInstaller 1.5.2](https://sx.xecuter.com/){:target="_blank"} (SXOS only) - аналог tinfoil для SXOS
 
 ____
