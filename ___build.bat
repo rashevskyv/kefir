@@ -35,6 +35,7 @@ xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
 xcopy "%wd%\base\switch\tinfoil\locations.conf" "%wd%\sxos\switch\sx\locations.conf" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
+xcopy "%img%\bootlogo (1).png" "%wd%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo.bmp" /H /Y /C /R
 
 mkdir %bd%
