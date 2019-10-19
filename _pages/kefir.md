@@ -22,20 +22,22 @@ ____
 
 ### Состав kefir 
     
-* Atmosphere 0.9.4 или SXOS 2.9 beta
+* Atmosphere или SXOS
 * Поддерживает запуск через [Fusée Gelée](fusee-gelee){:target="_blank"} или [Caffeine](caffeine){:target="_blank"}
-* [hekate 5](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} и [ACID-патчи для неё](https://github.com/Joonie86/hekate/releases/latest){:target="_blank"}
+* [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} и [ACID-патчи для неё](https://github.com/Joonie86/hekate/releases/latest){:target="_blank"}
 * Homebrew 
-  * [Kefir Updater 0.3.1](https://github.com/Povstalez/Kefir-Updater/releases/latest){:target="_blank"} - программа для обновления kefir через интернет
-  * [Checkpoint 3.7.2](https://github.com/FlagBrew/Checkpoint/releases/latest){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](checkpoint){:target="_blank"}
+  * [Kefir Updater](https://github.com/Povstalez/Kefir-Updater/releases/latest){:target="_blank"} - программа для обновления kefir через интернет
+  * [mercury](https://github.com/team-mercure/mercury/releases){:target="_blank"} - проприетарный файловый менеджер от blawar. Необходим для работы tinfoil
+  * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest){:target="_blank"} - файловый менеджер
+  * [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](checkpoint){:target="_blank"}
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
-  * [pplay 2.1](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
+  * [pplay](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
   * [{% include /inc/tinfoil.txt %}](https://discord.io/homebrew){:target="_blank"} - программа, позволяющая [качать игры](tinfoil){:target="_blank"} для приставки прямо из сети 
-  * [ChoiDujourNX 1.0.2](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
+  * [ChoiDujourNX ](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
   * [nxmtp](https://github.com/liuervehc/nxmtp/releases/latest){:target="_blank"} - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу 
-  * [NXThemes Installer 2.1.0](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
-  * DBI-19 for NSP-installing - программа для [установки игр](games){:target="_blank"} по USB или с карты памяти
-  * [SXInstaller 1.5.2](https://sx.xecuter.com/){:target="_blank"} (SXOS only) - аналог tinfoil для SXOS
+  * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
+  * DBI - программа для [установки игр](games){:target="_blank"} по USB или с карты памяти
+  * [SXInstaller](https://sx.xecuter.com/){:target="_blank"} (SXOS only) - аналог tinfoil для SXOS
 
 ____
 
@@ -82,26 +84,7 @@ ____
   * `0100000000001000`
   * `0100000000000352`
   * `4200000000000010`
-1. Удалите из корня вашей карты памяти следующие папки и файлы (если они есть): 
-   + `ReiNX` 
-   + `RajNX` 
-   + `sxos` 
-   + `bootloader\ini\sxos.ini` 
-   + `bootloader\ini\atmosphere.ini` 
-   + `bootloader\ini\reinx.ini` 
-   + `bootloader\ini\rajnx.ini` 
-   + `bootloader\payloads\sxos.bin` 
-   + `bootloader\payloads\reinx.bin` 
-   + `bootloader\payloads\rajnx.bin` 
-   + `bootloader\payloads\payload.bin` 
-   + `bootloader\payloads\fusee-primary.bin` 
-   + `atmosphere` 
-   + `config` 
-   + `tinfoil` 
-   + `rajnx_ipl.ini`
-   + `switch\n1dus.nro`
-   + `switch\ftpd.nro`
-   + `switch\tinfoil.nro`
+1. Удалите из корня вашей карты памяти все папки, кроме папки `titles` и `Nintendo`, если они там есть
 
 ### Для установки Atmosphere
 
