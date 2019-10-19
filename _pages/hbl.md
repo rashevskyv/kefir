@@ -29,9 +29,11 @@ Homebrew Launcher (hbl) - среда для запуска самописных 
 ## Часть I - Установка форвардера HBL 
 
 1. Запустите Альбомы, удерживая клавишу (R)
+
     ![]({{ base_path }}/images/screenshots/gallery.jpg) 
     {: .text-center}
     {: .notice--info}
+    
 1. Запустите DBI и установите `hbmenu.nsp` по [этой](games){:target="_blank"} инструкции
 1. После окончания установки, выйдите в главное меню нажатием кнопки (HOME)
 
