@@ -187,5 +187,4 @@ if %lang%==1 (
 	echo Press any button for exit
 )
 
-pause>nul 2>&1
 exit
