@@ -1,0 +1,52 @@
+{
+	"color": "FFFFFFFF",
+	"logo": "sdmc:/switch/tinfoil/themes/hbgremake/logo.png",
+	"background": {
+		"color": "00000000",
+		"image": "sdmc:/switch/tinfoil/themes/hbgremake/bg.jpg"
+	},
+
+	"selection": {
+		"color": "339EDBFF",
+		"background": {
+			"color": "0000007F"
+		},
+		"border": {
+			"color": "339EDBFF",
+			"width": 3
+		}
+	},
+	"menu": {
+		"selection": {
+			"color": "339EDBFF",
+			"background": {
+				"color": "FFFFFFFF"
+			},
+			"border": {
+				"color": "339EDBFF",
+				"width": 3
+			}
+		},
+		"background": {
+			"color":  "00000000"
+		}
+	},
+	"border": {
+		"color": "339EDBFF",
+		"width": 0
+	},
+	"progressBar": {
+		"color": "339EDBFF",
+		"background": {
+			"color": "134983FF"
+		},
+		"width": 1
+	},
+	"scrollBar": {
+		"color": "339EDBFF",
+		"background": {
+			"color": "00000000"
+		},
+		"width": 1
+	}
+}
