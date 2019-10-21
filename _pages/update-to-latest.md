@@ -80,7 +80,8 @@ author_profile: true
 	![]({{ base_path }}/images/screenshots/choi_caff.png) 
 	{: .text-center}
 	{: .notice--warning}
-1. нажмите "**Start installation**"
+    
+1. Нажмите "**Start installation**"
 
 1. Дождитесь окончания распаковки прошивки и нажмите "**Start installation**"
 	* Если не получается установить прошивку, например, при попытке установить драйвера exFAT на прошивку с таким же номером версии, установите прошивку версией ниже, а затем нужную. Например при установке драйверов на прошивке 8.1.0 вы вероятнее всего получите ошибку, в таком случае следует установить [прошивку 7.1.0](https://darthsternie.net/index.php/switch-firmwares/){:target="_blank"} , а уже сверху на неё {% include /vars/update_version.txt %} (exFAT)
