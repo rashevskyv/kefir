@@ -34,9 +34,9 @@ author_profile: true
 1. Верните карту памяти в приставку
 1. Вставьте замыкатель вместо правого джойкона
 
-![](/images/dongle/rcmloader_jig.png)
-{: .text-center}
-{: .notice--info}
+    ![](/images/dongle/rcmloader_jig.png)
+    {: .text-center}
+    {: .notice--info}
 
 1. Переключите {% include abbr/dongle.txt abbr="донгл" %} на голубой свет диода, с помощью длинного нажатия на кнопку (+)
 	* Достаточно выставить единожды
@@ -49,5 +49,5 @@ ___
 ## [Запуск CFW](cfw)
 {: .notice--success}
 
-## [Запуск любого пейлоада через {% include abbr/dongle.txt abbr="донгл" %}](fusee-gelee#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D0%B4%D0%BE%D0%BD%D0%B3%D0%BB)
+## [Запуск любого пейлоада через донгл](fusee-gelee#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D0%B4%D0%BE%D0%BD%D0%B3%D0%BB)
 {: .notice--success}
