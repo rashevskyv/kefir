@@ -607,6 +607,8 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 if exist "%sd%:\switch\fakenews-injector\fakenews-injector.nro" (del "%sd%:\switch\fakenews-injector\fakenews-injector.nro")
 if exist "%sd%:\switch\fakenews-injector.nro" (del "%sd%:\switch\fakenews-injector.nro")
 if exist "%sd%:\switch\gag-order.nro" (del "%sd%:\switch\gag-order.nro")
+if exist "%sd%:\games\hbgShop_forwarder_classic.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.nsp")
+if exist "%sd%:\games\hbgShop_forwarder_dark_v3.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 
 :check_fw
