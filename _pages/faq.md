@@ -151,6 +151,11 @@ author_profile: true
 
 {% endspoiler %}
 
+{% spoiler Как перенести EmuNAND на другую карту %}
+Если EmuNAND сделан на отдельном разделе, то следует воспользоваться программой [EmuTool](https://gbatemp.net/threads/emutool-move-partition-emu-on-another-sd-switch-emu-type-on-sxos-and-more.550756/){: target="blank_"}
+Если же EmuNAND создан в виде файлов, то он переносится простым копированием
+{% endspoiler %}
+
 {% spoiler Я включил в hekate автозагрузку прошивки, как мне теперь зайти в саму hekate? %}
 **О:** Нажмите (VOL-) во время появления сплешскрина прошивки
 
