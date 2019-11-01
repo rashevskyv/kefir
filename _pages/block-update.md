@@ -5,6 +5,14 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+{% spoiler Видеоинструкция %}
+
+{% include youtube.html id="gUGulsJzDKM" %}
+{: .text-center}
+{: .notice--info}
+
+{% endspoiler %}
+
 * **Плюсы**
     * Не блокирует доступ к серверам Nintendo, а блокирует возможность авторизации на них. То есть при общении с сервером Nintendo сервер попросту не будет воспринимать консоль как Switch 
     * Будет работать даже если Nintendo изменит способ авторизации, адреса серверов или мало ли ещё  что 
