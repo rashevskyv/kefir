@@ -14,29 +14,34 @@ if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
 if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
 if exist "%reldir%\_kefir.7z" (del "%reldir%\_kefir.7z")
-set clear=0
-set cfw=ATMOS
-set cfwname=Atmosphere
-set lang=0
-set bootscrn=1
-set theme=0
-set caffeine=0
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
-xcopy "%wd%\version" "%wd%\base\switch\kefirupdater" /H /Y /C /R
+rem xcopy "%wd%\version" "%wd%\base\switch\kefirupdater" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
+xcopy "F:\git\dev\kefirupdater\kefirupdater.nro" "%wd%\base\switch\kefirupdater\kefirupdater.nro" /H /Y /C /R
+rem xcopy "F:\git\dev\Atmosphere\stratosphere\ams_mitm\ams_mitm.kip" "%wd%\atmo\atmosphere\kips\ams_mitm.kip" /H /Y /C /R
 rem xcopy "%wd%\base\switch\tinfoil\locations.conf" "%wd%\sxos\switch\sx\locations.conf" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%wd%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo.bmp" /H /Y /C /R
+
+pause
+
+echo ------------------------------------------------------------------------
+echo.
+echo                                   ATMO
+echo.
+echo ------------------------------------------------------------------------
+echo.
+
 
 mkdir %bd%
 mkdir %bd%\atmo
@@ -70,34 +75,34 @@ if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injecto
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
   
-COLOR 0F
+echo ------------------------------------------------------------------------
+echo.
+echo                                   SXOS
+echo.
+echo ------------------------------------------------------------------------
+echo.
 
 
-set wd=E:\Switch\_kefir
-set bd=E:\Switch\_kefir\build
 set sd=%bd%\sxos
-set cfw=SXOS
-set cfwname=sxos
 
 mkdir %wd%\build\sxos
 
 xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
-:cfw_ATMOS
-xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
+:cfw_SXOS
 
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
-if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
-if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
-if exist "%sd%:\bootloader\hekate_ipl_misc.ini" (del "%sd%:\bootloader\hekate_ipl_misc.ini")
-if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
-if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_both.ini")
-if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (copy "%sd%:\bootloader\hekate_ipl_sx.ini" "%sd%:\bootloader\hekate_ipl.ini")
-if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
-if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
-if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
+if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
+if exist "%sd%\bootloader\hekate_ipl_atmo.ini" (del "%sd%\bootloader\hekate_ipl_atmo.ini")
+if exist "%sd%\bootloader\hekate_ipl_misc.ini" (del "%sd%\bootloader\hekate_ipl_misc.ini")
+if exist "%sd%\bootloader\hekate_ipl_hm.ini" (del "%sd%\bootloader\hekate_ipl_hm.ini")
+if exist "%sd%\bootloader\hekate_ipl_both.ini" (del "%sd%\bootloader\hekate_ipl_both.ini")
+if exist "%sd%\bootloader\hekate_ipl_sx.ini" (copy "%sd%\bootloader\hekate_ipl_sx.ini" "%sd%\bootloader\hekate_ipl.ini")
+if exist "%sd%\bootloader\hekate_ipl_sx.ini" (del "%sd%\bootloader\hekate_ipl_sx.ini")
+if exist "%sd%\atmosphere\exefs_patches" (RD /s /q "%sd%\atmosphere\exefs_patches")
+if exist "%sd%\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%\atmosphere\kip_patches\fs_patches")
 
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
@@ -151,11 +156,15 @@ if exist "%sd%\switch\fakenews-injector" (
 if exist "%bd%" (
 	attrib -A /S /D %bd%\*
 	attrib -A %bd%)
+if exist "%sd%:\switch\mercury" (
+	attrib +A %sd%:\switch\mercury)
+
     
 "C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\atmo.zip %bd%\atmo\*
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\sxos.zip %bd%\sxos\*
 
+REM pause
 
 echo ------------------------------------------------------------------------
 echo.

@@ -171,38 +171,6 @@ for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 if %cfwnum%==2 (goto opt)
 
 :nosx
-cls
-ECHO --------------------------------------------------------------------
-ECHO               ======          Options           =====
-ECHO --------------------------------------------------------------------
-if %lang%==1 (
-	ECHO --------------------------------------------------------------------
-	ECHO                 ======     Удалить тему?     =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  Нет
-	ECHO         2.  Да
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                          Q.  Выход
-) else (
-	ECHO --------------------------------------------------------------------
-	ECHO                      =====  Remove theme? =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  No
-	ECHO         2.  Yes
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                          Q.  Quit
-)
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (set theme=0)
-for %%A in ("2") do if "%st%"==%%A (set theme=1)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
 :caffeine
 cls
 ECHO --------------------------------------------------------------------
@@ -570,6 +538,12 @@ if exist "%sd%:\bootloader\patches.ini" (del "%sd%:\bootloader\patches.ini")
 if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
 if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 
+RD /s /q "%sd%:\_themebkp"
+if exist "%sd%:\atmosphere\titles\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
+if exist "%sd%:\atmosphere\titles\0100000000001000" (xcopy "%sd%:\atmosphere\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
+if exist "%sd%:\atmosphere\titles\0100000000001000" (RD /s /q "%sd%:\atmosphere\titles\0100000000001000")
+if exist "%sd%:\atmosphere\titles\0100000000000352" (RD /s /q "%sd%:\atmosphere\titles\0100000000000352")
+
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
 rem if exist "%sd%:\switch\EdiZon.nro" (del "%sd%:\switch\EdiZon.nro")
@@ -610,17 +584,8 @@ if exist "%sd%:\switch\fakenews-injector.nro" (del "%sd%:\switch\fakenews-inject
 if exist "%sd%:\switch\gag-order.nro" (del "%sd%:\switch\gag-order.nro")
 if exist "%sd%:\games\hbgShop_forwarder_classic.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.nsp")
 if exist "%sd%:\games\hbgShop_forwarder_dark_v3.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
+if exist "%sd%:\games\hbgShop_forwarder_dark_v4.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v4.nsp")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
-
-:check_fw
-if %theme%==1 (goto rem_theme) else (goto install_pack)
-
-:rem_theme
-if exist "%sd%:\atmosphere\titles\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
-if exist "%sd%:\atmosphere\titles\0100000000001000" (xcopy "%sd%:\atmosphere\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
-if exist "%sd%:\atmosphere\titles\0100000000001000" (RD /s /q "%sd%:\atmosphere\titles\0100000000001000")
-if exist "%sd%:\atmosphere\titles\0100000000000352" (RD /s /q "%sd%:\atmosphere\titles\0100000000000352")
-if exist "%sd%:\switch\NxThemesInstaller.nro" (del "%sd%:\switch\NxThemesInstaller.nro")
 
 
 :install_pack
@@ -814,6 +779,8 @@ if exist "%sd%:\config" (
 if exist "%sd%:\switch" (
 	attrib -A /S /D %sd%:\switch\*
 	attrib -A %sd%:\switch)
+if exist "%sd%:\switch\mercury" (
+	attrib +A %sd%:\switch\mercury)
 if exist "%sd%:\tinfoil" (
 	attrib -A /S /D %sd%:\tinfoil\*
 	attrib -A %sd%:\tinfoil)
