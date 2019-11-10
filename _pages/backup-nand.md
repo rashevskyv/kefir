@@ -95,7 +95,9 @@ author_profile: true
 	* Если после всех манипуляций диск так и не появился, выключите Switch, перезагрузите ПК, переустановите драйвера и по новой запустите пейлоад `memloader.bin` с помощью [Fusée Gelée](fusee-gelee){:target="_blank"}
 1. Запустите [HDD Raw Copy Tool](http://hddguru.com/software/HDD-Raw-Copy-Tool/HDDRawCopy1.10Portable.exe){:target="_blank"} от имени администратора
 1. Выберите "**LINUX UMS DISK 0**" и нажмите "**Continue**"
-1. Два раза кликните на надписи "**Double-click to open file**" и сохраните бекап с именем `rawnand.bin` и нажмите "**Continue**"
+1. Два раза кликните на надписи "**Double-click to open file**" и сохраните бекап с именем `rawnand`
+    * Обратите внимание на строку "**Тип файла**", убедитесь что там установлено `.img`
+1. Нажмите "**Continue**"
 1. Нажмите "**START**", чтобы начать резервное копирование
 1. Если всё прошло успешно, то дамп NAND появится в директории, которую вы указали. Сохраните его в надёжном месте!
 {% endspoiler %}
