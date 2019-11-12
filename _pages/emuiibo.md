@@ -5,7 +5,9 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
-Эмуляцию Amiibo поддерживают **только** Atmosphere и ReiNX! 
+https://github.com/XorTroll/emuiibo/
+
+<!--Эмуляцию Amiibo поддерживают **только** Atmosphere и ReiNX! 
 {: .notice--warning}
 
 ### Что понадобится 
@@ -45,4 +47,4 @@ author_profile: true
 * Если ваш дамп Amiibo имеет больше 10 букв в названии, он будет закодирован в Emuiibo
 * Дамп Amiibo должен быть в `.bin` формате, и весить 540 байт (может чуть больше)
 	* В архиве в Discord все дампы корректные 
-* Дампы Amiibo должны хранится исключительно в папке `emuiibo` в корне SD карты
+* Дампы Amiibo должны хранится исключительно в папке `emuiibo` в корне SD карты-->
