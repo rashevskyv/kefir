@@ -26,7 +26,7 @@ xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
-xcopy "F:\git\dev\kefirupdater\kefirupdater.nro" "%wd%\base\switch\kefirupdater\kefirupdater.nro" /H /Y /C /R
+rem xcopy "F:\git\dev\kefirupdater\kefirupdater.nro" "%wd%\base\switch\kefirupdater\kefirupdater.nro" /H /Y /C /R
 rem xcopy "F:\git\dev\Atmosphere\stratosphere\ams_mitm\ams_mitm.kip" "%wd%\atmo\atmosphere\kips\ams_mitm.kip" /H /Y /C /R
 rem xcopy "%wd%\base\switch\tinfoil\locations.conf" "%wd%\sxos\switch\sx\locations.conf" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R

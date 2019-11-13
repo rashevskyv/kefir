@@ -485,6 +485,7 @@ if exist "%sd%:\atmosphere\titles\010000000000100B" (RD /s /q "%sd%:\atmosphere\
 if exist "%sd%:\atmosphere\titles\01FF415446660000" (RD /s /q "%sd%:\atmosphere\titles\01FF415446660000")
 if exist "%sd%:\atmosphere\titles\0100000000000352" (RD /s /q "%sd%:\atmosphere\titles\0100000000000352")
 if exist "%sd%:\atmosphere\titles\00FF747765616BFF" (RD /s /q "%sd%:\atmosphere\titles\00FF747765616BFF")
+if exist "%sd%:\atmosphere\titles\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\titles\00FF0012656180FF")
 if exist "%sd%:\atmosphere\fusee-secondary.bin.sig" (del "%sd%:\atmosphere\fusee-secondary.bin.sig")
 if exist "%sd%:\atmosphere\hbl.nsp.sig" (del "%sd%:\atmosphere\hbl.nsp.sig")
 if exist "%sd%:\atmosphere\hbl.json" (del "%sd%:\atmosphere\hbl.json")
@@ -688,6 +689,7 @@ if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_i
 if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
 if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\titles\  /Y /S /E /H /R /D)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
+if exist "%sd%:\atmosphere\titles\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\titles\00FF0012656180FF")
 
 if exist "%sd%:\sxos\emunand" (
 if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
