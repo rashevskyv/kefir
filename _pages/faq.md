@@ -67,7 +67,7 @@ author_profile: true
 {% endspoiler %}
 
 {% spoiler Что лучше FAT32 или exFAT?  %}
-**О:** [Развёрнутый ответ](https://4pda.ru/forum/index.php?showtopic=900987&st=12680#entry84707349){:target="_blank"}
+**О:** [Развёрнутый ответ](https://github.com/libretro/RetroArch/issues/7480#issuecomment-434262799){:target="_blank"}
 
 Короткий ответ - конкретно на Switch FAT32 сильно надёжнее и гораздо более щадящий для карты памяти. Но вы не сможете закинуть на карту в FAT32 файлы больше 4Гб. Все игры большего размера придётся [устанавливать по USB](dbi#установка-приложений-в-формате-nsp-по-usb){:target="_blank"} или [разбивать NSP для установки на части](https://github.com/AnalogMan151/splitNSP/releases/latest){:target="_blank"}. 
 
