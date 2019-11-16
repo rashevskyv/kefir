@@ -168,9 +168,7 @@ for %%A in ("3") do if "%st%"==%%A (
 )
 for %%A in ("Q" "q" "‰" "©") do if "%st%"==%%A (GOTO END)
 
-if %cfwnum%==2 (goto opt)
 
-:nosx
 :caffeine
 cls
 ECHO --------------------------------------------------------------------
