@@ -38,7 +38,6 @@ RCM - это штатный режим восстановления на Tegra-�
 * Спаять между собой контакты непосредственно в самом joy-con [напрямую, или через резистор](https://xghostboyx.github.io/RCM-Guide/#soldered_joycon_710){:target="_blank"}
 * [Вмонтировать в правый joy-con кнопку](https://www.reddit.com/r/SwitchHaxing/comments/8ho4h0/modded_my_joycon_to_have_a_clear_case_and_home/){:target="_blank"}
 * Использовать [замыкатель, распечатанный на 3D-принтере](https://www.thingiverse.com/thing:2877484){:target="_blank"} (вы можете купить уже готовый: <a href="https://www.olx.ua/obyavlenie/nintendo-switch-rcm-jig-IDAWSI6.html" target="_blank"><img src="/images/ua.png" alt="Украина" style="vertical-align: baseline !important;"></a>, <a href="https://vk.com/market-102933233?w=product-102933233_2039087_23eff2d92b12968546" target="_blank"><img src="/images/ru.png" alt="Россия" style="vertical-align: baseline !important;"></a>)
-* И другие [более странные методы](https://xghostboyx.github.io/RCM-Guide/){:target="_blank"}
 
 Далее в инструкции под словом "замыкатель" будет подразумеваться любой из этих способов
 
