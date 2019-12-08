@@ -9,7 +9,7 @@ set bd=%wd%\build
 set sd=%bd%\atmo
 set img=F:\VK\kefir
 set site=F:\git\site\switch
-set ps=C:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
+set ps=D:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
 if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
 if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
@@ -161,7 +161,7 @@ if exist "%sd%:\switch\mercury" (
 
     
 "C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\atmo.zip %bd%\atmo\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!atmo\atmosphere\contents\690000000000000D %reldir%\atmo.zip %bd%\atmo\* 
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\sxos.zip %bd%\sxos\*
 
 REM pause
