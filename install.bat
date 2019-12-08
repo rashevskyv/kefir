@@ -11,6 +11,8 @@ set lang=0
 set bootscrn=1
 set theme=0
 set caffeine=0
+set syscon=0
+set syscon_flag=2
 
 :disclaimer
 cls
@@ -202,6 +204,47 @@ for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
+
+:syscon
+cls
+ECHO --------------------------------------------------------------------
+ECHO               ======          Options           =====
+ECHO --------------------------------------------------------------------
+if %lang%==1 (
+	ECHO --------------------------------------------------------------------
+	ECHO               ======     Установить sys-con?     =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  Да
+	ECHO         2.  Нет
+	ECHO.
+	ECHO --------------------------------------------------------------------
+	ECHO  SYS-CON - модуль для работы с проводными геймпадами. Почти любой
+	ECHO  xinput-совместимый геймпад благодаря этому модулю, становится 
+	ECHO  совместимым со Switch. Просто подключите геймпад по USB к консоли.
+	ECHO  ВНИМАНИЕ! Модуль конфликтует с 8bitdo-адаптером!
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Выход
+) else (
+	ECHO --------------------------------------------------------------------
+	ECHO                    =====  Install sys-con? =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  Yes
+	ECHO         2.  No
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Quit
+)
+set st=
+set /p st=:
+
+for %%A in ("1") do if "%st%"==%%A (set syscon_flag=1)
+for %%A in ("2") do if "%st%"==%%A (set syscon_flag=0)
+for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
 :opt
 cls
 ECHO --------------------------------------------------------------------
@@ -388,6 +431,15 @@ COLOR 0F
 
 if not exist "%sd%:\" (goto WRONGSD)
 
+if %syscon_flag%==2 (
+    if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1) else (set syscon=0)
+) else (
+    set syscon=%syscon_flag%
+)
+
+echo %syscon_flag%
+echo %syscon%
+
 cls
 if %lang%==1 (
 	echo ------------------------------------------------------------------------
@@ -445,7 +497,7 @@ if %lang%==1 (
 )
 
     if exist "%sd%:\ReiNX\titles\010000000000100D" (RD /s /q "%sd%:\ReiNX\titles\010000000000100D")
-    if exist "%sd%:\ReiNX\titles" (xcopy %sd%:\ReiNX\titles\* %sd%:\atmosphere\titles\ /Y /S /E /H /R /D) >nul 2>&1
+    if exist "%sd%:\ReiNX\titles" (xcopy %sd%:\ReiNX\titles\* %sd%:\atmosphere\contents\ /Y /S /E /H /R /D) >nul 2>&1
     if exist "%sd%:\ReiNX" (RD /s /q "%sd%:\ReiNX")
     if exist "%sd%:\RajNX" (RD /s /q "%sd%:\RajNX")
 
@@ -471,22 +523,36 @@ if exist "%sd%:\atmosphere\kip_patches" (RD /s /q "%sd%:\atmosphere\kip_patches"
 if exist "%sd%:\atmosphere\hekate_kips" (RD /s /q "%sd%:\atmosphere\hekate_kips")
 if exist "%sd%:\bootloader\debug" (RD /s /q "%sd%:\bootloader\debug")
 if exist "%sd%:\modules" (RD /s /q "%sd%:\modules")
-if exist "%sd%:\atmosphere\titles\0100000000000032" (RD /s /q "%sd%:\atmosphere\titles\0100000000000032")
-if exist "%sd%:\atmosphere\titles\0100000000000034" (RD /s /q "%sd%:\atmosphere\titles\0100000000000034")
-if exist "%sd%:\atmosphere\titles\0100000000000036" (RD /s /q "%sd%:\atmosphere\titles\0100000000000036")
-if exist "%sd%:\atmosphere\titles\0100000000000037" (RD /s /q "%sd%:\atmosphere\titles\0100000000000037")
-if exist "%sd%:\atmosphere\titles\010000000000000D" (RD /s /q "%sd%:\atmosphere\titles\010000000000000D")
-if exist "%sd%:\atmosphere\titles\010000000000100D" (RD /s /q "%sd%:\atmosphere\titles\010000000000100D")
-if exist "%sd%:\atmosphere\titles\4200000000000010" (RD /s /q "%sd%:\atmosphere\titles\4200000000000010")
-if exist "%sd%:\atmosphere\titles\420000000000000E" (RD /s /q "%sd%:\atmosphere\titles\420000000000000E")
-if exist "%sd%:\atmosphere\titles\010000000000100B" (RD /s /q "%sd%:\atmosphere\titles\010000000000100B")
-if exist "%sd%:\atmosphere\titles\01FF415446660000" (RD /s /q "%sd%:\atmosphere\titles\01FF415446660000")
-if exist "%sd%:\atmosphere\titles\0100000000000352" (RD /s /q "%sd%:\atmosphere\titles\0100000000000352")
-if exist "%sd%:\atmosphere\titles\00FF747765616BFF" (RD /s /q "%sd%:\atmosphere\titles\00FF747765616BFF")
-if exist "%sd%:\atmosphere\titles\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\titles\00FF0012656180FF")
+
+if exist "%sd%:\atmosphere\titles" (mkdir %sd%:\atmosphere\contents)
+if exist "%sd%:\atmosphere\content" (mkdir %sd%:\atmosphere\contents)
+if exist "%sd%:\atmosphere\titles" (xcopy "%sd%:\atmosphere\titles\*" "%sd%:\atmosphere\contents" /H /Y /C /R /S /E)
+if exist "%sd%:\atmosphere\titles" (RD /s /q  "%sd%:\atmosphere\titles")
+if exist "%sd%:\atmosphere\content" (xcopy "%sd%:\atmosphere\content\*" "%sd%:\atmosphere\contents" /H /Y /C /R /S /E)
+if exist "%sd%:\atmosphere\content" (RD /s /q  "%sd%:\atmosphere\content")
+
+if exist "%sd%:\atmosphere\contents\0100000000000032" (RD /s /q "%sd%:\atmosphere\contents\0100000000000032")
+if exist "%sd%:\atmosphere\contents\0100000000000034" (RD /s /q "%sd%:\atmosphere\contents\0100000000000034")
+if exist "%sd%:\atmosphere\contents\0100000000000036" (RD /s /q "%sd%:\atmosphere\contents\0100000000000036")
+if exist "%sd%:\atmosphere\contents\0100000000000037" (RD /s /q "%sd%:\atmosphere\contents\0100000000000037")
+if exist "%sd%:\atmosphere\contents\010000000000000D" (RD /s /q "%sd%:\atmosphere\contents\010000000000000D")
+if exist "%sd%:\atmosphere\contents\010000000000100D" (RD /s /q "%sd%:\atmosphere\contents\010000000000100D")
+if exist "%sd%:\atmosphere\contents\4200000000000010" (RD /s /q "%sd%:\atmosphere\contents\4200000000000010")
+if exist "%sd%:\atmosphere\contents\0100000000000008" (RD /s /q "%sd%:\atmosphere\contents\0100000000000008")
+if exist "%sd%:\atmosphere\contents\690000000000000D" (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
+if exist "%sd%:\atmosphere\contents\420000000000000E" (RD /s /q "%sd%:\atmosphere\contents\420000000000000E")
+if exist "%sd%:\atmosphere\contents\010000000000100B" (RD /s /q "%sd%:\atmosphere\contents\010000000000100B")
+if exist "%sd%:\atmosphere\contents\01FF415446660000" (RD /s /q "%sd%:\atmosphere\contents\01FF415446660000")
+if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
+if exist "%sd%:\atmosphere\contents\00FF747765616BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF747765616BFF")
+if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
+
 if exist "%sd%:\atmosphere\fusee-secondary.bin.sig" (del "%sd%:\atmosphere\fusee-secondary.bin.sig")
 if exist "%sd%:\atmosphere\hbl.nsp.sig" (del "%sd%:\atmosphere\hbl.nsp.sig")
 if exist "%sd%:\atmosphere\hbl.json" (del "%sd%:\atmosphere\hbl.json")
+if exist "%sd%:\atmosphere\BCT.ini" (del "%sd%:\atmosphere\BCT.ini")
+if exist "%sd%:\atmosphere\system_settings.ini" (del "%sd%:\atmosphere\system_settings.ini")
+if exist "%sd%:\atmosphere\loader.ini" (del "%sd%:\atmosphere\system_settings.ini")
 if exist "%sd%:\atmosphere\kips\fs_mitm.kip" (del "%sd%:\atmosphere\kips\fs_mitm.kip")
 if exist "%sd%:\atmosphere\kips\ldn_mitm.kip" (del "%sd%:\atmosphere\kips\ldn_mitm.kip")
 if exist "%sd%:\atmosphere\kips\loader.kip" (del "%sd%:\atmosphere\kips\loader.kip")
@@ -538,10 +604,10 @@ if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini
 if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 
 RD /s /q "%sd%:\_themebkp"
-if exist "%sd%:\atmosphere\titles\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
-if exist "%sd%:\atmosphere\titles\0100000000001000" (xcopy "%sd%:\atmosphere\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
-if exist "%sd%:\atmosphere\titles\0100000000001000" (RD /s /q "%sd%:\atmosphere\titles\0100000000001000")
-if exist "%sd%:\atmosphere\titles\0100000000000352" (RD /s /q "%sd%:\atmosphere\titles\0100000000000352")
+if exist "%sd%:\atmosphere\contents\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
+if exist "%sd%:\atmosphere\contents\0100000000001000" (xcopy "%sd%:\atmosphere\contents\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
+if exist "%sd%:\atmosphere\contents\0100000000001000" (RD /s /q "%sd%:\atmosphere\contents\0100000000001000")
+if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
@@ -685,9 +751,10 @@ if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_
 if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
 if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
 if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
-if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\titles\  /Y /S /E /H /R /D)
+if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\contents\  /Y /S /E /H /R /D)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
-if exist "%sd%:\atmosphere\titles\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\titles\00FF0012656180FF")
+
+if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 
 if exist "%sd%:\sxos\emunand" (
 if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
@@ -700,7 +767,7 @@ if exist "%sd%:\sxos_" (RD /s /q "%sd%:\sxos_")
 
 if exist "%sd%:\switch\sx" (RD /s /q "%sd%:\switch\sx")
 if exist "%sd%:\switch\themes" (RD /s /q "%sd%:\switch\themes")
-if exist "%sd%:\titles" (xcopy "%wd%\titles\*" "%sd%:\atmosphere\titles" /H /Y /C /R /S /E)
+if exist "%sd%:\titles" (xcopy "%wd%\titles\*" "%sd%:\atmosphere\contents" /H /Y /C /R /S /E)
 if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
 goto caffeine
@@ -764,9 +831,9 @@ if %lang%==1 (
 if exist "%sd%:\atmosphere" (
 	attrib -A /S /D %sd%:\atmosphere\*
 	attrib -A %sd%:\atmosphere)
-if exist "%sd%:\atmosphere\titles" (
-	attrib -A /S /D %sd%:\atmosphere\titles*
-	attrib -A %sd%:\atmosphere\titles)
+if exist "%sd%:\atmosphere\contents" (
+	attrib -A /S /D %sd%:\atmosphere\contents*
+	attrib -A %sd%:\atmosphere\contents)
 if exist "%sd%:\sept" (
 	attrib -A /S /D %sd%:\sept\*
 	attrib -A %sd%:\sept)
