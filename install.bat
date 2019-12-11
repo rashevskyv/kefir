@@ -755,6 +755,7 @@ if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_i
 if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
 if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\contents\  /Y /S /E /H /R /D)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
+if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
 
 if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 
@@ -788,6 +789,7 @@ if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (copy "%sd%:\bootloader\hekate_ipl
 if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
+if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
 
 goto caffeine
 
