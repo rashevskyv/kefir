@@ -56,9 +56,9 @@ author_profile: true
 
 {% endspoiler %}
 
-{% spoiler На MacOS скинул файлы на карту памяти, но DBI \ tinfoil \ GoldLeaf их гне видит %}
+{% spoiler На MacOS скинул файлы на карту памяти, но DBI \ tinfoil \ GoldLeaf их не видит %}
 
-**О:** Нужно исправить атрибуты
+**О:** Нужно исправить атрибуты.
 {% include /inc/fixatributes.txt %}
 
 {% endspoiler %}
