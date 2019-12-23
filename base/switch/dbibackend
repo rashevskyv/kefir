@@ -1,0 +1,155 @@
+#!/usr/bin/python3
+# This script depends on PyUSB. You can get it with pip install pyusb.
+# You will also need libusb installed
+
+import usb.core
+import usb.util
+import struct
+import sys
+import time
+
+from binascii import hexlify as hx, unhexlify as uhx
+from pathlib import Path
+
+CMD_ID_EXIT = 0
+CMD_ID_LIST = 1
+CMD_ID_FILE_RANGE = 2
+
+CMD_TYPE_REQUEST = 0
+CMD_TYPE_RESPONSE = 1
+CMD_TYPE_ACK = 2
+
+BUFFER_SEGMENT_DATA_SIZE = 0x100000
+
+in_ep = None
+out_ep = None
+
+global nsp_dir
+nsp_dir = None
+
+def process_file_range_command(data_size):
+    print('File range')
+    out_ep.write(struct.pack('<4sIII', b'DBI0', CMD_TYPE_ACK, CMD_ID_FILE_RANGE, data_size))
+
+    file_range_header = in_ep.read(data_size)
+
+    range_size = struct.unpack('<I', file_range_header[:4])[0]
+    range_offset = struct.unpack('<Q', file_range_header[4:12])[0]
+    nsp_name_len = struct.unpack('<I', file_range_header[12:16])[0]
+    nsp_name = bytes(file_range_header[16:]).decode('utf-8')
+
+    print('Range Size: {}, Range Offset: {}, Name len: {}, Name: {}'.format(range_size, range_offset, nsp_name_len, nsp_name))
+
+    response_bytes = struct.pack('<4sIII', b'DBI0', CMD_TYPE_RESPONSE, CMD_ID_FILE_RANGE, range_size)
+    out_ep.write(response_bytes)
+
+    ack = bytes(in_ep.read(16, timeout=0))
+    magic = ack[:4]
+    cmd_type = struct.unpack('<I', ack[4:8])[0]
+    cmd_id = struct.unpack('<I', ack[8:12])[0]
+    data_size = struct.unpack('<I', ack[12:16])[0]
+    print('Cmd Type: {}, Command id: {}, Data size: {}'.format(cmd_type, cmd_id, data_size), flush=True)
+    print('Ack')
+
+    with open(nsp_name, 'rb') as f:
+        f.seek(range_offset)
+
+        curr_off = 0x0
+        end_off = range_size
+        read_size = BUFFER_SEGMENT_DATA_SIZE
+
+        while curr_off < end_off:
+            if curr_off + read_size >= end_off:
+                read_size = end_off - curr_off
+
+            buf = f.read(read_size)
+            out_ep.write(data=buf, timeout=0)
+            curr_off += read_size
+
+def poll_commands():
+    print('Entering command loop')
+    while True:
+        cmd_header = bytes(in_ep.read(16, timeout=0))
+        magic = cmd_header[:4]
+
+        if magic != b'DBI0': # Tinfoil USB Command 0
+            continue
+
+        cmd_type = struct.unpack('<I', cmd_header[4:8])[0]
+        cmd_id = struct.unpack('<I', cmd_header[8:12])[0]
+        data_size = struct.unpack('<I', cmd_header[12:16])[0]
+
+        print('Cmd Type: {}, Command id: {}, Data size: {}'.format(cmd_type, cmd_id, data_size), flush=True)
+
+        if cmd_id == CMD_ID_EXIT:
+            process_exit_command()
+        elif cmd_id == CMD_ID_FILE_RANGE:
+            process_file_range_command(data_size)
+        elif cmd_id == CMD_ID_LIST:
+            process_list_command()
+
+def process_exit_command():
+    print('Exit')
+    out_ep.write(struct.pack('<4sIII', b'DBI0', CMD_TYPE_RESPONSE, CMD_ID_EXIT, 0))
+    sys.exit(0)
+
+
+def process_list_command():
+    print('Get list')
+    nsp_path_list = ""
+    nsp_path_list_len = 0
+
+    for nsp_path in [f for f in nsp_dir.iterdir() if f.is_file()]:
+        nsp_path_list += nsp_path.__str__() + '\n'
+        
+    nsp_path_list_len = len(nsp_path_list)
+
+    out_ep.write(struct.pack('<4sIII', b'DBI0', CMD_TYPE_RESPONSE, CMD_ID_LIST, nsp_path_list_len))
+
+    ack = bytes(in_ep.read(16, timeout=0))
+    magic = ack[:4]
+    cmd_type = struct.unpack('<I', ack[4:8])[0]
+    cmd_id = struct.unpack('<I', ack[8:12])[0]
+    data_size = struct.unpack('<I', ack[12:16])[0]
+    print('Cmd Type: {}, Command id: {}, Data size: {}'.format(cmd_type, cmd_id, data_size), flush=True)
+    print('Ack')
+
+    out_ep.write(nsp_path_list)
+
+def connect_to_switch():
+    global in_ep
+    global out_ep
+    while True:
+        dev = usb.core.find(idVendor=0x057E, idProduct=0x3000)
+        if dev is None:
+            print('Waiting for switch...')
+            time.sleep(1)
+            continue
+
+        dev.reset()
+        dev.set_configuration()
+        cfg = dev.get_active_configuration()
+
+        is_out_ep = lambda ep: usb.util.endpoint_direction(ep.bEndpointAddress) == usb.util.ENDPOINT_OUT
+        is_in_ep = lambda ep: usb.util.endpoint_direction(ep.bEndpointAddress) == usb.util.ENDPOINT_IN
+        out_ep = usb.util.find_descriptor(cfg[(0,0)], custom_match=is_out_ep)
+        in_ep = usb.util.find_descriptor(cfg[(0,0)], custom_match=is_in_ep)
+
+        assert out_ep is not None
+        assert in_ep is not None
+        break
+
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        nsp_dir = Path(".")
+    else:
+        nsp_dir = Path(sys.argv[1])
+
+    if not nsp_dir.is_dir():
+        raise ValueError('Argument must be a directory')
+
+    connect_to_switch()
+
+    poll_commands()    
