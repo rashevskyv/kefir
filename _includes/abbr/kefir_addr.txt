@@ -1,4 +1,4 @@
-<span class="tooltip">[kefir](kefir){:target="_blank"}
+<span class="tooltip">[kefir](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"}
 	<span class="bottom">
 		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
 	</span>
