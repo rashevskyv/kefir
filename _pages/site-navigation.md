@@ -28,7 +28,7 @@ author_profile: true
 * [Подготовка к запуску кастомной прошивки через Fusée Gelée](preparation-fuse){:target="_blank"}
 * [Пожертвования](http://customfw.xyz/donations){:target="_blank"}
 * [Проблемы и их решения](troubleshooting){:target="_blank"}
-* [Расширения файлов (Windows)](file-extensions-windows){:target="_blank"}
+* [Расширения файлов (Windows)](https://customfw.xyz/file-extensions-windows){:target="_blank"}
 * [Резервное копирование NAND](backup-nand){:target="_blank"}
 * [Резервное копирование и восстановление сохранений с помощью Checkpoint](backup-saves){:target="_blank"}
 * [Связывание учётной записи консоли с аккаунтом Nintendo](link-account){:target="_blank"}

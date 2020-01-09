@@ -12,7 +12,7 @@ author_profile: true
 
 # Что понадобится
 
-* Включите [отображение расширений файлов](file-extensions-windows){:target="_blank"}, если у вас Windows
+* Включите [отображение расширений файлов](https://customfw.xyz/file-extensions-windows){:target="_blank"}, если у вас Windows
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Приставка должна быть полностью заряжена!
 * Свежая версия пейлоада {% include inc/hekate.txt %}
@@ -69,7 +69,7 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти приставки в ПК
-1. Убедитесь, что включили [отображение расширений файлов](file-extensions-windows){:target="_blank"}, если у вас Windows
+1. Убедитесь, что включили [отображение расширений файлов](https://customfw.xyz/file-extensions-windows){:target="_blank"}, если у вас Windows
 1. Скопируйте **содержимое** папки `sample` из `.zip`-архива с [memloader](https://switchtools.sshnuke.net/){:target="_blank"} в **корень** вашей карты памяти
 1. Скопируйте пейлоад `memloader.bin` в папку `bootloader/payloads`
 1. Верните карту памяти обратно в Switch

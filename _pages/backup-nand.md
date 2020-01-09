@@ -44,7 +44,7 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти приставки в ПК
-1. Убедитесь, что включили [отображение расширений файлов](file-extensions-windows){:target="_blank"}, если у вас Windows
+1. Убедитесь, что включили [отображение расширений файлов](https://customfw.xyz/file-extensions-windows){:target="_blank"}, если у вас Windows
 1. Скопируйте **содержимое** папки `sample` из `.zip`-архива с [memloader](https://switchtools.sshnuke.net/){:target="_blank"} в **корень** вашей карты памяти
 1. Верните карту памяти обратно в Switch
 1. Скопируйте пейлоад [`memloader.bin`](https://switchtools.sshnuke.net/){:target="_blank"} в папку из которой передаёте их на Switch (или в папку `\bootloader\payloads` для запуска через hekate)
