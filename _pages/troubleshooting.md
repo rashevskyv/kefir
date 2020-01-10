@@ -46,7 +46,7 @@ author_profile: true
 
 {% spoiler Постоянные ошибки, игры вылетают %}
 
-**О:** Проверьте свою SD-карту на ошибки с помощью [H2testw (Windows)](http://3ds.customfw.xyz/h2testw-windows){:target="_blank"}, [F3 (Linux)](http://3ds.customfw.xyz/f3-linux){:target="_blank"}, или [F3X (Mac)](http://3ds.customfw.xyz/f3x-mac){:target="_blank"}! Если карта в порядке, скопируйте папку Nintendo из корня карты памяти на ваш ПК, [отформатируйте её](https://customfw.xyz/format_sd){:target="_blank"}, а затем установите кефир через скрипт. 
+**О:** Проверьте свою SD-карту на ошибки с помощью [H2testw (Windows)](http://customfw.xyz/h2testw-windows){:target="_blank"}, [F3 (Linux)](http://customfw.xyz/f3-linux){:target="_blank"}, или [F3X (Mac)](http://customfw.xyz/f3x-mac){:target="_blank"}! Если карта в порядке, скопируйте папку Nintendo из корня карты памяти на ваш ПК, [отформатируйте её](https://customfw.xyz/format_sd){:target="_blank"}, а затем установите кефир через скрипт. 
 
 {% endspoiler %}
 
