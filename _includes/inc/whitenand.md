@@ -58,7 +58,7 @@ EmuNAND - полная копия NAND, расположенная на карт
 
 {% include inc/launch-hekate.txt %}
 1. Перейдите в "**Launch**"
-1. Запустите "**Stock with nogc-patch**" для запуска {% include abbr/sysnand.txt abbr="SysNAND" %} 
+1. Запустите "**stock**" для запуска {% include abbr/sysnand.txt abbr="SysNAND" %} 
 
 {% endspoiler %}
 	
