@@ -1,1 +1,1 @@
-/hbg/shop 7.0.0
+/hbg/shop 7.0.1
