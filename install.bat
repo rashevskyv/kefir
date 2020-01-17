@@ -20,23 +20,26 @@ ECHO ===========================================================================
 ECHO                                                 ПРОЧТИТЕ ВНИМАТЕЛЬНО!
 ECHO                                                    READ CAREFULLY!
 ECHO =======================================================================================================================
+ECHO          !!! УСТАНОВКА ИГР ПО USB ТЕПЕРЬ РАБОТАЕТ ТОЛЬКО С DBIBACKEND!!! https://switch.customfw.xyz/games !!!
+ECHO                   Нажмите F, затем Enter, если вы ознакомились с написанным и готовы продолжить
+ECHO =======================================================================================================================
 ECHO.
-ECHO    На новых версиях Atmosphere для входа в Homebrew Menu нужно запускать любую игру, удерживая кнопку R на джойконе
 ECHO    !!! При возникновении ошибок, выберите чистую установку в опциях кефира
 ECHO    !!! Если вы собираетесь использовать Caffeine - отметьте это в опциях
-ECHO    !!! Если вы устанавливаете kefir для обновления прошивки, выберите в опциях удаление темы
+ECHO    !!! Если вы собираетесь использовать sys-con - отметьте это в опциях
+ECHO.
 ECHO    Нажмите О на следующем экране, чтобы попасть в опции кефира
 ECHO.
-ECHO    Нажмите J, затем Enter, если вы ознакомились с написанным и готовы продолжить
-ECHO.       
 ECHO -----------------------------------------------------------------------------------------------------------------------
+ECHO.       
+ECHO    !!! INSTALLING GAMES ON USB NOW WORKS ONLY WITH DBIBACKEND !!! https://switch.customfw.xyz/games
+ECHO    !!! Choose clean install on options if any errors on launch CFW
+ECHO    !!! Choose Caffeine in an options if you use it
+ECHO    !!! Choose sys-con in an options if you use it
 ECHO.
-ECHO    For enter Homebrew Menu on new Atmosphere version hold R button while start any game
-ECHO    Choose clean install on options if any errors on launch CFW
-ECHO    Choose Caffeine in an options if you use it
-ECHO.
-ECHO    Press J and Enter if you has read this information and ready to proceed to installation
-ECHO.
+ECHO    Press F and Enter if you has read this information and ready to proceed to installation. Press O on the next screen
+ECHO    for options.
+ECHO.       
 ECHO =======================================================================================================================
 ECHO.
 ECHO.
@@ -46,8 +49,8 @@ ECHO.
 set st=
 set /p st=
 
-for %%A in ("J" "j" "О" "о") do if "%st%"==%%A (GOTO START)
-for %%A in ("J" "j" "О" "о") do if "%st%" neq %%A (GOTO disclaimer)
+for %%A in ("F" "f" "А" "а") do if "%st%"==%%A (GOTO START)
+for %%A in ("F" "f" "А" "а") do if "%st%" neq %%A (GOTO disclaimer)
 
 cls
 
