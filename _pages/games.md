@@ -65,7 +65,7 @@ author_profile: true
 {% spoiler Windows %}
 
 {% include /inc/zadig.txt %}
-1. Скачайте программу [dbibackend](files/dbibackend.zip){:target="_blank"} и распакуйте архив с ней в удобную папку 
+1. Скачайте программу [dbibackend](files/dbibackend_win.zip){:target="_blank"} и распакуйте архив с ней в удобную папку 
 {% endspoiler %}
 
 {% spoiler Linux %}
@@ -102,7 +102,7 @@ author_profile: true
 {% spoiler Добавление dbibackend в контекстное меню вашей ОС (опционально) %}
 * **В Windows**:
     1. Нажмите `Win+R` и в появившемся окне наберите `shell:sendto`
-    1. Поместите в эту папку ярлык программы [dbibackend](files/dbibackend.zip){:target="_blank"}
+    1. Поместите в эту папку ярлык программы [dbibackend](files/dbibackend_win.zip){:target="_blank"}
         * Вы можете перетащить [dbibackend](files/dbibackend.zip){:target="_blank"} в эту папку правой кнопкой мыши и выбрать "**Создать ярлыки**" в появившемся контекстном меню
         * Вы можете нажать правую кнопку мыши на пустом месте в папке и выбрать "**Создать**" -> "**Ярлык**", после чего следуйте указаниям мастера
         * Помните, что если вы переместите `dbibackend.exe` в другое место, от ярлыки работать перестанут и их придётся создать заново
@@ -124,7 +124,7 @@ author_profile: true
 Если вы добавили dbibackend в контекстное меню своего ПК, то можете просто выделить файлы, которые хотите установить и в контекстном меню выбрать "**Отправить**" -> "**dbibackend.exe**", если у вас Windows или "**Send**" -> "**toSwitch**", если у вас Linux, вместо выполнения первых трёх пунктов.
 {: .notice--warning}
 
-1. **На ПК** запустите программу [`dbibackend.exe`](files/dbibackend.zip){:target="_blank"}
+1. **На ПК** запустите программу `dbibackend`
 1. Нажмите "**Add files**" и выберите необходимые для установки `.nsp`, `.nsz` или `.xci`
 	* Для выбора нескольких игр, удерживайте клавишу (Ctrl)
     * Для выбора всей папки с играми, выберите "**Add folder**"
