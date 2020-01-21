@@ -57,7 +57,12 @@ author_profile: true
 
 * **Внимание!** Перед обновлением удалите следующие папки с карты памяти, если таковые имеются:
     *  `%cfw_name%/titles/0100000000001000`
+    *  `%cfw_name%/titles/0100000000001013`
     *  `%cfw_name%/titles/0100000000000352`
+    или
+    *  `atmosphere/contents/0100000000001000`
+    *  `atmosphere/contents/0100000000001013`
+    *  `atmosphere/contents/0100000000000352`
 1. Установите `.7z`-архив {% include abbr/kefir_addr.txt %}, согласно инструкции в репозитории, если ещё не делали этого
 	* Если версия вашего системного ПО 1.0.0, удалите папки `\atmosphere\exefs_patches` и `\atmosphere\kip_patches\fs_patches`:
 		* После того, как вы удачно обновите системное ПО, обязательно **ещё раз установите {% include abbr/kefir_addr.txt %}**

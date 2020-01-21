@@ -93,6 +93,10 @@ author_profile: true
 1. Установите [python 3.7](https://www.python.org/downloads/release/python-376/) на ваш ПК 
 1. Установите `pyusb`
     * `pip3 install pyusb`
+1. Установите **brew**
+    * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. Установите **libusb** через brew 
+    * `brew install libusb`
 1. Перейдите в папку со скриптом 
 1. Сделайте скрипт исполняемым файлом
     * `chmod +x dbibackend`
