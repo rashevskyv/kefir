@@ -549,6 +549,7 @@ if exist "%sd%:\atmosphere\contents\01FF415446660000" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
 if exist "%sd%:\atmosphere\contents\00FF747765616BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF747765616BFF")
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
+if exist "%sd%:\atmosphere\contents\0100000000001013" (RD /s /q "%sd%:\atmosphere\contents\0100000000001013")
 
 if exist "%sd%:\atmosphere\fusee-secondary_atmo.bin" (del "%sd%:\atmosphere\fusee-secondary_atmo.bin")
 if exist "%sd%:\atmosphere\hbl_atmo.nsp" (del "%sd%:\atmosphere\hbl_atmo.nsp")
@@ -616,6 +617,7 @@ if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmospher
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
+if exist "%sd%:\switch\mercury" (RD /s /q "%sd%:\switch\mercury")
 rem if exist "%sd%:\switch\EdiZon.nro" (del "%sd%:\switch\EdiZon.nro")
 if exist "%sd%:\switch\tinfoil\tinfoil.nro" (del "%sd%:\switch\tinfoil\tinfoil.nro")
 if exist "%sd%:\switch\tinfoil\keys.txt" (del "%sd%:\switch\tinfoil\keys.txt")
@@ -761,6 +763,7 @@ if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
 
 if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
+if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
 
 if exist "%sd%:\sxos\emunand" (
 if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)

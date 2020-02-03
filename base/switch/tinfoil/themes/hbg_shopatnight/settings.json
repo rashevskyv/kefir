@@ -48,9 +48,5 @@
 			"color": "0000003F"
 		},
 		"width": 1
-	},
-	"music": {
-		"url": "sdmc:/switch/tinfoil/themes/hbg_shopatnight/hbg_shopatnight.mp3",
-		"volume": 5
 	}
 }

@@ -187,7 +187,7 @@ REM git add .
 REM git commit -m "%date:~3,8%"
 REM git push
 
-powershell -file %ps%
+powershell -file %ps% kefir
 
 :END
 if %lang%==1 (
