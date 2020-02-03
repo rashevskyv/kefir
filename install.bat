@@ -856,8 +856,6 @@ if exist "%sd%:\config" (
 if exist "%sd%:\switch" (
 	attrib -A /S /D %sd%:\switch\*
 	attrib -A %sd%:\switch)
-if exist "%sd%:\switch\mercury" (
-	attrib +A %sd%:\switch\mercury)
 if exist "%sd%:\tinfoil" (
 	attrib -A /S /D %sd%:\tinfoil\*
 	attrib -A %sd%:\tinfoil)
