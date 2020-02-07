@@ -42,6 +42,7 @@ ____
   * DBI - программа для [установки игр](games){:target="_blank"} по USB или с карты памяти
   * [SXInstaller](https://sx.xecuter.com/){:target="_blank"} (SXOS only) - аналог tinfoil для SXOS
   * [sys-con](https://github.com/cathery/sys-con/releases/latest){:target="_blank"} - модуль, позволяющий подключать к консоли по USB практически любые геймпады
+  * [Tesla Overlay Menu](https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/){:target="_blank"} - специальное оверлей-меню для взаимодействия с системой
 
 ____
 
