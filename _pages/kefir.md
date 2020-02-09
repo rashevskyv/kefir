@@ -29,7 +29,6 @@ ____
 * [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} и [ACID-патчи для неё](https://github.com/Joonie86/hekate/releases/latest){:target="_blank"}
 * Homebrew 
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases){:target="_blank"} - программа для обновления kefir через интернет
-  * [mercury](https://github.com/team-mercure/mercury/releases){:target="_blank"} - проприетарный файловый менеджер от blawar. Необходим для работы tinfoil
   * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest){:target="_blank"} - файловый менеджер
   * [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](checkpoint){:target="_blank"}
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
