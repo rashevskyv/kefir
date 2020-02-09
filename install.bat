@@ -13,6 +13,8 @@ set theme=0
 set caffeine=0
 set syscon=0
 set syscon_flag=2
+set dbi=3
+set dbi_flag=0
 
 :disclaimer
 cls
@@ -238,6 +240,12 @@ if %lang%==1 (
 	ECHO         1.  Yes
 	ECHO         2.  No
 	ECHO.
+	ECHO --------------------------------------------------------------------
+	ECHO  SYS-CON - module for working with wired gamepads. Almost any
+	ECHO  xinput-compatible gamepad, thanks to this module, becomes Switch
+	ECHO  compatible. Just connect the gamepad via USB to the console.
+	ECHO  ATTENTION! The module conflicts with the 8bitdo adapter!
+	ECHO --------------------------------------------------------------------
 	ECHO ====================================================================
 	ECHO                                                          Q.  Quit
 )
@@ -246,6 +254,49 @@ set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set syscon_flag=1)
 for %%A in ("2") do if "%st%"==%%A (set syscon_flag=0)
+for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
+:dbi
+cls
+ECHO --------------------------------------------------------------------
+ECHO               ======          Options           =====
+ECHO --------------------------------------------------------------------
+if %lang%==1 (
+	ECHO --------------------------------------------------------------------
+	ECHO                   ======     Версия DBI     =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  Новая
+	ECHO         2.  Совместимая с NS USB Loader
+	ECHO         3.  Обе весии
+	ECHO.
+	ECHO --------------------------------------------------------------------
+	ECHO  SYS-CON - модуль для работы с проводными геймпадами. Почти любой
+	ECHO  xinput-совместимый геймпад благодаря этому модулю, становится 
+	ECHO  совместимым со Switch. Просто подключите геймпад по USB к консоли.
+	ECHO  ВНИМАНИЕ! Модуль конфликтует с 8bitdo-адаптером!
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Выход
+) else (
+	ECHO --------------------------------------------------------------------
+	ECHO                    =====  Install sys-con? =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  New version
+	ECHO         2.  NS USB Loader-compateble
+	ECHO         3.  Both versiond
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Quit
+)
+set st=
+set /p st=:
+
+for %%A in ("1") do if "%st%"==%%A (set dbi=0)
+for %%A in ("2") do if "%st%"==%%A (set dbi=1)
+for %%A in ("3") do if "%st%"==%%A (set dbi=2)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :opt
@@ -435,13 +486,18 @@ COLOR 0F
 if not exist "%sd%:\" (goto WRONGSD)
 
 if %syscon_flag%==2 (
-    if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1) else (set syscon=0)
+   if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1) else (set syscon=0)
 ) else (
-    set syscon=%syscon_flag%
+   set syscon=%syscon_flag%
 )
 
-echo %syscon_flag%
-echo %syscon%
+if %dbi%==3 (
+	if not exist "%sd%:\switch\dbi_old.nro" if exist "%sd%:\switch\dbi.nro" (set dbi_flag=0)
+	if exist "%sd%:\switch\dbi_old.nro" if not exist "%sd%:\switch\dbi.nro" (set dbi_flag=1)
+	if exist "%sd%:\switch\dbi_old.nro" if exist "%sd%:\switch\dbi.nro" (set dbi_flag=2)
+) else (
+   set dbi_flag=%dbi%
+)
 
 cls
 if %lang%==1 (
@@ -473,8 +529,24 @@ if exist "%sd%:\bootlogo.bmp" (del "%sd%:\bootlogo.bmp")
 if %clear%==1 (
 	if not exist "%sd%:\_backup" (mkdir %sd%:\_backup\)
 	FOR /d %%A IN (%sd%:\*) DO (
-		IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" (move /Y %%A %sd%:\_backup)
+		rem IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" (move /Y %%A %sd%:\_backup)
+		IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" IF "%%A" NEQ "%sd%:\sxos\emunand" IF "%%A" NEQ "%sd%:\emummc" (
+			echo %%A
+			move /Y %%A %sd%:\_backup
+			)
+
 	)
+	FOR %%A IN (%sd%:\*) DO (
+		rem IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" (move /Y %%A %sd%:\_backup)
+		IF "%%A" NEQ "%sd%:\_backup" (
+			echo %%A
+			move /Y %%A %sd%:\_backup
+			)
+
+	)
+
+	 if exist "%sd%:\_backup\sxos\emunand" (mkdir %sd%:\sxos\emunand)
+	 if exist "%sd%:\_backup\sxos\emunand" (move /Y  %sd%:\_backup\sxos\emunand\* %sd%:\sxos\emunand)
 	
 	set emuiibo=0
 	
@@ -606,8 +678,12 @@ if exist "%sd%:\bootloader\update.bin" (del "%sd%:\bootloader\update.bin")
 if exist "%sd%:\bootloader\update.bin.sig" (del "%sd%:\bootloader\update.bin.sig")
 if exist "%sd%:\bootloader\patches_template.ini" (del "%sd%:\bootloader\patches_template.ini")
 if exist "%sd%:\bootloader\patches.ini" (del "%sd%:\bootloader\patches.ini")
-if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
-if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
+findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
+	set stock=1
+) || (
+	set stock=0
+	if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
+)
 
 RD /s /q "%sd%:\_themebkp"
 if exist "%sd%:\atmosphere\contents\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
@@ -658,6 +734,7 @@ if exist "%sd%:\games\hbgShop_forwarder_classic.nsp" (del "%sd%:\games\hbgShop_f
 if exist "%sd%:\games\hbgShop_forwarder_dark_v3.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
 if exist "%sd%:\games\hbgShop_forwarder_dark_v4.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v4.nsp")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
+if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 
 
 :install_pack
@@ -711,6 +788,7 @@ if %lang%==1 (
 	echo ------------------------------------------------------------------------
 	echo.
 )
+
 xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 if exist "%sd%:\sdfiles.zip" (del "%sd%:\sdfiles.zip")
@@ -756,7 +834,9 @@ if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ip
 if exist "%sd%:\bootloader\hekate_ipl_misc.ini" (del "%sd%:\bootloader\hekate_ipl_misc.ini")
 if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
 if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
-if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
+if %stock%==0 (
+	if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
+)
 if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
 if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\contents\  /Y /S /E /H /R /D)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
@@ -817,6 +897,16 @@ if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injec
 if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 
 :cfw_DONE
+
+
+if %dbi_flag%==0 (
+	del "%sd%:\switch\dbi_old.nro"
+	del "%sd%:\switch\.dbi_old.nro.star"
+	)
+if %dbi_flag%==1 (
+	del "%sd%:\switch\dbi.nro"
+	del "%sd%:\switch\.dbi.nro.star"
+	)
 
 echo                                    DONE
 echo ------------------------------------------------------------------------
