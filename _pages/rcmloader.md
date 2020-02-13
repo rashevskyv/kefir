@@ -5,6 +5,14 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+{% spoiler Видеоинструкция %}
+
+{% include youtube.html id="kp_VoNN_7Zk" %}
+{: .text-center}
+{: .notice--info}
+
+{% endspoiler %}
+
 Инструкция предназначена владельцам {% include abbr/dongle.txt abbr="донгла" %} RCMLoader и создавалась в поддержку купивших устройство у меня. 
 
 ![](/images/dongle/rcmloader.jpg)

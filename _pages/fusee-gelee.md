@@ -5,6 +5,14 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+{% spoiler Видеоинструкция %}
+
+{% include youtube.html id="RIuwYF7_LoI" %}
+{: .text-center}
+{: .notice--info}
+
+{% endspoiler %}
+
 ## Информация об Fusée Gelée
 
 Некоторые мобильные процессоры NVIDIA Tegra, выпущенные до 2016 года, содержат Уязвимость переполнения буфера в режиме восстановления BootROM ({% include abbr/rcm.txt abbr="RCM" %}). Злоумышленник с физическим доступом к USB-порту устройства и возможностью принудительной перезагрузки устройства в {% include abbr/rcm.txt abbr="RCM" %}, может использовать уязвимость для выполнения непроверенного кода.

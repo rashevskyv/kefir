@@ -5,6 +5,14 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+{% spoiler Видеоинструкция %}
+
+{% include youtube.html id="0OMXAYJcTS0" %}
+{: .text-center}
+{: .notice--info}
+
+{% endspoiler %}
+
 ## Важная информация
 
 Эта инструкция для тех, кто по каким-либо причинам не смог совладать с DBI backend и DBIv60. Установка через DBI backend и DBIv60 и выше, которая описана в [основной инструкции](games){:target="_blank"} является рекомендуемой. 

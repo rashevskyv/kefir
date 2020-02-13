@@ -5,6 +5,14 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+{% spoiler Видеоинструкция %}
+
+{% include youtube.html id="JHDU-ndGmvU" %}
+{: .text-center}
+{: .notice--info}
+
+{% endspoiler %}
+
 ## Важная информация
 
 * Игры, DLC и обновления ставятся одинаково и в любом порядке

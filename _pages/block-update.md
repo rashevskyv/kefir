@@ -7,7 +7,7 @@ author_profile: true
 
 {% spoiler Видеоинструкция %}
 
-{% include youtube.html id="gUGulsJzDKM" %}
+{% include youtube.html id="gUGulsJzDKM"  %}
 {: .text-center}
 {: .notice--info}
 
