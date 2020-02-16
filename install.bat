@@ -15,6 +15,8 @@ set syscon=0
 set syscon_flag=2
 set dbi=3
 set dbi_flag=0
+set tesla=0
+set tesla_flag=2
 
 :disclaimer
 cls
@@ -92,6 +94,40 @@ for %%A in ("3") do if "%st%"==%%A (
 )
 for %%A in ("O" "o" "Щ" "щ" "J" "j" "о" "О" "0") do if "%st%"==%%A (GOTO OPTIONS)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
+:choose_fw
+cls
+ECHO ------------------------------------------------------------------
+ECHO        ======          Select FW version           =====
+ECHO ------------------------------------------------------------------
+ECHO.
+ECHO    Choose System FW version
+ECHO.
+ECHO    Укажите версию системного ПО
+ECHO.
+ECHO           1. 6.2.0 and higher 
+ECHO              6.2.0 и выше
+ECHO           2. Less then 6.2.0
+ECHO              Ниже, чем 6.2.0
+ECHO.
+ECHO    If the firmware version is higher than 6.2.0, Tesla Overlay
+ECHO    Menu  will be additionally installed. To use it, press
+ECHO    (L)+(D-PAD DOWN)+(R3) 
+ECHO.
+ECHO    Если версия прошивки выше, чем 6.2.0, дополнительно будет 
+ECHO    установлен Tesla Overlay Menu, вызываемый сочитанием клавиш 
+ECHO    (L)+(D-PAD DOWN)+(R3) 
+ECHO.
+ECHO ==================================================================
+ECHO                                                       Q.  Quit
+
+set st=
+set /p st=:
+
+for %%A in ("1") do if "%st%"==%%A (set tesla_flag=1)
+for %%A in ("2") do if "%st%"==%%A (set tesla_flag=0)
+for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
 goto newcard
 
 :OPTIONS
@@ -175,6 +211,45 @@ for %%A in ("3") do if "%st%"==%%A (
 )
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
+cls
+ECHO --------------------------------------------------------------------
+ECHO               ======          Options           =====
+ECHO --------------------------------------------------------------------
+if %lang%==1 (
+	ECHO --------------------------------------------------------------------
+	ECHO               ======     Выберите эксплойт     =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  6.2.0 и выше
+	ECHO         2.  Ниже, чем 6.2.0
+	ECHO.
+	ECHO    Если версия прошивки выше, чем 6.2.0, дополнительно будет 
+	ECHO    установлен Tesla Overlay Menu, вызываемый сочитанием клавиш 
+	ECHO    L+D-PAD DOWN+R3
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Выход
+) else (
+	ECHO --------------------------------------------------------------------
+	ECHO                   =====  Select FW version =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  6.2.0 and higher 
+	ECHO         2.  Less then 6.2.0
+	ECHO.
+	ECHO    If the firmware version is higher than 6.2.0, Tesla Overlay
+	ECHO    Menu  will be additionally installed. To use it, press
+	ECHO    L+D-PAD DOWN+R3
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Quit
+)
+set st=
+set /p st=:
+
+for %%A in ("1") do if "%st%"==%%A (set tesla_flag=1)
+for %%A in ("2") do if "%st%"==%%A (set tesla_flag=0)
+for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :caffeine
 cls
@@ -281,7 +356,7 @@ if %lang%==1 (
 	ECHO                                                          Q.  Выход
 ) else (
 	ECHO --------------------------------------------------------------------
-	ECHO                    =====  Install sys-con? =====
+	ECHO                       =====  DBI version =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
 	ECHO         1.  New version
@@ -491,6 +566,12 @@ if %syscon_flag%==2 (
    set syscon=%syscon_flag%
 )
 
+if %tesla_flag%==2 (
+   if exist "%sd%:\atmosphere\contents\010000000007E51A" (set tesla=1) else (set tesla=0)
+) else (
+   set tesla=%tesla_flag%
+)
+
 if %dbi%==3 (
 	if not exist "%sd%:\switch\dbi_old.nro" if exist "%sd%:\switch\dbi.nro" (set dbi_flag=0)
 	if exist "%sd%:\switch\dbi_old.nro" if not exist "%sd%:\switch\dbi.nro" (set dbi_flag=1)
@@ -670,6 +751,7 @@ if exist "%sd%:\bootloader\ini\!RajNX.ini" (del "%sd%:\bootloader\ini\!RajNX.ini
 if exist "%sd%:\bootloader\ini\For 1.0.0 users only!.ini" (del "%sd%:\bootloader\ini\For 1.0.0 users only!.ini")
 if exist "%sd%:\license-request.dat" (del "%sd%:\license-request.dat")
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
+if exist "%sd%:\hekate.bin" (del "%sd%:\hekate.bin")
 if exist "%sd%:\hbmenu.nro" (del "%sd%:\hbmenu.nro")
 if exist "%sd%:\keys.dat" (del "%sd%:\keys.dat")
 if exist "%sd%:\BCT.ini" (del "%sd%:\BCT.ini")
@@ -708,6 +790,7 @@ if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\switch\n1dus.nro" (del "%sd%:\switch\n1dus.nro")
 if exist "%sd%:\switch\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX.nro")
 if exist "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro")
+if exist "%sd%:\switch\nx-ntpc.nro" (del "%sd%:\switch\nx-ntpc.nro")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
@@ -844,6 +927,9 @@ if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmospher
 
 if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
+
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
+if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
 
 if exist "%sd%:\sxos\emunand" (
 if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
