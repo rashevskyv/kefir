@@ -105,16 +105,16 @@ ECHO    Choose System FW version
 ECHO.
 ECHO    Укажите версию системного ПО
 ECHO.
-ECHO           1. 6.2.0 and higher 
-ECHO              6.2.0 и выше
-ECHO           2. Less then 6.2.0
-ECHO              Ниже, чем 6.2.0
+ECHO           1. 9.0.0 and higher 
+ECHO              9.0.0 и выше
+ECHO           2. Less then 9.0.0
+ECHO              Ниже, чем 9.0.0
 ECHO.
-ECHO    If the firmware version is higher than 6.2.0, Tesla Overlay
+ECHO    If the firmware version is higher than 9.0.0, Tesla Overlay
 ECHO    Menu  will be additionally installed. To use it, press
 ECHO    (L)+(D-PAD DOWN)+(R3) 
 ECHO.
-ECHO    Если версия прошивки выше, чем 6.2.0, дополнительно будет 
+ECHO    Если версия прошивки выше, чем 9.0.0, дополнительно будет 
 ECHO    установлен Tesla Overlay Menu, вызываемый сочитанием клавиш 
 ECHO    (L)+(D-PAD DOWN)+(R3) 
 ECHO.
@@ -220,10 +220,10 @@ if %lang%==1 (
 	ECHO               ======     Выберите эксплойт     =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO         1.  6.2.0 и выше
-	ECHO         2.  Ниже, чем 6.2.0
+	ECHO         1.  9.0.0 и выше
+	ECHO         2.  Ниже, чем 9.0.0
 	ECHO.
-	ECHO    Если версия прошивки выше, чем 6.2.0, дополнительно будет 
+	ECHO    Если версия прошивки выше, чем 9.0.0, дополнительно будет 
 	ECHO    установлен Tesla Overlay Menu, вызываемый сочитанием клавиш 
 	ECHO    L+D-PAD DOWN+R3
 	ECHO.
@@ -234,10 +234,10 @@ if %lang%==1 (
 	ECHO                   =====  Select FW version =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO         1.  6.2.0 and higher 
-	ECHO         2.  Less then 6.2.0
+	ECHO         1.  9.0.0 and higher 
+	ECHO         2.  Less then 9.0.0
 	ECHO.
-	ECHO    If the firmware version is higher than 6.2.0, Tesla Overlay
+	ECHO    If the firmware version is higher than 9.0.0, Tesla Overlay
 	ECHO    Menu  will be additionally installed. To use it, press
 	ECHO    L+D-PAD DOWN+R3
 	ECHO.
