@@ -229,7 +229,7 @@ author_profile: true
 {% endspoiler %}
 
 {% spoiler Игры не отображаются в альбоме. %}
-**О:** На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
+**О:** На switch'е через hekate во вкладке **tools** выберите **Unset archive bit**.
 
 Не меняйте атрибуты папки Nintendo!
 {: .notice--warning}

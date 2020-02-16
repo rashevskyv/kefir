@@ -14,6 +14,7 @@ author_profile: true
 1. Обновите {% include abbr/kefir_addr.txt %} по инструкции из репозитория, если не делали этого ранее
 1. Скачайте [edizon_cheats.zip](https://github.com/rashevskyv/switch/releases/latest){:target="_blank"} из репозитория и переместите все папки из архива на карту памяти с заменой (**объединить** на macOS)
    * таким образом вы скачаете и установите на свою консоль вообще все читы из базы EdiZon. Если вы хотите установить читы только для какой-то одной конкретной игры, запустите DBI, перейдите в пункт "**Browsed installed applications**" и запомните title ID нужной вам игры (в квадратных скобках перед названием игры). Затем перенесите только папку с нужным Title ID из архива `edizon_cheats.zip/atmosphere/contents` в папку `atmosphere/contents` на вашей карте памяти
+   * Свежие версии читов всегда можно скачать [здесь](https://gbatemp.net/download/cheat-codes-sxos-and-ams-main-cheat-file-updated.36311/updates){:target="_blank"}
 
 ## Работа с читами
 

@@ -42,6 +42,8 @@ ____
   * [SXInstaller](https://sx.xecuter.com/){:target="_blank"} (SXOS only) - аналог tinfoil для SXOS
   * [sys-con](https://github.com/cathery/sys-con/releases/latest){:target="_blank"} - модуль, позволяющий подключать к консоли по USB практически любые геймпады
   * [Tesla Overlay Menu](https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/){:target="_blank"} - специальное оверлей-меню для взаимодействия с системой
+    - [ovlEdiZon.ovl](https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/){:target="_blank"} - Модуль для [использования читов](cheats){:target="_blank"}
+    - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases){:target="_blank"} - Модуль для включения и отключения установленных системных модулей (как-то разгон, emuuibo и прочее)
 
 ____
 
@@ -115,7 +117,7 @@ ____
 1. Запустите приставку без карты памяти с помощью `payload.bin`
 1. Кнопками громкости и кнопкой включения перейдите в меню **tools**
 1. Вставьте карту памяти в приставку
-1. Выберите **Fix archive bit (except Nintendo folder)** и дождитесь окончания установки 
+1. Выберите **Unset archive bit** и дождитесь окончания установки 
 1. Выберите **Back** -> **Launch** - >**YOUR_OS_NAME**
 {% endspoiler %}
 

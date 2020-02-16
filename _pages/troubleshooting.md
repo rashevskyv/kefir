@@ -146,5 +146,5 @@ author_profile: true
 **О:** 
 	* Дайте файлам короткое имя. 
 	* Если не помогло - перекачайте файлы, возможно они не докачаны. 
-	* На switch'е через hekate во вкладке **tools** выберите **Fix archive bit (except Nintendo folder)**.
+	* На switch'е через hekate во вкладке **tools** выберите **Unset archive bit**.
 {% endspoiler %}
