@@ -1,6 +1,6 @@
 <script src="https://check.customfw.xyz/vercheck.js"></script>
 <link rel="stylesheet" type="text/css" href="https://check.customfw.xyz/main.css">
-
+<p><strong>Приставки новой ревизии, а так же Switch Lite не прошиваются!</strong></p>
 <p>Если версия системного ПО вашей приставки 4.0.1 или ниже, то ваш Switch <strong>ТОЧНО</strong> прошиваемый методом <a href="http://switch.customfw.xyz/fusee-gelee">Fusée Gelée</a></p><br>Switch Lite и новая ревизия Switch не прошиваются!
 <p>Введите первые 9 символов серийного номера консоли</p>
 <i>Если после ввода серийника ничего не происходит, отключите блокировщик рекламы</i>
