@@ -160,7 +160,7 @@ AutoRCM - это состояние, для активации которого 
 	* ПК
 	* Телефон с поддержкой OTG на Android или iOS
 	* [Специальный {% include abbr/dongle.txt abbr="донгл" %}](rcmloader){:target="_blank"}
-	* [Модчип](https://vk.com/market-125012133?w=product-125012133_1694792%2Fquery){:target="_blank"}
+	* [Модчип](http://shop.customfw.xyz){:target="_blank"}
 + Доступ к интернету
 + Доступ к устройству, через которое вы сможете закидывать файлы на карту памяти
 
