@@ -21,6 +21,7 @@ set site_img=%site%\images
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
 xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
+xcopy "%wd%\version" "%wd%\base\switch\kefirupdater\" /H /Y /C /R
 rem xcopy "%wd%\version" "%wd%\base\switch\kefirupdater" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
