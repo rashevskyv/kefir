@@ -41,11 +41,11 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [{% include abbr/cfw.txt abbr="кастомную прошивку" %}](cfw){:target="_blank"}
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
-	* [magnet](magnet:?xt=urn:btih:505D28053198E5EB0E1D309CE6CDBFC0B442A88B&dn=9.1.0.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/UzwCCyrF7LH_UQ){:target="_blank"}
-	* [GD](https://drive.google.com/file/d/1Ij2ix8oZ8WTfYmmCXJJNy_bI9EmyngeZ){:target="_blank"}
-	* [MEGA](https://mega.nz/#!8ldFUQ4B!ZOnPJcoeW0xm0TJunJ7Ya2ijW3zMHJl7mhQQEANL0qc){:target="_blank"}
-	* [FEX](https://fex.net/s/nnct9bx){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:829731FB844B5C719A3D7E7132CD2B4EC8B1EC9D&dn=9.2.0.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/XggHlW_ObuZL2Q){:target="_blank"}
+	* [GD](https://drive.google.com/file/d/1eRi_mWXT6fyXT6GS3HD_L2W32Z5CEq9Q){:target="_blank"}
+	* [MEGA](https://mega.nz/#!F59THaYB!gpGvPBTQDvrXyQfOa7Wdkl1eRp1EpD5u4NAqn8yZgr4){:target="_blank"}
+	* [FEX](https://fex.net/ru/s/rtncxyx){:target="_blank"}
 * Карта памяти 
 
 ## Инструкция
