@@ -11,7 +11,7 @@ author_profile: true
 
 {% spoiler Видеоинструкция %}
 
-{% include youtube.html id="9tAYeO0fix0" %}
+{% include youtube.html id="I6R_XaYt7ps" %}
 {: .text-center}
 {: .notice--info}
 
