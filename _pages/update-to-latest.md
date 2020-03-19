@@ -91,6 +91,7 @@ author_profile: true
 1. Выберите "**{% include /vars/update_version.txt %} (exFAT)**"
 1. Дождитесь окончания обработки прошивки и нажмите "**Select firmware**"
 	* **ВНИМАНИЕ!** Если вы прошиваетесь через [Caffeine](caffeine){:target="_blank"} **обязательно** убедитесь, что вы находитесь в EMUNAND, так же проверьте, чтобы в поле "**Target firmware**" стояла версия устанавливаемой прошивки - "**{% include /vars/update_version.txt %} (exFAT)**", а так же, что перед строкой "**Prevent fuse burning (enable AutoRCM)**" стоит **крестик**! 
+	* Если не получается установить прошивку, например, при попытке установить драйвера exFAT на прошивку с таким же номером версии, установите прошивку версией ниже, а затем нужную. Например при установке драйверов на прошивке {% include /vars/update_version.txt %} вы вероятнее всего получите ошибку, в таком случае следует установить [прошивку с версией ниже](https://darthsternie.net/index.php/switch-firmwares/){:target="_blank"} , а уже сверху на неё {% include /vars/update_version.txt %} (exFAT) (например, если была 9.х.х, поставьте 8.х.х)
 
 	![]({{ base_path }}/images/screenshots/choi_caff.png) 
 	{: .text-center}
@@ -99,7 +100,6 @@ author_profile: true
 1. Нажмите "**Start installation**"
 
 1. Дождитесь окончания распаковки прошивки и нажмите "**Start installation**"
-	* Если не получается установить прошивку, например, при попытке установить драйвера exFAT на прошивку с таким же номером версии, установите прошивку версией ниже, а затем нужную. Например при установке драйверов на прошивке {% include /vars/update_version.txt %} вы вероятнее всего получите ошибку, в таком случае следует установить [прошивку с версией ниже](https://darthsternie.net/index.php/switch-firmwares/){:target="_blank"} , а уже сверху на неё {% include /vars/update_version.txt %} (exFAT) (например, если была 9.х.х, поставьте 8.х.х)
 1. После окончания установки нажмите "**Reboot**", "**Shutdown**", чтобы выключить приставку 
 
 Вы можете удалить папку с прошивкой {% include /vars/update_version.txt %} с карты памяти. 
