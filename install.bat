@@ -87,6 +87,7 @@ for %%A in ("1") do if "%st%"==%%A (
 for %%A in ("2") do if "%st%"==%%A (
 	set cfw=SXOS
 	set cfwname=SX OS     
+	goto newcard
 )
 for %%A in ("3") do if "%st%"==%%A (
 	set cfw=BOTH
