@@ -904,9 +904,12 @@ if %lang%==1 (
 	echo.
 )
 
+
+if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 goto cfw_%cfw%
 
 :cfw_ATMOS
+
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
