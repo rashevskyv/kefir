@@ -30,6 +30,7 @@ ____
 * Homebrew 
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases){:target="_blank"} - программа для обновления kefir через интернет
   * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest){:target="_blank"} - файловый менеджер
+  * [FreshHay](https://github.com/devgru/FreshHay/releases){:target="_blank"} - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке
   * [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](checkpoint){:target="_blank"}
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
   * [Incognoto_RCM](https://github.com/jimzrt/Incognito_RCM/releases){:target="_blank"} - программа, стирающая серийный номер приставки, чтобы [заблокировать обновления и спрятать консоль от Nintendo](https://switch.customfw.xyz/block-update){:target="_blank"}
@@ -62,16 +63,6 @@ ____
 1. Запустите `install.bat` из папки, в которую вы распаковали `_kefir.7z`
 1. Вводите ответы, соответствующие вашей ситуации
     * Если вы используете Caffeine, не забудьте выбрать его в опциях установщика
-1. Дождитесь окончания копирования
-1. Продолжайте следовать [руководству](http://switch.customfw.xyz){:target="_blank"}
-{% endspoiler %}
-
-{% spoiler Инструкции по автоматической установке (только для macOS) %}
-
-1. Скачайте [kefir Updater for macOS](https://github.com/Player-0ne/kefirUpdater_macOS/releases/latest){:target="_blank"}, нажав на ссылку **Source code (zip)**
-1. **Вставьте в ПК** карту памяти приставки
-1. Запустите `kefirUpdater.app`
-1. Вводите ответы, соответствующие вашей ситуации
 1. Дождитесь окончания копирования
 1. Продолжайте следовать [руководству](http://switch.customfw.xyz){:target="_blank"}
 {% endspoiler %}
