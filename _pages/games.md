@@ -90,7 +90,7 @@ author_profile: true
 1. Установите `pyusb`
     * `pip3 install pyusb`
 1. Установите `tkinter`
-    * `sudo apt-get install python-tk`
+    * `sudo apt-get install python3-tk`
 1. Перейдите в папку со скриптом 
 1. Сделайте скрипт исполняемым файлом
     * `chmod +x dbibackend`
