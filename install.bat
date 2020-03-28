@@ -612,7 +612,7 @@ if %clear%==1 (
 	if not exist "%sd%:\_backup" (mkdir %sd%:\_backup\)
 	FOR /d %%A IN (%sd%:\*) DO (
 		rem IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" (move /Y %%A %sd%:\_backup)
-		IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" IF "%%A" NEQ "%sd%:\sxos\emunand" IF "%%A" NEQ "%sd%:\emummc" (
+		IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" IF "%%A" NEQ "%sd%:\sxos\emunand" IF "%%A" NEQ "%sd%:\emuMMC" IF "%%A" NEQ "%sd%:\emummc" (
 			echo %%A
 			move /Y %%A %sd%:\_backup
 			)
@@ -681,12 +681,9 @@ if exist "%sd%:\atmosphere\hekate_kips" (RD /s /q "%sd%:\atmosphere\hekate_kips"
 if exist "%sd%:\bootloader\debug" (RD /s /q "%sd%:\bootloader\debug")
 if exist "%sd%:\modules" (RD /s /q "%sd%:\modules")
 
-if exist "%sd%:\atmosphere\titles" (mkdir %sd%:\atmosphere\contents)
-if exist "%sd%:\atmosphere\content" (mkdir %sd%:\atmosphere\contents)
-if exist "%sd%:\atmosphere\titles" (xcopy "%sd%:\atmosphere\titles\*" "%sd%:\atmosphere\contents" /H /Y /C /R /S /E)
-if exist "%sd%:\atmosphere\titles" (RD /s /q  "%sd%:\atmosphere\titles")
-if exist "%sd%:\atmosphere\content" (xcopy "%sd%:\atmosphere\content\*" "%sd%:\atmosphere\contents" /H /Y /C /R /S /E)
-if exist "%sd%:\atmosphere\content" (RD /s /q  "%sd%:\atmosphere\content")
+if exist "%sd%:\atmosphere\titles" (rename %sd%:\atmosphere\titles contents)
+if exist "%sd%:\atmosphere\title" (rename %sd%:\atmosphere\title contents)
+if exist "%sd%:\atmosphere\content" (rename %sd%:\atmosphere\content contents)
 
 if exist "%sd%:\atmosphere\contents\0100000000000032" (RD /s /q "%sd%:\atmosphere\contents\0100000000000032")
 if exist "%sd%:\atmosphere\contents\0100000000000034" (RD /s /q "%sd%:\atmosphere\contents\0100000000000034")
@@ -770,8 +767,11 @@ findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
 
 RD /s /q "%sd%:\_themebkp"
 if exist "%sd%:\atmosphere\contents\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
-if exist "%sd%:\atmosphere\contents\0100000000001000" (xcopy "%sd%:\atmosphere\contents\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
+if exist "%sd%:\sxos\titles\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
+if exist "%sd%:\sxos\titles\0100000000001000" (xcopy "%sd%:\sxos\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
+if exist "%sd%:\atmosphere\titles\0100000000001000" (xcopy "%sd%:\atmosphere\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
 if exist "%sd%:\atmosphere\contents\0100000000001000" (RD /s /q "%sd%:\atmosphere\contents\0100000000001000")
+if exist "%sd%:\sxos\titles\0100000000001000" (RD /s /q "%sd%:\sxos\titles\0100000000001000")
 if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
@@ -992,6 +992,7 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 if %dbi_flag%==0 (
 	del "%sd%:\switch\dbi_old.nro"
 	del "%sd%:\switch\.dbi_old.nro.star"
+	del "%sd%:\keys.txt"
 	)
 if %dbi_flag%==1 (
 	del "%sd%:\switch\dbi.nro"
