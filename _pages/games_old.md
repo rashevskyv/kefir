@@ -1,5 +1,5 @@
 ---
-permalink: /games-old.html
+permalink: /games_old.html
 title: Установка игр, DLC, обновлений по USB с помощью DBIv49 и NS USB Loader
 author_profile: true
 ---
