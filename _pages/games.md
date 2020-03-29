@@ -130,6 +130,12 @@ author_profile: true
 
 {% spoiler Linux и MacOS %}
 
+{% spoiler Подготовительные работы в MacOS %}
+
+1. Установите [Android File Transfer](https://www.android.com/filetransfer/){:target="_blank"}, если версия вашей MacOS 10.13 или новее
+
+{% endspoiler %}
+
 Установка по USB через указанный способ поддерживает только форматы `NSP` и `NSZ`!
 {: .notice--info}
 
