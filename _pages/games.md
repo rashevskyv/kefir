@@ -81,7 +81,7 @@ author_profile: true
 {% spoiler Windows - Подготовительные работы (выполняются едино-разово) %}
 
 {% include /inc/zadig.txt %}
-1. Скачайте и установите [dbibackend installer](files/dbibackend-setup.0.4.exe){:target="_blank"} в удобную для вас папку
+1. Скачайте и установите [dbibackend installer](files/dbibackend-setup.exe){:target="_blank"} в удобную для вас папку
 	* Установщик ассоциирует dbibackend с файлами `.nsz`, `.nsp`, `.xci`
 	* Установщик добавит dbibackend в меню "Отправить" в Windows
 
