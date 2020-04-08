@@ -346,13 +346,6 @@ if %lang%==1 (
 	ECHO         2.  Совместимая с NS USB Loader
 	ECHO         3.  Обе весии
 	ECHO.
-	ECHO --------------------------------------------------------------------
-	ECHO  SYS-CON - модуль для работы с проводными геймпадами. Почти любой
-	ECHO  xinput-совместимый геймпад благодаря этому модулю, становится 
-	ECHO  совместимым со Switch. Просто подключите геймпад по USB к консоли.
-	ECHO  ВНИМАНИЕ! Модуль конфликтует с 8bitdo-адаптером!
-	ECHO --------------------------------------------------------------------
-	ECHO.
 	ECHO ====================================================================
 	ECHO                                                          Q.  Выход
 ) else (
@@ -933,6 +926,7 @@ if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
 
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
 
 if exist "%sd%:\sxos\emunand" (
