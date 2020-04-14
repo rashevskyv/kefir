@@ -77,7 +77,7 @@ addons:
     url: /emuiibo
             
 bottom:
-  - title: <div class="notice--danger">Вышла новая версия системного ПО! Если у вас не стоит incognito, отключите WiFi, чтобы случайно не обновить прошивку!</div>
+  - title: <div class="notice--danger"><strong>Вышла новая версия системного ПО! Если у вас не стоит incognito, отключите WiFi, чтобы случайно не обновить прошивку!</strong></div>
   - title: <div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
   - title: <div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br>По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
   - title: <div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
