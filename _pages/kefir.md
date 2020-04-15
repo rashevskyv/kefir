@@ -31,7 +31,7 @@ ____
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases){:target="_blank"} - программа для обновления kefir через интернет
   * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest){:target="_blank"} - файловый менеджер
   * [FreshHay](https://github.com/devgru/FreshHay/releases){:target="_blank"} - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке
-  * [JKSV](https://github.com/J-D-K/JKSV/releases){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](backup_saves){:target="_blank"}
+  * [JKSV](https://github.com/J-D-K/JKSV/releases){:target="_blank"} - программа для резервного копирования и восстановления сейвов
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
   * [Incognoto_RCM](https://github.com/jimzrt/Incognito_RCM/releases){:target="_blank"} - программа, стирающая серийный номер приставки, чтобы [заблокировать обновления и спрятать консоль от Nintendo](https://switch.customfw.xyz/block-update){:target="_blank"}
   * [pplay](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
