@@ -31,13 +31,12 @@ ____
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases){:target="_blank"} - программа для обновления kefir через интернет
   * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest){:target="_blank"} - файловый менеджер
   * [FreshHay](https://github.com/devgru/FreshHay/releases){:target="_blank"} - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке
-  * [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](checkpoint){:target="_blank"}
+  * [JKSV](https://github.com/J-D-K/JKSV/releases){:target="_blank"} - программа для [резервного копирования и восстановления сейвов](backup_saves){:target="_blank"}
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
   * [Incognoto_RCM](https://github.com/jimzrt/Incognito_RCM/releases){:target="_blank"} - программа, стирающая серийный номер приставки, чтобы [заблокировать обновления и спрятать консоль от Nintendo](https://switch.customfw.xyz/block-update){:target="_blank"}
   * [pplay](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
   * [{% include /inc/tinfoil.txt %}](https://discord.gg/qxdYtrJ){:target="_blank"} - программа, позволяющая [качать игры](tinfoil){:target="_blank"} для приставки прямо из сети 
   * [ChoiDujourNX ](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
-  * [nxmtp](https://github.com/liuervehc/nxmtp/releases/latest){:target="_blank"} - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу 
   * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
   * DBI - программа для [установки игр](games){:target="_blank"} по USB или с карты памяти
   * [SXInstaller](https://sx.xecuter.com/){:target="_blank"} (SXOS only) - аналог tinfoil для SXOS
@@ -69,9 +68,18 @@ ____
 
 {% spoiler Инструкция по установке вручную (все ОС) %}
 
+### Вы можете получить доступ к карте памяти двумя способами: 
+
+1. Достав карту памяти из приставки и вставив её в ПК
+  1. Перезагрузите приставку через меню, вызываемое удерживанием кнопки (POWER) 
+  1. На сплеш-скрине кефира нажмите кнопку понижения громкости, чтобы попасть в hekate 
+  1. Находясь в hekate вы модете достать карту памяти и вставить её в ПК
+1. С помощью DBI 
+  1. 
+
 ### Удаление файлов старых прошивок
 
-1. Если вы использовали пользовательские модификации, читы или переводы, переместите папку 'titles' из папки `sxos` или `ReiNX` или `atmosphere` (название папки зависит от вашей прошивки) в корень карты памяти. Если не использовали, пропустите эту часть
+1. Если вы использовали пользовательские модификации, читы или переводы, переместите папку `titles` из папки `sxos` или `ReiNX` или `atmosphere` (название папки зависит от вашей прошивки) в корень карты памяти. Если не использовали, пропустите эту часть
 1. Удалите из папки 'titles' папки со следующими названиями (если они там есть): 
   * `010000000000100D`
   * `0100000000000032`
@@ -82,7 +90,7 @@ ____
   * `0100000000001000`
   * `0100000000000352`
   * `4200000000000010`
-1. Удалите из корня вашей карты памяти все папки, кроме папки `titles`, `emuMMC` и `Nintendo`, если таковые там есть
+1. Удалите из корня вашей карты памяти все папки, кроме папок `titles`, `sxos`, `emuMMC` и `Nintendo`, если таковые там есть
 
 ### Для установки Atmosphere
 
