@@ -17,6 +17,7 @@ set dbi=3
 set dbi_flag=0
 set tesla=0
 set tesla_flag=2
+set ten_flag=2
 
 :disclaimer
 cls
@@ -106,9 +107,10 @@ ECHO    Choose System FW version
 ECHO.
 ECHO    Укажите версию системного ПО
 ECHO.
-ECHO           1. 9.1.0 and higher 
-ECHO              9.1.0 и выше
-ECHO           2. Less then 9.1.0
+ECHO           1. 9.1.0 or 9.2.0
+ECHO              9.1.0 или 9.2.0
+ECHO           2. 10.0.0
+ECHO           3. Less then 9.1.0
 ECHO              Ниже, чем 9.1.0
 ECHO.
 ECHO    If the firmware version is higher than 9.1.0, Tesla Overlay
@@ -126,7 +128,8 @@ set st=
 set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set tesla_flag=1)
-for %%A in ("2") do if "%st%"==%%A (set tesla_flag=0)
+for %%A in ("2") do if "%st%"==%%A (set ten_flag=1)
+for %%A in ("3") do if "%st%"==%%A (set tesla_flag=0)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 goto newcard
@@ -991,6 +994,9 @@ if %dbi_flag%==0 (
 if %dbi_flag%==1 (
 	del "%sd%:\switch\dbi.nro"
 	del "%sd%:\switch\.dbi.nro.star"
+	)
+if %ten_flag%==1 (
+	del "%sd%:\atmosphere\kips\ams_mitm.kip"
 	)
 
 echo                                    DONE
