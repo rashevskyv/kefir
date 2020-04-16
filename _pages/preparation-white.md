@@ -23,7 +23,7 @@ author_profile: true
 	* Пользователям {% include abbr/caffeine.txt abbr="Caffeine" %} для игры в лицензию нужно будет запускать не {% include abbr/sysnand.txt abbr="SysNAND" %}, а {% include abbr/emunand.txt abbr="EmuNAND" %}, созданный специально для лицензии
     * В случае, если у вас нет оригинального бекапа, вы можете отформатировать свой SysNAND с помощью программы [Haku33](https://github.com/StarDustCFW/Haku33/releases/latest){:target="blank_"}
 1. [Запуск кастомной прошивки](cfw){:target="blank_"} - теперь запуск кастома делается через {% include abbr/emunand.txt abbr="EmuNAND" %}, а запуск лицензии - через {% include abbr/sysnand.txt abbr="SysNAND" %} или {% include abbr/emunand.txt abbr="EmuNAND" %}, созданный специально для лицензии. Забыли как запускать первое и второе? Вернитесь к [инструкции по созданию эмунанда](emunand){:target="blank_"} и освежите себе память. 
-1. [Обновление официальной прошивки до последней версии системного ПО](update-to-latest){:target="blank_"}
+1. [Обновление официальной прошивки до рекомендуемой версии системного ПО](update-to-latest){:target="blank_"}
 	* **ВНИМАНИЕ!!! НИКОГДА НЕ ОБНОВЛЯЙТЕ ПРОШИВКУ в {% include abbr/sysnand.txt abbr="SysNAND" %}, если используете {% include abbr/caffeine.txt abbr="Caffeine" %}**. Сделайте себе копию SysNAND в отдельном emuMMC и обновляйте его там, его же используйте для запуска официальной прошивки!
 	* Всегда загружайте прошивку через hekate!
 	* Это может быть обычный {% include abbr/sysnand.txt abbr="SysNAND" %}, в случае работы с {% include abbr/fusegele.txt abbr="Fusée Gelée" %}, или ещё один EmuNAND, в случае работы с {% include abbr/caffeine.txt abbr="Caffeine" %}.
