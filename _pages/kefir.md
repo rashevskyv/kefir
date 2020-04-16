@@ -23,11 +23,13 @@ author_profile: true
 ____
 
 ### Состав kefir 
-    
-* Atmosphere или SXOS
-* Поддерживает запуск через [Fusée Gelée](fusee-gelee){:target="_blank"} или [Caffeine](caffeine){:target="_blank"}
-* [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} и [ACID-патчи для неё](https://github.com/Joonie86/hekate/releases/latest){:target="_blank"}
-* Homebrew 
+
+* Кастомная прошивка на выбор: 
+  * [NEUTOS](https://github.com/borntohonk/NEUTOS/releases){:target="_blank"} - специальный форк Atmosphere OS, заточенный для работы с tinfoil и для беспроблемного запуска пиратских игр с приставки 
+  * [SXOS](https://sx.xecuter.com){:target="_blank"}
+* Загрузчик [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"} поддерживает запуск через [Fusée Gelée](fusee-gelee){:target="_blank"} или [Caffeine](caffeine){:target="_blank"}
+* [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}
+* Установленное Homebrew 
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases){:target="_blank"} - программа для обновления kefir через интернет
   * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest){:target="_blank"} - файловый менеджер
   * [FreshHay](https://github.com/devgru/FreshHay/releases){:target="_blank"} - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке

@@ -5,6 +5,14 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
+{% spoiler Видеоинструкция %}
+
+{% include youtube.html id="ask8jEZ9wsE" %}
+{: .text-center}
+{: .notice--info}
+
+{% endspoiler %}
+
 В SXOS есть свой инструмент для работы с читами, работа с читами SXOS рассмотрена в [официальном руководстве](https://sx.xecuter.com/download/manuals/sxos/[RU]_SXOS_v1.3.pdf){:target="_blank"} на странице 14.
 
 ## Подготовительные работы 
