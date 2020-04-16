@@ -107,10 +107,9 @@ ECHO    Choose System FW version
 ECHO.
 ECHO    Укажите версию системного ПО
 ECHO.
-ECHO           1. 9.1.0 or 9.2.0
-ECHO              9.1.0 или 9.2.0
-ECHO           2. 10.0.0
-ECHO           3. Less then 9.1.0
+ECHO           1. 9.1.0 or higher
+ECHO              9.1.0 или выше
+ECHO           2. Less then 9.1.0
 ECHO              Ниже, чем 9.1.0
 ECHO.
 ECHO    If the firmware version is higher than 9.1.0, Tesla Overlay
@@ -128,8 +127,7 @@ set st=
 set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set tesla_flag=1)
-for %%A in ("2") do if "%st%"==%%A (set ten_flag=1)
-for %%A in ("3") do if "%st%"==%%A (set tesla_flag=0)
+for %%A in ("2") do if "%st%"==%%A (set tesla_flag=0)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 goto newcard
@@ -700,6 +698,7 @@ if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0100000000001013" (RD /s /q "%sd%:\atmosphere\contents\0100000000001013")
 if exist "%sd%:\atmosphere\contents\010000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
 if exist "%sd%:\atmosphere\contents\420000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
+if exist "%sd%:\atmosphere\kips\ams_mitm.kip" (del "%sd%:\atmosphere\kips\ams_mitm.kip")
 
 if exist "%sd%:\atmosphere\fusee-secondary_atmo.bin" (del "%sd%:\atmosphere\fusee-secondary_atmo.bin")
 if exist "%sd%:\atmosphere\hbl_atmo.nsp" (del "%sd%:\atmosphere\hbl_atmo.nsp")
@@ -911,7 +910,7 @@ goto cfw_%cfw%
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
-if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
+rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
