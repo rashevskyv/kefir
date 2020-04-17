@@ -110,8 +110,8 @@ if exist "%sd%\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%\atmosphere\kip
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
-del "%bd%\atmo\atmosphere\kips\ams_mitm.kip"
-del "%bd%\sxos\atmosphere\kips\ams_mitm.kip"
+rem del "%bd%\atmo\atmosphere\kips\ams_mitm.kip"
+rem del "%bd%\sxos\atmosphere\kips\ams_mitm.kip"
 
 if exist "%sd%\atmosphere" (
 	attrib -A /S /D %sd%\atmosphere\*
