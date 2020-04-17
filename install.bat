@@ -17,7 +17,6 @@ set dbi=3
 set dbi_flag=0
 set tesla=0
 set tesla_flag=2
-set ten_flag=2
 
 :disclaimer
 cls
@@ -107,8 +106,8 @@ ECHO    Choose System FW version
 ECHO.
 ECHO    Укажите версию системного ПО
 ECHO.
-ECHO           1. 9.1.0 or higher
-ECHO              9.1.0 или выше
+ECHO           1. 9.1.0 and higher 
+ECHO              9.1.0 и выше
 ECHO           2. Less then 9.1.0
 ECHO              Ниже, чем 9.1.0
 ECHO.
@@ -563,7 +562,6 @@ if %syscon_flag%==2 (
 
 if %tesla_flag%==2 (
    if exist "%sd%:\atmosphere\contents\010000000007E51A" (set tesla=1) else (set tesla=0)
-   if exist "%sd%:\atmosphere\contents\420000000007E51A" (set tesla=1) else (set tesla=0)
 ) else (
    set tesla=%tesla_flag%
 )
@@ -696,9 +694,8 @@ if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\00FF747765616BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF747765616BFF")
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
 if exist "%sd%:\atmosphere\contents\0100000000001013" (RD /s /q "%sd%:\atmosphere\contents\0100000000001013")
-if exist "%sd%:\atmosphere\contents\010000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
+if exist "%sd%:\atmosphere\contents\010000000007E51A " (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A ")
 if exist "%sd%:\atmosphere\contents\420000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
-if exist "%sd%:\atmosphere\kips\ams_mitm.kip" (del "%sd%:\atmosphere\kips\ams_mitm.kip")
 
 if exist "%sd%:\atmosphere\fusee-secondary_atmo.bin" (del "%sd%:\atmosphere\fusee-secondary_atmo.bin")
 if exist "%sd%:\atmosphere\hbl_atmo.nsp" (del "%sd%:\atmosphere\hbl_atmo.nsp")
@@ -756,6 +753,7 @@ if exist "%sd%:\bootloader\update.bin" (del "%sd%:\bootloader\update.bin")
 if exist "%sd%:\bootloader\update.bin.sig" (del "%sd%:\bootloader\update.bin.sig")
 if exist "%sd%:\bootloader\patches_template.ini" (del "%sd%:\bootloader\patches_template.ini")
 if exist "%sd%:\bootloader\patches.ini" (del "%sd%:\bootloader\patches.ini")
+
 findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
 	set stock=1
 ) || (
@@ -910,7 +908,7 @@ goto cfw_%cfw%
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
-rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
+if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
@@ -931,7 +929,6 @@ if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
 
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
-if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
 
@@ -997,9 +994,6 @@ if %dbi_flag%==0 (
 if %dbi_flag%==1 (
 	del "%sd%:\switch\dbi.nro"
 	del "%sd%:\switch\.dbi.nro.star"
-	)
-if %ten_flag%==1 (
-	del "%sd%:\atmosphere\kips\ams_mitm.kip"
 	)
 
 echo                                    DONE
