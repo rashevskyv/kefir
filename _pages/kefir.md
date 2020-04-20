@@ -37,7 +37,7 @@ ____
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}
   * [Incognoto_RCM](https://github.com/borntohonk/Incognito_RCM/releases/){:target="_blank"} - программа, стирающая серийный номер приставки, чтобы [заблокировать обновления и спрятать консоль от Nintendo](https://switch.customfw.xyz/block-update){:target="_blank"}
   * [pplay](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
-  * [{% include /inc/tinfoil.txt %}](https://discord.gg/qxdYtrJ){:target="_blank"} - программа, позволяющая [качать игры](tinfoil){:target="_blank"} для приставки прямо из сети 
+  * [{% include /inc/tinfoil.txt %}](https://discord.gg/X3Q9tM){:target="_blank"} - программа, позволяющая [качать игры](tinfoil){:target="_blank"} для приставки прямо из сети 
   * [ChoiDujourNX ](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
   * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
   * DBI - программа для [установки игр](games){:target="_blank"} по USB или с карты памяти
