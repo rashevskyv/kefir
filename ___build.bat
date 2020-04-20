@@ -12,6 +12,7 @@ set site=F:\git\site\switch
 set ps=D:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
 if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
+if exist "%reldir%\atmo_vanilla.zip" (del "%reldir%\atmo_vanilla.zip")
 if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
 if exist "%reldir%\_kefir.7z" (del "%reldir%\_kefir.7z")
 set site_inc=%site%\_includes\inc\kefir
@@ -98,6 +99,7 @@ if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
 copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
 copy "%sd%\bootloader\hekate_ipl_atmo.ini" "%sd%\bootloader\hekate_ipl.ini"
 del "%sd%:\sept\payload_*.bin"
+RD /s /q "%sd%:\switch\tinfoil"
 
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
@@ -208,10 +210,10 @@ rem kefir
 "C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
 
 rem atmo
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!sys-con -xr!.overlays %reldir%\atmo.zip %bd%\atmo\* 
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!sys-con -xr!.overlays %reldir%\atmo.zip %bd%\atmo\* 
 
 rem atmo_vanilla
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
 
 rem sxos
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\sxos.zip %bd%\sxos\*
