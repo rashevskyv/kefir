@@ -55,7 +55,7 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 :cfw_ATMOS
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
-if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
+rem if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%\switch\sx.nro" (del "%sd%\switch\sx.nro")

@@ -17,6 +17,7 @@ set dbi=3
 set dbi_flag=0
 set tesla=0
 set tesla_flag=2
+set neutos=0
 
 :disclaimer
 cls
@@ -67,11 +68,12 @@ ECHO ------------------------------------------------------------------
 ECHO.
 ECHO    Choose SXOS only if you bought it or will buy
 ECHO.
-ECHO    Выбирете SXOS только, если вы купили её или собираетесь
+ECHO    Выбирете SXOS только, если вы купили её или планируете купить
 ECHO.
-ECHO           1. Atmosphere
-ECHO           2. SXOS
-ECHO           3. Atmo + SX
+ECHO           1. NEUTOS with tinfoil
+ECHO           2. Atmosphere without tinfoil
+ECHO           3. SXOS
+ECHO           4. Atmo + SX
 ECHO.
 ECHO ==================================================================
 ECHO                                                       O.  Options
@@ -81,15 +83,19 @@ set st=
 set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (
+	set cfw=NEUTOS
+	set cfwname=NEUTOS
+)
+for %%A in ("2") do if "%st%"==%%A (
 	set cfw=ATMOS
 	set cfwname=Atmosphere
 )
-for %%A in ("2") do if "%st%"==%%A (
+for %%A in ("3") do if "%st%"==%%A (
 	set cfw=SXOS
 	set cfwname=SX OS     
 	goto newcard
 )
-for %%A in ("3") do if "%st%"==%%A (
+for %%A in ("4") do if "%st%"==%%A (
 	set cfw=BOTH
 	set cfwname=both OSes 
 )
@@ -167,9 +173,10 @@ if %lang%==1 (
 	ECHO.
 	ECHO    Выбирете SXOS только, если вы купили её или собираетесь
 	ECHO.
-	ECHO           1. Atmosphere
-	ECHO           2. SXOS
-	ECHO           3. Atmo + SX
+	ECHO           1. NEUTOS с поддержкой tinfoil
+	ECHO           2. Atmosphere без поддержки tinfoil
+	ECHO           3. SXOS
+	ECHO           4. Atmo + SX
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -183,9 +190,10 @@ if %lang%==1 (
 	ECHO.
 	ECHO    Choose SXOS only if you bought it or will buy
 	ECHO.
-	ECHO           1. Atmosphere
-	ECHO           2. SXOS
-	ECHO           3. Atmo + SX
+	ECHO           1. NEUTOS with tinfoil
+	ECHO           2. Atmosphere without tinfoil
+	ECHO           3. SXOS
+	ECHO           4. Atmo + SX
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -196,20 +204,23 @@ set st=
 set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (
-	set cfw=ATMOS
-	set cfwnum=1
-	set cfwname=Atmosphere
+	set cfw=NEUTOS
+	set cfwname=NEUTOS
 )
 for %%A in ("2") do if "%st%"==%%A (
-	set cfw=SXOS
-	set cfwnum=2
-	set cfwname=SX OS     
+	set cfw=ATMOS
+	set cfwname=Atmosphere
 )
 for %%A in ("3") do if "%st%"==%%A (
+	set cfw=SXOS
+	set cfwname=SX OS     
+	goto newcard
+)
+for %%A in ("4") do if "%st%"==%%A (
 	set cfw=BOTH
-	set cfwnum=3
 	set cfwname=both OSes 
 )
+
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 cls
@@ -285,6 +296,38 @@ for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
+:caffeine
+cls
+ECHO --------------------------------------------------------------------
+ECHO               ======          Options           =====
+ECHO --------------------------------------------------------------------
+if %lang%==1 (
+	ECHO --------------------------------------------------------------------
+	ECHO                   ======     Выбор ОС?     =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  NEUTOS с поддержкой tinfoil 
+	ECHO         2.  Atmosphere, tinfoil НЕ поддерживается 
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Выход
+) else (
+	ECHO --------------------------------------------------------------------
+	ECHO                      =====  Choose OS? =====
+	ECHO --------------------------------------------------------------------
+	ECHO.
+	ECHO         1.  NEUTOS with tinfoil support
+	ECHO         2.  Atmosphere, not support tinfoil
+	ECHO.
+	ECHO ====================================================================
+	ECHO                                                          Q.  Quit
+)
+set st=
+set /p st=:
+
+for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
+for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
+for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :syscon
 cls
@@ -904,11 +947,26 @@ if %lang%==1 (
 if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 goto cfw_%cfw%
 
+:cfw_NEUTOS
+
+set neutos=1
+
 :cfw_ATMOS
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
-if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
+if %neutos%==1 (
+	copy "%sd%:\sept\payload_neutos.bin" "%sd%:\sept\payload.bin"
+) else (
+	copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
+	del "%sd%:\boot.bin"
+)
+
+del "%sd%:\sept\payload_atmo.bin"
+del "%sd%:\sept\payload_neutos.bin"
+
+
+rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
@@ -930,6 +988,7 @@ if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
 
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
 if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
 
 if exist "%sd%:\sxos\emunand" (
