@@ -973,8 +973,7 @@ if %neutos%==1 (
 
 )
 
-del "%sd%:\sept\payload_atmo.bin"
-del "%sd%:\sept\payload_neutos.bin"
+del "%sd%:\sept\payload_*.bin"
 
 rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
@@ -1047,7 +1046,7 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 
 :cfw_DONE
 
-if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_*.ini")
+del "%sd%:\bootloader\hekate_ipl_*.ini"
 
 if %dbi_flag%==0 (
 	del "%sd%:\switch\dbi_old.nro"
