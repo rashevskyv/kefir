@@ -957,28 +957,30 @@ xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
 if %neutos%==1 (
 	copy "%sd%:\sept\payload_neutos.bin" "%sd%:\sept\payload.bin"
+	if %stock%==0 (
+		if exist "%sd%:\bootloader\hekate_ipl_neutos.ini" (copy "%sd%:\bootloader\hekate_ipl_neutos.ini" "%sd%:\bootloader\hekate_ipl.ini")
+	) else (
+		if exist "%sd%:\bootloader\hekate_ipl_neutos_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_neutos_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
+	)
 ) else (
 	copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
-	del "%sd%:\boot.bin"
+	del "%sd%:\boot.dat"
+	if %stock%==0 (
+		if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
+	) else (
+		if exist "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
+	)
+
 )
 
 del "%sd%:\sept\payload_atmo.bin"
 del "%sd%:\sept\payload_neutos.bin"
-
 
 rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
-if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_both.ini")
-if exist "%sd%:\bootloader\hekate_ipl_misc.ini" (del "%sd%:\bootloader\hekate_ipl_misc.ini")
-if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
-if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
-if %stock%==0 (
-	if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
-)
-if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
 if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\contents\  /Y /S /E /H /R /D)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
@@ -1013,15 +1015,16 @@ goto caffeine
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
-if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
-if exist "%sd%:\bootloader\hekate_ipl_misc.ini" (del "%sd%:\bootloader\hekate_ipl_misc.ini")
-if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
-if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_both.ini")
-if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (copy "%sd%:\bootloader\hekate_ipl_sx.ini" "%sd%:\bootloader\hekate_ipl.ini")
-if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
+
+if %stock%==0 (
+	if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (copy "%sd%:\bootloader\hekate_ipl_sx.ini" "%sd%:\bootloader\hekate_ipl.ini")
+) else (
+	if exist "%sd%:\bootloader\hekate_ipl_sx_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_sx_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
+)
+
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
-if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
+rem if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
 
 goto caffeine
 
@@ -1029,12 +1032,12 @@ goto caffeine
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
-if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (del "%sd%:\bootloader\hekate_ipl_atmo.ini")
-if exist "%sd%:\bootloader\hekate_ipl_misc.ini" (del "%sd%:\bootloader\hekate_ipl_misc.ini")
-if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (del "%sd%:\bootloader\hekate_ipl_sx.ini")
-if exist "%sd%:\bootloader\hekate_ipl_hm.ini" (del "%sd%:\bootloader\hekate_ipl_hm.ini")
-if exist "%sd%:\bootloader\hekate_ipl_both.ini" (copy "%sd%:\bootloader\hekate_ipl_both.ini" "%sd%:\bootloader\hekate_ipl.ini")
-if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_both.ini")
+
+if %stock%==0 (
+	if exist "%sd%:\bootloader\hekate_ipl_both.ini" (copy "%sd%:\bootloader\hekate_ipl_both.ini" "%sd%:\bootloader\hekate_ipl.ini")
+) else (
+	if exist "%sd%:\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_both_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
+)
 
 :caffeine
 if %caffeine%==1 (goto cfw_DONE)
@@ -1044,6 +1047,7 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 
 :cfw_DONE
 
+if exist "%sd%:\bootloader\hekate_ipl_both.ini" (del "%sd%:\bootloader\hekate_ipl_*.ini")
 
 if %dbi_flag%==0 (
 	del "%sd%:\switch\dbi_old.nro"
