@@ -965,6 +965,7 @@ if %neutos%==1 (
 ) else (
 	copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
 	del "%sd%:\boot.dat"
+	del "%sd%:\bootloader\payloads\NEUTOS.bin"
 	RD /s /q "%sd%:\switch\tinfoil"
 	if %stock%==0 (
 		if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")

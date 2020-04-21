@@ -58,9 +58,9 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
 rem if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
-copy "%sd%:\sept\payload_neutos.bin" "%sd%:\sept\payload.bin"
+copy "%sd%\sept\payload_neutos.bin" "%sd%\sept\payload.bin"
 copy "%sd%\bootloader\hekate_ipl_neutos.ini" "%sd%\bootloader\hekate_ipl.ini"
-del "%sd%:\sept\payload_*.bin"
+del "%sd%\sept\payload_*.bin"
 
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
@@ -96,10 +96,10 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
 if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
-copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
+copy "%sd%\sept\payload_atmo.bin" "%sd%\sept\payload.bin"
 copy "%sd%\bootloader\hekate_ipl_atmo.ini" "%sd%\bootloader\hekate_ipl.ini"
-del "%sd%:\sept\payload_*.bin"
-RD /s /q "%sd%:\switch\tinfoil"
+del "%sd%\sept\payload_*.bin"
+RD /s /q "%sd%\switch\tinfoil"
 
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
@@ -135,15 +135,17 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
 :cfw_SXOS
 
+
+
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
-if exist "%sd%\bootloader\hekate_ipl_atmo.ini" (del "%sd%\bootloader\hekate_ipl_atmo.ini")
-if exist "%sd%\bootloader\hekate_ipl_misc.ini" (del "%sd%\bootloader\hekate_ipl_misc.ini")
-if exist "%sd%\bootloader\hekate_ipl_hm.ini" (del "%sd%\bootloader\hekate_ipl_hm.ini")
-if exist "%sd%\bootloader\hekate_ipl_both.ini" (del "%sd%\bootloader\hekate_ipl_both.ini")
+
+copy "%sd%\sept\payload_atmo.bin" "%sd%\sept\payload.bin"
 if exist "%sd%\bootloader\hekate_ipl_sx.ini" (copy "%sd%\bootloader\hekate_ipl_sx.ini" "%sd%\bootloader\hekate_ipl.ini")
-if exist "%sd%\bootloader\hekate_ipl_sx.ini" (del "%sd%\bootloader\hekate_ipl_sx.ini")
+del "%sd%\sept\payload_*.bin"
+del "%sd%\bootloader\hekate_ipl_*.ini"
+
 if exist "%sd%\atmosphere\exefs_patches" (RD /s /q "%sd%\atmosphere\exefs_patches")
 if exist "%sd%\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%\atmosphere\kip_patches\fs_patches")
 
@@ -213,7 +215,7 @@ rem atmo
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\atmo.zip %bd%\atmo\* 
 
 rem atmo_vanilla
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!NEUTOS.bin -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
 
 rem sxos
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw  -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\sxos.zip %bd%\sxos\*
