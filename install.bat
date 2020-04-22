@@ -1034,11 +1034,14 @@ xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 
+
+copy "%sd%:\sept\payload_neutos.bin" "%sd%:\sept\payload.bin"
 if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_both.ini" (copy "%sd%:\bootloader\hekate_ipl_both.ini" "%sd%:\bootloader\hekate_ipl.ini")
 ) else (
 	if exist "%sd%:\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_both_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
+
 
 :caffeine
 if %caffeine%==1 (goto cfw_DONE)
@@ -1049,6 +1052,7 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 :cfw_DONE
 
 del "%sd%:\bootloader\hekate_ipl_*.ini"
+del "%sd%:\sept\payload_*.bin"
 
 if %dbi_flag%==0 (
 	del "%sd%:\switch\dbi_old.nro"
