@@ -252,7 +252,7 @@ rem atmo
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\atmo.zip %bd%\atmo\* 
 
 rem atmo_vanilla
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!NEUTOS.bin -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
+rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!NEUTOS.bin -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
 
 rem sxos
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw  -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\sxos.zip %bd%\sxos\*
