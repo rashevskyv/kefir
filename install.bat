@@ -70,10 +70,9 @@ ECHO    Choose SXOS only if you bought it or will buy
 ECHO.
 ECHO    Выбирете SXOS только, если вы купили её или планируете купить
 ECHO.
-ECHO           1. NEUTOS with tinfoil
-ECHO           2. Atmosphere without tinfoil
-ECHO           3. SXOS
-ECHO           4. Atmo + SX
+ECHO           1. Atmosphere
+ECHO           2. SXOS
+ECHO           3. Atmo + SX
 ECHO.
 ECHO ==================================================================
 ECHO                                                       O.  Options
@@ -82,20 +81,20 @@ ECHO                                                       Q.  Quit
 set st=
 set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (
+for %%A in ("4") do if "%st%"==%%A (
 	set cfw=NEUTOS
 	set cfwname=NEUTOS
 )
-for %%A in ("2") do if "%st%"==%%A (
+for %%A in ("1") do if "%st%"==%%A (
 	set cfw=ATMOS
 	set cfwname=Atmosphere
 )
-for %%A in ("3") do if "%st%"==%%A (
+for %%A in ("2") do if "%st%"==%%A (
 	set cfw=SXOS
 	set cfwname=SX OS     
 	goto newcard
 )
-for %%A in ("4") do if "%st%"==%%A (
+for %%A in ("3") do if "%st%"==%%A (
 	set cfw=BOTH
 	set cfwname=both OSes 
 )
@@ -173,10 +172,9 @@ if %lang%==1 (
 	ECHO.
 	ECHO    Выбирете SXOS только, если вы купили её или собираетесь
 	ECHO.
-	ECHO           1. NEUTOS с поддержкой tinfoil
-	ECHO           2. Atmosphere без поддержки tinfoil
-	ECHO           3. SXOS
-	ECHO           4. Atmo + SX
+	ECHO           1. Atmosphere
+	ECHO           2. SXOS
+	ECHO           3. Atmo + SX
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -190,10 +188,9 @@ if %lang%==1 (
 	ECHO.
 	ECHO    Choose SXOS only if you bought it or will buy
 	ECHO.
-	ECHO           1. NEUTOS with tinfoil
-	ECHO           2. Atmosphere without tinfoil
-	ECHO           3. SXOS
-	ECHO           4. Atmo + SX
+	ECHO           1. Atmosphere
+	ECHO           2. SXOS
+	ECHO           3. Atmo + SX
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -203,20 +200,20 @@ if %lang%==1 (
 set st=
 set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (
+for %%A in ("4") do if "%st%"==%%A (
 	set cfw=NEUTOS
 	set cfwname=NEUTOS
 )
-for %%A in ("2") do if "%st%"==%%A (
+for %%A in ("1") do if "%st%"==%%A (
 	set cfw=ATMOS
 	set cfwname=Atmosphere
 )
-for %%A in ("3") do if "%st%"==%%A (
+for %%A in ("2") do if "%st%"==%%A (
 	set cfw=SXOS
 	set cfwname=SX OS     
 	goto newcard
 )
-for %%A in ("4") do if "%st%"==%%A (
+for %%A in ("3") do if "%st%"==%%A (
 	set cfw=BOTH
 	set cfwname=both OSes 
 )
@@ -296,38 +293,37 @@ for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
-:caffeine
-cls
-ECHO --------------------------------------------------------------------
-ECHO               ======          Options           =====
-ECHO --------------------------------------------------------------------
-if %lang%==1 (
-	ECHO --------------------------------------------------------------------
-	ECHO                   ======     Выбор ОС?     =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  NEUTOS с поддержкой tinfoil 
-	ECHO         2.  Atmosphere, tinfoil НЕ поддерживается 
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                          Q.  Выход
-) else (
-	ECHO --------------------------------------------------------------------
-	ECHO                      =====  Choose OS? =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  NEUTOS with tinfoil support
-	ECHO         2.  Atmosphere, not support tinfoil
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                          Q.  Quit
-)
-set st=
-set /p st=:
+rem cls
+rem ECHO --------------------------------------------------------------------
+rem ECHO               ======          Options           =====
+rem ECHO --------------------------------------------------------------------
+rem if %lang%==1 (
+rem 	ECHO --------------------------------------------------------------------
+rem 	ECHO                   ======     Выбор ОС?     =====
+rem 	ECHO --------------------------------------------------------------------
+rem 	ECHO.
+rem 	ECHO         1.  NEUTOS с поддержкой tinfoil 
+rem 	ECHO         2.  Atmosphere, tinfoil НЕ поддерживается 
+rem 	ECHO.
+rem 	ECHO ====================================================================
+rem 	ECHO                                                          Q.  Выход
+rem ) else (
+rem 	ECHO --------------------------------------------------------------------
+rem 	ECHO                      =====  Choose OS? =====
+rem 	ECHO --------------------------------------------------------------------
+rem 	ECHO.
+rem 	ECHO         1.  NEUTOS with tinfoil support
+rem 	ECHO         2.  Atmosphere, not support tinfoil
+rem 	ECHO.
+rem 	ECHO ====================================================================
+rem 	ECHO                                                          Q.  Quit
+rem )
+rem set st=
+rem set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
-for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+rem for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
+rem for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
+rem for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :syscon
 cls
@@ -967,7 +963,7 @@ if %neutos%==1 (
 	copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
 	del "%sd%:\boot.dat"
 	del "%sd%:\bootloader\payloads\NEUTOS.bin"
-	RD /s /q "%sd%:\switch\tinfoil"
+	rem RD /s /q "%sd%:\switch\tinfoil"
 	if %stock%==0 (
 		if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
 	) else (
