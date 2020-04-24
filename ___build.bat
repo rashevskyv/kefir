@@ -41,7 +41,7 @@ pause
 
 echo ------------------------------------------------------------------------
 echo.
-echo                                   ATMO
+echo                                   NEUTOS
 echo.
 echo ------------------------------------------------------------------------
 echo.
@@ -54,7 +54,6 @@ mkdir %sd%
 xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
-:cfw_ATMOS
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
 rem if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
@@ -80,26 +79,25 @@ if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
 echo ------------------------------------------------------------------------
 echo.
-echo                               ATMO VANILLA
+echo                                   ATMO
 echo.
 echo ------------------------------------------------------------------------
 echo.
 
-set sd=%bd%\atmo_vanilla
+set sd=%bd%\atmo
 
+mkdir %bd%
 mkdir %sd%
 
 xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
-:cfw_ATMOS
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
 if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
 copy "%sd%\sept\payload_atmo.bin" "%sd%\sept\payload.bin"
 copy "%sd%\bootloader\hekate_ipl_atmo.ini" "%sd%\bootloader\hekate_ipl.ini"
 del "%sd%\sept\payload_*.bin"
-RD /s /q "%sd%\switch\tinfoil"
 
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
@@ -116,6 +114,45 @@ if exist "%sd%\titles" (RD /s /q "%sd%\titles")
 
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
+
+rem echo ------------------------------------------------------------------------
+rem echo.
+rem echo                               ATMO VANILLA
+rem echo.
+rem echo ------------------------------------------------------------------------
+rem echo.
+
+rem set sd=%bd%\atmo_vanilla
+
+rem mkdir %sd%
+
+rem xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
+rem xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
+
+rem :cfw_ATMOS
+rem xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
+
+rem if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
+rem copy "%sd%\sept\payload_atmo.bin" "%sd%\sept\payload.bin"
+rem copy "%sd%\bootloader\hekate_ipl_atmo.ini" "%sd%\bootloader\hekate_ipl.ini"
+rem del "%sd%\sept\payload_*.bin"
+rem RD /s /q "%sd%\switch\tinfoil"
+
+rem if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
+rem if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
+rem if exist "%sd%\switch\sx.nro" (del "%sd%\switch\sx.nro")
+rem if exist "%sd%\bootloader\ini\sxos.ini" (del "%sd%\bootloader\ini\sxos.ini")
+rem del "%sd%\bootloader\hekate_ipl_*.ini"
+rem if exist "%sd%\sxos\titles" (xcopy %sd%\sxos\titles\* %sd%\atmosphere\titles\  /Y /S /E /H /R /D)
+rem if exist "%sd%\sxos\games" (move /Y %sd%\sxos\games\* %sd%\games)
+rem if exist "%sd%\sxos" (RD /s /q "%sd%\sxos")
+rem if exist "%sd%\switch\sx" (RD /s /q "%sd%\switch\sx")
+rem if exist "%sd%\switch\themes" (RD /s /q "%sd%\switch\themes")
+rem if exist "%sd%\titles" (xcopy "%wd%\titles\*" "%sd%\atmosphere\titles" /H /Y /C /R /S /E)
+rem if exist "%sd%\titles" (RD /s /q "%sd%\titles")
+
+rem if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
+rem if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
   
 echo ------------------------------------------------------------------------
