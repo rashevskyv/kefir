@@ -5,8 +5,8 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
-В данный момент последней прошивкой является {% include /vars/sys_version.txt %}, однако, поскольку она только вышла и недостаточно оттестирована, а так же потому что ещё нет игр требующих её, не рекомендуется пока на неё обновляться. Если же вы уже на ней установите рекомендуемую прошивку по инструкции ниже!
-{: .notice--warning}
+<!--В данный момент последней прошивкой является {% include /vars/sys_version.txt %}, однако, поскольку она только вышла и недостаточно оттестирована, а так же потому что ещё нет игр требующих её, не рекомендуется пока на неё обновляться. Если же вы уже на ней установите рекомендуемую прошивку по инструкции ниже!
+{: .notice--warning}-->
 
 {% spoiler Видеоинструкция %}
 
@@ -39,11 +39,10 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [{% include abbr/cfw.txt abbr="кастомную прошивку" %}](cfw){:target="_blank"}
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
-	* [magnet](magnet:?xt=urn:btih:829731FB844B5C719A3D7E7132CD2B4EC8B1EC9D&dn=9.2.0.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/XggHlW_ObuZL2Q){:target="_blank"}
-	* [GD](https://drive.google.com/file/d/1eRi_mWXT6fyXT6GS3HD_L2W32Z5CEq9Q){:target="_blank"}
-	* [MEGA](https://mega.nz/#!F59THaYB!gpGvPBTQDvrXyQfOa7Wdkl1eRp1EpD5u4NAqn8yZgr4){:target="_blank"}
-	* [FEX](https://fex.net/ru/s/rtncxyx){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:FCCF994B96A0E1B54CC2DBBAE33FABDDED698888&dn=10.0.1.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/mjvHJiXlOd8ArA){:target="_blank"}
+	* [GD](https://drive.google.com/file/d/1kBBeIIdWFcUBYXn7JCV8jcOX9zlF2mzw/view?usp=sharing){:target="_blank"}
+	* [MEGA](https://mega.nz/file/d89ElapL#JMrtmey5G46IiWpc46fCA8wwYeBSVDNMWY0llrA2wzE){:target="_blank"}
 * Карта памяти 
 
 ## Инструкция
