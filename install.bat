@@ -760,6 +760,7 @@ if exist "%sd%:\sxos\bootloader" (RD /s /q  "%sd%:\sxos\bootloader")
 if exist "%sd%:\sxos\switch" (RD /s /q  "%sd%:\sxos\switch")
 if exist "%sd%:\sept" (RD /s /q  "%sd%:\sept")
 if exist "%sd%:\sxos\boot.dat" (del "%sd%:\sxos\boot.dat")
+if exist "%sd%:\games\tinfoil*.*" (del "%sd%:\games\tinfoil*.*")
 if exist "%sd%:\sxos\sxos" (
 	xcopy %sd%:\sxos\sxos\* %sd%:\sxos\ /Y /S /E /H /R /D
 )
