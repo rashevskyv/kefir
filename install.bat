@@ -945,9 +945,9 @@ if %lang%==1 (
 if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 goto cfw_%cfw%
 
-:cfw_NEUTOS
+rem :cfw_NEUTOS
 
-set neutos=1
+rem set neutos=1
 
 :cfw_ATMOS
 
