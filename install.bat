@@ -600,7 +600,7 @@ if %syscon_flag%==2 (
 )
 
 if %tesla_flag%==2 (
-   if exist "%sd%:\atmosphere\contents\010000000007E51A" (set tesla=1) else (set tesla=0)
+   if exist "%sd%:\atmosphere\contents\420000000007E51A" (set tesla=1) else (set tesla=0)
 ) else (
    set tesla=%tesla_flag%
 )
@@ -733,7 +733,7 @@ if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\00FF747765616BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF747765616BFF")
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
 if exist "%sd%:\atmosphere\contents\0100000000001013" (RD /s /q "%sd%:\atmosphere\contents\0100000000001013")
-if exist "%sd%:\atmosphere\contents\010000000007E51A " (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A ")
+if exist "%sd%:\atmosphere\contents\010000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
 if exist "%sd%:\atmosphere\contents\420000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
 
 if exist "%sd%:\atmosphere\fusee-secondary_atmo.bin" (del "%sd%:\atmosphere\fusee-secondary_atmo.bin")
@@ -850,9 +850,8 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 if exist "%sd%:\switch\fakenews-injector\fakenews-injector.nro" (del "%sd%:\switch\fakenews-injector\fakenews-injector.nro")
 if exist "%sd%:\switch\fakenews-injector.nro" (del "%sd%:\switch\fakenews-injector.nro")
 if exist "%sd%:\switch\gag-order.nro" (del "%sd%:\switch\gag-order.nro")
-if exist "%sd%:\games\hbgShop_forwarder_classic.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.nsp")
-if exist "%sd%:\games\hbgShop_forwarder_dark_v3.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
-if exist "%sd%:\games\hbgShop_forwarder_dark_v4.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v4.nsp")
+if exist "%sd%:\games\hbgShop*.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.nsp")
+if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
@@ -953,25 +952,16 @@ rem set neutos=1
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
-if %neutos%==1 (
-	copy "%sd%:\sept\payload_neutos.bin" "%sd%:\sept\payload.bin"
-	if %stock%==0 (
-		if exist "%sd%:\bootloader\hekate_ipl_neutos.ini" (copy "%sd%:\bootloader\hekate_ipl_neutos.ini" "%sd%:\bootloader\hekate_ipl.ini")
-	) else (
-		if exist "%sd%:\bootloader\hekate_ipl_neutos_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_neutos_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
-	)
+del "%sd%:\boot.dat"
+del "%sd%:\bootloader\payloads\NEUTOS.bin"
+rem RD /s /q "%sd%:\switch\tinfoil"
+if %stock%==0 (
+	if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
 ) else (
-	copy "%sd%:\sept\payload_atmo.bin" "%sd%:\sept\payload.bin"
-	del "%sd%:\boot.dat"
-	del "%sd%:\bootloader\payloads\NEUTOS.bin"
-	rem RD /s /q "%sd%:\switch\tinfoil"
-	if %stock%==0 (
-		if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
-	) else (
-		if exist "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
-	)
-
+	if exist "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
+
+
 
 del "%sd%:\sept\payload_*.bin"
 
@@ -987,7 +977,7 @@ if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmospher
 if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
 
-if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\010000000007E51A")
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
 if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
 if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
@@ -1024,6 +1014,8 @@ if %stock%==0 (
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
 rem if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
+
+
 
 goto caffeine
 
