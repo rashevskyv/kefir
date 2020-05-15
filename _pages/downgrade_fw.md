@@ -10,54 +10,47 @@ author_profile: true
 Это ОЧЕНЬ сложный и комплексный метод. ОБЯЗАТЕЛЬНО [сделайте бекап](backup-nand){:target="_blank"} своей текущей прошивки до того, как начнёте выполнение этого метода. ОБЯЗАТЕЛЬНО. 
 {: .notice--danger}
 
-# Что понадобится
+## Что понадобится
 
 * Включите [отображение расширений файлов](https://customfw.xyz/file-extensions-windows){:target="_blank"}, если у вас Windows
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Приставка должна быть полностью заряжена!
 * Свежая версия пейлоада {% include inc/hekate.txt %}
-* [notepad++](https://notepad-plus-plus.org/download){:target="_blank"}
-* [Ключи](/files/keys.zip){:target="_blank"}, одинаковые для всех консолей
-* Прошивка 6.1.0:
-	* [ЯД](https://yadi.sk/d/Qaaj2QznA1wc_g){:target="_blank"}
-	* [MEGA](https://mega.nz/#!cwVjlCbK!OzSENIs6Z8oNMVJPQFKhQSYu3rre01xRejZNKCkc40o){:target="_blank"}
-	* [FEX](https://fex.net/912191309314/1157451339?fileId=1157451383){:target="_blank"}
-* Свежая версия [ChoiDujour](https://switchtools.sshnuke.net/){:target="_blank"}
-* Свежая версия [memloader](https://switchtools.sshnuke.net/){:target="_blank"}
+* [Ключи](/backup-nand#%D1%87%D0%B0%D1%81%D1%82%D1%8C-iii---%D0%B4%D0%B0%D0%BC%D0%BF%D0%B8%D0%BC-%D0%BA%D0%BB%D1%8E%D1%87%D0%B8){:target="_blank"}
+* Прошивка **10.0.2**:
+	* [magnet](magnet:?xt=urn:btih:7C2E64154F521F612CC63014AC53D546F401C2EC&dn=10.0.2.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/e9ps1iSSoNksHg){:target="_blank"}
+	* [GD](https://drive.google.com/open?id=1woBdN2qDGn6S3vk0Q3yQBrcYg8ELDXga&authuser=aimaxwell@wccnet.edu&usp=drive_fs){:target="_blank"}
+	* [MEGA](https://mega.nz/file/hk0ETCJR#tTpx4wzg1VbEmYLy67Wnvizfpkpyyu-8QvsE2dcsTRo){:target="_blank"}
+* Свежая версия [EmmcHaccGen](https://github.com/suchmememanyskill/EmmcHaccGen){:target="_blank"}
+	* Требует для работы [.NET SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1){:target="_blank"}
+* Свежая версия [memloader](/files/memloader.zip){:target="_blank"}
 * Свежая версия [Etcher](https://github.com/resin-io/etcher/releases/latest){:target="_blank"} качайте версию Portable для вашей платформы (для Windows - **exe x86**)
 * Свежая версия [HacDiskMount](https://switchtools.sshnuke.net/){:target="_blank"}
 
-# Инструкция
+## Инструкция
 
-## Часть I - Резервное копирование NAND
+### Часть I - Резервное копирование NAND
 
 Этот пункт нужно делать **обязательно**! Для продолжения работы нам понадобятся уникальные ключи именно вашей приставки! Без шуток! Вероятность, что что-то пойдёт не так много выше нуля, без бекапа вы ничего не сможете исправить. Ну и обязательно нужен дамп ключей. 
 {: .notice--danger}
 
 1. Создайте [резервную копию NAND](backup-nand){:target="_blank"} консоли и поместите её в надёжное место 
-1. Установите `.7z`-архив {% include abbr/kefir_addr.txt %}, согласно инструкции в репозитории, если ещё не делали этого
+1. Установите {% include abbr/kefir_addr.txt %}, если ещё не делали этого
 
+### Часть II - Перепаковка прошивки под вашу систему
 
-## Часть II - Перепаковка прошивки под вашу систему
-
-1. Распакуйте `.zip-архив` с [ChoiDujour](https://switchtools.sshnuke.net/){:target="_blank"} в удобную папку
-1. Распакуйте `.zip-архив` с ключами в папку `ChoiDujour` таким образом, чтобы файл `keys.txt` лежал в той же директории, что и `ChoiDujour.exe`
-1. Распакуйте `.zip-архив` с прошивкой 6.1.0 в папку `ChoiDujour` таким образом, чтобы папка с прошивкой лежала в той же директории, что и `ChoiDujour.exe`
-1. Откройте файлы `keys.txt` и `prod.keys` (бекап ваших ключей) с помощью программы [notepad++](https://notepad-plus-plus.org/download/v7.6.3.html){:target="_blank"}, который у вас получился в ходе выполнения "Части I"
-1. Скопируйте значение строки "**secure_boot_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**secure_boot_key**" в файле `keys.txt`
-1. Скопируйте значение строки "**tsec_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**tsec_key**" в файле `keys.txt`
-
-	![]({{ base_path }}/images/screenshots/keys.png) 
-	{: .text-center}
-	{: .notice--info}
-
+1. Установите [.NET SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1){:target="_blank"}
+1. Распакуйте `.zip-архив` с [EmmcHaccGen](https://github.com/suchmememanyskill/EmmcHaccGen){:target="_blank"} в удобную папку
+1. Положите в папку с `EmmcHaccGen` ваш файл с [ключами](/backup-nand#%D1%87%D0%B0%D1%81%D1%82%D1%8C-iii---%D0%B4%D0%B0%D0%BC%D0%BF%D0%B8%D0%BC-%D0%BA%D0%BB%D1%8E%D1%87%D0%B8){:target="_blank"}
+1. Распакуйте `.zip-архив` с прошивкой **10.0.2** в папку `EmmcHaccGen` таким образом, чтобы папка с прошивкой лежала в той же директории, что и `EmmcHaccGen.exe`
 1. Запустите командную строку в папке `ChoiDujour` (вызовите контекстное меню с зажатой клавишей Shift, нажав на свободное место в папке, и выберите "**Открыть Командную строку здесь**" или "**Открыть окно PowerShell здесь**")
 1. В открывшемся окне наберите:
-	* Для powershell: `.\ChoiDujour.exe --keyset=keys.txt название_папки-с-прошивкой`
-	* Для командной строки: `ChoiDujour.exe --keyset=keys.txt название-папки_с_прошивкой`
-1. Дождитесь окончания перепаковки. В результате вы получите папку NX-6.1.0
+	* Для powershell: `.\EmmcHaccGen.exe --keys prod.keys --fw 10.0.2`
+	* Для командной строки: `EmmcHaccGen.exe --keys prod.keys --fw 10.0.2`
+1. Дождитесь окончания перепаковки. В результате вы получите папку `NX-10.0.2-exfat`
 
-## Часть III - Подготовка карты памяти
+### Часть III - Подготовка карты памяти
 
 {% capture notice-6 %}   
 **ВНИМАНИЕ!!!** Если вы в процессе выполнения руководства увидите диалоговое окно, с предложением отформатировать диск - **нажмите отмена**!!
@@ -69,15 +62,16 @@ author_profile: true
 
 1. Выключите консоль
 1. Вставьте карту памяти приставки в ПК
-1. Убедитесь, что включили [отображение расширений файлов](https://customfw.xyz/file-extensions-windows){:target="_blank"}, если у вас Windows
-1. Скопируйте **содержимое** папки `sample` из `.zip`-архива с [memloader](https://switchtools.sshnuke.net/){:target="_blank"} в **корень** вашей карты памяти
+1. Скопируйте **содержимое** `.zip`-архива с [memloader](/files/memloader.zip){:target="_blank"} в **корень** вашей карты памяти, соглашаясь на замену (объединение в macOS)
 1. Скопируйте пейлоад `memloader.bin` в папку `bootloader/payloads`
 1. Верните карту памяти обратно в Switch
 {% include inc/launch-hekate.txt %}
 1. Перейдите в меню "**Payloads**"
 1. Выберите "**memloader.bin**"
 
-## Часть IV - Загрузка прошивки на устройство 
+### Часть IV - Загрузка прошивки на устройство 
+
+{% spoiler Монтирование BOOT0 в "LINUX UMS DISK 0" %}
 
 {% include inc/mount_boot.txt
 
@@ -85,21 +79,38 @@ author_profile: true
 
 %}
 
-{% include inc/inject_boot.txt 
+{% endspoiler %}
 
-	boot="0" 
+{% spoiler Загрузка BOOT0/1 %}
 
-%}
+1. Установите и запустите Etcher
+1. Нажмите "**Select Image**" и выберите `BOOT0.BIN`, который находится в папке `NX-10.0.2-exfat`, которую мы сгенерировали в **Части III**
+1. В появившемся окне нажмите "**Continue**"
+1. Программа автоматически выберет "**LINUX UMS DISK 0**" во втором пункте
+	* Если это не так, нажмите "**Change и выберите его вручную**"
 
+	![]({{ base_path }}/images/screenshots/etcher_boot0.png) 
+	{: .text-center}
+	{: .notice--info}
+
+1. Нажмите "**Flash!**" и ожидайте окончания закачки
+1. Закройте программу
+1. Удерживайте кнопку (POWER) 15 секунд, пока не погаснет подсветка экрана Switch
 1. **Повторите для BOOT1**
+
+{% endspoiler %}
+
+{% spoiler Монтирование eMMC RAW в "LINUX UMS DISK 0" %}
 
 {% include inc/mount_boot.txt 
 
-	boot="eMMC" 
+	boot="eMMC RAW" 
 
 %}
 
-### Настройка eMMC через HacDiskMount
+{% endspoiler %}
+
+{% spoiler Настройка eMMC через HacDiskMount %}
 
 1. Распакуйте [HacDiskMount](https://switchtools.sshnuke.net/){:target="_blank"} в удобную папку
 1. Запустите `HacDiskMount.exe` от имени администратора 
@@ -113,7 +124,7 @@ author_profile: true
 	
 1. Дважды нажмите на `PRODINFO`
 1. Откройте файл `prod.keys`, который мы получили при создании дампа ключей в Части I
-1. В разделе "**bis_key_00**" есть длинная 64-х символьная последовательность,  первые 32 символа - это - "**Crypto**", последние - "**Tweak**". В файле с ключами ключи делятся попарно. В каждой паре есть так же ключ с меткой "**Crypto**" (crypt) и "**Tweak**" (tweak). 
+1. В разделе "**bis_key_00**" есть длинная 64-х символьная последовательность, первые 32 символа - это - "**Crypto**", последние - "**Tweak**". В файле с ключами ключи делятся попарно. В каждой паре есть так же ключ с меткой "**Crypto**" (crypt) и "**Tweak**" (tweak). 
 
 	![]({{ base_path }}/images/screenshots/hdm_key_test.png) 
 	{: .text-center}
@@ -127,7 +138,9 @@ author_profile: true
 1. Дважды нажмите на `PRODINFO`
 1. В открывшемся окошке уже будут вбиты ключи. Протестируйте их и удостоверьтесь, что результат зелёный. Закройте окно не сохраняя.
 
-### Перенос образов BCPKG2 
+{% endspoiler %}
+
+{% spoiler Перенос образов BCPKG2  %}
 
 1. Дважды нажмите на `BCPKG2-1-Normal-Main`
 1. Убедитесь, что поля для ключей пустые. Если это не так, отчистите их
@@ -137,14 +150,16 @@ author_profile: true
 	{: .text-center}
 	{: .notice--info}
 
-1. Выберите `BCPKG2-1-Normal-Main.bin`, который находится в папке `NX-6.1.0`, которую мы сгенерировали в Части III 
+1. Выберите `BCPKG2-1-Normal-Main.bin`, который находится в папке `NX-10.0.2-exfat`, которую мы сгенерировали в Части III 
 1. Нажмите кнопку "**Start**"
 1. После окончания загрузки закройте окно (не программу!)
 1. Повторите то же самое для `BCPKG2-2-Normal-Sub`, `BCPKG2-3-SafeMode-Main` и `BCPKG2-4-SafeMode-Sub`
 	* Убедитесь, что прошиваете файлы с названиями, идентичными названиям разделов!
 	* Не забывайте стирать ключи, если таковые будут
 
-### Удаление файлов из раздела SAFE 
+{% endspoiler %}
+
+{% spoiler Работа с разделом SAFE  %}
 
 {% include inc/mount.txt 
 
@@ -154,7 +169,9 @@ author_profile: true
 1. Если на диске есть файлы - удалите их все!
 1. После окончания отмонтируйте диск, нажав на кнопку "**Unmount**" в окне HacDiskMount
 
-### Монтирование раздела SYSTEM
+{% endspoiler %}
+
+{% spoiler Работа с разделом SYSTEM %}
 
 {% include inc/mount.txt 
 
@@ -178,12 +195,14 @@ author_profile: true
 1. Удалите "**PRF2SAFE.RCV**", если таковой имеется
 1. Перейдите в папку `save` и удалите файл `8000000000000047`
 
-### Копирование файлов в раздел SYSTEM
+#### Копирование файлов в раздел SYSTEM
 
-1. Перейдите в папку `NX-6.1.0`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `SYSTEM` на смонтированный диск с заменой (**объединить** на macOS)
+1. Перейдите в папку `NX-10.0.2-exfat`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `SYSTEM` на смонтированный диск с заменой (**объединить** на macOS)
 1. После окончания копирования отмонтируйте диск, нажав на кнопку "**Unmount**" в окне HacDiskMount
 
-### Монтирование раздела USER
+{% endspoiler %}
+
+{% spoiler Работа с разделом USER %}
 
 {% include inc/mount.txt 
 
@@ -205,12 +224,15 @@ author_profile: true
 
 ### Копирование файлов в раздел USER
 
-1. Перейдите в папку `NX-6.1.0`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `USER` на смонтированный диск с заменой (**объединить** на macOS)
+1. Перейдите в папку `NX-10.0.2-exfat`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `USER` на смонтированный диск с заменой (**объединить** на macOS)
 1. После окончания копирования отмонтируйте диск, нажав на кнопку "**Unmount**" в окне HacDiskMount
 1. Закройте HacDiskMount
 1. Выключите Switch, зажав кнопку (POWER) на 15 секунд, пока подсветка экрана не отключится
 
-## Часть V - AutoRCM
+{% endspoiler %}
+
+
+### Часть V - AutoRCM
 
 AutoRCM - на консоли специальным образом портится BOOT0, вследствие чего консоль не может загрузиться прямо в систему и загружается автоматически в режим RCM. Достаточно просто включить консоли и она автоматически попадёт в режим восстановления. Не нужно зажимать комбинацию кнопок и использовать замыкатель, но пейлоад для запуска прошивки всё равно передавать нужно!
 {: .notice--info}
@@ -220,11 +242,6 @@ AutoRCM - на консоли специальным образом портит
 1. Проверьте не сгорели ли после обновления предохранители, выполнив ещё раз [Часть III](#%D0%A7%D0%B0%D1%81%D1%82%D1%8C-iii---%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%BE%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0-%D1%81%D0%BE%D0%B6%D0%B6%D1%91%D0%BD%D0%BD%D1%8B%D1%85-%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9){:target="_blank"}
 
 Теперь приставка всегда при включении будет находится в режиме RCM. Не отключайте AutoRCM, если не хотите сжечь предохранитель. Единственная загрузка консоли вне этого режима гарантированно сожжёт предохранитель!
-
-# Важно знать
-
-* Даже один единственный запуск приставки в официальную прошивку не через hekate сожжёт предохранители, которые мы так отчаянно пытались сохранить 
-* Если после прошивки вам предложат обновить контроллеры - обновляйте
 
 ___
 

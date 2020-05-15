@@ -1,7 +1,7 @@
 <script src="https://check.customfw.xyz/vercheck.js"></script>
 <link rel="stylesheet" type="text/css" href="https://check.customfw.xyz/main.css">
 
-<p class="checker_p"><strong><div class="failed">Приставки новой ревизии, а так же Switch Lite не прошиваются!</strong></div></p>
+<p class="checker_p"><div class="failed"><strong>Приставки новой ревизии, а так же Switch Lite не прошиваются!</strong></div></p>
 
 <p class="checker_p">Если у вашей приставки <span class="passed">присутствует уязвимость</span>, то версия её прошивки не важна. Если же уязвимость <span class="failed">устранена</span>, или <span class="maybe">возможно устранена</span>, но версия прошивки вашей приставки 4.1.0 или ниже, то ваш Switch <strong>ТОЧНО</strong> прошивается методом <a class="checker_a" href="https://switch.customfw.xyz/caffeine">Caffeine</a>.</p>
 

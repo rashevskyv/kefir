@@ -11,7 +11,12 @@
 		},
 		{
 			"path": "..\\check"
+		},
+		{
+			"path": "..\\..\\dev\\hekate-master"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.language": ",ru"
+	}
 }

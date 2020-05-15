@@ -51,7 +51,7 @@ author_profile: true
 
 {% endspoiler %}
 
-{% spoiler Постоянные ошибки, игры вылетают %}
+{% spoiler Постоянные ошибки, игры, во время работы, вылетают %}
 
 **О:** Проверьте свою SD-карту на ошибки с помощью [H2testw (Windows)](http://customfw.xyz/h2testw-windows){:target="_blank"}, [F3 (Linux)](http://customfw.xyz/f3-linux){:target="_blank"}, или [F3X (Mac)](http://customfw.xyz/f3x-mac){:target="_blank"}! Если карта в порядке, скопируйте папку Nintendo из корня карты памяти на ваш ПК, [отформатируйте её](https://customfw.xyz/format_sd){:target="_blank"}, а затем установите кефир через скрипт. 
 
@@ -132,14 +132,16 @@ author_profile: true
 **О:** Обновите {% include abbr/kefir_addr.txt %}
 {% endspoiler %}
 
-{% spoiler Проблемы после копирования файлов на карту на маке / В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть %}
-**О:** {% include /inc/fixatributes.txt %}
-
-Не меняйте атрибуты папки Nintendo!
-{: .notice--warning}
+{% spoiler Проблемы после копирования файлов на карту на маке/В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть %}
+**О:** 
+{% include /inc/fixatributes.txt %}
 
 Если вы пользователь MacOS и вам не помог способ выше, выполните следующую команду: `sudo chflags -R arch /Volumes/<name of SD card>`
 
+{% endspoiler %}
+
+{% spoiler Исправление архивных атрибутов %}
+{% include /inc/fixatributes.txt %}
 {% endspoiler %}
 
 {% spoiler Возникают ошибки при установке NSP-файлов  %}
@@ -148,3 +150,8 @@ author_profile: true
 	* Если не помогло - перекачайте файлы, возможно они не докачаны. 
 	* На switch'е через hekate во вкладке **tools** выберите **Unset archive bit**.
 {% endspoiler %}
+
+___
+
+[Закрыть страницу](javascript:window.close();)
+{: .notice--success}
