@@ -8,7 +8,7 @@ set clear=0
 set cfw=ATMOS
 set cfwname=Atmosphere
 set lang=0
-set bootscrn=1
+set theme_flag=0
 set theme=0
 set caffeine=0
 set syscon=0
@@ -16,7 +16,7 @@ set syscon_flag=2
 set dbi=3
 set dbi_flag=0
 set tesla=0
-set tesla_flag=2
+set tesla_flag=1
 set neutos=0
 
 :disclaimer
@@ -101,39 +101,6 @@ for %%A in ("3") do if "%st%"==%%A (
 for %%A in ("O" "o" "Щ" "щ" "J" "j" "о" "О" "0") do if "%st%"==%%A (GOTO OPTIONS)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
-:choose_fw
-cls
-ECHO ------------------------------------------------------------------
-ECHO        ======          Select FW version           =====
-ECHO ------------------------------------------------------------------
-ECHO.
-ECHO    Choose System FW version
-ECHO.
-ECHO    Укажите версию системного ПО
-ECHO.
-ECHO           1. 9.1.0 and higher 
-ECHO              9.1.0 и выше
-ECHO           2. Less then 9.1.0
-ECHO              Ниже, чем 9.1.0
-ECHO.
-ECHO    If the firmware version is higher than 9.1.0, Tesla Overlay
-ECHO    Menu  will be additionally installed. To use it, press
-ECHO    (L)+(D-PAD DOWN)+(R3) 
-ECHO.
-ECHO    Если версия прошивки выше, чем 9.1.0, дополнительно будет 
-ECHO    установлен Tesla Overlay Menu, вызываемый сочитанием клавиш 
-ECHO    (L)+(D-PAD DOWN)+(R3) 
-ECHO.
-ECHO ==================================================================
-ECHO                                                       Q.  Quit
-
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (set tesla_flag=1)
-for %%A in ("2") do if "%st%"==%%A (set tesla_flag=0)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
 goto newcard
 
 :OPTIONS
@@ -196,7 +163,6 @@ if %lang%==1 (
 	ECHO                                                         Q.  Quit
 )
 
-
 set st=
 set /p st=:
 
@@ -211,7 +177,7 @@ for %%A in ("1") do if "%st%"==%%A (
 for %%A in ("2") do if "%st%"==%%A (
 	set cfw=SXOS
 	set cfwname=SX OS     
-	goto newcard
+	goto caffeine
 )
 for %%A in ("3") do if "%st%"==%%A (
 	set cfw=BOTH
@@ -229,12 +195,8 @@ if %lang%==1 (
 	ECHO               ======     Выберите эксплойт     =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO         1.  9.1.0 и выше
-	ECHO         2.  Ниже, чем 9.1.0
-	ECHO.
-	ECHO    Если версия прошивки выше, чем 9.1.0, дополнительно будет 
-	ECHO    установлен Tesla Overlay Menu, вызываемый сочитанием клавиш 
-	ECHO    L+D-PAD DOWN+R3
+	ECHO         1.  1.0.0
+	ECHO         2.  Другая
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                          Q.  Выход
@@ -243,12 +205,8 @@ if %lang%==1 (
 	ECHO                   =====  Select FW version =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO         1.  9.1.0 and higher 
-	ECHO         2.  Less then 9.1.0
-	ECHO.
-	ECHO    If the firmware version is higher than 9.1.0, Tesla Overlay
-	ECHO    Menu  will be additionally installed. To use it, press
-	ECHO    L+D-PAD DOWN+R3
+	ECHO         1.  1.0.0
+	ECHO         2.  Other
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                          Q.  Quit
@@ -256,8 +214,8 @@ if %lang%==1 (
 set st=
 set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (set tesla_flag=1)
-for %%A in ("2") do if "%st%"==%%A (set tesla_flag=0)
+for %%A in ("1") do if "%st%"==%%A (set tesla_flag=0)
+for %%A in ("2") do if "%st%"==%%A (set tesla_flag=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :caffeine
@@ -293,6 +251,8 @@ for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
+if %cfw%==SXOS goto dbi
+
 rem cls
 rem ECHO --------------------------------------------------------------------
 rem ECHO               ======          Options           =====
@@ -324,6 +284,7 @@ rem set /p st=:
 rem for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 rem for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
 rem for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
 
 :syscon
 cls
@@ -381,7 +342,7 @@ if %lang%==1 (
 	ECHO                   ======     Версия DBI     =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO         1.  Новая
+	ECHO         1.  Новая - рекомендуется
 	ECHO         2.  Совместимая с NS USB Loader
 	ECHO         3.  Обе весии
 	ECHO.
@@ -445,52 +406,6 @@ set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set clear=0)
 for %%A in ("2") do if "%st%"==%%A (set clear=1)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-	
-cls
-ECHO ------------------------------------------------------------------
-ECHO             ======          Options           =====
-ECHO ------------------------------------------------------------------
-if %lang%==1 (
-	ECHO --------------------------------------------------------------------
-	ECHO     ======     Настройки установки загрузочного экрана      =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO --------------------------------------------------------------------
-	ECHO  Загрузочный экран - это картинка, которой вас встречает загрузка 
-	ECHO  прошивки. В сборку входит загрузочный экран, на котором написана
-	ECHO  дата сборки. Посмотреть на него можно в репозитории кефира.
-	ECHO  Если вы хотите, чтобы был установлен наш бутскрин, выберите 1,
-	ECHO  если хотите, чтобы остался тот, что у вас сейчас, выберите 2. 
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  Установить новый - рекомендуется
-	ECHO         2.  Оставить текущий
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                         Q.  Выход
-) else (
-	ECHO --------------------------------------------------------------------
-	ECHO            ======     Bootscreen setup settings      =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO --------------------------------------------------------------------
-	ECHO  The boot screen is the picture that the firmware meets you with.
-	ECHO  kefir includes a boot screen on which the build date is written.
-	ECHO  You can look at it in the kefir's repository.
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  Install new - recomended
-	ECHO         2.  Keep existing
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                         Q.  Quit
-)
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (set bootscrn=1)
-for %%A in ("2") do if "%st%"==%%A (set bootscrn=0)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 	
 :newcard
@@ -593,6 +508,44 @@ COLOR 0F
 
 if not exist "%sd%:\" (goto WRONGSD)
 
+if exist "%sd%:\atmosphere\contents\0100000000001000" (set theme_flag=1)
+if exist "%sd%:\sxos\titles\0100000000001000" (set theme_flag=1)
+
+if %theme_flag%==1 (
+	set theme=1
+	cls
+	ECHO ------------------------------------------------------------------
+	ECHO          ======             Theme / Тема           =====
+	ECHO ------------------------------------------------------------------
+	ECHO.
+	ECHO    Remove theme? / Удалить тему?
+	ECHO.
+	ECHO           1. Да / Yes
+	ECHO           2. Нет / No
+	ECHO.
+	ECHO ==================================================================
+	ECHO.
+	ECHO    ALWAYS remove the theme if you update kefir for update 
+	ECHO    the system software, otherwise the firmware will not load
+	ECHO    after the update
+	ECHO.
+	ECHO    ОБЯЗАТЕЛЬНО удалите тему, если обновляете кефир для 
+	ECHO    обновления системного ПО, иначе прошивка после обновления 
+	ECHO    не загрузится
+	ECHO.
+	ECHO ==================================================================
+	ECHO                                                       Q.  Quit
+
+	set st=
+	set /p st=:
+
+	for %%A in ("1") do if "%st%"==%%A (set theme=1)
+	for %%A in ("2") do if "%st%"==%%A (set theme=0)
+	for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+)
+
+echo %theme%
+
 if %syscon_flag%==2 (
    if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1) else (set syscon=0)
 ) else (
@@ -686,7 +639,7 @@ if %lang%==1 (
 )
 
     if exist "%sd%:\ReiNX\titles\010000000000100D" (RD /s /q "%sd%:\ReiNX\titles\010000000000100D")
-    if exist "%sd%:\ReiNX\titles" (xcopy %sd%:\ReiNX\titles\* %sd%:\atmosphere\contents\ /Y /S /E /H /R /D) >nul 2>&1
+    if exist "%sd%:\ReiNX\titles" (move /Y %sd%:\ReiNX\titles\* %sd%:\atmosphere\contents\) >nul 2>&1
     if exist "%sd%:\ReiNX" (RD /s /q "%sd%:\ReiNX")
     if exist "%sd%:\RajNX" (RD /s /q "%sd%:\RajNX")
 
@@ -793,25 +746,28 @@ if exist "%sd%:\bootloader\update.bin" (del "%sd%:\bootloader\update.bin")
 if exist "%sd%:\bootloader\update.bin.sig" (del "%sd%:\bootloader\update.bin.sig")
 if exist "%sd%:\bootloader\patches_template.ini" (del "%sd%:\bootloader\patches_template.ini")
 if exist "%sd%:\bootloader\patches.ini" (del "%sd%:\bootloader\patches.ini")
+if exist "%sd%:\bootloader\bootlogo.bmp" (del "%sd%:\bootloader\bootlogo.bmp")
+if exist "%sd%:\bootloader\res\icon_payload.bmp" (del "%sd%:\bootloader\res\icon_payload.bmp")
+if exist "%sd%:\bootloader\res\icon_switch.bmp" (del "%sd%:\bootloader\res\icon_switch.bmp")
 
 findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
 	set stock=1
 ) || (
 	set stock=0
-	if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
 )
 
-RD /s /q "%sd%:\_themebkp"
-if exist "%sd%:\atmosphere\contents\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
-if exist "%sd%:\sxos\titles\0100000000001000" (mkdir %sd%:\_themebkp\0100000000001000)
-if exist "%sd%:\sxos\titles\0100000000001000" (xcopy "%sd%:\sxos\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
-if exist "%sd%:\atmosphere\titles\0100000000001000" (xcopy "%sd%:\atmosphere\titles\0100000000001000\*" "%sd%:\_themebkp\0100000000001000" /H /Y /C /R /S /E)
-if exist "%sd%:\atmosphere\contents\0100000000001000" (RD /s /q "%sd%:\atmosphere\contents\0100000000001000")
-if exist "%sd%:\sxos\titles\0100000000001000" (RD /s /q "%sd%:\sxos\titles\0100000000001000")
-if exist "%sd%:\atmosphere\contents\0100000000000352" (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
+if %theme%==1 (
+	RD /s /q "%sd%:\_themebkp"
+	mkdir "%sd%:\_themebkp"
+	if exist "%sd%:\sxos\titles\0100000000001000" (move /Y "%sd%:\sxos\titles\0100000000001000" "%sd%:\_themebkp")
+	if exist "%sd%:\atmosphere\contents\0100000000001000" (move /Y "%sd%:\atmosphere\contents\0100000000001000" "%sd%:\_themebkp")
+)
+
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
+if exist "%sd%:\switch\KosmosToolbox" (RD /s /q "%sd%:\switch\KosmosToolbox")
+if exist "%sd%:\switch\KosmosUpdater" (RD /s /q "%sd%:\switch\KosmosUpdater")
 if exist "%sd%:\switch\mercury" (RD /s /q "%sd%:\switch\mercury")
 rem if exist "%sd%:\switch\EdiZon.nro" (del "%sd%:\switch\EdiZon.nro")
 if exist "%sd%:\switch\tinfoil\tinfoil.nro" (del "%sd%:\switch\tinfoil\tinfoil.nro")
@@ -831,12 +787,12 @@ if exist "%sd%:\switch\nx-ntpc.nro" (del "%sd%:\switch\nx-ntpc.nro")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
-if exist "%sd%:\switch\nxmtp\nxmtp.nro" (del "%sd%:\switch\nxmtp\nxmtp.nro")
+if exist "%sd%:\switch\nxmtp" (RD /s /q "%sd%:\switch\nxmtp\")
 if exist "%sd%:\switch\sx\locations.conf" (del "%sd%:\switch\sx\locations.conf")
 if exist "%sd%:\switch\sx\sx.nro" (del "%sd%:\switch\sx\sx.nro")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\switch\incognito.nro" (del "%sd%:\switch\incognito.nro")
-if exist "%sd%:\switch\incognito\incognito.nro" (del "%sd%:\switch\incognito\incognito.nro")
+if exist "%sd%:\switch\incognito" (RD /s /q "%sd%:\switch\incognito")
 if exist "%sd%:\switch\ultimate_updater.nro" (del "%sd%:\switch\ultimate_updater.nro")
 if exist "%sd%:\switch\zerotwoxci.nro" (del "%sd%:\switch\zerotwoxci.nro")
 if exist "%sd%:\switch\dOPUS.nro" (del "%sd%:\switch\dOPUS.nro")
@@ -884,10 +840,6 @@ if not exist "%temp%\sdfiles\sxos" (mkdir %temp%\sdfiles\sxos)
 xcopy "%~dp0sxos" "%temp%\sdfiles\sxos" /H /Y /C /R /S /E >nul 2>&1
 copy "%~dp0payload.bin" "%temp%\sdfiles\payload.bin" >nul 2>&1
 copy "%~dp0update_sdfiles.bat" "%temp%\sdfiles\update_sdfiles.bat" >nul 2>&1
-
-if %bootscrn%==0 (
-	if exist "%wd%\base\bootloader\bootlogo.bmp" (del "%wd%\base\bootloader\bootlogo.bmp")
-)
 
 
 echo                                      DONE
@@ -970,7 +922,7 @@ if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sx
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
-if exist "%sd%:\sxos\titles" (xcopy %sd%:\sxos\titles\* %sd%:\atmosphere\contents\  /Y /S /E /H /R /D)
+if exist "%sd%:\sxos\titles" (move /Y %sd%:\sxos\titles\* %sd%:\atmosphere\contents\)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
 
@@ -993,7 +945,7 @@ if exist "%sd%:\sxos\emunand" (
 
 if exist "%sd%:\switch\sx" (RD /s /q "%sd%:\switch\sx")
 if exist "%sd%:\switch\themes" (RD /s /q "%sd%:\switch\themes")
-if exist "%sd%:\titles" (xcopy "%wd%\titles\*" "%sd%:\atmosphere\contents" /H /Y /C /R /S /E)
+if exist "%sd%:\titles" (move /Y "%wd%\titles\*" "%sd%:\atmosphere\contents")
 if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
 goto caffeine
@@ -1013,6 +965,7 @@ if %stock%==0 (
 
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
+if exist "%sd%:\atmosphere\kip_patches\loader_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\loader_patches")
 rem if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
 
 
@@ -1121,6 +1074,7 @@ if exist "%sd%:\switch\fakenews-injector" (
 	attrib -A /S /D %sd%:\switch\fakenews-injector\*
 	attrib -A %sd%:\switch\fakenews-injector)
 
+reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor\11ECA7E0 /v MaximumTransferLength /t REG_DWORD /d 00100000 /f
 
 
 echo                                    DONE
@@ -1167,12 +1121,7 @@ goto end
 cls
 COLOR C
 
-		set word=    По адресу %sd%:/ карта памяти не найдена  
-	) else (
-		set word=        There is no SD card in drive %sd%:/        
 
-
-if %lang%==0 (
 	ECHO ----------------------------------------------------------
 	ECHO ======            Choosed SD letter is: %sd%:/            =====
 	ECHO ======               Выбранный диск: %sd%:/               =====
@@ -1196,51 +1145,8 @@ if %lang%==0 (
 set st=
 set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (GOTO main)
-for %%A in ("2") do if "%st%"==%%A (GOTO newcard)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
-) else (goto wrongsd1)
-
-:wrongsd1
-cls
-if %lang%==1 (
-	ECHO ----------------------------------------------------------
-	ECHO ======              Вы выбрали диск %sd%:/              =====
-	ECHO. 
-	ECHO ====== %word%   =====
-	ECHO ----------------------------------------------------------
-	ECHO.
-	ECHO       Убедитесь, что указали правильную букву диска
-	ECHO.
-	ECHO         1.  Буква диска указана верно
-	ECHO         2.  Ввести другую букву диска
-	ECHO.
-	ECHO ==========================================================
-	ECHO                                              Q.  Выход
-	ECHO.
-) else (
-	ECHO ----------------------------------------------------------
-	ECHO ======               You choosed: %sd%:/                =====
-	ECHO. 
-	ECHO ======%word%=====
-	ECHO ----------------------------------------------------------
-	ECHO.
-	ECHO       Make sure that you set correct SD card letter
-	ECHO.
-	ECHO         1.  The card letter is correct
-	ECHO         2.  Choose another card letter
-	ECHO.
-	ECHO ==========================================================
-	ECHO                                              Q.  Quit
-	ECHO.
-)
-
-set st=
-set /p st=:
-
-for %%A in ("N" "n" "2" "т" "Т") do if "%st%"==%%A (GOTO newcard)
 for %%A in ("Y" "y" "1" "н" "Н") do if "%st%"==%%A (GOTO main)
+for %%A in ("N" "n" "2" "т" "Т") do if "%st%"==%%A (GOTO newcard)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :rembkp
@@ -1248,6 +1154,34 @@ if %lang%==1 (
 	echo ------------------------------------------------------------------------
 	echo.
 	echo                         Удаление папки _backup
+	echo                               Ожидайте!
+	echo.
+	echo ------------------------------------------------------------------------
+) else (
+	echo ------------------------------------------------------------------------
+	echo.
+	echo                         Removing _backup folder
+	echo                              Please wait!
+	echo.
+	echo ------------------------------------------------------------------------
+)
+
+RD /s /q "%sd%:\_backup"
+goto main
+
+:END
+if %lang%==1 (
+	echo. 
+	echo Нажмите любую клавишу для выхода
+) else (
+	echo. 
+	echo Press any button for exit
+)
+
+RD /s /q "%wd%
+pause>nul 2>&1
+if exist "%sd%:\update_sdfiles.bat" (del "%sd%:\update_sdfiles.bat")
+exit  Удаление папки _backup
 	echo                               Ожидайте!
 	echo.
 	echo ------------------------------------------------------------------------
