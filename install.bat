@@ -121,12 +121,7 @@ ECHO.
 ECHO ==================================================================
 ECHO                                                         Q.  Quit
 
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (set lang=1)
-for %%A in ("2") do if "%st%"==%%A (set lang=2)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+set /p lang=:
 
 cls
 if %lang%==1 (
@@ -253,39 +248,6 @@ for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 if %cfw%==SXOS goto dbi
 
-rem cls
-rem ECHO --------------------------------------------------------------------
-rem ECHO               ======          Options           =====
-rem ECHO --------------------------------------------------------------------
-rem if %lang%==1 (
-rem 	ECHO --------------------------------------------------------------------
-rem 	ECHO                   ======     Выбор ОС?     =====
-rem 	ECHO --------------------------------------------------------------------
-rem 	ECHO.
-rem 	ECHO         1.  NEUTOS с поддержкой tinfoil 
-rem 	ECHO         2.  Atmosphere, tinfoil НЕ поддерживается 
-rem 	ECHO.
-rem 	ECHO ====================================================================
-rem 	ECHO                                                          Q.  Выход
-rem ) else (
-rem 	ECHO --------------------------------------------------------------------
-rem 	ECHO                      =====  Choose OS? =====
-rem 	ECHO --------------------------------------------------------------------
-rem 	ECHO.
-rem 	ECHO         1.  NEUTOS with tinfoil support
-rem 	ECHO         2.  Atmosphere, not support tinfoil
-rem 	ECHO.
-rem 	ECHO ====================================================================
-rem 	ECHO                                                          Q.  Quit
-rem )
-rem set st=
-rem set /p st=:
-
-rem for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
-rem for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
-rem for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
-
 :syscon
 cls
 ECHO --------------------------------------------------------------------
@@ -401,13 +363,9 @@ if %lang%==1 (
 	ECHO ==================================================
 	ECHO                                          Q.  Quit
 )
-set st=
-set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (set clear=0)
-for %%A in ("2") do if "%st%"==%%A (set clear=1)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-	
+set /p clear=:
+
 :newcard
 COLOR 0F
 cls
@@ -512,7 +470,6 @@ if exist "%sd%:\atmosphere\contents\0100000000001000" (set theme_flag=1)
 if exist "%sd%:\sxos\titles\0100000000001000" (set theme_flag=1)
 
 if %theme_flag%==1 (
-	set theme=1
 	cls
 	ECHO ------------------------------------------------------------------
 	ECHO          ======             Theme / Тема           =====
@@ -536,15 +493,22 @@ if %theme_flag%==1 (
 	ECHO ==================================================================
 	ECHO                                                       Q.  Quit
 
-	set st=
-	set /p st=:
-
-	for %%A in ("1") do if "%st%"==%%A (set theme=1)
-	for %%A in ("2") do if "%st%"==%%A (set theme=0)
-	for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+	set /p theme=:
 )
 
-echo %theme%
+
+if %theme%==1 (
+	RD /s /q "%sd%:\_themebkp"
+	if exist "%sd%:\sxos\titles\0100000000001000" (
+		mkdir "%sd%:\_themebkp" 
+		move /Y "%sd%:\sxos\titles\0100000000001000" "%sd%:\_themebkp"
+		)
+	if exist "%sd%:\atmosphere\contents\0100000000001000" (
+		mkdir "%sd%:\_themebkp" 
+		move /Y "%sd%:\atmosphere\contents\0100000000001000" "%sd%:\_themebkp"
+		)
+)
+
 
 if %syscon_flag%==2 (
    if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1) else (set syscon=0)
@@ -593,7 +557,7 @@ if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 if exist "%sd%:\rajnx_ipl.ini" (del "%sd%:\rajnx_ipl.ini")
 if exist "%sd%:\bootlogo.bmp" (del "%sd%:\bootlogo.bmp")
 
-if %clear%==1 (
+if %clear%==2 (
 	if not exist "%sd%:\_backup" (mkdir %sd%:\_backup\)
 	FOR /d %%A IN (%sd%:\*) DO (
 		rem IF "%%A" NEQ "%sd%:\Nintendo" IF "%%A" NEQ "%sd%:\_backup" (move /Y %%A %sd%:\_backup)
@@ -756,12 +720,6 @@ findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
 	set stock=0
 )
 
-if %theme%==1 (
-	RD /s /q "%sd%:\_themebkp"
-	mkdir "%sd%:\_themebkp"
-	if exist "%sd%:\sxos\titles\0100000000001000" (move /Y "%sd%:\sxos\titles\0100000000001000" "%sd%:\_themebkp")
-	if exist "%sd%:\atmosphere\contents\0100000000001000" (move /Y "%sd%:\atmosphere\contents\0100000000001000" "%sd%:\_themebkp")
-)
 
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
