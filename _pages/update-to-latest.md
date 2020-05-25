@@ -102,7 +102,8 @@ author_profile: true
 1. Запустите [{% include abbr/cfw.txt abbr="кастом" %}](cfw){:target="_blank"}
 	* Если вы собираетесь обновлять {% include abbr/sysnand.txt abbr="SysNAND" %}, то его и запускайте. Если собираетесь обновлять {% include abbr/emunand.txt abbr="EmuNAND" %},  то запускайте его
 	* Если после логотипа Nintendo вы наблюдаете чёрный экран, значит вы проигнорировали [форматирование карты памяти в FAT32](http://customfw.xyz/format_sd){:target="_blank"}, которое нужно было сделать выше
-1. Откройте [Homebrew Launcher](hbl){:target="_blank"} в режиме апплета 
+1. Откройте [Homebrew Launcher](hbl){:target="_blank"} **в режиме апплета**
+	* Запускайте только в режиме апплета, иначе программа будет вылетать. Что такое режим апплета описано в инструкции по запуску [Homebrew Launcher](hbl){:target="_blank"}
 1. Запустите **ChoiDujourNX**
 1. Перейдите в папку, в которой находится прошивка {% include /vars/update_version.txt %}, скопированная ранее, и нажмите "**Choose**"
 
