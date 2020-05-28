@@ -57,9 +57,9 @@ author_profile: true
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
 	* [magnet](magnet:?xt=urn:btih:7C2E64154F521F612CC63014AC53D546F401C2EC&dn=10.0.2.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/e9ps1iSSoNksHg){:target="_blank"}
-	* [GD](https://drive.google.com/open?id=1woBdN2qDGn6S3vk0Q3yQBrcYg8ELDXga&authuser=aimaxwell@wccnet.edu&usp=drive_fs){:target="_blank"}
-	* [MEGA](https://mega.nz/file/hk0ETCJR#tTpx4wzg1VbEmYLy67Wnvizfpkpyyu-8QvsE2dcsTRo){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/2ovRxHAAMlgaag){:target="_blank"}
+	* [GD](https://drive.google.com/file/d/1NziGb4kKfDoQZ8KZkXMPIKasy4UUELOI/view?usp=sharing){:target="_blank"}
+	* [MEGA](https://mega.nz/file/BkEE1aYQ#g-axm_0KLjKGExR0bZVZIbocwbjFEhlbQta6bK2-sZM){:target="_blank"}
 * Карта памяти 
 
 ## Инструкция
@@ -91,7 +91,7 @@ author_profile: true
 		* После того, как вы удачно обновите системное ПО, обязательно **ещё раз установите {% include abbr/kefir_addr.txt %}**
 1. Скопируйте **содержимое** архива `{% include /vars/update_version.txt %}.zip` с прошивкой в корень карты памяти
 	* Ещё раз - **содержимое** архива **с прошивкой**. Не архив с кефиром, **с прошивкой**! Архив с прошивкой расположен в части [Что понадобится](#что-понадобится). Нужно скопировать не сам архив, а именно его **содержимое**
-	* Вместо этого вы можете скачать архив со свежей версией системного ПО через приложение **FreshHay** прямо на вашей приставке. Для этого запустите [HBL](hbl){:target="_blank"} через игру, выберите приложение **FreshHay** и нажмите (A), чтобы начать закачку прошивки. Программа сама скачает последнюю версию системного ПО и распакует его в корень карты памяти.
+	* Вместо этого вы можете скачать архив со свежей версией системного ПО через приложение **FreshHay** прямо на вашей приставке. Для этого запустите [HBL](hbl){:target="_blank"} через игру, выберите приложение **FreshHay** и нажмите (A), чтобы начать закачку прошивки. Программа сама скачает последнюю версию системного ПО в папку `switch/FreshHay`. После, распакуйте скачанный архив с помощью NXShell 
 1. Вставьте карту памяти обратно в приставку
 
 ### Часть III - Обновление прошивки
