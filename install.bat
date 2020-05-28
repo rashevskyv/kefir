@@ -13,7 +13,7 @@ set theme=0
 set caffeine=0
 set syscon=0
 set syscon_flag=2
-set dbi=3
+set dbi=0
 set dbi_flag=0
 set tesla=0
 set tesla_flag=1
@@ -294,42 +294,6 @@ for %%A in ("1") do if "%st%"==%%A (set syscon_flag=1)
 for %%A in ("2") do if "%st%"==%%A (set syscon_flag=0)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
-:dbi
-cls
-ECHO --------------------------------------------------------------------
-ECHO               ======          Options           =====
-ECHO --------------------------------------------------------------------
-if %lang%==1 (
-	ECHO --------------------------------------------------------------------
-	ECHO                   ======     Версия DBI     =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  Новая - рекомендуется
-	ECHO         2.  Совместимая с NS USB Loader
-	ECHO         3.  Обе весии
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                          Q.  Выход
-) else (
-	ECHO --------------------------------------------------------------------
-	ECHO                       =====  DBI version =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  New version
-	ECHO         2.  NS USB Loader-compateble
-	ECHO         3.  Both versiond
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                          Q.  Quit
-)
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (set dbi=0)
-for %%A in ("2") do if "%st%"==%%A (set dbi=1)
-for %%A in ("3") do if "%st%"==%%A (set dbi=2)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
 :opt
 cls
 ECHO --------------------------------------------------------------------
@@ -520,14 +484,6 @@ if %tesla_flag%==2 (
    if exist "%sd%:\atmosphere\contents\420000000007E51A" (set tesla=1) else (set tesla=0)
 ) else (
    set tesla=%tesla_flag%
-)
-
-if %dbi%==3 (
-	if not exist "%sd%:\switch\dbi_old.nro" if exist "%sd%:\switch\dbi.nro" (set dbi_flag=0)
-	if exist "%sd%:\switch\dbi_old.nro" if not exist "%sd%:\switch\dbi.nro" (set dbi_flag=1)
-	if exist "%sd%:\switch\dbi_old.nro" if exist "%sd%:\switch\dbi.nro" (set dbi_flag=2)
-) else (
-   set dbi_flag=%dbi%
 )
 
 cls
@@ -746,6 +702,8 @@ if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
 if exist "%sd%:\switch\nxmtp" (RD /s /q "%sd%:\switch\nxmtp\")
+if exist "%sd%:\switch\NX-Activity-Log.nro" (del "%sd%:\switch\NX-Activity-Log.nro")
+if exist "%sd%:\switch\NX-Activity-Log" (RD /s /q "%sd%:\switch\NX-Activity-Log\")
 if exist "%sd%:\switch\sx\locations.conf" (del "%sd%:\switch\sx\locations.conf")
 if exist "%sd%:\switch\sx\sx.nro" (del "%sd%:\switch\sx\sx.nro")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
