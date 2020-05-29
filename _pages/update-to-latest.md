@@ -56,7 +56,7 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [{% include abbr/cfw.txt abbr="кастомную прошивку" %}](cfw){:target="_blank"}
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
-	* [magnet](magnet:?xt=urn:btih:7C2E64154F521F612CC63014AC53D546F401C2EC&dn=10.0.2.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:2700101372CE6F7E3391E3F23975B906961A041A&dn=10.0.3.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
 	* [ЯД](https://yadi.sk/d/2ovRxHAAMlgaag){:target="_blank"}
 	* [GD](https://drive.google.com/file/d/1NziGb4kKfDoQZ8KZkXMPIKasy4UUELOI/view?usp=sharing){:target="_blank"}
 	* [MEGA](https://mega.nz/file/BkEE1aYQ#g-axm_0KLjKGExR0bZVZIbocwbjFEhlbQta6bK2-sZM){:target="_blank"}
