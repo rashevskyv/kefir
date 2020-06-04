@@ -530,6 +530,8 @@ if %clear%==2 (
 			move /Y %%A %sd%:\_backup
 			)
 
+	set stock=0
+
 	)
 
 	 if exist "%sd%:\_backup\sxos\emunand" (mkdir %sd%:\sxos\emunand)
