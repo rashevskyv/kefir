@@ -16,12 +16,11 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"}
 * Приставка должна быть полностью заряжена!
 * Свежая версия пейлоада {% include inc/hekate.txt %}
-* [Ключи](/backup-nand#%D1%87%D0%B0%D1%81%D1%82%D1%8C-iii---%D0%B4%D0%B0%D0%BC%D0%BF%D0%B8%D0%BC-%D0%BA%D0%BB%D1%8E%D1%87%D0%B8){:target="_blank"}
-* Прошивка **10.0.2**:
-	* [magnet](magnet:?xt=urn:btih:7C2E64154F521F612CC63014AC53D546F401C2EC&dn=10.0.2.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/e9ps1iSSoNksHg){:target="_blank"}
-	* [GD](https://drive.google.com/open?id=1woBdN2qDGn6S3vk0Q3yQBrcYg8ELDXga&authuser=aimaxwell@wccnet.edu&usp=drive_fs){:target="_blank"}
-	* [MEGA](https://mega.nz/file/hk0ETCJR#tTpx4wzg1VbEmYLy67Wnvizfpkpyyu-8QvsE2dcsTRo){:target="_blank"}
+* [Ключи](/files/keys.zip){:target="_blank"}, одинаковые для всех консолей
+* Прошивка **6.1.0**:
+	* [ЯД](https://yadi.sk/d/Qaaj2QznA1wc_g){:target="_blank"}
+	* [MEGA](https://mega.nz/#!cwVjlCbK!OzSENIs6Z8oNMVJPQFKhQSYu3rre01xRejZNKCkc40o){:target="_blank"}
+	* [FEX](https://fex.net/912191309314/1157451339?fileId=1157451383){:target="_blank"}
 * Свежая версия [EmmcHaccGen](https://github.com/suchmememanyskill/EmmcHaccGen){:target="_blank"}
 	* Требует для работы [.NET SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1){:target="_blank"}
 * Свежая версия [memloader](/files/memloader.zip){:target="_blank"}
@@ -43,12 +42,19 @@ author_profile: true
 1. Установите [.NET SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1){:target="_blank"}
 1. Распакуйте `.zip-архив` с [EmmcHaccGen](https://github.com/suchmememanyskill/EmmcHaccGen){:target="_blank"} в удобную папку
 1. Положите в папку с `EmmcHaccGen` ваш файл с [ключами](/backup-nand#%D1%87%D0%B0%D1%81%D1%82%D1%8C-iii---%D0%B4%D0%B0%D0%BC%D0%BF%D0%B8%D0%BC-%D0%BA%D0%BB%D1%8E%D1%87%D0%B8){:target="_blank"}
-1. Распакуйте `.zip-архив` с прошивкой **10.0.2** в папку `EmmcHaccGen` таким образом, чтобы папка с прошивкой лежала в той же директории, что и `EmmcHaccGen.exe`
+1. Распакуйте `.zip-архив` с прошивкой **6.1.0** в папку `EmmcHaccGen` таким образом, чтобы папка с прошивкой лежала в той же директории, что и `EmmcHaccGen.exe`
+1. Откройте файлы `keys.txt` и `prod.keys` (бекап ваших ключей) с помощью программы [notepad++](https://notepad-plus-plus.org/download/v7.6.3.html){:target="_blank"}, который у вас получился в ходе выполнения "Части I"
+1. Скопируйте значение строки "**secure_boot_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**secure_boot_key**" в файле `keys.txt`
+1. Скопируйте значение строки "**tsec_key**" из файла `prod.keys` вместо `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` в поле "**tsec_key**" в файле `keys.txt`
+
+	![]({{ base_path }}/images/screenshots/keys.png) 
+	{: .text-center}
+	{: .notice--info}
 1. Запустите командную строку в папке `EmmcHaccGen` (вызовите контекстное меню с зажатой клавишей Shift, нажав на свободное место в папке, и выберите "**Открыть Командную строку здесь**" или "**Открыть окно PowerShell здесь**")
 1. В открывшемся окне наберите:
-	* Для powershell: `.\EmmcHaccGen.exe --keys prod.keys --fw 10.0.2`
-	* Для командной строки: `EmmcHaccGen.exe --keys prod.keys --fw 10.0.2`
-1. Дождитесь окончания перепаковки. В результате вы получите папку `NX-10.0.2-exfat`
+	* Для powershell: `.\EmmcHaccGen.exe --keys prod.keys --fw 6.1.0`
+	* Для командной строки: `EmmcHaccGen.exe --keys prod.keys --fw 6.1.0`
+1. Дождитесь окончания перепаковки. В результате вы получите папку `NX-6.1.0-exfat`
 
 ### Часть III - Подготовка карты памяти
 
@@ -84,7 +90,7 @@ author_profile: true
 {% spoiler Загрузка BOOT0/1 %}
 
 1. Установите и запустите Etcher
-1. Нажмите "**Select Image**" и выберите `BOOT0.BIN`, который находится в папке `NX-10.0.2-exfat`, которую мы сгенерировали в **Части III**
+1. Нажмите "**Select Image**" и выберите `BOOT0.BIN`, который находится в папке `NX-6.1.0-exfat`, которую мы сгенерировали в **Части III**
 1. В появившемся окне нажмите "**Continue**"
 1. Программа автоматически выберет "**LINUX UMS DISK 0**" во втором пункте
 	* Если это не так, нажмите "**Change и выберите его вручную**"
@@ -150,7 +156,7 @@ author_profile: true
 	{: .text-center}
 	{: .notice--info}
 
-1. Выберите `BCPKG2-1-Normal-Main.bin`, который находится в папке `NX-10.0.2-exfat`, которую мы сгенерировали в Части III 
+1. Выберите `BCPKG2-1-Normal-Main.bin`, который находится в папке `NX-6.1.0-exfat`, которую мы сгенерировали в Части III 
 1. Нажмите кнопку "**Start**"
 1. После окончания загрузки закройте окно (не программу!)
 1. Повторите то же самое для `BCPKG2-2-Normal-Sub`, `BCPKG2-3-SafeMode-Main` и `BCPKG2-4-SafeMode-Sub`
@@ -197,7 +203,7 @@ author_profile: true
 
 #### Копирование файлов в раздел SYSTEM
 
-1. Перейдите в папку `NX-10.0.2-exfat`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `SYSTEM` на смонтированный диск с заменой (**объединить** на macOS)
+1. Перейдите в папку `NX-6.1.0-exfat`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `SYSTEM` на смонтированный диск с заменой (**объединить** на macOS)
 1. После окончания копирования отмонтируйте диск, нажав на кнопку "**Unmount**" в окне HacDiskMount
 
 {% endspoiler %}
@@ -224,7 +230,7 @@ author_profile: true
 
 ### Копирование файлов в раздел USER
 
-1. Перейдите в папку `NX-10.0.2-exfat`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `USER` на смонтированный диск с заменой (**объединить** на macOS)
+1. Перейдите в папку `NX-6.1.0-exfat`, которую мы сгенерировали в Части III и скопируйте всё **содержимое** папки `USER` на смонтированный диск с заменой (**объединить** на macOS)
 1. После окончания копирования отмонтируйте диск, нажав на кнопку "**Unmount**" в окне HacDiskMount
 1. Закройте HacDiskMount
 1. Выключите Switch, зажав кнопку (POWER) на 15 секунд, пока подсветка экрана не отключится
