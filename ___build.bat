@@ -39,43 +39,35 @@ xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
 pause
 
-rem echo ------------------------------------------------------------------------
-rem echo.
-rem echo                                   NEUTOS
-rem echo.
-rem echo ------------------------------------------------------------------------
-rem echo.
+echo ------------------------------------------------------------------------
+echo.
+echo                                   SX Chip
+echo.
+echo ------------------------------------------------------------------------
+echo.
 
-rem set sd=%bd%\atmo
+set sd=%bd%\sxchip
 
-rem mkdir %bd%
-rem mkdir %sd%
+mkdir %bd%
+mkdir %sd%
 
-rem xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
-rem xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
+xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
+xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
 
-rem xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
+if exist "%sd%\bootloader" (RD /s /q "%sd%\bootloader")
+if exist "%sd%\config" (RD /s /q "%sd%\config")
+if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
-rem rem if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
-rem copy "%sd%\sept\payload_neutos.bin" "%sd%\sept\payload.bin"
-rem copy "%sd%\bootloader\hekate_ipl_neutos.ini" "%sd%\bootloader\hekate_ipl.ini"
-rem del "%sd%\sept\payload_*.bin"
+if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
+if exist "%sd%\switch\ChoiDujourNX" (RD /s /q "%sd%\switch\ChoiDujourNX")
+if exist "%sd%\switch\FreshHay" (RD /s /q "%sd%\switch\FreshHay")
+if exist "%sd%\switch\kefirupdater" (RD /s /q "%sd%\switch\kefirupdater")
 
-rem if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
-rem if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
-rem if exist "%sd%\switch\sx.nro" (del "%sd%\switch\sx.nro")
-rem if exist "%sd%\bootloader\ini\sxos.ini" (del "%sd%\bootloader\ini\sxos.ini")
-rem del "%sd%\bootloader\hekate_ipl_*.ini"
-rem if exist "%sd%\sxos\titles" (xcopy %sd%\sxos\titles\* %sd%\atmosphere\titles\  /Y /S /E /H /R /D)
-rem if exist "%sd%\sxos\games" (move /Y %sd%\sxos\games\* %sd%\games)
-rem if exist "%sd%\sxos" (RD /s /q "%sd%\sxos")
-rem if exist "%sd%\switch\sx" (RD /s /q "%sd%\switch\sx")
-rem if exist "%sd%\switch\themes" (RD /s /q "%sd%\switch\themes")
-rem if exist "%sd%\titles" (xcopy "%wd%\titles\*" "%sd%\atmosphere\titles" /H /Y /C /R /S /E)
-rem if exist "%sd%\titles" (RD /s /q "%sd%\titles")
 
-rem if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
-rem if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
+del "%sd%\payload*.bin"
+del "%sd%\keys.txt"
+
+
 
 echo ------------------------------------------------------------------------
 echo.
@@ -109,6 +101,7 @@ if exist "%sd%\sxos\games" (move /Y %sd%\sxos\games\* %sd%\games)
 if exist "%sd%\sxos" (RD /s /q "%sd%\sxos")
 if exist "%sd%\switch\sx" (RD /s /q "%sd%\switch\sx")
 if exist "%sd%\switch\themes" (RD /s /q "%sd%\switch\themes")
+if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%\titles" (xcopy "%wd%\titles\*" "%sd%\atmosphere\titles" /H /Y /C /R /S /E)
 if exist "%sd%\titles" (RD /s /q "%sd%\titles")
 
@@ -172,8 +165,6 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
 :cfw_SXOS
 
-
-
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
 if exist "%sd%\bootloader\payloads\rajnx_ipl.bin" (del "%sd%\bootloader\payloads\rajnx_ipl.bin")
@@ -182,6 +173,8 @@ copy "%sd%\sept\payload_atmo.bin" "%sd%\sept\payload.bin"
 if exist "%sd%\bootloader\hekate_ipl_sx.ini" (copy "%sd%\bootloader\hekate_ipl_sx.ini" "%sd%\bootloader\hekate_ipl.ini")
 del "%sd%\sept\payload_*.bin"
 del "%sd%\bootloader\hekate_ipl_*.ini"
+
+if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 
 if exist "%sd%\atmosphere\exefs_patches" (RD /s /q "%sd%\atmosphere\exefs_patches")
 if exist "%sd%\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%\atmosphere\kip_patches\fs_patches")
@@ -246,7 +239,7 @@ if exist "%sd%:\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
+"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
 
 rem atmo
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\atmo.zip %bd%\atmo\*
@@ -256,6 +249,9 @@ rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -
 
 rem sxos
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!emuiibo -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\sxos.zip %bd%\sxos\*
+
+rem sxchip
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!sys-con -xr!.overlays %reldir%\sxchip.zip %bd%\sxchip\*
 
 pause
 

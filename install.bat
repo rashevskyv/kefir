@@ -463,14 +463,8 @@ if %theme_flag%==1 (
 
 if %theme%==1 (
 	RD /s /q "%sd%:\_themebkp"
-	if exist "%sd%:\sxos\titles\0100000000001000" (
-		mkdir "%sd%:\_themebkp" 
-		move /Y "%sd%:\sxos\titles\0100000000001000" "%sd%:\_themebkp"
-		)
-	if exist "%sd%:\atmosphere\contents\0100000000001000" (
-		mkdir "%sd%:\_themebkp" 
-		move /Y "%sd%:\atmosphere\contents\0100000000001000" "%sd%:\_themebkp"
-		)
+	if exist "%sd%:\sxos\titles\0100000000001000" (RD /s /q "%sd%:\sxos\titles\0100000000001000")
+	if exist "%sd%:\atmosphere\contents\0100000000001000" (RD /s /q "%sd%:\atmosphere\contents\0100000000001000")
 )
 
 
