@@ -1,6 +1,6 @@
 ---
 permalink: /backup-saves.html
-title: Резервное копирование и восстановление сохранений с помощью DBI
+title: Резервное копирование и восстановление сохранений
 author_profile: true
 ---
 {% include toc title="Разделы" %}

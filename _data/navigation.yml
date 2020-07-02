@@ -53,7 +53,7 @@ addons:
     url: /preparation-white
   - title: "Использование читов в EdiZon"
     url: /cheats
-  - title: "Резервное копирование и восстановление сохранений с помощью Checkpoint"
+  - title: "Резервное копирование и восстановление сохранений"
     url: /backup-saves
   - title: "Онлайн для прошитых и забаненных"
     url: /lanplay
