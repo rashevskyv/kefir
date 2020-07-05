@@ -73,6 +73,7 @@ ECHO.
 ECHO           1. Atmosphere
 ECHO           2. SXOS
 ECHO           3. Atmo + SX
+ECHO           4. SX Core or SX Lite - modchips from TX
 ECHO.
 ECHO ==================================================================
 ECHO                                                       O.  Options
@@ -81,10 +82,7 @@ ECHO                                                       Q.  Quit
 set st=
 set /p st=:
 
-for %%A in ("4") do if "%st%"==%%A (
-	set cfw=NEUTOS
-	set cfwname=NEUTOS
-)
+
 for %%A in ("1") do if "%st%"==%%A (
 	set cfw=ATMOS
 	set cfwname=Atmosphere
@@ -97,6 +95,10 @@ for %%A in ("2") do if "%st%"==%%A (
 for %%A in ("3") do if "%st%"==%%A (
 	set cfw=BOTH
 	set cfwname=both OSes 
+)
+for %%A in ("4") do if "%st%"==%%A (
+	set cfw=sxchip
+	set cfwname=SX Chip 
 )
 for %%A in ("O" "o" "Щ" "щ" "J" "j" "о" "О" "0") do if "%st%"==%%A (GOTO OPTIONS)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
@@ -137,6 +139,7 @@ if %lang%==1 (
 	ECHO           1. Atmosphere
 	ECHO           2. SXOS
 	ECHO           3. Atmo + SX
+	ECHO           4. SX Core или SX Lite - чип от TX
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -153,6 +156,7 @@ if %lang%==1 (
 	ECHO           1. Atmosphere
 	ECHO           2. SXOS
 	ECHO           3. Atmo + SX
+	ECHO           4. SX Core or SX Lite - modchips from TX
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -161,10 +165,6 @@ if %lang%==1 (
 set st=
 set /p st=:
 
-for %%A in ("4") do if "%st%"==%%A (
-	set cfw=NEUTOS
-	set cfwname=NEUTOS
-)
 for %%A in ("1") do if "%st%"==%%A (
 	set cfw=ATMOS
 	set cfwname=Atmosphere
@@ -177,6 +177,11 @@ for %%A in ("2") do if "%st%"==%%A (
 for %%A in ("3") do if "%st%"==%%A (
 	set cfw=BOTH
 	set cfwname=both OSes 
+)
+for %%A in ("4") do if "%st%"==%%A (
+	set cfw=sxchip
+	set cfwname=SX Chip 
+	goto syscon
 )
 
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
@@ -291,7 +296,7 @@ set st=
 set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set syscon_flag=1)
-for %%A in ("2") do if "%st%"==%%A (set syscon_flag=0)
+for %%A in ("2") do if "%st%"==%%A (set syscon_flag=0) 
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :opt
@@ -468,11 +473,25 @@ if %theme%==1 (
 )
 
 
+rem if %syscon_flag%==2 (
+rem    if not exist "%sd%:\atmosphere\contents\690000000000000D" (
+rem    	if exist "%sd%:\sxos\titles\690000000000000D" (set syscon=1) else (set syscon=0)
+rem 	) else (
+rem       if exist "%sd%:\atmosphere\contents\690000000000000D" (
+rem       	(set syscon=1) else (set syscon=0)
+rem    	)
+rem 	)
+rem )
+
+rem sys-con check 
 if %syscon_flag%==2 (
-   if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1) else (set syscon=0)
-) else (
-   set syscon=%syscon_flag%
-)
+	if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1 & goto end_syscon_check) else (goto check_sx)
+) else (set syscon=%syscon_flag% & goto end_syscon_check)
+
+:check_sx
+if exist "%sd%:\sxos\titles\690000000000000D" (set syscon=1) else (set syscon=0)
+
+:end_syscon_check
 
 if %tesla_flag%==2 (
    if exist "%sd%:\atmosphere\contents\420000000007E51A" (set tesla=1) else (set tesla=0)
@@ -666,13 +685,13 @@ if exist "%sd%:\bootloader\bootlogo.bmp" (del "%sd%:\bootloader\bootlogo.bmp")
 if exist "%sd%:\bootloader\res\icon_payload.bmp" (del "%sd%:\bootloader\res\icon_payload.bmp")
 if exist "%sd%:\bootloader\res\icon_switch.bmp" (del "%sd%:\bootloader\res\icon_switch.bmp")
 
+if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
+
 findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
 	set stock=1
 ) || (
 	set stock=0
 )
-
-
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
@@ -773,8 +792,6 @@ if %lang%==1 (
 	echo.
 )
 
-xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
-xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 if exist "%sd%:\sdfiles.zip" (del "%sd%:\sdfiles.zip")
 
 if exist "%sd%:\tinfoil\ticket" (RD /s /q "%sd%:\tinfoil\ticket")
@@ -808,11 +825,16 @@ if %lang%==1 (
 if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 goto cfw_%cfw%
 
-rem :cfw_NEUTOS
-
-rem set neutos=1
+rem ------------------------------------------------------------------------
+rem .
+rem                                    Atmosphere
+rem .
+rem  ------------------------------------------------------------------------
 
 :cfw_ATMOS
+
+xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
+xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
@@ -825,8 +847,6 @@ if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
 
-
-
 del "%sd%:\sept\payload_*.bin"
 
 rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
@@ -837,14 +857,6 @@ if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
 if exist "%sd%:\sxos\titles" (move /Y %sd%:\sxos\titles\* %sd%:\atmosphere\contents\)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
-
-if %syscon%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
-if %syscon%==0 (RD /s /q "%sd%:\config\sys-con")
-
-if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
-if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
-if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
-if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
 
 if exist "%sd%:\sxos\emunand" (
 	if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
@@ -857,13 +869,22 @@ if exist "%sd%:\sxos\emunand" (
 
 if exist "%sd%:\switch\sx" (RD /s /q "%sd%:\switch\sx")
 if exist "%sd%:\switch\themes" (RD /s /q "%sd%:\switch\themes")
+if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%:\titles" (move /Y "%wd%\titles\*" "%sd%:\atmosphere\contents")
 if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
 goto caffeine
 
+rem ------------------------------------------------------------------------
+rem .
+rem                                    SX
+rem .
+rem  ------------------------------------------------------------------------
 
 :cfw_SXOS
+
+xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
+xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
@@ -875,28 +896,75 @@ if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_sx_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_sx_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
 
+if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
+
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
 if exist "%sd%:\atmosphere\kip_patches\loader_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\loader_patches")
-rem if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
-
-
 
 goto caffeine
 
+rem ------------------------------------------------------------------------
+rem .
+rem                                    SX Chip
+rem .
+rem  ------------------------------------------------------------------------
+
+:cfw_sxchip
+
+xcopy "%wd%\base\switch\*" "%sd%:\switch\" /H /Y /C /R /S /E /I
+xcopy "%wd%\base\games\*" "%sd%:\games\" /H /Y /C /R /S /E /I
+xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
+
+echo "syscon state " %syscon%
+
+if %syscon%==1 (
+	xcopy "%wd%\atmo\atmosphere\contents\690000000000000D\*" "%sd%:\sxos\titles\690000000000000D\" /H /Y /C /R /S /E /I
+	xcopy "%wd%\base\config\sys-con\*" "%sd%:\config\sys-con\" /H /Y /C /R /S /E /I
+	)
+
+if exist "%sd%:\bootloader" (RD /s /q "%sd%:\bootloader")
+if exist "%sd%:\atmosphere" (RD /s /q "%sd%:\atmosphere")
+if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
+
+if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
+if exist "%sd%:\switch\ChoiDujourNX" (RD /s /q "%sd%:\switch\ChoiDujourNX")
+if exist "%sd%:\switch\FreshHay" (RD /s /q "%sd%:\switch\FreshHay")
+if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
+
+if exist "%sd%:\payload*.bin" (del "%sd%:\payload*.bin")
+if exist "%sd%:\keys.txt" (del "%sd%:\keys.txt")
+
+goto caffeine
+
+rem ------------------------------------------------------------------------
+rem .
+rem                                    BOTH
+rem .
+rem  ------------------------------------------------------------------------
+
 :cfw_BOTH
+
+xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
+xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
+
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 
+if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 
-copy "%sd%:\sept\payload_neutos.bin" "%sd%:\sept\payload.bin"
 if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_both.ini" (copy "%sd%:\bootloader\hekate_ipl_both.ini" "%sd%:\bootloader\hekate_ipl.ini")
 ) else (
 	if exist "%sd%:\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_both_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
 
+rem ------------------------------------------------------------------------
+rem .
+rem                                    Caffeine
+rem .
+rem  ------------------------------------------------------------------------
 
 :caffeine
 if %caffeine%==1 (goto cfw_DONE)
@@ -905,6 +973,17 @@ if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injec
 if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 
 :cfw_DONE
+
+if %syscon%==0 (
+	RD /s /q "%sd%:\atmosphere\contents\690000000000000D"
+	RD /s /q "%sd%:\sxos\titles\690000000000000D"
+	RD /s /q "%sd%:\config\sys-con"
+	)
+
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\690000000000000D")
+if %tesla%==0 (RD /s /q "%sd%:\atmosphere\contents\0100000000000352")
+if %tesla%==0 (RD /s /q "%sd%:\switch\.overlays")
 
 del "%sd%:\bootloader\hekate_ipl_*.ini"
 del "%sd%:\sept\payload_*.bin"
