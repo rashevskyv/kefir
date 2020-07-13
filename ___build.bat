@@ -11,10 +11,7 @@ set img=F:\VK\kefir
 set site=F:\git\site\switch
 set ps=D:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
 if exist "%bd%" (RD /s /q "%bd%")
-if exist "%reldir%\atmo.zip" (del "%reldir%\atmo.zip")
-if exist "%reldir%\atmo_vanilla.zip" (del "%reldir%\atmo_vanilla.zip")
-if exist "%reldir%\sxos.zip" (del "%reldir%\sxos.zip")
-if exist "%reldir%\_kefir.7z" (del "%reldir%\_kefir.7z")
+if exist "%reldir%" (RD /s /q "%reldir%")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
