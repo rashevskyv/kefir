@@ -550,8 +550,6 @@ if %clear%==2 (
 	 if exist "%sd%:\_backup\sxos\emunand" (mkdir %sd%:\sxos\emunand)
 	 if exist "%sd%:\_backup\sxos\emunand" (move /Y  %sd%:\_backup\sxos\emunand\* %sd%:\sxos\emunand)
 	
-	set emuiibo=0
-	
 	move /Y %sd%:\*.* %sd%:\_backup"
 	
 )
@@ -742,6 +740,7 @@ if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
+if exist "%sd%:\switch\.overlays\emuiibo.ovl" (RD /s /q "%sd%:\switch\tinfoil")
 
 
 :install_pack
@@ -1045,9 +1044,6 @@ if exist "%sd%:\games" (
 if exist "%sd%:\themes" (
 	attrib -A /S /D %sd%:\themes\*
 	attrib -A %sd%:\themes)
-if exist "%sd%:\emuiibo" (
-	attrib -A /S /D %sd%:\emuiibo\*
-	attrib -A %sd%:\emuiibo)
 if exist "%sd%:\_backup" (
 	attrib -A /S /D %sd%:\_backup\*
 	attrib -A %sd%:\_backup)
