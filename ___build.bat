@@ -55,7 +55,6 @@ xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
 
 if exist "%sd%\bootloader" (RD /s /q "%sd%\bootloader")
-if exist "%sd%\config" (RD /s /q "%sd%\config")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
@@ -239,19 +238,19 @@ if exist "%sd%:\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog %reldir%\_kefir.7z %wd%\*
+"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog -xr!install1.bat %reldir%\_kefir.7z %wd%\*
 
 rem atmo
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw %reldir%\atmo.zip %bd%\atmo\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -ssw %reldir%\atmo.zip %bd%\atmo\*
 
 rem atmo_vanilla
-rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!690000000000000D -xr!NEUTOS.bin -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
+rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!690000000000000D -xr!NEUTOS.bin -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
 
 rem sxos
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!emuiibo -xr!690000000000000D -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\sxos.zip %bd%\sxos\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!emuiibo -xr!690000000000000D -xr!010000000007E51A -xr!kefir_installer -xr!0100000000000352 -xr!420000000007E51A -xr!sys-con -xr!.overlays %reldir%\sxos.zip %bd%\sxos\*
 
 rem sxchip
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!sys-con -xr!.overlays %reldir%\sxchip.zip %bd%\sxchip\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!sys-con -xr!.overlays %reldir%\sxchip.zip %bd%\sxchip\*
 
 pause
 
