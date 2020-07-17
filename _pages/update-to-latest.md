@@ -56,10 +56,10 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [{% include abbr/cfw.txt abbr="кастомную прошивку" %}](cfw){:target="_blank"}
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
-	* [magnet](magnet:?xt=urn:btih:D393BD9DE3BA974B09680D00C9C110FD50ACC159&dn=10.0.4.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/5jHt40HUZ6jteA){:target="_blank"}
-	* [GD](https://drive.google.com/open?id=10J0LY6Lbk8gnRI8xwqNOZiiep2TWyjK8){:target="_blank"}
-	* [MEGA](https://mega.nz/file/85ElnaYA#-7nzAZjpRUdkJTC-HbmyaHZzzmHkgviRqWqWIAxJ-QQ){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:B23F438BA3FED6462C067496F14D37D88B46BEF8&dn=10.1.0.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/BzsYZLjroSgLjw){:target="_blank"}
+	* [GD](https://drive.google.com/file/d/10L8zKy-Js9L3QyljOqBJLz-zTXDTxofO/view?usp=sharing){:target="_blank"}
+	* [MEGA](https://mega.nz/file/Bt1h3QpD#oCQVvmE57c_RNveZIl1wVZ30ktposLsUrUoEMIgcKk8){:target="_blank"}
 * Карта памяти 
 
 ## Инструкция
