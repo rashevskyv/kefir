@@ -913,6 +913,7 @@ rem  ------------------------------------------------------------------------
 
 xcopy "%wd%\base\switch\*" "%sd%:\switch\" /H /Y /C /R /S /E /I
 xcopy "%wd%\base\games\*" "%sd%:\games\" /H /Y /C /R /S /E /I
+xcopy "%wd%\base\config\*" "%sd%:\config\" /H /Y /C /R /S /E /I
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 
 echo "syscon state " %syscon%
