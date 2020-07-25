@@ -1,0 +1,8 @@
+<span class="tooltip_container">
+	{{ include.abbr }}
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+		</span>
+	</span>
+</span>

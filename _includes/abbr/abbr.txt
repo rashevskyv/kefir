@@ -1,0 +1,17 @@
+{% include abbr/host.txt abbr="хост" %}
+{% include abbr/cfw.txt abbr="кастом" %}
+{% include abbr/dongle.txt abbr="донгл" %}
+{% include abbr/lfs.txt abbr="LayeredFS" %}
+{% include abbr/hekate.txt abbr="hekate" %}
+{% include abbr/fusegele.txt abbr="Fusée Gelée" %}
+{% include abbr/caffeine.txt abbr="Caffeine" %}
+{% include abbr/rcm.txt abbr="RCM" %}
+{% include abbr/payload.txt abbr="пейлоад" %}
+{% include abbr/homebrew.txt abbr="homebrew" %}
+{% include abbr/emunand.txt abbr="EmuNAND" %}
+{% include abbr/sysnand.txt abbr="SysNAND" %}
+{% include abbr/kefir_addr.txt %}
+{% include abbr/exfat.txt %}
+{% include abbr/sdhc.txt %}
+
+{% include inc/launch-hekate.txt %}

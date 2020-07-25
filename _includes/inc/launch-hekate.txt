@@ -1,0 +1,3 @@
+1. Войдите в {% include abbr/hekate.txt abbr="hekate" %} с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"} или воспользовавшись [Caffeine](caffeine){:target="_blank"}. 
+	1. Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
+	* Пропустите этот шаг, если вы уже в hekate 

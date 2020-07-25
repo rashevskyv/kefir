@@ -1,0 +1,8 @@
+<span class="tooltip_container">
+	{{ include.abbr }}
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Патч, который позволяет изменять данные игры в оперативной памяти на данные, находящиеся на карте памяти. С помощью этого патча работают переводы и моды. 
+		</span>
+	</span>
+</span>

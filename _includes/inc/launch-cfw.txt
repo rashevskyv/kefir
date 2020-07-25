@@ -1,0 +1,2 @@
+1. Запустите {% include abbr/cfw.txt abbr="кастом" %} с помощью поддерживаемого на вашей приставке эксплойта:
+	* Запустите пейлоад {% include inc/hekate.txt %} с помощью [Fusée Gelée](fusee-gelee){:target="_blank"} или воспользуйтесь [Caffeine](caffeine){:target="_blank"} для загрузки кастома

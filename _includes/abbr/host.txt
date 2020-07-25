@@ -1,0 +1,8 @@
+<span class="tooltip_container">
+	{{ include.abbr }}
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+		</span>
+	</span>
+</span>

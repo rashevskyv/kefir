@@ -1,0 +1,82 @@
+# main links links
+main:
+  - title: "<b>Прошить другую<br>приставку</b>"
+    url: http://customfw.xyz
+  - title: "<i>Купить<br>прошитую</i>"
+    url: https://nincfw.olx.ua/
+  - title: "Взлом"
+    url: /exploits
+  - title: "EmuNAND"
+    url: /emunand
+  - title: "Полезные<br>
+  инструкции"
+    url: /addons
+  - title: "FAQ"
+    url: /faq
+  - title: "Проблемы и<br>их решение"
+    url: /troubleshooting
+  - title: "Использование<br>прошитой Switch"
+    url: /usage
+  - title: "Установка<br>игр"
+    url: /games
+  - title: "Kefir"
+    url: /kefir
+  - title: "Запуск<br>HBL"
+    url: /hbl
+  - title: "Методы<br>взлома"
+    url: /exploits
+  - title: "Безопасное<br>обновление"
+    url: /update-to-latest
+  - title: "Резервное<br>копирование"
+    url: /backup-nand
+  - title: "Навигация по сайту"
+    url: /site-navigation
+  - title: "Пожертвования"
+    url: http://customfw.xyz/donations
+  - title: "Связаться с нами"
+    url: http://customfw.xyz/contacts
+
+addons:
+  - title: "Инструкция по использованию уже прошитой приставкой"
+    url: /usage
+  - title: "FAQ"
+    url: /faq
+  - title: "Блокировка серверов Nintendo, защита от бана"
+    url: /block-update
+  - title: "Установка игр, DLC, обновлений"
+    url: /games
+  - title: "Где брать игры"
+    url: /games#%D0%B3%D0%B4%D0%B5-%D0%B1%D1%80%D0%B0%D1%82%D1%8C-%D0%B8%D0%B3%D1%80%D1%8B-%D0%B8-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F
+  - title: "Связывание учётной записи консоли с аккаунтом Nintendo"
+    url: /link-account
+  - title: "Использование EmuNAND для уже прошившихся ранее"
+    url: /preparation-white
+  - title: "Использование читов в EdiZon"
+    url: /cheats
+  - title: "Резервное копирование и восстановление сохранений"
+    url: /backup-saves
+  - title: "Онлайн для прошитых и забаненных"
+    url: /lanplay
+  - title: "Безопасное обновление прошивки"
+    url: /update-to-latest
+  - title: "Резервное копирование NAND"
+    url: /backup-nand
+  - title: "Запуск пейлоадера через Fusée Gelée"
+    url: /fusee-gelee
+  - title: "Запуск Homebrew Launcher"
+    url: /launch-hbl
+  - title: "Кастомные прошивки"
+    url: /cfw
+  - title: "Активация AutoRCM"
+    url: /autorcm
+  - title: "Использование FTP"
+    url: /ftp
+  - title: "Особенности использования чипованной приставки"
+    url: /hardmoded
+  - title: "Эмуляция Amiibo с помощью модуля emuiibo"
+    url: /emuiibo
+            
+bottom:
+  - title: <div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+  - title: <div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br>По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+  - title: <div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
