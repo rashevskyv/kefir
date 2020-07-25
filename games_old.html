@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Установка игр, DLC, обновлений по USB с помощью DBIv49 и NS USB Loader - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Установка игр, DLC, обновлений по USB с помощью DBIv49 и NS USB Loader">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/games_old.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/games_old.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://nincfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Взлом</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/emunand">EmuNAND</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/usage">Использование<br>прошитой Switch</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/kefir">Kefir</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      
+
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Установка игр, DLC, обновлений по USB с помощью DBIv49 и NS USB Loader">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Установка игр, DLC, обновлений по USB с помощью DBIv49 и NS USB Loader
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#важная-информация" id="markdown-toc-важная-информация">Важная информация</a>    <ul>
+      <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
+      <li><a href="#подготовительные-работы-выполняются-едино-разово" id="markdown-toc-подготовительные-работы-выполняются-едино-разово">Подготовительные работы (выполняются едино-разово)</a></li>
+      <li><a href="#установка-игр" id="markdown-toc-установка-игр">Установка игр</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<details class="spoiler"><summary class="spoiler-title">Видеоинструкция</summary><div class="spoiler-body">
+<p class="notice--warning">ВНИМАНИЕ!!! Мы не рекомендуем слепо следовать видео-инструкции! Используйте её только в качестве вспомогательной! Дело в том, что текстовый гайд постоянно обновляется. Невозможно следить за всеми обновлениями в гайде и каждый раз менять видео-инструкцию вслед за ним! Поэтому текстовый гайд всегда будет более точным и более актуальным, чем видео!</p>
+
+<div style="margin:0 auto;" class="text-center notice--info">
+  <div class="ytcontainer">
+    <iframe width="1667" height="946" class="yt" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/0OMXAYJcTS0?start="></iframe>
+  </div>
+</div>
+
+</div></details>
+
+<h2 id="важная-информация">Важная информация</h2>
+
+<p>Эта инструкция для тех, кто по каким-либо причинам не смог совладать с DBI backend и DBIv60 и выше. Установка через DBI backend и DBIv60 и выше, которая описана в <a href="games" target="_blank">основной инструкции</a> является рекомендуемой.</p>
+
+<h3 id="что-понадобится">Что понадобится</h3>
+
+<ul>
+  <li>Настроенная и работающая <a href="cfw" target="_blank">кастомная прошивка</a></li>
+  <li>Умение <a href="fusee-gelee" target="_blank">запускать пейлоады через Fusée Gelée</a></li>
+  <li>Свежая версия <a href="update-to-latest" target="_blank">прошивки приставки</a></li>
+  <li>Установленный <a href="files/DBI_old.zip" target="_blank">DBIv49</a>
+    <ul>
+      <li><strong>ВНИМАНИЕ!</strong> Описанный метод работает <strong>только</strong> с DBIv49! Более свежие версии программы не совместимы с NS USB Loader!</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="подготовительные-работы-выполняются-едино-разово">Подготовительные работы (выполняются едино-разово)</h3>
+<details class="spoiler"><summary class="spoiler-title">Установка драйвера (только Windows)</summary><div class="spoiler-body">
+<p class="notice--warning">Необходимо сделать только раз для корректной работы установки по USB</p>
+
+<p class="notice--warning">Пользователи mac и linux пропускают установку драйверов</p>
+
+<ul>
+  <li>Свежая версия <a href="https://zadig.akeo.ie/" target="_blank"><code class="language-plaintext highlighter-rouge">Zadig.exe</code></a>
+Эти драйвера отличаются от тех, что используются для передачи пейлоада на switch! Если вы ни разу не устанавливали игры этим методом, ставить драйвера нужно обязательно!</li>
+</ul>
+
+<ol>
+  <li>Выполните <a href="games#подготовительные-работы" target="_blank">подготовительные работы</a>, если ещё не сделали этого</li>
+  <li>Подключите switch к ПК по USB</li>
+  <li>На ПК запустите <a href="https://zadig.akeo.ie/" target="_blank"><code class="language-plaintext highlighter-rouge">Zadig.exe</code></a> от имени Администратора
+    <ul>
+      <li>Если программа не видит Switch, <a href="hbl" target="_blank">запустите на консоли DBI</a> и попробуйте еще раз</li>
+    </ul>
+  </li>
+  <li>В верхнем поле (на изображении ‘1’) вы должны увидеть строку “<strong>libnx USB comms</strong>” или “<strong>Nintendo Switch</strong>”
+    <ul>
+      <li>Если вместо “<strong>libnx USB comms</strong>” или “<strong>Nintendo Switch</strong>” вы видите “<strong>Unknown Device</strong>”, подключите switch в другой USB и перезапустите ПК, после чего вернитесь к установке драйвера</li>
+      <li>Если там ничего нет, пробуйте подключиться в другой USB-порт, перезагрузить ПК, сменить кабель</li>
+    </ul>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/zadig_old.png" alt="" /></p>
+  </li>
+  <li>В поле “<strong>Driver</strong>” (на изображении ‘2’) выберите <code class="language-plaintext highlighter-rouge">libusbK (v3.0.7.0)</code></li>
+  <li>Нажмите “<strong>Install Driver</strong>” (‘3’)</li>
+  <li>После успешной установки драйвера нажмите “<strong>Close</strong>” и закройте программу</li>
+</ol>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Настройка ПО</summary><div class="spoiler-body">
+<ol>
+  <li>Скачайте программу <a href="https://github.com/developersu/ns-usbloader/releases/latest" target="_blank">ns-usbloader</a> и поместите её в удобную папку</li>
+  <li>Скачайте и установите <a href="https://java.com/ru/download/" target="_blank">JRE</a> для вашей ОС</li>
+  <li>Запустите <a href="https://github.com/developersu/ns-usbloader/releases/latest" target="_blank"><code class="language-plaintext highlighter-rouge">ns-usbloader.jar</code></a></li>
+  <li>
+    <p>В главном окне программы выберите <strong>Tinfoil</strong> и <strong>USB</strong></p>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/nsu.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Перейдите в настройки программы и установите галочку напротив пункта “<strong>Разрешить выбирать XCI файлы для TinFoil</strong>”</p>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/nsu_setup.png" alt="" /></p>
+  </li>
+</ol>
+
+</div></details>
+
+<h3 id="установка-игр">Установка игр</h3>
+
+<ol>
+  <li>На приставке запустите <strong>DBI</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
+  <li>Подключите консоль к ПК</li>
+  <li>Выберите пункт “<strong>Install title from USB</strong>”</li>
+  <li>Запустите <a href="https://github.com/developersu/ns-usbloader/releases/latest" target="_blank"><code class="language-plaintext highlighter-rouge">ns-usbloader.jar</code></a>
+    <ul>
+      <li>Убедитесь, что в программе выбран <strong>Tinfoil</strong> и <strong>USB</strong></li>
+      <li>Убедитесь, в настройках программы установлена галочка напротив пункта “<strong>Разрешить выбирать XCI файлы для TinFoil</strong>”</li>
+    </ul>
+  </li>
+  <li>Нажмите “<strong>Выбрать .NSP файлы</strong>” и выберите необходимые для установки <code class="language-plaintext highlighter-rouge">.nsp</code>, <code class="language-plaintext highlighter-rouge">.nsz</code> или <code class="language-plaintext highlighter-rouge">.xci</code>
+    <ul>
+      <li>Для выбора нескольких игр, удерживайте клавишу (Ctrl)</li>
+    </ul>
+  </li>
+  <li>Нажмите “<strong>Отправить в NS</strong>”</li>
+  <li>На приставке с помощью клавиши (X) выберите необходимые игры
+    <ul>
+      <li>Нажмите (Y), если нужно выбрать все или инвертировать выбор</li>
+    </ul>
+  </li>
+  <li>Нажмите (A), чтобы начать установку</li>
+  <li>Выберите необходимые опции в “<strong>Install options</strong>”
+    <ul>
+      <li><strong>Install target</strong> - место установки. NAND или Sdcard соответствуют внутренней памяти и карте памяти</li>
+      <li><strong>Ignore version</strong> - указывает на то будет ли игнорироваться параметр версии, прописанный в данных игры при установке. То есть, если игра говорит, что ей нужна прошивка 7.0, а у вас 6.2, то включение этой опции рзрешит установить такую игру
+        <ul>
+          <li><strong>Не будет работать, если игра подписана ключем версии выше, чем ваша! <a href="update-to-latest" target="_blank">Обновитесь</a> на прошивку 10.1.0, чтобы не задумываться об этом</strong></li>
+          <li>Рекомендуемое значение <strong>Yes</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Выберите <strong>Start install</strong> для начала установки</li>
+  <li>Нажмите (B) для выхода из установщика в папку</li>
+  <li>Нажмите (+) для закрытия программы</li>
+</ol>
+
+<hr />
+
+<p class="notice--success"><a href="javascript:window.close();">Закрыть страницу</a></p>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+    <a href="#" class="scrollup">Наверх</a>
+
+    <div class="page__footer-container">
+      <footer class="page__footer">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

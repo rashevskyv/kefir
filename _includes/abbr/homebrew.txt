@@ -1,8 +1,0 @@
-<span class="tooltip_container">
-{{ include.abbr }}
-	<span class="tooltip"><i class="fas fa-caret-down"></i>
-		<span class="bottom">
-			Под словом [**Homebrew (хомбрю)**](https://ru.wikipedia.org/wiki/homebrew_(%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D0%B8%D0%B3%D1%80%D1%8B)){:target="_blank"} обычно подразумевают программное обеспечение не авторизованное Nintendo. В качестве примера можно привести разные самописные игры, программы для бэкапа и редактирования сохранений и эмуляторы консолей предыдущих поколений
-		</span>
-	</span>
-</span>

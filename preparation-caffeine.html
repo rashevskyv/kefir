@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Подготовка к запуску кастомной прошивки через Caffeine - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Подготовка к запуску кастомной прошивки через Caffeine">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/preparation-caffeine.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/preparation-caffeine.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://nincfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Взлом</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/emunand">EmuNAND</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/usage">Использование<br>прошитой Switch</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/kefir">Kefir</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      
+
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Подготовка к запуску кастомной прошивки через Caffeine">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Подготовка к запуску кастомной прошивки через Caffeine
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        <p>В этом разделе нас ждёт практическое применение теоретических знаний, полученных в прошлый раз. Каждый из пунктов <strong>обязателен</strong> к выполнению, если вы хотите получить максимум от прошивки своей консоли. Каждый из этих пунктов самодостаточен. Если вы по какой-то причине ранее не выполнили любой из них, вы можете вернуться к этому позже.</p>
+
+<p>Вот краткий план того, чем мы займёмся:</p>
+
+<p class="notice--warning">После выполнения каждой инструкции из нижеследующего списка, возвращайтесь на эту страницу и переходите к следующему пункту. Если какие-то из действий вы уже выполняли, повторно их делать не нужно.</p>
+
+<ol>
+  <li><a href="cfw" target="blank_">Выбор кастомной прошивки</a> - на данном этапе вам необходимо определиться какой <span class="tooltip_container">
+ кастом
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+     </span>
+ </span>
+</span> вы будете использовать в дальнейшем, поскольку методы запуска и методы создания <span class="tooltip_container">
+ EmuNAND
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+     </span>
+ </span>
+</span> у них сильно разные. Просто прочитайте эту страницу и остановитесь на одной из двух прошивок. Делать пока ничего не надо.</li>
+  <li><a href="caffeine" target="blank_">Установка и настройка Caffeine и запуск hekate с его помощью</a> - настраиваем точку входа и делаем первый запуск, чтобы попасть в <span class="tooltip_container">
+ кастомный загрузчик
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
+ </span>
+</span>. Всегда помните, что вы спокойно можете извлекать и вставлять обратно карту памяти находясь в hekate!</li>
+  <li><a href="backup-nand" target="blank_">Создание резервной копии прошивки</a></li>
+  <li><a href="autorcm#отключение-autorcm" target="blank_">Отключение AutoRCM</a> - <strong>НЕ ПРОПУСТИТЕ ВЫПОЛНЕНИЕ ЭТОГО ПУНКТА!</strong> Хоть и всё используемое программное обеспечение и умеет определять патченная ли используется приставка или нет и отключать AutoRCM для патченных, все же необходимо проверить и убедится, что AutoRCM отключён, иначе вы гарантированно получите брик!</li>
+  <li><a href="block-update" target="blank_">Блокировка обновлений в SysNAND</a> - установив блокировку на этом этапе, мы обезопасим себя даже от теоретической возможности случайно обновить нашу 4.1.0 на прошивку выше. К этому моменту у вас <strong>должен быть</strong> бекап вашей прошивки на случай, если что-то пойдёт не так!</li>
+  <li><a href="emunand" target="blank_">Создание EmuNAND</a> - вы можете создать два emuMMC, один для пиратки, другой для лицензии и переключаться между ними, но только на Atmosphere! Таким образом у вас в системе будет три прошивки - 4.1.0, которую нельзя обновлять и которая используется как точка входа, EmuNAND на последней прошивке для пиратки с установленным incognito и привязанным аккаунтом и EmuNAND для лицензии безо всяких модификаций.
+    <ul>
+      <li><a href="block-update#восстановление-доступа-к-серверам-nintendo" target="blank_">Восстановление доступа к серверам Nintendo на EmuNAND для лицензии</a> - так как Incognito_RCM умеет работать только с одним EmuNAND, то выполните восстановление доступа сразу после создания первого EmuNAND и используйте его для запуска лицензии. Второй EmuNAND будет для пиратки и не будет иметь доступа к серверам Nintendo. Если вы не собираетесь создавать EmuNAND специально для лицензии и онлайна, просто пропустите этот подпункт.</li>
+    </ul>
+  </li>
+  <li><a href="cfw" target="blank_">Запуск кастомной прошивки</a> - теперь запускаем кастом. Он автоматически запустится из созданного ранее <span class="tooltip_container">
+ EmuNAND
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Полная копия NAND, расположенная на карте памяти или в самом же NAND (реже). Применяется для того, чтобы оставить официальную прошивку в максимально нетронутом виде. Чаще всего применяется для того, чтобы запускать в эмунанде кастом. В случае использования программного эксплойта, который требует для запуска кастома строго определённой версии OFW, эмунанд можно служить цели запуска официальной прошивки. Например, на приставке используется аппаратная уязвимость, поэтому пользователь может использовать чистый и не изменённый NAND обновив его до последней прошивки. Это будет назваться SysNAND. Он может использоваться для официальных игр и даже для онлайна. А в эмунанде сделать полную копию сиснанда, но использовать его уже с кастомной прошивкой и без доступа к сервисам Nintendo. 
+     </span>
+ </span>
+</span> для того, чтобы обновить его на актуальную версию системного ПО, при этом оставив <span class="tooltip_container">
+ SysNAND
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+     Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
+     Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.
+     </span>
+ </span>
+</span> в его первозданном виде, без следов запуска кастомной прошивки</li>
+  <li><a href="link-account" target="blank_">Привязка аккаунта</a> - последний штрих. Привязки аккаунта для работы требуют некоторые игры</li>
+  <li><a href="games" target="blank_">Запуск игр</a> - финальная часть, ради которой всё и делалось</li>
+  <li><a href="usage">Использование уже прошитой приставки</a></li>
+</ol>
+
+<hr />
+
+<details class="spoiler"><summary class="spoiler-title">Материалы для самостоятельного изучения</summary><div class="spoiler-body">
+<ul>
+  <li><a href="faq" target="blank_">Часто задаваемые вопросы</a></li>
+  <li><a href="troubleshooting">Проблемы и их решения</a></li>
+  <li><a href="cheats" target="blank_">Использование читов в EdiZon</a></li>
+  <li><a href="backup-saves" target="blank_">Резервное копирование и восстановление сохранений с помощью Checkpoint</a></li>
+  <li><a href="lanplay" target="blank_">Онлайн для прошитых и забаненных</a></li>
+  <li><a href="hbl" target="blank_">Запуск Homebrew Launcher</a></li>
+  <li><a href="emuiibo" target="blank_">Эмуляция Amiibo с помощью модуля emuiibo</a></li>
+  <li><a href="https://4pda.ru/forum/index.php?act=findpost&amp;pid=73214535&amp;anchor=Spoil-73214535-3" target="blank_">Инструкции на сайте 4pda</a></li>
+</ul>
+
+</div></details>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+    <a href="#" class="scrollup">Наверх</a>
+
+    <div class="page__footer-container">
+      <footer class="page__footer">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,1 +1,0 @@
-Если вы купили приставку у меня (в [VK](https://vk.com/nincfw){:target="_blank"} или на [OLX](https://shop.customfw.xyz){:target="_blank"}), то у вас уже b9s со всеми необходимыми программами. Ищите их в папке Система (System). Так же установлен и настроен freeshop и стоят тикеты для официальных [тем](themes){:target="_blank"}.

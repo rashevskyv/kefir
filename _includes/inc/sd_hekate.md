@@ -1,1 +1,0 @@
-**Tools** -> **USB Tools** -> **SD Card**

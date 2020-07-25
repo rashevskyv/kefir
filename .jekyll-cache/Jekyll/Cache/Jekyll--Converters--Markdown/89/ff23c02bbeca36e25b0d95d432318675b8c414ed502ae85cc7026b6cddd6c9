@@ -1,3 +1,0 @@
-I")
-<p>Если EmuNAND сделан на отдельном разделе, то следует воспользоваться программой <a href="https://gbatemp.net/threads/emutool-move-partition-emu-on-another-sd-switch-emu-type-on-sxos-and-more.550756/" target="blank_">EmuTool</a>. Если же EmuNAND создан в виде файлов (именно такой создаётся в процессе выполнения этого руководства), то он переносится простым копированием</p>
-:ET

@@ -1,8 +1,0 @@
-<span class="tooltip_container">
-	{{ include.abbr }}
-	<span class="tooltip"><i class="fas fa-caret-down"></i>
-		<span class="bottom">
-			Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
-		</span>
-	</span>
-</span>

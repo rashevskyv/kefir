@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Kefir - Взлом Switch</title>
+
+
+
+
+<meta name="description" content="Полное руководство по прошивке Nintendo Switch">
+
+
+
+
+<meta name="author" content="nincfw team">
+
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Взлом Switch">
+<meta property="og:title" content="Kefir">
+
+
+  <link rel="canonical" href="https://switch.customfw.xyz/kefir.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/kefir.html">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "nincfw team",
+      "url" : "https://switch.customfw.xyz",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="bXQ2KTFgfxyvvQx2cGGgbQ59jCOMNMbdSyuHmLPhSwE" />
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://switch.customfw.xyz/feed.xml" type="application/atom+xml" rel="alternate" title="Взлом Switch Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://switch.customfw.xyz/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://switch.customfw.xyz/">Взлом Switch</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz"><b>Прошить другую<br>приставку</b></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://nincfw.olx.ua/"><i>Купить<br>прошитую</i></a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Взлом</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/emunand">EmuNAND</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/addons">Полезные<br> инструкции</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/troubleshooting">Проблемы и<br>их решение</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/usage">Использование<br>прошитой Switch</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/games">Установка<br>игр</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/kefir">Kefir</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/hbl">Запуск<br>HBL</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/exploits">Методы<br>взлома</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/update-to-latest">Безопасное<br>обновление</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/backup-nand">Резервное<br>копирование</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://switch.customfw.xyz/site-navigation">Навигация по сайту</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/donations">Пожертвования</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://customfw.xyz/contacts">Связаться с нами</a></li>
+          
+        </ul>
+        <button type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <center><img src="https://switch.customfw.xyz/images/bio-photo.png" class="author__avatar" alt="nincfw team" itemprop="image"></center>
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">nincfw team</h3><br>
+    
+  </div>
+  
+  
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+	<hr class="style-two">
+
+      
+
+<li><a href="https://vk.com/nincfw" itemprop="sameAs">
+  <i class="fa fa-fw fa-vk" aria-hidden="true"></i> Группа вконтакте
+</a></li>
+
+	
+      
+
+      
+        <li>
+          <a href="mailto:rashevsky.v@gmail.com">
+            <meta itemprop="email" content="rashevsky.v@gmail.com" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/rashevskyv" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+    </ul>
+  </div>
+</div>
+
+
+  
+   
+  </div>
+ 
+  
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Kefir">
+    
+    
+    
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Kefir
+</h1>
+          
+        </header>
+      
+	  
+	  	
+        
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#kefir-463" id="markdown-toc-kefir-463">KEFIR 463</a>    <ul>
+      <li><a href="#что-такое-кефир" id="markdown-toc-что-такое-кефир">Что такое кефир</a></li>
+      <li><a href="#инструкция-по-установке-kefir" id="markdown-toc-инструкция-по-установке-kefir">Инструкция по установке kefir</a></li>
+      <li><a href="#важная-информация" id="markdown-toc-важная-информация"><strong>Важная информация!</strong></a></li>
+      <li><a href="#изменения-от-прошлой-версии" id="markdown-toc-изменения-от-прошлой-версии">Изменения от прошлой версии</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<h2 id="kefir-463">KEFIR 463</h2>
+
+<p class="text-center"><img src="/images/kefir.png" alt="kefir" width="70%" /></p>
+
+<h3 id="что-такое-кефир">Что такое кефир</h3>
+
+<p><strong>Кефир</strong> - это сборник, состоящий из прошивки (Atmosphere или SX OS на выбор) и необходимого минимума рекомендуемых программ, плагинов, модулей и другого софта. Подробнее о составе кефира ниже</p>
+
+<details class="spoiler"><summary class="spoiler-title">Зачем нужен кефир?</summary><div class="spoiler-body">
+<p>В первую очередь, кефир нужен для того чтобы упростить жизнь пользователя. То есть, если у пользователя стоит рекомендуемая версия системного ПО и последняя версия кефира, то всё должно у него работать. Можно сказать, что пользователь находится в контролируемых условиях. Достаточно назвать версию системного ПО и кефира и сразу становится понятно что примерно установлено в системе.</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Состав кефира</summary><div class="spoiler-body">
+<ol>
+  <li><strong><a href="cfw" target="_blank">Кастомная прошивка</a></strong>. Вы можете выбрать один из двух вариантов - <strong><a href="https://github.com/Atmosphere-NX/Atmosphere/releases/" target="_blank">Atmosphere</a></strong> или <strong><a href="https://sx.xecuter.com" target="_blank">SX OS</a></strong>, или даже поставить сразу обе и переключаться между ними при перезагрузке.</li>
+  <li><strong><a href="https://gbatemp.net/threads/latest-fs-and-acid-patches-for-kosmos.562915/" target="_blank">Сигпатчи</a></strong>. Благодаря сигпатчам на Atmosphere можно запускать неподписанные (читай: <em>пиратские</em>) приложения и игры. В SX OS сигпатчи встроены по-умолчанию, но не доступны в бесплатной версии прошивки</li>
+  <li><strong>Загрузчик <a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate</a></strong>. Благодаря загрузчику вы можете запускать прошивку и другие <span class="tooltip_container">
+ пейлоады
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+     </span>
+ </span>
+</span> через удобное меню, создавать и восстанавливать резервную копию NAND, делать EmuNAND, получать информацию о состоянии системы, монтировать карту памяти к ПК без вытаскивания её из свитча, делать переразметку карты памяти для установки других ОС и многое другое</li>
+  <li><strong>Установленные <span class="tooltip_container">
+ пейлоады
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+     </span>
+ </span>
+</span></strong>:
+    <ul>
+      <li><a href="https://github.com/shchmue/Lockpick_RCM/releases/latest" target="_blank">Lockpick_RCM</a> - программа для <a href="backup-nand#часть-iii---дампим-ключи" target="_blank">дампа ключей приставки</a></li>
+      <li><strong>Incognoto_RCM</strong> - программа, стирающая серийный номер приставки, чтобы <a href="https://switch.customfw.xyz/block-update" target="_blank">заблокировать обновления и спрятать консоль от Nintendo</a></li>
+    </ul>
+  </li>
+  <li><strong>Установленное Homebrew</strong>
+    <ul>
+      <li>DBI - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
+      <li><a href="http://tinfoil.io" target="_blank">/hbg/shop 8.1.0</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
+      <li><a href="https://github.com/devgru/FreshHay/releases" target="_blank">FreshHay</a> - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке</li>
+      <li><a href="https://github.com/joel16/NX-Shell/releases/latest" target="_blank">NX-Shell</a> - файловый менеджер</li>
+      <li><a href="https://github.com/tallbl0nde/NX-Activity-Log/releases/latest" target="_blank">NX-Activity-Log</a> - программа, позволяющая отслеживать время, проведённое в играх</li>
+      <li><a href="https://github.com/J-D-K/JKSV/releases" target="_blank">JKSV</a> - программа для резервного копирования и восстановления сейвов</li>
+      <li><a href="https://github.com/rashevskyv/kefir-updater/releases" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
+      <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay</a> - видеоплеер</li>
+      <li><a href="https://switchtools.sshnuke.net/" target="_blank">ChoiDujourNX</a> - программа для <a href="update-to-latest" target="_blank">безопасного обновления</a> версии системного ПО приставки</li>
+      <li><a href="https://github.com/exelix11/SwitchThemeInjector/releases/latest" target="_blank">NXThemes Installer</a> - менеджер кастомных тем</li>
+      <li><a href="https://github.com/HamletDuFromage/switch-cheats-updater/releases" target="_blank">switch-cheats-updater</a> - программа для закачки <a href="cheats" target="_blank">читов</a> для установленных игр.</li>
+      <li>Link Account - программа <a href="link-account" target="_blank">привязки аккаунта</a>, а так же для форматирования приставки</li>
+    </ul>
+  </li>
+  <li><strong>Установленные модули</strong>. Модули - это дополнительные компоненты, работающие внутри Atmosphere и позволяющие делать разные крутые штуки, как-то использование xbox-сoвместимых контроллеров, эмуляцию amiibo, разгон и прочее. К сожалению, SX OS модули не поддерживает
+    <ul>
+      <li><a href="https://github.com/cathery/sys-con/releases/latest" target="_blank">sys-con</a> - модуль, позволяющий подключать к консоли по USB практически любые геймпады</li>
+      <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">Tesla Overlay Menu</a> - специальное оверлей-меню для взаимодействия с системой</li>
+    </ul>
+    <ul>
+      <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">ovlEdiZon.ovl</a> - Модуль для <a href="cheats" target="_blank">использования читов</a></li>
+      <li><a href="https://github.com/WerWolv/ovl-sysmodules/releases" target="_blank">ovlSysmodules.ovl</a> - Модуль для включения и отключения установленных системных модулей (как-то разгон, emuuibo и прочее)</li>
+    </ul>
+  </li>
+</ol>
+
+</div></details>
+
+<h3 id="инструкция-по-установке-kefir">Инструкция по установке kefir</h3>
+<details class="spoiler"><summary class="spoiler-title">Инструкции по автоматической установке (только для Windows)</summary><div class="spoiler-body">
+<ol>
+  <li>Скачайте свежий <span class="tooltip_container">
+ <a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span> (файл <code class="language-plaintext highlighter-rouge">_kefir.7z</code>)</li>
+  <li>Распакуйте <code class="language-plaintext highlighter-rouge">_kefir.7z</code> в любое удобное место на ПК</li>
+  <li><strong>Вставьте в ПК</strong> карту памяти приставки</li>
+  <li>Запустите <code class="language-plaintext highlighter-rouge">install.bat</code> из папки, в которую вы распаковали <code class="language-plaintext highlighter-rouge">_kefir.7z</code> и внимательно читайте всё, что написано на экране</li>
+  <li>Вводите ответы, соответствующие вашей ситуации
+    <ul>
+      <li>Если вы используете <strong>Caffeine</strong>, не забудьте выбрать его в опциях установщика</li>
+    </ul>
+  </li>
+  <li>Дождитесь окончания копирования</li>
+  <li>Продолжайте следовать руководству</li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Инструкция по установке вручную (все ОС)</summary><div class="spoiler-body">
+<h3 id="подключение-карты-памяти-приставки-к-пк">Подключение карты памяти приставки к ПК:</h3>
+
+<ol>
+  <li><strong>Смонтировав карту памяти через hekate</strong>
+    <ol>
+      <li>Перезагрузите приставку через меню, вызываемое удерживанием кнопки (POWER)</li>
+      <li>На сплеш-скрине кефира нажмите кнопку понижения громкости, чтобы попасть в hekate</li>
+      <li>Находясь в hekate перейдите в <strong>Tools</strong> -&gt; <strong>USB Tools</strong> -&gt; <strong>SD Card</strong>. Ваша карта памяти смонтируется на вашем ПК
+        <ul>
+          <li>Фактически ваш свитч будет использоваться в виде картридера</li>
+          <li>Вместо этого вы можете просто вытащить карту памяти из приставки и вставить её в ПК, однако лучше всего приучить себя этого не делать, поскольку слот для карты памяти на приставке весьма хлипкий</li>
+        </ul>
+      </li>
+      <li>Как закончите, <a href="https://ru.wikipedia.org/wiki/Безопасное_извлечение_устройства" target="_blank">безопасно извлеките</a> вашу карту памяти из ПК (устройство будет называться “<strong>UMS</strong>”) и нажмите в hekate “<strong>Close</strong>”</li>
+    </ol>
+  </li>
+  <li><strong>С помощью DBI</strong>
+    <ol>
+      <li>Запустите DBI через <a href="hbl" target="_blank">HBL</a></li>
+      <li>Подключите консоль к ПК по USB-кабелю</li>
+      <li>В DBI выберите пункт “<strong>Run MTP Responder</strong>”</li>
+      <li>На ПК смонтируется новое устройство - <strong>Switch</strong>, папка “<strong>External SD card</strong>” и есть ваша карта памяти
+        <ul>
+          <li>Помните, по MTP можно перекинуть файлы только вручную. Автоматическая установка по MTP невозможна.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="удаление-файлов-старых-прошивок">Удаление файлов старых прошивок</h3>
+
+<ol>
+  <li>Если вы использовали пользовательские модификации, читы или переводы, переместите папку <code class="language-plaintext highlighter-rouge">titles</code> из папки <code class="language-plaintext highlighter-rouge">SX OS</code> или <code class="language-plaintext highlighter-rouge">atmosphere</code> (название папки зависит от вашей прошивки) в корень карты памяти. Если не использовали, пропустите эту часть</li>
+  <li>Удалите из папки <code class="language-plaintext highlighter-rouge">titles</code> папки со следующими названиями (если они там есть):
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">010000000000100D</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000032</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000034</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000036</code></li>
+      <li><code class="language-plaintext highlighter-rouge">010000000000000D</code></li>
+      <li><code class="language-plaintext highlighter-rouge">420000000000000E</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000001000</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000352</code></li>
+      <li><code class="language-plaintext highlighter-rouge">4200000000000010</code></li>
+      <li><code class="language-plaintext highlighter-rouge">010000000007E51A</code></li>
+    </ul>
+  </li>
+  <li>Удалите из корня вашей карты памяти все папки, кроме папок <code class="language-plaintext highlighter-rouge">titles</code>, <code class="language-plaintext highlighter-rouge">SX OS</code>, <code class="language-plaintext highlighter-rouge">emuMMC</code> и <code class="language-plaintext highlighter-rouge">Nintendo</code>, если таковые там есть</li>
+</ol>
+
+<h3 id="для-установки-atmosphere">Для установки Atmosphere</h3>
+
+<ol>
+  <li>Скопируйте в корень карты памяти приставки <strong>содержимое</strong> архива <code class="language-plaintext highlighter-rouge">atmo.zip</code> из репозитория <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span></li>
+  <li>Переместите папку <code class="language-plaintext highlighter-rouge">titles</code> из корня карты памяти в папку <code class="language-plaintext highlighter-rouge">atmosphere</code></li>
+  <li>Переименуйте папку <code class="language-plaintext highlighter-rouge">titles</code> в <code class="language-plaintext highlighter-rouge">contents</code>
+    <ul>
+      <li>Саму папку, а не её содержимое</li>
+    </ul>
+  </li>
+  <li>Исправьте атрибуты по инструкции ниже</li>
+  <li>enjoy</li>
+</ol>
+
+<h3 id="для-установки-sx-os">Для установки SX OS</h3>
+
+<ol>
+  <li>Скопируйте в корень карты памяти приставки <strong>содержимое</strong> архива <code class="language-plaintext highlighter-rouge">sxos.zip</code> репозитория <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span></li>
+  <li>Переместите папку <code class="language-plaintext highlighter-rouge">titles</code> из корня карты памяти в папку <code class="language-plaintext highlighter-rouge">SX OS</code>
+    <ul>
+      <li>Саму папку, а не её содержимое</li>
+    </ul>
+  </li>
+  <li>Исправьте атрибуты по инструкции ниже</li>
+  <li>enjoy</li>
+</ol>
+
+<h3 id="исправление-атрибутов">Исправление атрибутов</h3>
+
+<ol>
+  <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
+    <ul>
+      <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
+    </ul>
+  </li>
+  <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
+  <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
+</ol>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Обновление кефира прямо на приставке</summary><div class="spoiler-body">
+<ol>
+  <li>Запустите <strong>NX Shell</strong> через <a href="hbl" target="_blank">HBL</a></li>
+  <li>Перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/contents</code>
+    <ul>
+      <li>Если такой папки нет, перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/titles</code></li>
+    </ul>
+  </li>
+  <li>Удалите папки со следующими названиями (если они там есть):
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">010000000000100D</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000032</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000034</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000036</code></li>
+      <li><code class="language-plaintext highlighter-rouge">010000000000000D</code></li>
+      <li><code class="language-plaintext highlighter-rouge">420000000000000E</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000001000</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000352</code></li>
+      <li><code class="language-plaintext highlighter-rouge">4200000000000010</code></li>
+      <li><code class="language-plaintext highlighter-rouge">010000000007E51A</code></li>
+    </ul>
+  </li>
+  <li>Нажмите (Start), чтобы закрыть <strong>NX Shell</strong></li>
+  <li>Выберите <strong>Kefir Updater</strong>
+    <ul>
+      <li>Требуется подключение к интернету!</li>
+    </ul>
+  </li>
+  <li>Выберите ОС, которую используете</li>
+  <li>По окончанию установки, перезагрузите приставку</li>
+</ol>
+
+</div></details>
+
+<h3 id="важная-информация"><strong>Важная информация!</strong></h3>
+<ul>
+  <li>Перезагрузка в hekate происходит прямо из прошивки, через обычное меню перезагрузки. Просто зажмите (VOL-) во время сплешскрина кефира</li>
+  <li>Вы можете получить доступ к своей карте памяти не вынимая её из приставки по MTP (DBI -&gt; Run MTP Responder), либо через hekate (<strong>Tools</strong> -&gt; <strong>USB Tools</strong> -&gt; <strong>SD Card</strong>)</li>
+  <li><strong>На новых версиях Atmosphere изменился способ входа в Homebrew Menu. <a href="hbl" target="_blank">Подробнее</a></strong></li>
+  <li>Установка и обновление kefir проводятся одинаково!</li>
+</ul>
+
+<hr />
+
+<h3 id="изменения-от-прошлой-версии">Изменения от прошлой версии</h3>
+
+<ul>
+  <li>[Обновлено] Atmosphere 13 - форк для кефира с рядом изменений, черный экран исправлен</li>
+  <li>[Обновлено] hekate 5.3.2</li>
+  <li>[Обновлено] Полная поддержка 10.1.0, добавлен конфиг во FreshHay</li>
+  <li>[Обновлено] DBI v137 с поддержкой установки игр с USB-носителя</li>
+  <li>[Обновлено] SXOS 3.0.4</li>
+  <li>[Обновлено] NX-Activity Log 1.3.2</li>
+  <li>[Обновлено] NXThemesInstaller 2.4</li>
+  <li>[Удалено] emuiibo, из-за которого висли крупные игры в прошлый раз
+    <ul>
+      <li>Удалите emuiibo вручную, если не пользуетесь скриптом для установки кефира: 
+  удалите ‘atmosphere/contents/0100000000000352<code class="language-plaintext highlighter-rouge"> и </code>switch/.overlays/emuiibo.ovl’</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<hr />
+
+<p class="notice--success"><a href="javascript:window.close();">Закрыть страницу</a></p>
+
+				
+        
+      </section>
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+		
+    
+  </article>
+
+  
+  
+</div>
+
+    <a href="#" class="scrollup">Наверх</a>
+
+    <div class="page__footer-container">
+      <footer class="page__footer">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="http://github.com/rashevskyv"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    
+    
+	  <li><a href="https://vk.com/nincfw" itemprop="sameAs"><i class="fa fa-fw fa-vk" aria-hidden="true"></i> Custom Nintendo
+	  </a></li>	
+    
+    <li><a href="https://switch.customfw.xyz/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 nincfw team. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>
