@@ -1,0 +1,138 @@
+I"(3
+<h4 id="что-понадобится">Что понадобится</h4>
+
+<ul>
+  <li>Файл <a href="files/8000000000000010" target="blank_">8000000000000010</a>, содержащий в себе профиль с привязанным аккаунтом</li>
+  <li>Свежая версия <a href="https://switchtools.sshnuke.net/" target="_blank">memloader</a></li>
+  <li>Свежая версия <a href="https://github.com/Thealexbarney/LibHac/releases/latest" target="_blank">hactoolnet.exe</a></li>
+  <li>Свежая версия <a href="https://switchtools.sshnuke.net/" target="_blank">HacDiskMount</a></li>
+  <li>USB type-C кабель для подключения Switch к ПК</li>
+  <li>ПК на базе ОС Windows (может не работать на виртуальной машине)</li>
+</ul>
+
+<h5 id="часть-i---получаем-ключи-для-актуальной-версии-системного-по">Часть I - получаем ключи для актуальной версии системного ПО</h5>
+
+<p>Несмотря на то, что у вас уже есть ключи, полученные  входе бекапа, они могут отличаться на рекомендуемой версии системного ПО, поэтому их придётся снимать ещё раз</p>
+
+<ol>
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
+ </span>
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="language-plaintext highlighter-rouge">payload.bin</code> из <code class="language-plaintext highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
+        <ul>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Перейдите в меню “<strong>Payloads</strong>”</li>
+  <li>Выберите “<strong>Lockpick_RCM.bin</strong>”</li>
+  <li>Нажмите кнопку (POWER), чтобы перезагрузиться в Sept и начать дамп ключей оттуда</li>
+  <li>Нажмите кнопку (POWER), чтобы выключить приставку</li>
+  <li>Вставьте карту памяти приставки в ПК и скопируйте на ПК файл <code class="language-plaintext highlighter-rouge">/switch/prod.key</code> в папку, в пути которой и имени не встречаются никаких символов, кроме символов латинского алфавита</li>
+</ol>
+
+<h5 id="часть-ii---подписываем-файл-аккаунта-своими-ключами">Часть II - подписываем файл аккаунта своими ключами</h5>
+
+<ol>
+  <li>Скопируйте <a href="https://github.com/Thealexbarney/LibHac/releases/latest" target="_blank"><code class="language-plaintext highlighter-rouge">hactoolnet.exe</code></a> в ту же папку, где положили ключи</li>
+  <li>В эту же папку поместите <a href="files/8000000000000010" target="blank_"><code class="language-plaintext highlighter-rouge">8000000000000010</code></a></li>
+  <li>Откройте командную строку в этой же папке и выполните <code class="language-plaintext highlighter-rouge">hactoolnet.exe -k prod.keys -t save 8000000000000010 --sign</code>
+ Сообщение об успехе выглядит примерно так:
+    <pre>
+ C:\&gt;hactoolnet.exe -k prod.keys -t save 8000000000000010 --sign
+ Failed to match key eticket_rsa_kek_source
+ Failed to match key eticket_rsa_kekek_source
+ Failed to match key rsa_oaep_kek_generation_source
+ Failed to match key rsa_private_kek_generation_source
+ Failed to match key ssl_rsa_kek_source_x
+ Failed to match key ssl_rsa_kek_source_y
+ Successfully signed save file
+ </pre>
+  </li>
+  <li>Скопируйте <strong>содержимое</strong> папки <code class="language-plaintext highlighter-rouge">sample</code> из <code class="language-plaintext highlighter-rouge">.zip</code>-архива с <a href="https://switchtools.sshnuke.net/" target="_blank">memloader</a> в <strong>корень</strong> вашей карты памяти</li>
+  <li>Скопируйте пейлоад <code class="language-plaintext highlighter-rouge">memloader.bin</code> в папку <code class="language-plaintext highlighter-rouge">bootloader/payloads</code></li>
+  <li>Верните карту памяти обратно в Switch</li>
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
+ </span>
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="language-plaintext highlighter-rouge">payload.bin</code> из <code class="language-plaintext highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
+        <ul>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Перейдите в меню “<strong>Payloads</strong>”</li>
+  <li>Выберите “<strong>memloader.bin</strong>”</li>
+  <li>Выберите “<strong>ums_emmc.ini</strong>”</li>
+  <li>Когда экран погаснет, подключите Switch к ПК</li>
+  <li>Распакуйте <a href="https://switchtools.sshnuke.net/" target="_blank">HacDiskMount</a> в удобную папку</li>
+  <li>Запустите <code class="language-plaintext highlighter-rouge">HacDiskMount.exe</code> от имени администратора</li>
+  <li>Выберите  “<strong>File</strong>” -&gt; “<strong>Open Physical</strong>”</li>
+  <li>Выберите <code class="language-plaintext highlighter-rouge">UMS Linux Disk 0 (29.121GiB)</code></li>
+  <li>Вы увидите полный список разделов, содержащихся в этом диске</li>
+</ol>
+
+<p class="text-center notice--info"><img src="/images/screenshots/hdm_disk.png" alt="" /></p>
+
+<ol>
+  <li>Дважды нажмите на <code class="language-plaintext highlighter-rouge">SYSTEM</code></li>
+  <li>Откройте файл <code class="language-plaintext highlighter-rouge">prod.keys</code>, который мы получили при создании дампа ключей в Части I</li>
+  <li>В разделе “<strong>bis_key_02</strong>” есть длинная 64-х символьная последовательность,  первые 32 символа - это - “<strong>Crypto</strong>”, последние - “<strong>Tweak</strong>”. В файле с ключами ключи делятся попарно. В каждой паре есть так же ключ с меткой “<strong>Crypto</strong>” (crypt) и “<strong>Tweak</strong>” (tweak).</li>
+</ol>
+
+<p class="text-center notice--info"><img src="/images/screenshots/hdm_key_test.png" alt="" /></p>
+
+<ol>
+  <li>Скопируйте ключи соответственно их меткам  из текстового файла <code class="language-plaintext highlighter-rouge">prod.keys</code> в окно программы и нажмите кнопку “<strong>Test</strong>”</li>
+  <li>Рядом с кнопкой высветится надпись зелёного цвета (<strong>OK! Enthropy: (tested)</strong>), то ключ скопирован верно - нажмите кнопку “<strong>Save</strong>” и закройте окно (не программу!)</li>
+  <li>Обратите внимание на раздел “<strong>Virtual Drive</strong>”</li>
+  <li>Если там написано “<strong>Driver not installed</strong>”, нажмите на кнопку “<strong>Install</strong>”</li>
+  <li>Надпись должна смениться на “<strong>Driver (ver 2017.0.3.20) installed, service is running</strong>”</li>
+  <li>В поле “<strong>Drive letter</strong>” выберите не занятую букву диска</li>
+  <li>Отметьте галочкой поле “<strong>Passthrough zeroes</strong>”</li>
+  <li>Нажмите кнопку “<strong>Mount</strong>”</li>
+</ol>
+
+<p class="text-center notice--info"><img src="/images/screenshots/hdm_safe.png" alt="" /></p>
+
+<ol>
+  <li>Если всё сделано верно, в “<strong>Мой компьютер</strong>” появится диск с выбранной буковой. Откройте его</li>
+  <li>Перейдите в папку <code class="language-plaintext highlighter-rouge">save</code> и найдите там файл <code class="language-plaintext highlighter-rouge">8000000000000010</code> Сделайте его резервную копию на ПК</li>
+  <li>Скопируйте файл <code class="language-plaintext highlighter-rouge">8000000000000010</code>, который мы ранее подписали в папку <code class="language-plaintext highlighter-rouge">save</code> с заменой (<strong>объединить</strong> на macOS)</li>
+  <li>После окончания копирования отмонтируйте диск, нажав на кнопку “<strong>Unmount</strong>” в окне HacDiskMount</li>
+  <li>Отключите консоль от ПК, удерживая кнопку (POWER) 30 секунд, затем включите консоль</li>
+  <li>Для проверки того привязан аккаунт или нет, попробуйте запустить eShop или перейдите в настройки профиля и убедитесь в том, что в нем есть список недавно запущенных игр.
+    <ul>
+      <li>Если приставка не запускается, повторите всё с самого начала, только вместо подписанного файла <code class="language-plaintext highlighter-rouge">8000000000000010</code> восстановите оригинальный.</li>
+    </ul>
+  </li>
+</ol>
+:ET

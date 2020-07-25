@@ -1,0 +1,6 @@
+I"4
+<p><strong>О:</strong> Обратите внимание на числа во второй строке после <strong>Title:</strong>. Эти числа указывают на то, какой тайтл вызвал ошибку и из-за которого не загружается приставка. Если номер тайтла <strong>не</strong> <code class="language-plaintext highlighter-rouge">010000000000000D</code>, то перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/contents</code> (<code class="language-plaintext highlighter-rouge">atmosphere/titles</code> на атмосфере ниже, чем 0.10.0) и удалите папку с номером, указанным на экране вашей приставки во второй строке. Если номер тайтла - <code class="language-plaintext highlighter-rouge">010000000000000D</code>, то вероятнее всего ошибка вызвана тем, что какое-то хомбрю запущено в режиме апплета и ему не хватает памяти. Если номер тайтла - <code class="language-plaintext highlighter-rouge">010000000000001F</code>, то вытащите картридж из приставки. Держите emunand и sysnand на одной версии прошивки, чтобы в дальнейшем не было таких проблем.</p>
+
+<p class="text-center notice--info"><img src="/images/screenshots/atmos_title_error2.png" alt="" /></p>
+
+:ET

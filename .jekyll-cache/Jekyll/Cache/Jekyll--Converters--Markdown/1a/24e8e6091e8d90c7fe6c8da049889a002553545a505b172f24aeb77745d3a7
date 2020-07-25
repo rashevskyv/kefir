@@ -1,0 +1,34 @@
+I"�
+<ol>
+  <li>Распакуйте <a href="https://switchtools.sshnuke.net/" target="_blank">HacDiskMount</a> в удобную папку</li>
+  <li>Запустите <code class="language-plaintext highlighter-rouge">HacDiskMount.exe</code> от имени администратора</li>
+  <li>Выберите  “<strong>File</strong>” -&gt; “<strong>Open Physical</strong>”</li>
+  <li>Выберите <code class="language-plaintext highlighter-rouge">UMS Linux Disk 0 (29.121GiB)</code></li>
+  <li>
+    <p>Вы увидите полный список разделов, содержащихся в этом диске</p>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/hdm_disk.png" alt="" /></p>
+  </li>
+  <li>Дважды нажмите на <code class="language-plaintext highlighter-rouge">PRODINFO</code></li>
+  <li>Откройте файл <code class="language-plaintext highlighter-rouge">prod.keys</code>, который мы получили при создании дампа ключей в Части I</li>
+  <li>
+    <p>В разделе “<strong>bis_key_00</strong>” есть длинная 64-х символьная последовательность, первые 32 символа - это - “<strong>Crypto</strong>”, последние - “<strong>Tweak</strong>”. В файле с ключами ключи делятся попарно. В каждой паре есть так же ключ с меткой “<strong>Crypto</strong>” (crypt) и “<strong>Tweak</strong>” (tweak).</p>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/hdm_key_test.png" alt="" /></p>
+  </li>
+  <li>Скопируйте ключи соответственно их меткам  из текстового файла <code class="language-plaintext highlighter-rouge">prod.keys</code> в окно программы и нажмите кнопку “<strong>Test</strong>”</li>
+  <li>Рядом с кнопкой высветится надпись зелёного цвета (<strong>OK! Enthropy: (tested)</strong>), то ключ скопирован верно - нажмите кнопку “<strong>Save</strong>” и закройте окно (не программу!)
+    <ul>
+      <li>Если после тестирования надпись красная - вы скопировали не верную пару!</li>
+    </ul>
+  </li>
+  <li>Повторите ту же самую процедуру для разделов <code class="language-plaintext highlighter-rouge">SAFE</code>, <code class="language-plaintext highlighter-rouge">SYSTEM</code> и <code class="language-plaintext highlighter-rouge">USER</code>, прописав им пары “<strong>bis_key_01</strong>”, “<strong>bis_key_02</strong>” и “<strong>bis_key_03</strong>” (два последних кюча одинаковые - это нормально) соответственно
+    <ul>
+      <li>Обращайте внимание на результат тестирования и не забывайте нажимать кнопку “<strong>Save</strong>”</li>
+    </ul>
+  </li>
+  <li>Дважды нажмите на <code class="language-plaintext highlighter-rouge">PRODINFO</code></li>
+  <li>В открывшемся окошке уже будут вбиты ключи. Протестируйте их и удостоверьтесь, что результат зелёный. Закройте окно не сохраняя.</li>
+</ol>
+
+:ET

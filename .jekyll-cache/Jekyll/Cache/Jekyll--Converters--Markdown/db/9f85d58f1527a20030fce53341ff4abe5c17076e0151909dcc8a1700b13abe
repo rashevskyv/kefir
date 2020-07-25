@@ -1,0 +1,133 @@
+I")
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#предупреждения" id="markdown-toc-предупреждения">Предупреждения</a></li>
+  <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a>    <ul>
+      <li><a href="#игры" id="markdown-toc-игры">Игры</a></li>
+      <li><a href="#где-брать-игры-и-обновления" id="markdown-toc-где-брать-игры-и-обновления">Где брать игры и обновления</a></li>
+    </ul>
+  </li>
+  <li><a href="#установка-и-запуск-игр-в-формате-xci" id="markdown-toc-установка-и-запуск-игр-в-формате-xci">Установка и запуск игр в формате XCI</a></li>
+  <li><a href="#установка-приложений-в-формате-nsp" id="markdown-toc-установка-приложений-в-формате-nsp">Установка приложений в формате NSP</a></li>
+  <li><a href="#использование-usb-носителя-в-sx-os" id="markdown-toc-использование-usb-носителя-в-sx-os">Использование USB-носителя в SX OS</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<h2 id="предупреждения">Предупреждения</h2>
+
+<ul>
+  <li>Не выходите онлайн с запущенной пиратской игрой - чревато баном
+    <ul>
+      <li>Вы можете использовать специальный метод для <a href="lanplay" target="_blank">сетевой игры</a></li>
+    </ul>
+  </li>
+  <li>Игру можно обновить через eShop, но я крайне не рекомендую этого делать. Рекомендация не выходить в интернет по прежнему актуальна</li>
+  <li>Обновление игры в формате XCI можно скачать в формате NSP и установить <a href="#способ_ii_-_вручную" target="_blank">вручную</a></li>
+  <li>Рекомендуем использовать CXCI в качестве основного контейнера с играми</li>
+  <li>Здесь описаны уникальные для SX OS методы. Рекомендуется всё-таки устанавливать игры по <a href="games" target="blank_">основной инструкции</a>!</li>
+</ul>
+
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li>Настроенная и работающая <a href="cfw#sx-os" target="_blank">SX OS</a></li>
+  <li><a href="https://www.olx.ua/obyavlenie/proshivka-nintendo-switch-sx-os-IDBWMzh.html" target="_blank">Лицензия на SX OS или SX OS Pro</a> (<a href="https://vk.com/nincfw" target="_blank">Купить в группе Вконтакте</a>)</li>
+  <li>Умение <a href="fusee-gelee" target="_blank">запускать пейлоады через Fusée Gelée</a></li>
+</ul>
+
+<h3 id="игры">Игры</h3>
+
+<p>Игры распространяются в двух форматах:</p>
+<ul>
+  <li><strong>XCI</strong> - дампы картриджей. Как правило, не обновлённые версии. Обычно для таких игр нужно ещё выкачивать из eShop обновления или дополнительный контент. Занимают больше места, чем дампы игр из eShop</li>
+  <li><strong>NSP</strong> - дампы игр из eShop. Можно выкачать самые последние версии, с DLC. Иным образом обновить игру у вас не получится, поскольку для этого понадобится выйти в eShop, что не безопасно и чревато баном. Обычно занимают меньше места. DLC и обновления распространяются только в формате nsp</li>
+</ul>
+
+<h3 id="где-брать-игры-и-обновления">Где брать игры и обновления</h3>
+
+<ul>
+  <li><a href="https://4pda.ru/forum/index.php?showtopic=939714" target="blank_">Исчерпывающее количество источников</a></li>
+</ul>
+
+<h2 id="установка-и-запуск-игр-в-формате-xci">Установка и запуск игр в формате XCI</h2>
+
+<ol>
+  <li>Выключите консоль</li>
+  <li>Вставьте карту памяти в ПК</li>
+  <li>Создайте в корне карты памяти приставки папку <code class="language-plaintext highlighter-rouge">SX OS</code> и в ней папку <code class="language-plaintext highlighter-rouge">games</code></li>
+  <li>Скопируйте игру в формате <code class="language-plaintext highlighter-rouge">.xci</code> в папку <code class="language-plaintext highlighter-rouge">sxos/games</code></li>
+  <li><a href="cfw#sx-os" target="_blank">Запустите SX OS</a></li>
+  <li>Запустите “<strong>Альбомы</strong>”, чтобы попасть в меню выбора игр</li>
+  <li>Выберите игру, нажатием кнопки (A)</li>
+  <li>SX OS съэмулирует картридж с выбранной игрой, запустите его и играйте</li>
+</ol>
+
+<h2 id="установка-приложений-в-формате-nsp">Установка приложений в формате NSP</h2>
+
+<p>Игры, дополнения и DLC можно устанавливать в произвольном порядке. Обновления и DLC распространяются только в формате NSP</p>
+
+<ol>
+  <li>Выключите консоль</li>
+  <li>Вставьте карту памяти в ПК</li>
+  <li>Создайте в корне карты памяти приставки папку <code class="language-plaintext highlighter-rouge">SX OS</code> и в ней папку <code class="language-plaintext highlighter-rouge">games</code></li>
+  <li>Скопируйте игру в формате <code class="language-plaintext highlighter-rouge">.nsp</code> в папку <code class="language-plaintext highlighter-rouge">sxos/games</code></li>
+  <li><a href="cfw#sx-os" target="_blank">Запустите SX OS</a></li>
+  <li>Запустите “<strong>Альбомы</strong>”, чтобы попасть в меню выбора игр</li>
+  <li>Перейдите на вкладку “<strong>Install</strong>”
+    <ul>
+      <li>Для перемещения в меню используйте кнопки (L) или (R)</li>
+    </ul>
+  </li>
+  <li>Выберите куда именно хотите установить игру с помощью кнопки (X)
+    <ul>
+      <li><strong>microSD storage</strong> - карта памяти</li>
+      <li><strong>System storage</strong> - внутренняя память</li>
+    </ul>
+  </li>
+  <li>Выделите игру курсором и нажмите (A), чтобы её установить
+    <ul>
+      <li>Вы можете установить все игры, нажав кнопку (Y)</li>
+      <li>После окончания установки программа спросит у вас разрешение на удаление уже установленных файлов</li>
+      <li>Если при установке возникает ошибка,
+        <ul>
+          <li>дайте файлам короткое имя. Чаще всего длинные имена файлов приводят к ошибкам</li>
+          <li>перекачайте файл, возможно он битый.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="использование-usb-носителя-в-sx-os">Использование USB-носителя в SX OS</h2>
+
+<p>SX OS поддерживает установку и монтирование игр с внешнего USB-носителя.</p>
+
+<ol>
+  <li>Отформатируйте ваш USB-носитель в exFat</li>
+  <li>Поместите игры в формате <code class="language-plaintext highlighter-rouge">.nsp</code> в папку <code class="language-plaintext highlighter-rouge">games/nsp</code></li>
+  <li>Поместите игры в формате <code class="language-plaintext highlighter-rouge">.xci</code> в папку <code class="language-plaintext highlighter-rouge">games/xci</code></li>
+  <li>Подключите USB-носитель к док-станции
+    <ul>
+      <li>Будет работать только при подключении в доку!</li>
+    </ul>
+  </li>
+  <li>Запустите SX Installer</li>
+  <li>Во вкладке File Manager вы найдете пути, соответствующие папкам на вашем диске</li>
+  <li>Так же файлы, находящиеся на USB-носителе должны быть видны и в обычном меню SX OS</li>
+</ol>
+
+:ET

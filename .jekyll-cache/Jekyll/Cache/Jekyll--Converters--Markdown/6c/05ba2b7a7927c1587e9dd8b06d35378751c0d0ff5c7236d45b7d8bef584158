@@ -1,0 +1,72 @@
+I"n
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li><span class="tooltip_container">
+  Пейлоад
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+      </span>
+  </span>
+</span>, который вы собираетесь запускать на приставке</li>
+  <li>USB type-С на USB type-A для подключения Switch к Маку</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<h2 id="установка-nxboot">Установка NXBoot</h2>
+
+<p>Установить и запустить NXBoot можно двумя способами:</p>
+
+<h3 id="в-ручном-режиме"><em>В ручном режиме</em></h3>
+
+<p>Для установки утилиты NXBoot, с помощью которой пейлоадеры будут доставляться на консоль, необходимо открыть программу Terminal и вставить следующий код:</p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo curl -L https://mologie.de/~oliver/mologie.github.io/nxboot/bin/nxboot -o /usr/local/bin/nxboot &amp;&amp; sudo chmod +x /usr/local/bin/nxboot</code></p>
+
+<p>Таким образом, за одну операцию с <a href="https://mologie.github.io/nxboot/" target="_blank">официального сайта</a> скачивается утилита, сохраняется в директории <code class="language-plaintext highlighter-rouge">/usr/local/bin/</code> для того, чтоб не указывать путь до файла при запуске, и задаются права на исполнение.</p>
+
+<h3 id="автоматически"><em>Автоматически</em></h3>
+
+<p>Для автоматической загрузки NXBoot и доставки пейлоада на консоль необходимо запустить программу <a href="https://github.com/KnightOfSteel/payload_starter/releases" target="_blank">PayloadStarter</a> и выбрать нужный <span class="tooltip_container">
+	пейлоад
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+		</span>
+	</span>
+</span>.</p>
+
+<h2 id="запуск-пейлоада">Запуск пейлоада</h2>
+
+<p>Запустить пейлоад можно также двумя способами:</p>
+
+<h3 id="в-ручном-режиме-1"><strong>В ручном режиме.</strong></h3>
+
+<p class="notice--warning">Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></p>
+
+<ol>
+  <li>Откройте программу <strong>Terminal</strong> и выполните следующую команду: <code class="language-plaintext highlighter-rouge">nxboot /путь/до/пейлоада</code>
+    <ul>
+      <li>Путь должен быть прописан непосредственно до <code class="language-plaintext highlighter-rouge">.bin</code>-файла пейлоада</li>
+      <li>Чтоб не прописывать путь вручную, можно написать в терминале <code class="language-plaintext highlighter-rouge">nxboot</code> и перетянуть туда мышкой <code class="language-plaintext highlighter-rouge">.bin</code>-файл пейлоада</li>
+      <li>Если пейлоад не запускается, скорее всего консоль находится не в режиме RCM</li>
+    </ul>
+  </li>
+  <li>После успешного выполнения <code class="language-plaintext highlighter-rouge">nxboot</code> вы увидите на экране следующий текст <code class="language-plaintext highlighter-rouge">success: payload was run. exiting, fair winds!</code></li>
+  <li>Можете доставать замыкатель</li>
+</ol>
+
+<h3 id="в-автоматическом-режиме"><strong>В автоматическом режиме.</strong></h3>
+
+<p class="notice--warning">Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></p>
+
+<ol>
+  <li>Подключите Switch к компьютеру</li>
+  <li>Запустите <strong>PayloadStarter</strong></li>
+  <li>Выберите требуемый <code class="language-plaintext highlighter-rouge">payload.bin</code></li>
+  <li>Дождитесь завершения процесса (зависит от вашего интернет-соединения и быстродействия компьютера)</li>
+  <li>Если все прошло успешно, то на вашем Switch запуститься выбранный payload и можно достать замыкатель</li>
+</ol>
+
+:ET

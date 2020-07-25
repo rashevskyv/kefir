@@ -1,0 +1,21 @@
+I"
+<ol>
+  <li>Дважды нажмите на <code class="language-plaintext highlighter-rouge">BCPKG2-1-Normal-Main</code></li>
+  <li>Убедитесь, что поля для ключей пустые. Если это не так, отчистите их</li>
+  <li>
+    <p>В секции “<strong>Restore from file</strong>” нажмите “<strong>Browse</strong>”</p>
+
+    <p class="text-center notice--info"><img src="/images/screenshots/hdm_bcpkg21-nm.png" alt="" /></p>
+  </li>
+  <li>Выберите <code class="language-plaintext highlighter-rouge">BCPKG2-1-Normal-Main.bin</code>, который находится в папке <code class="language-plaintext highlighter-rouge">NX-6.1.0-exfat</code>, которую мы сгенерировали в Части III</li>
+  <li>Нажмите кнопку “<strong>Start</strong>”</li>
+  <li>После окончания загрузки закройте окно (не программу!)</li>
+  <li>Повторите то же самое для <code class="language-plaintext highlighter-rouge">BCPKG2-2-Normal-Sub</code>, <code class="language-plaintext highlighter-rouge">BCPKG2-3-SafeMode-Main</code> и <code class="language-plaintext highlighter-rouge">BCPKG2-4-SafeMode-Sub</code>
+    <ul>
+      <li>Убедитесь, что прошиваете файлы с названиями, идентичными названиям разделов!</li>
+      <li>Не забывайте стирать ключи, если таковые будут</li>
+    </ul>
+  </li>
+</ol>
+
+:ET

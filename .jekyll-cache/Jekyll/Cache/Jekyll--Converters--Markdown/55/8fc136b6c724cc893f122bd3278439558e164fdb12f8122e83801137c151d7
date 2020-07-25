@@ -1,0 +1,357 @@
+I"F;
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#запуск-прошивки" id="markdown-toc-запуск-прошивки">Запуск Прошивки</a></li>
+  <li><a href="#запуск-hbl" id="markdown-toc-запуск-hbl">Запуск HBL</a></li>
+  <li><a href="#установка-игр" id="markdown-toc-установка-игр">Установка игр</a></li>
+  <li><a href="#обновление" id="markdown-toc-обновление">Обновление</a>    <ul>
+      <li><a href="#обновление-прошивки-и-системного-по" id="markdown-toc-обновление-прошивки-и-системного-по">Обновление прошивки и системного ПО</a></li>
+      <li><a href="#обновление-системного-по" id="markdown-toc-обновление-системного-по">Обновление системного ПО</a></li>
+    </ul>
+  </li>
+  <li><a href="#другие-полезные-инструкции" id="markdown-toc-другие-полезные-инструкции">Другие полезные инструкции</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<p>Подразумевается, что ваша приставка прошита по этому руководству, либо куплена у автора этого гайда на <a href="http://nincfw.olx.ua" target="blank_">OLX</a>, в ином случае нет никакой гарантии, что всё будет работать правильно!</p>
+
+<h2 id="запуск-прошивки">Запуск Прошивки</h2>
+
+<details class="spoiler"><summary class="spoiler-title">С помощью Fusée Gelée</summary><div class="spoiler-body">
+<ol>
+  <li>Пробросьте пейлоад <code class="language-plaintext highlighter-rouge">payload.bin</code> из корня вашей карты памяти с помощью хоста (донгла\телефона\ПК). Если вы не помните, как сделать это - <a href="fusee-gelee" target="blank_">обратитесь к инструкции</a></li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">С помощью Caffeine</summary><div class="spoiler-body">
+<h3 id="часть-i---запуск-pegascape">Часть I - Запуск PegaScape</h3>
+
+<ol>
+  <li>Включите приставку
+    <ul>
+      <li>Интернет должен быть включен и прописан DNS!</li>
+    </ul>
+  </li>
+  <li>Нажмите на иконку Новости <img src="/images/screenshots/news.png" alt="" /></li>
+  <li>Выберите тайл “<strong>Launch PegaSwitch</strong>”</li>
+  <li>Нажмите на видео с логотипом “<strong>ReSwitched</strong>” для запуска PegaScape</li>
+</ol>
+
+<h3 id="часть-ii---запуск-hekate-с-помощью-caffeine">Часть II - Запуск hekate с помощью Caffeine</h3>
+
+<ol>
+  <li>На странице PegaScape выберите иконку <strong>Caffeine</strong>
+    <ul>
+      <li>Спиннер на экране зависнет, однако тот, что в левом нижнем углу, будет вращаться. Наберитесь терпения! В среднем от момента нажатия на иконку,  до срабатывания эксплойта проходит около 45 секунд</li>
+      <li>Если спиннер висит больше минуты, перезагрузите приставку, удерживая кнопку питания 30 секунд, и повторите попытку. Это же нужно сделать, если экран вдруг станет белым.</li>
+    </ul>
+  </li>
+  <li>Дождитесь появления текстового поля</li>
+  <li>Нажмите на текстовое поле и сосчитайте до пяти</li>
+  <li>Нажмите кнопку питания</li>
+  <li>Если все сделано правильно, приставка перезагрузится в кастомную прошивку</li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">На чипованной приставке</summary><div class="spoiler-body">
+<ol>
+  <li>Просто включите приставку</li>
+</ol>
+</div></details>
+
+<p><a href="troubleshooting" target="blank_">Возможные проблемы и их решения</a></p>
+
+<h2 id="запуск-hbl">Запуск HBL</h2>
+
+<p>HBL - программа для запуска самописных приложений. Как правило, это системные утилиты и эмуляторы. Реже - игры. Такие приложения распространяются в формате <code class="language-plaintext highlighter-rouge">.nro</code>. Для установки, поместите <code class="language-plaintext highlighter-rouge">.nro</code>-придложение в папку <code class="language-plaintext highlighter-rouge">switch</code>. В этом руководстве же, все приложения, о которых идёт речь уже включены в состав кефира</p>
+
+<p><strong>Для пользователей Atmosphere</strong></p>
+<ol>
+  <li>Запустите любую игру, удерживая клавишу (R), чтобы попасть в HBL
+    <ul>
+      <li>Удерживайте, пока не появится HBL (да, даже в меню выбора профилей)</li>
+      <li>Если игр нет, запускайте альбом, удерживая (R). Но рекомендуется, все-таки, запускать через игру, когда таковая появится</li>
+    </ul>
+  </li>
+</ol>
+
+<p class="notice--info">Вы по прежнему можете использовать и альбомы, однако рекомендуется запускать программы через игру. Так приложения смогут иметь доступ ко всему объёму памяти консоли</p>
+
+<p><strong>Для пользователей SX OS</strong></p>
+<ol>
+  <li>Запустите Альбом, чтобы попасть в HBL
+    <ul>
+      <li>Если у вас еще не куплена лицензия на прошивку, запускайте альбом, удерживая клавишу (R)</li>
+    </ul>
+  </li>
+  <li>С помощью (R) листайте на вкладку HOMEBREW</li>
+</ol>
+
+<p>Возможные проблемы:</p>
+<ul>
+  <li>Программа вылетает с ошибкой - запускайте HBL через игру</li>
+  <li>В некоторых программах (например, Checkpoint) красный экран и предупреждение о запуске в Applet mode - запускайте HBL через игру</li>
+</ul>
+
+<h2 id="установка-игр">Установка игр</h2>
+
+<p>Все существующие методы установки игр, а так же места, где игры брать лежат здесь - <a href="games" target="blank_">Установка игр</a>.
+Для удаления игр воспользуйтесь стандартным способом, предусмотренным в вашей прошивке</p>
+
+<h2 id="обновление">Обновление</h2>
+
+<h3 id="обновление-прошивки-и-системного-по">Обновление прошивки и системного ПО</h3>
+
+<p>Для обновления прошивки и всех программ до рекомендуемых версий следует обновить кефир. Для обновление необходимо подключение к сети</p>
+
+<ol>
+  <li>Запустите HBL</li>
+  <li>Запустите <strong>kefir updater</strong></li>
+  <li>Выберите пункт <strong>Check for Updates</strong></li>
+  <li>Выберите прошивку, которая установлена на вашем Switch</li>
+  <li>Дождитесь окончания установки</li>
+  <li>Нажмите <strong>Yes</strong>, чтобы перезагрузить приставку</li>
+</ol>
+
+<p>Так же можно обновиться вручную, следуя <a href="kefir" target="blank_">инструкции</a>. Процесс обновления аналогичен процессу установки</p>
+
+<h3 id="обновление-системного-по">Обновление системного ПО</h3>
+
+<p>Обновлять системное ПО можно <strong>только</strong> после обновления kefir, иначе прошивка может не запуститься!</p>
+
+<p>Подробная инструкция по обновлению находится здесь - <a href="update-to-latest" target="blank_">Безопасное обновление прошивки</a></p>
+
+<h2 id="другие-полезные-инструкции">Другие полезные инструкции</h2>
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/usage"><span class="nav__sub-title">Инструкция по использованию уже прошитой приставкой</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/faq"><span class="nav__sub-title">FAQ</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/block-update"><span class="nav__sub-title">Блокировка серверов Nintendo, защита от бана</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/games"><span class="nav__sub-title">Установка игр, DLC, обновлений</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/games#%D0%B3%D0%B4%D0%B5-%D0%B1%D1%80%D0%B0%D1%82%D1%8C-%D0%B8%D0%B3%D1%80%D1%8B-%D0%B8-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F"><span class="nav__sub-title">Где брать игры</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/link-account"><span class="nav__sub-title">Связывание учётной записи консоли с аккаунтом Nintendo</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/preparation-white"><span class="nav__sub-title">Использование EmuNAND для уже прошившихся ранее</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/cheats"><span class="nav__sub-title">Использование читов в EdiZon</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/backup-saves"><span class="nav__sub-title">Резервное копирование и восстановление сохранений</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/lanplay"><span class="nav__sub-title">Онлайн для прошитых и забаненных</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/update-to-latest"><span class="nav__sub-title">Безопасное обновление прошивки</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/backup-nand"><span class="nav__sub-title">Резервное копирование NAND</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/fusee-gelee"><span class="nav__sub-title">Запуск пейлоадера через Fusée Gelée</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/launch-hbl"><span class="nav__sub-title">Запуск Homebrew Launcher</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/cfw"><span class="nav__sub-title">Кастомные прошивки</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/autorcm"><span class="nav__sub-title">Активация AutoRCM</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/ftp"><span class="nav__sub-title">Использование FTP</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/hardmoded"><span class="nav__sub-title">Особенности использования чипованной приставки</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/emuiibo"><span class="nav__sub-title">Эмуляция Amiibo с помощью модуля emuiibo</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+:ET

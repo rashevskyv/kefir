@@ -1,0 +1,3 @@
+I":
+<p>Делайте аналогичным способом, как делали <strong>Дамп NAND</strong>, но вместо “ums_<strong>eMMC</strong>.ini” выбирайте “ums_<strong>boot0</strong>.ini” для дампа BOOT0 и “ums_<strong>boot1</strong>.ini” для дампа BOOT1</p>
+:ET

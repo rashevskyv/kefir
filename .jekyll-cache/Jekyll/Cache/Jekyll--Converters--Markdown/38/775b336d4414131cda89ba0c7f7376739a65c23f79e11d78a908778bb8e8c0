@@ -1,0 +1,47 @@
+I"Z
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#выберите-приставку" id="markdown-toc-выберите-приставку">Выберите приставку</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<p>В данный момент прошиваются <strong>все</strong> приставки семейства Nintendo Switch. Однако, в зависимости от ревизии приставки, а так же наличия в ней ряда уязвмимостей, методы прошивки могут отличаться. Поэтому первоочередной задачей станет определить какой же именно метод подходит именно вам.</p>
+
+<h2 id="выберите-приставку">Выберите приставку</h2>
+<link rel="stylesheet" type="text/css" href="https://check.customfw.xyz/css/main_checker.css" />
+
+<div class="content" id="fullpage">
+  <div class="checker__body inpage">
+    <div class="table__wrapper">
+      <div class="table__container">
+        <div class="table__ns__caption table__caption">Nintendo Switch</div>
+        <div class="table__ns__body table__body" id="ns"><img class="table descriptionToggler" src="https://check.customfw.xyz/img/ns.png" alt="Nintendo Switch" data-result="result1" /></div>
+        <div class="table__nsl__caption table__caption">Nintendo Switch Lite</div>
+        <div class="table__nsl__body table__body" id="nsl"><img class="table descriptionToggler" src="https://check.customfw.xyz/img/nsl.png" alt="Nintendo Switch Lite" data-result="result2" /></div>
+      </div>
+    </div>
+    <div class="result hidden" id="scroll_here"></div>
+    <div class="check-result hidden"></div>
+  </div>
+</div>
+<script src="https://check.customfw.xyz/js/libs.min.js"></script>
+
+<script src="https://check.customfw.xyz/js/main.js"></script>
+
+<script src="https://check.customfw.xyz/js/vercheck.js"></script>
+
+:ET

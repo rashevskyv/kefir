@@ -1,0 +1,33 @@
+I"_
+<ol>
+  <li>Запустите <strong>NX Shell</strong> через <a href="hbl" target="_blank">HBL</a></li>
+  <li>Перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/contents</code>
+    <ul>
+      <li>Если такой папки нет, перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/titles</code></li>
+    </ul>
+  </li>
+  <li>Удалите папки со следующими названиями (если они там есть):
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">010000000000100D</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000032</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000034</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000036</code></li>
+      <li><code class="language-plaintext highlighter-rouge">010000000000000D</code></li>
+      <li><code class="language-plaintext highlighter-rouge">420000000000000E</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000001000</code></li>
+      <li><code class="language-plaintext highlighter-rouge">0100000000000352</code></li>
+      <li><code class="language-plaintext highlighter-rouge">4200000000000010</code></li>
+      <li><code class="language-plaintext highlighter-rouge">010000000007E51A</code></li>
+    </ul>
+  </li>
+  <li>Нажмите (Start), чтобы закрыть <strong>NX Shell</strong></li>
+  <li>Выберите <strong>Kefir Updater</strong>
+    <ul>
+      <li>Требуется подключение к интернету!</li>
+    </ul>
+  </li>
+  <li>Выберите ОС, которую используете</li>
+  <li>По окончанию установки, перезагрузите приставку</li>
+</ol>
+
+:ET

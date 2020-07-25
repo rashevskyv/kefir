@@ -1,0 +1,13 @@
+I"
+<p><strong>О:</strong> Нужно исправить атрибуты.</p>
+<ol>
+  <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
+    <ul>
+      <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
+    </ul>
+  </li>
+  <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
+  <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
+</ol>
+
+:ET

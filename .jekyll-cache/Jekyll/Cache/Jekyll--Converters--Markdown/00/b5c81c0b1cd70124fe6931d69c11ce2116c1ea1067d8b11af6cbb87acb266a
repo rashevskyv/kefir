@@ -1,0 +1,220 @@
+I"p:
+<p>Донгл - это автономное устройство, которое создано исключительно для удобного запуска взлома.</p>
+
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<p class="notice--warning"><span class="tooltip_container">
+	Донгл
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+		</span>
+	</span>
+</span> необходимо зарядить комплектным кабелем, либо вставить во <strong>включённую</strong> приставку</p>
+
+<ul>
+  <li>Сам <a href="http://shop.customfw.xyz" target="_blank"><span class="tooltip_container">
+  донгл
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+      </span>
+  </span>
+</span></a></li>
+  <li>Установленная на донгле <span class="tooltip_container">
+  hekate
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+      </span>
+  </span>
+</span>
+    <ul>
+      <li>Инструкция для <a href="r4#прошивка-донгла" target="_blank">R4S</a></li>
+      <li>Инструкция для <a href="rcmloader#прошивка-донгла" target="_blank">RCMLoader</a></li>
+    </ul>
+  </li>
+  <li>Приставка должна находиться в режиме <a href="#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm">RCM</a></li>
+</ul>
+
+<h2 id="инструкция">Инструкция</h2>
+
+<ul>
+  <li>Для запуска кастомной прошивки вставьте донгл в приставку
+    <ul>
+      <li>Приставка должна находиться в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a>.</li>
+    </ul>
+  </li>
+  <li>Для запуска <span class="tooltip_container">
+  hekate
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+      </span>
+  </span>
+</span> просто вставьте <span class="tooltip_container">
+  донгл
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+      </span>
+  </span>
+</span> в приставку, когда появится сплешскрин кефира, нажмите кнопку уменьшения громкости</li>
+  <li>Для запуска любого другого пейлоада читайте дальше</li>
+</ul>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск любого пейлоада на донгле с hekate</summary><div class="spoiler-body">
+<h4 id="что-понадобится">Что понадобится</h4>
+
+<ul>
+  <li><span class="tooltip_container">
+  Пейлоад
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+      </span>
+  </span>
+</span>, который вы собираетесь запускать
+    <ul>
+      <li>Для запуска <span class="tooltip_container">
+  hekate
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+  <span class="bottom">
+      Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  </span>
+  </span>
+</span> она должна быть прошита в <span class="tooltip_container">
+  донгл
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+  <span class="bottom">
+      Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+  </span>
+</span>, дополнительно её никуда не нужно скидывать</li>
+    </ul>
+  </li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<p class="notice--info">Ниже описан метод запуска вообще любого пейлоада с помощью <span class="tooltip_container">
+	донгла
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+		</span>
+	</span>
+</span>, на котором прошита <span class="tooltip_container">
+	hekate
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+		</span>
+	</span>
+</span>. Если в вашем донгле не <span class="tooltip_container">
+	hekate
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+		</span>
+	</span>
+</span>, а SX OS, метод запуска <a href="fusee-gelee#sx-os-pro--r4s-dongle-с-прошитым-пейлоадом-от-sx-os">будет отличаться</a>.</p>
+
+<ol>
+  <li>Установите на приставку <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span></li>
+  <li>Вставьте донгл в консоль</li>
+  <li>Когда появится сплешскрин кефира, нажмите (VOL-), вы попадёте в гекату</li>
+  <li>Находясь в hekate перейдите в <strong>Tools</strong> -&gt; <strong>USB Tools</strong> -&gt; <strong>SD Card</strong>. Ваша карта памяти смонтируется на вашем ПК
+    <ul>
+      <li>Фактически ваш свитч будет использоваться в виде картридера</li>
+      <li>Вместо этого вы можете просто вытащить карту памяти из приставки и вставить её в ПК, однако лучше всего приучить себя этого не делать, поскольку слот для карты памяти на приставке весьма хлипкий</li>
+    </ul>
+  </li>
+  <li>Поместите <span class="tooltip_container">
+ пейлоад
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+     </span>
+ </span>
+</span>, который вы собираетесь запускать в папку <code class="language-plaintext highlighter-rouge">bootloader/payloads</code></li>
+  <li><a href="https://ru.wikipedia.org/wiki/Безопасное_извлечение_устройства" target="_blank">Безопасно извлеките</a> вашу карту памяти из ПК (устройство будет назвыаться “<strong>UMS</strong>”) и нажмите в hekate “<strong>Close</strong>”
+    <ul>
+      <li>Если вы вытаскивали карту из приставки, просто вставьте её обратно в приставку</li>
+    </ul>
+  </li>
+  <li>В hekate перейдите в главное меню и нажмите <strong>Payloads…</strong> -&gt; <strong>%ваш_пейлоад%.bin</strong></li>
+  <li>Пейлоад запустится на консоли</li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск любого пейлоада на донгле с SX OS</summary><div class="spoiler-body">
+<h3 id="что-понадобится">Что понадобится</h3>
+
+<ul>
+  <li>Xecuter Dongle, входящий в комплект SX PRO
+    <ul>
+      <li>Либо любой другой <span class="tooltip_container">
+  донгл
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+  <span class="bottom">
+      Специальное устройство небольшого размера, единственной задачей которого является отправка пейлоада на консоль.
+  </span>
+  </span>
+</span> с прошитым пейлоадом от SX OS
+        <ul>
+          <li>Инструкция для <a href="r4#прошивка-донгла" target="_blank">R4S</a></li>
+          <li>Инструкция для <a href="rcmloader#прошивка-донгла" target="_blank">RCMLoader</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="tooltip_container">
+  Пейлоад
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+      </span>
+  </span>
+</span>, который вы собираетесь запускать</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<p class="notice--warning">Донгл необходимо зарядить комплектным кабелем, либо вставить ненадолго во <strong>включённую</strong> приставку</p>
+
+<h3 id="запуск-пейлоада">Запуск пейлоада</h3>
+
+<p class="notice--info">Приставка должна находиться в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a>!</p>
+
+<ol>
+  <li>Установите на приставку <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
+ </span>
+</span></li>
+  <li>Вставьте карту памяти приставки в ПК
+    <ul>
+      <li>Приставка находится в режиме RCM, вы можете свободно извлекать из неё карту безо всяких дополнительных манипуляций. Выключать для извлечения карты приставку не нужно, иначе придётся снова вводить её в режим RCM</li>
+    </ul>
+  </li>
+  <li>Поместите пейлоад, который вы собираетесь запускать в корень карты памяти</li>
+  <li>Вставьте карту памяти обратно в консоль</li>
+  <li>Вставьте донгл в консоль</li>
+  <li>При появлении загрузочного экрана SX OS, зажмите и удерживайте (VOL+) до тех пор, пока не появится меню прошивки</li>
+  <li>Приставка загрузится в меню SX OS</li>
+  <li>Выберите “<strong>Options</strong>”</li>
+  <li>Выберите “<strong>Launch external payload</strong>”</li>
+  <li>Выберите пейлоад, который хотите запустить</li>
+  <li>Пейлоад запустится на консоли</li>
+</ol>
+</div></details>
+:ET

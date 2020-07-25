@@ -1,0 +1,12 @@
+I"Y
+<ol start="8">
+  <li><strong>ВНИМАНИЕ!</strong> При прошивке через <a href="caffeine" target="_blank">Caffeine</a> <strong>обязательно</strong> убедитесь что в поле “<strong>Target firmware</strong>” находится прошивка “<strong>10.1.0 (exFAT)</strong>”, перед строкой “<strong>Prevent fuse burning (enable AutoRCM)</strong>” стоит <strong>крестик</strong>! Если всё так, то нажимайте <strong>Start installation</strong>
+    <ul>
+      <li>Если там стоит галочка, нажмите на неё, в появившемся окне выберите <strong>Yes, I am sure</strong></li>
+      <li>При установки прошивки с такой же версией, как исходная (например, у вас стоит 10.1.0, а вы пытаетесь установить 10.1.0 (exFAT)) может возникать ошибка. В таком случае, вам придётся установить прошивку с версией ниже (например, если у вас сейчас стоит 10.0.2, поставьте 9.2.0), а уже потом повышать её.</li>
+    </ul>
+  </li>
+</ol>
+
+<p class="text-center"><img src="/images/screenshots/choi/noautorcm.png" alt="" /></p>
+:ET

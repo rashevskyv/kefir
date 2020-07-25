@@ -1,0 +1,41 @@
+I"P
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li><span class="tooltip_container">
+  Пейлоад
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Файл с исполняемым кодом в формате <code class="language-plaintext highlighter-rouge">.bin</code>, которые мы загружаем в приставку, чаще всего - загрузчик
+      </span>
+  </span>
+</span>, который вы собираетесь запускать на приставке</li>
+  <li>USB type-С на USB type-A кабель для подключения Switch к <span class="tooltip_container">
+  хосту
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Устройство, позволяющее отправить на консоль пейлоад, в качестве хоста может использоваться ПК, смартфон на Android (iOS, если есть джейлбрейк) или специальное устройство – донгл
+      </span>
+  </span>
+</span></li>
+  <li>Браузер Chrome (с другими браузерами работать не будет!)</li>
+  <li>Приставка должна быть в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a></li>
+</ul>
+
+<h2 id="запуск-пейлоада">Запуск пейлоада</h2>
+
+<p class="notice--info">Приставка должна находиться в <a href="fusee-gelee#часть-i---вход-в-rcm" target="_blank">режиме RCM</a>!</p>
+
+<ol>
+  <li>Откройте эту <a href="https://webcfw.sdsetup.com/" target="_blank">веб-страницу</a> и включите Русский язык</li>
+  <li>В части “<strong>Настройки отправки пейлоада</strong>” выберите пейлоадиз списка “<strong>Загрузить свой пейлоад</strong>”, нажмите “<strong>Выберите файл</strong>”, после чего выберите <code class="language-plaintext highlighter-rouge">.bin</code>-файл вашего пейлоада
+    <ul>
+      <li>Не выбирайте пейлоадиз списка! Используйте тот, что в архиве, иначе вы рискуете получить ошибку на том или ином этапе прошивки!</li>
+    </ul>
+  </li>
+  <li>Нажмите “<strong>Deliver payload!</strong>”</li>
+  <li>В открывшемся окне выберите “<strong>APX</strong>” и нажмите “<strong>Подключение</strong>”</li>
+  <li>пейлоадзапустится на консоли</li>
+  <li>Можете доставать замыкатель</li>
+</ol>
+:ET

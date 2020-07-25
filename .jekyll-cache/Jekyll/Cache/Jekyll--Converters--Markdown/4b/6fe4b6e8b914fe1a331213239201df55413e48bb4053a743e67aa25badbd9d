@@ -1,0 +1,32 @@
+I"G
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#запуск-cfw" id="markdown-toc-запуск-cfw">Запуск CFW</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<hr />
+
+<div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
+
+<div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
+
+<div class="notice--warning"><strong>Если приставка зависла или не подаёт признаков жизни, выключите её удерживанием кнопки (POWER) 30 секунд, затем включите и пробросьте пейлоад!</strong></div>
+
+<hr />
+
+<p>Есть несколько важных отличий при работе с чипованной приставкой, которые нужно понимать:</p>
+
+<ol>
+  <li>Если приставка не включается на зарядке, снимите её с зарядки, если после этого она не включилась, подержите кнопку (POWER) 20 секунд и попробуйте включить ещё раз.</li>
+  <li>Если приставка не включается, подержите кнопку (POWER) 20 секунд и попробуйте включить.</li>
+</ol>
+
+<hr />
+
+<h2 class="notice--success" id="запуск-cfw"><a href="launch-cfw">Запуск CFW</a></h2>
+:ET

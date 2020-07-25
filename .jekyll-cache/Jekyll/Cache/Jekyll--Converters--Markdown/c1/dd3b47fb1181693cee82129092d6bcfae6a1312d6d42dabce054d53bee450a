@@ -1,0 +1,40 @@
+I"z
+
+<h3 id="установка-игр">Установка игр</h3>
+
+<details class="spoiler"><summary class="spoiler-title">Подготовительные работы в MacOS</summary><div class="spoiler-body">
+<ol>
+  <li>Установите <a href="https://www.android.com/filetransfer/" target="_blank">Android File Transfer</a>, если версия вашей MacOS 10.13 или новее</li>
+</ol>
+
+</div></details>
+
+<p class="notice--info">Установка по USB через указанный способ поддерживает только форматы <code class="language-plaintext highlighter-rouge">NSP</code> и <code class="language-plaintext highlighter-rouge">NSZ</code>!</p>
+
+<p class="notice--info">При возникновении проблем, воспользуйтесь <a href="games_old" target="_blank">старой инструкцией</a></p>
+
+<ol>
+  <li>Подключите консоль к ПК</li>
+  <li><strong>На приставке</strong> запустите <strong>DBI</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
+  <li>Нажмите “<strong>Run MTP Responder</strong>”
+    <ul>
+      <li>К вашему ПК примонтируется новое MTP-устройство</li>
+    </ul>
+  </li>
+  <li>Откройте появившееся устройство “<strong>DBI</strong>”</li>
+  <li>Перейдите в папку “<strong>NSP and NSZ install</strong>”</li>
+  <li>Перетяните и скопируйте игры, которые хотите установить в папку “<strong>SDCard</strong>” или “<strong>NAND</strong>”, в зависимости от того, куда вы хотите установить игру
+    <ul>
+      <li>Свободное место в NAND или карте памяти можно оценить в нижней части экрана вашего Switch</li>
+      <li>Не забывайте, что игры в формате NSZ после установки занимают больше места, чем весят сам NSZ-файл
+        <ul>
+          <li>Во время установки NSZ-файла на экране консоли будет отображаться тот размер, который будет занимать игра после установки</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>По окончанию установки, нажмите (X), чтобы остановить MTP-сервер и отмонтировать MTP-устройство</li>
+  <li>Нажмите (+), чтобы закрыть DBI</li>
+</ol>
+
+:ET
