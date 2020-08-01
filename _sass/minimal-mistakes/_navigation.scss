@@ -542,7 +542,7 @@
 
     /* hide sub sub links on small screens*/
     li > ul li {
-      display: none;
+      display: block;
 
       @include breakpoint($medium) {
         display: block;
