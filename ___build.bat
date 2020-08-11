@@ -6,7 +6,7 @@ COLOR 0F
 set reldir=E:\Switch\_kefir\release
 set wd=E:\Switch\_kefir
 set bd=%wd%\build
-set gd="S:\Мой диск\Shared\release"
+set gd=S:\Мой диск\Shared\release
 set sd=%bd%\atmo
 set img=F:\VK\kefir
 set site=F:\git\site\switch
@@ -248,8 +248,8 @@ rem sxos
 rem sxchip
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!sys-con -xr!.overlays %reldir%\sxchip.zip %bd%\sxchip\*
 
-if exist "%gd%" (RD /s /q "%gd%")
-xcopy "%reldir%\*" "%gd%" /H /Y /C /R /S /E
+if exist "%gd%" (del "%gd%\*" /f /q)
+xcopy "%reldir%\*" "%gd%\" /H /Y /C /R /S /E
 
 
 pause
