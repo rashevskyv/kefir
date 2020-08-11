@@ -268,6 +268,8 @@ REM git add .
 REM git commit -m "%date:~3,8%"
 REM git push
 
+pause
+
 powershell -file %ps%
 
 :END
