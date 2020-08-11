@@ -21,35 +21,27 @@ set neutos=0
 
 :disclaimer
 cls
-ECHO =======================================================================================================================
-ECHO                                                 ПРОЧТИТЕ ВНИМАТЕЛЬНО!
-ECHO                                                    READ CAREFULLY!
-ECHO =======================================================================================================================
-ECHO          !!! УСТАНОВКА ИГР ПО USB ТЕПЕРЬ РАБОТАЕТ ТОЛЬКО С DBIBACKEND!!! https://switch.customfw.xyz/games !!!
-ECHO                   Нажмите F, затем Enter, если вы ознакомились с написанным и готовы продолжить
-ECHO =======================================================================================================================
+ECHO ======================================================================
+ECHO                            READ CAREFULLY!
+ECHO ======================================================================
 ECHO.
-ECHO    !!! При возникновении ошибок, выберите чистую установку в опциях кефира
-ECHO    !!! Если вы собираетесь использовать Caffeine - отметьте это в опциях
-ECHO    !!! Если вы собираетесь использовать sys-con - отметьте это в опциях
+ECHO    При возникновении ошибок, выберите чистую установку в опциях
+ECHO    Если вы собираетесь использовать Caffeine, отметьте это в опциях
+ECHO    Если вы собираетесь использовать sys-con, отметьте это в опциях
 ECHO.
 ECHO    Нажмите О на следующем экране, чтобы попасть в опции кефира
+ECHO    Нажмите F, затем Enter, если вы ознакомились с написанным 
 ECHO.
-ECHO -----------------------------------------------------------------------------------------------------------------------
+ECHO ----------------------------------------------------------------------
+ECHO.   
+ECHO    Choose clean install on options if any errors on launch CFW
+ECHO    Choose Caffeine in an options if you use it
+ECHO    Choose sys-con in an options if you use it
+ECHO.
+ECHO    Press F and Enter if you ready to proceed
+ECHO    Press O on the next screen for options.
 ECHO.       
-ECHO    !!! INSTALLING GAMES ON USB NOW WORKS ONLY WITH DBIBACKEND !!! https://switch.customfw.xyz/games
-ECHO    !!! Choose clean install on options if any errors on launch CFW
-ECHO    !!! Choose Caffeine in an options if you use it
-ECHO    !!! Choose sys-con in an options if you use it
-ECHO.
-ECHO    Press F and Enter if you has read this information and ready to proceed to installation. Press O on the next screen
-ECHO    for options.
-ECHO.       
-ECHO =======================================================================================================================
-ECHO.
-ECHO.
-ECHO.
-ECHO.
+ECHO ======================================================================
 
 set st=
 set /p st=
@@ -928,8 +920,6 @@ if exist "%sd%:\atmosphere" (RD /s /q "%sd%:\atmosphere")
 if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
-if exist "%sd%:\switch\ChoiDujourNX" (RD /s /q "%sd%:\switch\ChoiDujourNX")
-if exist "%sd%:\switch\FreshHay" (RD /s /q "%sd%:\switch\FreshHay")
 if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
 
 if exist "%sd%:\payload*.bin" (del "%sd%:\payload*.bin")

@@ -55,8 +55,6 @@ if exist "%sd%\bootloader" (RD /s /q "%sd%\bootloader")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
-if exist "%sd%\switch\ChoiDujourNX" (RD /s /q "%sd%\switch\ChoiDujourNX")
-if exist "%sd%\switch\FreshHay" (RD /s /q "%sd%\switch\FreshHay")
 if exist "%sd%\switch\kefirupdater" (RD /s /q "%sd%\switch\kefirupdater")
 
 
