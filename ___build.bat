@@ -9,7 +9,7 @@ set bd=%wd%\build
 set sd=%bd%\atmo
 set img=F:\VK\kefir
 set site=F:\git\site\switch
-set ps=D:\SYS_FOLDERS\Desktop\SWITCH_BUILD.ps1
+set ps=F:\git\scripts\build_kefir.ps1
 if exist "%bd%" (RD /s /q "%bd%")
 if exist "%reldir%" (RD /s /q "%reldir%")
 set site_inc=%site%\_includes\inc\kefir
@@ -268,7 +268,7 @@ REM git add .
 REM git commit -m "%date:~3,8%"
 REM git push
 
-powershell -file %ps% kefir
+powershell -file %ps%
 
 :END
 if %lang%==1 (
