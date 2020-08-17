@@ -49,7 +49,7 @@ author_profile: true
 
 По этой инструкции можно менять версию своего ПО на любую, а не только на {% include /vars/update_version.txt %}. 
 
-Другие версии ПО Switch можно найти [здесь](https://darthsternie.net/index.php/switch-firmwares/){:target="_blank"} 
+Другие версии ПО Switch можно найти [здесь](https://drive.google.com/open?id=1-kDaqP_hfmWZ5p5HeTK10JXP5C6W6_SM&authuser=gorwell%40wccnet.edu&usp=drive_fs){:target="_blank"} или получить [по магнитке](magnet:?xt=urn:btih:8269B9BECB6A42B3A8B762E4882B05291DB3D0A6&dn=FW-daybreak&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
 {: .notice--info}
 
 ## Что понадобится
@@ -57,10 +57,10 @@ author_profile: true
 * Умение [запускать пейлоады через Fusée Gelée](fusee-gelee){:target="_blank"} и [{% include abbr/cfw.txt abbr="кастомную прошивку" %}](cfw){:target="_blank"}
 * Свежая версия {% include abbr/kefir_addr.txt %}
 * Прошивка {% include /vars/update_version.txt %} (скачайте по любой из ссылок):
-	* [magnet](magnet:?xt=urn:btih:B23F438BA3FED6462C067496F14D37D88B46BEF8&dn=10.1.0.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
-	* [ЯД](https://yadi.sk/d/BzsYZLjroSgLjw){:target="_blank"}
-	* [GD](https://drive.google.com/file/d/10L8zKy-Js9L3QyljOqBJLz-zTXDTxofO/view?usp=sharing){:target="_blank"}
-	* [MEGA](https://mega.nz/file/Bt1h3QpD#oCQVvmE57c_RNveZIl1wVZ30ktposLsUrUoEMIgcKk8){:target="_blank"}
+	* [magnet](magnet:?xt=urn:btih:9C34815CAAD8BC96097AB220EF1ED0AB05EAC0F8&dn=10.1.0-daybreak.zip&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+	* [ЯД](https://yadi.sk/d/BFRCiX-bf6huDw){:target="_blank"}
+	* [GD](https://drive.google.com/open?id=10CVDPexffxE0c4oStOoWTFEhvTgzcXOo&authuser=gorwell%40wccnet.edu&usp=drive_fs){:target="_blank"}
+	* [MEGA](https://mega.nz/file/t88jiAhK#qrB6_AKURcOttnKD8WStQWdGtX6hOTAjUj_eFCFZJ4g){:target="_blank"}
 * Карта памяти 
 
 ## Инструкция
