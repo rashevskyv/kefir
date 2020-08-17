@@ -29,7 +29,7 @@ ECHO    При возникновении ошибок, выберите чистую установку в опциях
 ECHO    Если вы собираетесь использовать Caffeine, отметьте это в опциях
 ECHO    Если вы собираетесь использовать sys-con, отметьте это в опциях
 ECHO.
-ECHO    Нажмите О на следующем экране, чтобы попасть в опции кефира
+ECHO    Нажмите О, чтобы попасть в опции кефира
 ECHO    Нажмите F, затем Enter, если вы ознакомились с написанным 
 ECHO.
 ECHO ----------------------------------------------------------------------
@@ -39,13 +39,14 @@ ECHO    Choose Caffeine in an options if you use it
 ECHO    Choose sys-con in an options if you use it
 ECHO.
 ECHO    Press F and Enter if you ready to proceed
-ECHO    Press O on the next screen for options.
+ECHO    Press O for options.
 ECHO.       
 ECHO ======================================================================
 
 set st=
 set /p st=
 
+for %%A in ("O" "o" "Щ" "щ" "J" "j" "о" "О" "0") do if "%st%"==%%A (GOTO OPTIONS)
 for %%A in ("F" "f" "А" "а") do if "%st%"==%%A (GOTO START)
 for %%A in ("F" "f" "А" "а") do if "%st%" neq %%A (GOTO disclaimer)
 
@@ -242,8 +243,6 @@ set /p st=:
 for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
-if %cfw%==SXOS goto dbi
 
 :syscon
 cls
@@ -702,6 +701,8 @@ if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\switch\n1dus.nro" (del "%sd%:\switch\n1dus.nro")
 if exist "%sd%:\switch\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX.nro")
 if exist "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro")
+if exist "%sd%:\switch\daybreak.nro" (del "%sd%:\switch\daybreak.nro")
+if exist "%sd%:\switch\daybreak\daybreak.nro" (del "%sd%:\switch\daybreak\daybreak.nro")
 if exist "%sd%:\switch\nx-ntpc.nro" (del "%sd%:\switch\nx-ntpc.nro")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
@@ -724,7 +725,6 @@ if exist "%sd%:\switch\tinfoil_usb-fix.nro" (del "%sd%:\switch\tinfoil_usb-fix.n
 if exist "%sd%:\switch\ldnmitm_config.nro" (del "%sd%:\switch\ldnmitm_config.nro")
 if exist "%sd%:\switch\ldnmitm_config" (RD /s /q "%sd%:\switch\ldnmitm_config")
 if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
-if exist "%sd%:\switch\fakenews-injector\fakenews-injector.nro" (del "%sd%:\switch\fakenews-injector\fakenews-injector.nro")
 if exist "%sd%:\switch\fakenews-injector.nro" (del "%sd%:\switch\fakenews-injector.nro")
 if exist "%sd%:\switch\gag-order.nro" (del "%sd%:\switch\gag-order.nro")
 if exist "%sd%:\games\hbgShop*.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.nsp")
@@ -840,6 +840,7 @@ if %stock%==0 (
 
 del "%sd%:\sept\payload_*.bin"
 
+
 rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
@@ -848,6 +849,8 @@ if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
 if exist "%sd%:\sxos\titles" (move /Y %sd%:\sxos\titles\* %sd%:\atmosphere\contents\)
 if exist "%sd%:\sxos\games" (move /Y %sd%:\sxos\games\* %sd%:\games)
 if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmosphere\contents\00FF0012656180FF")
+
+if exist "%sd%:\switch\ChoiDujourNX" (RD /s /q "%sd%:\switch\ChoiDujourNX")
 
 if exist "%sd%:\sxos\emunand" (
 	if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
@@ -860,7 +863,7 @@ if exist "%sd%:\sxos\emunand" (
 
 if exist "%sd%:\switch\sx" (RD /s /q "%sd%:\switch\sx")
 if exist "%sd%:\switch\themes" (RD /s /q "%sd%:\switch\themes")
-if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
+if exist "%sd%:\switch\Lockpick" (RD /s /q "%sd%:\switch\Lockpick")
 if exist "%sd%:\titles" (move /Y "%wd%\titles\*" "%sd%:\atmosphere\contents")
 if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
@@ -887,6 +890,11 @@ if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_sx_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_sx_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
 
+if %syscon%==0 (
+	RD /s /q "%sd%:\sxos\titles\690000000000000D\"
+	RD /s /q "%sd%:\config\sys-con\"
+	)
+
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
@@ -910,9 +918,9 @@ xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 
 echo "syscon state " %syscon%
 
-if %syscon%==1 (
-	xcopy "%wd%\atmo\atmosphere\contents\690000000000000D\*" "%sd%:\sxos\titles\690000000000000D\" /H /Y /C /R /S /E /I
-	xcopy "%wd%\base\config\sys-con\*" "%sd%:\config\sys-con\" /H /Y /C /R /S /E /I
+if %syscon%==0 (
+	RD /s /q "%sd%:\sxos\titles\690000000000000D\"
+	RD /s /q "%sd%:\config\sys-con\"
 	)
 
 if exist "%sd%:\bootloader" (RD /s /q "%sd%:\bootloader")
@@ -1178,10 +1186,10 @@ goto main
 :END
 if %lang%==1 (
 	echo. 
-	echo Нажмите любую клавишу для выхода
+	echo   Нажмите любую клавишу для выхода
 ) else (
 	echo. 
-	echo Press any button for exit
+	echo   Press any button for exit
 )
 
 RD /s /q "%wd%
