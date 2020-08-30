@@ -1186,10 +1186,10 @@ goto main
 :END
 if %lang%==1 (
 	echo. 
-	echo   Нажмите любую клавишу для выхода
+	echo     Нажмите любую клавишу для выхода
 ) else (
 	echo. 
-	echo   Press any button for exit
+	echo     Press any button for exit
 )
 
 RD /s /q "%wd%
