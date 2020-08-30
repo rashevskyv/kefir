@@ -103,8 +103,6 @@ if exist "%sd%\titles" (RD /s /q "%sd%\titles")
 
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
-if exist "%sd%\version" (del "%sd%\version")
-
 
 rem echo ------------------------------------------------------------------------
 rem echo.
@@ -237,7 +235,7 @@ if exist "%sd%:\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!changelog -xr!install1.bat %reldir%\_kefir.7z %wd%\*
+"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat  %reldir%\_kefir.7z %wd%\*
 
 rem atmo
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -ssw %reldir%\atmo.zip %bd%\atmo\*
