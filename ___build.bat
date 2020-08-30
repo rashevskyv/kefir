@@ -103,6 +103,8 @@ if exist "%sd%\titles" (RD /s /q "%sd%\titles")
 
 if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
 if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
+if exist "%sd%\version" (del "%sd%\version")
+
 
 rem echo ------------------------------------------------------------------------
 rem echo.
