@@ -235,7 +235,7 @@ if exist "%sd%:\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!version -xr!changelog -xr!install1.bat %reldir%\_kefir.7z %wd%\*
+"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!___build.bat -xr!install1.bat -xr!release -xr!.git -xr!build -xr!emu.cmd -xr!changelog -xr!install1.bat %reldir%\_kefir.7z %wd%\*
 
 rem atmo
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -ssw %reldir%\atmo.zip %bd%\atmo\*
@@ -244,10 +244,10 @@ rem atmo_vanilla
 rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!690000000000000D -xr!NEUTOS.bin -xr!010000000007E51A -xr!0100000000000352 -xr!420000000007E51A -xr!tinfoil -xr!sys-con -xr!.overlays %reldir%\atmo_vanilla.zip %bd%\atmo_vanilla\* 
 
 rem sxos
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!FrashHay %reldir%\sxos.zip %bd%\sxos\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!FreshHay %reldir%\sxos.zip %bd%\sxos\*
 
 rem sxchip
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!FrashHay %reldir%\sxchip.zip %bd%\sxchip\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!FreshHay %reldir%\sxchip.zip %bd%\sxchip\*
 
 if exist "%gd%" (del "%gd%\*" /f /q)
 xcopy "%reldir%\*" "%gd%\" /H /Y /C /R /S /END
