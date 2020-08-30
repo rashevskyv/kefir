@@ -37,7 +37,7 @@ author_profile: true
   * [JKSV](https://github.com/J-D-K/JKSV/releases){:target="_blank"} - программа для резервного копирования и восстановления сейвов
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases){:target="_blank"} - программа для обновления kefir через интернет
   * [pplay](https://github.com/Cpasjuste/pplay/releases/latest){:target="_blank"} - видеоплеер 
-  * [ChoiDujourNX](https://switchtools.sshnuke.net/){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
+  * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak){:target="_blank"} - программа для [безопасного обновления](update-to-latest){:target="_blank"} версии системного ПО приставки
   * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest){:target="_blank"} - менеджер кастомных тем 
   * [switch-cheats-updater](https://github.com/HamletDuFromage/switch-cheats-updater/releases){:target="_blank"} - программа для закачки [читов](cheats){:target="_blank"} для установленных игр.
   * Link Account - программа [привязки аккаунта](link-account){:target="_blank"}, а так же для форматирования приставки
