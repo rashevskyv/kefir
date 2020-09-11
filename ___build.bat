@@ -11,8 +11,9 @@ set sd=%bd%\atmo
 set img=F:\VK\kefir
 set site=F:\git\site\switch
 set ps=F:\git\scripts\build_kefir.ps1
+set /p ver=<version
 if exist "%bd%" (RD /s /q "%bd%")
-if exist "%reldir%" (RD /s /q "%reldir%")
+if exist "%reldir%" (del /F /S /Q "%reldir%\*")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
@@ -265,7 +266,7 @@ echo.
 if exist "%bd%" (RD /s /q "%bd%")
 
 git add .
-git commit -m "%date:~3,8%"
+git commit -m "kefir%ver%"
 git push
 
 REM chdir /d %site%

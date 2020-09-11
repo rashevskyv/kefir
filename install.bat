@@ -900,6 +900,7 @@ if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
 if exist "%sd%:\atmosphere\kip_patches\loader_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\loader_patches")
+if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
 
 goto caffeine
 
@@ -932,6 +933,7 @@ if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
 
 if exist "%sd%:\payload*.bin" (del "%sd%:\payload*.bin")
 if exist "%sd%:\keys.txt" (del "%sd%:\keys.txt")
+if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
 
 goto caffeine
 
