@@ -23,7 +23,7 @@ author_profile: true
 {% spoiler Состав кефира %}
 
 1. **[Кастомная прошивка](cfw){:target="_blank"}**. Вы можете выбрать один из двух вариантов - **[Atmosphere](https://github.com/Atmosphere-NX/Atmosphere/releases/){:target="_blank"}** или **[SX OS](https://sx.xecuter.com){:target="_blank"}**, или даже поставить сразу обе и переключаться между ними при перезагрузке.
-2. **[Сигпатчи](https://gbatemp.net/threads/latest-fs-and-acid-patches-for-kosmos.562915/){:target="_blank"}**. Благодаря сигпатчам на Atmosphere можно запускать неподписанные (читай: *пиратские*) приложения и игры. В SX OS сигпатчи встроены по-умолчанию, но не доступны в бесплатной версии прошивки
+2. **[Сигпатчи](https://gbatemp.net/threads/sigpatches-for-atmosphere-fusee-primary-only.567542/page-26){:target="_blank"}**. Благодаря сигпатчам на Atmosphere можно запускать неподписанные (читай: *пиратские*) приложения и игры. В SX OS сигпатчи встроены по-умолчанию, но не доступны в бесплатной версии прошивки
 3. **Загрузчик [hekate](https://github.com/CTCaer/hekate/releases/latest){:target="_blank"}**. Благодаря загрузчику вы можете запускать прошивку и другие {% include abbr/payload.txt abbr="пейлоады" %} через удобное меню, создавать и восстанавливать резервную копию NAND, делать EmuNAND, получать информацию о состоянии системы, монтировать карту памяти к ПК без вытаскивания её из свитча, делать переразметку карты памяти для установки других ОС и многое другое
 4. **Установленные {% include abbr/payload.txt abbr="пейлоады" %}**:
   * [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/releases/latest){:target="_blank"} - программа для [дампа ключей приставки](backup-nand#часть-iii---дампим-ключи){:target="_blank"}

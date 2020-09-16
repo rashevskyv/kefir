@@ -49,7 +49,7 @@ author_profile: true
 
 По этой инструкции можно менять версию своего ПО на любую, а не только на {% include /vars/update_version.txt %}. 
 
-Другие версии ПО Switch можно найти [здесь](https://drive.google.com/open?id=1-kDaqP_hfmWZ5p5HeTK10JXP5C6W6_SM&authuser=gorwell%40wccnet.edu&usp=drive_fs){:target="_blank"} или получить [по магнитке](magnet:?xt=urn:btih:8269B9BECB6A42B3A8B762E4882B05291DB3D0A6&dn=FW-daybreak&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce){:target="_blank"}
+Другие версии ПО Switch можно найти [здесь](https://darthsternie.net/switch-firmwares/){:target="_blank"}
 {: .notice--info}
 
 ## Что понадобится
