@@ -18,6 +18,10 @@ set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
+set atmo_build="C:\Users\rashe\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\xhr\atmosphere-out.zip"
+
+"C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%wd% -y
+
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
 xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
