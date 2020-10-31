@@ -43,6 +43,7 @@ author_profile: true
   * [Linkhlo](https://github.com/rdmrocha/linkalho){:target="_blank"} - программа [привязки аккаунта](link-account){:target="_blank"}
 6. **Установленные модули**. Модули - это дополнительные компоненты, работающие внутри Atmosphere и позволяющие делать разные крутые штуки, как-то использование xbox-сoвместимых контроллеров, эмуляцию amiibo, разгон и прочее. К сожалению, SX OS модули не поддерживает
   * [sys-con](https://github.com/cathery/sys-con/releases/latest){:target="_blank"} - модуль, позволяющий подключать к консоли по USB практически любые геймпады
+  * [Mission Control](https://github.com/ndeadly/MissionControl){:target="_blank"} - модуль, позволяющий подключать к консоли по bluetooth практически любые геймпады
   * [Tesla Overlay Menu](https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/){:target="_blank"} - специальное оверлей-меню для взаимодействия с системой
     - [ovlEdiZon.ovl](https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/){:target="_blank"} - Модуль для [использования читов](cheats){:target="_blank"}
     - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases){:target="_blank"} - Модуль для включения и отключения установленных системных модулей (как-то разгон, emuuibo и прочее)
