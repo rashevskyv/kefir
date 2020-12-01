@@ -41,9 +41,7 @@ RCM - это штатный режим восстановления на Tegra-�
 Для корректной активации цепочки нам понадобится замкнуть между собой 9-й и 10-й контакты (либо 7-й и 10-й, или 1-й и 10-й, все варианты работают одинаково хорошо) на месте установки правого контроллера. Это можно сделать несколькими способами: 
 
 * Использовать обычную [канцелярскую скрепку](https://www.reddit.com/r/SwitchHacks/comments/8f0ugz/hardwarediy_switch_paperclip_jig_for_rcm_mode/){:target="_blank"}
-* Использовать [кусочек фольги](https://xghostboyx.github.io/RCM-Guide/#tin_foil){:target="_blank"}
-* Спаять между собой контакты непосредственно в самом joy-con [напрямую, или через резистор](https://xghostboyx.github.io/RCM-Guide/#soldered_joycon_710){:target="_blank"}
-* [Вмонтировать в правый joy-con кнопку](https://www.reddit.com/r/SwitchHaxing/comments/8ho4h0/modded_my_joycon_to_have_a_clear_case_and_home/){:target="_blank"}
+* [Ещё методы](https://nh-server.github.io/switch-guide/user_guide/emummc/entering_rcm){:target="_blank"}
 * Использовать [замыкатель, распечатанный на 3D-принтере](https://www.thingiverse.com/thing:2877484){:target="_blank"} (вы можете купить уже готовый: <a href="https://www.olx.ua/obyavlenie/nintendo-switch-rcm-jig-zamykatel-IDHW6Vb.html" target="_blank"><img src="/images/ua.png" alt="Украина" style="vertical-align: baseline !important;"></a>, <a href="https://vk.com/market-102933233?w=product-102933233_2039087_23eff2d92b12968546" target="_blank"><img src="/images/ru.png" alt="Россия" style="vertical-align: baseline !important;"></a>)
 * [И другие способы](https://gbatemp.net/threads/the-ultimate-list-of-mods-to-enter-rcm.502145/){:target="_blank"}
 
