@@ -18,7 +18,7 @@ set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
-set atmo_build="C:\Users\rashe\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\xhr\atmosphere-out.zip"
+set atmo_build="C:\Users\rashe\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\xhr\Kefirosphere\atmosphere-out.zip"
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%wd% -y
 
@@ -253,10 +253,6 @@ rem sxos
 
 rem sxchip
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!FreshHay %reldir%\sxchip.zip %bd%\sxchip\*
-
-if exist "%gd%" (del "%gd%\*" /f /q)
-xcopy "%reldir%\*" "%gd%\" /H /Y /C /R /S /END
-
 
 pause
 
