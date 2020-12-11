@@ -5,7 +5,7 @@ author_profile: true
 ---
 {% include toc title="Разделы" %}
 
-На даввной странице представлена инструкция для **Atmosphere**. Инструкция для пользователей SXOS находится [здесь](https://sx.customfw.xyz/update-to-latest){:target="_blank"}
+На данной странице представлена инструкция для **Atmosphere**. Инструкция для пользователей SXOS находится [здесь](https://sx.customfw.xyz/update-to-latest){:target="_blank"}
 {: .notice--warning}
 
 {% capture notice-5 %}
