@@ -66,7 +66,7 @@ author_profile: true
 
 ### Запуск стока через Atmosphere 
 
-{% include abbr/sysnand_warning.md %}
+{% include inc/sysnand_warning.md %}
 
 {% include inc/launch-hekate.txt %}
 1. Перейдите в "**Launch**"
