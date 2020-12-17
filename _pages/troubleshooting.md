@@ -148,6 +148,12 @@ author_profile: true
 
 {% endspoiler %}
 
+{% spoiler После запуска Homebrew Menu не видно ни одного приложения %}
+
+Это потому что SD карта называется "switch". Просто переименуй SD карту.
+
+{% endspoiler %}
+
 {% spoiler Исправление архивных атрибутов %}
 {% include /inc/fixatributes.txt %}
 {% endspoiler %}
