@@ -17,18 +17,16 @@ set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
-rem set atmo_build="C:\Users\rashe\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\xhr\atmosphere-out.zip"
+set atmo_build="F:\git\dev\atmosphere-out.zip"
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%wd% -y
 
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
-xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
 xcopy "%wd%\version" "%wd%\base\switch\kefirupdater\" /H /Y /C /R
 rem xcopy "%wd%\version" "%wd%\base\switch\kefirupdater" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
-xcopy "%wd%\changelog" "%reldir%\" /H /Y /C /R
 
 xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
@@ -42,6 +40,8 @@ xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 pause
 
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")
+xcopy "%wd%\changelog" "%reldir%\" /H /Y /C /R
+xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
 
 echo ------------------------------------------------------------------------
 echo.
