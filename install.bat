@@ -636,6 +636,7 @@ if exist "%sd%:\atmosphere\reboot_payload.bin" (del "%sd%:\atmosphere\reboot_pay
 if exist "%sd%:\atmosphere\BCT.ini" (del "%sd%:\atmosphere\BCT.ini")
 if exist "%sd%:\sxos\bootloader" (RD /s /q  "%sd%:\sxos\bootloader")
 if exist "%sd%:\sxos\switch" (RD /s /q  "%sd%:\sxos\switch")
+if exist "%sd%:\sxos\exefs_patches" (RD /s /q  "%sd%:\sxos\exefs_patches")
 if exist "%sd%:\sept" (RD /s /q  "%sd%:\sept")
 if exist "%sd%:\sxos\boot.dat" (del "%sd%:\sxos\boot.dat")
 if exist "%sd%:\games\tinfoil*.*" (del "%sd%:\games\tinfoil*.*")
