@@ -99,7 +99,6 @@ if exist "%sd%\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%\bootloader\heka
 
 del "%sd%\bootloader\hekate_ipl_*.ini"
 
-
 if exist "%sd%\atmosphere" (
 	attrib -A /S /D %sd%\atmosphere\*
 	attrib -A %sd%\atmosphere)
@@ -189,12 +188,7 @@ pause
 powershell -file %ps%
 
 :END
-if %lang%==1 (
-	echo. 
-	echo Нажмите любую клавишу для выхода
-) else (
-	echo. 
-	echo Press any button for exit
-)
+
+echo Press any button for exit
 
 exit
