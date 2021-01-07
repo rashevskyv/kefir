@@ -843,8 +843,7 @@ xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
 del "%sd%:\boot.dat"
-del "%sd%:\bootloader\payloads\NEUTOS.bin"
-rem RD /s /q "%sd%:\switch\tinfoil"
+
 if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
 ) else (
@@ -853,7 +852,6 @@ if %stock%==0 (
 
 del "%sd%:\sept\payload_*.bin"
 
-rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
