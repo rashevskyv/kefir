@@ -17,6 +17,7 @@ set dbi=0
 set dbi_flag=0
 set tesla=0
 set tesla_flag=1
+set stock=0
 
 :disclaimer
 cls
@@ -657,6 +658,7 @@ if exist "%sd%:\hbmenu.nro" (del "%sd%:\hbmenu.nro")
 if exist "%sd%:\keys.dat" (del "%sd%:\keys.dat")
 if exist "%sd%:\BCT.ini" (del "%sd%:\BCT.ini")
 if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
+if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
 if exist "%sd%:\bootloader\update.bin" (del "%sd%:\bootloader\update.bin")
 if exist "%sd%:\bootloader\update.bin.sig" (del "%sd%:\bootloader\update.bin.sig")
 if exist "%sd%:\bootloader\patches_template.ini" (del "%sd%:\bootloader\patches_template.ini")
@@ -842,7 +844,7 @@ xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
-del "%sd%:\boot.dat"
+if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 
 if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
@@ -850,7 +852,7 @@ if %stock%==0 (
 	if exist "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 )
 
-del "%sd%:\sept\payload_*.bin"
+if exist "%sd%:\sept\payload_*.bin" (del "%sd%:\sept\payload_*.bin")
 
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
