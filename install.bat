@@ -60,7 +60,7 @@ ECHO            ======          Select CFW           =====
 ECHO ------------------------------------------------------------------
 ECHO.
 ECHO           1. Atmosphere
-ECHO           2. Atmosphere для SX Core / Light
+ECHO           2. Atmosphere for SX Core / Light
 ECHO.
 ECHO ==================================================================
 ECHO                                                       O.  Options
