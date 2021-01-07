@@ -504,7 +504,6 @@ if exist "%sd%:\bootloader\ini\ReiNX.ini" (del "%sd%:\bootloader\ini\ReiNX.ini")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\bootloader\payloads\ReiNX.bin" (del "%sd%:\bootloader\payloads\ReiNX.bin")
 if exist "%sd%:\ReiNX\titles\010000000000100D" (RD /s /q "%sd%:\ReiNX\titles\010000000000100D")
-if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 if exist "%sd%:\rajnx_ipl.ini" (del "%sd%:\rajnx_ipl.ini")
 if exist "%sd%:\bootlogo.bmp" (del "%sd%:\bootlogo.bmp")
 
