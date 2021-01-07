@@ -5,7 +5,7 @@ COLOR 0F
 
 set wd=%temp%\sdfiles
 set clear=0
-set cfw=ATMOS
+set cfw=ATMO
 set cfwname=Atmosphere
 set lang=0
 set theme_flag=0
@@ -17,7 +17,6 @@ set dbi=0
 set dbi_flag=0
 set tesla=0
 set tesla_flag=1
-set neutos=0
 
 :disclaimer
 cls
@@ -59,14 +58,8 @@ ECHO ------------------------------------------------------------------
 ECHO            ======          Select CFW           =====
 ECHO ------------------------------------------------------------------
 ECHO.
-ECHO    Choose SXOS only if you bought it or will buy
-ECHO.
-ECHO    Выбирете SXOS только, если вы купили её или планируете купить
-ECHO.
 ECHO           1. Atmosphere
-ECHO           2. SXOS
-ECHO           3. Atmo + SX
-ECHO           4. SX Core or SX Lite - modchips from TX
+ECHO           2. Atmosphere для SX Core / Light
 ECHO.
 ECHO ==================================================================
 ECHO                                                       O.  Options
@@ -77,22 +70,22 @@ set /p st=:
 
 
 for %%A in ("1") do if "%st%"==%%A (
-	set cfw=ATMOS
+	set cfw=ATMO
 	set cfwname=Atmosphere
 )
 for %%A in ("2") do if "%st%"==%%A (
-	set cfw=SXOS
-	set cfwname=SX OS     
+	set cfw=SXCL
+	set cfwname=Atmosphere for Modchips 
 	goto newcard
 )
-for %%A in ("3") do if "%st%"==%%A (
-	set cfw=BOTH
-	set cfwname=both OSes 
-)
-for %%A in ("4") do if "%st%"==%%A (
-	set cfw=sxchip
-	set cfwname=SX Chip 
-)
+rem for %%A in ("3") do if "%st%"==%%A (
+rem 	set cfw=BOTH
+rem 	set cfwname=both OSes 
+rem )
+rem for %%A in ("4") do if "%st%"==%%A (
+rem 	set cfw=sxchip
+rem 	set cfwname=SX Chip 
+rem )
 for %%A in ("O" "o" "Щ" "щ" "J" "j" "о" "О" "0") do if "%st%"==%%A (GOTO OPTIONS)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
@@ -127,12 +120,8 @@ if %lang%==1 (
 	ECHO            ======          Выберите CFW           =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO    Выбирете SXOS только, если вы купили её или собираетесь
-	ECHO.
 	ECHO           1. Atmosphere
-	ECHO           2. SXOS
-	ECHO           3. Atmo + SX
-	ECHO           4. SX Core или SX Lite - чип от TX
+	ECHO           2. Atmosphere для SX Core / Light
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -144,12 +133,8 @@ if %lang%==1 (
 	ECHO             ======          Select CFW           =====
 	ECHO --------------------------------------------------------------------
 	ECHO.
-	ECHO    Choose SXOS only if you bought it or will buy
-	ECHO.
 	ECHO           1. Atmosphere
-	ECHO           2. SXOS
-	ECHO           3. Atmo + SX
-	ECHO           4. SX Core or SX Lite - modchips from TX
+	ECHO           2. Atmosphere for SX Core / Light
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                         Q.  Quit
@@ -159,25 +144,27 @@ set st=
 set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (
-	set cfw=ATMOS
+	set cfw=ATMO
 	set cfwname=Atmosphere
 )
 for %%A in ("2") do if "%st%"==%%A (
-	set cfw=SXOS
-	set cfwname=SX OS     
+	set cfw=SXCL
+	set cfwname=Atmosphere for Modchips
 	goto caffeine
-)
-for %%A in ("3") do if "%st%"==%%A (
-	set cfw=BOTH
-	set cfwname=both OSes 
-)
-for %%A in ("4") do if "%st%"==%%A (
-	set cfw=sxchip
-	set cfwname=SX Chip 
-	goto syscon
+rem )
+rem for %%A in ("3") do if "%st%"==%%A (
+rem 	set cfw=BOTH
+rem 	set cfwname=both OSes 
+rem )
+rem for %%A in ("4") do if "%st%"==%%A (
+rem 	set cfw=sxchip
+rem 	set cfwname=SX Chip 
+rem 	goto syscon
 )
 
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
+if %cfw%==SXCL goto newcard
 
 cls
 ECHO --------------------------------------------------------------------
@@ -223,6 +210,7 @@ if %lang%==1 (
 	ECHO.
 	ECHO         1.  Fusee-Gelee
 	ECHO         2.  Caffeine
+	ECHO         3.  Чипованная консоль
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                          Q.  Выход
@@ -233,6 +221,7 @@ if %lang%==1 (
 	ECHO.
 	ECHO         1.  Fusee-Gelee
 	ECHO         2.  Caffeine
+	ECHO         3.  Modchip
 	ECHO.
 	ECHO ====================================================================
 	ECHO                                                          Q.  Quit
@@ -242,6 +231,7 @@ set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
+for %%A in ("3") do if "%st%"==%%A (set stock=1)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :syscon
@@ -660,10 +650,9 @@ if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
 if exist "%sd%:\bootloader\ini\!sxos.ini" (del "%sd%:\bootloader\ini\!sxos.ini")
 if exist "%sd%:\bootloader\ini\RajNX.ini" (del "%sd%:\bootloader\ini\RajNX.ini")
 if exist "%sd%:\bootloader\ini\!RajNX.ini" (del "%sd%:\bootloader\ini\!RajNX.ini")
-if exist "%sd%:\bootloader\ini\For 1.0.0 users only!.ini" (del "%sd%:\bootloader\ini\For 1.0.0 users only!.ini")
 if exist "%sd%:\license-request.dat" (del "%sd%:\license-request.dat")
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
-if exist "%sd%:\hekate.bin" (del "%sd%:\hekate.bin")
+if exist "%sd%:\hekate*.bin" (del "%sd%:\hekate*.bin")
 if exist "%sd%:\hbmenu.nro" (del "%sd%:\hbmenu.nro")
 if exist "%sd%:\keys.dat" (del "%sd%:\keys.dat")
 if exist "%sd%:\BCT.ini" (del "%sd%:\BCT.ini")
@@ -675,14 +664,22 @@ if exist "%sd%:\bootloader\patches.ini" (del "%sd%:\bootloader\patches.ini")
 if exist "%sd%:\bootloader\bootlogo.bmp" (del "%sd%:\bootloader\bootlogo.bmp")
 if exist "%sd%:\bootloader\res\icon_payload.bmp" (del "%sd%:\bootloader\res\icon_payload.bmp")
 if exist "%sd%:\bootloader\res\icon_switch.bmp" (del "%sd%:\bootloader\res\icon_switch.bmp")
+if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 
 if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
 
+if stock==0 goto check_stock
+
+goto skip_check_stock
+
+:check_stock
 findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
 	set stock=1
 ) || (
 	set stock=0
 )
+
+:skip_check_stock
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
@@ -796,20 +793,30 @@ if exist "%sd%:\tinfoil" (
 	RD /s /q "%sd%:\tinfoil"
 )
 
+if exist "%sd%:\sxos\emunand" (
+	if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
+	move /Y %sd%:\sxos\emunand\* %sd%:\sxos_\emunand
+	if exist "%sd%:\sxos" (RD /s /q "%sd%:\sxos")
+	if not exist "%sd%:\sxos\" (mkdir %sd%:\sxos\emunand)
+	if exist "%sd%:\sxos_\emunand" (move /Y %sd%:\sxos_\emunand\* %sd%:\sxos\emunand)
+	if exist "%sd%:\sxos_" (RD /s /q "%sd%:\sxos_")
+) else (if exist "%sd%:\sxos" (RD /s /q "%sd%:\sxos"))
+
+
 echo                                    DONE
 echo ------------------------------------------------------------------------
 echo.
 if %lang%==1 (
 	echo ------------------------------------------------------------------------
 	echo.
-	echo                            Установка %cfwname% 
+	echo                   Установка %cfwname% 
 	echo.
 	echo ------------------------------------------------------------------------
 	echo.
 ) else (
 	echo ------------------------------------------------------------------------
 	echo.
-	echo                            Installing %cfwname% 
+	echo                   Installing %cfwname% 
 	echo.
 	echo ------------------------------------------------------------------------
 	echo.
@@ -818,15 +825,17 @@ if %lang%==1 (
 
 if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 if exist "E:\Switch\TinGen-main\index.tfl" (xcopy "E:\Switch\TinGen-main\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
+
 goto cfw_%cfw%
 
 rem ------------------------------------------------------------------------
 rem .
-rem                                    Atmosphere
+rem                                    ATMO
 rem .
 rem  ------------------------------------------------------------------------
 
-:cfw_ATMOS
+
+:cfw_ATMO
 
 xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
@@ -844,7 +853,6 @@ if %stock%==0 (
 
 del "%sd%:\sept\payload_*.bin"
 
-
 rem if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
@@ -856,18 +864,10 @@ if exist "%sd%:\atmosphere\contents\00FF0012656180FF" (RD /s /q "%sd%:\atmospher
 
 if exist "%sd%:\switch\ChoiDujourNX" (RD /s /q "%sd%:\switch\ChoiDujourNX")
 
-if exist "%sd%:\sxos\emunand" (
-	if not exist "%sd%:\sxos_" (mkdir %sd%:\sxos_\emunand)
-	move /Y %sd%:\sxos\emunand\* %sd%:\sxos_\emunand
-	if exist "%sd%:\sxos" (RD /s /q "%sd%:\sxos")
-	if not exist "%sd%:\sxos\" (mkdir %sd%:\sxos\emunand)
-	if exist "%sd%:\sxos_\emunand" (move /Y %sd%:\sxos_\emunand\* %sd%:\sxos\emunand)
-	if exist "%sd%:\sxos_" (RD /s /q "%sd%:\sxos_")
-) else (if exist "%sd%:\sxos" (RD /s /q "%sd%:\sxos"))
-
 if exist "%sd%:\switch\sx" (RD /s /q "%sd%:\switch\sx")
 if exist "%sd%:\switch\themes" (RD /s /q "%sd%:\switch\themes")
 if exist "%sd%:\switch\Lockpick" (RD /s /q "%sd%:\switch\Lockpick")
+if exist "%sd%:\switch\Incognito" (RD /s /q "%sd%:\switch\Incognito")
 if exist "%sd%:\titles" (move /Y "%wd%\titles\*" "%sd%:\atmosphere\contents")
 if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
@@ -875,94 +875,22 @@ goto caffeine
 
 rem ------------------------------------------------------------------------
 rem .
-rem                                    SX
+rem                                   SXCL
 rem .
 rem  ------------------------------------------------------------------------
 
-:cfw_SXOS
+:cfw_SXCL
 
 xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
-if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
-
-if %stock%==0 (
-	if exist "%sd%:\bootloader\hekate_ipl_sx.ini" (copy "%sd%:\bootloader\hekate_ipl_sx.ini" "%sd%:\bootloader\hekate_ipl.ini")
-) else (
-	if exist "%sd%:\bootloader\hekate_ipl_sx_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_sx_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
-)
-
-if %syscon%==0 (
-	RD /s /q "%sd%:\sxos\titles\690000000000000D\"
-	RD /s /q "%sd%:\config\sys-con\"
-	)
 
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
+if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")
 
-if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
-if exist "%sd%:\atmosphere\kip_patches\fs_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\fs_patches")
-if exist "%sd%:\atmosphere\kip_patches\loader_patches" (RD /s /q "%sd%:\atmosphere\kip_patches\loader_patches")
-if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
-
-goto caffeine
-
-rem ------------------------------------------------------------------------
-rem .
-rem                                    SX Chip
-rem .
-rem  ------------------------------------------------------------------------
-
-:cfw_sxchip
-
-xcopy "%wd%\base\switch\*" "%sd%:\switch\" /H /Y /C /R /S /E /I
-xcopy "%wd%\base\games\*" "%sd%:\games\" /H /Y /C /R /S /E /I
-xcopy "%wd%\base\config\*" "%sd%:\config\" /H /Y /C /R /S /E /I
-xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
-
-echo "syscon state " %syscon%
-
-if %syscon%==0 (
-	RD /s /q "%sd%:\sxos\titles\690000000000000D\"
-	RD /s /q "%sd%:\config\sys-con\"
-	)
-
-if exist "%sd%:\bootloader" (RD /s /q "%sd%:\bootloader")
-if exist "%sd%:\atmosphere" (RD /s /q "%sd%:\atmosphere")
-if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
-
-if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
-if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
-
-if exist "%sd%:\payload*.bin" (del "%sd%:\payload*.bin")
-if exist "%sd%:\keys.txt" (del "%sd%:\keys.txt")
-if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
-
-goto caffeine
-
-rem ------------------------------------------------------------------------
-rem .
-rem                                    BOTH
-rem .
-rem  ------------------------------------------------------------------------
-
-:cfw_BOTH
-
-xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
-xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
-
-xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
-xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
-if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
-
-if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
-
-if %stock%==0 (
-	if exist "%sd%:\bootloader\hekate_ipl_both.ini" (copy "%sd%:\bootloader\hekate_ipl_both.ini" "%sd%:\bootloader\hekate_ipl.ini")
-) else (
-	if exist "%sd%:\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_both_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
-)
+if exist "%sd%:\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_both_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 
 rem ------------------------------------------------------------------------
 rem .
