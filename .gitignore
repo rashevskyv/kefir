@@ -6,5 +6,6 @@ _kefir.7z
 kefir.png
 .gitignore
 release
+release_test
 kefir_installer
 install1.bat
