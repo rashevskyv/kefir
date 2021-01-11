@@ -645,11 +645,8 @@ if exist "%sd%:\fusee-secondary.bin" (del "%sd%:\fusee-secondary.bin")
 if exist "%sd%:\atmosphere\fusee-secondary.bin" (del "%sd%:\atmosphere\fusee-secondary.bin")
 if exist "%sd%:\bootloader\ini\Atmosphere.ini" (del "%sd%:\bootloader\ini\Atmosphere.ini")
 if exist "%sd%:\bootloader\ini\atmosphere.ini" (del "%sd%:\bootloader\ini\atmosphere.ini")
-if exist "%sd%:\bootloader\ini\!atmosphere.ini" (del "%sd%:\bootloader\ini\!atmosphere.ini")
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
-if exist "%sd%:\bootloader\ini\!sxos.ini" (del "%sd%:\bootloader\ini\!sxos.ini")
 if exist "%sd%:\bootloader\ini\RajNX.ini" (del "%sd%:\bootloader\ini\RajNX.ini")
-if exist "%sd%:\bootloader\ini\!RajNX.ini" (del "%sd%:\bootloader\ini\!RajNX.ini")
 if exist "%sd%:\license-request.dat" (del "%sd%:\license-request.dat")
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\hekate*.bin" (del "%sd%:\hekate*.bin")
@@ -920,13 +917,13 @@ del "%sd%:\bootloader\hekate_ipl_*.ini"
 del "%sd%:\sept\payload_*.bin"
 
 if %dbi_flag%==0 (
-	del "%sd%:\switch\dbi_old.nro"
-	del "%sd%:\switch\.dbi_old.nro.star"
-	del "%sd%:\keys.txt"
+	if exist "%sd%:\switch\dbi_old.nro" del "%sd%:\switch\dbi_old.nro"
+	if exist "%sd%:\switch\.dbi_old.nro.star" del "%sd%:\switch\.dbi_old.nro.star"
+	if exist "%sd%:\keys.txt" del "%sd%:\keys.txt"
 	)
 if %dbi_flag%==1 (
-	del "%sd%:\switch\dbi.nro"
-	del "%sd%:\switch\.dbi.nro.star"
+	if exist "%sd%:\switch\dbi.nro" del "%sd%:\switch\dbi.nro"
+	if exist "%sd%:\switch\.dbi.nro.star" del "%sd%:\switch\.dbi.nro.star"
 	)
 
 echo                                    DONE
