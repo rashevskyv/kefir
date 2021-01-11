@@ -990,6 +990,11 @@ if exist "%sd%:\switch\fakenews-injector" (
 	attrib -A /S /D %sd%:\switch\fakenews-injector\*
 	attrib -A %sd%:\switch\fakenews-injector)
 
+cd %sd:\%
+
+if exist .DS_STORE del /s /q /f /a .DS_STORE
+if exist ._.* del /s /q /f /a ._.*
+
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor\11ECA7E0 /v MaximumTransferLength /t REG_DWORD /d 00100000 /f
 if exist "%sd%:\TinGen" (RD /s /q "%sd%:\TinGen")
 
