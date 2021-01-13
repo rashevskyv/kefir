@@ -17,7 +17,6 @@ set dbi=0
 set dbi_flag=0
 set tesla=0
 set tesla_flag=1
-set stock=0
 
 :disclaimer
 cls
@@ -232,7 +231,6 @@ set /p st=:
 
 for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
 for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
-for %%A in ("3") do if "%st%"==%%A (set stock=1)
 for %%A in ("Q" "q" "‰" "©") do if "%st%"==%%A (GOTO END)
 
 :syscon
@@ -523,9 +521,6 @@ if %clear%==2 (
 			echo %%A
 			move /Y %%A %sd%:\_backup
 			)
-
-	set stock=0
-
 	)
 
 	 if exist "%sd%:\_backup\sxos\emunand" (mkdir %sd%:\sxos\emunand)
@@ -665,19 +660,6 @@ if exist "%sd%:\bootloader\res\icon_switch.bmp" (del "%sd%:\bootloader\res\icon_
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 
 if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
-
-if stock==0 goto check_stock
-
-goto skip_check_stock
-
-:check_stock
-findstr "stock=1" %sd%:\bootloader\hekate_ipl.ini && (
-	set stock=1
-) || (
-	set stock=0
-)
-
-:skip_check_stock
 
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
@@ -842,12 +824,6 @@ xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 
-if %stock%==0 (
-	if exist "%sd%:\bootloader\hekate_ipl_atmo.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo.ini" "%sd%:\bootloader\hekate_ipl.ini")
-) else (
-	if exist "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_atmo_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
-)
-
 if exist "%sd%:\sept\payload_*.bin" (del "%sd%:\sept\payload_*.bin")
 
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
@@ -885,8 +861,6 @@ xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
 
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")
-
-if exist "%sd%:\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%:\bootloader\hekate_ipl_both_stock.ini" "%sd%:\bootloader\hekate_ipl.ini")
 
 rem ------------------------------------------------------------------------
 rem .

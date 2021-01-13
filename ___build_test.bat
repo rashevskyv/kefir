@@ -54,7 +54,6 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
 if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
-copy "%sd%\bootloader\hekate_ipl_atmo.ini" "%sd%\bootloader\hekate_ipl.ini"
 del "%sd%\sept\payload_*.bin"
 
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
@@ -93,9 +92,10 @@ xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")
 
-if exist "%sd%\bootloader\hekate_ipl_both_stock.ini" (copy "%sd%\bootloader\hekate_ipl_both_stock.ini" "%sd%\bootloader\hekate_ipl.ini")
-
 del "%sd%\bootloader\hekate_ipl_*.ini"
+if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
+if exist "%sd%\switch\fakenews-injector.nro" (del "%sd%\switch\fakenews-injector.nro")
+if exist "%sd%\switch\gag-order.nro" (del "%sd%\switch\gag-order.nro")
 
 
 if exist "%sd%\atmosphere" (
