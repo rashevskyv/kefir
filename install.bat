@@ -151,15 +151,6 @@ for %%A in ("2") do if "%st%"==%%A (
 	set cfw=SXCL
 	set cfwname=Atmosphere for Modchips
 	goto caffeine
-rem )
-rem for %%A in ("3") do if "%st%"==%%A (
-rem 	set cfw=BOTH
-rem 	set cfwname=both OSes 
-rem )
-rem for %%A in ("4") do if "%st%"==%%A (
-rem 	set cfw=sxchip
-rem 	set cfwname=SX Chip 
-rem 	goto syscon
 )
 
 for %%A in ("Q" "q" "‰" "©") do if "%st%"==%%A (GOTO END)
@@ -641,6 +632,7 @@ if exist "%sd%:\atmosphere\fusee-secondary.bin" (del "%sd%:\atmosphere\fusee-sec
 if exist "%sd%:\bootloader\ini\Atmosphere.ini" (del "%sd%:\bootloader\ini\Atmosphere.ini")
 if exist "%sd%:\bootloader\ini\atmosphere.ini" (del "%sd%:\bootloader\ini\atmosphere.ini")
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
+if exist "%sd%:\bootloader\ini\hekate_keys.ini" (del "%sd%:\bootloader\ini\hekate_keys.ini")
 if exist "%sd%:\bootloader\ini\RajNX.ini" (del "%sd%:\bootloader\ini\RajNX.ini")
 if exist "%sd%:\license-request.dat" (del "%sd%:\license-request.dat")
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
@@ -827,6 +819,8 @@ if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\sept\payload_*.bin" (del "%sd%:\sept\payload_*.bin")
 
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
+if exist "%sd%:\bootloader\hekate_ipl_mariko.ini" (del "%sd%:\bootloader\hekate_ipl_mariko.ini")
+
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
@@ -858,6 +852,8 @@ xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
+
+if exist "%sd%:\bootloader\hekate_ipl_mariko.ini" (copy "%sd%:\bootloader\hekate_ipl_mariko.ini" "%sd%:\bootloader\hekate_ipl.ini")
 
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")

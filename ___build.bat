@@ -62,6 +62,8 @@ xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
 del "%sd%\sept\payload_*.bin"
 
+if exist "%sd%:\bootloader\hekate_ipl_mariko.ini" (del "%sd%:\bootloader\hekate_ipl_mariko.ini")
+
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
 if exist "%sd%\switch\sx.nro" (del "%sd%\switch\sx.nro")
 if exist "%sd%\bootloader\ini\sxos.ini" (del "%sd%\bootloader\ini\sxos.ini")
@@ -94,6 +96,8 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
+
+if exist "%sd%:\bootloader\hekate_ipl_mariko.ini" (copy "%sd%:\bootloader\hekate_ipl_mariko.ini" "%sd%:\bootloader\hekate_ipl.ini")
 
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")
