@@ -33,6 +33,10 @@ xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%wd%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
+set /p ver=<version
+set /a ver = %ver% + 1
+echo %ver% > version
+
 pause
 
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")
