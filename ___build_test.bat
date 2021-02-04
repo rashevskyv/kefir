@@ -18,11 +18,17 @@ set site_files=%site%\files
 set site_img=%site%\images
 
 set atmo_build="F:\git\dev\atmosphere-out.zip"
+set kefirupdater="F:\git\dev\Kefir-updater\Kefir-updater.nro"
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%wd% -y
 
+if exist "%reldir%" (del /F /S /Q "%reldir%\*")
+xcopy "%wd%\changelog" "%reldir%\" /H /Y /C /R
+xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
+
 xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
+xcopy "%kefirupdater%" "%wd%\base\switch\kefirupdater\" /H /Y /C /R
 xcopy "%wd%\version" "%wd%\base\switch\kefirupdater\" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
@@ -33,9 +39,6 @@ xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%wd%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
-if exist "%reldir%" (del /F /S /Q "%reldir%\*")
-xcopy "%wd%\changelog" "%reldir%\" /H /Y /C /R
-xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
 
 
 echo ------------------------------------------------------------------------
@@ -53,7 +56,7 @@ xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
 
-if exist "%sd%\boot.dat" (del "%sd%\boot.dat")
+if exist "%sd%\boot.*" (del "%sd%\boot.dat")
 del "%sd%\sept\payload_*.bin"
 
 if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
@@ -152,10 +155,10 @@ if exist "%sd%\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat  %reldir%\_kefir.7z %wd%\*
+"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat  %reldir%\_kefir.7z %wd%\*
 
 rem atmo
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -ssw %reldir%\atmo.zip %bd%\atmo\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -xr!desktop.ini -ssw %reldir%\atmo.zip %bd%\atmo\*
 
 rem sxchip
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!FreshHay -xr!exosphere.ini %reldir%\modchip.zip %bd%\chip\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!desktop.ini -xr!FreshHay -xr!exosphere.ini %reldir%\modchip.zip %bd%\chip\*

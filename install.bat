@@ -17,6 +17,7 @@ set dbi=0
 set dbi_flag=0
 set tesla=0
 set tesla_flag=1
+set modchip=1
 
 :disclaimer
 cls
@@ -52,43 +53,6 @@ for %%A in ("F" "f" "А" "а") do if "%st%" neq %%A (GOTO disclaimer)
 cls
 
 :START
-:choose_cfw
-cls
-ECHO ------------------------------------------------------------------
-ECHO            ======          Select CFW           =====
-ECHO ------------------------------------------------------------------
-ECHO.
-ECHO           1. Atmosphere
-ECHO           2. Atmosphere for SX Core / Light
-ECHO.
-ECHO ==================================================================
-ECHO                                                       O.  Options
-ECHO                                                       Q.  Quit
-
-set st=
-set /p st=:
-
-
-for %%A in ("1") do if "%st%"==%%A (
-	set cfw=ATMO
-	set cfwname=Atmosphere
-)
-for %%A in ("2") do if "%st%"==%%A (
-	set cfw=SXCL
-	set cfwname=Atmosphere for Modchips 
-	goto newcard
-)
-rem for %%A in ("3") do if "%st%"==%%A (
-rem 	set cfw=BOTH
-rem 	set cfwname=both OSes 
-rem )
-rem for %%A in ("4") do if "%st%"==%%A (
-rem 	set cfw=sxchip
-rem 	set cfwname=SX Chip 
-rem )
-for %%A in ("O" "o" "Щ" "щ" "J" "j" "о" "О" "0") do if "%st%"==%%A (GOTO OPTIONS)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
 goto newcard
 
 :OPTIONS
@@ -110,52 +74,6 @@ ECHO ==================================================================
 ECHO                                                         Q.  Quit
 
 set /p lang=:
-
-cls
-if %lang%==1 (
-	ECHO --------------------------------------------------------------------
-	ECHO                ======          Options           =====
-	ECHO --------------------------------------------------------------------
-	ECHO --------------------------------------------------------------------
-	ECHO            ======          Выберите CFW           =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO           1. Atmosphere
-	ECHO           2. Atmosphere для SX Core / Light
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                         Q.  Quit
-) else (
-	ECHO --------------------------------------------------------------------
-	ECHO              ======          Options           =====
-	ECHO --------------------------------------------------------------------
-	ECHO --------------------------------------------------------------------
-	ECHO             ======          Select CFW           =====
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO           1. Atmosphere
-	ECHO           2. Atmosphere for SX Core / Light
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                         Q.  Quit
-)
-
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (
-	set cfw=ATMO
-	set cfwname=Atmosphere
-)
-for %%A in ("2") do if "%st%"==%%A (
-	set cfw=SXCL
-	set cfwname=Atmosphere for Modchips
-	goto caffeine
-)
-
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
-if %cfw%==SXCL goto newcard
 
 cls
 ECHO --------------------------------------------------------------------
@@ -220,8 +138,14 @@ if %lang%==1 (
 set st=
 set /p st=:
 
-for %%A in ("1") do if "%st%"==%%A (set caffeine=0)
-for %%A in ("2") do if "%st%"==%%A (set caffeine=1)
+for %%A in ("1") do if "%st%"==%%A (
+	set caffeine=0
+	set modchip=0
+	)
+for %%A in ("2") do if "%st%"==%%A (
+	set caffeine=1
+	set modchip=0
+	)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :syscon
@@ -672,6 +596,7 @@ if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\switch\n1dus.nro" (del "%sd%:\switch\n1dus.nro")
 if exist "%sd%:\switch\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX.nro")
 if exist "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro")
+if exist "%sd%:\switch\kefirupdater\kefirupdater.nro" (del "%sd%:\switch\kefirupdater\kefirupdater.nro")
 if exist "%sd%:\switch\daybreak.nro" (del "%sd%:\switch\daybreak.nro")
 if exist "%sd%:\switch\daybreak\daybreak.nro" (del "%sd%:\switch\daybreak\daybreak.nro")
 if exist "%sd%:\switch\LinkUser" (RD /s /q "%sd%:\switch\LinkUser\")
@@ -706,6 +631,8 @@ if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injec
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
 if exist "%sd%:\switch\.overlays\emuiibo.ovl" (del "%sd%:\switch\.overlays\emuiibo.ovl")
+
+if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
 
 :install_pack
 
@@ -814,8 +741,6 @@ xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
 
-if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
-
 if exist "%sd%:\sept\payload_*.bin" (del "%sd%:\sept\payload_*.bin")
 
 if exist "%sd%:\bootloader\payloads\sxos.bin" (del "%sd%:\bootloader\payloads\sxos.bin")
@@ -837,26 +762,10 @@ if exist "%sd%:\switch\Incognito" (RD /s /q "%sd%:\switch\Incognito")
 if exist "%sd%:\titles" (move /Y "%wd%\titles\*" "%sd%:\atmosphere\contents")
 if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
+if %modchip%==0 (del "%sd%:\boot.dat")
+if %modchip%==0 (del "%sd%:\boot.ini")
+
 goto caffeine
-
-rem ------------------------------------------------------------------------
-rem .
-rem                                   SXCL
-rem .
-rem  ------------------------------------------------------------------------
-
-:cfw_SXCL
-
-xcopy "%wd%\base\*" "%sd%:\" /H /Y /C /R /S /E
-xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
-
-xcopy "%wd%\atmo\*" "%sd%:\" /H /Y /C /R /S /E
-xcopy "%wd%\sxos\*" "%sd%:\" /H /Y /C /R /S /E
-
-if exist "%sd%:\bootloader\hekate_ipl_mariko.ini" (copy "%sd%:\bootloader\hekate_ipl_mariko.ini" "%sd%:\bootloader\hekate_ipl.ini")
-
-if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
-if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")
 
 rem ------------------------------------------------------------------------
 rem .
