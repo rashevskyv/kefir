@@ -37,7 +37,10 @@ xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%wd%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
-
+ECHO.
+ECHO.
+ECHO ==============================================================
+ECHO.
 ECHO.
 ECHO         1.  Increase version
 ECHO         2.  Skip
@@ -45,7 +48,7 @@ ECHO.
 ECHO.
 ECHO ==============================================================
 ECHO                                             Q.  Quit
-
+ECHO.
 
 set st=
 set /p st=:
