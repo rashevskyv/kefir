@@ -535,6 +535,9 @@ if exist "%sd%:\switch\n1dus.nro" (del "%sd%:\switch\n1dus.nro")
 if exist "%sd%:\switch\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX.nro")
 if exist "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX\ChoiDujourNX.nro")
 if exist "%sd%:\switch\kefirupdater\kefirupdater.nro" (del "%sd%:\switch\kefirupdater\kefirupdater.nro")
+if exist "%sd%:\switch\kefirupdater\kefir-updater.nro" (del "%sd%:\switch\kefirupdater\kefir-updater.nro")
+if exist "%sd%:\switch\kefirupdater.nro" (del "%sd%:\switch\kefirupdater\kefirupdater.nro")
+if exist "%sd%:\switch\kefir-updater.nro" (del "%sd%:\switch\kefirupdater\kefir-updater.nro")
 if exist "%sd%:\switch\daybreak.nro" (del "%sd%:\switch\daybreak.nro")
 if exist "%sd%:\switch\daybreak\daybreak.nro" (del "%sd%:\switch\daybreak\daybreak.nro")
 if exist "%sd%:\switch\LinkUser" (RD /s /q "%sd%:\switch\LinkUser\")
@@ -589,7 +592,7 @@ if %lang%==1 (
 
 if exist "%temp%\sdfiles\" (RD /s /q "%temp%\sdfiles\")
 if not exist "%temp%\sdfiles\" (mkdir %temp%\sdfiles\)
-xcopy "%~dp0" "%temp%\sdfiles\" /H /Y /C /R /S /E >nul 2>&1
+xcopy "%~dp0*" "%temp%\sdfiles\" /H /Y /C /R /S /E >nul 2>&1
 
 echo                                   DONE                                  
 echo ------------------------------------------------------------------------
