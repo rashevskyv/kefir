@@ -4,15 +4,16 @@ chcp 866 >nul 2>&1
 COLOR 0F
 
 set reldir=E:\Switch\_kefir\release_test
-set wd=E:\Switch\_kefir
-set bd=%wd%\build
+set kefir_dir=E:\Switch\_kefir\kefir
+set working_dir=E:\Switch\_kefir
+set build_dir=%working_dir%\build
 set gd=S:\Мой диск\Shared\release_test
-set sd=%bd%\atmo
+set sd=%build_dir%\atmo
 set img=F:\VK\kefir
 set site=F:\git\site\switch
 set ps=F:\git\scripts\build_kefir.ps1
 set /p ver=<version
-if exist "%bd%" (RD /s /q "%bd%")
+if exist "%build_dir%" (RD /s /q "%build_dir%")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
@@ -20,24 +21,24 @@ set site_img=%site%\images
 set atmo_build="F:\git\dev\atmosphere-out.zip"
 set kefirupdater="F:\git\dev\Kefir-updater\Kefir-updater.nro"
 
-"C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%wd% -y
+"C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
 
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")
-xcopy "%wd%\changelog" "%reldir%\" /H /Y /C /R
-xcopy "%wd%\version" "%reldir%\" /H /Y /C /R
+xcopy "%working_dir%\changelog" "%reldir%\" /H /Y /C /R
+xcopy "%working_dir%\version" "%reldir%\" /H /Y /C /R
 
-xcopy "%wd%\version" "%site_inc%\" /H /Y /C /R
-xcopy "%wd%\version" "%site_files%\" /H /Y /C /R
-xcopy "%kefirupdater%" "%wd%\base\switch\kefirupdater\" /H /Y /C /R
-xcopy "%wd%\version" "%wd%\base\switch\kefirupdater\" /H /Y /C /R
-xcopy "%wd%\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%wd%\changelog" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
+xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
+xcopy "%working_dir%\version" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
+xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
-xcopy "%wd%\payload.bin" "%wd%\atmo\atmosphere\reboot_payload.bin" /H /Y /C /R
-xcopy "%wd%\payload.bin" "%wd%\base\bootloader\update.bin" /H /Y /C /R
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
-xcopy "%img%\bootlogo (1).png" "%wd%\kefir.png" /H /Y /C /R
-xcopy "%img%\bootlogo.bmp" "%wd%\base\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
+xcopy "%img%\bootlogo (1).png" "%working_dir%\kefir.png" /H /Y /C /R
+xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
 
 
@@ -48,25 +49,16 @@ echo.
 echo ------------------------------------------------------------------------
 echo.
 
-mkdir %bd%
+mkdir %build_dir%
 mkdir %sd%
 
-xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
-xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
+xcopy "%kefir_dir%\*" "%sd%\" /H /Y /C /R /S /E
+xcopy "%kefir_dir%\payload.bin" "%sd%\" /H /Y /C /R
 
-xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
-
-if exist "%sd%\boot.*" (del "%sd%\boot.dat")
 del "%sd%\sept\payload_*.bin"
 
-if exist "%sd%\bootloader\payloads\sxos.bin" (del "%sd%\bootloader\payloads\sxos.bin")
-if exist "%sd%\switch\sx.nro" (del "%sd%\switch\sx.nro")
-if exist "%sd%\bootloader\ini\sxos.ini" (del "%sd%\bootloader\ini\sxos.ini")
-del "%sd%\bootloader\hekate_ipl_*.ini"
-if exist "%sd%\sxos\titles" (xcopy %sd%\sxos\titles\* %sd%\atmosphere\titles\  /Y /S /E /H /R /D)
-if exist "%sd%\sxos\games" (move /Y %sd%\sxos\games\* %sd%\games)
-if exist "%sd%\sxos" (RD /s /q "%sd%\sxos")
-if exist "%sd%\switch\sx" (RD /s /q "%sd%\switch\sx")
+if exist "%sd%\bootloader\hekate_ipl_*.ini" (del "%sd%\bootloader\hekate_ipl_*.ini")
+
 if exist "%sd%\switch\themes" (RD /s /q "%sd%\switch\themes")
 if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
 if exist "%sd%\switch\Incognito" (RD /s /q "%sd%\switch\Incognito")
@@ -77,29 +69,10 @@ if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
 echo ------------------------------------------------------------------------
 echo.
-echo                                   SX Chip
+echo                                   Fix Atributes
 echo.
 echo ------------------------------------------------------------------------
 echo.
-
-set sd=%bd%\chip
-
-mkdir %sd%
-
-xcopy "%wd%\base\*" "%sd%\" /H /Y /C /R /S /E
-xcopy "%wd%\payload.bin" "%sd%\" /H /Y /C /R
-
-xcopy "%wd%\atmo\*" "%sd%\" /H /Y /C /R /S /E
-xcopy "%wd%\sxos\*" "%sd%\" /H /Y /C /R /S /E
-
-if exist "%sd%\switch\Lockpick" (RD /s /q "%sd%\switch\Lockpick")
-if exist "%sd%\exosphere.ini" (del "%sd%\exosphere.ini")
-
-del "%sd%\bootloader\hekate_ipl_*.ini"
-if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
-if exist "%sd%\switch\fakenews-injector.nro" (del "%sd%\switch\fakenews-injector.nro")
-if exist "%sd%\switch\gag-order.nro" (del "%sd%\switch\gag-order.nro")
-
 
 if exist "%sd%\atmosphere" (
 	attrib -A /S /D %sd%\atmosphere\*
@@ -147,18 +120,12 @@ if exist "%sd%\sxos" (
 if exist "%sd%\switch\fakenews-injector" (
 	attrib -A /S /D %sd%\switch\fakenews-injector\*
 	attrib -A %sd%\switch\fakenews-injector)    
-if exist "%bd%" (
-	attrib -A /S /D %bd%\*
-	attrib -A %bd%)
+if exist "%build_dir%" (
+	attrib -A /S /D %build_dir%\*
+	attrib -A %build_dir%)
 if exist "%sd%\switch\mercury" (
 	attrib +A %sd%\switch\mercury)
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat  %reldir%\_kefir.7z %wd%\*
-
-rem atmo
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -xr!kefir_installer -xr!desktop.ini -ssw %reldir%\atmo.zip %bd%\atmo\*
-
-rem sxchip
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!desktop.ini -xr!FreshHay -xr!exosphere.ini %reldir%\modchip.zip %bd%\chip\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat %reldir%\kefir.zip %kefir_dir%\*
