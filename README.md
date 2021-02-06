@@ -34,10 +34,10 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 ## Kefir installation instructions (auto, Windows only)
 
-1. Download `_kefir.7z`
-1. Unpack `_kefir.7z` anywhere on your PC
+1. Download `kefir.zip`
+1. Unpack `kefir.zip` anywhere on your PC
 1. **Insert into PC** console's memory card
-1. Run `install.bat` from the folder where you unpacked` _kefir.7z` and carefully read everything that is written on the screen
+1. Run `install.bat` from the folder where you unpacked `kefir.zip` and carefully read everything that is written on the screen
 1. Enter answers that are appropriate for your situation
     * If you are using **Caffeine** remember to select it in the **options** of installer
 1. Wait for the end of copying
@@ -59,8 +59,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 ### Removing old firmware files
 
-1. If you used custom modifications, cheats or translations, move the `contents` folder from the` SX OS` or `atmosphere` folder (the name of the folder depends on your firmware) to the root of the memory card. If not used, skip this part.
-1. Remove from the `titles` folder the folders with the following names (if any):
+1. Remove from the `atmosphere/contents` folder the folders with the following names (if any):
   * `010000000000100D`
   * `0100000000000032`
   * `0100000000000034`
@@ -71,12 +70,11 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
   * `0100000000000352`
   * `4200000000000010`
   * `010000000007E51A`
-1. Delete all folders from the root of your memory card, except the folders `titles`,` sxos`, `emuMMC` and` Nintendo`, if any.
+1. Delete all folders from the root of your memory card, except the folders `emuMMC` and` Nintendo`, if any.
 
 ### Installing Atmosphere
 
-1. Copy the contents of ** the archive `modchip.zip` from the repository of kefir to the root of the memory card.
-1. Move the `contents` folder from the root of the memory card to the` atmosphere` folder
+1. Copy the contents of ** the archive `kefir.zip` from the repository of kefir to the root of the memory card.
 1. Correct the attributes according to the instructions below
 
 ### Fix attributes
