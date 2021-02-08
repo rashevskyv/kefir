@@ -20,6 +20,7 @@ set site_img=%site%\images
 
 set atmo_build="F:\git\dev\atmosphere-out.zip"
 set kefirupdater="F:\git\dev\Kefir-updater\Kefir-updater.nro"
+set hekate="F:\git\dev\hekate\output"
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
 
@@ -33,6 +34,12 @@ xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
 xcopy "%working_dir%\version" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
+
+xcopy "%hekate%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+xcopy "%hekate%\libsys_lp0.bso" "%kefir_dir%\bootloader\sys\libsys_lp0.bso" /H /Y /C /R
+xcopy "%hekate%\libsys_minerva.bso" "%kefir_dir%\bootloader\sys\libsys_minerva.bso" /H /Y /C /R
+xcopy "%hekate%\module_sample.bso" "%kefir_dir%\bootloader\sys\module_sample.bso" /H /Y /C /R
+xcopy "%hekate%\nyx.bin" "%kefir_dir%\bootloader\sys\nyx.bin" /H /Y /C /R
 
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
