@@ -22,8 +22,30 @@ set atmo_build="F:\git\dev\atmosphere-out.zip"
 set kefirupdater="F:\git\dev\Kefir-updater\Kefir-updater.nro"
 set hekate="F:\git\dev\hekate\output"
 
+
+ECHO.
+ECHO.
+ECHO ==============================================================
+ECHO.
+ECHO.
+ECHO         1.  Update atmo
+ECHO         2.  Skip
+ECHO.
+ECHO.
+ECHO ==============================================================
+ECHO                                             Q.  Quit
+ECHO.
+
+set st=
+set /p st=:
+
+for %%A in ("2") do if "%st%"==%%A (goto noatmo)
+for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
 
+
+:noatmo
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
@@ -69,6 +91,13 @@ for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 set /p ver=<version
 set /a ver = %ver% + 1
 echo %ver% > version
+
+xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\version" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
+xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
+
 
 :start
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")

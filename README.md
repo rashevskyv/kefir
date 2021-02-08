@@ -9,7 +9,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 3. **Загрузчик [hekate](https://github.com/CTCaer/hekate/releases/latest)**. БThanks to the bootloader, you can run firmware and other payloads through a convenient menu, create and restore a NAND backup, make EmuNAND, get information about the system state, mount a memory card to a PC without pulling it out of the switch, re-partition the memory card to install other operating systems, and much other
 4. **Установленные пейлоады**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
-     * [Incognoto_RCM](https://github.com/jimzrt/Incognito_RCM) - payload for removing prodinfo information, that allow you [avoid ban more effectively](https://switch.customfw.xyz/block-update)
+     * [Incognoto_RCM](https://github.com/Scandal-UK/Incognito_RCM) - payload for removing prodinfo information, that allow you [avoid ban more effectively](https://switch.customfw.xyz/block-update)
 5. **Установленное Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
@@ -22,7 +22,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for [safe update](http://switch.customfw.xyz/update-to-latest) version of the system software of the STB
      * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) - custom theme manager
      * [switch-cheats-updater](https://github.com/HamletDuFromage/switch-cheats-updater/releases) - a program for downloading [cheats](http://switch.customfw.xyz/cheats) for installed games.
-     * [Linkhlo](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
+     * [Linkalho](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
 6. **Installed modules**. Modules are additional components that work inside Atmosphere and allow you to do various cool things, such as using xbox-compatible controllers, emulating amiibo, overclocking, and more. Unfortunately, SX OS modules do not support
      * [sys-con](https://github.com/cathery/sys-con/releases/latest) - a module that allows you to connect almost any gamepads to the console via USB
      * [Mission Control](https://github.com/ndeadly/MissionControl) - a module that allows you to connect almost any gamepads to the console via bluetooth
