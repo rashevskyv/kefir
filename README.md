@@ -9,7 +9,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 3. **Загрузчик [hekate](https://github.com/CTCaer/hekate/releases/latest)**. БThanks to the bootloader, you can run firmware and other payloads through a convenient menu, create and restore a NAND backup, make EmuNAND, get information about the system state, mount a memory card to a PC without pulling it out of the switch, re-partition the memory card to install other operating systems, and much other
 4. **Установленные пейлоады**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
-     * [Incognoto_RCM](https://github.com/jimzrt/Incognito_RCM) - payload for removing prodinfo information, that allow you [avoid ban more effectively](https://switch.customfw.xyz/block-update)
+     * [Incognoto_RCM](https://github.com/Scandal-UK/Incognito_RCM) - payload for removing prodinfo information, that allow you [avoid ban more effectively](https://switch.customfw.xyz/block-update)
 5. **Установленное Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
