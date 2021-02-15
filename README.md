@@ -22,7 +22,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for [safe update](http://switch.customfw.xyz/update-to-latest) version of the system software of the STB
      * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) - custom theme manager
      * [switch-cheats-updater](https://github.com/HamletDuFromage/switch-cheats-updater/releases) - a program for downloading [cheats](http://switch.customfw.xyz/cheats) for installed games.
-     * [Linkhlo](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
+     * [Linkalho](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
 6. **Installed modules**. Modules are additional components that work inside Atmosphere and allow you to do various cool things, such as using xbox-compatible controllers, emulating amiibo, overclocking, and more. Unfortunately, SX OS modules do not support
      * [sys-con](https://github.com/cathery/sys-con/releases/latest) - a module that allows you to connect almost any gamepads to the console via USB
      * [Mission Control](https://github.com/ndeadly/MissionControl) - a module that allows you to connect almost any gamepads to the console via bluetooth
