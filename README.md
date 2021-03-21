@@ -6,11 +6,11 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 1. **[Atmosphere](https://github.com/Atmosphere-NX/Atmosphere/releases/)**
 2. **[Sigpatches](https://github.com/ITotalJustice/patches/releases)**. Thanks to the Atmosphere sigpatch, you can run unsigned (read: *pirated*) applications and games. 
-3. **Загрузчик [hekate](https://github.com/CTCaer/hekate/releases/latest)**. БThanks to the bootloader, you can run firmware and other payloads through a convenient menu, create and restore a NAND backup, make EmuNAND, get information about the system state, mount a memory card to a PC without pulling it out of the switch, re-partition the memory card to install other operating systems, and much other
-4. **Установленные пейлоады**:
+3. **[hekate bootloader](https://github.com/CTCaer/hekate/releases/latest)**. Thanks to the bootloader, you can run firmware and other payloads through a convenient menu, create and restore a NAND backup, make EmuNAND, get information about the system state, mount a memory card to a PC without pulling it out of the switch, re-partition the memory card to install other operating systems, and much other
+4. **Installed payloads**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
      * [Incognoto_RCM](https://github.com/Scandal-UK/Incognito_RCM) - payload for removing prodinfo information, that allow you [avoid ban more effectively](https://switch.customfw.xyz/block-update)
-5. **Установленное Homebrew**
+5. **Installed Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
      * [FreshHay](https://github.com/devgru/FreshHay/releases) - program for downloading and unpacking the recommended version of the system software directly on the console
@@ -87,5 +87,5 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 ### **Important information!**
 
   * Hekate reboots directly from the firmware, through the usual reboot menu. Just hold down (VOL-) during kefir splash screen
-  * You can access your memory card without removing it from the STB via MTP (DBI -> Run MTP Responder)
+  * You can access your memory card without removing it from the HOS via MTP (DBI -> Run MTP Responder)
   * Installing and updating kefir is the same!
