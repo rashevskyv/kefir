@@ -5,6 +5,8 @@ COLOR 0F
 
 set reldir=E:\Switch\_kefir\release
 set kefir_dir=E:\Switch\_kefir\kefir
+set hekate_dir=E:\Switch\_kefir\kefir\bootloader\sys
+set hekate_build=F:\git\dev\hekate\output
 set working_dir=E:\Switch\_kefir
 set build_dir=%working_dir%\build
 set googledrive_dir=S:\Мой диск\Shared\release
@@ -21,7 +23,6 @@ set site_img=%site%\images
 
 set atmo_build="F:\git\dev\atmosphere-out.zip"
 set kefirupdater="F:\git\dev\Kefir-updater\Kefir-updater.nro"
-set hekate="F:\git\dev\hekate\output"
 
 
 ECHO.
@@ -45,7 +46,15 @@ for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
 
+
 :noatmo
+if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\libsys_lp0.bso" "%hekate_dir%\" /H /Y /C /R
+if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\libsys_minerva.bso" "%hekate_dir%\" /H /Y /C /R
+if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\module_sample.bso" "%hekate_dir%\" /H /Y /C /R
+if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\nyx.bin" "%hekate_dir%\" /H /Y /C /R
+if exist %hekate_build%\hekate_unc.bin del %hekate_dir%\hekate_unc.bin
+
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
@@ -55,12 +64,7 @@ xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
-xcopy "%hekate%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
-xcopy "%hekate%\libsys_lp0.bso" "%kefir_dir%\bootloader\sys\libsys_lp0.bso" /H /Y /C /R
-xcopy "%hekate%\libsys_minerva.bso" "%kefir_dir%\bootloader\sys\libsys_minerva.bso" /H /Y /C /R
-xcopy "%hekate%\module_sample.bso" "%kefir_dir%\bootloader\sys\module_sample.bso" /H /Y /C /R
-xcopy "%hekate%\nyx.bin" "%kefir_dir%\bootloader\sys\nyx.bin" /H /Y /C /R
 
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
