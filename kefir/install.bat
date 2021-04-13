@@ -11,8 +11,6 @@ set lang=0
 set theme_flag=0
 set theme=0
 set caffeine=0
-set syscon=0
-set syscon_flag=2
 set dbi=0
 set tesla=0
 set tesla_flag=1
@@ -145,52 +143,6 @@ for %%A in ("2") do if "%st%"==%%A (
 	set caffeine=1
 	set modchip=0
 	)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
-:syscon
-cls
-ECHO --------------------------------------------------------------------
-ECHO               ======          Options          =====              
-ECHO --------------------------------------------------------------------
-if %lang%==1 (
-	ECHO --------------------------------------------------------------------
-	ECHO               ======     Установить sys-con?     =====              
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  Да
-	ECHO         2.  Нет
-	ECHO.
-	ECHO --------------------------------------------------------------------
-	ECHO  SYS-CON - модуль для работы с проводными геймпадами. Почти любой
-	ECHO  xinput-совместимый геймпад благодаря этому модулю, становится 
-	ECHO  совместимым со Switch. Просто подключите геймпад по USB к консоли.
-	ECHO  ВНИМАНИЕ! Модуль конфликтует с 8bitdo-адаптером!
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO ====================================================================
-	ECHO                                                          Q.  Выход
-) else (
-	ECHO --------------------------------------------------------------------
-	ECHO                    =====  Install sys-con? =====                    
-	ECHO --------------------------------------------------------------------
-	ECHO.
-	ECHO         1.  Yes
-	ECHO         2.  No
-	ECHO.
-	ECHO --------------------------------------------------------------------
-	ECHO  SYS-CON - module for working with wired gamepads. Almost any
-	ECHO  xinput-compatible gamepad, thanks to this module, becomes Switch
-	ECHO  compatible. Just connect the gamepad via USB to the console.
-	ECHO  ATTENTION! The module conflicts with the 8bitdo adapter!
-	ECHO --------------------------------------------------------------------
-	ECHO ====================================================================
-	ECHO                                                          Q.  Quit
-)
-set st=
-set /p st=:
-
-for %%A in ("1") do if "%st%"==%%A (set syscon_flag=1)
-for %%A in ("2") do if "%st%"==%%A (set syscon_flag=0) 
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 :opt
@@ -329,26 +281,6 @@ COLOR 0F
 
 if not exist "%sd%:\" (goto WRONGSD)
 
-rem if %syscon_flag%==2 (
-rem    if not exist "%sd%:\atmosphere\contents\690000000000000D" (
-rem    	if exist "%sd%:\sxos\titles\690000000000000D" (set syscon=1) else (set syscon=0)
-rem 	) else (
-rem       if exist "%sd%:\atmosphere\contents\690000000000000D" (
-rem       	(set syscon=1) else (set syscon=0)
-rem    	)
-rem 	)
-rem )
-
-rem sys-con check 
-if %syscon_flag%==2 (
-	if exist "%sd%:\atmosphere\contents\690000000000000D" (set syscon=1 & goto end_syscon_check) else (goto check_sx)
-) else (set syscon=%syscon_flag% & goto end_syscon_check)
-
-:check_sx
-if exist "%sd%:\sxos\titles\690000000000000D" (set syscon=1) else (set syscon=0)
-
-:end_syscon_check
-
 if %tesla_flag%==2 (
    if exist "%sd%:\atmosphere\contents\420000000007E51A" (set tesla=1) else (set tesla=0)
 ) else (
@@ -470,6 +402,7 @@ if exist "%sd%:\atmosphere\BCT.ini" (del "%sd%:\atmosphere\BCT.ini")
 if exist "%sd%:\atmosphere\system_settings.ini" (del "%sd%:\atmosphere\system_settings.ini")
 if exist "%sd%:\atmosphere\loader.ini" (del "%sd%:\atmosphere\system_settings.ini")
 if exist "%sd%:\atmosphere\kips" (RD /s /q  "%sd%:\atmosphere\kips")
+if exist "%sd%:\atmosphere\erpt_reports" (RD /s /q  "%sd%:\atmosphere\erpt_reports")
 if exist "%sd%:\atmosphere\flags\hbl_cal_read.flag" (del "%sd%:\atmosphere\flags\hbl_cal_read.flag")
 if exist "%sd%:\atmosphere\exosphere.bin" (del "%sd%:\atmosphere\exosphere.bin")
 if exist "%sd%:\atmosphere\hbl.nsp" (del "%sd%:\atmosphere\hbl.nsp")
@@ -550,6 +483,7 @@ if exist "%sd%:\switch\nx-ntpc.nro" (del "%sd%:\switch\nx-ntpc.nro")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\.DBI.nro.star" (del "%sd%:\switch\.DBI.nro.star")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
+if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
 if exist "%sd%:\switch\nxmtp" (RD /s /q "%sd%:\switch\nxmtp\")
 if exist "%sd%:\switch\NX-Activity-Log.nro" (del "%sd%:\switch\NX-Activity-Log.nro")
@@ -714,12 +648,6 @@ if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 
 :cfw_DONE
 
-if %syscon%==0 (
-	RD /s /q "%sd%:\atmosphere\contents\690000000000000D"
-	RD /s /q "%sd%:\sxos\titles\690000000000000D"
-	RD /s /q "%sd%:\config\sys-con"
-	)
-
 if %tesla%==0 (
 	if exist "%sd%:\atmosphere\contents\420000000007E51A" (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
 	if exist "%sd%:\atmosphere\contents\690000000000000D" (RD /s /q "%sd%:\atmosphere\contents\420000000007E51A")
@@ -801,6 +729,12 @@ if exist ._.* del /s /q /f /a ._.*
 
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor\11ECA7E0 /v MaximumTransferLength /t REG_DWORD /d 00100000 /f
 if exist "%sd%:\TinGen" (RD /s /q "%sd%:\TinGen")
+
+if exist "%sd%:\switch\dbi\dbi.config.bak" (
+	del "%sd%:\switch\dbi\dbi.config"
+	copy "%sd%:\switch\dbi\dbi.config.bak" "%sd%:\switch\dbi\dbi.config"
+	del "%sd%:\switch\dbi\dbi.config.bak"
+	)
 
 echo                                   DONE                                  
 echo ------------------------------------------------------------------------

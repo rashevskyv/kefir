@@ -4,7 +4,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 ## What does kefir consist of
 
-1. **[Atmosphere](https://github.com/Atmosphere-NX/Atmosphere/releases/)**
+1. **[Kefirosphere](https://github.com/rashevskyv/Kefirosphere)** based on [Atmosphere](https://github.com/Atmosphere-NX/Atmosphere)
 2. **[Sigpatches](https://github.com/ITotalJustice/patches/releases)**. Thanks to the Atmosphere sigpatch, you can run unsigned (read: *pirated*) applications and games. 
 3. **[hekate bootloader](https://github.com/CTCaer/hekate/releases/latest)**. Thanks to the bootloader, you can run firmware and other payloads through a convenient menu, create and restore a NAND backup, make EmuNAND, get information about the system state, mount a memory card to a PC without pulling it out of the switch, re-partition the memory card to install other operating systems, and much other
 4. **Installed payloads**:
