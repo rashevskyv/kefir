@@ -7,6 +7,7 @@ set reldir=E:\Switch\_kefir\release
 set kefir_dir=E:\Switch\_kefir\kefir
 set hekate_dir=E:\Switch\_kefir\kefir\bootloader\sys
 set hekate_build=F:\git\dev\hekate\output
+set hbl_build=F:\git\dev\nx-hbmenu\hbmenu.nro
 set working_dir=E:\Switch\_kefir
 set build_dir=%working_dir%\build
 set googledrive_dir=S:\Мой диск\Shared\release
@@ -48,12 +49,14 @@ for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
 
 :noatmo
-if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
-if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\libsys_lp0.bso" "%hekate_dir%\" /H /Y /C /R
-if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\libsys_minerva.bso" "%hekate_dir%\" /H /Y /C /R
-if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\module_sample.bso" "%hekate_dir%\" /H /Y /C /R
-if exist %hekate_build%\hekate_unc.bin xcopy "%hekate_build%\nyx.bin" "%hekate_dir%\" /H /Y /C /R
-if exist %hekate_build%\hekate_unc.bin del %hekate_dir%\hekate_unc.bin
+if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\libsys_lp0.bso" "%hekate_dir%\" /H /Y /C /R
+if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\libsys_minerva.bso" "%hekate_dir%\" /H /Y /C /R
+if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\module_sample.bso" "%hekate_dir%\" /H /Y /C /R
+if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\nyx.bin" "%hekate_dir%\" /H /Y /C /R
+if exist "%hekate_build%\hekate_unc.bin" del "%hekate_dir%\hekate_unc.bin"
+
+if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 

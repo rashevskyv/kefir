@@ -433,13 +433,16 @@ if exist "%sd%:\bootloader\ini\atmosphere.ini" (del "%sd%:\bootloader\ini\atmosp
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
 if exist "%sd%:\bootloader\ini\hekate_keys.ini" (del "%sd%:\bootloader\ini\hekate_keys.ini")
 if exist "%sd%:\bootloader\ini\RajNX.ini" (del "%sd%:\bootloader\ini\RajNX.ini")
+
 if exist "%sd%:\license-request.dat" (del "%sd%:\license-request.dat")
 if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 if exist "%sd%:\hekate*.bin" (del "%sd%:\hekate*.bin")
 if exist "%sd%:\hbmenu.nro" (del "%sd%:\hbmenu.nro")
 if exist "%sd%:\keys.dat" (del "%sd%:\keys.dat")
 if exist "%sd%:\BCT.ini" (del "%sd%:\BCT.ini")
+if exist "%sd%:\startup.te" (del "%sd%:\startup.te")
 if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
+
 if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
 if exist "%sd%:\bootloader\update.bin" (del "%sd%:\bootloader\update.bin")
 if exist "%sd%:\bootloader\update.bin.sig" (del "%sd%:\bootloader\update.bin.sig")
@@ -477,17 +480,22 @@ if exist "%sd%:\switch\kefirupdater.nro" (del "%sd%:\switch\kefirupdater\kefirup
 if exist "%sd%:\switch\kefir-updater.nro" (del "%sd%:\switch\kefirupdater\kefir-updater.nro")
 if exist "%sd%:\switch\daybreak.nro" (del "%sd%:\switch\daybreak.nro")
 if exist "%sd%:\switch\daybreak\daybreak.nro" (del "%sd%:\switch\daybreak\daybreak.nro")
+if exist "%sd%:\switch\kefirupdater\cheats.zip" (del "%sd%:\switch\kefirupdater\cheats.zip")
+if exist "%sd%:\switch\kefirupdater\kefir.zip" (del "%sd%:\switch\kefirupdater\kefir.zip")
+if exist "%sd%:\switch\kefirupdater\firmware.zip" (del "%sd%:\switch\kefirupdater\firmware.zip")
+
 if exist "%sd%:\switch\LinkUser" (RD /s /q "%sd%:\switch\LinkUser\")
-if exist "%sd%:\switch\LinkUser.nro" (del "%sd%:\switch\daybreak.nro")
-if exist "%sd%:\switch\nx-ntpc.nro" (del "%sd%:\switch\nx-ntpc.nro")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\.DBI.nro.star" (del "%sd%:\switch\.DBI.nro.star")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
-if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
+rem if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
+if exist "%sd%:\switch\dbi\dbi.config" (del "%sd%:\switch\dbi\dbi.config")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
 if exist "%sd%:\switch\nxmtp" (RD /s /q "%sd%:\switch\nxmtp\")
 if exist "%sd%:\switch\NX-Activity-Log.nro" (del "%sd%:\switch\NX-Activity-Log.nro")
-if exist "%sd%:\switch\NX-Activity-Log" (RD /s /q "%sd%:\switch\NX-Activity-Log\")
+if exist "%sd%:\switch\switch-cheats-updater" (RD /s /q "%sd%:\switch\switch-cheats-updater\")
+if exist "%sd%:\switch\FreshHay" (RD /s /q "%sd%:\switch\FreshHay\")
+if exist "%sd%:\switch\nx-ntpc" (RD /s /q "%sd%:\switch\nx-ntpc\")
 if exist "%sd%:\switch\sx\locations.conf" (del "%sd%:\switch\sx\locations.conf")
 if exist "%sd%:\switch\sx\sx.nro" (del "%sd%:\switch\sx\sx.nro")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
@@ -630,7 +638,6 @@ if exist "%sd%:\titles" (RD /s /q "%sd%:\titles")
 
 if %modchip%==0 (del "%sd%:\boot.dat")
 if %modchip%==0 (del "%sd%:\boot.ini")
-if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
 
 goto caffeine
 
@@ -730,11 +737,13 @@ if exist ._.* del /s /q /f /a ._.*
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor\11ECA7E0 /v MaximumTransferLength /t REG_DWORD /d 00100000 /f
 if exist "%sd%:\TinGen" (RD /s /q "%sd%:\TinGen")
 
-if exist "%sd%:\switch\dbi\dbi.config.bak" (
-	del "%sd%:\switch\dbi\dbi.config"
-	copy "%sd%:\switch\dbi\dbi.config.bak" "%sd%:\switch\dbi\dbi.config"
-	del "%sd%:\switch\dbi\dbi.config.bak"
-	)
+rem if exist "%sd%:\switch\dbi\dbi.config.bak" (
+rem 	del "%sd%:\switch\dbi\dbi.config"
+rem 	copy "%sd%:\switch\dbi\dbi.config.bak" "%sd%:\switch\dbi\dbi.config"
+rem 	del "%sd%:\switch\dbi\dbi.config.bak"
+rem 	)
+
+if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
 
 echo                                   DONE                                  
 echo ------------------------------------------------------------------------

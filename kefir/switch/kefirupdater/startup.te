@@ -1,0 +1,196 @@
+# 1. Удаляем папки и фвйлы
+println("* Removing old files")
+
+dirDel("sd:/atmosphere/exefs_patches");
+dirDel("sd:/atmosphere/kip_patches");
+dirDel("sd:/atmosphere/hekate_kips");
+dirDel("sd:/bootloader/debug");
+dirDel("sd:/modules");
+
+dirDel("sd:/atmosphere/contents/0100000000000032");
+dirDel("sd:/atmosphere/contents/0100000000000034");
+dirDel("sd:/atmosphere/contents/0100000000000037");
+dirDel("sd:/atmosphere/contents/0100000000000036");
+dirDel("sd:/atmosphere/contents/010000000000002b");
+dirDel("sd:/atmosphere/contents/010000000000000D");
+dirDel("sd:/atmosphere/contents/010000000000100D");
+dirDel("sd:/atmosphere/contents/4200000000000010");
+dirDel("sd:/atmosphere/contents/0100000000000008");
+dirDel("sd:/atmosphere/contents/690000000000000D");
+dirDel("sd:/atmosphere/contents/420000000000000E");
+dirDel("sd:/atmosphere/contents/010000000000100B");
+dirDel("sd:/atmosphere/contents/01FF415446660000");
+dirDel("sd:/atmosphere/contents/0100000000000352");
+dirDel("sd:/atmosphere/contents/00FF747765616BFF");
+dirDel("sd:/atmosphere/contents/00FF0012656180FF");
+dirDel("sd:/atmosphere/contents/0100000000001013");
+dirDel("sd:/atmosphere/contents/010000000007E51A");
+dirDel("sd:/atmosphere/contents/420000000007E51A");
+dirDel("sd:/atmosphere/contents/0100000000001000");
+dirDel("sd:/atmosphere/contents/010000000000100C");
+dirDel("sd:/atmosphere/contents/0000000000534C56");
+dirDel("sd:/atmosphere/contents/010000000000bd00");
+fileDel("sd:/atmosphere/stratosphere.romfs");
+dirDel("sd:/sxos/titles/");
+dirDel("sd:/sxos/bootloader");
+dirDel("sd:/sxos/switch");
+dirDel("sd:/sxos/exefs_patches");
+dirDel("sd:/sept");
+dirDel("sd:/switch/lithium");
+dirDel("sd:/switch/tinfoil");
+dirDel("sd:/switch/FreshHay");
+dirDel("sd:/switch/switch-cheats-updater");
+dirDel("sd:/switch/nx-ntpc");
+dirDel("sd:/switch/kefir-updater");
+dirDel("sd:/switch/KosmosToolbox");
+dirDel("sd:/switch/KosmosUpdater");
+dirDel("sd:/switch/mercury");
+dirDel("sd:/switch/NX-Activity-Log/");
+dirDel("sd:/switch/ldnmitm_config");
+dirDel("sd:/switch/LinkUser/");
+dirDel("sd:/switch/nxmtp/");
+dirDel("sd:/switch/incognito");
+dirDel("sd:/switch/fakenews-injector");
+dirDel("sd:/switch/ChoiDujourNX");
+dirDel("sd:/pegascape");
+dirDel("sd:/sxos/sx");
+
+fileDel("sd:/hbmenu.nro");
+fileDel("sd:/install.bat");
+fileDel("sd:/switch/checkpoint.nro");
+fileDel("sd:/switch/checkpoint/checkpoint.nro");
+fileDel("sd:/switch/pplay.nro");
+fileDel("sd:/switch/NX-SHELL.nro");
+fileDel("sd:/switch/reboot_to_payload.nro");
+fileDel("sd:/switch/NxThemesInstaller.nro");
+fileDel("sd:/switch/NxThemesInstaller/NxThemesInstaller.nro");
+fileDel("sd:/switch/sx.nro");
+fileDel("sd:/switch/n1dus.nro");
+fileDel("sd:/switch/ChoiDujourNX.nro");
+fileDel("sd:/switch/ChoiDujourNX/ChoiDujourNX.nro");
+fileDel("sd:/switch/daybreak.nro");
+fileDel("sd:/switch/daybreak/daybreak.nro");
+fileDel("sd:/switch/nx-ntpc.nro");
+fileDel("sd:/switch/dbi.nro");
+fileDel("sd:/switch/.DBI.nro.star");
+fileDel("sd:/switch/dbi/dbi.nro");
+fileDel("sd:/switch/nxmtp.nro");
+fileDel("sd:/switch/NX-Activity-Log.nro");
+fileDel("sd:/switch/incognito.nro");
+fileDel("sd:/switch/ultimate_updater.nro");
+fileDel("sd:/switch/zerotwoxci.nro");
+fileDel("sd:/switch/dOPUS.nro");
+fileDel("sd:/switch/tinfoil.nro");
+fileDel("sd:/switch/tinfoil_batch.nro");
+fileDel("sd:/switch/tinfoil_duckbill.nro");
+fileDel("sd:/switch/tinfoil_usb-fix.nro");
+fileDel("sd:/switch/ldnmitm_config.nro");
+fileDel("sd:/switch/fakenews-injector.nro");
+fileDel("sd:/switch/gag-order.nro");
+fileDel("sd:/switch/tinfoil/keys.txt");
+fileDel("sd:/switch/sx/locations.conf");
+fileDel("sd:/switch/.overlays/emuiibo.ovl");
+fileDel("sd:/switch/kefirupdater/kefir-updater.nro");
+fileDel("sd:/switch/kefirupdater/kefir-updater.bin");
+
+fileDel("sd:/atmosphere/fusee-secondary_atmo.bin");
+fileDel("sd:/atmosphere/hbl_atmo.nsp");
+fileDel("sd:/atmosphere/fusee-secondary.bin.sig");
+fileDel("sd:/atmosphere/hbl.nsp.sig");
+fileDel("sd:/atmosphere/hbl.json");
+fileDel("sd:/atmosphere/BCT.ini");
+fileDel("sd:/atmosphere/system_settings.ini");
+fileDel("sd:/atmosphere/system_settings.ini");
+fileDel("sd:/atmosphere/kips/fs_mitm.kip");
+fileDel("sd:/atmosphere/kips/ldn_mitm.kip");
+fileDel("sd:/atmosphere/kips/loader.kip");
+fileDel("sd:/atmosphere/kips/pm.kip");
+fileDel("sd:/atmosphere/kips/sm.kip");
+fileDel("sd:/atmosphere/kips/ams_mitm.kip");
+fileDel("sd:/atmosphere/flags/hbl_cal_read.flag");
+fileDel("sd:/atmosphere/exosphere.bin");
+fileDel("sd:/atmosphere/hbl.nsp");
+fileDel("sd:/atmosphere/loader.ini");
+fileDel("sd:/atmosphere/reboot_payload.bin");
+fileDel("sd:/atmosphere/BCT.ini");
+fileDel("sd:/atmosphere/fusee-secondary.bin");
+
+fileDel("sd:/bootloader/payloads/fusee-primary-payload.bin");
+fileDel("sd:/bootloader/payloads/Lockpick_RCM.bin");
+fileDel("sd:/bootloader/payloads/biskeydump.bin");
+fileDel("sd:/bootloader/payloads/fusee-payload.bin");
+fileDel("sd:/bootloader/payloads/fusee-primary.bin");
+fileDel("sd:/bootloader/payloads/sxos.bin");
+fileDel("sd:/bootloader/payloads/rajnx_ipl.bin");
+fileDel("sd:/bootloader/ini/Atmosphere.ini");
+fileDel("sd:/bootloader/ini/atmosphere.ini");
+fileDel("sd:/bootloader/ini/sxos.ini");
+fileDel("sd:/bootloader/ini/hekate_keys.ini");
+fileDel("sd:/bootloader/ini/RajNX.ini");
+fileDel("sd:/bootloader/hekate_ipl.ini");
+fileDel("sd:/bootloader/update.bin");
+fileDel("sd:/bootloader/update.bin.sig");
+fileDel("sd:/bootloader/patches_template.ini");
+fileDel("sd:/bootloader/patches.ini");
+fileDel("sd:/bootloader/bootlogo.bmp");
+fileDel("sd:/bootloader/res/icon_payload.bmp");
+fileDel("sd:/bootloader/res/icon_switch.bmp");
+fileDel("sd:/bootloader/payloads/rajnx_ipl.bin");
+
+fileDel("sd:/games/hbgShop_forwarder_classic.nsp");
+fileDel("sd:/games/hbgShop_forwarder_dark_v3.nsp");
+fileDel("sd:/license-request.dat");
+fileDel("sd:/fusee-secondary.bin");
+fileDel("sd:/sxos/boot.dat");
+fileDel("sd:/boot.dat");
+fileDel("sd:/hekate*.bin");
+fileDel("sd:/keys.dat");
+fileDel("sd:/BCT.ini");
+fileDel("sd:/hekate_ipl.ini");
+fileDel("sd:/exosphere.ini");
+fileDel("sd:/switch/kefirupdater/cheats.zip");
+fileDel("sd:/switch/kefirupdater/kefir.zip");
+fileDel("sd:/switch/kefirupdater/firmware.zip");
+println()
+println("Done")
+
+# 2. Копируем кефир на карту 
+println()
+println("* Copy kefir to SD")
+
+dirCopy("sd:/kefir/atmosphere", "sd:/")
+dirCopy("sd:/kefir/bootloader", "sd:/")
+dirCopy("sd:/kefir/config", "sd:/")
+dirCopy("sd:/kefir/games", "sd:/")
+dirCopy("sd:/kefir/sept", "sd:/")
+dirCopy("sd:/kefir/switch", "sd:/")
+dirCopy("sd:/kefir/pegascape", "sd:/")
+fileCopy("sd:/kefir/boot.dat", "sd:/boot.dat")
+fileCopy("sd:/kefir/boot.ini", "sd:/boot.ini")
+fileCopy("sd:/kefir/exosphere.ini", "sd:/exosphere.ini")
+fileCopy("sd:/kefir/hbmenu.nro", "sd:/hbmenu.nro")
+fileCopy("sd:/kefir/keys.txt", "sd:/keys.txt")
+fileCopy("sd:/kefir/payload.bin", "sd:/payload.bin")
+fileDel("sd:/atmosphere/stratosphere.romfs.aio");
+fileDel("sd:/atmosphere/fusee-secondary.bin.aio");
+fileDel("sd:/sept/payload.bin.aio");
+println()
+println("Done")
+
+# 3. Удаляем папку с распакованным кефиром
+println()
+println("* Remove update folder")
+
+dirDel("sd:/kefir")
+fileDel("sd:/switch/kefirupdater/startup.te")
+println()
+println("Done")
+
+# 5. Перезагружаемся в гекату 
+clearscreen()
+println("Update completed!")
+println()
+println("Press any button for reboot")
+pause()
+
+launchPayload("sd:/payload.bin")

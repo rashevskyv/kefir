@@ -10,10 +10,12 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 4. **Installed payloads**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
      * [Incognoto_RCM](https://github.com/Scandal-UK/Incognito_RCM) - payload for removing prodinfo information, that allow you [avoid ban more effectively](https://switch.customfw.xyz/block-update)
+     * [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/){:target="_blank"} - A payload-based file explorer 
+
 5. **Installed Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
-     * [FreshHay](https://github.com/devgru/FreshHay/releases) - program for downloading and unpacking the recommended version of the system software directly on the console
+     <!-- * [FreshHay](https://github.com/devgru/FreshHay/releases) - program for downloading and unpacking the recommended version of the system software directly on the console -->
      * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest) - file manager
      * [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log/releases/latest) - a program that allows you to track time spent in games
      * [JKSV](https://github.com/J-D-K/JKSV/releases) - program for backup and restoration of saves
@@ -21,7 +23,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [pplay](https://github.com/Cpasjuste/pplay/releases/latest) - video player 
      * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for [safe update](http://switch.customfw.xyz/update-to-latest) version of the system software of the STB
      * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) - custom theme manager
-     * [switch-cheats-updater](https://github.com/HamletDuFromage/switch-cheats-updater/releases) - a program for downloading [cheats](http://switch.customfw.xyz/cheats) for installed games.
+     <!-- * [switch-cheats-updater](https://github.com/HamletDuFromage/switch-cheats-updater/releases) - a program for downloading [cheats](http://switch.customfw.xyz/cheats) for installed games. -->
      * [Linkalho](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
 6. **Installed modules**. Modules are additional components that work inside Atmosphere and allow you to do various cool things, such as using xbox-compatible controllers, emulating amiibo, overclocking, and more. Unfortunately, SX OS modules do not support
      * [sys-con](https://github.com/cathery/sys-con/releases/latest) - a module that allows you to connect almost any gamepads to the console via USB
@@ -30,7 +32,6 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
           - [ovlEdiZon.ovl](https://werwolv.net/downloads/EdiZonOverlay.zip) - Module for [using cheats](http://switch.customfw.xyz/cheats)
           - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases) - A module for enabling and disabling installed system modules (such as overclocking, emuuibo, etc.)
           - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/){:target="_blank"} - Host process for loading Switch overlay OVLs (NROs)
-
 
 ## Kefir installation instructions (auto, Windows only)
 
