@@ -541,6 +541,7 @@ if exist "%temp%\sdfiles\" (RD /s /q "%temp%\sdfiles\")
 if not exist "%temp%\sdfiles\" (mkdir %temp%\sdfiles\)
 xcopy "%~dp0*" "%temp%\sdfiles\" /H /Y /C /R /S /E >nul 2>&1
 
+
 echo                                   DONE                                  
 echo ------------------------------------------------------------------------
 echo.
@@ -597,6 +598,7 @@ if %lang%==1 (
 )
 
 if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\atmosphere" (xcopy "E:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
 if exist "E:\Switch\TinGen-main\index.tfl" (xcopy "E:\Switch\TinGen-main\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
 
 goto cfw_%cfw%
