@@ -209,7 +209,7 @@ rem rem sxchip
 rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!kefir_installer -xr!Incognito_RCM.bin -xr!kefir.png -xr!desktop.ini -xr!exosphere.ini %reldir%\modchip.zip %build_dir%\chip\*
 
 
-pause
+rem pause
 
 echo ------------------------------------------------------------------------
 echo.
@@ -230,7 +230,7 @@ REM git add .
 REM git commit -m "%date:~3,8%"
 REM git push
 
-pause
+rem pause
 
 powershell -file %ps%
 
