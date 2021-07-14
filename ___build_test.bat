@@ -38,12 +38,6 @@ xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
-if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\hekate.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
-if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\libsys_lp0.bso" "%hekate_dir%\" /H /Y /C /R
-if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\libsys_minerva.bso" "%hekate_dir%\" /H /Y /C /R
-if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\module_sample.bso" "%hekate_dir%\" /H /Y /C /R
-if exist "%hekate_build%\hekate_unc.bin" xcopy "%hekate_build%\nyx.bin" "%hekate_dir%\" /H /Y /C /R
-if exist "%hekate_build%\hekate_unc.bin" del "%hekate_dir%\hekate_unc.bin"
 
 if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
