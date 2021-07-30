@@ -45,18 +45,9 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 ## Manual installation instructions (all OS)
 
-### Connecting the STB memory card to the PC:
-
-1. **Via DBI (Recommended for MacOS and other OS users too)**
-	1. Start DBI via [HBL](http://switch.customfw.xyz/hbl)
-	1. Connect your console to your PC using a USB cable
-	1. In DBI select "**Run MTP Responder**"
-	1. A new device is mounted on the PC - **Switch**, the folder "**External SD card**" and there is your memory card
-	* Remember, MTP can only transfer files manually. Automatic installation via MTP is not possible.
-1. **By inserting a memory card into a PC (not recommended for macOS users)**
-	1. Reboot the set-top box through the menu called by holding the (POWER) button
-	1. On the splash screen of kefir, press the volume down button to get into hekate
-	1. Now you can remove the memory card from the PC and insert it into the switch. When you pull out the memory card in the hekate, you do not need to re-forward the payload to enter the firmware. It is enough to insert the card into the console and run the firmware via the **Launch** menu
+1. Reboot the set-top box through the menu called by holding the (POWER) button
+1. On the splash screen of kefir, press the volume down button to get into hekate
+1. Now you can remove the memory card from the PC and insert it into the switch. When you pull out the memory card in the hekate, you do not need to re-forward the payload to enter the firmware. It is enough to insert the card into the console and run the firmware via the **Launch** menu
 
 ### Removing old firmware files
 
@@ -75,7 +66,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 
 ### Installing Atmosphere
 
-1. Copy the contents of ** the archive `kefir.zip` from the repository of kefir to the root of the memory card.
+1. Copy the contents of **the archive** `kefir.zip` from the repository of kefir to the root of the memory card.
 1. Correct the attributes according to the instructions below
 
 ### Fix attributes
