@@ -1,0 +1,207 @@
+p=println
+pe={pause() exit()}
+
+wait={t=timer()while(timer()<(t+tw)){print()}}
+
+if (fsexists("sd:/switch/prod.keys")) {
+	fwstr={fw=maj.str()+"."+min.str()+"."+pat.str()}
+	fv={a=readsave("bis:/save/8000000000000120")
+	b=a.read("/meta/imkvdb.arc")
+	c=["BYTE[]",9,8,0,0,0,0,0,1]
+	d=b.find(c)
+	if(d>0){
+		e=b.slice(d+8,4).project()
+		ver=(e[3]<<24)|(e[2]<<16)|(e[1]<<8)|(e[0])
+		pat=((ver>>16)&((1<<4)- 1))
+		min=((ver>>20)&((1<<6)- 1))
+		maj=((ver>>26)&((1<<6)- 1))
+	}.else(){print("Fw not found")pe()}
+	a=0 fwstr()}
+	if(mountsys("SYSTEM")){print("SYSTEM MOUNT FAIL")pe()}
+	fv()
+}.else(){maj=0}
+
+
+# Удаляем папку с распакованным кефиром
+clear()
+p("* Remove update folder")
+
+deldir("sd:/kefir")
+delfile("sd:/switch/kefir-updater/startup.te")
+p()
+p("Done")
+wait(tw = 1000)
+
+# Удаляем папки и файлы
+clear()
+p("* Removing old files")
+
+deldir("sd:/atmosphere/hekate_kips");
+deldir("sd:/bootloader/debug");
+deldir("sd:/modules");
+
+deldir("sd:/atmosphere/contents/0100000000000032");
+deldir("sd:/atmosphere/contents/0100000000000034");
+deldir("sd:/atmosphere/contents/0100000000000037");
+deldir("sd:/atmosphere/contents/0100000000000036");
+deldir("sd:/atmosphere/contents/010000000000002b");
+deldir("sd:/atmosphere/contents/010000000000000D");
+deldir("sd:/atmosphere/contents/010000000000100D");
+deldir("sd:/atmosphere/contents/4200000000000010");
+deldir("sd:/atmosphere/contents/0100000000000008");
+deldir("sd:/atmosphere/contents/420000000000000E");
+deldir("sd:/atmosphere/contents/010000000000100B");
+deldir("sd:/atmosphere/contents/01FF415446660000");
+deldir("sd:/atmosphere/contents/0100000000000352");
+deldir("sd:/atmosphere/contents/00FF747765616BFF");
+deldir("sd:/atmosphere/contents/00FF0012656180FF");
+deldir("sd:/atmosphere/contents/0100000000001013");
+deldir("sd:/atmosphere/contents/010000000007E51A");
+deldir("sd:/atmosphere/contents/0100000000001000");
+deldir("sd:/atmosphere/contents/0100000000001007");
+deldir("sd:/atmosphere/contents/0100000000001013");
+deldir("sd:/atmosphere/contents/010000000000100C");
+deldir("sd:/atmosphere/contents/0000000000534C56");
+deldir("sd:/sxos/titles/");
+deldir("sd:/sxos/bootloader");
+deldir("sd:/sxos/switch");
+deldir("sd:/sxos/exefs_patches");
+deldir("sd:/switch/lithium");
+deldir("sd:/switch/FreshHay");
+deldir("sd:/switch/switch-cheats-updater");
+deldir("sd:/switch/nx-ntpc");
+deldir("sd:/switch/KosmosToolbox");
+deldir("sd:/switch/KosmosUpdater");
+deldir("sd:/switch/mercury");
+deldir("sd:/switch/LinkUser/");
+deldir("sd:/switch/nxmtp/");
+deldir("sd:/switch/incognito");
+deldir("sd:/switch/ChoiDujourNX");
+deldir("sd:/sxos/sx");
+deldir("sd:/switch/kefirupdater/");
+
+if (maj != 4) {
+	if (!fuse_patched()){
+		deldir("sd:/switch/fakenews-injector");
+		deldir("sd:/pegascape");
+		delfile("sd:/bootloader/payloads/Incognito_RCM.bin");
+	}
+
+}.else(){
+	deldir("sd:/boot.dat")
+	deldir("sd:/boot.ini")
+}
+
+delfile("sd:/install.bat");
+delfile("sd:/switch/checkpoint.nro");
+delfile("sd:/switch/checkpoint/checkpoint.nro");
+delfile("sd:/switch/reboot_to_payload.nro");
+delfile("sd:/switch/sx.nro");
+delfile("sd:/switch/n1dus.nro");
+delfile("sd:/switch/ChoiDujourNX.nro");
+delfile("sd:/switch/ChoiDujourNX/ChoiDujourNX.nro");
+delfile("sd:/switch/nx-ntpc.nro");
+delfile("sd:/switch/dbi.nro");
+delfile("sd:/switch/.DBI.nro.star");
+delfile("sd:/switch/nxmtp.nro");
+delfile("sd:/switch/incognito.nro");
+delfile("sd:/switch/ultimate_updater.nro");
+delfile("sd:/switch/zerotwoxci.nro");
+delfile("sd:/switch/dOPUS.nro");
+delfile("sd:/switch/tinfoil.nro");
+delfile("sd:/switch/tinfoil_batch.nro");
+delfile("sd:/switch/tinfoil_duckbill.nro");
+delfile("sd:/switch/tinfoil_usb-fix.nro");
+delfile("sd:/switch/ldnmitm_config.nro");
+delfile("sd:/switch/fakenews-injector.nro");
+delfile("sd:/switch/gag-order.nro");
+delfile("sd:/switch/tinfoil/keys.txt");
+delfile("sd:/switch/sx/locations.conf");
+delfile("sd:/switch/.overlays/emuiibo.ovl");
+
+delfile("sd:/atmosphere/fusee-secondary_atmo.bin");
+delfile("sd:/atmosphere/hbl_atmo.nsp");
+delfile("sd:/atmosphere/fusee-secondary.bin.sig");
+delfile("sd:/atmosphere/hbl.nsp.sig");
+delfile("sd:/atmosphere/hbl.json");
+delfile("sd:/atmosphere/BCT.ini");
+delfile("sd:/atmosphere/system_settings.ini");
+delfile("sd:/atmosphere/system_settings.ini");
+delfile("sd:/atmosphere/kips/fs_mitm.kip");
+delfile("sd:/atmosphere/kips/ldn_mitm.kip");
+delfile("sd:/atmosphere/kips/loader.kip");
+delfile("sd:/atmosphere/kips/pm.kip");
+delfile("sd:/atmosphere/kips/sm.kip");
+delfile("sd:/atmosphere/kips/ams_mitm.kip");
+delfile("sd:/atmosphere/flags/hbl_cal_read.flag");
+delfile("sd:/atmosphere/exosphere.bin");
+delfile("sd:/atmosphere/loader.ini");
+
+delfile("sd:/bootloader/payloads/fusee-primary-payload.bin");
+delfile("sd:/bootloader/payloads/biskeydump.bin");
+delfile("sd:/bootloader/payloads/fusee-payload.bin");
+delfile("sd:/bootloader/payloads/sxos.bin");
+delfile("sd:/bootloader/payloads/rajnx_ipl.bin");
+delfile("sd:/bootloader/ini/Atmosphere.ini");
+delfile("sd:/bootloader/ini/atmosphere.ini");
+delfile("sd:/bootloader/ini/sxos.ini");
+delfile("sd:/bootloader/ini/hekate_keys.ini");
+delfile("sd:/bootloader/ini/RajNX.ini");
+delfile("sd:/bootloader/update.bin.sig");
+delfile("sd:/bootloader/patches_template.ini");
+delfile("sd:/bootloader/bootlogo.bmp");
+delfile("sd:/bootloader/payloads/rajnx_ipl.bin");
+
+delfile("sd:/games/hbgShop_forwarder_classic.nsp");
+delfile("sd:/games/hbgShop_forwarder_dark_v3.nsp");
+delfile("sd:/license-request.dat");
+delfile("sd:/fusee-secondary.bin");
+delfile("sd:/sxos/boot.dat");
+delfile("sd:/hekate*.bin");
+delfile("sd:/keys.dat");
+delfile("sd:/BCT.ini");
+delfile("sd:/hekate_ipl.ini");
+delfile("sd:/exosphere.ini");
+delfile("sd:/switch/kefir-updater/cheats.zip");
+delfile("sd:/switch/kefir-updater/kefir.zip");
+
+p()
+p("Done")
+wait(tw = 1000)
+
+# Чиним атрибуты и удаляем маковый мусор
+clear()
+p("* Fix attributes")
+fixattrib()
+p()
+p("Done")
+
+p("* Remove macos related garbage")
+removemacfolders()
+p()
+p("Done")
+
+p("* Disable sysmodules")
+disablemodules()
+p()
+p("Done")
+wait(tw = 1000)
+
+# Подчищаем за собой
+delfile("sd:/payload.bin");
+delfile("sd:/startup.te");
+copyfile("sd:/atmosphere/reboot_payload.bin", "sd:/payload.bin")
+copyfile("sd:/bootloader/hekate_ipl_.ini", "sd:/bootloader/hekate_ipl.ini")
+delfile("sd:/bootloader/hekate_ipl_.ini");
+delfile("sd:/bootloader/ini/kefir_updater.ini");
+delfile("sd:/bootloader/res/ku.bmp");
+deldir("sd:/switch/kefirupdater/");
+
+# Перезагружаемся в гекату 
+clear()
+p("Update completed!")
+p()
+p("Rebooting")
+wait(tw = 3000)
+
+payload("sd:/payload.bin")

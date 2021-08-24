@@ -32,7 +32,7 @@ xcopy "%working_dir%\version" "%reldir%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
 rem xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
-xcopy "%working_dir%\version" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
+xcopy "%working_dir%\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
@@ -42,8 +42,8 @@ xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
 
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%working_dir%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
@@ -136,4 +136,4 @@ if exist "%sd%\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat %reldir%\kefir.zip %kefir_dir%\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!hekate_ctcaer_*.bin -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat %reldir%\atmo.zip %kefir_dir%\*
