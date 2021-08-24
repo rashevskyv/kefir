@@ -204,6 +204,7 @@ if (fsexists("sd:/kefir")) {
 	clear()
 	p("* Copy kefir to SD")
 
+	deldir("sd:/kefir/switch/kefirupdater/")
 	copydir("sd:/kefir/atmosphere", "sd:/")
 	copydir("sd:/kefir/bootloader", "sd:/")
 	copydir("sd:/kefir/config", "sd:/")
@@ -252,7 +253,9 @@ copyfile("sd:/bootloader/hekate_ipl_.ini", "sd:/bootloader/hekate_ipl.ini")
 delfile("sd:/bootloader/hekate_ipl_.ini")
 delfile("sd:/bootloader/ini/kefir_updater.ini")
 delfile("sd:/bootloader/res/ku.bmp")
-deldir("sd:/switch/kefirupdater/")
+delfile("sd:/switch/kefirupdater/kefir-updater.bin")
+delfile("sd:/switch/kefirupdater/startup.te")
+deldir("sd:/switch/kefirupdater")
 
 
 p()

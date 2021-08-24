@@ -1,2 +1,1 @@
-fileCopy("sd:/kefir/switch/kefir-updater/update.te", "sd:/startup.te")
 launchPayload("sd:/kefir/switch/kefir-updater/kefir-updater.bin")
