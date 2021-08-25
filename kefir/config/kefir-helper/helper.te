@@ -19,8 +19,7 @@ if (fsexists("sd:/switch/prod.keys")) {
 	a=0 fwstr()}
 	if(mountsys("SYSTEM")){print("SYSTEM MOUNT FAIL")pe()}
 	fv()
-}.else(){maj=0}
-
+}.else(){payload("sd:/config/kefir-helper/lockpick_sys.bin")}
 
 # Удаляем папку с распакованным кефиром
 clear()

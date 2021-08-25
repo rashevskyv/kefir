@@ -18,7 +18,7 @@ if (fsexists("sd:/switch/prod.keys")) {
 	a=0 fwstr()}
 	if(mountsys("SYSTEM")){print("SYSTEM MOUNT FAIL")pe()}
 	fv()
-}.else(){maj=0}
+}.else(){payload("sd:/config/kefir-helper/lockpick_sys.bin")}
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
@@ -63,7 +63,6 @@ deldir("sd:/atmosphere/hekate_kips");
 deldir("sd:/bootloader/debug");
 deldir("sd:/modules");
 
-
 deldir("sd:/atmosphere/contents/0100000000000032");
 deldir("sd:/atmosphere/contents/0100000000000034");
 deldir("sd:/atmosphere/contents/0100000000000037");
@@ -86,6 +85,9 @@ deldir("sd:/atmosphere/contents/0100000000001007");
 deldir("sd:/atmosphere/contents/0100000000001013");
 deldir("sd:/atmosphere/contents/010000000000100C");
 deldir("sd:/atmosphere/contents/0000000000534C56");
+deldir("sd:/atmosphere/erpt_reports");
+deldir("sd:/atmosphere/fatal_reports");
+deldir("sd:/atmosphere/fatal_errors");
 deldir("sd:/sxos/titles/");
 deldir("sd:/sxos/bootloader");
 deldir("sd:/sxos/switch");
@@ -229,15 +231,16 @@ if (fsexists("sd:/kefir")) {
 
 # Чиним атрибуты и удаляем маковый мусор
 clear()
+p("* Remove macos related garbage")
+removemacfolders()
+p()
+p("Done")
+
 p("* Fix attributes")
 fixattrib()
 p()
 p("Done")
 
-p("* Remove macos related garbage")
-removemacfolders()
-p()
-p("Done")
 wait(tw = 1000)
 
 # 3. Подчищаем за собой
