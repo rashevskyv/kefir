@@ -2,7 +2,8 @@ p=println
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
-if (fsexists("sd:/switch/prod.keys")) {
+if (fsexists("sd:/switch/prod.keys")) 
+{
 	fwstr={fw=maj.str()+"."+min.str()+"."+pat.str()}
 	fv={a=readsave("bis:/save/8000000000000120")
 	b=a.read("/meta/imkvdb.arc")
@@ -18,7 +19,13 @@ if (fsexists("sd:/switch/prod.keys")) {
 	a=0 fwstr()}
 	if(mountsys("SYSTEM")){print("SYSTEM MOUNT FAIL")pe()}
 	fv()
-}.else(){payload("sd:/config/kefir-helper/lockpick_sys.bin")}
+}.else(){
+	if (fsexists("sd:/config/kefir-helper/lockpick_sys.bin")){
+		payload("sd:/config/kefir-helper/lockpick_sys.bin")
+	}.else(){
+	payload("sd:/kefir/config/kefir-helper/lockpick_sys.bin")
+	}
+}
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
