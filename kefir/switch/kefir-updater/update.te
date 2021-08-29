@@ -1,4 +1,5 @@
 p=println
+pe={pause() exit()}
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
@@ -17,7 +18,7 @@ if (fsexists("sd:/switch/prod.keys"))
 		maj=((ver>>26)&((1<<6)- 1))
 	}.else(){print("Fw not found")pe()}
 	a=0 fwstr()}
-	if(mountsys("SYSTEM")){print("SYSTEM MOUNT FAIL")pe()}
+	if(mountsys("SYSTEM")){maj=0}
 	fv()
 }.else(){
 	if (fsexists("sd:/config/kefir-helper/lockpick_sys.bin")){
@@ -38,7 +39,6 @@ if (fsexists("sd:/kefir")) {
 	deldir("sd:/atmosphere/contents/420000000007E51A");
 	deldir("sd:/atmosphere/contents/010000000000bd00");
 	delfile("sd:/atmosphere/stratosphere.romfs");
-	deldir("sd:/sept");
 	deldir("sd:/switch/tinfoil");
 	deldir("sd:/switch/kefir-updater");
 	deldir("sd:/switch/NX-Activity-Log/");
@@ -69,6 +69,7 @@ if (fsexists("sd:/kefir")) {
 deldir("sd:/atmosphere/hekate_kips");
 deldir("sd:/bootloader/debug");
 deldir("sd:/modules");
+deldir("sd:/sept");
 
 deldir("sd:/atmosphere/contents/0100000000000032");
 deldir("sd:/atmosphere/contents/0100000000000034");
@@ -117,6 +118,7 @@ delfile("sd:/switch/pplay.nro");
 delfile("sd:/switch/NX-SHELL.nro");
 delfile("sd:/switch/NxThemesInstaller.nro");
 delfile("sd:/switch/daybreak.nro");
+delfile("sd:/switch/dbi.libusbhsfs");
 
 if (maj != 4) {
 	if (!fuse_patched()){
@@ -180,6 +182,7 @@ delfile("sd:/bootloader/payloads/biskeydump.bin");
 delfile("sd:/bootloader/payloads/fusee-payload.bin");
 delfile("sd:/bootloader/payloads/sxos.bin");
 delfile("sd:/bootloader/payloads/rajnx_ipl.bin");
+delfile("sd:/bootloader/payloads/CommonProblemResolver.bin");
 delfile("sd:/bootloader/ini/Atmosphere.ini");
 delfile("sd:/bootloader/ini/atmosphere.ini");
 delfile("sd:/bootloader/ini/sxos.ini");
@@ -243,6 +246,9 @@ removemacfolders()
 p()
 p("Done")
 
+wait(tw = 1000)
+
+clear()
 p("* Fix attributes")
 fixattrib()
 p()

@@ -57,42 +57,41 @@ xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
-rem xcopy "%kefirupdater%" "%kefir_dir%\switch\kefirupdater\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
-xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
-xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%working_dir%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
 
 
-ECHO.
-ECHO.
-ECHO ==============================================================
-ECHO.
-ECHO.
-ECHO         1.  Increase version
-ECHO         2.  Skip
-ECHO.
-ECHO.
-ECHO ==============================================================
-ECHO                                             Q.  Quit
-ECHO.
+rem ECHO.
+rem ECHO.
+rem ECHO ==============================================================
+rem ECHO.
+rem ECHO.
+rem ECHO         1.  Increase version
+rem ECHO         2.  Skip
+rem ECHO.
+rem ECHO.
+rem ECHO ==============================================================
+rem ECHO                                             Q.  Quit
+rem ECHO.
 
-set st=
-set /p st=:
+rem set st=
+rem set /p st=:
 
-for %%A in ("2") do if "%st%"==%%A (goto start)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+rem for %%A in ("2") do if "%st%"==%%A (goto start)
+rem for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
-set /p ver=<version
-set /a ver = %ver% + 1
-echo %ver% > version
+rem set /p ver=<version
+rem set /a ver = %ver% + 1
+rem echo %ver% > version
 
 xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
