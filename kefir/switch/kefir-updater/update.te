@@ -28,8 +28,16 @@ if (fsexists("sd:/switch/prod.keys"))
 	}
 }
 
+if (fsexists("sd:/boot.dat")) {
+	boot=1
+}
+
 # 1. Удаляем папки и файлы
 p("* Removing old files")
+
+if (fsexists("sd:/bootloader/nyx.ini")){
+	movefile("sd:/bootloader/nyx.ini" "sd:/bootloader/nyx.bkp")
+}
 
 # if update 
 if (fsexists("sd:/kefir")) {
@@ -54,9 +62,9 @@ if (fsexists("sd:/kefir")) {
 	delfile("sd:/atmosphere/hbl.nsp");
 	delfile("sd:/atmosphere/reboot_payload.bin");
 	delfile("sd:/atmosphere/BCT.ini");
-	delfile("sd:/atmosphere/fusee-secondary.bin");
+	delfile("sd:/atmosphere/package3");
 	delfile("sd:/bootloader/payloads/Lockpick_RCM.bin");
-	delfile("sd:/bootloader/payloads/fusee-primary.bin");
+	delfile("sd:/bootloader/payloads/fusee.bin");
 	delfile("sd:/bootloader/hekate_ipl.ini");
 	delfile("sd:/bootloader/update.bin");
 	delfile("sd:/bootloader/patches.ini");
@@ -158,6 +166,9 @@ delfile("sd:/switch/gag-order.nro");
 delfile("sd:/switch/tinfoil/keys.txt");
 delfile("sd:/switch/sx/locations.conf");
 delfile("sd:/switch/.overlays/emuiibo.ovl");
+delfile("sd:/atmosphere/fusee-secondary.bin");
+delfile("sd:/bootloader/payloads/fusee-primary.bin");
+
 
 delfile("sd:/atmosphere/fusee-secondary_atmo.bin");
 delfile("sd:/atmosphere/hbl_atmo.nsp");
@@ -267,12 +278,21 @@ delfile("sd:/switch/kefir-updater/update.te")
 delfile("sd:/startup.te")
 copyfile("sd:/bootloader/hekate_ipl_.ini", "sd:/bootloader/hekate_ipl.ini")
 delfile("sd:/bootloader/hekate_ipl_.ini")
-delfile("sd:/bootloader/ini/kefir_updater.ini")
+delfile("sd:/bootloader/ini/*kefir_updater.ini")
 delfile("sd:/bootloader/res/ku.bmp")
 delfile("sd:/switch/kefirupdater/kefir-updater.bin")
 delfile("sd:/switch/kefirupdater/startup.te")
 deldir("sd:/switch/kefirupdater")
 
+if (!boot) {
+	delfile("sd:/boot.dat")
+	delfile("sd:/boot.ini")
+}
+
+if (fsexists("sd:/bootloader/nyx.bkp")){
+	movefile("sd:/bootloader/nyx.bkp" "sd:/bootloader/nyx.ini")
+	delfile("sd:/bootloader/nyx.bkp")
+}
 
 p()
 p("Done")
