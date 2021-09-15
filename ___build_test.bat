@@ -138,4 +138,4 @@ if exist "%sd%\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!hekate_ctcaer_*.bin -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat %reldir%\atmo.zip %kefir_dir%\*
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!___build_beta.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!hekate_ctcaer_*.bin -xr!build -xr!emu.cmd -x!version -xr!changelog -xr!install1.bat %reldir%\kefir.zip %kefir_dir%\*

@@ -1,5 +1,6 @@
 p=println
 pe={pause() exit()}
+boot=0
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
@@ -35,10 +36,6 @@ if (fsexists("sd:/boot.dat")) {
 # 1. Удаляем папки и файлы
 p("* Removing old files")
 
-if (fsexists("sd:/bootloader/nyx.ini")){
-	movefile("sd:/bootloader/nyx.ini" "sd:/bootloader/nyx.bkp")
-}
-
 # if update 
 if (fsexists("sd:/kefir")) {
 	deldir("sd:/atmosphere/exefs_patches");
@@ -62,6 +59,7 @@ if (fsexists("sd:/kefir")) {
 	delfile("sd:/atmosphere/hbl.nsp");
 	delfile("sd:/atmosphere/reboot_payload.bin");
 	delfile("sd:/atmosphere/BCT.ini");
+	delfile("sd:/atmosphere/config/BCT.ini");
 	delfile("sd:/atmosphere/package3");
 	delfile("sd:/bootloader/payloads/Lockpick_RCM.bin");
 	delfile("sd:/bootloader/payloads/fusee.bin");
@@ -83,7 +81,9 @@ deldir("sd:/atmosphere/contents/0100000000000032");
 deldir("sd:/atmosphere/contents/0100000000000034");
 deldir("sd:/atmosphere/contents/0100000000000037");
 deldir("sd:/atmosphere/contents/0100000000000036");
+deldir("sd:/atmosphere/contents/010000000000003C");
 deldir("sd:/atmosphere/contents/010000000000002b");
+deldir("sd:/atmosphere/contents/0100000000000042");
 deldir("sd:/atmosphere/contents/010000000000000D");
 deldir("sd:/atmosphere/contents/010000000000100D");
 deldir("sd:/atmosphere/contents/4200000000000010");
@@ -101,13 +101,11 @@ deldir("sd:/atmosphere/contents/0100000000001007");
 deldir("sd:/atmosphere/contents/0100000000001013");
 deldir("sd:/atmosphere/contents/010000000000100C");
 deldir("sd:/atmosphere/contents/0000000000534C56");
-deldir("sd:/atmosphere/erpt_reports");
-deldir("sd:/atmosphere/fatal_reports");
-deldir("sd:/atmosphere/fatal_errors");
 deldir("sd:/sxos/titles/");
 deldir("sd:/sxos/bootloader");
 deldir("sd:/sxos/switch");
 deldir("sd:/sxos/exefs_patches");
+deldir("sd:/switch/games/hbmenu.nsp");
 deldir("sd:/switch/lithium");
 deldir("sd:/switch/FreshHay");
 deldir("sd:/switch/switch-cheats-updater");
@@ -121,6 +119,7 @@ deldir("sd:/switch/nxmtp/");
 deldir("sd:/switch/incognito");
 deldir("sd:/switch/ChoiDujourNX");
 deldir("sd:/sxos/sx");
+deldir("sd:/atmo");
 
 delfile("sd:/switch/pplay.nro");
 delfile("sd:/switch/NX-SHELL.nro");
@@ -175,7 +174,6 @@ delfile("sd:/atmosphere/hbl_atmo.nsp");
 delfile("sd:/atmosphere/fusee-secondary.bin.sig");
 delfile("sd:/atmosphere/hbl.nsp.sig");
 delfile("sd:/atmosphere/hbl.json");
-delfile("sd:/atmosphere/BCT.ini");
 delfile("sd:/atmosphere/system_settings.ini");
 delfile("sd:/atmosphere/system_settings.ini");
 delfile("sd:/atmosphere/kips/fs_mitm.kip");
@@ -202,6 +200,7 @@ delfile("sd:/bootloader/ini/RajNX.ini");
 delfile("sd:/bootloader/update.bin.sig");
 delfile("sd:/bootloader/patches_template.ini");
 delfile("sd:/bootloader/bootlogo.bmp");
+delfile("sd:/bootloader/updating.bmp");
 delfile("sd:/bootloader/payloads/rajnx_ipl.bin");
 
 delfile("sd:/games/hbgShop_forwarder_classic.nsp");
@@ -289,9 +288,11 @@ if (!boot) {
 	delfile("sd:/boot.ini")
 }
 
-if (fsexists("sd:/bootloader/nyx.bkp")){
-	movefile("sd:/bootloader/nyx.bkp" "sd:/bootloader/nyx.ini")
-	delfile("sd:/bootloader/nyx.bkp")
+if (!fsexists("sd:/bootloader/nyx.ini")){
+	delfile("sd:/bootloader/nyx.ini")
+	movefile("sd:/bootloader/nyx.ini_" "sd:/bootloader/nyx.ini")
+}.else(){
+	delfile("sd:/bootloader/nyx.ini_")
 }
 
 p()
