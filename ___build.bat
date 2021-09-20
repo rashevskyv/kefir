@@ -62,6 +62,9 @@ xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+del "%kefir_dir%\hekate_ctcaer_*.bin"
+
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
@@ -105,6 +108,8 @@ if exist "%reldir%" (del /F /S /Q "%reldir%\*")
 xcopy "%working_dir%\changelog" "%reldir%\" /H /Y /C /R
 xcopy "%working_dir%\version" "%reldir%\" /H /Y /C /R
 
+pause
+
 
 echo ------------------------------------------------------------------------
 echo.
@@ -118,8 +123,6 @@ mkdir %sd%
 
 xcopy "%kefir_dir%\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%kefir_dir%\payload.bin" "%sd%\" /H /Y /C /R
-
-if exist "%sd%\sept\payload_*.bin" (del "%sd%\sept\payload_*.bin")
 
 if exist "%sd%\bootloader\hekate_ipl_*.ini" (del "%sd%\bootloader\hekate_ipl_*.ini")
 if exist "%sd%\sxos\titles" (xcopy %sd%\sxos\titles\* %sd%\atmosphere\titles\  /Y /S /E /H /R /D)

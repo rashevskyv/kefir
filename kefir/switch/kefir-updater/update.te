@@ -121,6 +121,7 @@ deldir("sd:/switch/ChoiDujourNX");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
 
+delfile("sd:/hekate_ctcaer*.bin");
 delfile("sd:/switch/pplay.nro");
 delfile("sd:/switch/NX-SHELL.nro");
 delfile("sd:/switch/NxThemesInstaller.nro");
@@ -196,6 +197,8 @@ delfile("sd:/bootloader/ini/Atmosphere.ini");
 delfile("sd:/bootloader/ini/atmosphere.ini");
 delfile("sd:/bootloader/ini/sxos.ini");
 delfile("sd:/bootloader/ini/hekate_keys.ini");
+delfile("sd:/bootloader/hekate_keys.ini");
+delfile("sd:/bootloader/kefir.ini");
 delfile("sd:/bootloader/ini/RajNX.ini");
 delfile("sd:/bootloader/update.bin.sig");
 delfile("sd:/bootloader/patches_template.ini");

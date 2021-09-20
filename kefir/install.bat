@@ -43,6 +43,8 @@ if not exist "%sd%:\" (
 	if not exist "%sd%:\*" (goto WRONGSD)
 )
 
+:main
+
 if not exist "%sd%:\boot.dat" (set bootdat=0)
 if not exist "%sd%:\payload.bin" (set payloadbin=0)
 
@@ -139,6 +141,8 @@ if exist "%sd%:\bootloader\ini\Atmosphere.ini" (del "%sd%:\bootloader\ini\Atmosp
 if exist "%sd%:\bootloader\ini\atmosphere.ini" (del "%sd%:\bootloader\ini\atmosphere.ini")
 if exist "%sd%:\bootloader\ini\sxos.ini" (del "%sd%:\bootloader\ini\sxos.ini")
 if exist "%sd%:\bootloader\ini\hekate_keys.ini" (del "%sd%:\bootloader\ini\hekate_keys.ini")
+if exist "%sd%:\bootloader\hekate_keys.ini" (del "%sd%:\bootloader\hekate_keys.ini")
+if exist "%sd%:\bootloader\kefir.ini" (del "%sd%:\bootloader\kefir.ini")
 if exist "%sd%:\bootloader\ini\RajNX.ini" (del "%sd%:\bootloader\ini\RajNX.ini")
 if exist "%sd%:\bootloader\updating.bmp" (del "%sd%:\bootloader\updating.bmp")
 

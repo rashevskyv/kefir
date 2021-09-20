@@ -41,9 +41,9 @@ xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
 if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+del "%kefir_dir%\hekate_ctcaer_*.bin"
 
-rem xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
-rem xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
