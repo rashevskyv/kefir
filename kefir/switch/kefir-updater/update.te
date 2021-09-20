@@ -101,6 +101,7 @@ deldir("sd:/atmosphere/contents/0100000000001007");
 deldir("sd:/atmosphere/contents/0100000000001013");
 deldir("sd:/atmosphere/contents/010000000000100C");
 deldir("sd:/atmosphere/contents/0000000000534C56");
+deldir("sd:/atmosphere/contents/010000000000bd00/flags");
 deldir("sd:/sxos/titles/");
 deldir("sd:/sxos/bootloader");
 deldir("sd:/sxos/switch");
@@ -118,6 +119,8 @@ deldir("sd:/switch/LinkUser/");
 deldir("sd:/switch/nxmtp/");
 deldir("sd:/switch/incognito");
 deldir("sd:/switch/ChoiDujourNX");
+deldir("sd:/switch/nxmtp");
+deldir("sd:/switch/LinkUser");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
 
@@ -126,6 +129,7 @@ delfile("sd:/switch/pplay.nro");
 delfile("sd:/switch/NX-SHELL.nro");
 delfile("sd:/switch/NxThemesInstaller.nro");
 delfile("sd:/switch/daybreak.nro");
+delfile("sd:/switch/nxmtp.nro");
 delfile("sd:/switch/dbi.libusbhsfs");
 
 if (maj != 4) {
