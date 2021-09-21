@@ -101,7 +101,9 @@ deldir("sd:/atmosphere/contents/0100000000001007");
 deldir("sd:/atmosphere/contents/0100000000001013");
 deldir("sd:/atmosphere/contents/010000000000100C");
 deldir("sd:/atmosphere/contents/0000000000534C56");
+
 deldir("sd:/atmosphere/contents/010000000000bd00/flags");
+
 deldir("sd:/sxos/titles/");
 deldir("sd:/sxos/bootloader");
 deldir("sd:/sxos/switch");
