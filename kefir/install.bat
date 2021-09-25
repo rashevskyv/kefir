@@ -20,6 +20,7 @@ set payloadbin=1
 set nyx=0
 
 
+:newcard
 COLOR 0F
 cls
 if %lang%==1 (
@@ -92,11 +93,12 @@ if exist "%sd%:\atmosphere\contents\420000000007E51A" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0100000000001000" (RD /s /q "%sd%:\atmosphere\contents\0100000000001000")
 if exist "%sd%:\atmosphere\contents\010000000000100C" (RD /s /q "%sd%:\atmosphere\contents\010000000000100C")
 if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmosphere\contents\0000000000534C56")
+if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
+if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
 if exist "%sd%:\atmosphere\erpt_reports" (RD /s /q "%sd%:\atmosphere\erpt_reports")
 if exist "%sd%:\atmosphere\fatal_reports" (RD /s /q "%sd%:\atmosphere\fatal_reports")
 if exist "%sd%:\atmosphere\fatal_errors" (RD /s /q "%sd%:\atmosphere\fatal_errors")
 if exist "%sd%:\atmosphere\crash_reports" (RD /s /q "%sd%:\atmosphere\crash_reports")
-if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
 if exist "%sd%:\atmosphere\stratosphere.romfs" (del "%sd%:\atmosphere\stratosphere.romfs")
 
 if exist "%sd%:\atmosphere\fusee-secondary_atmo.bin" (del "%sd%:\atmosphere\fusee-secondary_atmo.bin")
@@ -164,9 +166,6 @@ if exist "%sd%:\bootloader\bootlogo.bmp" (del "%sd%:\bootloader\bootlogo.bmp")
 if exist "%sd%:\bootloader\res\icon_payload.bmp" (del "%sd%:\bootloader\res\icon_payload.bmp")
 if exist "%sd%:\bootloader\res\icon_switch.bmp" (del "%sd%:\bootloader\res\icon_switch.bmp")
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
-
-if exist "%sd%:\sxos\titles\00FF0012656180FF" (RD /s /q "%sd%:\sxos\titles\00FF0012656180FF")
-
 if exist "%sd%:\switch\games\hbmenu.nsp" (RD /s /q "%sd%:\switch\games\hbmenu.nsp")
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
@@ -202,6 +201,8 @@ if exist "%sd%:\switch\kefirupdater\firmware.zip" (del "%sd%:\switch\kefirupdate
 
 if exist "%sd%:\switch\LinkUser" (RD /s /q "%sd%:\switch\LinkUser\")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
+if exist "%sd%:\switch\btpair.nro" (del "%sd%:\switch\btpair.nro")
+if exist "%sd%:\switch\btpair\btpair.nro" (del "%sd%:\switch\btpair\btpair.nro")
 if exist "%sd%:\switch\.DBI.nro.star" (del "%sd%:\switch\.DBI.nro.star")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
 rem if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
