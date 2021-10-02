@@ -16,6 +16,8 @@ set tesla=0
 set tesla_flag=1
 set modchip=1
 set bootdat=1
+set syscon=1
+set missioncontrol=1
 set payloadbin=1
 set nyx=0
 
@@ -47,6 +49,8 @@ if not exist "%sd%:\" (
 :main
 
 if not exist "%sd%:\boot.dat" (set bootdat=0)
+if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set syscon=0)
+if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if not exist "%sd%:\payload.bin" (set payloadbin=0)
 
 
@@ -177,8 +181,6 @@ if exist "%sd%:\switch\nxmtp" (RD /s /q "%sd%:\switch\nxmtp")
 rem if exist "%sd%:\switch\EdiZon.nro" (del "%sd%:\switch\EdiZon.nro")
 if exist "%sd%:\switch\tinfoil\tinfoil.nro" (del "%sd%:\switch\tinfoil\tinfoil.nro")
 if exist "%sd%:\switch\tinfoil\keys.txt" (del "%sd%:\switch\tinfoil\keys.txt")
-if exist "%sd%:\switch\checkpoint.nro" (del "%sd%:\switch\checkpoint.nro")
-if exist "%sd%:\switch\checkpoint\checkpoint.nro" (del "%sd%:\switch\checkpoint\checkpoint.nro")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
 if exist "%sd%:\switch\pplay.nro" (del "%sd%:\switch\pplay.nro")
 if exist "%sd%:\switch\NX-SHELL.nro" (del "%sd%:\switch\NX-SHELL.nro")
@@ -235,7 +237,7 @@ if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
-if exist "%sd%:\switch\.overlays\emuiibo.ovl" (del "%sd%:\switch\.overlays\emuiibo.ovl")
+
 
 if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
 
@@ -326,6 +328,14 @@ if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
 if %bootdat%==0 if %payloadbin%==1 (
 	del "%sd%:\boot.dat"
 	del "%sd%:\boot.ini"
+	)
+
+if %syscon%==0 (
+	del "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag"
+	)
+
+if %missioncontrol%==0 (
+	del "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag"
 	)
 
 cd %sd%:\

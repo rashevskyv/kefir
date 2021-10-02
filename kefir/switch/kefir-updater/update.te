@@ -1,6 +1,8 @@
 p=println
 pe={pause() exit()}
 boot=0
+syscon=0
+missioncontrol=0
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
@@ -31,6 +33,14 @@ if (fsexists("sd:/switch/prod.keys"))
 
 if (fsexists("sd:/boot.dat")) {
 	boot=1
+}
+
+if (fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")) {
+	syscon=1
+}
+
+if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
+	missioncontrol=1
 }
 
 # 1. Удаляем папки и файлы
@@ -134,21 +144,7 @@ delfile("sd:/switch/dbi.libusbhsfs");
 delfile("sd:/btpair/btpair.nro");
 delfile("sd:/btpair.nro");
 
-if (maj != 4) {
-	if (!fuse_patched()){
-		deldir("sd:/switch/fakenews-injector");
-		deldir("sd:/pegascape");
-		delfile("sd:/bootloader/payloads/Incognito_RCM.bin");
-	}
-
-}.else(){
-	deldir("sd:/boot.dat")
-	deldir("sd:/boot.ini")
-}
-
 delfile("sd:/install.bat");
-delfile("sd:/switch/checkpoint.nro");
-delfile("sd:/switch/checkpoint/checkpoint.nro");
 delfile("sd:/switch/reboot_to_payload.nro");
 delfile("sd:/switch/sx.nro");
 delfile("sd:/switch/n1dus.nro");
@@ -171,10 +167,8 @@ delfile("sd:/switch/fakenews-injector.nro");
 delfile("sd:/switch/gag-order.nro");
 delfile("sd:/switch/tinfoil/keys.txt");
 delfile("sd:/switch/sx/locations.conf");
-delfile("sd:/switch/.overlays/emuiibo.ovl");
 delfile("sd:/atmosphere/fusee-secondary.bin");
 delfile("sd:/bootloader/payloads/fusee-primary.bin");
-
 
 delfile("sd:/atmosphere/fusee-secondary_atmo.bin");
 delfile("sd:/atmosphere/hbl_atmo.nsp");
@@ -297,11 +291,31 @@ if (!boot) {
 	delfile("sd:/boot.ini")
 }
 
+if (!syscon) {
+	delfile("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")
+}
+
+if (!missioncontrol) {
+	delfile("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")
+}
+
 if (!fsexists("sd:/bootloader/nyx.ini")){
 	delfile("sd:/bootloader/nyx.ini")
 	movefile("sd:/bootloader/nyx.ini_" "sd:/bootloader/nyx.ini")
 }.else(){
 	delfile("sd:/bootloader/nyx.ini_")
+}
+
+if (maj != 4) {
+	if (	fuse_patched()){
+		deldir("sd:/switch/fakenews-injector");
+		deldir("sd:/pegascape");
+		delfile("sd:/bootloader/payloads/Incognito_RCM.bin");
+	}
+
+}.else(){
+	deldir("sd:/boot.dat")
+	deldir("sd:/boot.ini")
 }
 
 p()
