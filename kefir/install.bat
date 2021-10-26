@@ -53,6 +53,8 @@ if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set 
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if not exist "%sd%:\payload.bin" (set payloadbin=0)
 
+set missioncontrol=0
+
 
 echo ------------------------------------------------------------------------
 echo.
@@ -99,6 +101,7 @@ if exist "%sd%:\atmosphere\contents\010000000000100C" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmosphere\contents\0000000000534C56")
 if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
+
 if exist "%sd%:\atmosphere\erpt_reports" (RD /s /q "%sd%:\atmosphere\erpt_reports")
 if exist "%sd%:\atmosphere\fatal_reports" (RD /s /q "%sd%:\atmosphere\fatal_reports")
 if exist "%sd%:\atmosphere\fatal_errors" (RD /s /q "%sd%:\atmosphere\fatal_errors")

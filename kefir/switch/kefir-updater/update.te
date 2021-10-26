@@ -43,6 +43,8 @@ if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
 	missioncontrol=1
 }
 
+missioncontrol=0
+
 # 1. Удаляем папки и файлы
 p("* Removing old files")
 
