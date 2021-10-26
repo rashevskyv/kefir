@@ -14,7 +14,6 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 5. **Installed Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
-     <!-- * [FreshHay](https://github.com/devgru/FreshHay/releases) - program for downloading and unpacking the recommended version of the system software directly on the console -->
      * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updater for kefir 
      * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest) - file manager
      * [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log/releases/latest) - a program that allows you to track time spent in games
@@ -23,7 +22,6 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [pplay](https://github.com/Cpasjuste/pplay/releases/latest) - video player 
      * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for [safe update](http://switch.customfw.xyz/update-to-latest) version of the system software of the STB
      * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) - custom theme manager
-     <!-- * [switch-cheats-updater](https://github.com/HamletDuFromage/switch-cheats-updater/releases) - a program for downloading [cheats](http://switch.customfw.xyz/cheats) for installed games. -->
      * [Linkalho](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
 6. **Installed modules**. Modules are additional components that work inside Atmosphere and allow you to do various cool things, such as using xbox-compatible controllers, emulating amiibo, overclocking, and more. Unfortunately, SX OS modules do not support
      * [sys-con](https://github.com/cathery/sys-con/releases/latest) - a module that allows you to connect almost any gamepads to the console via USB
@@ -31,7 +29,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [Tesla Overlay Menu](https://github.com/WerWolv/Tesla-Menu/releases) - special overlay menu for interacting with the system
           - [ovlEdiZon.ovl](https://werwolv.net/downloads/EdiZonOverlay.zip) - Module for [using cheats](http://switch.customfw.xyz/cheats)
           - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases) - A module for enabling and disabling installed system modules (such as overclocking, emuuibo, etc.)
-          - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/){:target="_blank"} - Host process for loading Switch overlay OVLs (NROs)
+          - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/) - Host process for loading Switch overlay OVLs (NROs)
 
 ## Installing or updating kefir
 
@@ -45,11 +43,11 @@ If the console is turned off, insert the memory card into the PC, if it is turne
 2. On the splash screen of kefir, press the volume down button to get into the hekate
 3. Now you can remove the memory card from the switch and insert it into the PC.
 
-* When pulling out the memory card in the hekate, you will not need to re-forward the payload to enter the firmware. It is enough to insert the card into the console and run the firmware via the **Launch** menu
+* When pulling out the memory card in the **hekate**, you will not need to re-forward the payload to enter the firmware. It is enough to insert the card into the console and run the firmware via the **Launch** menu
 
 ### Installing kefir
 
-1. Copy the contents of the **archive** `atmo.zip` from this repository to the root of the memory card.
+1. Copy the contents of the **archive** `kefir.zip` from this repository to the root of the memory card.
 2. Insert the memory card back into the Switch
 3. In **hekate** select *More configs* -> *Update Kefir*
 4. After the installation is complete, the set-top box will start into the firmware
