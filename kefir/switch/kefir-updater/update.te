@@ -3,31 +3,34 @@ pe={pause() exit()}
 boot=0
 syscon=0
 missioncontrol=0
+maj=0
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
-if (fsexists("sd:/switch/prod.keys")) 
-{
-	fwstr={fw=maj.str()+"."+min.str()+"."+pat.str()}
-	fv={a=readsave("bis:/save/8000000000000120")
-	b=a.read("/meta/imkvdb.arc")
-	c=["BYTE[]",9,8,0,0,0,0,0,1]
-	d=b.find(c)
-	if(d>0){
-		e=b.slice(d+8,4).project()
-		ver=(e[3]<<24)|(e[2]<<16)|(e[1]<<8)|(e[0])
-		pat=((ver>>16)&((1<<4)- 1))
-		min=((ver>>20)&((1<<6)- 1))
-		maj=((ver>>26)&((1<<6)- 1))
-	}.else(){print("Fw not found")pe()}
-	a=0 fwstr()}
-	if(mountsys("SYSTEM")){maj=0}
-	fv()
-}.else(){
-	if (fsexists("sd:/config/kefir-helper/lockpick_sys.bin")){
-		payload("sd:/config/kefir-helper/lockpick_sys.bin")
+if (is_erista()){
+	if (fsexists("sd:/switch/prod.keys")) 
+	{
+		fwstr={fw=maj.str()+"."+min.str()+"."+pat.str()}
+		fv={a=readsave("bis:/save/8000000000000120")
+		b=a.read("/meta/imkvdb.arc")
+		c=["BYTE[]",9,8,0,0,0,0,0,1]
+		d=b.find(c)
+		if(d>0){
+			e=b.slice(d+8,4).project()
+			ver=(e[3]<<24)|(e[2]<<16)|(e[1]<<8)|(e[0])
+			pat=((ver>>16)&((1<<4)- 1))
+			min=((ver>>20)&((1<<6)- 1))
+			maj=((ver>>26)&((1<<6)- 1))
+		}.else(){print("Fw not found")pe()}
+		a=0 fwstr()}
+		if(mountsys("SYSTEM")){maj=0}
+		fv()
 	}.else(){
-	payload("sd:/kefir/config/kefir-helper/lockpick_sys.bin")
+		if (fsexists("sd:/config/kefir-helper/lockpick_sys.bin")){
+			payload("sd:/config/kefir-helper/lockpick_sys.bin")
+		}.else(){
+		payload("sd:/kefir/config/kefir-helper/lockpick_sys.bin")
+		}
 	}
 }
 
@@ -312,7 +315,7 @@ if (!fsexists("sd:/bootloader/nyx.ini")){
 }
 
 if (maj != 4) {
-	if (	fuse_patched()){
+	if (fuse_patched()){
 		deldir("sd:/switch/fakenews-injector");
 		deldir("sd:/pegascape");
 		delfile("sd:/bootloader/payloads/Incognito_RCM.bin");
@@ -333,4 +336,8 @@ p()
 p("Rebooting")
 wait(tw = 3000)
 
-payload("sd:/payload.bin")
+if (is_erista()) {
+	payload("sd:/payload.bin")
+}.else(){
+	reboot_ofw();
+}
