@@ -1,9 +1,0 @@
-628:
-* [Fixed] Fixed "BEK is missing" error when updating via Kefir Updater
-* [Changed] Changed the way to get mirrors in tinfoil / Now they are downloaded from the carcaschoi repository and updated automatically
-
-627:
-* [Updated] Atmosphere 1.2.2 - bug fixes
-* [Updated] NXThemesInstaller 2.6.4 - 13.1.0 support
-* [Updated] nx-hbmenu v3.5.0 - compiled on the basis of the latest libnx, support for themes from .zip
-* [Updated] Kefir-updater 1.0.9 - deleting the archive with firmware and kefir after unpacking
