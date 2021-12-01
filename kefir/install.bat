@@ -328,6 +328,7 @@ if exist "%sd%:\bootloader\res\ku.bmp" (del "%sd%:\bootloader\res\ku.bmp")
 if exist "%sd%:\switch\kefirupdater\kefir-updater.bin" (del "%sd%:\switch\kefirupdater\kefir-updater.bin"
 if exist "%sd%:\switch\kefirupdater\startup.te" (del "%sd%:\switch\kefirupdater\startup.te")
 if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
+if exist "%sd%:\bootloader\nyx.ini_" (del "%sd%:\bootloader\nyx.ini_")
 if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
 
 if %syscon%==0 (
