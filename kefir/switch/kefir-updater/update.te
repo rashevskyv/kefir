@@ -322,8 +322,8 @@ if (maj != 4) {
 	}
 
 }.else(){
-	deldir("sd:/boot.dat")
-	deldir("sd:/boot.ini")
+	delfile("sd:/boot.dat")
+	delfile("sd:/boot.ini")
 }
 
 p()

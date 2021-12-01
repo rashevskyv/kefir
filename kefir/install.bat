@@ -330,11 +330,6 @@ if exist "%sd%:\switch\kefirupdater\startup.te" (del "%sd%:\switch\kefirupdater\
 if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
 if exist "%sd%:\switch\kefirupdater" (RD /s /q "%sd%:\switch\kefirupdater")
 
-if %bootdat%==0 if %payloadbin%==1 (
-	del "%sd%:\boot.dat"
-	del "%sd%:\boot.ini"
-	)
-
 if %syscon%==0 (
 	del "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag"
 	)
