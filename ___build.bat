@@ -71,6 +71,7 @@ xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo (1).png" "%working_dir%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
+xcopy "Tinfoil [050000BADDAD0000].nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
 
 
 rem ECHO.

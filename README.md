@@ -27,7 +27,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [sys-con](https://github.com/cathery/sys-con/releases/latest) - a module that allows you to connect almost any gamepads to the console via USB
      * [Mission Control](https://github.com/ndeadly/MissionControl) - a module that allows you to connect almost any gamepads to the console via bluetooth
      * [Tesla Overlay Menu](https://github.com/WerWolv/Tesla-Menu/releases) - special overlay menu for interacting with the system
-          - [ovlEdiZon.ovl](https://werwolv.net/downloads/EdiZonOverlay.zip) - Module for [using cheats](http://switch.customfw.xyz/cheats)
+          - [ovlEdiZon.ovl](https://github.com/proferabg/EdiZon-Overlay/releases) - Module for [using cheats](http://switch.customfw.xyz/cheats)
           - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases) - A module for enabling and disabling installed system modules (such as overclocking, emuuibo, etc.)
           - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/) - Host process for loading Switch overlay OVLs (NROs)
 
