@@ -205,6 +205,7 @@ if exist "%sd%:\switch\kefirupdater\kefir.zip" (del "%sd%:\switch\kefirupdater\k
 if exist "%sd%:\switch\kefirupdater\firmware.zip" (del "%sd%:\switch\kefirupdater\firmware.zip")
 
 if exist "%sd%:\switch\LinkUser" (RD /s /q "%sd%:\switch\LinkUser\")
+if exist "%sd%:\switch\nxmp" (RD /s /q "%sd%:\switch\nxmp\")
 if exist "%sd%:\switch\dbi.nro" (del "%sd%:\switch\dbi.nro")
 if exist "%sd%:\switch\btpair.nro" (del "%sd%:\switch\btpair.nro")
 if exist "%sd%:\switch\btpair\btpair.nro" (del "%sd%:\switch\btpair\btpair.nro")

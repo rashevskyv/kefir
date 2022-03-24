@@ -137,6 +137,7 @@ deldir("sd:/switch/incognito");
 deldir("sd:/switch/ChoiDujourNX");
 deldir("sd:/switch/nxmtp");
 deldir("sd:/switch/LinkUser");
+deldir("sd:/switch/nxmp");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
 

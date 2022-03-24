@@ -1,0 +1,8 @@
+//!HOOK CHROMA
+//!BIND HOOKED
+//!DESC ChromaOff
+
+/* glsl-shader for mpv video player, removes yuv source chroma (keep luma)*/ 
+vec4 hook(){
+	return vec4(0.5);
+}
