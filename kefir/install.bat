@@ -53,7 +53,7 @@ if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set 
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if not exist "%sd%:\payload.bin" (set payloadbin=0)
 
-rem set missioncontrol=0
+set missioncontrol=0
 
 
 echo ------------------------------------------------------------------------
