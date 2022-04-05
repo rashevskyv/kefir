@@ -3,27 +3,27 @@ chcp 866 >nul 2>&1
 
 COLOR 0F
 
-set reldir=E:\Switch\_kefir\release
-set kefir_dir=E:\Switch\_kefir\kefir
-set hekate_dir=E:\Switch\_kefir\kefir\bootloader\sys
-set hekate_build=F:\git\dev\hekate\output
-set hbl_build=F:\git\dev\nx-hbmenu\hbmenu.nro
-set working_dir=E:\Switch\_kefir
+set reldir=G:\git\dev\kefir\release
+set kefir_dir=G:\git\dev\kefir\kefir
+set hekate_dir=G:\git\dev\kefir\kefir\bootloader\sys
+set hekate_build=G:\git\dev\hekate\output
+set hbl_build=G:\git\dev\nx-hbmenu\hbmenu.nro
+set working_dir=G:\git\dev\kefir
 set build_dir=%working_dir%\build
-set googledrive_dir=S:\Мой диск\Shared\release
+set googledrive_dir=%reldir%
 set sd=%build_dir%
-set img=F:\VK\kefir
-set site=F:\git\site\switch
-set ps=F:\git\scripts\build_kefir.ps1
-set dbi=E:\Switch\dbibackend
+set img=G:\VK\kefir
+set site=G:\git\site\switch
+set ps=G:\git\scripts\build_kefir.ps1
+set dbi=G:\Switch\dbibackend
 set /p ver=<version
 if exist "%build_dir%" (RD /s /q "%build_dir%")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
-set atmo_build="F:\git\dev\atmosphere-out.zip"
-set kefirupdater="F:\git\dev\Kefir-updater\Kefir-updater.nro"
+set atmo_build="G:\git\dev\atmosphere-out.zip"
+set kefirupdater="G:\git\dev\Kefir-updater\Kefir-updater.nro"
 
 
 ECHO.
