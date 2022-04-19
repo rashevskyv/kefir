@@ -267,9 +267,9 @@ rem xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
-if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
-if exist "E:\Switch\addons\atmosphere" (xcopy "E:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
-if exist "E:\Switch\TinGen-main\index.tfl" (xcopy "E:\Switch\TinGen-main\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
+if exist "D:\Switch\addons\themes" (xcopy "D:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
+if exist "D:\Switch\addons\atmosphere" (xcopy "D:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
+if exist "D:\Switch\TinGen-main\index.tfl" (xcopy "E:\Switch\TinGen-main\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
 
 if exist "%sd%:\bootloader\nyx.bkp" (
 	copy "%sd%:\bootloader\nyx.bkp" "%sd%:\bootloader\nyx.ini"

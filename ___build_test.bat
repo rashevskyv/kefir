@@ -3,25 +3,25 @@ chcp 866 >nul 2>&1
 
 COLOR 0F
 
-set reldir=G:\git\dev\kefir\release_test
-set kefir_dir=G:\git\dev\kefir\kefir
-set hekate_dir=G:\git\dev\kefir\kefir\bootloader\sys
-set hekate_build=G:\git\dev\hekate\output
-set working_dir=G:\git\dev\kefir
+set reldir=D:\git\dev\_kefir\release_test
+set kefir_dir=D:\git\dev\_kefir\kefir
+set hekate_dir=D:\git\dev\_kefir\kefir\bootloader\sys
+set hekate_build=D:\git\dev\hekate\output
+set working_dir=D:\git\dev\_kefir
 set build_dir=%working_dir%\build
 set gd=%reldir%
 set sd=%build_dir%\atmo
-set img=G:\VK\kefir
-set site=G:\git\site\switch
-set ps=G:\git\scripts\build_kefir.ps1
+set img=D:\git\dev\_kefir\bootlogo
+set site=D:\git\site\switch
+set ps=D:\git\scripts\build_kefir.ps1
 set /p ver=<version
 if exist "%build_dir%" (RD /s /q "%build_dir%")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
-set atmo_build="G:\git\dev\atmosphere-out.zip"
-set kefirupdater="G:\git\dev\Kefir-updater\Kefir-updater.nro"
+set atmo_build="D:\git\dev\atmosphere-out.zip"
+set kefirupdater="D:\git\dev\kefir-updater\Kefir-updater.nro"
 
 "C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
 
@@ -46,8 +46,8 @@ del "%kefir_dir%\hekate_ctcaer_*.bin"
 
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
-xcopy "%img%\bootlogo (1).png" "%site_img%\kefir.png" /H /Y /C /R
-xcopy "%img%\bootlogo (1).png" "%working_dir%\kefir.png" /H /Y /C /R
+xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R
+xcopy "%img%\kiosk.png" "%working_dir%\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
 
