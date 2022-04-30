@@ -3,7 +3,7 @@ chcp 866 >nul 2>&1
 
 COLOR 0F
 
-set reldir=D:\git\dev\_kefir\release
+set reldir="D:\git\dev\_kefir\release"
 set kefir_dir=D:\git\dev\_kefir\kefir
 set hekate_dir=D:\git\dev\_kefir\kefir\bootloader\sys
 set hekate_build=D:\git\dev\hekate\output
