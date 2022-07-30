@@ -3,27 +3,28 @@ chcp 866 >nul 2>&1
 
 COLOR 0F
 
-set reldir="D:\git\dev\_kefir\release"
-set kefir_dir=D:\git\dev\_kefir\kefir
-set hekate_dir=D:\git\dev\_kefir\kefir\bootloader\sys
-set hekate_build=D:\git\dev\hekate\output
-set hbl_build=D:\git\dev\nx-hbmenu\hbmenu.nro
-set working_dir=D:\git\dev\_kefir
-set build_dir=%working_dir%\build
+set working_dsk=F:
+set working_dir=%working_dsk%\git\dev
+set reldir="%working_dir%\_kefir\release"
+set kefir_dir=%working_dir%\_kefir\kefir
+set hekate_dir=%working_dir%\_kefir\kefir\bootloader\sys
+set hekate_build=%working_dir%\hekate\output
+set hbl_build=%working_dir%\nx-hbmenu\hbmenu.nro
+set build_dir=%working_dir%\_kefir\build
 set googledrive_dir=%reldir%
 set sd=%build_dir%
-set img=D:\git\dev\_kefir\bootlogo
-set site=D:\git\site\switch
-set ps=D:\git\scripts\build_kefir.ps1
-set dbi=D:\Switch\dbibackend
+set img=%working_dir%\_kefir\bootlogo
+set site=%working_dsk%\git\site\switch
+set ps=%working_dsk%\git\scripts\build_kefir.ps1
+set dbi=%working_dsk%\Switch\dbibackend
 set /p ver=<version
 if exist "%build_dir%" (RD /s /q "%build_dir%")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
-set atmo_build="D:\git\dev\atmosphere-out.zip"
-set kefirupdater="D:\git\dev\kefir-updater\Kefir-updater.nro"
+set atmo_build="%working_dir%\atmosphere-out.zip"
+set kefirupdater="%working_dir%\kefir-updater\Kefir-updater.nro"
 
 
 ECHO.
@@ -45,20 +46,20 @@ set /p st=:
 for %%A in ("2") do if "%st%"==%%A (goto noatmo)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
 
-"C:\Program Files\7-Zip\7z.exe" x %atmo_build% -o%kefir_dir% -y
+"E:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
 
 :noatmo
 
 if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
-xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
 
-xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
-xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
@@ -68,10 +69,10 @@ del "%kefir_dir%\hekate_ctcaer_*.bin"
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
 xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R
-xcopy "%img%\kiosk.png" "%working_dir%\kefir.png" /H /Y /C /R
+xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
-xcopy "Tinfoil [050000BADDAD0000].nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
+xcopy "E:\Switch\Games\Tinfoil*.nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
 
 
 rem ECHO.
@@ -97,17 +98,17 @@ rem set /p ver=<version
 rem set /a ver = %ver% + 1
 rem echo %ver% > version
 
-xcopy "%working_dir%\version" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
-xcopy "%working_dir%\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\changelog" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
 
 
 :start
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")
-xcopy "%working_dir%\changelog*" "%reldir%\" /H /Y /C /R
-xcopy "%working_dir%\version" "%reldir%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
 
 pause
 
@@ -191,7 +192,7 @@ if exist "%sd%\switch\mercury" (
 
     
 rem kefir
-"C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%.zip %kefir_dir%\*
+"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%.zip %kefir_dir%\*
 
 echo ------------------------------------------------------------------------
 echo.

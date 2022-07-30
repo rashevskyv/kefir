@@ -7,7 +7,6 @@ set wd=%temp%\sdfiles
 set clear=0
 set cfw=ATMO
 set cfwname=Atmosphere
-set lang=0
 set theme_flag=0
 set theme=0
 set caffeine=0
@@ -25,19 +24,12 @@ set nyx=0
 :newcard
 COLOR 0F
 cls
-if %lang%==1 (
-	echo Выберите вашу карту памяти из смонтированных
-) else (
-	echo Choose mounted SD card letter
-)
+echo Choose mounted SD card letter
+
 
 for /f "tokens=3-6 delims=: " %%a in ('WMIC LOGICALDISK GET FreeSpace^,Name^,Size^,filesystem^,description ^|FINDSTR /I "Removable" ^|findstr /i "exfat fat32"') do (@echo wsh.echo "Disk letter: %%c;" ^& " free: " ^& FormatNumber^(cdbl^(%%b^)/1024/1024/1024, 2^)^& " GB;"^& " size: " ^& FormatNumber^(cdbl^(%%d^)/1024/1024/1024, 2^)^& " GB;" ^& " FS: %%a" > %temp%\tmp.vbs & @if not "%%c"=="" @echo( & @cscript //nologo %temp%\tmp.vbs & del %temp%\tmp.vbs)
 echo.
-if %lang%==1 (
-	set /P sd="Введите букву по которой смонтирована карта памяти: "
-) else (
-	set /P sd="Enter SD card letter: "
-)
+set /P sd="Enter SD card letter: "
 
 if not exist "%sd%:\" (
 	set word=        There is no SD card in %sd%-drive         
@@ -253,11 +245,11 @@ if exist "%sd%:\bootloader\nyx.ini" (
 	)
 
 
-	echo ------------------------------------------------------------------------
-	echo.
-	echo                             Installing                   
-	echo.
-	echo ------------------------------------------------------------------------
+echo ------------------------------------------------------------------------
+echo.
+echo                             Installing                   
+echo.
+echo ------------------------------------------------------------------------
 
 
 rem if exist "%temp%\sdfiles\" (RD /s /q "%temp%\sdfiles\")
@@ -267,22 +259,23 @@ rem xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
-if exist "D:\Switch\addons\themes" (xcopy "D:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
-if exist "D:\Switch\addons\atmosphere" (xcopy "D:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
-if exist "D:\Switch\pyTinGen\index.tfl" (xcopy "D:\Switch\pyTinGen\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\atmosphere" (xcopy "E:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\pyTinGen\index.tfl" (xcopy "E:\Switch\pyTinGen\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
+
+if exist "%sd%:\.git" (RD /s /q "%sd%:\.git")
 
 if exist "%sd%:\bootloader\nyx.bkp" (
 	copy "%sd%:\bootloader\nyx.bkp" "%sd%:\bootloader\nyx.ini"
 	del "%sd%:\bootloader\nyx.bkp"
 	)
 
-	echo ------------------------------------------------------------------------
-	echo.
-	echo                              Fix atributes                              
-	echo.
-	echo ------------------------------------------------------------------------
-	echo.
-)
+echo ------------------------------------------------------------------------
+echo.
+echo                              Fix atributes                              
+echo.
+echo ------------------------------------------------------------------------
+echo.
 
 if exist "%sd%:\atmosphere" (
 	attrib -A /S /D %sd%:\atmosphere\*
@@ -327,7 +320,7 @@ if exist "%sd%:\bootloader\hekate_ipl_.ini" (copy %sd%:\bootloader\hekate_ipl_.i
 if exist "%sd%:\bootloader\hekate_ipl_.ini" (del "%sd%:\bootloader\hekate_ipl_.ini")
 if exist "%sd%:\bootloader\ini\*kefir_updater.ini" (del "%sd%:\bootloader\ini\*kefir_updater.ini")
 if exist "%sd%:\bootloader\res\ku.bmp" (del "%sd%:\bootloader\res\ku.bmp")
-if exist "%sd%:\switch\kefirupdater\kefir-updater.bin" (del "%sd%:\switch\kefirupdater\kefir-updater.bin"
+if exist "%sd%:\switch\kefirupdater\kefir-updater.bin" (del "%sd%:\switch\kefirupdater\kefir-updater.bin")
 if exist "%sd%:\switch\kefirupdater\startup.te" (del "%sd%:\switch\kefirupdater\startup.te")
 if exist "%sd%:\install.bat" (del "%sd%:\install.bat")
 if exist "%sd%:\bootloader\nyx.ini_" (del "%sd%:\bootloader\nyx.ini_")
@@ -353,94 +346,61 @@ cls
 COLOR C
 
 
-	ECHO ----------------------------------------------------------
-	ECHO ======            Choosed SD letter is: %sd%:/            =====
-	ECHO ======               Выбранный диск: %sd%:/               =====
-	ECHO.
-	ECHO ======     По адресу %sd%:/ карта памяти не найдена     =====
-	ECHO ======       There is no SD card in drive %sd%:/        =====
-	ECHO ----------------------------------------------------------
-	ECHO.
-	ECHO          Убедитесь, что указали правильную букву диска
-	ECHO. 
-	ECHO            1.  The card letter is correct
-	ECHO                Буква диска указана верно
-	ECHO.
-	ECHO            2.  Choose another card letter
-	ECHO                Ввести другую букву диска
-	ECHO.
-	ECHO ==========================================================
-	ECHO                                              Q.  Выход
-	ECHO.
+ECHO ----------------------------------------------------------
+ECHO ======            Choosed SD letter is: %sd%:/          =====
+ECHO ======       There is no SD card in drive %sd%:/        =====
+ECHO ----------------------------------------------------------
+ECHO.
+ECHO. 
+ECHO            1.  The card letter is correct
+ECHO            2.  Choose another card letter
+ECHO.
+ECHO ==========================================================
+ECHO                                              Q.  Exit
+ECHO.
 
 set st=
 set /p st=:
 
-for %%A in ("Y" "y" "1" "н" "Н") do if "%st%"==%%A (GOTO main)
-for %%A in ("N" "n" "2" "т" "Т") do if "%st%"==%%A (GOTO newcard)
-for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
+for %%A in ("Y" "y" "1" "╨╜" "╨Э") do if "%st%"==%%A (GOTO main)
+for %%A in ("N" "n" "2" "╤В" "╨в") do if "%st%"==%%A (GOTO newcard)
+for %%A in ("Q" "q" "╨Щ" "╨╣") do if "%st%"==%%A (GOTO END)
 
 :rembkp
-if %lang%==1 (
-	echo ------------------------------------------------------------------------
-	echo.
-	echo                         Удаление папки _backup                          
-	echo                                Ожидайте!                                
-	echo.
-	echo ------------------------------------------------------------------------
-) else (
-	echo ------------------------------------------------------------------------
-	echo.
-	echo                         Removing _backup folder                         
-	echo                              Please wait!                               
-	echo.
-	echo ------------------------------------------------------------------------
-)
+
+echo ------------------------------------------------------------------------
+echo.
+echo                         Removing _backup folder                         
+echo                              Please wait!                               
+echo.
+echo ------------------------------------------------------------------------
+
+RD /s /q "%sd%:\_backup"
+goto main
+
+echo ------------------------------------------------------------------------
+echo.
+echo                         Removing _backup folder                         
+echo                              Please wait!                               
+echo.
+echo ------------------------------------------------------------------------
+
 
 RD /s /q "%sd%:\_backup"
 goto main
 
 :END
-if %lang%==1 (
-	echo. 
-	echo Нажмите любую клавишу для выхода
-) else (
-	echo. 
-	echo Press any button for exit
-)
-
-RD /s /q "%wd%
-pause>nul 2>&1
-exit
-
-	echo                          Удаление папки _backup                         
-	echo                                Ожидайте!                                
-	echo.
-	echo ------------------------------------------------------------------------
-) else (
-	echo ------------------------------------------------------------------------
-	echo.
-	echo                         Removing _backup folder                         
-	echo                              Please wait!                               
-	echo.
-	echo ------------------------------------------------------------------------
-)
-
-RD /s /q "%sd%:\_backup"
-goto main
-
-:END
-	echo. 
-	cls
-	COLOR 2
-	echo ------------------------------------------------------------------------
-	echo                            All Done
-	echo ------------------------------------------------------------------------
-	echo. 
-	echo. 
-	echo Press any button for exit
+echo. 
+cls
+COLOR 2
+echo ------------------------------------------------------------------------
+echo                            All Done
+echo ------------------------------------------------------------------------
+echo. 
+echo. 
+echo Press any button for exit
 
 
-rem RD /s /q "%wd%
+if exist "%wd%" (RD /s /q "%wd%\*")
 pause>nul 2>&1
 exit
