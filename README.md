@@ -1,4 +1,6 @@
-# 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
+# Kefir moved here - https://codeberg.org/rashevskyv/kefir/releases
+
+## 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
 >
 > I'm the creator of this project and I'm Ukrainian.
 >
@@ -39,6 +41,4 @@
 >
 > **THANK YOU!**
 
-Kefir moved here - placeholder link
 
-Мы в процессе переезда с гихаба, поскольку там начались чистки пиратских пепозиториев. Следите за обновлениями README 
