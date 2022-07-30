@@ -1,5 +1,3 @@
-# kefir ![Github latest downloads](https://img.shields.io/github/downloads/rashevskyv/kefir/647/total.svg)
-
 # 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
 >
 > I'm the creator of this project and I'm Ukrainian.
