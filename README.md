@@ -1,4 +1,4 @@
-# kefir ![Github latest downloads](https://img.shields.io/github/downloads/rashevskyv/kefir/total.svg)
+# kefir ![Github latest downloads](https://img.shields.io/github/downloads/rashevskyv/kefir/647/total.svg)
 
 # 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
 >
