@@ -47,7 +47,7 @@ if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
 }
 
 # Set mission control status
-#missioncontrol=0
+missioncontrol=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
@@ -133,12 +133,15 @@ deldir("sd:/switch/KosmosUpdater");
 deldir("sd:/switch/mercury");
 deldir("sd:/switch/ldnmitm_config");
 deldir("sd:/switch/LinkUser/");
-deldir("sd:/switch/nxmtp/");
 deldir("sd:/switch/incognito");
 deldir("sd:/switch/ChoiDujourNX");
 deldir("sd:/switch/nxmtp");
 deldir("sd:/switch/LinkUser");
 deldir("sd:/switch/nxmp");
+deldir("sd:/switch/daybreak");
+deldir("sd:/switch/JKSV");
+deldir("sd:/switch/NX-Shell");
+deldir("sd:/switch/SX Save Manager");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
 
@@ -179,6 +182,10 @@ delfile("sd:/switch/tinfoil/keys.txt");
 delfile("sd:/switch/sx/locations.conf");
 delfile("sd:/atmosphere/fusee-secondary.bin");
 delfile("sd:/bootloader/payloads/fusee-primary.bin");
+deldir("sd:/switch/daybreak/daybreak.nro");
+deldir("sd:/switch/JKSV/JKSV.nro");
+deldir("sd:/switch/NX-Shell/NX-Shell.nro");
+deldir("sd:/switch/SX Save Manager/SXSM.nro");
 
 delfile("sd:/atmosphere/fusee-secondary_atmo.bin");
 delfile("sd:/atmosphere/hbl_atmo.nsp");
