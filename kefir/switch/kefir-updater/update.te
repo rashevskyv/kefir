@@ -47,7 +47,7 @@ if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
 }
 
 # Set mission control status
-missioncontrol=0
+#missioncontrol=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
@@ -297,7 +297,8 @@ delfile("sd:/switch/kefir-updater/update.te")
 delfile("sd:/startup.te")
 copyfile("sd:/bootloader/hekate_ipl_.ini", "sd:/bootloader/hekate_ipl.ini")
 delfile("sd:/bootloader/hekate_ipl_.ini")
-delfile("sd:/bootloader/ini/*kefir_updater.ini")
+delfile("sd:/bootloader/ini/!kefir_updater.ini")
+delfile("sd:/bootloader/ini/kefir_updater.ini")
 delfile("sd:/bootloader/res/ku.bmp")
 delfile("sd:/switch/kefirupdater/kefir-updater.bin")
 delfile("sd:/switch/kefirupdater/startup.te")

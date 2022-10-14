@@ -1,5 +1,12 @@
-ВНИМАНИЕ!! Не обновляйте эмунанд на 15.0.0!! Очень много программ еще не адаптированы для 15.0.0. Например, MissionControl, который при включении вешает Atmosphere. Поэтому он отключается у всех прои обновлении кефира. 
+ВНИМАНИЕ!! Не обновляйте эмунанд на 15.0.0!! Не все программы еще поддерживают эту версию прошивки и могут вылетать!
 
+651: 
+* [**Обновлено**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) - исправлена ошибка, из-за которой вылетали игры, требующие подключение к интернету (спасибо @duckbill007)
+* [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - поддержка 15.0.0, но без поддержки контроллеров 8bitdo SN30 Pro Xbox Cloud Gaming и Wii Balance Board в 15.0.0
+* [**Обновлено**] [EdiZon Overlay v1.0.2d](https://github.com/proferabg/EdiZon-Overlay/releases) - поддержка 15.0.0
+* [**Обновлено**] Tinfoil 15.0 RC0 - поддержка 15.0.0
+
+650:
 * [**Обновлено**] [сигпатчи](https://jits.cc/patches) - поддержка прошивки 15.0.0
 * [**Обновлено**] [Atmosphere 1.4.0](https://github.com/rashevskyv/Kefirosphere) - поддержка прошивки 15.0.0
 * [**Обновлено**] [hekate 5.9.0](https://github.com/CTCaer/hekate/releases) - поддержка прошивки 15.0.0
