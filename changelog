@@ -1,4 +1,10 @@
 ВНИМАНИЕ!! Не обновляйте эмунанд на 15.0.0!! Не все программы еще поддерживают эту версию прошивки и могут вылетать!
+
+652: 
+* [**Обновлено**] [Atmosphere 1.4.0](https://github.com/rashevskyv/Kefirosphere) - релизная версия
+* [**Обновлено**] [nx-hbloader v2.4.3](https://github.com/switchbrew/nx-hbloader/releases) - добавлены новые системные вызовы
+* [**Обновлено**] [DBI 434](https://github.com/rashevskyv/dbi/releases) - отображается TitleID игры вместо папки "Mods & Cheats" в папке Install Games при монтировании консоли по MTP. Предварительная поддержка монтирования контента игр на SDK15 (не тестировалось)
+
 651-fix: 
 * [**Исправлено**] Зависание в hekate у некоторых пользователей
 
@@ -10,7 +16,7 @@
 
 650:
 * [**Обновлено**] [сигпатчи](https://jits.cc/patches) - поддержка прошивки 15.0.0
-* [**Обновлено**] [Atmosphere 1.4.0](https://github.com/rashevskyv/Kefirosphere) - поддержка прошивки 15.0.0
+* [**Обновлено**] [Atmosphere 1.4.0-pre](https://github.com/rashevskyv/Kefirosphere) - поддержка прошивки 15.0.0
 * [**Обновлено**] [hekate 5.9.0](https://github.com/CTCaer/hekate/releases) - поддержка прошивки 15.0.0
 * [**Обновлено**] [Kefir-Updater 2.20.1](https://github.com/rashevskyv/kefir-updater/releases) - ускорена распаковка архива, прочие исправления
 * [**Обновлено**] [DBI 432](https://github.com/rashevskyv/dbi/releases) - обновлен интерфейс, поддержка архивов zip, rar, cbr, cbz (да, можно читать комиксы через DBI), поддержка внешней клавиатуры, фоновое кеширование списка программ и много всего другого
