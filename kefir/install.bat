@@ -9,16 +9,11 @@ set cfw=ATMO
 set cfwname=Atmosphere
 set theme_flag=0
 set theme=0
-set caffeine=0
-set dbi=0
-set tesla=0
-set tesla_flag=1
-set modchip=1
-set bootdat=1
 set syscon=1
 set missioncontrol=1
+set bootdat=1
 set payloadbin=1
-set nyx=0
+set pegascape=1
 
 set sd=%1
 if not defined %sd% (GOTO main)
@@ -43,10 +38,11 @@ if not exist "%sd%:\" (
 
 :main
 
-if not exist "%sd%:\boot.dat" (set bootdat=0)
+if not exist "%sd%:\pegascape" (if exist "%sd%:\atmosphere" (set pegascape=0))
+rem if not exist "%sd%:\boot.dat" (set bootdat=0)
+rem if not exist "%sd%:\payload.bin" (set payloadbin=0)
 if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set syscon=0)
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
-if not exist "%sd%:\payload.bin" (set payloadbin=0)
 
 rem Set mission control status
 rem set missioncontrol=0
@@ -278,6 +274,10 @@ if exist "%sd%:\.git" (RD /s /q "%sd%:\.git")
 if exist "%sd%:\bootloader\nyx.bkp" (
 	copy "%sd%:\bootloader\nyx.bkp" "%sd%:\bootloader\nyx.ini"
 	del "%sd%:\bootloader\nyx.bkp"
+	)
+
+if %pegascape%==0 (
+	if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
 	)
 
 echo ------------------------------------------------------------------------

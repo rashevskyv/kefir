@@ -4,6 +4,7 @@ boot=0
 syscon=0
 missioncontrol=0
 maj=0
+pegascape=1
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 

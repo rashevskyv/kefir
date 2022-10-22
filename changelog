@@ -1,5 +1,12 @@
 ВНИМАНИЕ!! Не обновляйте эмунанд на 15.0.0!! Не все программы еще поддерживают эту версию прошивки и могут вылетать!
 
+653:
+* [**Обновлено**] [DBI 436](https://github.com/rashevskyv/dbi/releases) - при установке множества файлов, уже установленные отображаются серым
+* [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - убрана пасхалка, перекрашивающая джойконы
+* [**Обновлено**] [Tinfoil 15.0 RC1](https://tinfoil.io/Download#download) - какие-то исправления
+* [**Обновлено**] [linkalho v2.0.1](https://github.com/rdmrocha/linkalho/releases) - возможность линковать определенные аккаунты, а не все, возможность выбрать страну для линкованного аккаунта, настройки локализации и часового пояса теперь при линковке берутся из настроек
+* [**Обновлено**] [EdiZon-Overlay v1.0.3](https://github.com/proferabg/EdiZon-Overlay/releases) - удален сингал WiFi для HOS15+, В System Information добавлен статус сетевого соединения
+
 652: 
 * [**Обновлено**] [Atmosphere 1.4.0](https://github.com/rashevskyv/Kefirosphere) - релизная версия
 * [**Обновлено**] [nx-hbloader v2.4.3](https://github.com/switchbrew/nx-hbloader/releases) - добавлены новые системные вызовы

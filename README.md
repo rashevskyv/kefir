@@ -46,7 +46,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 ## What does kefir consist of
 
 1. **[Kefirosphere](https://github.com/rashevskyv/Kefirosphere)** based on [Atmosphere](https://github.com/Atmosphere-NX/Atmosphere)
-2. **[Sigpatches](https://github.com/ITotalJustice/patches/releases)**. Thanks to the Atmosphere sigpatch, you can run unsigned (read: *pirated*) applications and games. 
+2. **[Sigpatches](https://jits.cc/patches)**. Thanks to the Atmosphere sigpatch, you can run unsigned (read: *pirated*) applications and games. 
 3. **[hekate bootloader](https://github.com/CTCaer/hekate/releases/latest)**. Thanks to the bootloader, you can run firmware and other payloads through a convenient menu, create and restore a NAND backup, make EmuNAND, get information about the system state, mount a memory card to a PC without pulling it out of the switch, re-partition the memory card to install other operating systems, and much other
 4. **Installed payloads**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
@@ -56,7 +56,6 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
      * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updater for kefir 
-     * [NX-Shell](https://github.com/joel16/NX-Shell/releases/latest) - file manager
      * [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log/releases/latest) - a program that allows you to track time spent in games
      * [JKSV](https://github.com/J-D-K/JKSV/releases) - program for backup and restoration of saves
      * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases) - program for updating kefir via the Internet
