@@ -1,30 +1,37 @@
-#### **RUS:**
+#### **RUS**:
+**15.0.0 поддерживается**
 
-654:
+**655**:
+* [**Обновлено**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - исправлены ошибки
+* [**Обновлено**] [NxThemesInstaller](https://github.com/exelix11/SwitchThemeInjector/releases) - добавлен патч для корректной работы на 15.0.0
+* [**Обновлено**] Tinfoil - изменен список источников на локальный, поскольку удаленный больше не работает 
+**ЗАМЕТКА:** [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log) не работает на 15.0.0
+
+**654**:
 * [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - вернул версию с пасхалкой, поскольку билд без неё вешает 15.0.0. Придется собирать самому
 
-653:
+**653**:
 * [**Обновлено**] [DBI 436](https://github.com/rashevskyv/dbi/releases) - при установке множества файлов, уже установленные отображаются серым
 * [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - убрана пасхалка, перекрашивающая джойконы
 * [**Обновлено**] [Tinfoil 15.0 RC1](https://tinfoil.io/Download#download) - какие-то исправления
-* [**Обновлено**] [linkalho v2.0.1](https://github.com/rdmrocha/linkalho/releases) - возможность линковать определенные аккаунты, а не все, возможность выбрать страну для линкованного аккаунта, настройки локализации и часового пояса теперь при линковке берутся из настроек
+* [**Обновлено**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - возможность линковать определенные аккаунты, а не все, возможность выбрать страну для линкованного аккаунта, настройки локализации и часового пояса теперь при линковке берутся из настроек
 * [**Обновлено**] [EdiZon-Overlay v1.0.3](https://github.com/proferabg/EdiZon-Overlay/releases) - удален сингал WiFi для HOS15+, В System Information добавлен статус сетевого соединения
 
-652: 
+**652**:
 * [**Обновлено**] [Atmosphere 1.4.0](https://github.com/rashevskyv/Kefirosphere) - релизная версия
 * [**Обновлено**] [nx-hbloader v2.4.3](https://github.com/switchbrew/nx-hbloader/releases) - добавлены новые системные вызовы
 * [**Обновлено**] [DBI 434](https://github.com/rashevskyv/dbi/releases) - отображается TitleID игры вместо папки "Mods & Cheats" в папке Install Games при монтировании консоли по MTP. Предварительная поддержка монтирования контента игр на SDK15 (не тестировалось)
 
-651-fix: 
+**651-fix**:
 * [**Исправлено**] Зависание в hekate у некоторых пользователей
 
-651: 
+**651**:
 * [**Обновлено**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) - исправлена ошибка, из-за которой вылетали игры, требующие подключение к интернету (спасибо @duckbill007)
 * [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - поддержка 15.0.0, но без поддержки контроллеров 8bitdo SN30 Pro Xbox Cloud Gaming и Wii Balance Board в 15.0.0
 * [**Обновлено**] [EdiZon Overlay v1.0.2d](https://github.com/proferabg/EdiZon-Overlay/releases) - поддержка 15.0.0
 * [**Обновлено**] Tinfoil 15.0 RC0 - поддержка 15.0.0
 
-650:
+**650**:
 * [**Обновлено**] [сигпатчи](https://jits.cc/patches) - поддержка прошивки 15.0.0
 * [**Обновлено**] [Atmosphere 1.4.0-pre](https://github.com/rashevskyv/Kefirosphere) - поддержка прошивки 15.0.0
 * [**Обновлено**] [hekate 5.9.0](https://github.com/CTCaer/hekate/releases) - поддержка прошивки 15.0.0
@@ -32,34 +39,40 @@
 * [**Обновлено**] [DBI 432](https://github.com/rashevskyv/dbi/releases) - обновлен интерфейс, поддержка архивов zip, rar, cbr, cbz (да, можно читать комиксы через DBI), поддержка внешней клавиатуры, фоновое кеширование списка программ и много всего другого
 * [**Обновлено**] [Mission Control 0.7.1](https://github.com/ndeadly/MissionControl/releases/) - поддержка контроллера 8bitdo SN30 Pro Xbox Cloud Gaming и Wii Balance Board
 * [**Возвращено**] Full Stock я вернул, но перенёс из Launch в More Configs
-* [**Удалено**] NX-shell - DBI умеет всё то же самое, только больше :)
+* [**Удалено**] NX-shell - DBI умеет всё то же самое, только больше **:)
 
 
 ____
 
-#### **ENG:**
+#### **ENG**:
 **15.0.0 is supported**
 
-**654:**
-* [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - returned the version with the easter egg, since the build without it hangs 15.0.0. You have to collect yourself
+**655**:
+* [**Updated**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - bugfixes
+* [**Updated**] [NxThemesInstaller](https://github.com/exelix11/SwitchThemeInjector/releases) - added ips for 15.0.0 support
+* [**Updated**] Tinfoil - changed sources from external to internal
+**NOTICE:** [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log) is not work properly on 15.0.0
 
-**653:**
+**654**:
+* [**Updated**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - returned the version with the easter egg, since the build without it hangs 15.0.0. You have to collect yourself
+
+**653**:
 * [**Updated**] [DBI 436](https://github.com/rashevskyv/dbi/releases) - Games and updates are already installed are grey colored now
 * [**Updated**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - removeв easter egg that recolor gamepads
 * [**Updated**] [Tinfoil 15.0 RC1](https://tinfoil.io/Download#download)
-* [**Updated**] [linkalho v2.0.1](https://github.com/rdmrocha/linkalho/releases) - ability for the user to select which accounts will be linked/unlinked; ability for the user to select which country will be injected into the linked profile; generators now feed from system settings to get locale and timezone settings instead of injecting hard-coded ones
+* [**Updated**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - ability for the user to select which accounts will be linked/unlinked; ability for the user to select which country will be injected into the linked profile; generators now feed from system settings to get locale and timezone settings instead of injecting hard-coded ones
 * [**Updated**] [EdiZon-Overlay v1.0.3](https://github.com/proferabg/EdiZon-Overlay/releases) - Removed WiFi Signal on HOS 15+; added Connection Status in System Information on HOS versions 15+
 
-**652:**
+**652**:
 * [**Updated**] [Atmosphere 1.4.0](https://github.com/rashevskyv/Kefirosphere) - release version
 	* [**Details of the changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [nx-hbloader v2.4.3](https://github.com/switchbrew/nx-hbloader/releases) - added new syscalls
 * [**Updated**] [DBI 434](https://github.com/rashevskyv/dbi/releases) - the TitleID of the game is displayed instead of the "Mods & Cheats" folder in the Install Games folder when mounting the console via MTP. Preliminary support for mounting game content on SDK15 (not tested)
 
-**651-fix**: 
+**651-fix**:
 * [**Fixed**] Fix freezing on hekate for some users
 
-**651**: 
+**651**:
 * [**Updated**] [Atmosphere 1.4.0-pre](https://github.com/rashevskyv/Kefirosphere) - Fixed an issue that caused games that require an internet connection to crash (thanks to @duckbill007)
 	* [**Details of the changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - 15.0.0 support but no 8bitdo SN30 Pro Xbox Cloud Gaming and Wii Balance Board controller support in 15.0.0
@@ -73,5 +86,5 @@ ____
 * [**Updated**] [Kefir-Updater 2.20.1](https://github.com/rashevskyv/kefir-updater/releases) - faster archive unpacking, other fixes
 * [**Updated**] [DBI 432](https://github.com/rashevskyv/dbi/releases) - updated interface, support for zip, rar, cbr, cbz archives (yes, you can read comics via DBI), external keyboard support, background caching of the program list and much more
 * [**Updated**] [Mission Control 0.7.1](https://github.com/ndeadly/MissionControl/releases/) - support for 8bitdo SN30 Pro controller Xbox Cloud Gaming and Wii Balance Board
-* [**Returned**] **Full Stock** I returned, but moved from Launch to **More Configs**
-* [**Removed**] NX-shell - DBI can do all the same, only more :)
+* [**Returned**] **Full Stock**I returned, but moved from Launch to **More Configs**
+* [**Removed**] NX-shell - DBI can do all the same, only more **:)
