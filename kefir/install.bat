@@ -39,8 +39,7 @@ if not exist "%sd%:\" (
 :main
 
 if not exist "%sd%:\pegascape" (if exist "%sd%:\atmosphere" (set pegascape=0))
-rem if not exist "%sd%:\boot.dat" (set bootdat=0)
-rem if not exist "%sd%:\payload.bin" (set payloadbin=0)
+if not exist "%sd%:\boot.dat" (if exist "%sd%:\atmosphere" (set bootdat=0))
 if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set syscon=0)
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 
@@ -187,8 +186,6 @@ if exist "%sd%:\switch\JKSV.nro" (del "%sd%:\switch\JKSV.nro")
 if exist "%sd%:\switch\JKSV\JKSV.nro" (del "%sd%:\switch\JKSV\JKSV.nro")
 if exist "%sd%:\switch\SXSM.nro" (del "%sd%:\switch\SXSM.nro")
 if exist "%sd%:\switch\SX Save Manager\SXSM.nro" (del "%sd%:\switch\SX Save Manager\SXSM.nro")
-if exist "%sd%:\switch\daybreak.nro" (del "%sd%:\switch\daybreak.nro")
-if exist "%sd%:\switch\daybreak\daybreak.nro" (del "%sd%:\switch\daybreak\daybreak.nro")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\switch\n1dus.nro" (del "%sd%:\switch\n1dus.nro")
 if exist "%sd%:\switch\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX.nro")
@@ -258,10 +255,7 @@ echo.
 echo ------------------------------------------------------------------------
 
 
-rem if exist "%temp%\sdfiles\" (RD /s /q "%temp%\sdfiles\")
-rem if not exist "%temp%\sdfiles\" (mkdir %temp%\sdfiles\)
 xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
-rem xcopy "%wd%\payload.bin" "%sd%:\" /H /Y /C /R
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
@@ -278,6 +272,11 @@ if exist "%sd%:\bootloader\nyx.bkp" (
 
 if %pegascape%==0 (
 	if exist "%sd%:\pegascape" (RD /s /q "%sd%:\pegascape")
+	)
+
+if %bootdat%==0 (
+	if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
+	if exist "%sd%:\boot.dat" (del "%sd%:\boot.ini")
 	)
 
 echo ------------------------------------------------------------------------

@@ -1,11 +1,17 @@
 #### **RUS**:
 **15.0.0 поддерживается**
 
+**656**:
+* [**Обновлено**] [DBI 438](https://github.com/rashevskyv/dbi/releases) - поддержка многотомных rar архивов
+* [**Изменено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - убрана пасхалка, перекрашивающая контроллеры
+* [**Исправлена**] проблема с исчезающим daybreak
+* [**Обновлено**] Tinfoil - добавлен шаблон для [Pixel Shop](https://t.me/kefir_faq/263)
+* [**Обновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - поддержка 15.0.0
+
 **655**:
 * [**Обновлено**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - исправлены ошибки
 * [**Обновлено**] [NxThemesInstaller](https://github.com/exelix11/SwitchThemeInjector/releases) - добавлен патч для корректной работы на 15.0.0
 * [**Обновлено**] Tinfoil - изменен список источников на локальный, поскольку удаленный больше не работает 
-**ЗАМЕТКА:** [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log) не работает на 15.0.0
 
 **654**:
 * [**Обновлено**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - вернул версию с пасхалкой, поскольку билд без неё вешает 15.0.0. Придется собирать самому
@@ -47,6 +53,13 @@ ____
 #### **ENG**:
 **15.0.0 is supported**
 
+**656**:
+* [**Updated**] [DBI 438](https://github.com/rashevskyv/dbi/releases) - support for multi-volume rar archives
+* [**Changed**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - removed easter egg that recolor gamepads
+* [**Fixed**] bug with vanished daybreak
+* [**Updated**] Tinfoil - added template for [Pixel Shop](https://t.me/kefir_faq/263)
+* [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - 15.0.0 support
+
 **655**:
 * [**Updated**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - bugfixes
 * [**Updated**] [NxThemesInstaller](https://github.com/exelix11/SwitchThemeInjector/releases) - added ips for 15.0.0 support
@@ -58,7 +71,7 @@ ____
 
 **653**:
 * [**Updated**] [DBI 436](https://github.com/rashevskyv/dbi/releases) - Games and updates are already installed are grey colored now
-* [**Updated**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - removeв easter egg that recolor gamepads
+* [**Updated**] [Mission Control 0.8.0-pre](https://github.com/ndeadly/MissionControl/releases/) - removed easter egg that recolor gamepads
 * [**Updated**] [Tinfoil 15.0 RC1](https://tinfoil.io/Download#download)
 * [**Updated**] [linkalho v2.0.0](https://github.com/rdmrocha/linkalho/releases) - ability for the user to select which accounts will be linked/unlinked; ability for the user to select which country will be injected into the linked profile; generators now feed from system settings to get locale and timezone settings instead of injecting hard-coded ones
 * [**Updated**] [EdiZon-Overlay v1.0.3](https://github.com/proferabg/EdiZon-Overlay/releases) - Removed WiFi Signal on HOS 15+; added Connection Status in System Information on HOS versions 15+
