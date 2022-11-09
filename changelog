@@ -1,5 +1,12 @@
 #### **RUS**:
-**15.0.0 поддерживается**
+**15.0.1 поддерживается**
+
+**657**:
+* [**Обновлено**] [DBI 439](https://github.com/rashevskyv/dbi/releases) - bugfixes
+* [**Обновлено**] [Mission Control 0.8.0](https://github.com/ndeadly/MissionControl/releases/) - релизная версия, поддержка контроллеров 8bitdo SN30 Pro Xbox Cloud Gaming и Wii Balance Board в 15.0.х
+* [**Обновлено**] [Kefir-updater](https://github.com/ndeadly/MissionControl/releases/) - исправлены подписи, обновлено согласно изменениям в материнском репозитории (switch-aio-updater)
+* [**Обновлено**] [Lockpick RCM](https://github.com/shchmue/Lockpick_RCM) - поддержка 15.0.x, добавлен дамп SSL RSA ключей 
+* [**Удалено**] JKSV - функции бекапа и восстановления сохранений [выполняет DBI](https://switch.customfw.xyz/backup-saves)
 
 **656**:
 * [**Обновлено**] [DBI 438](https://github.com/rashevskyv/dbi/releases) - поддержка многотомных rar архивов
@@ -51,7 +58,14 @@
 ____
 
 #### **ENG**:
-**15.0.0 is supported**
+**15.0.1 is supported**
+
+**657**:
+* [**Updated**] [DBI 439](https://github.com/rashevskyv/dbi/releases) - bugfixes
+* [**Updated**] [Mission Control 0.8.0](https://github.com/ndeadly/MissionControl/releases/) - released version. With 8bitdo SN30 Pro Xbox Cloud Gaming and Wii Balance Board controller support in 15.0.x
+* [**Updated**] [Kefir-updater](https://github.com/ndeadly/MissionControl/releases/) - fixed labels, merged with upstream (switch-aio-updater)
+* [**Updated**] [Lockpick RCM](https://github.com/shchmue/Lockpick_RCM) - added 15.0.x support, added dump for SSL RSA keys
+* [**Removed**] JKSV - функции бекапа и восстановления сохранений [выполняет DBI](https://switch.customfw.xyz/backup-saves)
 
 **656**:
 * [**Updated**] [DBI 438](https://github.com/rashevskyv/dbi/releases) - support for multi-volume rar archives
