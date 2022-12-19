@@ -4,7 +4,7 @@ boot=0
 syscon=0
 missioncontrol=0
 maj=0
-pegascape=1
+pegascape=0
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
@@ -35,9 +35,8 @@ if (is_erista()){
 	}
 }
 
-if (fsexists("sd:/boot.dat")) {
-	boot=1
-}
+boot=fsexists("sd:/boot.dat")
+pegascape=fsexists("sd:/pegascape")
 
 if (fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")) {
 	syscon=1
@@ -247,11 +246,17 @@ if (fsexists("sd:/kefir")) {
 	copydir("sd:/kefir/bootloader", "sd:/")
 	copydir("sd:/kefir/config", "sd:/")
 	copydir("sd:/kefir/games", "sd:/")
-	copydir("sd:/kefir/sept", "sd:/")
 	copydir("sd:/kefir/switch", "sd:/")
-	copydir("sd:/kefir/pegascape", "sd:/")
-	copyfile("sd:/kefir/boot.dat", "sd:/boot.dat")
-	copyfile("sd:/kefir/boot.ini", "sd:/boot.ini")
+
+	if(boot) {
+		copyfile("sd:/kefir/boot.dat", "sd:/boot.dat")
+		copyfile("sd:/kefir/boot.ini", "sd:/boot.ini")
+	}
+
+	if(pegascape) {
+		copydir("sd:/kefir/pegascape", "sd:/")
+	}
+	
 	copyfile("sd:/kefir/exosphere.ini", "sd:/exosphere.ini")
 	copyfile("sd:/kefir/hbmenu.nro", "sd:/hbmenu.nro")
 	copyfile("sd:/kefir/keys.txt", "sd:/keys.txt")
@@ -299,11 +304,6 @@ delfile("sd:/bootloader/res/ku.bmp")
 delfile("sd:/switch/kefirupdater/kefir-updater.bin")
 delfile("sd:/switch/kefirupdater/startup.te")
 deldir("sd:/switch/kefirupdater")
-
-if (!boot) {
-	delfile("sd:/boot.dat")
-	delfile("sd:/boot.ini")
-}
 
 if (!syscon) {
 	delfile("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")

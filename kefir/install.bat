@@ -182,10 +182,7 @@ if exist "%sd%:\switch\NX-Shell\NX-Shell.nro" (del "%sd%:\switch\NX-Shell\NX-She
 if exist "%sd%:\switch\reboot_to_payload.nro" (del "%sd%:\switch\reboot_to_payload.nro")
 if exist "%sd%:\switch\NxThemesInstaller.nro" (del "%sd%:\switch\NxThemesInstaller.nro")
 if exist "%sd%:\switch\NxThemesInstaller\NxThemesInstaller.nro" (del "%sd%:\switch\NxThemesInstaller\NxThemesInstaller.nro")
-if exist "%sd%:\switch\JKSV.nro" (del "%sd%:\switch\JKSV.nro")
-if exist "%sd%:\switch\JKSV\JKSV.nro" (del "%sd%:\switch\JKSV\JKSV.nro")
 if exist "%sd%:\switch\SXSM.nro" (del "%sd%:\switch\SXSM.nro")
-if exist "%sd%:\switch\SX Save Manager\SXSM.nro" (del "%sd%:\switch\SX Save Manager\SXSM.nro")
 if exist "%sd%:\switch\sx.nro" (del "%sd%:\switch\sx.nro")
 if exist "%sd%:\switch\n1dus.nro" (del "%sd%:\switch\n1dus.nro")
 if exist "%sd%:\switch\ChoiDujourNX.nro" (del "%sd%:\switch\ChoiDujourNX.nro")
@@ -276,7 +273,7 @@ if %pegascape%==0 (
 
 if %bootdat%==0 (
 	if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
-	if exist "%sd%:\boot.dat" (del "%sd%:\boot.ini")
+	if exist "%sd%:\boot.ini" (del "%sd%:\boot.ini")
 	)
 
 echo ------------------------------------------------------------------------
