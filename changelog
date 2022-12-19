@@ -1,23 +1,23 @@
 #### **UKR**:
 **15.0.1 поддерживается**
 
-* [**Обновлено**] [Atmosphere 1.4.0-04c9004](https://github.com/rashevskyv/Kefirosphere) - зібрана з останніми виправленнями
-* [**Обновлено**] [DBI 462](https://github.com/rashevskyv/dbi/releases) - збільшена швидкість встановлення ігор, повністю перероблений екран работи зі сейвами, додана можливість тушити екран по таймауту та бгато іншого
-* [**Обновлено**] [Kefir-updater](https://github.com/rashevskyv/dbi/releases) - додана перевірка вільного місця до початку закачки
-* [**Обновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - виправлення для кращої підтримки 15.0.х
-* [**Удалено**] pPlay
-* [**Удалено**] NXMPforMe
-* [**Удалено**] SX Save Manager
+* [**Оновлено**] [Atmosphere 1.4.0-04c9004](https://github.com/rashevskyv/Kefirosphere) - зібрана з останніми виправленнями
+* [**Оновлено**] [DBI 462](https://github.com/rashevskyv/dbi/releases) - збільшена швидкість встановлення ігор, повністю перероблений екран работи зі сейвами, додана можливість тушити екран по таймауту та бгато іншого
+* [**Оновлено**] [Kefir-updater](https://github.com/rashevskyv/dbi/releases) - додана перевірка вільного місця до початку закачки
+* [**Оновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - виправлення для кращої підтримки 15.0.х
+* [**Видалено**] pPlay
+* [**Видалено**] NXMPforMe
+* [**Видалено**] SX Save Manager
 
 ____
 
 #### **ENG**:
 **15.0.1 is supported**
 
-* [**Обновлено**] [Atmosphere 1.4.0-04c9004](https://github.com/rashevskyv/Kefirosphere) - bullt with latest changes
-* [**Обновлено**] [DBI 462](https://github.com/rashevskyv/dbi/releases) - increesed game installation speed, completely redesigned interface in "Browse saves", addded screen timeout, etc.
-* [**Обновлено**] [Kefir-updater](https://github.com/rashevskyv/dbi/releases) - checking available space before a download
-* [**Обновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - more 15.0.х related fixes
-* [**Удалено**] pPlay
-* [**Удалено**] NXMPforMe
-* [**Удалено**] SX Save Manager
+* [**Updated**] [Atmosphere 1.4.0-04c9004](https://github.com/rashevskyv/Kefirosphere) - bullt with latest changes
+* [**Updated**] [DBI 462](https://github.com/rashevskyv/dbi/releases) - increesed game installation speed, completely redesigned interface in "Browse saves", addded screen timeout, etc.
+* [**Updated**] [Kefir-updater](https://github.com/rashevskyv/dbi/releases) - checking available space before a download
+* [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - more 15.0.х related fixes
+* [**Removed**] pPlay
+* [**Removed**] NXMPforMe
+* [**Removed**] SX Save Manager
