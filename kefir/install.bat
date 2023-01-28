@@ -166,7 +166,6 @@ if exist "%sd%:\bootloader\res\icon_switch.bmp" (del "%sd%:\bootloader\res\icon_
 if exist "%sd%:\bootloader\payloads\rajnx_ipl.bin" (del "%sd%:\bootloader\payloads\rajnx_ipl.bin")
 if exist "%sd%:\switch\games\hbmenu*.nsp" (del "%sd%:\switch\games\hbmenu*.nsp")
 if exist "%sd%:\switch\lithium" (RD /s /q "%sd%:\switch\lithium")
-if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
 if exist "%sd%:\switch\LinkUser" (RD /s /q "%sd%:\switch\LinkUser")
 if exist "%sd%:\switch\KosmosToolbox" (RD /s /q "%sd%:\switch\KosmosToolbox")
 if exist "%sd%:\switch\KosmosUpdater" (RD /s /q "%sd%:\switch\KosmosUpdater")
@@ -235,10 +234,6 @@ if exist "%sd%:\games\hbgShop*.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.
 if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
-if exist "%sd%:\switch\tinfoil" (RD /s /q "%sd%:\switch\tinfoil")
-
-
-if exist "%sd%:\exosphere.ini" (del "%sd%:\exosphere.ini")
 
 if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"

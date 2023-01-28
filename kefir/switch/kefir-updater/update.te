@@ -82,7 +82,6 @@ if (fsexists("sd:/kefir")) {
 	deldir("sd:/atmosphere/contents/420000000007E51A");
 	deldir("sd:/atmosphere/contents/010000000000bd00");
 	delfile("sd:/atmosphere/stratosphere.romfs");
-	deldir("sd:/switch/tinfoil");
 	deldir("sd:/switch/kefir-updater");
 	deldir("sd:/switch/NX-Activity-Log/");
 	deldir("sd:/switch/fakenews-injector");
@@ -172,7 +171,6 @@ delfile("sd:/hekate*.bin");
 delfile("sd:/keys.dat");
 delfile("sd:/BCT.ini");
 delfile("sd:/hekate_ipl.ini");
-delfile("sd:/exosphere.ini");
 delfile("sd:/switch/kefir-updater/cheats.zip");
 delfile("sd:/switch/kefir-updater/kefir.zip");
 delfile("sd:/switch/kefir-updater/firmware.zip");

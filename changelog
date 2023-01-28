@@ -1,23 +1,25 @@
 #### **UKR**:
-**15.0.1 поддерживается**
+**15.0.1 підтримується**
 
-* [**Оновлено**] [Atmosphere 1.4.0-04c9004](https://github.com/rashevskyv/Kefirosphere) - зібрана з останніми виправленнями
-* [**Оновлено**] [DBI 462](https://github.com/rashevskyv/dbi/releases) - збільшена швидкість встановлення ігор, повністю перероблений екран работи зі сейвами, додана можливість тушити екран по таймауту та бгато іншого
-* [**Оновлено**] [Kefir-updater](https://github.com/rashevskyv/dbi/releases) - додана перевірка вільного місця до початку закачки
-* [**Оновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - виправлення для кращої підтримки 15.0.х
-* [**Видалено**] pPlay
-* [**Видалено**] NXMPforMe
-* [**Видалено**] SX Save Manager
+* [**Оновлено**] [Atmosphere 1.4.1](https://github.com/rashevskyv/Kefirosphere)
+    * Увімкнен редирект сейвів на картку пам`яті у емунанді. Сейви за замованням будуть потрапляти в папку `atmosphere/saves`
+    * Увімкнено збереження перемикачів читів після перезагрузки (чити також за замовчуванням вимкнені)
+    * Зміни у керуванні кулером, взято з 4IFIR
+    * Вимкнена телеметрія, що теоритично має добре вплинути на режим сну, взято з 4IFIR
+    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Оновлено**] [hekate 6.0.1](https://github.com/CTCaer/hekate) - підримка L4T для Mariko
+* [**Оновлено**] [DBI 480](https://github.com/rashevskyv/dbi/releases) - 
 
 ____
 
 #### **ENG**:
 **15.0.1 is supported**
 
-* [**Updated**] [Atmosphere 1.4.0-04c9004](https://github.com/rashevskyv/Kefirosphere) - bullt with latest changes
-* [**Updated**] [DBI 462](https://github.com/rashevskyv/dbi/releases) - increesed game installation speed, completely redesigned interface in "Browse saves", addded screen timeout, etc.
-* [**Updated**] [Kefir-updater](https://github.com/rashevskyv/dbi/releases) - checking available space before a download
-* [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log)  - more 15.0.х related fixes
-* [**Removed**] pPlay
-* [**Removed**] NXMPforMe
-* [**Removed**] SX Save Manager
+* [**Updated**] [Atmosphere 1.4.1](https://github.com/rashevskyv/Kefirosphere)
+    * Enabled save redirect to SD card in emunand. Saves will go to the `atmosphere/saves` folder
+    * Enabled saving of cheat switches after reboot (cheats are also disabled by default)
+    * Changes in fan control, taken from 4IFIR
+    * Disabled telemetry, which theoretically should improve sleep mode, taken from 4IFIR
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)\
+* [**Updated**] [hekate 6.0.1](https://github.com/CTCaer/hekate) - L4T for Mariko support
+* [**Updated**] [DBI 480](https://github.com/rashevskyv/dbi/releases) - 
