@@ -2,24 +2,25 @@
 **15.0.1 підтримується**
 
 * [**Оновлено**] [Atmosphere 1.4.1](https://github.com/rashevskyv/Kefirosphere)
-    * Увімкнен редирект сейвів на картку пам`яті у емунанді. Сейви за замованням будуть потрапляти в папку `atmosphere/saves`
+    * Додана підтрика редіректу сейвів на картку пам'яті в емунанді. Активуеться строкою `fsmitm_redirect_saves_to_sd` (просто розкоментквати). Сейви будуть автоматично перенаправлені в папку `atmosphere/saves`. Таким чином є великий шанс зберігти їх при виходу з ладу єемунанда. Опція експерементальна, тому поки вимкнена.
     * Увімкнено збереження перемикачів читів після перезагрузки (чити також за замовчуванням вимкнені)
     * Зміни у керуванні кулером, взято з 4IFIR
     * Вимкнена телеметрія, що теоритично має добре вплинути на режим сну, взято з 4IFIR
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Оновлено**] [hekate 6.0.1](https://github.com/CTCaer/hekate) - підримка L4T для Mariko
-* [**Оновлено**] [DBI 480](https://github.com/rashevskyv/dbi/releases) - 
-
+* [**Оновлено**] [DBI 480](https://github.com/rashevskyv/dbi/releases) - виправлення помилок, підтримка BMP, відображення розміру зовнішнього USB-носія
+* [**Оновлено**] [tinfoil](https://tinfoil.io/Download#download) - видалені конфіги за замовчанням: тепер при оновленні кефіру конфіги злітати не будуть. 
 ____
 
 #### **ENG**:
 **15.0.1 is supported**
 
 * [**Updated**] [Atmosphere 1.4.1](https://github.com/rashevskyv/Kefirosphere)
-    * Enabled save redirect to SD card in emunand. Saves will go to the `atmosphere/saves` folder
+    * Support for redirecting save files to memory card in Emunand has been added. It can be activated by uncommenting the line 'fsmitm_redirect_saves_to_sd'. The save files will automatically be redirected to the 'atmosphere/saves' folder. This increases the chances of saving them when exiting the Emunand mode. The option is experimental and is currently disabled.
     * Enabled saving of cheat switches after reboot (cheats are also disabled by default)
     * Changes in fan control, taken from 4IFIR
     * Disabled telemetry, which theoretically should improve sleep mode, taken from 4IFIR
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)\
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [hekate 6.0.1](https://github.com/CTCaer/hekate) - L4T for Mariko support
-* [**Updated**] [DBI 480](https://github.com/rashevskyv/dbi/releases) - 
+* [**Updated**] [DBI 480](https://github.com/rashevskyv/dbi/releases) - bug- and typofixes, BMP support, display external USB drive size
+* [**Updated**] [tinfoil](https://tinfoil.io/Download#download) - removed default configurations: now when updating Kefir, configurations will not be lost.
