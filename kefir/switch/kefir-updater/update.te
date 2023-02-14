@@ -46,7 +46,11 @@ if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
 	missioncontrol=1
 }
 
-# Set mission control status
+if (fsexists("sd:/switch/DBI/dbi.config")) {
+    copyfile("sd:/switch/DBI/dbi.config", "sd:/switch/DBI/dbi.config_")
+}
+
+# Force mission control status
 #missioncontrol=0
 
 # 1. Удаляем папки и файлы
@@ -316,6 +320,11 @@ if (!fsexists("sd:/bootloader/nyx.ini")){
 	movefile("sd:/bootloader/nyx.ini_" "sd:/bootloader/nyx.ini")
 }.else(){
 	delfile("sd:/bootloader/nyx.ini_")
+}
+
+if (fsexists("sd:/switch/DBI/dbi.config_")) {
+	delfile("sd:/switch/DBI/dbi.config")
+    copyfile("sd:/switch/DBI/dbi.config_", "sd:/switch/DBI/dbi.config")
 }
 
 if (maj != 4) {

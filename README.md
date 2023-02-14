@@ -51,15 +51,13 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 4. **Installed payloads**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
      * [TegraExplorer](https://github.com/rashevskyv/TegraExplorer/)- A payload-based file explorer 
-     
+     * [Incognoto_RCM](https://github.com/arch-box/Incognito_RCM){:target="_blank"} - a program that erases the serial number of the console for [block updates and hide the console from Nintendo](https://switch.customfw.xyz/block-update){:target="_blank"} (only relevant for consoles that are hacked through Caffeine )
 5. **Installed Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
-     * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updater for kefir 
+     * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updater for kefir
+     * [Homebrew App Store 2.2](https://github.com/fortheusers/hb-appstore/releases){:target="_blank"} - appstore with hombrews
      * [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log/releases/latest) - a program that allows you to track time spent in games
-     * [JKSV](https://github.com/J-D-K/JKSV/releases) - program for backup and restoration of saves
-     * [Kefir Updater](https://github.com/rashevskyv/kefir-updater/releases) - program for updating kefir via the Internet
-     * [pplay](https://github.com/Cpasjuste/pplay/releases/latest) - video player 
      * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for [safe update](http://switch.customfw.xyz/update-to-latest) version of the system software of the STB
      * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) - custom theme manager
      * [Linkalho](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
@@ -70,6 +68,7 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
           - [ovlEdiZon.ovl](https://github.com/proferabg/EdiZon-Overlay/releases) - Module for [using cheats](http://switch.customfw.xyz/cheats)
           - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases) - A module for enabling and disabling installed system modules (such as overclocking, emuuibo, etc.)
           - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/) - Host process for loading Switch overlay OVLs (NROs)
+          - [QuickNTP](https://github.com/nedex/QuickNTP){:target="_blank"} - a module that allows you to set the exact time on the console via the Internet
 
 ## Installing or updating kefir
 

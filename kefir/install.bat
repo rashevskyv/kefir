@@ -35,13 +35,13 @@ if not exist "%sd%:\" (
 	if not exist "%sd%:\*" (goto WRONGSD)
 )
 
-
 :main
 
 if not exist "%sd%:\pegascape" (if exist "%sd%:\atmosphere" (set pegascape=0))
 if not exist "%sd%:\boot.dat" (if exist "%sd%:\atmosphere" (set bootdat=0))
 if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set syscon=0)
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
+if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.config_)
 
 rem Set mission control status
 rem set missioncontrol=0
@@ -203,8 +203,6 @@ if exist "%sd%:\switch\btpair.nro" (del "%sd%:\switch\btpair.nro")
 if exist "%sd%:\switch\btpair\btpair.nro" (del "%sd%:\switch\btpair\btpair.nro")
 if exist "%sd%:\switch\.DBI.nro.star" (del "%sd%:\switch\.DBI.nro.star")
 if exist "%sd%:\switch\dbi\dbi.nro" (del "%sd%:\switch\dbi\dbi.nro")
-rem if exist "%sd%:\switch\dbi\dbi.config" (copy "%sd%:\switch\dbi\dbi.config" "%sd%:\switch\dbi\dbi.config.bak")
-if exist "%sd%:\switch\dbi\dbi.config" (del "%sd%:\switch\dbi\dbi.config")
 if exist "%sd%:\switch\Lockpick\Lockpick.nro" (del "%sd%:\switch\Lockpick\Lockpick.nro")
 if exist "%sd%:\switch\Lockpick.nro" (del "%sd%:\switch\Lockpick.nro")
 if exist "%sd%:\switch\nxmtp.nro" (del "%sd%:\switch\nxmtp.nro")
@@ -270,6 +268,11 @@ if %bootdat%==0 (
 	if exist "%sd%:\boot.dat" (del "%sd%:\boot.dat")
 	if exist "%sd%:\boot.ini" (del "%sd%:\boot.ini")
 	)
+
+if exist "%sd%:\switch\DBI\dbi.config_" (
+    del "%sd%:\switch\DBI\dbi.config"
+    rename %sd%:\switch\DBI\dbi.config_ dbi.config
+    )
 
 echo ------------------------------------------------------------------------
 echo.
