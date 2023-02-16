@@ -3,6 +3,8 @@ chcp 866 >nul 2>&1
 
 COLOR 0F
 
+MKLINK /D "E:\Switch\_kefir\release" "P:\Мой диск\kefir\release"
+
 set working_dsk=F:
 set working_dir=%working_dsk%\git\dev
 set reldir="%working_dir%\_kefir\release"

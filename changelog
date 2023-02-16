@@ -1,11 +1,12 @@
 #### **UKR**:
 **15.0.1 підтримується**
 **661**:
-* [**Виправлено**] Работа семі-стока через конфіг взятий в чефірі (було зупинено занадто багато служб, через відсутність яких були глюки)
+* [**Виправлено**] Робота семі-стоку через конфіг взятий в чефірі (було зупинено занадто багато служб, через відсутність яких були глюки)
 * [**Виправлено**] Хибна версія в налаштуваннях
 * [**Виправлено**] Конфіг DBI більше не має перезаписуватися після оновлення 
-* [**Оновлено**] [DBI 486](https://github.com/rashevskyv/dbi/releases) - додана можливість зробити зі світча точку доступа до якої FTP-клієнти будуть під'єднуватися напряму. Великий рефакторинг коду та багфікси, змини в логуванні при перевірке оновлень ігор та DLC (вказан TitleID), збільшен таймаут очікування dbibackend
+* [**Оновлено**] [DBI 486](https://github.com/rashevskyv/dbi/releases) - додана можливість зробити зі світча точку доступа до якої FTP-клієнти будуть під'єднуватися напряму. Великий рефакторинг коду та багфікси, зміни в логуванні при перевірці оновлень ігор та DLC (вказано TitleID), збільшено таймаут очікування dbibackend
 * [**Оновлено**] [kefir-updater](https://github.com/rashevskyv/kefir-updater) - додана українська мова (опціонально)
+* [**Додано**] [QuickNTP](https://github.com/nedex/QuickNTP) - програма, яка сінхронізує час по інтернету, бо автоматична сінхронизація в кефірі вимкнена 
 
 **660**:
 * [**Оновлено**] [Atmosphere 1.4.1](https://github.com/rashevskyv/Kefirosphere)
@@ -28,6 +29,7 @@ ____
 * [**Fixed**] The DBI config should no longer be overwritten after an upgrade
 * [**Updated**] [DBI 486](https://github.com/rashevskyv/dbi/releases) - added an option to make the switch an access point to which FTP clients will connect directly. Major code refactoring and bugfixes, changes in logging when checking game updates and DLC (TitleID specified), increased dbibackend timeout
 * [**Updated**] [kefir-updater](https://github.com/rashevskyv/kefir-updater) - added Ukrainian language (optional)
+* [**Added**] [QuickNTP](https://github.com/nedex/QuickNTP) - app for sync time via internet
 
 **660**:
 * [**Updated**] [Atmosphere 1.4.1](https://github.com/rashevskyv/Kefirosphere)

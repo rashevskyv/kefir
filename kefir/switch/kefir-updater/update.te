@@ -47,6 +47,9 @@ if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
 }
 
 if (fsexists("sd:/switch/DBI/dbi.config")) {
+	if (fsexists("sd:/switch/DBI/dbi.config_")) {
+		delfile("sd:/switch/DBI/dbi.config_")
+	}
     copyfile("sd:/switch/DBI/dbi.config", "sd:/switch/DBI/dbi.config_")
 }
 
@@ -324,7 +327,8 @@ if (!fsexists("sd:/bootloader/nyx.ini")){
 
 if (fsexists("sd:/switch/DBI/dbi.config_")) {
 	delfile("sd:/switch/DBI/dbi.config")
-    copyfile("sd:/switch/DBI/dbi.config_", "sd:/switch/DBI/dbi.config")
+	copyfile("sd:/switch/DBI/dbi.config_", "sd:/switch/DBI/dbi.config")
+	delfile("sd:/switch/DBI/dbi.config")
 }
 
 if (maj != 4) {
