@@ -54,7 +54,7 @@ if (fsexists("sd:/switch/DBI/dbi.config")) {
 }
 
 # Force mission control status
-#missioncontrol=0
+missioncontrol=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")

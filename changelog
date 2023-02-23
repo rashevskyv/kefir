@@ -9,6 +9,16 @@
 * [**Оновлено**] [DBI 493](https://github.com/rashevskyv/dbi/releases) - фікси
 * [**Оновлено**] [NxActivityLog](https://github.com/rashevskyv/dbi/releases) - фікси
 
+**Перевірено не працюють:**
+* Модулі Tesla 
+    * System Modules
+    * QuickNTP
+    * EdiZone
+* Теми для меню 
+* Mission Control
+
+**Найкраще що ви можете зробити, це тримати свій Емунанд\Семісток на 15.0.1!**
+
 ____
 
 #### **ENG**:
@@ -21,3 +31,13 @@ ____
 * [**Оновлено**] [TegraExplorer](https://github.com/rashevskyv/TegraExplorer) - added 16.0.0 support
 * [**Updated**] [DBI 493](https://github.com/rashevskyv/dbi/releases) - fixes
 * [**Updated**] [NxActivityLog](https://github.com/rashevskyv/dbi/releases) - fixes
+
+**Checked not working:**
+* Tesla modules
+    * System Modules
+    * QuickNTP
+    * EdiZone
+* Menu themes
+* Mission Control
+
+**The best thing you can do is keep your Emunand\Semistock on 15.0.1!**

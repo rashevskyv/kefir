@@ -44,7 +44,7 @@ if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set 
 if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.config_)
 
 rem Set mission control status
-rem set missioncontrol=0
+set missioncontrol=0
 
 
 echo ------------------------------------------------------------------------
