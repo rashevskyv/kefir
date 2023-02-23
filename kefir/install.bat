@@ -233,6 +233,11 @@ if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 
+if exist "%sd%:\firmware" (RD /s /q "%sd%:\firmware")
+if exist "%sd%:\config\kefir-updater\firmware.zip" (del "%sd%:\config\kefir-updater\firmware.zip")
+if exist "%sd%:\config\kefir-updater\atmo.zip" (del "%sd%:\config\kefir-updater\atmo.zip")
+if exist "%sd%:\config\kefir-updater\*.zip" (del "%sd%:\config\kefir-updater\*.zip")
+
 if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"
 	)

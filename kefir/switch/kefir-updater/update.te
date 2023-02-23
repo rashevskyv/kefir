@@ -236,6 +236,11 @@ deldir("sd:/switch/NX-Shell");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
 
+deldir("sd:/firmware")
+delfile("sd:/config/kefir-updater/firmware.zip")
+delfile("sd:/config/kefir-updater/atmo.zip")
+delfile("sd:/config/kefir-updater/*.zip")
+
 p()
 p("Done")
 wait(tw = 1000)

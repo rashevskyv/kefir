@@ -1,13 +1,15 @@
 @echo off
-chcp 866 >nul 2>&1
+chcp 1251 >nul 2>&1
 
 COLOR 0F
 
-MKLINK /D "E:\Switch\_kefir\release" "P:\–ú–æ–π –¥–∏—Å–∫\kefir\release"
-
 set working_dsk=F:
 set working_dir=%working_dsk%\git\dev
-set reldir="%working_dir%\_kefir\release"
+set reldir=%working_dir%\_kefir\release
+set testdir=%working_dir%\_kefir\test
+set gdisk=P:\Ã≥È ‰ËÒÍ\kefir
+set gdisk_rel=%gdisk%\release
+set gdisk_test=%gdisk%\test
 set kefir_dir=%working_dir%\_kefir\kefir
 set hekate_dir=%working_dir%\_kefir\kefir\bootloader\sys
 set hekate_build=%working_dir%\hekate\output
@@ -17,7 +19,7 @@ set googledrive_dir=%reldir%
 set sd=%build_dir%
 set img=%working_dir%\_kefir\bootlogo
 set site=%working_dsk%\git\site\switch
-set ps=%working_dsk%\git\scripts\build_kefir.ps1
+set suffix=""
 set dbi=%working_dsk%\Switch\dbibackend
 set /p ver=<version
 if exist "%build_dir%" (RD /s /q "%build_dir%")
@@ -28,6 +30,13 @@ set site_img=%site%\images
 set atmo_build="%working_dir%\atmosphere-out.zip"
 set kefirupdater="%working_dir%\kefir-updater\Kefir-updater.nro"
 
+if exist "%reldir%" (RD /s /q "%reldir%")
+MKLINK /D "%reldir%" "%gdisk_rel%"
+
+if exist "%testdir%" (RD /s /q "%testdir%")
+MKLINK /D "%testdir%" "%gdisk_test%"
+
+cls
 
 ECHO.
 ECHO.
@@ -46,22 +55,35 @@ set st=
 set /p st=:
 
 for %%A in ("2") do if "%st%"==%%A (goto noatmo)
-for %%A in ("Q" "q" "–ô" "–π") do if "%st%"==%%A (GOTO END)
+for %%A in ("Q" "q" "…" "È") do if "%st%"==%%A (GOTO END)
 
 "E:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
-
 :noatmo
+cls
+
+ECHO.
+ECHO.
+ECHO ==============================================================
+ECHO.
+ECHO.
+ECHO         1.  release
+ECHO         2.  pre
+ECHO         3.  temp
+ECHO.
+ECHO.
+ECHO ==============================================================
+ECHO                                             Q.  Quit
+ECHO.
+
+set st=
+set /p st=:
+
+for %%A in ("2") do if "%st%"==%%A (set suffix="_pre")
+for %%A in ("3") do if "%st%"==%%A (set suffix="_test")
+for %%A in ("Q" "q" "…" "È") do if "%st%"==%%A (GOTO END)
 
 if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
-
-xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
-
-xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
@@ -76,29 +98,7 @@ xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C 
 
 xcopy "E:\Switch\Games\Tinfoil*.nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
 
-
-rem ECHO.
-rem ECHO.
-rem ECHO ==============================================================
-rem ECHO.
-rem ECHO.
-rem ECHO         1.  Increase version
-rem ECHO         2.  Skip
-rem ECHO.
-rem ECHO.
-rem ECHO ==============================================================
-rem ECHO                                             Q.  Quit
-rem ECHO.
-
-rem set st=
-rem set /p st=:
-
-rem for %%A in ("2") do if "%st%"==%%A (goto start)
-rem for %%A in ("Q" "q" "–ô" "–π") do if "%st%"==%%A (GOTO END)
-
-rem set /p ver=<version
-rem set /a ver = %ver% + 1
-rem echo %ver% > version
+if not %suffix%=="" (GOTO start)
 
 xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
@@ -106,14 +106,7 @@ xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /
 xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
 
-
 :start
-if exist "%reldir%" (del /F /S /Q "%reldir%\*")
-xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
-
-pause
-
 
 echo ------------------------------------------------------------------------
 echo.
@@ -193,8 +186,14 @@ if exist "%sd%\switch\mercury" (
 	attrib +A %sd%\switch\mercury)
 
     
+if not %suffix%=="" (set reldir=%testdir%)
+
+if exist "%reldir%" (del /F /S /Q "%reldir%\*")
+xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
+
 rem kefir
-"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%.zip %kefir_dir%\*
+"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
 
 echo ------------------------------------------------------------------------
 echo.
@@ -203,10 +202,13 @@ echo.
 echo ------------------------------------------------------------------------
 echo.
 
+if %suffix%=="_test" (GOTO END)
+if %suffix%=="" (set ps=%working_dsk%\git\scripts\build_kefir.ps1)
+
 if exist "%build_dir%" (RD /s /q "%build_dir%")
 
 git add .
-git commit -m "kefir%ver%"
+git commit -m "kefir%ver%%suffix%"
 git push
 
 REM chdir /d %site%
