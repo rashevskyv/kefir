@@ -1,5 +1,23 @@
 #### **UKR**:
-**16.0.0 підтримується**
+**16.0.0 повністю підтримується**
+
+Релиз присвячено року повномасштабного вторгнення росії в Україну та пам'яті всіх загиблих захисників української землі та нації. Слава Україні!
+
+Хоч кефір і повністю підтримує 16.0.0, варто зауважити, що прошивка тільки вийшла і не всі сторонні додатки нормально з нею працюють. Все, що є в составі кефіру запускається та не викликає проблем, окрім NX ActivityLog, який на прошивці 16.0.0 показує хибну статистику. Користуйтеся DBI для її перегляду. Рекомендація сидіти на 15.0.1 в емунанді все ще дійсна. Ви можете оновити стокову прошивку до 16.0.0 для онлайну, але емунанд варто залишити на 15.0.1. Якщо ви маєте помилку "Failed to match warmboot with fuses", запустіть FullStock і перезагрузіть консоль (має спрацювати і з семі-стоком, але не тестувалося)
+
+**664**:
+* [**Оновлено**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - підтримка 16.0.0, зібрано з комміта f636596
+* [**Оновлено**] [DBI 502](https://github.com/rashevskyv/dbi/releases) - підтримка 16.0.0, додано двохвіконний менеджер при копіюванні
+* [**Оновлено**] [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules) - підтримка 16.0.0
+* [**Оновлено**] [QuickNTP](https://github.com/nedex/QuickNTP) - підтримка 16.0.0
+* [**Оновлено**] [EdiZone](https://github.com/proferabg/EdiZon-Overlay) - підтримка 16.0.0
+
+**663_pre-release**:
+* [**Оновлено**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - підтримка 16.0.0, зібрано з комміта 0a24405
+* [**Оновлено**] [Sigpatches](https://jits.cc/patches) - підтримка 16.0.0
+* [**Оновлено**] [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/) - підтримка 16.0.0
+* [**Оновлено**] [Mission Control 0.9.0](https://github.com/ndeadly/MissionControl) - підтримка 16.0.0, додані нові геймпади
+* [**Оновлено**] [Tinfoil 16](tinfoil.io/) - підтримка 16.0.0
 
 **662_pre-release**:
 * [**Оновлено**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - підтримка 16.0.0
@@ -10,34 +28,56 @@
 * [**Оновлено**] [NxActivityLog](https://github.com/rashevskyv/dbi/releases) - фікси
 
 **Перевірено не працюють:**
-* Модулі Tesla 
-    * System Modules
-    * QuickNTP
-    * EdiZone
-* Теми для меню 
-* Mission Control
+* <s>DBI</s>
+* Модулі Tesla в составе кефира
+    * <s>ovlSysmodules.ovl</s>
+    * <s>QuickNTP</s>
+    * <s>EdiZone</s>
+* <s>Теми для меню</s>
+* <s>Mission Control</s>
 
 **Найкраще що ви можете зробити, це тримати свій Емунанд\Семісток на 15.0.1!**
 
 ____
 
 #### **ENG**:
-**15.0.1 is supported**
+**16.0.0 is fully supported**
+
+This release is dedicated to the one-year anniversary of russia's large-scale invasion to Ukraine and to the memory of all those who have lost their lives in defense of Ukraine and ukrainian nation. Glory to Ukraine!
+
+Although Kefir fully supports 16.0.0, the firmware has just been released and not all third-party applications work properly with it. Everything that is included in Kefir runs and does not cause any problems, except for NX ActivityLog, which displays incorrect statistics on firmware 16.0.0. Use DBI to view the correct statistics. The recommendation to stay on 15.0.1 in emuMMC is still valid. You can update your stock firmware to 16.0.0 for online use, but it is advisable to leave emuMMC on 16.0.0. If you encounter the "Failed to match warmboot with fuses" error, run FullStock and reboot your console (it should work with semi-stock, but this has not been tested).
+
+Also note that the English version of DBI will be released with a delay of several weeks, as the author is dissatisfied with the attitude of the GBAtemp administration towards his program. DBI is not fucking Russian software. DBI is brilliant Russian software.
+
+**664**:
+* [**Updated**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - added 16.0.0 support, built with commit f636596
+* [**Updated**] [DBI 502](https://github.com/rashevskyv/dbi/releases) - added 16.0.0 support, added double manager when copying
+* [**Updated**] [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules) - added 16.0.0 support
+* [**Updated**] [QuickNTP](https://github.com/nedex/QuickNTP) - added 16.0.0 support
+* [**Updated**] [EdiZone](https://github.com/proferabg/EdiZon-Overlay) - added 16.0.0 support
+
+**663_pre-release**:
+* [**Updated**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - added 16.0.0 support, built with commit 0a24405
+* [**Updated**] [Sigpatches](https://jits.cc/patches) - added 16.0.0 support
+* [**Updated**] [Lockpick_RCM](https://github.com/shchmue/Lockpick_RCM/) - added 16.0.0 support
+* [**Updated**] [Mission Control 0.9.0](https://github.com/ndeadly/MissionControl) - added 16.0.0 support, new gamepads added
+* [**Updated**] [Tinfoil 16](tinfoil.io/) - added 16.0.0 support
 
 **662_pre-release**:
 * [**Updated**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - added 16.0.0 support
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [hekate 6.0.2](https://github.com/CTCaer/hekate) - added 16.0.0 support
-* [**Оновлено**] [TegraExplorer](https://github.com/rashevskyv/TegraExplorer) - added 16.0.0 support
+* [**Updated**] [TegraExplorer](https://github.com/rashevskyv/TegraExplorer) - added 16.0.0 support
 * [**Updated**] [DBI 493](https://github.com/rashevskyv/dbi/releases) - fixes
 * [**Updated**] [NxActivityLog](https://github.com/rashevskyv/dbi/releases) - fixes
 
 **Checked not working:**
-* Tesla modules
-    * System Modules
-    * QuickNTP
-    * EdiZone
-* Menu themes
-* Mission Control
+* <s>DBI</s>
+* Tesla Modules in Kefir
+    * <s>ovlSysmodules.ovl</s>
+    * <s>QuickNTP</s>
+    * <s>EdiZone</s>
+* <s>Themes</s>
+* <s>Mission Control</s>
 
 **The best thing you can do is keep your Emunand\Semistock on 15.0.1!**
