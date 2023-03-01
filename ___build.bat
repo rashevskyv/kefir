@@ -60,6 +60,22 @@ for %%A in ("Q" "q" "É" "é") do if "%st%"==%%A (GOTO END)
 "E:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
 :noatmo
+
+if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
+
+xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
+
+xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+del "%kefir_dir%\hekate_ctcaer_*.bin"
+
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
+xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R
+xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R
+xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
+
+xcopy "E:\Switch\Games\Tinfoil*.nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
+
 cls
 
 ECHO.
@@ -82,21 +98,6 @@ set /p st=:
 for %%A in ("2") do if "%st%"==%%A (set suffix="_pre")
 for %%A in ("3") do if "%st%"==%%A (set suffix="_test")
 for %%A in ("Q" "q" "É" "é") do if "%st%"==%%A (GOTO END)
-
-if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
-
-xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
-
-xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
-del "%kefir_dir%\hekate_ctcaer_*.bin"
-
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
-xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R
-xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R
-xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
-
-xcopy "E:\Switch\Games\Tinfoil*.nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
 
 if not %suffix%=="" (GOTO start)
 

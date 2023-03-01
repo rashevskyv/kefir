@@ -5,6 +5,9 @@
 
 Хоч кефір і повністю підтримує 16.0.0, варто зауважити, що прошивка тільки вийшла і не всі сторонні додатки нормально з нею працюють. Все, що є в составі кефіру запускається та не викликає проблем, окрім NX ActivityLog, який на прошивці 16.0.0 показує хибну статистику. Користуйтеся DBI для її перегляду. Рекомендація сидіти на 15.0.1 в емунанді все ще дійсна. Ви можете оновити стокову прошивку до 16.0.0 для онлайну, але емунанд варто залишити на 15.0.1. Якщо ви маєте помилку "Failed to match warmboot with fuses", запустіть FullStock і перезагрузіть консоль (має спрацювати і з семі-стоком, але не тестувалося)
 
+**665**:
+* [**Оновлено**] [DBI 506](https://github.com/rashevskyv/dbi/releases) - допрацьовано пакетне відновлення сейвів, повернення англомовної версії 
+
 **664**:
 * [**Оновлено**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - підтримка 16.0.0, зібрано з комміта f636596
 * [**Оновлено**] [DBI 502](https://github.com/rashevskyv/dbi/releases) - підтримка 16.0.0, додано двохвіконний менеджер при копіюванні
@@ -48,6 +51,9 @@ This release is dedicated to the one-year anniversary of russia's large-scale in
 Although Kefir fully supports 16.0.0, the firmware has just been released and not all third-party applications work properly with it. Everything that is included in Kefir runs and does not cause any problems, except for NX ActivityLog, which displays incorrect statistics on firmware 16.0.0. Use DBI to view the correct statistics. The recommendation to stay on 15.0.1 in emuMMC is still valid. You can update your stock firmware to 16.0.0 for online use, but it is advisable to leave emuMMC on 16.0.0. If you encounter the "Failed to match warmboot with fuses" error, run FullStock and reboot your console (it should work with semi-stock, but this has not been tested).
 
 Also note that the English version of DBI will be released with a delay of several weeks, as the author is dissatisfied with the attitude of the GBAtemp administration towards his program. DBI is not fucking Russian software. DBI is brilliant Russian software.
+
+**665**:
+* [**Updated**] [DBI 506](https://github.com/rashevskyv/dbi/releases) - improvements on batch saves restoring, returning of english version
 
 **664**:
 * [**Updated**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - added 16.0.0 support, built with commit f636596
