@@ -2,7 +2,7 @@
 **16.0.0 повністю підтримується**
 
 **666**:
-* [**Оновлено**] [Atmosphere 1.5.0](https://github.com/rashevskyv/Kefirosphere) - реліз. База даних синхронізованих bluetooth приладів буде зберігатися за адресою `/atmosphere/bluetooth_devices.db` і буде синхронизована між сіснандом та емунандом
+* [**Оновлено**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - реліз. База даних синхронізованих bluetooth приладів буде зберігатися за адресою `/atmosphere/bluetooth_devices.db` і буде синхронизована між сіснандом та емунандом
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Оновлено**] [DBI 519](https://github.com/rashevskyv/dbi/releases) - перемальовано шрифт
 * [**Оновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Logs) - спроби заставити працювати на 16.x.x
@@ -13,7 +13,7 @@ ____
 **16.0.0 is fully supported**
 
 **665**:
-* [**Updated**] [Atmosphere 1.5.0-pre](https://github.com/rashevskyv/Kefirosphere) - Release. The database of synchronized Bluetooth devices will be stored at `/atmosphere/bluetooth_devices.db` and will be synchronized between sysnand and emunand.
+* [**Updated**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - Release. The database of synchronized Bluetooth devices will be stored at `/atmosphere/bluetooth_devices.db` and will be synchronized between sysnand and emunand.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [DBI 506](https://github.com/rashevskyv/dbi/releases) - redrawn font
 * [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log) - try to make it works on 16.x.x
