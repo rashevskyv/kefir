@@ -12,7 +12,7 @@ ____
 #### **ENG**:
 **16.0.0 is fully supported**
 
-**665**:
+**666**:
 * [**Updated**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - Release. The database of synchronized Bluetooth devices will be stored at `/atmosphere/bluetooth_devices.db` and will be synchronized between sysnand and emunand.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [DBI 506](https://github.com/rashevskyv/dbi/releases) - redrawn font
