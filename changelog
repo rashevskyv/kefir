@@ -4,7 +4,7 @@
 **667**:
 * [**Оновлено**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - зібрана з останнього комміта e9b28ab
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate](https://github.com/rashevskyv/dbi/releases) - зібрана з останнього комміта 22462e4
+* [**Оновлено**] [hekate](https://github.com/CTCaer/hekate) - зібрана з останнього комміта 22462e4
 * [**Оновлено**] [DBI 527](https://github.com/rashevskyv/dbi/releases) - додано Activity Log
 * [**Оновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Logs) - поліпшена работа на 16.0.x
 * [**Оновлено**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) - поліпшена работа на 16.0.x
@@ -25,7 +25,7 @@ ____
 **667**:
 * [**Updated**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - built with latest commit e9b28ab
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate](https://github.com/rashevskyv/dbi/releases) - built with latest commit 22462e4
+* [**Updated**] [hekate](https://github.com/CTCaer/hekate) - built with latest commit 22462e4
 * [**Updated**] [DBI 527](https://github.com/rashevskyv/dbi/releases) - added Activity Log
 * [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Logs) - improvements for 16.0.x support
 * [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) - improvements for 16.0.x support
