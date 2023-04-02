@@ -75,6 +75,7 @@ xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
 
 xcopy "E:\Switch\Games\Tinfoil*.nsp" "%kefir_dir%\games\Tinfoil [050000BADDAD0000].nsp" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 
 cls
 
@@ -103,7 +104,6 @@ if not %suffix%=="" (GOTO start)
 
 xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
 

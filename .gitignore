@@ -12,3 +12,7 @@ kefir_installer
 install1.bat
 archive
 /kefir.code-workspace
+/bootlogo/blank_bootlogo.bmp.png
+/bootlogo/blank_kiosk.png
+/bootlogo/example.png
+/scripts
