@@ -142,7 +142,6 @@ delfile("sd:/atmosphere/system_settings.ini");
 delfile("sd:/atmosphere/system_settings.ini");
 delfile("sd:/atmosphere/kips/fs_mitm.kip");
 delfile("sd:/atmosphere/kips/ldn_mitm.kip");
-delfile("sd:/atmosphere/kips/loader.kip");
 delfile("sd:/atmosphere/kips/pm.kip");
 delfile("sd:/atmosphere/kips/sm.kip");
 delfile("sd:/atmosphere/kips/ams_mitm.kip");

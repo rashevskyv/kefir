@@ -7,7 +7,7 @@ set working_dsk=F:
 set working_dir=%working_dsk%\git\dev
 set reldir=%working_dir%\_kefir\release
 set testdir=%working_dir%\_kefir\test
-set gdisk=P:\Ã≥È ‰ËÒÍ\kefir
+set gdisk=P:\Ã≥–ú—ñ–π –¥–∏—Å–∫\kefir
 set gdisk_rel=%gdisk%\release
 set gdisk_test=%gdisk%\test
 set kefir_dir=%working_dir%\_kefir\kefir
@@ -55,7 +55,7 @@ set st=
 set /p st=:
 
 for %%A in ("2") do if "%st%"==%%A (goto noatmo)
-for %%A in ("Q" "q" "…" "È") do if "%st%"==%%A (GOTO END)
+for %%A in ("Q" "q" "–ô" "–π") do if "%st%"==%%A (GOTO END)
 
 "E:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
@@ -98,7 +98,7 @@ set /p st=:
 
 for %%A in ("2") do if "%st%"==%%A (set suffix="_pre")
 for %%A in ("3") do if "%st%"==%%A (set suffix="_test")
-for %%A in ("Q" "q" "…" "È") do if "%st%"==%%A (GOTO END)
+for %%A in ("Q" "q" "–ô" "–π") do if "%st%"==%%A (GOTO END)
 
 if not %suffix%=="" (GOTO start)
 

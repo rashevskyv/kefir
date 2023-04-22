@@ -1,39 +1,22 @@
 #### **UKR**:
-**16.0.1 повністю підтримується**
+**16.0.2 повністю підтримується**
 
-**667**:
-* [**Оновлено**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - зібрана з останнього комміта e9b28ab
+**700**:
+* [**Оновлено**] [Atmosphere 1.5.2](https://github.com/rashevskyv/Kefirosphere)
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate](https://github.com/CTCaer/hekate) - зібрана з останнього комміта 22462e4
-* [**Оновлено**] [DBI 527](https://github.com/rashevskyv/dbi/releases) - додано Activity Log
-* [**Оновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Logs) - поліпшена работа на 16.0.x
-* [**Оновлено**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) - поліпшена работа на 16.0.x
-* [**Оновлено**] [Tesla Menu](https://github.com/WerWolv/Tesla-Menu) - поліпшена работа на 16.0.x
-* [**Оновлено**] [ovl-sysmodules](https://github.com/WerWolv/ovl-sysmodules) - поліпшена работа на 16.0.x
-
-**666**:
-* [**Оновлено**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - реліз. База даних синхронізованих bluetooth приладів буде зберігатися за адресою `/atmosphere/bluetooth_devices.db` і буде синхронизована між сіснандом та емунандом
-    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [DBI 519](https://github.com/rashevskyv/dbi/releases) - перемальовано шрифт
-* [**Оновлено**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Logs) - спроби заставити працювати на 16.0.x
-
+* [**Оновлено**] [hekate 6.0.3](https://github.com/CTCaer/hekate)
+* [**Додано**] [Sys-clck](https://github.com/rashevskyv/sys-clk-OC) - базові можливості разгону на базі 4IFIR. Розгін пам'яті за замовчуванням без підняття частот та впливу розхід акумулятору. Має працювати на всіх консолях, безпечний. З чіфіру взяті лише базові налаштування, які будуть безпечними для всіх користувачів.
+* [**Оновлено**] [DBI 551](https://github.com/rashevskyv/dbi/releases) - багато QoL змін, правка помилок
+* [**Оновлено**] [Mission Control 0.9.1](https://github.com/rashevskyv/dbi/releases) - додана підтримка Dualshock 3
 ____
 
 #### **ENG**:
-**16.0.1 is fully supported**
+**16.0.2 is fully supported**
 
-**667**:
-* [**Updated**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - built with latest commit e9b28ab
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate](https://github.com/CTCaer/hekate) - built with latest commit 22462e4
-* [**Updated**] [DBI 527](https://github.com/rashevskyv/dbi/releases) - added Activity Log
-* [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Logs) - improvements for 16.0.x support
-* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) - improvements for 16.0.x support
-* [**Updated**] [Tesla Menu](https://github.com/WerWolv/Tesla-Menu) - improvements for 16.0.x support
-* [**Updated**] [ovl-sysmodules](https://github.com/WerWolv/ovl-sysmodules) - improvements for 16.0.x support
-
-**666**:
-* [**Updated**] [Atmosphere 1.5.1](https://github.com/rashevskyv/Kefirosphere) - Release. The database of synchronized Bluetooth devices will be stored at `/atmosphere/bluetooth_devices.db` and will be synchronized between sysnand and emunand.
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [DBI 506](https://github.com/rashevskyv/dbi/releases) - redrawn font
-* [**Updated**] [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log) - try to make it works on 16.0.x
+**700**:
+* [**Updated**] [Atmosphere 1.5.2](https://github.com/rashevskyv/Kefirosphere)
+    * [**Read more about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.0.3](https://github.com/CTCaer/hekate)
+* [**Added**] [Sys-clck](https://github.com/rashevskyv/sys-clk-OC) - basic overclocking capabilities based on 4IFIR. Memory overclocking by default without raising frequencies and affecting battery consumption. Should work on all consoles, safe. Only basic settings have been taken from 4IFIR, which will be safe for all users.
+* [**Updated**] [DBI 551](https://github.com/rashevskyv/dbi/releases) - many QoL changes, bug fixes
+* [**Updated**] [Mission Control 0.9.1](https://github.com/rashevskyv/dbi/releases) - added support for Dualshock 3
