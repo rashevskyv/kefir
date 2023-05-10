@@ -1,22 +1,20 @@
 #### **UKR**:
-**16.0.2 повністю підтримується**
+**16.0.3 повністю підтримується**
 
-**700**:
-* [**Оновлено**] [Atmosphere 1.5.2](https://github.com/rashevskyv/Kefirosphere)
+**704**:
+* [**Оновлено**] [Atmosphere 1.5.3](https://github.com/rashevskyv/Kefirosphere) - повна підтримка 16.0.3
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate 6.0.3](https://github.com/CTCaer/hekate)
-* [**Додано**] [Sys-clck](https://github.com/rashevskyv/sys-clk-OC) - базові можливості разгону на базі 4IFIR. Розгін пам'яті за замовчуванням без підняття частот та впливу розхід акумулятору. Має працювати на всіх консолях, безпечний. З чіфіру взяті лише базові налаштування, які будуть безпечними для всіх користувачів.
-* [**Оновлено**] [DBI 551](https://github.com/rashevskyv/dbi/releases) - багато QoL змін, правка помилок
-* [**Оновлено**] [Mission Control 0.9.1](https://github.com/rashevskyv/dbi/releases) - додана підтримка Dualshock 3
+* [**Оновлено**] [hekate 6.0.4](https://github.com/CTCaer/hekate) - повна підтримка 16.0.3
+* [**Оновлено**] [DBI 563](https://github.com/rashevskyv/dbi/releases) - потенційно виправлено встановлення нових ігор
+* [**Оновлено**] Tesla Modules - перезібрані з новим libtesla
 ____
 
 #### **ENG**:
-**16.0.2 is fully supported**
+**16.0.3 is fully supported**
 
-**700**:
-* [**Updated**] [Atmosphere 1.5.2](https://github.com/rashevskyv/Kefirosphere)
+**704**:
+* [**Updated**] [Atmosphere 1.5.3](https://github.com/rashevskyv/Kefirosphere) - full support for 16.0.3
     * [**Read more about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.0.3](https://github.com/CTCaer/hekate)
-* [**Added**] [Sys-clck](https://github.com/rashevskyv/sys-clk-OC) - basic overclocking capabilities based on 4IFIR. Memory overclocking by default without raising frequencies and affecting battery consumption. Should work on all consoles, safe. Only basic settings have been taken from 4IFIR, which will be safe for all users.
-* [**Updated**] [DBI 551](https://github.com/rashevskyv/dbi/releases) - many QoL changes, bug fixes
-* [**Updated**] [Mission Control 0.9.1](https://github.com/rashevskyv/dbi/releases) - added support for Dualshock 3
+* [**Updated**] [hekate 6.0.3](https://github.com/CTCaer/hekate) - full support for 16.0.3
+* [**Updated**] [DBI 563](https://github.com/rashevskyv/dbi/releases) - potentially fixed the installation of new games
+* [**Updated**] Tesla Modules - rebuild with updated libtesla
