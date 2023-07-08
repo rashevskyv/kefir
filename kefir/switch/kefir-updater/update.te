@@ -345,7 +345,7 @@ if (fsexists("sd:/switch/DBI/dbi.config_")) {
 if (fsexists("sd:/switch/tinfoil/locations.conf_")) {
 	delfile("sd:/switch/tinfoil/locations.conf")
 	copyfile("sd:/switch/tinfoil/locations.conf_", "sd:/switch/DBI/locations.conf")
-	delfile("sd:/switch/tinfoil/locations.conf")
+	delfile("sd:/switch/tinfoil/locations.conf_")
 }
 
 if (maj != 4) {

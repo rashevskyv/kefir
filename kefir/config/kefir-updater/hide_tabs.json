@@ -10,7 +10,7 @@
     "firmwares": false,
     "hidetabs": true,
     "jccolor": true,
-    "language": true,
+    "language": false,
     "move": true,
     "netsettings": true,
     "pccolor": true,
