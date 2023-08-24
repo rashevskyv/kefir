@@ -255,9 +255,9 @@ xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
-if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
-if exist "E:\Switch\addons\atmosphere" (xcopy "E:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
-if exist "E:\Switch\pyTinGen\index.tfl" (xcopy "E:\Switch\pyTinGen\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
+if exist "F:\Switch\addons\themes" (xcopy "F:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
+if exist "F:\Switch\addons\atmosphere" (xcopy "F:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
+if exist "F:\Switch\pyTinGen\index.tfl" (xcopy "F:\Switch\pyTinGen\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
 
 if exist "%sd%:\.git" (RD /s /q "%sd%:\.git")
 
