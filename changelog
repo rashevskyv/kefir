@@ -1,26 +1,23 @@
 #### **UKR**:
-**16.0.3 повністю підтримується**
+**16.1.0 повністю підтримується**
 
-**707:**
-* [**Оновлено**] [Atmosphere 1.5.4](https://github.com/rashevskyv/Kefirosphere) - підтримка Layered FS для ігор з величезною кількістю файлів 
+**709:**
+* [**Оновлено**] [Atmosphere 1.5.5](https://github.com/rashevskyv/Kefirosphere) - підтримка 16.1.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate 6.0.5](https://github.com/CTCaer/hekate) - зміни для L4T
-* [**Оновлено**] [DBI 598](https://github.com/rashevskyv/dbi/releases) - виправлення багів
-* [**Оновлено**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - додано оновлення DBI
-* [**Оновлено**] [Всі оверлеї] - перезібрано з найсвіжішім libtesla
-* [**Видалено**] [tinfoil] - для нових користувачів в ньому більше немає сенсу (бо наразі немає жодного публічного джерела). У старих він і так є. 
+* [**Оновлено**] [hekate 6.0.6](https://github.com/CTCaer/hekate) - підтримка 16.1.0, зміни для L4T
+* [**Оновлено**] [DBI 616](https://github.com/rashevskyv/dbi/releases) - виправлення багів, QoL зміни 
+* [**Оновлено**] [Mission Control](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - підтримка 16.1.0, зміни в роботі деяких контролерів
+* [**Оновлено**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - оновлено до останньої версії AiO 
 
 ____
 
 #### **ENG**:
-**16.0.3 is fully supported**
+**16.1.0 is fully supported**
 
-**707:**
-* [**Updated**] [Atmosphere 1.5.4](https://github.com/rashevskyv/Kefirosphere) - Support for Layered FS for games with a large number of files
-    * [**More about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.0.5](https://github.com/CTCaer/hekate) - L4T related changers
-* [**Updated**] [DBI 598](https://github.com/rashevskyv/dbi/releases) - Bug fixes
-* [**Updated**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - Added DBI update function
-* [**Updated**] [All overlays] - Rebuilt with the latest libtesla
-* [**Removed**] [tinfoil] - It no longer makes sense for new users (as there are currently no public sources). For older users, it's still available.
-
+**709:**
+* [**Updated**] [Atmosphere 1.5.5](https://github.com/rashevskyv/Kefirosphere) - support for 16.1.0
+    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.0.6](https://github.com/CTCaer/hekate) - support for 16.1.0, changes for L4T
+* [**Updated**] [DBI 616](https://github.com/rashevskyv/dbi/releases) - bug fixes, QoL changes
+* [**Updated**] [Mission Control](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - support for 16.1.0, changes in the operation of some controllers
+* [**Updated**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updated to the latest version of AiO

@@ -53,13 +53,6 @@ if (fsexists("sd:/switch/DBI/dbi.config")) {
     copyfile("sd:/switch/DBI/dbi.config", "sd:/switch/DBI/dbi.config_")
 }
 
-if (fsexists("sd:/switch/tinfoil/locations.conf")) {
-	if (fsexists("sd:/switch/tinfoil/locations.conf_")) {
-		delfile("sd:/switch/tinfoil/locations.conf_")
-	}
-    copyfile("sd:/switch/tinfoil/locations.conf", "sd:/switch/tinfoil/locations.conf_")
-}
-
 # Force mission control status
 # missioncontrol=0
 
@@ -340,12 +333,6 @@ if (fsexists("sd:/switch/DBI/dbi.config_")) {
 	delfile("sd:/switch/DBI/dbi.config")
 	copyfile("sd:/switch/DBI/dbi.config_", "sd:/switch/DBI/dbi.config")
 	delfile("sd:/switch/DBI/dbi.config")
-}
-
-if (fsexists("sd:/switch/tinfoil/locations.conf_")) {
-	delfile("sd:/switch/tinfoil/locations.conf")
-	copyfile("sd:/switch/tinfoil/locations.conf_", "sd:/switch/DBI/locations.conf")
-	delfile("sd:/switch/tinfoil/locations.conf_")
 }
 
 if (maj != 4) {
