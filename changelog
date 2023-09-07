@@ -1,12 +1,17 @@
 #### **UKR**:
 **16.1.0 повністю підтримується**
 
+**710:**
+* [**Виправлено**] Виправлена помилка відображення хибної версії в налаштуваннях 
+* [**Оновлено**] [Mission Control 0.9.4](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - виправлено зависання при спарюванні контролерів на 16.1.0
+* [**Оновлено**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - вимкнено дебаг-функції, що гіпотетично виправить помилку при старті програми 
+
 **709:**
 * [**Оновлено**] [Atmosphere 1.5.5](https://github.com/rashevskyv/Kefirosphere) - підтримка 16.1.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Оновлено**] [hekate 6.0.6](https://github.com/CTCaer/hekate) - підтримка 16.1.0, зміни для L4T
 * [**Оновлено**] [DBI 616](https://github.com/rashevskyv/dbi/releases) - виправлення багів, QoL зміни 
-* [**Оновлено**] [Mission Control](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - підтримка 16.1.0, зміни в роботі деяких контролерів
+* [**Оновлено**] [Mission Control 0.9.3](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - підтримка 16.1.0, зміни в роботі деяких контролерів
 * [**Оновлено**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - оновлено до останньої версії AiO 
 
 ____
@@ -14,10 +19,16 @@ ____
 #### **ENG**:
 **16.1.0 is fully supported**
 
+**710:**
+* [**Fixed**] Fixed an issue displaying incorrect version in settings
+* [**Updated**] [Mission Control 0.9.4](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - Fixed hanging issue during controller pairing on 16.1.0
+* [**Updated**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - Debug functions disabled, which should hypothetically fix the error at program startup
+
+
 **709:**
-* [**Updated**] [Atmosphere 1.5.5](https://github.com/rashevskyv/Kefirosphere) - support for 16.1.0
-    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.0.6](https://github.com/CTCaer/hekate) - support for 16.1.0, changes for L4T
+* [**Updated**] [Atmosphere 1.5.5](https://github.com/rashevskyv/Kefirosphere) - 16.1.0 support
+    * [**More about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.0.6](https://github.com/CTCaer/hekate) - 16.1.0 support, changes for L4T
 * [**Updated**] [DBI 616](https://github.com/rashevskyv/dbi/releases) - bug fixes, QoL changes
-* [**Updated**] [Mission Control](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - support for 16.1.0, changes in the operation of some controllers
-* [**Updated**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updated to the latest version of AiO
+* [**Updated**] [Mission Control 0.9.3](https://github.com/ndeadly/MissionControl/releases/tag/v0.9.3) - 16.1.0 support, changes in some controllers' behavior
+* [**Updated**] [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - Updated to the latest version of AiO
