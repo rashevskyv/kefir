@@ -45,7 +45,7 @@ if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.c
 if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.conf_)
 
 rem Set mission control status
-rem set missioncontrol=0
+set missioncontrol=0
 
 
 echo ------------------------------------------------------------------------
