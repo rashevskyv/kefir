@@ -281,12 +281,6 @@ if (fsexists("sd:/kefir")) {
 
 # Чиним атрибуты и удаляем маковый мусор
 clear()
-p("* Remove macos related garbage")
-removemacfolders()
-p()
-p("Done")
-
-wait(tw = 1000)
 
 clear()
 p("* Fix attributes")
@@ -349,6 +343,13 @@ if (maj != 4) {
 
 p()
 p("Done")
+
+p("* Remove macos related garbage")
+removemacfolders()
+p()
+p("Done")
+
+wait(tw = 1000)
 
 # 5. Перезагружаемся в гекату 
 clear()
