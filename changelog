@@ -1,12 +1,15 @@
 #### **UKR**:
 **Попередня підтримка 17.0.0. Використовуйте для відката прошивки на 16.1.0**
 
-**711-pre:**
-* [**Оновлено**] [Atmosphere 1.6.0-pre](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 17.0.0
+**712-pre:**
+* [**Оновлено**] [Atmosphere 1.6.1-pre](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 17.0.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Оновлено**] [hekate 6.0.7](https://github.com/CTCaer/hekate) - підтримка 17.0.0, зміни для L4T
 * [**Оновлено**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer) - підтримка 17.0.0
+* [**Оновлено**] [Lockpick_RCM](https://github.com/suchmememanyskill/TegraExplorer) - підтримка 17.0.0
 * [**Оновлено**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - підтримка 17.0.0, додані контролери, QoL-зміни
+* [**Оновлено**] [NxThemesInstaller 2.7.1](https://github.com/exelix11/SwitchThemeInjector) - підтримка 17.0.0
+* [**Видалено**] [Caffeine] - буде окремим паком на сторінці кофеїна в гайді
 
 
 ____
@@ -14,9 +17,12 @@ ____
 #### **ENG**:
 **Previous support 17.0.0. Use to rollback firmware to 16.1.0**
 
-**711-pre**:
+**712-pre**:
 * [**Updated**] [Atmosphere 1.6.0-pre](https://github.com/rashevskyv/Kefirosphere) - Preliminary support for 17.0.0
     * [**More details on Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [hekate 6.0.7](https://github.com/CTCaer/hekate) - Support for 17.0.0, changes for L4T
 * [**Updated**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer) - Support for 17.0.0
+* [**Updated**] [Lockpick_RCM](https://github.com/suchmememanyskill/TegraExplorer) - Support for 17.0.0
 * [**Updated**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - Support for 17.0.0, added controllers, QoL changes
+* [**Updated**] [NxThemesInstaller 2.7.1](https://github.com/exelix11/SwitchThemeInjector) - Support for 17.0.0
+* [**Removed**] [Caffeine] - will be as separated pack on guide
