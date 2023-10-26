@@ -1,5 +1,11 @@
 #### **UKR**:
-**Попередня підтримка 17.0.0. Використовуйте для відката прошивки на 16.1.0**
+**Повна підтримка 17.0.0**
+
+**713:**
+* [**Оновлено**] [DBI 628](https://github.com/rashevskyv/dbi) - можливість передавати ігри між консолями через бекенд, блекліст оновлення ігор, виправлення помилок
+* [**Оновлено**] [sys-patch](https://github.com/ITotalJustice/sys-patch) - підтримка 17.0.0
+* [**Оновлено**] [sys-clk-overlay](https://github.com/rashevskyv/sys-clk-OC) - підтримка 17.0.0
+* [**Оновлено**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - нормально зібраний для 17.0.0
 
 **712-pre:**
 * [**Оновлено**] [Atmosphere 1.6.1-pre](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 17.0.0
@@ -14,15 +20,43 @@
 
 ____
 
-#### **ENG**:
-**Previous support 17.0.0. Use to rollback firmware to 16.1.0**
+#### **RUS**:
+**Полная поддержка 17.0.0**
+
+**713**:
+* [**Обновлено**] [DBI 628](https://github.com/rashevskyv/dbi) - возможность передачи игр между консолями через бекенд, черный список обновлений игр, исправление ошибок
+* [**Обновлено**] [sys-patch](https://github.com/ITotalJustice/sys-patch) - поддержка 17.0.0
+* [**Обновлено**] [sys-clk-overlay](https://github.com/rashevskyv/sys-clk-OC) - поддержка 17.0.0
+* [**Обновлено**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - нормально собран для 17.0.0
 
 **712-pre**:
-* [**Updated**] [Atmosphere 1.6.0-pre](https://github.com/rashevskyv/Kefirosphere) - Preliminary support for 17.0.0
-    * [**More details on Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.0.7](https://github.com/CTCaer/hekate) - Support for 17.0.0, changes for L4T
-* [**Updated**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer) - Support for 17.0.0
-* [**Updated**] [Lockpick_RCM](https://github.com/suchmememanyskill/TegraExplorer) - Support for 17.0.0
-* [**Updated**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - Support for 17.0.0, added controllers, QoL changes
-* [**Updated**] [NxThemesInstaller 2.7.1](https://github.com/exelix11/SwitchThemeInjector) - Support for 17.0.0
-* [**Removed**] [Caffeine] - will be as separated pack on guide
+* [**Обновлено**] [Atmosphere 1.6.1-pre](https://github.com/rashevskyv/Kefirosphere) - Предварительная поддержка 17.0.0
+    * [**Подробнее о изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Обновлено**] [hekate 6.0.7](https://github.com/CTCaer/hekate) - поддержка 17.0.0, изменения для L4T
+* [**Обновлено**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer) - поддержка 17.0.0
+* [**Обновлено**] [Lockpick_RCM](https://github.com/suchmememanyskill/TegraExplorer) - поддержка 17.0.0
+* [**Обновлено**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - поддержка 17.0.0, добавлены контроллеры, QoL-изменения
+* [**Обновлено**] [NxThemesInstaller 2.7.1](https://github.com/exelix11/SwitchThemeInjector) - поддержка 17.0.0
+* [**Удалено**] [Caffeine] - будет отдельным пакетом на странице кофеина в гайде
+
+
+____
+
+#### **ENG**:
+**Full support 17.0.0**
+
+**713**:
+* [**Updated**] [DBI 628](https://github.com/rashevskyv/dbi) - ability to transfer games between consoles via backend, game update blacklist, bug fixes
+* [**Updated**] [sys-patch](https://github.com/ITotalJustice/sys-patch) - support for 17.0.0
+* [**Updated**] [sys-clk-overlay](https://github.com/rashevskyv/sys-clk-OC) - support for 17.0.0
+* [**Updated**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - properly built for 17.0.0
+
+**712-pre**:
+* [**Updated**] [Atmosphere 1.6.1-pre](https://github.com/rashevskyv/Kefirosphere) - Preliminary support for 17.0.0
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.0.7](https://github.com/CTCaer/hekate) - support for 17.0.0, changes for L4T
+* [**Updated**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer) - support for 17.0.0
+* [**Updated**] [Lockpick_RCM](https://github.com/suchmememanyskill/TegraExplorer) - support for 17.0.0
+* [**Updated**] [Mission Control 0.10.0](https://github.com/ndeadly/MissionControl) - support for 17.0.0, added controllers, QoL changes
+* [**Updated**] [NxThemesInstaller 2.7.1](https://github.com/exelix11/SwitchThemeInjector) - support for 17.0.0
+* [**Removed**] [Caffeine] - will be a separate package on the caffeine guide page
