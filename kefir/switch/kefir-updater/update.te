@@ -54,7 +54,7 @@ if (fsexists("sd:/switch/DBI/dbi.config")) {
 }
 
 # Force mission control status
-missioncontrol=0
+# missioncontrol=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
@@ -200,7 +200,6 @@ deldir("sd:/atmosphere/contents/0100000000000008");
 deldir("sd:/atmosphere/contents/420000000000000E");
 deldir("sd:/atmosphere/contents/010000000000100B");
 deldir("sd:/atmosphere/contents/01FF415446660000");
-deldir("sd:/atmosphere/contents/0100000000000352");
 deldir("sd:/atmosphere/contents/00FF747765616BFF");
 deldir("sd:/atmosphere/contents/00FF0012656180FF");
 deldir("sd:/atmosphere/contents/0100000000001013");
@@ -314,6 +313,10 @@ if (!syscon) {
 
 if (!missioncontrol) {
 	delfile("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")
+}
+
+if (fsexists("sd:/atmosphere/contents/0100000000000352/flags/boot2.flag")) {
+	delfile("sd:/atmosphere/contents/0100000000000352/flags/boot2.flag")
 }
 
 if (!fsexists("sd:/bootloader/nyx.ini")){

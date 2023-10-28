@@ -45,7 +45,7 @@ if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.c
 if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.conf_)
 
 rem Set mission control status
-set missioncontrol=0
+@REM set missioncontrol=0
 
 
 echo ------------------------------------------------------------------------
@@ -348,6 +348,8 @@ if %syscon%==0 (
 if %missioncontrol%==0 (
 	del "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag"
 	)
+
+if exist "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag" (del "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag")
 
 cd %sd%:\
 
