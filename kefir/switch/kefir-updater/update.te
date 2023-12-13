@@ -73,7 +73,9 @@ if (fsexists("sd:/kefir")) {
 	delfile("sd:/atmosphere/BCT.ini");
 	delfile("sd:/atmosphere/config/BCT.ini");
 	delfile("sd:/atmosphere/package3");
+	delfile("sd:/bootloader/payloads/kefir-helper.bin");
 	delfile("sd:/bootloader/payloads/Lockpick_RCM.bin");
+	delfile("sd:/bootloader/payloads/Incognito_RCM.bin");
 	delfile("sd:/bootloader/payloads/fusee.bin");
 	delfile("sd:/bootloader/hekate_ipl.ini");
 	delfile("sd:/bootloader/update.bin");
@@ -347,7 +349,7 @@ if (maj != 4) {
 p()
 p("Done")
 
-p("* Remove macos related garbage")
+p("* Remove macos related garbage. If freeze more than 5 minutes, reboot manualy")
 removemacfolders()
 p()
 p("Done")

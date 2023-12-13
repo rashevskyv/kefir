@@ -1,30 +1,42 @@
 #### **UKR**:
-**Повна підтримка 17.0.0**
+**Повна підтримка 17.0.1**
 
-**714:**
-* [**Оновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Повна підтримка 17.0.0
+**718:**
+* [**Оновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останнім коммітом
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hbmenu 3.6.0](https://github.com/switchbrew/nx-hbmenue) - підтримка 17.0.0, кнопки ZL/ZL працюють аналогічно DPAD UP/DOWN, виправлено відображення WiFi
-* [**Оновлено**] [hbloader 2.4.4](https://github.com/switchbrew/nx-hbloader) - перезібрано з актуальним libnx
+* [**Додано**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay) - замість ванільного лоадера Tesla Menu, що дозволило використовувати корисні скріпти:
+    * **DBI** - заміна мови та оновлення програми на літу
+    * **Translate Interface** - додаткові мови інтерфейсу на вибір (у тому числі українська)
+    * **Semi-stock** - загрузка в семісток из меню
+    * **Reboot та Shutdown** - перезагрузка та виключення консолі із меню 
+* [**Оновлено**] [DBI 653](https://github.com/rashevskyv/dbi/releases) - виправлені баги, поліпшано Activity Log
 
 ____
 
 #### **RUS**:
-**Полная поддержка 17.0.0**
+**Полная поддержка 17.0.1**
 
-**714:**
-* [**Обновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Полная поддержка 17.0.0
-    * [**Подробнее о изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Обновлено**] [hbmenu 3.6.0](https://github.com/switchbrew/nx-hbmenue) - поддержка 17.0.0, кнопки ZL/ZL работают аналогично DPAD UP/DOWN, исправлено отображение WiFi
-* [**Обновлено**] [hbloader 2.4.4](https://github.com/switchbrew/nx-hbloader) - пересобрано с актуальным libnx
+**718:**
+* [**Обновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останнім коммітом
+    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Добавлено**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay) - вместо ванильного загрузчика Tesla Menu, что позволило использовать скрипты:
+    * **DBI** - изменение локализации и обновление программы
+    * **Translate Interface** - дополнительные переводы инитерфейса на выбор
+    * **Semi-stock** - загрузка в семисток из меню
+    * **Reboot та Shutdown** - перезагрузка и виключение консоли из меню 
+* [**Обновлено**] [DBI 653](https://github.com/rashevskyv/dbi/releases) - исправление багов, улучшения Activity Log
 
 ____
 
 #### **ENG**:
-**Full support 17.0.0**
+**Full support 17.0.1**
 
-**714:**
-* [**Updated**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Full support for 17.0.0
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hbmenu 3.6.0](https://github.com/switchbrew/nx-hbmenue) - support for 17.0.0, ZL/ZL buttons function like DPAD UP/DOWN, fixed WiFi display
-* [**Updated**] [hbloader 2.4.4](https://github.com/switchbrew/nx-hbloader) - recompiled with current libnx
+**718**:
+* [**Updated**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - rebuilt with the latest commit
+    * [**More about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Added**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay) - instead of the vanilla Tesla Menu loader, which allowed the use of useful scripts:
+    * **DBI** - language replacement and program update on the fly
+    * **Translate Interface** - additional interface languages to choose from
+    * **Semi-stock** - loading into semi-stock from the menu
+    * **Reboot and Shutdown** - rebooting and shutting down the console from the menu 
+* [**Updated**] [DBI 653](https://github.com/rashevskyv/dbi/releases) - fixed bugs, improved Activity Log

@@ -129,7 +129,9 @@ if exist "%sd%:\sxos\sxos" (
 )
 if exist "%sd%:\atmosphere\fusee-secondary.bin" (del "%sd%:\atmosphere\fusee-secondary.bin")
 if exist "%sd%:\bootloader\payloads\fusee-primary-payload.bin" (del "%sd%:\bootloader\payloads\fusee-primary-payload.bin")
+if exist "%sd%:\bootloader\payloads\Incognito_RCM.bin" (del "%sd%:\bootloader\payloads\Incognito_RCM.bin")
 if exist "%sd%:\bootloader\payloads\Lockpick_RCM.bin" (del "%sd%:\bootloader\payloads\Lockpick_RCM.bin")
+if exist "%sd%:\bootloader\payloads\kefir-helper.bin" (del "%sd%:\bootloader\payloads\kefir-helper.bin")
 if exist "%sd%:\bootloader\payloads\biskeydump.bin" (del "%sd%:\bootloader\payloads\biskeydump.bin")
 if exist "%sd%:\bootloader\payloads\fusee-payload.bin" (del "%sd%:\bootloader\payloads\fusee-payload.bin")
 if exist "%sd%:\bootloader\payloads\fusee-primary.bin" (del "%sd%:\bootloader\payloads\fusee-primary.bin")
@@ -233,6 +235,7 @@ if exist "%sd%:\games\hbgShop*.nsp" (del "%sd%:\games\hbgShop_forwarder_classic.
 if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.nsp")
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
+if exist "%sd%:\switch\.packages\Semi-stock" (RD /s /q "%sd%:\switch\.packages\Semi-stock")
 
 if exist "%sd%:\firmware" (RD /s /q "%sd%:\firmware")
 if exist "%sd%:\config\kefir-updater\firmware.zip" (del "%sd%:\config\kefir-updater\firmware.zip")
