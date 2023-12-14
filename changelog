@@ -1,6 +1,9 @@
 #### **UKR**:
 **Повна підтримка 17.0.1**
 
+**719:**
+* [**Виправлено**] Помилку оновлення через kefir updater усунено
+
 **718:**
 * [**Оновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останнім коммітом
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
@@ -16,6 +19,9 @@ ____
 #### **RUS**:
 **Полная поддержка 17.0.1**
 
+**719:**
+* [**Исправлено**] Исправлена ошибка обновления через kefir updater
+
 **718:**
 * [**Обновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останнім коммітом
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
@@ -30,6 +36,9 @@ ____
 
 #### **ENG**:
 **Full support 17.0.1**
+
+**719:**
+* [**Fixed**] Fixed kefir updater error
 
 **718**:
 * [**Updated**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - rebuilt with the latest commit
