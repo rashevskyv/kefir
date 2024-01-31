@@ -254,7 +254,6 @@ if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"
 	)
 
-
 echo ------------------------------------------------------------------------
 echo.
 echo                             Installing                   
@@ -267,17 +266,15 @@ xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
 if %oc%==1 (
 	xcopy "%sd%:\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
 ) else (
-	xcopy "%sd%:\oc\*" "%sd%:\config\uberhand\packages\kefir_ovlck\" /H /Y /C /R /S /E /I
+	xcopy "%sd%:\oc\*" "%sd%:\config\uberhand\packages\kefir_ovlck\" /H /Y /C /R /S /E /
+	copy "%sd%:\config\uberhand\packages\ovrlck\kefir.ini" "%sd%:\switch\.packages\Settings\config.ini" /Y
+	)
 )
-
-RD /s /q "%sd%:\oc"
-
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
 if exist "F:\Switch\addons\themes" (xcopy "F:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 if exist "F:\Switch\addons\atmosphere" (xcopy "F:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
-if exist "F:\Switch\pyTinGen\index.tfl" (xcopy "F:\Switch\pyTinGen\index.tfl" "%sd%:\" /H /Y /C /R /S /E /I)
 
 if exist "%sd%:\.git" (RD /s /q "%sd%:\.git")
 

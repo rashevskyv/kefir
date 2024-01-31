@@ -5,6 +5,7 @@ syscon=0
 missioncontrol=0
 maj=0
 pegascape=0
+oc=1
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
 
@@ -37,14 +38,9 @@ if (is_erista()){
 
 boot=fsexists("sd:/boot.dat")
 pegascape=fsexists("sd:/pegascape")
-
-if (fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")) {
-	syscon=1
-}
-
-if (fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")) {
-	missioncontrol=1
-}
+syscon=fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")
+missioncontrol=fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")
+oc=!fsexists("sd:/config/uberhand/packages/kefir_ovlck")
 
 if (fsexists("sd:/switch/DBI/dbi.config")) {
 	if (fsexists("sd:/switch/DBI/dbi.config_")) {
@@ -249,6 +245,18 @@ p("Done")
 wait(tw = 1000)
 
 # if update 
+if(oc) {
+	copydir("sd:/kefir/oc/atmosphere", "sd:/")
+	copydir("sd:/kefir/oc/switch", "sd:/")
+	copydir("sd:/kefir/oc/config", "sd:/")
+}.else(){
+	copydir("sd:/kefir/oc/atmosphere", "sd:/config/uberhand/packages/kefir_ovlck")
+	copydir("sd:/kefir/oc/switch", "sd:/config/uberhand/packages/kefir_ovlck")
+	copydir("sd:/kefir/oc/config", "sd:/config/uberhand/packages/kefir_ovlck")
+	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/kefir/switch/.packages/Settings/config.ini")
+}
+
+
 if (fsexists("sd:/kefir")) {
 	# 2. Копируем кефир на карту 
 	clear()
@@ -282,6 +290,7 @@ if (fsexists("sd:/kefir")) {
 	p("Done")
 	wait(tw = 1000)
 }
+
 
 # Чиним атрибуты и удаляем маковый мусор
 clear()
@@ -352,6 +361,7 @@ if (maj != 4) {
 p()
 p("Done")
 
+clear()
 p("* Remove macos related garbage. If freeze more than 5 minutes, reboot manualy")
 removemacfolders()
 p()

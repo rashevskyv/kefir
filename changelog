@@ -1,12 +1,18 @@
 #### **UKR**:
 **Повна підтримка 17.0.1**
+
+**724:**
+* [**Виправлено**] Помилку, яка приводила до непрацюючого sys-clk при оновленні через апдейтер
+* [**Оновлено**] [Uberhand 2.1.3](https://github.com/efosamark/Uberhand-Overlay)
+
 **722:**
 * [**Оновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останнім коммітом
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Виправлено**] Прибрані патчі з семістоку. Тепер як і раніше неможливо в ньому встановити ігри через DBI
 * [Повернуто] tinfoil. Поки працює. 
-* [**Оновлено**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay)
-    - Додано меню Settings де можна загрузити loader без модифікацій від 4IFIR, що дає можливість використовувати Kefir зі звичайним sys-clk та OC-suite
+* [**Оновлено**] [Uberhand 2.1.2](https://github.com/efosamark/Uberhand-Overlay)
+    - Додано меню Settings де можна загрузити loader без модифікацій від 4IFIR, що дає можливість використовувати Kefir зі звичайним sys-clk та OC-suite. Зауважу, що при такому переключенні комплектний sys-clk буде прибрано, тобто вам доведеться ставити софт для розгону самостійно
+    - Додана можливість загрузити мою фірмову тему для встановлення через **NXThemeInjector**
 * [**Оновлено**] [DBI 658](https://github.com/rashevskyv/dbi/releases) - виправлення в Activity Log
 
 **719:**
@@ -26,13 +32,20 @@ ____
 
 #### **RUS**:
 **Полная поддержка 17.0.1**
+
+**723:**
+* [**Исправлено**] Ошибку, которая приводила к неработающему sys-clk при обновлении через апдейтер
+* [**Обновлено**] [Uberhand 2.1.3](https://github.com/efosamark/Uberhand-Overlay)
+
+
 **722:**
 * [**Обновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Пересобрано с последним коммитом
     * [**Подробнее о изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Исправлено**] Убраны патчи из стоковой прошивки. Теперь, как и раньше, невозможно установить игры через DBI в ней
-* [Возвращено] tinfoil. Пока работает.
-* [**Обновлено**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay)
-    - Добавлено меню `Settings`, где можно загрузить загрузчик без модификаций от 4IFIR, что позволяет использовать Kefir с обычным sys-clk и OC-suite
+* [**Исправлено**] Убраны патчи из Semi Stock прошивки. Теперь, как и раньше, невозможно установить игры через DBI в ней
+* [**Возвращено**] tinfoil. Пока работает.
+* [**Обновлено**] [Uberhand 2.1.2](https://github.com/efosamark/Uberhand-Overlay)
+    - Добавлено меню `Settings`, где можно загрузить загрузчик без модификаций от 4IFIR, что позволяет использовать Kefir с обычным sys-clk и OC-suite. Отмечу, что при таком переключении комплектный sys-clk будет удален, то есть вам придется устанавливать ПО для разгона самостоятельно.
+    - Добавлена возможность загрузить мою фирменную тему для установки через **NXThemeInjector**
 * [**Обновлено**] [DBI 658](https://github.com/rashevskyv/dbi/releases) - Исправления в Журнале активности
 
 **719:**
@@ -52,13 +65,20 @@ ____
 
 #### **ENG**:
 **Full Support for 17.0.1**
+
+**723:**
+* [**Fixed**] A bug that resulted in a non-functional sys-clk after updating via the updater
+* [**Updated**] [Uberhand 2.1.3](https://github.com/efosamark/Uberhand-Overlay)
+
+
 **722:**
 * [**Updated**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Rebuilt with the latest commit
     * [**More on Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Fixed**] Removed patches from the firmware. Now, as before, it is not possible to install games through DBI
-* [Restored] tinfoil. Works for now.
-* [**Updated**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay)
-    - Added a `Settings` menu where you can load a loader without modifications from 4IFIR, allowing the use of Kefir with the regular sys-clk and OC-suite
+* [**Fixed**] Removed patches from the Semi Stock. Now, as before, it is not possible to install games through DBI
+* [**Restored**] tinfoil. Works for now.
+* [**Updated**] [Uberhand 2.1.2](https://github.com/efosamark/Uberhand-Overlay)
+    - Added a `Settings` menu where you can load a loader without modifications from 4IFIR, allowing the use of Kefir with regular sys-clk and OC-suite. Note that with this switch, the bundled sys-clk will be removed, meaning you will need to install overclocking software on your own.
+    - Added ability to download my branded theme for installation via **NXThemeInjector**
 * [**Updated**] [DBI 658](https://github.com/rashevskyv/dbi/releases) - Fixes in Activity Log
 
 **719:**
