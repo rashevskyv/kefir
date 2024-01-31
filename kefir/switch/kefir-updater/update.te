@@ -147,6 +147,7 @@ delfile("sd:/atmosphere/kips/ldn_mitm.kip");
 delfile("sd:/atmosphere/kips/pm.kip");
 delfile("sd:/atmosphere/kips/sm.kip");
 delfile("sd:/atmosphere/kips/ams_mitm.kip");
+delfile("sd:/atmosphere/kips/loader.kip");
 delfile("sd:/atmosphere/flags/hbl_cal_read.flag");
 delfile("sd:/atmosphere/exosphere.bin");
 delfile("sd:/atmosphere/loader.ini");
@@ -161,6 +162,7 @@ delfile("sd:/bootloader/ini/Atmosphere.ini");
 delfile("sd:/bootloader/ini/atmosphere.ini");
 delfile("sd:/bootloader/ini/sxos.ini");
 delfile("sd:/bootloader/ini/hekate_keys.ini");
+delfile("sd:/bootloader/ini/fullstock.ini");
 delfile("sd:/bootloader/hekate_keys.ini");
 delfile("sd:/bootloader/kefir.ini");
 delfile("sd:/bootloader/ini/RajNX.ini");
@@ -235,6 +237,7 @@ deldir("sd:/switch/nxmp");
 deldir("sd:/switch/NX-Shell");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
+deldir("sd:/switch/.packages/Semi-stock");
 
 deldir("sd:/firmware")
 delfile("sd:/config/kefir-updater/firmware.zip")

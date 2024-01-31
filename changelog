@@ -1,5 +1,13 @@
 #### **UKR**:
 **Повна підтримка 17.0.1**
+**722:**
+* [**Оновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останнім коммітом
+    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Виправлено**] Прибрані патчі з семістоку. Тепер як і раніше неможливо в ньому встановити ігри через DBI
+* [Повернуто] tinfoil. Поки працює. 
+* [**Оновлено**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay)
+    - Додано меню Settings де можна загрузити loader без модифікацій від 4IFIR, що дає можливість використовувати Kefir зі звичайним sys-clk та OC-suite
+* [**Оновлено**] [DBI 658](https://github.com/rashevskyv/dbi/releases) - виправлення в Activity Log
 
 **719:**
 * [**Виправлено**] Помилку оновлення через kefir updater усунено
@@ -18,6 +26,14 @@ ____
 
 #### **RUS**:
 **Полная поддержка 17.0.1**
+**722:**
+* [**Обновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Пересобрано с последним коммитом
+    * [**Подробнее о изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Исправлено**] Убраны патчи из стоковой прошивки. Теперь, как и раньше, невозможно установить игры через DBI в ней
+* [Возвращено] tinfoil. Пока работает.
+* [**Обновлено**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay)
+    - Добавлено меню `Settings`, где можно загрузить загрузчик без модификаций от 4IFIR, что позволяет использовать Kefir с обычным sys-clk и OC-suite
+* [**Обновлено**] [DBI 658](https://github.com/rashevskyv/dbi/releases) - Исправления в Журнале активности
 
 **719:**
 * [**Исправлено**] Исправлена ошибка обновления через kefir updater
@@ -29,13 +45,21 @@ ____
     * **DBI** - изменение локализации и обновление программы
     * **Translate Interface** - дополнительные переводы инитерфейса на выбор
     * **Semi-stock** - загрузка в семисток из меню
-    * **Reboot та Shutdown** - перезагрузка и виключение консоли из меню 
+    * **Reboot и Shutdown** - перезагрузка и виключение консоли из меню 
 * [**Обновлено**] [DBI 653](https://github.com/rashevskyv/dbi/releases) - исправление багов, улучшения Activity Log
 
 ____
 
 #### **ENG**:
-**Full support 17.0.1**
+**Full Support for 17.0.1**
+**722:**
+* [**Updated**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Rebuilt with the latest commit
+    * [**More on Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Fixed**] Removed patches from the firmware. Now, as before, it is not possible to install games through DBI
+* [Restored] tinfoil. Works for now.
+* [**Updated**] [Uberhand](https://github.com/efosamark/Uberhand-Overlay)
+    - Added a `Settings` menu where you can load a loader without modifications from 4IFIR, allowing the use of Kefir with the regular sys-clk and OC-suite
+* [**Updated**] [DBI 658](https://github.com/rashevskyv/dbi/releases) - Fixes in Activity Log
 
 **719:**
 * [**Fixed**] Fixed kefir updater error

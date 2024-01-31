@@ -14,6 +14,7 @@ set missioncontrol=1
 set bootdat=1
 set payloadbin=1
 set pegascape=1
+set oc=1
 
 set sd=%1
 if not defined %sd% (GOTO main)
@@ -43,6 +44,7 @@ if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set 
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.config_)
 if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.conf_)
+if exist "%sd%:\config\uberhand\packages\kefir_ovlck" (set oc=0)
 
 rem Set mission control status
 @REM set missioncontrol=0
@@ -110,7 +112,12 @@ if exist "%sd%:\atmosphere\config\BCT.ini" (del "%sd%:\atmosphere\config\BCT.ini
 if exist "%sd%:\atmosphere\package3" (del "%sd%:\atmosphere\package3")
 if exist "%sd%:\atmosphere\system_settings.ini" (del "%sd%:\atmosphere\system_settings.ini")
 if exist "%sd%:\atmosphere\loader.ini" (del "%sd%:\atmosphere\system_settings.ini")
-if exist "%sd%:\atmosphere\kips" (RD /s /q  "%sd%:\atmosphere\kips")
+if exist "%sd%:\atmosphere\kips\loader.kip" (RD /s /q  "%sd%:\atmosphere\kips\loader.kip")
+if exist "%sd%:\atmosphere\kips\fs_mitm.kip" (RD /s /q  "%sd%:\atmosphere\kips\fs_mitm.kip")
+if exist "%sd%:\atmosphere\kips\ldn_mitm.kip" (RD /s /q  "%sd%:\atmosphere\kips\ldn_mitm.kip")
+if exist "%sd%:\atmosphere\kips\pm.kip" (RD /s /q  "%sd%:\atmosphere\kips\pm.kip")
+if exist "%sd%:\atmosphere\kips\sm.kip" (RD /s /q  "%sd%:\atmosphere\kips\sm.kip")
+if exist "%sd%:\atmosphere\kips\ams_mitm.kip" (RD /s /q  "%sd%:\atmosphere\kips\ams_mitm.kip")
 if exist "%sd%:\atmosphere\erpt_reports" (RD /s /q  "%sd%:\atmosphere\erpt_reports")
 if exist "%sd%:\atmosphere\flags\hbl_cal_read.flag" (del "%sd%:\atmosphere\flags\hbl_cal_read.flag")
 if exist "%sd%:\atmosphere\exosphere.bin" (del "%sd%:\atmosphere\exosphere.bin")
@@ -159,6 +166,7 @@ if exist "%sd%:\startup.te" (del "%sd%:\startup.te")
 if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 
 if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
+if exist "%sd%:\bootloader\ini\fullstock.ini" (del "%sd%:\bootloader\ini\fullstock.ini")
 if exist "%sd%:\bootloader\update.bin" (del "%sd%:\bootloader\update.bin")
 if exist "%sd%:\bootloader\update.bin.sig" (del "%sd%:\bootloader\update.bin.sig")
 if exist "%sd%:\bootloader\patches_template.ini" (del "%sd%:\bootloader\patches_template.ini")
@@ -255,6 +263,15 @@ echo ------------------------------------------------------------------------
 
 
 xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
+
+if %oc%==1 (
+	xcopy "%sd%:\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
+) else (
+	xcopy "%sd%:\oc\*" "%sd%:\config\uberhand\packages\kefir_ovlck\" /H /Y /C /R /S /E /I
+)
+
+RD /s /q "%sd%:\oc"
+
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
