@@ -256,6 +256,7 @@ if(oc) {
 	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/kefir/switch/.packages/Settings/config.ini")
 }
 
+deldir("sd:/oc")
 
 if (fsexists("sd:/kefir")) {
 	# 2. Копируем кефир на карту 

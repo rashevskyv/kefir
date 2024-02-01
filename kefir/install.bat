@@ -271,6 +271,8 @@ if %oc%==1 (
 	)
 )
 
+RD /s /q "%sd%:\oc"
+
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
 if exist "F:\Switch\addons\themes" (xcopy "F:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)

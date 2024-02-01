@@ -1,5 +1,7 @@
 #### **UKR**:
 **Повна підтримка 17.0.1**
+**725:**
+* [**Виправлено**] Помилку, через яку не запускався Semi-Stock
 
 **724:**
 * [**Виправлено**] Помилку, яка приводила до непрацюючого sys-clk при оновленні через апдейтер
@@ -33,10 +35,12 @@ ____
 #### **RUS**:
 **Полная поддержка 17.0.1**
 
-**723:**
+**725:**
+* [**Исправлено**] Ошибку, из-за которой не запускался Semi-Stock
+
+**724:**
 * [**Исправлено**] Ошибку, которая приводила к неработающему sys-clk при обновлении через апдейтер
 * [**Обновлено**] [Uberhand 2.1.3](https://github.com/efosamark/Uberhand-Overlay)
-
 
 **722:**
 * [**Обновлено**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Пересобрано с последним коммитом
@@ -66,10 +70,12 @@ ____
 #### **ENG**:
 **Full Support for 17.0.1**
 
-**723:**
+**725:**
+* [**Fixed**] An error that prevented Semi-Stock from launching
+
+**724:**
 * [**Fixed**] A bug that resulted in a non-functional sys-clk after updating via the updater
 * [**Updated**] [Uberhand 2.1.3](https://github.com/efosamark/Uberhand-Overlay)
-
 
 **722:**
 * [**Updated**] [Atmosphere 1.6.2](https://github.com/rashevskyv/Kefirosphere) - Rebuilt with the latest commit
