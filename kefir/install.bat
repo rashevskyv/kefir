@@ -15,6 +15,7 @@ set bootdat=1
 set payloadbin=1
 set pegascape=1
 set oc=1
+set emu=1
 
 set sd=%1
 if not defined %sd% (GOTO main)
@@ -254,6 +255,8 @@ if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"
 	)
 
+if exist "%sd%:\config\uberhand\packages\settings\stock" (set emu=0) 
+
 echo ------------------------------------------------------------------------
 echo.
 echo                             Installing                   
@@ -262,6 +265,13 @@ echo ------------------------------------------------------------------------
 
 
 xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
+
+if %emu%==1 (
+	del "%sd%:\config\uberhand\packages\settings\stock"
+) else (
+	del "%sd%:\config\uberhand\packages\settings\emu"
+	copy "%sd%:\config\uberhand\packages\emu.ini" "%sd%:\switch\.packages\config.ini" /Y
+)
 
 if %oc%==1 (
 	xcopy "%sd%:\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
