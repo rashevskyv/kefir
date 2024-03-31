@@ -1,6 +1,14 @@
 # Kefir moved here - https://codeberg.org/rashevskyv/kefir/releases
 
-## 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
+## Donate
+
+### Paypal
+[![PayPal](https://github.com/rashevskyv/kefir/assets/18294541/5e8a41b1-a15e-4e2c-a1fc-9230379ca1fa)](https://www.paypal.com/donate/?hosted_button_id=S5BLF972J8G92)
+
+### Банка monobank
+[![Monobank](https://github.com/rashevskyv/kefir/assets/18294541/82d547ee-f39e-43d2-8063-ed663114c1a9)](https://send.monobank.ua/jar/6VmeFAs1zG)
+
+### 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
 >
 > I'm the creator of this project and I'm Ukrainian.
 >
