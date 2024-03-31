@@ -1,6 +1,15 @@
 # KEFIR 6
 
-# 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
+
+## Donate
+
+### Paypal
+[![PayPal](https://github.com/rashevskyv/kefir/assets/18294541/5e8a41b1-a15e-4e2c-a1fc-9230379ca1fa)](https://www.paypal.com/donate/?hosted_button_id=S5BLF972J8G92)
+
+### Банка monobank
+[![Monobank](https://github.com/rashevskyv/kefir/assets/18294541/82d547ee-f39e-43d2-8063-ed663114c1a9)](https://send.monobank.ua/jar/6VmeFAs1zG)
+
+### 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
 >
 > I'm the creator of this project and I'm Ukrainian.
 >
@@ -51,24 +60,27 @@ CFW pack with Atmosphere for NSW. Supports both Erista and Mariko
 4. **Installed payloads**:
      * [Lockpick_RCM](https://github.com/rashevskyv/Lockpick_RCM) - payload for [dumping console's keys](http://switch.customfw.xyz/backup-nand#часть-iii---дампим-ключи)
      * [TegraExplorer](https://github.com/rashevskyv/TegraExplorer/)- A payload-based file explorer 
-     * [Incognoto_RCM](https://github.com/arch-box/Incognito_RCM){:target="_blank"} - a program that erases the serial number of the console for [block updates and hide the console from Nintendo](https://switch.customfw.xyz/block-update){:target="_blank"} (only relevant for consoles that are hacked through Caffeine )
 5. **Installed Homebrew**
      * [DBI](https://github.com/rashevskyv/dbi) - program for [installing games](http://switch.customfw.xyz/games) via USB or from a memory card
      * [tinfoil](http://tinfoil.io) - a program that allows [download games](http://switch.customfw.xyz/tinfoil) for the console directly from the network
      * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - updater for kefir
      * [Homebrew App Store 2.2](https://github.com/fortheusers/hb-appstore/releases){:target="_blank"} - appstore with hombrews
-     * [NX-Activity-Log](https://github.com/tallbl0nde/NX-Activity-Log/releases/latest) - a program that allows you to track time spent in games
      * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for [safe update](http://switch.customfw.xyz/update-to-latest) version of the system software of the STB
      * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) - custom theme manager
      * [Linkalho](https://github.com/rdmrocha/linkalho) - [account linking program](http://switch.customfw.xyz/link-account)
-6. **Installed modules**. Modules are additional components that work inside Atmosphere and allow you to do various cool things, such as using xbox-compatible controllers, emulating amiibo, overclocking, and more. Unfortunately, SX OS modules do not support
-     * [sys-con](https://github.com/cathery/sys-con/releases/latest) - a module that allows you to connect almost any gamepads to the console via USB
-     * [Mission Control](https://github.com/ndeadly/MissionControl) - a module that allows you to connect almost any gamepads to the console via bluetooth
-     * [Tesla Overlay Menu](https://github.com/WerWolv/Tesla-Menu/releases) - special overlay menu for interacting with the system
-          - [ovlEdiZon.ovl](https://github.com/proferabg/EdiZon-Overlay/releases) - Module for [using cheats](http://switch.customfw.xyz/cheats)
-          - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/releases) - A module for enabling and disabling installed system modules (such as overclocking, emuuibo, etc.)
-          - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/) - Host process for loading Switch overlay OVLs (NROs)
-          - [QuickNTP](https://github.com/nedex/QuickNTP){:target="_blank"} - a module that allows you to set the exact time on the console via the Internet
+6. **Installed Modules**. Modules are additional components that operate within the Atmosphere, allowing for various cool features, such as the use of Xbox-compatible controllers, amiibo emulation, overclocking, and more. Unfortunately, SX OS does not support modules.
+  * [sys-con](https://github.com/cathery/sys-con) - a module that allows connecting almost any gamepad to the console via USB
+  * [Mission Control](https://github.com/ndeadly/MissionControl) - a module that allows connecting almost any gamepad to the console via Bluetooth
+  * [Uberhand](https://github.com/efosamark/Uberhand-Overlay) - a special overlay menu for interacting with the system and supporting custom scripts and modules
+    - Scripts:
+      * **DBI** - changing localization and updating the application
+      * **Translate Interface** - additional interface translations to choose from
+      * **Semi-stock** - loading into semi-stock from the menu
+      * **Reboot and Shutdown** - rebooting and turning off the console from the menu
+    - Modules:
+      - [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/) - a process for working with nro through Tesla Menu
+      - [ovlEdiZon.ovl](https://github.com/proferabg/EdiZon-Overlay/releases) - A module for [using cheats](cheats)
+      - [ovlSysmodules.ovl](https://github.com/WerWolv/ovl-sysmodules/) - A module for enabling and disabling installed system modules (such as overclocking, emuiibo, and others)
 
 ## Installing or updating kefir
 
