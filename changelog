@@ -1,6 +1,9 @@
 #### **UKR**:
 **Базова підтримка 18.0.0. Рекомендується тримати emuNAND на 17.0.1**
 
+**728:** 
+ [**Оновлено**] [MissionControl 0.11.0](https://github.com/ndeadly/MissionControl) - офіційна підтримка 18.0.0, додані контролери, виправлені помилки
+
 **727:** 
  [**Оновлено**] [MissionControl](https://github.com/ndeadly/MissionControl) - перезібрано з підтримкою 18.0.0
 
@@ -18,6 +21,9 @@ ____
 #### **RUS**:
 **Базовая поддержка 18.0.0. Рекомендуется держать emuNAND на 17.0.1**
 
+**728:** 
+[**Обновлено**] [MissionControl 0.11.0](https://github.com/ndeadly/MissionControl) - официальная поддержка 18.0.0, добавлены контроллеры, исправлены ошибки
+
 **727:** 
  [**Оновлено**] [MissionControl](https://github.com/ndeadly/MissionControl) - пересобрано для поддержки 18.0.0
 
@@ -34,6 +40,9 @@ ____
 
 #### **ENG**:
 **Basic Support 18.0.0. Recommended to keep emuNAND on 17.0.1**
+
+**728:** 
+[**Updated**] [MissionControl 0.11.0](https://github.com/ndeadly/MissionControl) - official support for 18.0.0, added controllers, fixed bugs
 
 **727:** 
  [**Updated**] [MissionControl](https://github.com/ndeadly/MissionControl) - built with 18.0.0 support

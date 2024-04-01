@@ -26,9 +26,22 @@ cls
 echo Choose mounted SD card letter
 
 
-for /f "tokens=3-6 delims=: " %%a in ('WMIC LOGICALDISK GET FreeSpace^,Name^,Size^,filesystem^,description ^|FINDSTR /I "Removable" ^|findstr /i "exfat fat32"') do (@echo wsh.echo "Disk letter: %%c;" ^& " free: " ^& FormatNumber^(cdbl^(%%b^)/1024/1024/1024, 2^)^& " GB;"^& " size: " ^& FormatNumber^(cdbl^(%%d^)/1024/1024/1024, 2^)^& " GB;" ^& " FS: %%a" > %temp%\tmp.vbs & @if not "%%c"=="" @echo( & @cscript //nologo %temp%\tmp.vbs & del %temp%\tmp.vbs)
+@echo off
+
+for /f "tokens=3-6 delims=: " %%a in ('WMIC LOGICALDISK GET FreeSpace^,Name^,Size^,filesystem^,description ^| FINDSTR /I "Removable" ^| findstr /i "exfat fat32"') do (
+    @echo wsh.echo "Disk letter: %%c;" ^& " free: " ^& FormatNumber^(cdbl^(%%b^)/1024/1024/1024, 2^)^& " GB;" ^& " size: " ^& FormatNumber^(cdbl^(%%d^)/1024/1024/1024, 2^)^& " GB;" ^& " FS: %%a" > %temp%\tmp.vbs
+    @if not "%%c"=="" (
+        @echo(
+        @cscript //nologo %temp%\tmp.vbs
+        del %temp%\tmp.vbs
+    )
+)
+
 echo.
 set /P sd="Enter SD card letter: "
+if "%sd%"=="" goto :eof
+
+
 
 if not exist "%sd%:\" (
 	set word=        There is no SD card in %sd%-drive         
@@ -316,38 +329,48 @@ if exist "%sd%:\switch\tinfoil\locations.conf_" (
 
 echo ------------------------------------------------------------------------
 echo.
-echo                              Fix atributes                              
+echo                          Clean MacOS garbage                              
 echo.
 echo ------------------------------------------------------------------------
 echo.
 
-if exist "%sd%:\atmosphere" (
-	attrib -A /S /D %sd%:\atmosphere\*
-	attrib -A %sd%:\atmosphere)
-if exist "%sd%:\atmosphere\contents" (
-	attrib -A /S /D %sd%:\atmosphere\contents\*
-	attrib -A %sd%:\atmosphere\contents)
-if exist "%sd%:\bootloader" (
-	attrib -A /S /D %sd%:\bootloader\*
-	attrib -A %sd%:\bootloader)
-if exist "%sd%:\config" (
-	attrib -A /S /D %sd%:\config\*
-	attrib -A %sd%:\config)
-if exist "%sd%:\switch" (
-	attrib -A /S /D %sd%:\switch\*
-	attrib -A %sd%:\switch)
-if exist "%sd%:\games" (
-	attrib -A /S /D %sd%:\games\*
-	attrib -A %sd%:\games)
-if exist "%sd%:\themes" (
-	attrib -A /S /D %sd%:\themes\*
-	attrib -A %sd%:\themes)
-if exist "%sd%:\hbmenu.nro" (attrib -A %sd%:\hbmenu.nro)
-if exist "%sd%:\boot.dat" (attrib -A %sd%:\boot.dat)
-if exist "%sd%:\payload.bin" (attrib -A %sd%:\payload.bin)
-if exist "%sd%:\pegascape" (
-	attrib -A /S /D %sd%:\pegascape\*
-	attrib -A %sd%:\pegascape)
+chdir /d %sd%:\
+
+for /f "delims=" %%i in ('dir /s /b /a:-d "%sd%:\._*" 2^>nul') do (
+    attrib -h "%%i" >nul 2>&1
+    del "%%i" >nul 2>&1 && (
+        echo Deleted "%%i"
+    ) || (
+        echo Failed to delete "%%i"
+    )
+)
+
+for /f "delims=" %%i in ('dir /s /b /a:-d "%sd%:\.DS_Store" 2^>nul') do (
+    attrib -h -s -r "%%i\*" /s /d >nul 2>&1
+    del "%%i" >nul 2>&1 && (
+        echo Deleted "%%i"
+    ) || (
+        echo Failed to delete "%%i"
+    )
+)
+
+for /f "delims=" %%i in ('dir /s /b /a:d "%sd%:\.Spotlight-V100" 2^>nul') do (
+    attrib -h -s -r "%%i\*" /s /d >nul 2>&1
+    rd /s /q "%%i" >nul 2>&1 && (
+        echo Deleted "%%i"
+    ) || (
+        echo Failed to delete "%%i"
+    )
+)
+
+cls
+
+echo ------------------------------------------------------------------------
+echo.
+echo                              Fix atributes                              
+echo.
+echo ------------------------------------------------------------------------
+echo.
 
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor\11ECA7E0 /v MaximumTransferLength /t REG_DWORD /d 00100000 /f>nul 2>&1
 if exist "%sd%:\TinGen" (RD /s /q "%sd%:\TinGen")
@@ -380,10 +403,40 @@ if %missioncontrol%==0 (
 
 if exist "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag" (del "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag")
 
-cd %sd%:\
+@echo off
+chdir /d %sd%:\
+for /r %%i in (._*) do (
+    attrib -H -S -R "%%i"
+    del "%%i"
+)
 
-if exist .DS_STORE del /s /q /f /a .DS_STORE
-if exist ._.* del /s /q /f /a ._.*
+if exist "%sd%:\atmosphere" (
+	attrib -A /S /D %sd%:\atmosphere\*
+	attrib -A %sd%:\atmosphere)
+if exist "%sd%:\atmosphere\contents" (
+	attrib -A /S /D %sd%:\atmosphere\contents\*
+	attrib -A %sd%:\atmosphere\contents)
+if exist "%sd%:\bootloader" (
+	attrib -A /S /D %sd%:\bootloader\*
+	attrib -A %sd%:\bootloader)
+if exist "%sd%:\config" (
+	attrib -A /S /D %sd%:\config\*
+	attrib -A %sd%:\config)
+if exist "%sd%:\switch" (
+	attrib -A /S /D %sd%:\switch\*
+	attrib -A %sd%:\switch)
+if exist "%sd%:\games" (
+	attrib -A /S /D %sd%:\games\*
+	attrib -A %sd%:\games)
+if exist "%sd%:\themes" (
+	attrib -A /S /D %sd%:\themes\*
+	attrib -A %sd%:\themes)
+if exist "%sd%:\hbmenu.nro" (attrib -A %sd%:\hbmenu.nro)
+if exist "%sd%:\boot.dat" (attrib -A %sd%:\boot.dat)
+if exist "%sd%:\payload.bin" (attrib -A %sd%:\payload.bin)
+if exist "%sd%:\pegascape" (
+	attrib -A /S /D %sd%:\pegascape\*
+	attrib -A %sd%:\pegascape)
 
 goto end
 
