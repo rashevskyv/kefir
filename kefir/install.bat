@@ -329,44 +329,6 @@ if exist "%sd%:\switch\tinfoil\locations.conf_" (
 
 echo ------------------------------------------------------------------------
 echo.
-echo                          Clean MacOS garbage                              
-echo.
-echo ------------------------------------------------------------------------
-echo.
-
-chdir /d %sd%:\
-
-for /f "delims=" %%i in ('dir /s /b /a:-d "%sd%:\._*" 2^>nul') do (
-    attrib -h "%%i" >nul 2>&1
-    del "%%i" >nul 2>&1 && (
-        echo Deleted "%%i"
-    ) || (
-        echo Failed to delete "%%i"
-    )
-)
-
-for /f "delims=" %%i in ('dir /s /b /a:-d "%sd%:\.DS_Store" 2^>nul') do (
-    attrib -h -s -r "%%i\*" /s /d >nul 2>&1
-    del "%%i" >nul 2>&1 && (
-        echo Deleted "%%i"
-    ) || (
-        echo Failed to delete "%%i"
-    )
-)
-
-for /f "delims=" %%i in ('dir /s /b /a:d "%sd%:\.Spotlight-V100" 2^>nul') do (
-    attrib -h -s -r "%%i\*" /s /d >nul 2>&1
-    rd /s /q "%%i" >nul 2>&1 && (
-        echo Deleted "%%i"
-    ) || (
-        echo Failed to delete "%%i"
-    )
-)
-
-cls
-
-echo ------------------------------------------------------------------------
-echo.
 echo                              Fix atributes                              
 echo.
 echo ------------------------------------------------------------------------
@@ -402,13 +364,6 @@ if %missioncontrol%==0 (
 	)
 
 if exist "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag" (del "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag")
-
-@echo off
-chdir /d %sd%:\
-for /r %%i in (._*) do (
-    attrib -H -S -R "%%i"
-    del "%%i"
-)
 
 if exist "%sd%:\atmosphere" (
 	attrib -A /S /D %sd%:\atmosphere\*
