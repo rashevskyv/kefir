@@ -1,4 +1,4 @@
-# Kefir moved here - https://codeberg.org/rashevskyv/kefir/releases
+# Kefir moved here - [https://codeberg.org/rashevskyv/kefir/releases](https://bitbucket.org/kefir-switch/kefir/src/master/)
 
 ## Donate
 
