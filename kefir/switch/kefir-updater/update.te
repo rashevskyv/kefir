@@ -41,7 +41,7 @@ boot=fsexists("sd:/boot.dat")
 pegascape=fsexists("sd:/pegascape")
 syscon=fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")
 missioncontrol=fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")
-oc=!fsexists("sd:/config/uberhand/packages/kefir_ovlck")
+# oc=!fsexists("sd:/config/uberhand/packages/kefir_ovlck")
 
 if (fsexists("sd:/switch/DBI/dbi.config")) {
 	if (fsexists("sd:/switch/DBI/dbi.config_")) {
@@ -214,6 +214,7 @@ deldir("sd:/atmosphere/contents/0100000000001013");
 deldir("sd:/atmosphere/contents/010000000000100C");
 deldir("sd:/atmosphere/contents/0000000000534C56");
 deldir("sd:/atmosphere/contents/0100000000000081");
+deldir("sd:/config/uberhand/packages/ovrlck");
 deldir("sd:/sxos/titles/");
 deldir("sd:/sxos/bootloader");
 deldir("sd:/sxos/switch");
@@ -248,18 +249,18 @@ p("Done")
 wait(tw = 1000)
 
 # if update 
-if(oc) {
-	copydir("sd:/kefir/oc/atmosphere", "sd:/")
-	copydir("sd:/kefir/oc/switch", "sd:/")
-	copydir("sd:/kefir/oc/config", "sd:/")
-}.else(){
-	copydir("sd:/kefir/oc/atmosphere", "sd:/config/uberhand/packages/kefir_ovlck")
-	copydir("sd:/kefir/oc/switch", "sd:/config/uberhand/packages/kefir_ovlck")
-	copydir("sd:/kefir/oc/config", "sd:/config/uberhand/packages/kefir_ovlck")
-	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/kefir/switch/.packages/Settings/config.ini")
-}
+#if(oc) {
+#	copydir("sd:/kefir/oc/atmosphere", "sd:/")
+#	copydir("sd:/kefir/oc/switch", "sd:/")
+#	copydir("sd:/kefir/oc/config", "sd:/")
+#}.else(){
+#	copydir("sd:/kefir/oc/atmosphere", "sd:/config/uberhand/packages/kefir_ovlck")
+#	copydir("sd:/kefir/oc/switch", "sd:/config/uberhand/packages/kefir_ovlck")
+#	copydir("sd:/kefir/oc/config", "sd:/config/uberhand/packages/kefir_ovlck")
+#	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/kefir/switch/.packages/Settings/config.ini")
+#}
 
-deldir("sd:/oc")
+#deldir("sd:/oc")
 
 if (fsexists("sd:/kefir")) {
 	# 2. Копируем кефир на карту 

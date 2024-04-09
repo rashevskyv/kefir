@@ -58,7 +58,7 @@ if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set 
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.config_)
 if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.conf_)
-if exist "%sd%:\config\uberhand\packages\kefir_ovlck" (set oc=0)
+@REM if exist "%sd%:\config\uberhand\packages\kefir_ovlck" (set oc=0)
 
 rem Set mission control status
 @REM set missioncontrol=0
@@ -109,6 +109,7 @@ if exist "%sd%:\atmosphere\contents\010000000000100C" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmosphere\contents\0000000000534C56")
 if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
+if exist "%sd%:\config\uberhand\packages\ovrlck" (RD /s /q "%sd%:\config\uberhand\packages\ovrlck")
 
 if exist "%sd%:\atmosphere\erpt_reports" (RD /s /q "%sd%:\atmosphere\erpt_reports")
 if exist "%sd%:\atmosphere\fatal_reports" (RD /s /q "%sd%:\atmosphere\fatal_reports")
@@ -286,15 +287,15 @@ if %emu%==1 (
 	copy "%sd%:\config\uberhand\packages\emu.ini" "%sd%:\switch\.packages\config.ini" /Y
 )
 
-if %oc%==1 (
-	xcopy "%sd%:\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
-) else (
-	xcopy "%sd%:\oc\*" "%sd%:\config\uberhand\packages\kefir_ovlck\" /H /Y /C /R /S /E /
-	copy "%sd%:\config\uberhand\packages\ovrlck\kefir.ini" "%sd%:\switch\.packages\Settings\config.ini" /Y
-	)
-)
+@REM if %oc%==1 (
+@REM 	xcopy "%sd%:\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
+@REM ) else (
+@REM 	xcopy "%sd%:\oc\*" "%sd%:\config\uberhand\packages\kefir_ovlck\" /H /Y /C /R /S /E /
+@REM 	copy "%sd%:\config\uberhand\packages\ovrlck\kefir.ini" "%sd%:\switch\.packages\Settings\config.ini" /Y
+@REM 	)
+@REM )
 
-RD /s /q "%sd%:\oc"
+@REM RD /s /q "%sd%:\oc"
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
