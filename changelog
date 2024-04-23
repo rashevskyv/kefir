@@ -1,57 +1,36 @@
 #### **UKR**:
-**Базова підтримка 18.0.0. Рекомендується тримати emuNAND на 17.0.1**
+**Повна підтримка 18.0.1**
 
-**728:** 
- [**Оновлено**] [MissionControl 0.11.0](https://github.com/ndeadly/MissionControl) - офіційна підтримка 18.0.0, додані контролери, виправлені помилки
-
-**727:** 
- [**Оновлено**] [MissionControl](https://github.com/ndeadly/MissionControl) - перезібрано з підтримкою 18.0.0
-
-**726:**
-* [**Оновлено**] [Atmosphere 1.7.0 pre-release](https://github.com/rashevskyv/Kefirosphere) - базова підтримка 18.0.0. Рекомендується тримати emuNAND на 17.0.1, поки підтрика не буде повною. Також сігпатчі вшиті в саму атмосферу (дякую db)
-    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate 6.1.1](https://github.com/CTCaer/hekate/releases)
-    - Підтримка 18.0.0
-    - Замість помилки pkg1 тепер консоль буде грузитися в офіційну прошивку 
-* [**Оновлено**] [lockpick_RCM] - підтримка 18.0.0
-* [**Змінено**] Замість `tinfoil.nsp` тепер інсталлер tinfoil в HBMenu
+**730:** 
+[**Оновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
+[**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - знову відключено логування на картку пам'яті, яке було помилково відновлено чортову купу часо тому. Друг DB знову безмежна подяка! Патчі тепер повністю інтегровані в cистему, завдяки чому модуль іні-patch більше дійсно не потрібен 
+[**Видалено**] [sys-patch] - більше не потрібен, бо патчі інтегровані в систему
+[**Змінено**] [Загрузка Kefir] - тепер загрузка відбувається через fusee.bin, як це й задумано в Atmosphere, завдяки чому і є можливість інтегрувати патчі в саму атмосферу 
+[**Додано**] [Патчи] nifm-патч для 18.0.1. Дякую, DB 
+[**Видалено**] Тимчасово випилив розгін. За замовчанням його більше не буде у будь-якому випадку. Буде опційний, але пізніше. Наразі вимкнув взагалі, бо є консолі, які не тягнуть значення за замовчанням. А робити опційно зараз не маю часу. 
 
 ____
 
 #### **RUS**:
-**Базовая поддержка 18.0.0. Рекомендуется держать emuNAND на 17.0.1**
+**Полная поддержка 18.0.1**
 
-**728:** 
-[**Обновлено**] [MissionControl 0.11.0](https://github.com/ndeadly/MissionControl) - официальная поддержка 18.0.0, добавлены контроллеры, исправлены ошибки
-
-**727:** 
- [**Оновлено**] [MissionControl](https://github.com/ndeadly/MissionControl) - пересобрано для поддержки 18.0.0
-
-**726:**
-* [**Обновлено**] [Atmosphere 1.7.0 предварительная версия](https://github.com/rashevskyv/Kefirosphere) - базовая поддержка 18.0.0. Рекомендуется держать emuNAND на 17.0.1, пока поддержка не будет полной. Также sigpatches интегрированы непосредственно в атмосферу (спасибо db)
-    * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Обновлено**] [hekate 6.1.1](https://github.com/CTCaer/hekate/releases)
-    - Поддержка 18.0.0
-    - Вместо ошибки pkg1 теперь консоль будет загружаться в официальную прошивку
-* [**Обновлено**] [lockpick_RCM] - поддержка 18.0.0
-* [**Изменено**] Вместо `tinfoil.nsp` теперь инсталлятор tinfoil в HBMenu
+**730:** 
+[**Обновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
+[**Исправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - логирование на карту памяти снова отключено после того, как оно было ошибочно восстановлено чертову кучу времени назад. Бесконечная благодарность DB! Патчи теперь полностью интегрированы в систему, что исключает необходимость в модуле ini-patch.
+[**Удалено**] [sys-patch] - больше не нужен, поскольку патчи интегрированы в систему
+[**Изменено**] [Загрузчик Kefir] - теперь загрузка происходит через fusee.bin, как изначально предусмотрено в Atmosphere, что позволяет интегрировать патчи непосредственно в Atmosphere
+[**Добавлено**] [Патчи] nifm-патч для 18.0.1. Спасибо, DB
+[**Удалено**] Временно убрал разгон. По умолчанию его больше не будет в любом случае. Будет опциональным, но позже. Пока что отключил полностью, так как есть консоли, которые не тянут значения по умолчанию. И делать опциональным сейчас нет времени.
 
 ____
 
 #### **ENG**:
-**Basic Support 18.0.0. Recommended to keep emuNAND on 17.0.1**
+**Full Support 18.0.1**
 
-**728:** 
-[**Updated**] [MissionControl 0.11.0](https://github.com/ndeadly/MissionControl) - official support for 18.0.0, added controllers, fixed bugs
-
-**727:** 
- [**Updated**] [MissionControl](https://github.com/ndeadly/MissionControl) - built with 18.0.0 support
-
-**726:**
-* [**Updated**] [Atmosphere 1.7.0 pre-release](https://github.com/rashevskyv/Kefirosphere) - base support for 18.0.0. It is recommended to keep emuNAND on 17.0.1 until full support is available. Also, sigpatches are integrated into the atmosphere itself (thanks db)
-    * [**More about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.1.1](https://github.com/CTCaer/hekate/releases)
-    - Support for 18.0.0
-    - Instead of a pkg1 error, the console will now boot into the official firmware
-* [**Updated**] [lockpick_RCM] - support for 18.0.0
-* [**Changed**] Instead of `tinfoil.nsp`, there is now a tinfoil installer in HBMenu
+**730:** 
+[**Updated**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
+[**Fixed**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - logging to memory card has been disabled again after being mistakenly restored a hell of a long time ago. Endless thanks to DB! Patches are now fully integrated into the system, eliminating the need for the ini-patch module.
+[**Removed**] [sys-patch] - no longer needed as patches are integrated into the system
+[**Changed**] [Kefir Loader] - now loads through fusee.bin, as originally intended in Atmosphere, which allows for the integration of patches directly into the Atmosphere
+[**Added**] [Patches] nifm-patch for 18.0.1. Thanks, DB
+[**Removed**] Temporarily removed overclocking. It will no longer be included by default in any case. It will be optional, but later. For now, it has been completely disabled, as there are consoles that do not support the default settings. And I don't have time to make it optional right now.
