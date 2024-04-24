@@ -1,6 +1,11 @@
 #### **UKR**:
 **Повна підтримка 18.0.1**
 
+**731**:
+[**Виправлено**] Виправив відображення серійника в семі-сток. Забув, що в атмосфері свої приколи 
+[**Додано**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - підтримка консолей для демо-стендів (kiosk). Не тестувалося. Знову дякую DB
+[**Додано**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - додана підтримка нових типів пам'яті, що може виправити помилку 'Unknown EmcDvfsTimingTableIndex: -1'
+
 **730:** 
 [**Оновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
 [**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - знову відключено логування на картку пам'яті, яке було помилково відновлено чортову купу часо тому. Друг DB знову безмежна подяка! Патчі тепер повністю інтегровані в cистему, завдяки чому модуль іні-patch більше дійсно не потрібен 
@@ -14,6 +19,11 @@ ____
 #### **RUS**:
 **Полная поддержка 18.0.1**
 
+**731**:
+[**Исправлено**] Исправил отображение серийного номера в semi-stock. Забыл, что в Atmosphere свои фишки
+[**Добавлено**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - поддержка консолей для демо-стендов (kiosk). Не тестировалось. Снова спасибо DB
+[**Добавлено**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - добавлена поддержка новых типов памяти, что может исправить ошибку 'Unknown EmcDvfsTimingTableIndex: -1'
+
 **730:** 
 [**Обновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
 [**Исправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - логирование на карту памяти снова отключено после того, как оно было ошибочно восстановлено чертову кучу времени назад. Бесконечная благодарность DB! Патчи теперь полностью интегрированы в систему, что исключает необходимость в модуле ini-patch.
@@ -26,6 +36,11 @@ ____
 
 #### **ENG**:
 **Full Support 18.0.1**
+
+**731**:
+[**Fixed**] Fixed the display of the serial number in semi-stock. Forgot that Atmosphere has its quirks
+[**Added**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - support for demo stand consoles (kiosk). Not tested. Thanks again, DB
+[**Added**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - added support for new types of memory, which may fix the 'Unknown EmcDvfsTimingTableIndex: -1' error
 
 **730:** 
 [**Updated**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
