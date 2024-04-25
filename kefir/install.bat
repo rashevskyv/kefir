@@ -14,7 +14,7 @@ set missioncontrol=1
 set bootdat=1
 set payloadbin=1
 set pegascape=1
-set oc=1
+set oc=0
 set emu=1
 
 set sd=%1
@@ -58,7 +58,7 @@ if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set 
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.config_)
 if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.conf_)
-@REM if exist "%sd%:\config\uberhand\packages\kefir_ovlck" (set oc=0)
+if exist "%sd%:\bootloader\loader.kip" (set oc=1)
 
 rem Set mission control status
 @REM set missioncontrol=0
@@ -288,15 +288,17 @@ if %emu%==1 (
 	copy "%sd%:\config\uberhand\packages\emu.ini" "%sd%:\switch\.packages\config.ini" /Y
 )
 
-@REM if %oc%==1 (
-@REM 	xcopy "%sd%:\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
-@REM ) else (
-@REM 	xcopy "%sd%:\oc\*" "%sd%:\config\uberhand\packages\kefir_ovlck\" /H /Y /C /R /S /E /
-@REM 	copy "%sd%:\config\uberhand\packages\ovrlck\kefir.ini" "%sd%:\switch\.packages\Settings\config.ini" /Y
-@REM 	)
-@REM )
+if %oc%==1 (
+	xcopy "%sd%:\switch\.packages\Settings\config.ini" "%sd%:\config\uberhand\packages\oc_bkp\oc.ini" /H /Y /C /R /S /E /I
+	xcopy "%sd%:\config\uberhand\packages\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
+) else (
+	if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF\" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF\")
+	if exist "%sd%:\atmosphere\kips\kefir.kip" (del "%sd%:\atmosphere\kips\kefir.kip")
+	if exist "%sd%:\atmosphere\kips\loader.kip" (del "%sd%:\atmosphere\kips\loader.kip")
+	if exist "%sd%:\switch\.overlays\sys-clk-overlay.ovl" (del "%sd%:\switch\.overlays\sys-clk-overlay.ovl")
+)
 
-@REM RD /s /q "%sd%:\oc"
+RD /s /q "%sd%:\oc"
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 

@@ -5,7 +5,7 @@ syscon=0
 missioncontrol=0
 maj=0
 pegascape=0
-oc=1
+oc=0
 emunand=1
 
 wait={t=timer()while(timer()<(t+tw)){print()}}
@@ -238,6 +238,7 @@ deldir("sd:/switch/nxmp");
 deldir("sd:/switch/NX-Shell");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
+deldir("sd:/oc");
 deldir("sd:/switch/.packages/Semi-stock");
 
 deldir("sd:/firmware")
@@ -249,19 +250,7 @@ p()
 p("Done")
 wait(tw = 1000)
 
-# if update 
-#if(oc) {
-#	copydir("sd:/kefir/oc/atmosphere", "sd:/")
-#	copydir("sd:/kefir/oc/switch", "sd:/")
-#	copydir("sd:/kefir/oc/config", "sd:/")
-#}.else(){
-#	copydir("sd:/kefir/oc/atmosphere", "sd:/config/uberhand/packages/kefir_ovlck")
-#	copydir("sd:/kefir/oc/switch", "sd:/config/uberhand/packages/kefir_ovlck")
-#	copydir("sd:/kefir/oc/config", "sd:/config/uberhand/packages/kefir_ovlck")
-#	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/kefir/switch/.packages/Settings/config.ini")
-#}
 
-#deldir("sd:/oc")
 
 if (fsexists("sd:/kefir")) {
 	# 2. Копируем кефир на карту 
@@ -302,6 +291,19 @@ if(emunand) {
 }.else(){
 	delfile("sd:/config/uberhand/packages/settings/emu")
 	copyfile("sd:/kefir/config/uberhand/packages/emu.ini", "sd:/switch/.packages/config.ini")
+}
+
+if (fsexists("sd:/bootloader/loader.kip")) {
+	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/config/uberhand/packages/oc_bkp/oc.ini")
+	copydir("sd:/config/uberhand/packages/oc/atmosphere", "sd:/")
+	copydir("sd:/config/uberhand/packages/oc/bootloader", "sd:/")
+	copydir("sd:/config/uberhand/packages/oc/config", "sd:/")
+	copydir("sd:/config/uberhand/packages/oc/switch", "sd:/")
+}.else(){
+	deldir("sd:/atmosphere/contents/00FF0000636C6BFF/")
+	delfile("sd:/atmosphere/kips/loader.kip")
+	delfile("sd:/atmosphere/kips/kefir.kip")
+	delfile("sd:/switch/.overlays/sys-clk-overlay.ovl")
 }
 
 

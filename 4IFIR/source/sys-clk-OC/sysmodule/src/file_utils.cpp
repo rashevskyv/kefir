@@ -184,7 +184,7 @@ void FileUtils::Exit()
 }
 
 void FileUtils::ParseLoaderKip() {
-    const char* dirs[] = { "/", "/atmosphere/", "/atmosphere/kips/", "/bootloader/" };
+    const char* dirs[] = { "/", "/atmosphere/", "/atmosphere/kips/", "/bootloader/", "/config/sys-clk/" };
     char* full_path = new char[0x200];
     SCOPE_EXIT { delete[] full_path; };
 
@@ -229,7 +229,7 @@ void FileUtils::ParseLoaderKip() {
         }
     }
 
-    ERROR_THROW("Cannot locate loader.kip in /, /atmosphere/, /atmosphere/kips/ and /bootloader/");
+    ERROR_THROW("Cannot locate loader.kip in /, /atmosphere/, /atmosphere/kips/, /bootloader/ or /config/sys-clk/");
 }
 
 Result FileUtils::CustParser(const char* filepath, size_t filesize) {

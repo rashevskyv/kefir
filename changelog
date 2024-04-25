@@ -1,51 +1,60 @@
 #### **UKR**:
 **Повна підтримка 18.0.1**
 
+**733**:
+* [**Додано**] Повернув розгін. За замовчанням вимкнений. Включається через Uberhand > Settings
+
 **731**:
-[**Виправлено**] Виправив відображення серійника в семі-сток. Забув, що в атмосфері свої приколи 
-[**Додано**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - підтримка консолей для демо-стендів (kiosk). Не тестувалося. Знову дякую DB
-[**Додано**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - додана підтримка нових типів пам'яті, що може виправити помилку 'Unknown EmcDvfsTimingTableIndex: -1'
+* [**Виправлено**] Виправив відображення серійника в семі-сток. Забув, що в атмосфері свої приколи 
+* [**Додано**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - підтримка консолей для демо-стендів (kiosk). Не тестувалося. Знову дякую DB
+* [**Додано**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - додана підтримка нових типів пам'яті, що може виправити помилку 'Unknown EmcDvfsTimingTableIndex: -1'
 
 **730:** 
-[**Оновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
-[**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - знову відключено логування на картку пам'яті, яке було помилково відновлено чортову купу часо тому. Друг DB знову безмежна подяка! Патчі тепер повністю інтегровані в cистему, завдяки чому модуль іні-patch більше дійсно не потрібен 
-[**Видалено**] [sys-patch] - більше не потрібен, бо патчі інтегровані в систему
-[**Змінено**] [Загрузка Kefir] - тепер загрузка відбувається через fusee.bin, як це й задумано в Atmosphere, завдяки чому і є можливість інтегрувати патчі в саму атмосферу 
-[**Додано**] [Патчи] nifm-патч для 18.0.1. Дякую, DB 
-[**Видалено**] Тимчасово випилив розгін. За замовчанням його більше не буде у будь-якому випадку. Буде опційний, але пізніше. Наразі вимкнув взагалі, бо є консолі, які не тягнуть значення за замовчанням. А робити опційно зараз не маю часу. 
+* [**Оновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
+* [**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - знову відключено логування на картку пам'яті, яке було помилково відновлено чортову купу часо тому. Друг DB знову безмежна подяка! Патчі тепер повністю інтегровані в cистему, завдяки чому модуль sys-patch більше дійсно не потрібен 
+* [**Видалено**] [sys-patch] - більше не потрібен, бо патчі інтегровані в систему
+* [**Змінено**] [Загрузка Kefir] - тепер загрузка відбувається через fusee.bin, як це й задумано в Atmosphere, завдяки чому і є можливість інтегрувати патчі в саму атмосферу 
+* [**Додано**] [Патчи] nifm-патч для 18.0.1. Дякую, DB 
+* [**Видалено**] Тимчасово випилив розгін. За замовчанням його більше не буде у будь-якому випадку. Буде опційний, але пізніше. Наразі вимкнув взагалі, бо є консолі, які не тягнуть значення за замовчанням. А робити опційно зараз не маю часу. 
 
 ____
 
 #### **RUS**:
 **Полная поддержка 18.0.1**
 
+**733**:
+* [**Добавлено**] Вернул разгон. По умолчанию отключен. Включается через Uberhand > Settings
+
 **731**:
-[**Исправлено**] Исправил отображение серийного номера в semi-stock. Забыл, что в Atmosphere свои фишки
-[**Добавлено**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - поддержка консолей для демо-стендов (kiosk). Не тестировалось. Снова спасибо DB
-[**Добавлено**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - добавлена поддержка новых типов памяти, что может исправить ошибку 'Unknown EmcDvfsTimingTableIndex: -1'
+* [**Исправлено**] Исправил отображение серийного номера в semi-stock. Забыл, что в Atmosphere свои фишки
+* [**Добавлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - поддержка консолей для демо-стендов (kiosk). Не тестировалось. Снова спасибо DB
+* [**Добавлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - добавлена поддержка новых типов памяти, что может исправить ошибку 'Unknown EmcDvfsTimingTableIndex: -1'
 
 **730:** 
-[**Обновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
-[**Исправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - логирование на карту памяти снова отключено после того, как оно было ошибочно восстановлено чертову кучу времени назад. Бесконечная благодарность DB! Патчи теперь полностью интегрированы в систему, что исключает необходимость в модуле ini-patch.
-[**Удалено**] [sys-patch] - больше не нужен, поскольку патчи интегрированы в систему
-[**Изменено**] [Загрузчик Kefir] - теперь загрузка происходит через fusee.bin, как изначально предусмотрено в Atmosphere, что позволяет интегрировать патчи непосредственно в Atmosphere
-[**Добавлено**] [Патчи] nifm-патч для 18.0.1. Спасибо, DB
-[**Удалено**] Временно убрал разгон. По умолчанию его больше не будет в любом случае. Будет опциональным, но позже. Пока что отключил полностью, так как есть консоли, которые не тянут значения по умолчанию. И делать опциональным сейчас нет времени.
+* [**Обновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
+* [**Исправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - логирование на карту памяти снова отключено после того, как оно было ошибочно восстановлено чертову кучу времени назад. Бесконечная благодарность DB! Патчи теперь полностью интегрированы в систему, что исключает необходимость в модуле sys-patch.
+* [**Удалено**] [sys-patch] - больше не нужен, поскольку патчи интегрированы в систему
+* [**Изменено**] [Загрузчик Kefir] - теперь загрузка происходит через fusee.bin, как изначально предусмотрено в Atmosphere, что позволяет интегрировать патчи непосредственно в Atmosphere
+* [**Добавлено**] [Патчи] nifm-патч для 18.0.1. Спасибо, DB
+* [**Удалено**] Временно убрал разгон. По умолчанию его больше не будет в любом случае. Будет опциональным, но позже. Пока что отключил полностью, так как есть консоли, которые не тянут значения по умолчанию. И делать опциональным сейчас нет времени.
 
 ____
 
 #### **ENG**:
 **Full Support 18.0.1**
 
+**733**:
+* [**Added**] Restored overclocking. Disabled by default. Can be enabled via Uberhand > Settings
+
 **731**:
-[**Fixed**] Fixed the display of the serial number in semi-stock. Forgot that Atmosphere has its quirks
-[**Added**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - support for demo stand consoles (kiosk). Not tested. Thanks again, DB
-[**Added**][Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - added support for new types of memory, which may fix the 'Unknown EmcDvfsTimingTableIndex: -1' error
+* [**Fixed**] Fixed the display of the serial number in semi-stock. Forgot that Atmosphere has its quirks
+* [**Added**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - support for demo stand consoles (kiosk). Not tested. Thanks again, DB
+* [**Added**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - added support for new types of memory, which may fix the 'Unknown EmcDvfsTimingTableIndex: -1' error
 
 **730:** 
-[**Updated**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
-[**Fixed**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - logging to memory card has been disabled again after being mistakenly restored a hell of a long time ago. Endless thanks to DB! Patches are now fully integrated into the system, eliminating the need for the ini-patch module.
-[**Removed**] [sys-patch] - no longer needed as patches are integrated into the system
-[**Changed**] [Kefir Loader] - now loads through fusee.bin, as originally intended in Atmosphere, which allows for the integration of patches directly into the Atmosphere
-[**Added**] [Patches] nifm-patch for 18.0.1. Thanks, DB
-[**Removed**] Temporarily removed overclocking. It will no longer be included by default in any case. It will be optional, but later. For now, it has been completely disabled, as there are consoles that do not support the default settings. And I don't have time to make it optional right now.
+* [**Updated**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
+* [**Fixed**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - logging to memory card has been disabled again after being mistakenly restored a hell of a long time ago. Endless thanks to DB! Patches are now fully integrated into the system, eliminating the need for the sys-patch module.
+* [**Removed**] [sys-patch] - no longer needed as patches are integrated into the system
+* [**Changed**] [Kefir Loader] - now loads through fusee.bin, as originally intended in Atmosphere, which allows for the integration of patches directly into the Atmosphere
+* [**Added**] [Patches] nifm-patch for 18.0.1. Thanks, DB
+* [**Removed**] Temporarily removed overclocking. It will no longer be included by default in any case. It will be optional, but later. For now, it has been completely disabled, as there are consoles that do not support the default settings. And I don't have time to make it optional right now.
