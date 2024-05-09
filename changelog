@@ -1,8 +1,11 @@
 #### **UKR**:
 **Повна підтримка 18.0.1**
 
+**734**:
+* [**Оновлено**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
+
 **733**:
-* [**Додано**] Повернув розгін. За замовчанням вимкнений. Включається через Uberhand > Settings
+* [**Додано**] Повернув розгін. За замовчанням вимкнений. Включається через `Uberhand > Settings`
 
 **731**:
 * [**Виправлено**] Виправив відображення серійника в семі-сток. Забув, що в атмосфері свої приколи 
@@ -22,8 +25,11 @@ ____
 #### **RUS**:
 **Полная поддержка 18.0.1**
 
+**734**:
+* [**Обновлено**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
+
 **733**:
-* [**Добавлено**] Вернул разгон. По умолчанию отключен. Включается через Uberhand > Settings
+* [**Добавлено**] Вернул разгон. По умолчанию отключен. Включается через `Uberhand > Settings`
 
 **731**:
 * [**Исправлено**] Исправил отображение серийного номера в semi-stock. Забыл, что в Atmosphere свои фишки
@@ -43,8 +49,11 @@ ____
 #### **ENG**:
 **Full Support 18.0.1**
 
+**734**:
+* [**Updated**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
+
 **733**:
-* [**Added**] Restored overclocking. Disabled by default. Can be enabled via Uberhand > Settings
+* [**Added**] Restored overclocking. Disabled by default. Can be enabled via `Uberhand > Settings`
 
 **731**:
 * [**Fixed**] Fixed the display of the serial number in semi-stock. Forgot that Atmosphere has its quirks

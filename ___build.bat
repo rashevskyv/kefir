@@ -67,8 +67,8 @@ if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
 xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
-xcopy "%kefir_dir%\hekate_ctcaer_*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
-del "%kefir_dir%\hekate_ctcaer_*.bin"
+xcopy "%kefir_dir%\hekate*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
+del "%kefir_dir%\hekate*.bin"
 
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
