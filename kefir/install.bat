@@ -282,10 +282,10 @@ echo ------------------------------------------------------------------------
 xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
 
 if %emu%==1 (
-	del "%sd%:\config\uberhand\packages\settings\stock"
+	if exist "%sd%:\config\uberhand\packages\settings\stock" (del "%sd%:\config\uberhand\packages\settings\stock")
 ) else (
-	del "%sd%:\config\uberhand\packages\settings\emu"
-	copy "%sd%:\config\uberhand\packages\emu.ini" "%sd%:\switch\.packages\config.ini" /Y
+	if exist "%sd%:\config\uberhand\packages\settings\emu" (del "%sd%:\config\uberhand\packages\settings\emu")
+	if exist "%sd%:\config\uberhand\packages\emu.ini" (copy "%sd%:\config\uberhand\packages\emu.ini" "%sd%:\switch\.packages\config.ini" /Y)
 )
 
 if %oc%==1 (

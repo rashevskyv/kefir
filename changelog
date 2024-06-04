@@ -2,6 +2,11 @@
 **Повна підтримка 18.0.1**
 
 **734**:
+* [**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - виправлені nifm-патчи. Тепер на прошивках нижче 18.0.0 не має бути помилдок при підключенні до WiFi
+* [**Оновлено**] [EdiZone overlay](https://github.com/proferabg/EdiZon-Overlay/releases) - перезібрано на останньому libnx, щоб правильно відображалися метрики
+* [**Змінено**] [Uberhand overlay](https://github.com/efosamark/Uberhand-Overlay/releases) - відкат до версії 2.1.5 через помилку, яка не дає встановити локалізацію
+
+**734**:
 * [**Оновлено**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
 
 **733**:
