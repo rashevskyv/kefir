@@ -289,13 +289,13 @@ if %emu%==1 (
 )
 
 if %oc%==1 (
-	xcopy "%sd%:\switch\.packages\Settings\config.ini" "%sd%:\config\uberhand\packages\oc_bkp\oc.ini" /H /Y /C /R /S /E /I
-	xcopy "%sd%:\config\uberhand\packages\oc\*" "%sd%:\" /H /Y /C /R /S /E /I
+    xcopy "%sd%:\switch\.packages\Settings\config.ini" "%sd%:\config\uberhand\packages\oc_bkp\oc.ini" /H /Y /C /R /S /E /I /F
+    xcopy "%sd%:\config\uberhand\packages\oc\*" "%sd%:\" /H /Y /C /R /S /E /I /F
 ) else (
-	if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF\" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF\")
-	if exist "%sd%:\atmosphere\kips\kefir.kip" (del "%sd%:\atmosphere\kips\kefir.kip")
-	if exist "%sd%:\atmosphere\kips\loader.kip" (del "%sd%:\atmosphere\kips\loader.kip")
-	if exist "%sd%:\switch\.overlays\sys-clk-overlay.ovl" (del "%sd%:\switch\.overlays\sys-clk-overlay.ovl")
+    if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF\" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF\")
+    if exist "%sd%:\atmosphere\kips\kefir.kip" (del "%sd%:\atmosphere\kips\kefir.kip")
+    if exist "%sd%:\atmosphere\kips\loader.kip" (del "%sd%:\atmosphere\kips\loader.kip")
+    if exist "%sd%:\switch\.overlays\sys-clk-overlay.ovl" (del "%sd%:\switch\.overlays\sys-clk-overlay.ovl")
 )
 
 RD /s /q "%sd%:\oc"
