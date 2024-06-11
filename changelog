@@ -1,96 +1,30 @@
 #### **UKR**:
 **Повна підтримка 18.0.1**
 
-**736**:
-* [**Оновлено**] [EdiZone overlay 1.0.8](https://github.com/proferabg/EdiZon-Overlay/releases) - правильне відображення температур на останніх прошивках, опція включення читів за замовчанням в оверлеї
-* [**Оновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - перезібрано з останніми коммітами. Підтримка нових NSO модулів 
-
-**735**:
-* [**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - виправлені nifm-патчи. Тепер на прошивках нижче 18.0.0 не має бути помилок при підключенні до WiFi
-* [**Оновлено**] [EdiZone overlay](https://github.com/proferabg/EdiZon-Overlay/releases) - перезібрано на останньому libnx, щоб правильно відображалися метрики
-* [**Змінено**] [Uberhand overlay](https://github.com/efosamark/Uberhand-Overlay/releases) - відкат до версії 2.1.5 через помилку, яка не дає встановити локалізацію
-
-**734**:
-* [**Оновлено**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
-
-**733**:
-* [**Додано**] Повернув розгін. За замовчанням вимкнений. Включається через `Uberhand > Settings`
-
-**731**:
-* [**Виправлено**] Виправив відображення серійника в семі-сток. Забув, що в атмосфері свої приколи 
-* [**Додано**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - підтримка консолей для демо-стендів (kiosk). Не тестувалося. Знову дякую DB
-* [**Додано**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - додана підтримка нових типів пам'яті, що може виправити помилку 'Unknown EmcDvfsTimingTableIndex: -1'
-
-**730:** 
-* [**Оновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
-* [**Виправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - знову відключено логування на картку пам'яті, яке було помилково відновлено чортову купу часо тому. Друг DB знову безмежна подяка! Патчі тепер повністю інтегровані в cистему, завдяки чому модуль sys-patch більше дійсно не потрібен 
-* [**Видалено**] [sys-patch] - більше не потрібен, бо патчі інтегровані в систему
-* [**Змінено**] [Загрузка Kefir] - тепер загрузка відбувається через fusee.bin, як це й задумано в Atmosphere, завдяки чому і є можливість інтегрувати патчі в саму атмосферу 
-* [**Додано**] [Патчи] nifm-патч для 18.0.1. Дякую, DB 
-* [**Видалено**] Тимчасово випилив розгін. За замовчанням його більше не буде у будь-якому випадку. Буде опційний, але пізніше. Наразі вимкнув взагалі, бо є консолі, які не тягнуть значення за замовчанням. А робити опційно зараз не маю часу. 
+**737**:
+* [**Оновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - підтримка 18.1.0
+    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+ [**Оновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - підтримка 18.1.0
+ [**Оновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - підтримка 18.1.0
 
 ____
 
 #### **RUS**:
 **Полная поддержка 18.0.1**
 
-**736**:
-* [**Обновлено**] [EdiZone overlay 1.0.8](https://github.com/proferabg/EdiZon-Overlay/releases) - правильное отображение температуры на последних прошивках, опция включения читов по умолчанию в оверлее
-* [**Обновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - пересобрано с последними коммитами. Поддержка новых NSO модулей
-
-**735**:
-* [**Исправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - исправлены nifm-патчи. Теперь на прошивках ниже 18.0.0 не должно быть проблем при подключении к WiFi
-* [**Обновлено**] [EdiZone overlay](https://github.com/proferabg/EdiZon-Overlay/releases) - пересобрано с последним libnx, чтобы правильно отображались метрики
-* [**Изменено**] [Uberhand overlay](https://github.com/efosamark/Uberhand-Overlay/releases) - откат к версии 2.1.5 из-за ошибки, которая не давала сменить локализацию
-
-**734**:
-* [**Обновлено**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
-
-**733**:
-* [**Добавлено**] Вернул разгон. По умолчанию отключен. Включается через `Uberhand > Settings`
-
-**731**:
-* [**Исправлено**] Исправил отображение серийного номера в semi-stock. Забыл, что в Atmosphere свои фишки
-* [**Добавлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - поддержка консолей для демо-стендов (kiosk). Не тестировалось. Снова спасибо DB
-* [**Добавлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - добавлена поддержка новых типов памяти, что может исправить ошибку 'Unknown EmcDvfsTimingTableIndex: -1'
-
-**730:** 
-* [**Обновлено**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
-* [**Исправлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - логирование на карту памяти снова отключено после того, как оно было ошибочно восстановлено чертову кучу времени назад. Бесконечная благодарность DB! Патчи теперь полностью интегрированы в систему, что исключает необходимость в модуле sys-patch.
-* [**Удалено**] [sys-patch] - больше не нужен, поскольку патчи интегрированы в систему
-* [**Изменено**] [Загрузчик Kefir] - теперь загрузка происходит через fusee.bin, как изначально предусмотрено в Atmosphere, что позволяет интегрировать патчи непосредственно в Atmosphere
-* [**Добавлено**] [Патчи] nifm-патч для 18.0.1. Спасибо, DB
-* [**Удалено**] Временно убрал разгон. По умолчанию его больше не будет в любом случае. Будет опциональным, но позже. Пока что отключил полностью, так как есть консоли, которые не тянут значения по умолчанию. И делать опциональным сейчас нет времени.
+**737**:
+* [**Обновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - поддержка 18.1.0
+    * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+ [**Обновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - поддержка 18.1.0
+ [**Обновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - поддержка 18.1.0
 
 ____
 
 #### **ENG**:
 **Full Support 18.0.1**
 
-**736**:
-* [**Updated**] [EdiZone overlay 1.0.8](https://github.com/proferabg/EdiZon-Overlay/releases) - correct temperature display on the latest firmware, option to enable cheats by default in the overlay
-* [**Updated**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - rebuilt with the latest commits. Support for new NSO modules
-
-**735**:
-* [**Fixed**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - fixed nifm patches. Now there should be no problems connecting to WiFi on firmware below 18.0.0
-* [**Updated**] [EdiZone overlay](https://github.com/proferabg/EdiZon-Overlay/releases) - rebuilt with the latest libnx to display metrics correctly
-* [**Changed**] [Uberhand overlay](https://github.com/efosamark/Uberhand-Overlay/releases) - rolled back to version 2.1.5 due to an error that prevented changing the localization
-
-**734**:
-* [**Updated**] [Uberhand-Overlay 2.2.5](https://github.com/efosamark/Uberhand-Overlay/)
-
-**733**:
-* [**Added**] Restored overclocking. Disabled by default. Can be enabled via `Uberhand > Settings`
-
-**731**:
-* [**Fixed**] Fixed the display of the serial number in semi-stock. Forgot that Atmosphere has its quirks
-* [**Added**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - support for demo stand consoles (kiosk). Not tested. Thanks again, DB
-* [**Added**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - added support for new types of memory, which may fix the 'Unknown EmcDvfsTimingTableIndex: -1' error
-
-**730:** 
-* [**Updated**] [Uberhand-Overlay 2.1.5](https://github.com/efosamark/Uberhand-Overlay/)
-* [**Fixed**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - logging to memory card has been disabled again after being mistakenly restored a hell of a long time ago. Endless thanks to DB! Patches are now fully integrated into the system, eliminating the need for the sys-patch module.
-* [**Removed**] [sys-patch] - no longer needed as patches are integrated into the system
-* [**Changed**] [Kefir Loader] - now loads through fusee.bin, as originally intended in Atmosphere, which allows for the integration of patches directly into the Atmosphere
-* [**Added**] [Patches] nifm-patch for 18.0.1. Thanks, DB
-* [**Removed**] Temporarily removed overclocking. It will no longer be included by default in any case. It will be optional, but later. For now, it has been completely disabled, as there are consoles that do not support the default settings. And I don't have time to make it optional right now.
+**737**:
+* [**Updated**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - support for 18.1.0
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+ [**Updated**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - support for 18.1.0
+  [**Updated**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - support for 18.1.0
