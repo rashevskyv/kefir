@@ -1,30 +1,92 @@
 #### **UKR**:
-**Повна підтримка 18.1.0**
+**Тепер точно повна підтримка 18.1.0**
+
+**743**:
+* [**Оновлено**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - фікси
+* [**Оновлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено скрипт вайпа, що має вирішити чорний екран після сбросу на прошивках 17 і вище
+* [**Додано**] [kefir] Додана підтримка консолей з 8GB DRAM (hekate > more configs > Kefir with 8GB DRAM)
+* [**Додано**] [Semi-stock в hekate] Вимолили. Це звичайний звичний семі-сток. Також використовується для лікування чорного екрану після сбросу на прошивках 17 і вище
+
+**742**:
+* [**Оновлено**] [kefir] - поєднав blackscreen fix та семісток. Але все одно раджуу запускеати семі-сток через оверлей. 
+
+**741**:
+* [**Оновлено**] [kefir] - виправлено розгін, який випадково вимкнув
+
+**740**:
+* [**Оновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - наче нарешті немає прорблем з сігпатчамі. Дякую DB!
+* [**Видалено**] [sys-patch] - наче більше не треба 
+* [**Оновлено**] [hekate 6.2.0 v4](https://github.com/CTCaer/hekate/) - фікси
+* [**Оновлено**] [tinfoil 18](http://tinfoil.io/)
+
+**739**:
+* [**Повернуто**] [sys-patch] - повернув, поки не вирішив проблему з деякими вбудовааними патчами
+* [**Оновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами
 
 **737**:
 * [**Оновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - підтримка 18.1.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
- [**Оновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - підтримка 18.1.0
- [**Оновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - підтримка 18.1.0
+* [**Оновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - підтримка 18.1.0
+* [**Оновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - підтримка 18.1.0
 
 ____
 
 #### **RUS**:
-**Полная поддержка 18.1.0**
+**Теперь точно полная поддержка 18.1.0**
+
+**743**:
+* [**Обновлено**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - исправления
+* [**Обновлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлен скрипт вайпа, который должен решить проблему черного экрана после сброса на прошивках 17 и выше
+* [**Добавлено**] [kefir] Добавлена поддержка консолей с 8GB DRAM (hekate > more configs > Kefir with 8GB DRAM)
+* [**Добавлено**] [Semi-stock в hekate] Запрошено. Это обычный полусток. Также используется для лечения черного экрана после сброса на прошивках 17 и выше
+
+**741**:
+* [**Обновлено**] [kefir] - исправлена проблема разгона, которая случайно отключилась
+
+**740**:
+* [**Обновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - похоже, наконец-то нет проблем с сигпатчами. Спасибо DB!
+* [**Удалено**] [sys-patch] - похоже больше не нужен
+* [**Обновлено**] [hekate 6.2.0 v4](https://github.com/CTCaer/hekate/) - исправления
+* [**Обновлено**] [tinfoil 18](http://tinfoil.io/)
+
+**739**:
+* [**Возвращено**] [sys-patch] - возвращено, пока не решена проблема с некоторыми встроенными патчами
+* [**Обновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами
+* [**Обновлено**] [hekate 6.2.0 v3](https://github.com/CTCaer/hekate/) - исправлена проблема с синим экраном на некоторых устройствах
 
 **737**:
 * [**Обновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - поддержка 18.1.0
     * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
- [**Обновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - поддержка 18.1.0
- [**Обновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - поддержка 18.1.0
+* [**Обновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - поддержка 18.1.0
+* [**Обновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - поддержка 18.1.0
 
 ____
 
 #### **ENG**:
-**Full Support 18.1.0**
+**Now definitely full support for 18.1.0**
+
+**743**:
+* [**Updated**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - fixes
+* [**Updated**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed wipe script, which should resolve the black screen after reset on firmware 17 and above
+* [**Added**] [kefir] Added support for consoles with 8GB DRAM (hekate > more configs > Kefir with 8GB DRAM)
+* [**Added**] [Semi-stock in hekate] Requested. This is the usual semi-stock. Also used to treat black screen after reset on firmware 17 and above
+
+**741**:
+* [**Updated**] [kefir] - fixed an overclocking issue that accidentally disabled
+
+**740**:
+* [**Updated**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - seems there are finally no issues with sigpatches. Thanks DB!
+* [**Removed**] [sys-patch] - seems no longer needed
+* [**Updated**] [hekate 6.2.0 v4](https://github.com/CTCaer/hekate/) - fixes
+* [**Updated**] [tinfoil 18](http://tinfoil.io/)
+
+**739**:
+* [**Reverted**] [sys-patch] - reverted until the issue with some built-in patches is resolved
+* [**Updated**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - built with the latest commits
+* [**Updated**] [hekate 6.2.0 v3](https://github.com/CTCaer/hekate/) - fixed the blue screen issue on some devices
 
 **737**:
 * [**Updated**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - support for 18.1.0
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
- [**Updated**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - support for 18.1.0
-  [**Updated**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - support for 18.1.0
+* [**Updated**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - support for 18.1.0
+* [**Updated**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - support for 18.1.0

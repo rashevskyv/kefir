@@ -111,6 +111,7 @@ if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
 if exist "%sd%:\atmosphere\contents\420000000000000B" (RD /s /q "%sd%:\atmosphere\contents\420000000000000B")
 if exist "%sd%:\config\uberhand\packages\ovrlck" (RD /s /q "%sd%:\config\uberhand\packages\ovrlck")
+if exist "%sd%:\config\uberhand\romfs\lyt" (RD /s /q "%sd%:\config\uberhand\romfs\lyt")
 
 if exist "%sd%:\atmosphere\erpt_reports" (RD /s /q "%sd%:\atmosphere\erpt_reports")
 if exist "%sd%:\atmosphere\fatal_reports" (RD /s /q "%sd%:\atmosphere\fatal_reports")
@@ -420,29 +421,6 @@ set /p st=:
 for %%A in ("Y" "y" "1" "н" "Н") do if "%st%"==%%A (GOTO main)
 for %%A in ("N" "n" "2" "т" "Т") do if "%st%"==%%A (GOTO newcard)
 for %%A in ("Q" "q" "Й" "й") do if "%st%"==%%A (GOTO END)
-
-:rembkp
-
-echo ------------------------------------------------------------------------
-echo.
-echo                         Removing _backup folder                         
-echo                              Please wait!                               
-echo.
-echo ------------------------------------------------------------------------
-
-RD /s /q "%sd%:\_backup"
-goto main
-
-echo ------------------------------------------------------------------------
-echo.
-echo                         Removing _backup folder                         
-echo                              Please wait!                               
-echo.
-echo ------------------------------------------------------------------------
-
-
-RD /s /q "%sd%:\_backup"
-goto main
 
 :END
 echo. 
