@@ -1,6 +1,11 @@
 #### **UKR**:
 **Тепер точно повна підтримка 18.1.0**
 
+**744**:
+* [**Додано**] [ghostshop for tinfoil] - додано новеджерело в tinfoil
+* [**Виправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилку 'reboot_ofw'
+* [**Додано**] [kefir] Додана можливість оновити tinfoil через uberhand > packages > Settings
+
 **743**:
 * [**Оновлено**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - фікси
 * [**Оновлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено скрипт вайпа, що має вирішити чорний екран після сбросу на прошивках 17 і вище
@@ -34,6 +39,11 @@ ____
 #### **RUS**:
 **Теперь точно полная поддержка 18.1.0**
 
+**744**:
+* [**Добавлено**] [ghostshop for tinfoil] - добавлен новый источник в tinfoil
+* [**Исправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлена ошибка 'reboot_ofw'
+* [**Добавлено**] [kefir] Добавлена возможность обновить tinfoil через uberhand > packages > Settings
+
 **743**:
 * [**Обновлено**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - исправления
 * [**Обновлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлен скрипт вайпа, который должен решить проблему черного экрана после сброса на прошивках 17 и выше
@@ -64,6 +74,11 @@ ____
 
 #### **ENG**:
 **Now definitely full support for 18.1.0**
+
+**744**:
+* [**Added**] [ghostshop for tinfoil] - added a new source in tinfoil
+* [**Fixed**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed the 'reboot_ofw' bug
+* [**Added**] [kefir] Added the ability to update tinfoil through uberhand > packages > Settings
 
 **743**:
 * [**Updated**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - fixes
