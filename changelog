@@ -1,6 +1,10 @@
 #### **UKR**:
 **Тепер точно повна підтримка 18.1.0**
 
+**745**:
+* [**Додано**] [WorldDigest for tinfoil] - додано новеджерело в tinfoil
+* [**Виправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилку, яка приводила до зависання при вході в EMMC 
+
 **744**:
 * [**Додано**] [ghostshop for tinfoil] - додано новеджерело в tinfoil
 * [**Виправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилку 'reboot_ofw'
@@ -39,6 +43,10 @@ ____
 #### **RUS**:
 **Теперь точно полная поддержка 18.1.0**
 
+**745**:
+* [**Добавлено**] [WorldDigest для tinfoil] - добавлен новый источник в tinfoil
+* [**Исправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлена ошибка, которая приводила к зависанию при входе в EMMC
+
 **744**:
 * [**Добавлено**] [ghostshop for tinfoil] - добавлен новый источник в tinfoil
 * [**Исправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлена ошибка 'reboot_ofw'
@@ -74,6 +82,10 @@ ____
 
 #### **ENG**:
 **Now definitely full support for 18.1.0**
+
+**745**:
+* [**Added**] [WorldDigest for tinfoil] - added a new source in tinfoil
+* [**Fixed**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed a bug that caused freezing when entering EMMC
 
 **744**:
 * [**Added**] [ghostshop for tinfoil] - added a new source in tinfoil

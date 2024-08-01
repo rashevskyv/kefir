@@ -57,7 +57,9 @@ if not exist "%sd%:\boot.dat" (if exist "%sd%:\atmosphere" (set bootdat=0))
 if not exist "%sd%:\atmosphere\contents\690000000000000D\flags\boot2.flag" (set syscon=0)
 if not exist "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag" (set missioncontrol=0)
 if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.config_)
-if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.conf_)
+if not exist "%sd%:\switch\tinfoil\locations.bkp" (
+	if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.bkp)
+)
 if exist "%sd%:\bootloader\loader.kip" (set oc=1)
 
 rem Set mission control status
@@ -324,10 +326,10 @@ if exist "%sd%:\switch\DBI\dbi.config_" (
     rename %sd%:\switch\DBI\dbi.config_ dbi.config
     )
 
-if exist "%sd%:\switch\tinfoil\locations.conf_" (
-    del "%sd%:\switch\tinfoil\locations.conf"
-    rename %sd%:\switch\tinfoil\locations.conf_ locations.conf
-    )
+@REM if exist "%sd%:\switch\tinfoil\locations.bkp" (
+@REM     del "%sd%:\switch\tinfoil\locations.conf"
+@REM     rename %sd%:\switch\tinfoil\locations.bkp locations.conf
+@REM     )
 
 echo ------------------------------------------------------------------------
 echo.

@@ -50,6 +50,15 @@ if (fsexists("sd:/switch/DBI/dbi.config")) {
     copyfile("sd:/switch/DBI/dbi.config", "sd:/switch/DBI/dbi.config_")
 }
 
+if (!fsexists("sd:/switch/tinfoil/locations.bkp")) {
+	if (fsexists("sd:/switch/tinfoil/locations.conf")) {
+		if (fsexists("sd:/switch/tinfoil/locations.bkp")) {
+			delfile("sd:/switch/tinfoil/locations.bkp")
+		}
+		copyfile("sd:/switch/tinfoil/locations.conf", "sd:/switch/tinfoil/locations.bkp")
+	}
+}
+
 emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
 
 # Force mission control status
