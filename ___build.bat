@@ -70,11 +70,14 @@ xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 xcopy "%kefir_dir%\hekate*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
 del "%kefir_dir%\hekate*.bin"
 
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R
-xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R
-xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R
-xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R /F
+xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R /F
+xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R /F
+xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R /F
+xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
+xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
+
+"F:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 

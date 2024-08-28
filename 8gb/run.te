@@ -1,0 +1,15 @@
+if (fsexists("sd:/8gb")) {
+	copydir("sd:/8gb/atmosphere", "sd:/")
+	copydir("sd:/8gb/bootloader", "sd:/")
+
+	copyfile("sd:/8gb/payload.bin", "sd:/payload.bin")
+
+	deldir("sd:/8gb")
+	delfile("sd:/run.te")
+
+	if (is_erista()) {
+		payload("sd:/payload.bin")
+	}.else(){
+		reboot_ofw();
+	}
+}
