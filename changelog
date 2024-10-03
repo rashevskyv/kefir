@@ -1,5 +1,11 @@
 #### **UKR**:
-**Тепер точно повна підтримка 18.1.0**
+**Повна підтримка 18.1.0**
+
+**748**:
+* [**Змінено**] [Overlay] - додана можливість закачки російської версії DBI як на заміну англійської, так і окремо. Додано керування оборотами кулера (Packages > Settings)
+* [**Оновлено**] [sys-con 1.4.1](https://github.com/o0Zz/sys-con/releases)
+* [**Оновлено**] [Uberhand-Overlay 2.3.1](https://github.com/efosamark/Uberhand-Overlay/releases)
+* [**Оновлено**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилки, через які не працювали деякі скрипти
 
 **746**:
 * [**Виправлено**] [kefir] - режим для 8Гб працює повноцінно для всіх підтримуємих систем - HOS, Android, Linux. Вмикається через Uberhand > packages > Settings
@@ -45,7 +51,13 @@
 ____
 
 #### **RUS**:
-**Теперь точно полная поддержка 18.1.0**
+**Полная поддержка 18.1.0**
+
+**748**:
+* [**Изменено**] [Overlay] - добавлена возможность загрузки русской версии DBI как на замену английской, так и отдельно. Добавлено управление оборотами кулера (Packages > Settings)
+* [**Обновлено**] [sys-con 1.4.1](https://github.com/o0Zz/sys-con/releases)
+* [**Обновлено**] [Uberhand-Overlay 2.3.1](https://github.com/efosamark/Uberhand-Overlay/releases)
+* [**Обновлено**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлены ошибки, из-за которых не работали некоторые скрипты
 
 **746**:
 * [**Исправлено**] [kefir] - режим для 8Гб работает полноценно для всех поддерживаемых систем - HOS, Android, Linux. Включается через Uberhand > packages > Settings
@@ -89,7 +101,13 @@ ____
 ____
 
 #### **ENG**:
-**Now definitely full support for 18.1.0**
+**Full support 18.1.0**
+
+**748**:
+* [**Changed**] [Overlay] - added the ability to download the Russian version of DBI both as a replacement for the English version and separately. Added fan speed control (Packages > Settings)
+* [**Updated**] [sys-con 1.4.1](https://github.com/o0Zz/sys-con/releases)
+* [**Updated**] [Uberhand-Overlay 2.3.1](https://github.com/efosamark/Uberhand-Overlay/releases)
+* [**Updated**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed bugs that caused some scripts not to work
 
 **746**:
 * [**Fixed**] [kefir] - 8GB mode works fully for all supported systems - HOS, Android, Linux. Can be enabled via Uberhand > packages > Settings

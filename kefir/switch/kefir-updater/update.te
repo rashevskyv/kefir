@@ -248,7 +248,10 @@ deldir("sd:/switch/NX-Shell");
 deldir("sd:/sxos/sx");
 deldir("sd:/atmo");
 deldir("sd:/oc");
+deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
+delfile("sd:/config/uberhand/packages/settings/8gb.txt")
+delfile("sd:/config/uberhand/packages/oc_bkp/oc.ini")
 
 deldir("sd:/firmware")
 delfile("sd:/config/kefir-updater/firmware.zip")
@@ -303,7 +306,6 @@ if(emunand) {
 }
 
 if (fsexists("sd:/bootloader/loader.kip")) {
-	copyfile("sd:/switch/.packages/Settings/config.ini", "sd:/config/uberhand/packages/oc_bkp/oc.ini")
 	copydir("sd:/config/uberhand/packages/oc/atmosphere", "sd:/")
 	copydir("sd:/config/uberhand/packages/oc/bootloader", "sd:/")
 	copydir("sd:/config/uberhand/packages/oc/config", "sd:/")

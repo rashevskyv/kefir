@@ -1,11 +1,12 @@
 if (fsexists("sd:/8gb")) {
 	copydir("sd:/8gb/atmosphere", "sd:/")
 	copydir("sd:/8gb/bootloader", "sd:/")
+	copydir("sd:/8gb/config", "sd:/")
 
 	copyfile("sd:/8gb/payload.bin", "sd:/payload.bin")
 
 	deldir("sd:/8gb")
-	delfile("sd:/run.te")
+	delfile("sd:/startup.te")
 
 	if (is_erista()) {
 		payload("sd:/payload.bin")

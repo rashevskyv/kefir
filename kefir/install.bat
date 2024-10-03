@@ -260,11 +260,15 @@ if exist "%sd%:\games\Tinfoil*.nsp" (del "%sd%:\games\hbgShop_forwarder_dark_v3.
 if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injector")
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 if exist "%sd%:\switch\.packages\Semi-stock" (RD /s /q "%sd%:\switch\.packages\Semi-stock")
+if exist "%sd%:\config\uberhand\packages\oc_bkp\oc.ini" (RD /s /q "%sd%:\config\uberhand\packages\oc_bkp\oc.ini")
+if exist "%sd%:\config\uberhand\packages\oc" (RD /s /q "%sd%:\config\uberhand\packages\oc")
 
 if exist "%sd%:\firmware" (RD /s /q "%sd%:\firmware")
 if exist "%sd%:\config\kefir-updater\firmware.zip" (del "%sd%:\config\kefir-updater\firmware.zip")
 if exist "%sd%:\config\kefir-updater\atmo.zip" (del "%sd%:\config\kefir-updater\atmo.zip")
 if exist "%sd%:\config\kefir-updater\*.zip" (del "%sd%:\config\kefir-updater\*.zip")
+if exist "%sd%:\config\uberhand\packages\settings\8gb.txt" (del "%sd%:\config\uberhand\packages\settings\8gb.txt") 
+
 
 if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"
@@ -289,7 +293,6 @@ if %emu%==1 (
 )
 
 if %oc%==1 (
-    xcopy "%sd%:\switch\.packages\Settings\config.ini" "%sd%:\config\uberhand\packages\oc_bkp\oc.ini" /H /Y /C /R /S /E /I /F
     xcopy "%sd%:\config\uberhand\packages\oc\*" "%sd%:\" /H /Y /C /R /S /E /I /F
 ) else (
     if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF\" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF\")
