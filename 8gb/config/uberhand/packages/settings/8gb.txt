@@ -1,1 +1,0 @@
-For disabling 8gb mode, update kefir

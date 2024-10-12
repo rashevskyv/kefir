@@ -1,149 +1,30 @@
 #### **UKR**:
-**Повна підтримка 18.1.0**
+**Часткова підтримка 19.0.0. Якщо маєте емунанд на 19.0.0, відкатіть його до 18.1.0. Семі-сток або Full Stock мають нормально працювати на 19.0.0**
 
-**748**:
-* [**Змінено**] [Overlay] - додана можливість закачки російської версії DBI як на заміну англійської, так і окремо. Додано керування оборотами кулера (Packages > Settings)
-* [**Оновлено**] [sys-con 1.4.1](https://github.com/o0Zz/sys-con/releases)
-* [**Оновлено**] [Uberhand-Overlay 2.3.1](https://github.com/efosamark/Uberhand-Overlay/releases)
-* [**Оновлено**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилки, через які не працювали деякі скрипти
-
-**746**:
-* [**Виправлено**] [kefir] - режим для 8Гб працює повноцінно для всіх підтримуємих систем - HOS, Android, Linux. Вмикається через Uberhand > packages > Settings
-* [**Оновлено**] [sys-con 1.3.0](https://github.com/o0Zz/sys-con/releases) - перехід на форк сіс-кона
-
-**745**:
-* [**Додано**] [WorldDigest for tinfoil] - додано новеджерело в tinfoil
-* [**Виправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилку, яка приводила до зависання при вході в EMMC 
-
-**744**:
-* [**Додано**] [ghostshop for tinfoil] - додано новеджерело в tinfoil
-* [**Виправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено помилку 'reboot_ofw'
-* [**Додано**] [kefir] Додана можливість оновити tinfoil через uberhand > packages > Settings
-
-**743**:
-* [**Оновлено**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - фікси
-* [**Оновлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - виправлено скрипт вайпа, що має вирішити чорний екран після сбросу на прошивках 17 і вище
-* [**Додано**] [kefir] Додана підтримка консолей з 8GB DRAM (hekate > more configs > Kefir with 8GB DRAM)
-* [**Додано**] [Semi-stock в hekate] Вимолили. Це звичайний звичний семі-сток. Також використовується для лікування чорного екрану після сбросу на прошивках 17 і вище
-
-**742**:
-* [**Оновлено**] [kefir] - поєднав blackscreen fix та семісток. Але все одно раджуу запускеати семі-сток через оверлей. 
-
-**741**:
-* [**Оновлено**] [kefir] - виправлено розгін, який випадково вимкнув
-
-**740**:
-* [**Оновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - наче нарешті немає прорблем з сігпатчамі. Дякую DB!
-* [**Видалено**] [sys-patch] - наче більше не треба 
-* [**Оновлено**] [hekate 6.2.0 v4](https://github.com/CTCaer/hekate/) - фікси
-* [**Оновлено**] [tinfoil 18](http://tinfoil.io/)
-
-**739**:
-* [**Повернуто**] [sys-patch] - повернув, поки не вирішив проблему з деякими вбудовааними патчами
-* [**Оновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами
-
-**737**:
-* [**Оновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - підтримка 18.1.0
+**750**:
+* [**Оновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами з частковою підтримкою 19.0.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - підтримка 18.1.0
-* [**Оновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - підтримка 18.1.0
+* [**Оновлено**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - підтримка 19.0.0
+* [**Оновлено**] [Lockpick_RCM] - підтримка 19.0.0
 
 ____
 
 #### **RUS**:
-**Полная поддержка 18.1.0**
+**Частичная поддержка 19.0.0. Если у вас есть эмунанд на 19.0.0, откатите его до 18.1.0. Семи-сток или Full Stock должны нормально работать на 19.0.0**
 
-**748**:
-* [**Изменено**] [Overlay] - добавлена возможность загрузки русской версии DBI как на замену английской, так и отдельно. Добавлено управление оборотами кулера (Packages > Settings)
-* [**Обновлено**] [sys-con 1.4.1](https://github.com/o0Zz/sys-con/releases)
-* [**Обновлено**] [Uberhand-Overlay 2.3.1](https://github.com/efosamark/Uberhand-Overlay/releases)
-* [**Обновлено**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлены ошибки, из-за которых не работали некоторые скрипты
-
-**746**:
-* [**Исправлено**] [kefir] - режим для 8Гб работает полноценно для всех поддерживаемых систем - HOS, Android, Linux. Включается через Uberhand > packages > Settings
-* [**Обновлено**] [sys-con 1.3.0](https://github.com/o0Zz/sys-con/releases) - переход на форк сис-кона
-
-**745**:
-* [**Добавлено**] [WorldDigest для tinfoil] - добавлен новый источник в tinfoil
-* [**Исправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлена ошибка, которая приводила к зависанию при входе в EMMC
-
-**744**:
-* [**Добавлено**] [ghostshop for tinfoil] - добавлен новый источник в tinfoil
-* [**Исправлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлена ошибка 'reboot_ofw'
-* [**Добавлено**] [kefir] Добавлена возможность обновить tinfoil через uberhand > packages > Settings
-
-**743**:
-* [**Обновлено**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - исправления
-* [**Обновлено**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - исправлен скрипт вайпа, который должен решить проблему черного экрана после сброса на прошивках 17 и выше
-* [**Добавлено**] [kefir] Добавлена поддержка консолей с 8GB DRAM (hekate > more configs > Kefir with 8GB DRAM)
-* [**Добавлено**] [Semi-stock в hekate] Запрошено. Это обычный полусток. Также используется для лечения черного экрана после сброса на прошивках 17 и выше
-
-**741**:
-* [**Обновлено**] [kefir] - исправлена проблема разгона, которая случайно отключилась
-
-**740**:
-* [**Обновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - похоже, наконец-то нет проблем с сигпатчами. Спасибо DB!
-* [**Удалено**] [sys-patch] - похоже больше не нужен
-* [**Обновлено**] [hekate 6.2.0 v4](https://github.com/CTCaer/hekate/) - исправления
-* [**Обновлено**] [tinfoil 18](http://tinfoil.io/)
-
-**739**:
-* [**Возвращено**] [sys-patch] - возвращено, пока не решена проблема с некоторыми встроенными патчами
-* [**Обновлено**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами
-* [**Обновлено**] [hekate 6.2.0 v3](https://github.com/CTCaer/hekate/) - исправлена проблема с синим экраном на некоторых устройствах
-
-**737**:
-* [**Обновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - поддержка 18.1.0
+**750**:
+* [**Обновлено**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами с частичной поддержкой 19.0.0
     * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Обновлено**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - поддержка 18.1.0
-* [**Обновлено**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - поддержка 18.1.0
+* [**Обновлено**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - поддержка 19.0.0
+* [**Обновлено**] [Lockpick_RCM] - поддержка 19.0.0
 
 ____
 
 #### **ENG**:
-**Full support 18.1.0**
+**Partial support for 19.0.0. If you have emunand on 19.0.0, roll it back to 18.1.0. Semi-stock or Full Stock should work normally on 19.0.0**
 
-**748**:
-* [**Changed**] [Overlay] - added the ability to download the Russian version of DBI both as a replacement for the English version and separately. Added fan speed control (Packages > Settings)
-* [**Updated**] [sys-con 1.4.1](https://github.com/o0Zz/sys-con/releases)
-* [**Updated**] [Uberhand-Overlay 2.3.1](https://github.com/efosamark/Uberhand-Overlay/releases)
-* [**Updated**] [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed bugs that caused some scripts not to work
-
-**746**:
-* [**Fixed**] [kefir] - 8GB mode works fully for all supported systems - HOS, Android, Linux. Can be enabled via Uberhand > packages > Settings
-* [**Updated**] [sys-con 1.3.0](https://github.com/o0Zz/sys-con/releases) - switched to sys-con fork
-
-**745**:
-* [**Added**] [WorldDigest for tinfoil] - added a new source in tinfoil
-* [**Fixed**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed a bug that caused freezing when entering EMMC
-
-**744**:
-* [**Added**] [ghostshop for tinfoil] - added a new source in tinfoil
-* [**Fixed**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed the 'reboot_ofw' bug
-* [**Added**] [kefir] Added the ability to update tinfoil through uberhand > packages > Settings
-
-**743**:
-* [**Updated**] [hekate 6.2.1](https://github.com/CTCaer/hekate/) - fixes
-* [**Updated**] [TegraExplorer 4.2.0pre](https://github.com/suchmememanyskill/TegraExplorer/releases/tag/4.2.0) - fixed wipe script, which should resolve the black screen after reset on firmware 17 and above
-* [**Added**] [kefir] Added support for consoles with 8GB DRAM (hekate > more configs > Kefir with 8GB DRAM)
-* [**Added**] [Semi-stock in hekate] Requested. This is the usual semi-stock. Also used to treat black screen after reset on firmware 17 and above
-
-**741**:
-* [**Updated**] [kefir] - fixed an overclocking issue that accidentally disabled
-
-**740**:
-* [**Updated**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - seems there are finally no issues with sigpatches. Thanks DB!
-* [**Removed**] [sys-patch] - seems no longer needed
-* [**Updated**] [hekate 6.2.0 v4](https://github.com/CTCaer/hekate/) - fixes
-* [**Updated**] [tinfoil 18](http://tinfoil.io/)
-
-**739**:
-* [**Reverted**] [sys-patch] - reverted until the issue with some built-in patches is resolved
-* [**Updated**] [Kefirosphere](https://github.com/rashevskyv/Kefirosphere) - built with the latest commits
-* [**Updated**] [hekate 6.2.0 v3](https://github.com/CTCaer/hekate/) - fixed the blue screen issue on some devices
-
-**737**:
-* [**Updated**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - support for 18.1.0
+**750**:
+* [**Updated**] [Atmosphere 1.7.1](https://github.com/rashevskyv/Kefirosphere) - built with the latest commits with partial support for 19.0.0
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [MissionControl 0.11.1](https://github.com/ndeadly/MissionControl) - support for 18.1.0
-* [**Updated**] [hekate 6.2.0](https://github.com/CTCaer/hekate/) - support for 18.1.0
+* [**Updated**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - support for 19.0.0
+* [**Updated**] [Lockpick_RCM] - support for 19.0.0
