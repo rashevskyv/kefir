@@ -64,7 +64,7 @@ if exist "%sd%:\bootloader\loader.kip" (set oc=1)
 
 rem Set mission control status
 @REM set missioncontrol=0
-set syscon=0
+@REM set syscon=0
 
 
 echo ------------------------------------------------------------------------

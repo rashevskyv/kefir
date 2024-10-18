@@ -63,7 +63,7 @@ emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
 
 # Force mission control status
 # missioncontrol=0
-syscon=0
+# syscon=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")

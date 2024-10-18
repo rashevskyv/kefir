@@ -1,12 +1,13 @@
 #### **UKR**
-**Часткова підтримка 19.0.0. Якщо маєте емунанд на 19.0.0, відкатіть його до 18.1.0. Семі-сток або Full Stock мають нормально працювати на 19.0.0**
+**Повна підтримка 19.0.0, хоча я все ще раджу тримати емунанд на 18.1.0**
+
+**753**:
+* [**Оновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - підтримка 19.0.0
 
 **752**:
 * [**Оновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами з частковою підтримкою 19.0.0, додані сігпатчі, додан фікс, виправляючий роботу старих форвардеров на 19.0.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [MissionControl 0.12.0](https://github.com/CTCaer/hekate/) - підтримка 19.0.0
-
-*sys-con не працює на 19.0.0, тому при встановленні кефіра він автоматично вимикається. Якщо ви використовуєте прошивку нижчу за 19.0.0, можете увімкнути sys-con через оверлей *
+* [**Оновлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - підтримка 19.0.0
 
 **750**:
 * [**Оновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами з частковою підтримкою 19.0.0
@@ -17,14 +18,15 @@
 ____
 
 #### **RUS**
-**Частичная поддержка 19.0.0. Если у вас есть эмунанд на 19.0.0, откатите его до 18.1.0. Семи-сток или Full Stock должны нормально работать на 19.0.0**
+**Полная поддержка 19.0.0, хотя я все еще советую держать эмунанд на 18.1.0**
+
+**753**:
+* [**Обновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - поддержка 19.0.0
 
 **752**:
 * [**Обновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами с частичной поддержкой 19.0.0, добавлены сигпатчи, добавлен фикс, исправляющий работу старых форвардеров на 19.0.0
     * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Обновлено**] [MissionControl 0.12.0](https://github.com/CTCaer/hekate/) - поддержка 19.0.0
-
-*sys-con не работает на 19.0.0, поэтому при установке кефира он автоматически отключается. Если вы используете прошивку ниже 19.0.0, можете включить sys-con через оверлей*
+* [**Обновлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - поддержка 19.0.0
 
 **750**:
 * [**Обновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами с частичной поддержкой 19.0.0
@@ -35,14 +37,15 @@ ____
 ____
 
 #### **ENG**
-**Partial support for 19.0.0. If you have emunand on 19.0.0, roll it back to 18.1.0. Semi-stock or Full Stock should work normally on 19.0.0**
+**Full support for 19.0.0, although I still recommend keeping emunand on 18.1.0**
+
+**753**:
+* [**Updated**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - support for 19.0.0
 
 **752**:
 * [**Updated**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - built with latest commits with partial support for 19.0.0, added sigpatches, added fix that corrects the operation of old forwarders on 19.0.0
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [MissionControl 0.12.0](https://github.com/CTCaer/hekate/) - support for 19.0.0
-
-*sys-con doesn't work on 19.0.0, so it automatically disables when installing kefir. If you're using firmware below 19.0.0, you can enable sys-con through the overlay*
+* [**Updated**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - support for 19.0.0
 
 **750**:
 * [**Updated**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - built with the latest commits with partial support for 19.0.0
