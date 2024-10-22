@@ -270,7 +270,6 @@ if exist "%sd%:\config\kefir-updater\atmo.zip" (del "%sd%:\config\kefir-updater\
 if exist "%sd%:\config\kefir-updater\*.zip" (del "%sd%:\config\kefir-updater\*.zip")
 if exist "%sd%:\config\uberhand\packages\settings\8gb.txt" (del "%sd%:\config\uberhand\packages\settings\8gb.txt") 
 
-
 if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"
 	)
