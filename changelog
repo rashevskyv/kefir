@@ -1,5 +1,8 @@
 #### **UKR**
-**Повна підтримка 19.0.0, хоча я все ще раджу тримати емунанд на 18.1.0**
+**Повна підтримка 19.0.1**
+
+**756**:
+* [**Виправлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - прибрано великотку
 
 **754**:
 * [**Оновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - виправлено регресію кнопки guide на xbox one, додано підтримку 8bitdo ultimate 2c та вирішено проблему з пріоритетністю профілів hid контролерів
@@ -22,7 +25,10 @@
 ____
 
 #### **ENG**
-**Full support for 19.0.0, although I still recommend keeping emunand on 18.1.0**
+**Full support for 19.0.1**
+
+**756**:
+* [**Fixed**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - removed easter egg
 
 **754**:
 * [**Updated**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - fixed xbox one guide button regression, added 8bitdo ultimate 2c support and resolved hid controller profile priority issue
@@ -45,7 +51,10 @@ ____
 ____
 
 #### **RUS**
-**Полная поддержка 19.0.0, хотя я все еще советую держать эмунанд на 18.1.0**
+**Полная поддержка 19.0.1**
+
+**756**:
+* [**Исправлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - убрана пасхалка
 
 **754**:
 * [**Обновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - исправлена регрессия кнопки guide на xbox one, добавлена поддержка 8bitdo ultimate 2c и решена проблема с приоритетностью профилей hid контроллеров
