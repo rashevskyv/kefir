@@ -5,7 +5,7 @@
 [![PayPal](https://github.com/rashevskyv/kefir/assets/18294541/5e8a41b1-a15e-4e2c-a1fc-9230379ca1fa)](https://www.paypal.com/donate/?hosted_button_id=S5BLF972J8G92)
 
 ### Банка monobank
-[![mono]([https://github.com/user-attachments/assets/6ce4d8d0-1200-455e-ae31-916f9c213fc6](https://github.com/user-attachments/assets/1855e1bc-dd0f-49cf-b09b-b4d48e0c15a5))](https://send.monobank.ua/jar/9PwYEXHYbs)
+[![mono](https://github.com/user-attachments/assets/adc1d908-c511-4e03-8d63-f0370a7752bd)](https://send.monobank.ua/jar/9PwYEXHYbs)
 
 ## Donate for support Ukraine
 ### 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
