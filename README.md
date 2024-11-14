@@ -1,13 +1,13 @@
-# Kefir moved here - [https://bitbucket.org/kefir-switch/kefir/src/master/](https://bitbucket.org/kefir-switch/kefir/src/master/)
+# Kefir's sources moved here - [bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/), kefir binary on releases
 
-## Donate
-
+## Donate to kefir's dev
 ### Paypal
 [![PayPal](https://github.com/rashevskyv/kefir/assets/18294541/5e8a41b1-a15e-4e2c-a1fc-9230379ca1fa)](https://www.paypal.com/donate/?hosted_button_id=S5BLF972J8G92)
 
 ### Банка monobank
-[![Monobank](https://github.com/rashevskyv/kefir/assets/18294541/82d547ee-f39e-43d2-8063-ed663114c1a9)](https://send.monobank.ua/jar/6VmeFAs1zG)
+[![mono]([https://github.com/user-attachments/assets/6ce4d8d0-1200-455e-ae31-916f9c213fc6](https://github.com/user-attachments/assets/1855e1bc-dd0f-49cf-b09b-b4d48e0c15a5))](https://send.monobank.ua/jar/9PwYEXHYbs)
 
+## Donate for support Ukraine
 ### 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
 >
 > I'm the creator of this project and I'm Ukrainian.
