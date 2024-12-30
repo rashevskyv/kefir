@@ -301,7 +301,7 @@ if (fsexists("sd:/kefir")) {
 
 delfile("sd:/config/uberhand/packages/settings/stock")
 fsexists("sd:/emummc/emummc.ini_bkp") {
-	move("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
+	movefile("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
 }
 
 if (fsexists("sd:/bootloader/loader.kip")) {

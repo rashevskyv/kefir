@@ -1,9 +1,9 @@
 #### **UKR**
 **Повна підтримка 19.0.1**
 
-**756**:
+**758**:
 * [**Виправлено**] [Semi-Stock] - виправлено помилку, через яку не працював онлайн
-* [**Виправлено**] [DBI] - повернуто англійську версію за замовчанням (хоч і не новіша, але працює все одно стабільно, наразі оновлюється kbit росмійськомовна версія, яку можна скачати через Uberhand > packages > settings)
+* [**Виправлено**] [DBI] - повернуто англійську версію за замовчанням (хоч і не новіша, але працює все одно стабільно, наразі оновлюється лише росмійськомовна версія, яку можна скачати через Uberhand > packages > settings)
 
 **756**:
 * [**Виправлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - прибрано великотку
@@ -31,6 +31,10 @@ ____
 #### **ENG**
 **Full support for 19.0.1**
 
+**758**:
+* [**Fixed**] [Semi-Stock] - fixed an issue that caused the online mode not to work
+* [**Fixed**] [DBI] - reverted to the default English version (though not newer, it still works stably; currently, the Russian version only is being updated, which can be downloaded via Uberhand > packages > settings)
+
 **756**:
 * [**Fixed**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - removed easter egg
 
@@ -56,6 +60,10 @@ ____
 
 #### **RUS**
 **Полная поддержка 19.0.1**
+
+**758**:
+* [**Исправлено**] [Semi-Stock] - исправлена ошибка, из-за которой не работал онлайн-режим
+* [**Исправлено**] [DBI] - возвращена английская версия по умолчанию (хотя и не новая, но работает стабильно; сейчас обновляется только русская версия, которую можно скачать через Uberhand > packages > settings)
 
 **756**:
 * [**Исправлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - убрана пасхалка
