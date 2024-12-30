@@ -299,11 +299,9 @@ if (fsexists("sd:/kefir")) {
 	wait(tw = 1000)
 }
 
-if(emunand) {
-	delfile("sd:/config/uberhand/packages/settings/stock")
-}.else(){
-	delfile("sd:/config/uberhand/packages/settings/emu")
-	copyfile("sd:/kefir/config/uberhand/packages/emu.ini", "sd:/switch/.packages/config.ini")
+delfile("sd:/config/uberhand/packages/settings/stock")
+fsexists("sd:/emummc/emummc.ini_bkp") {
+	move("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
 }
 
 if (fsexists("sd:/bootloader/loader.kip")) {

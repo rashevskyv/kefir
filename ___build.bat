@@ -3,7 +3,7 @@ chcp 1251 >nul 2>&1
 
 COLOR 0F
 
-set working_dsk=F:
+set working_dsk=D:
 set working_dir=%working_dsk%\git\dev
 set reldir=%working_dir%\_kefir\release
 set testdir=%working_dir%\_kefir\test
@@ -59,13 +59,13 @@ set /p st=:
 for %%A in ("2") do if "%st%"==%%A (goto noatmo)
 for %%A in ("Q" "q" "�" "�") do if "%st%"==%%A (GOTO END)
 
-"F:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
+"Y:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
 :noatmo
 
 if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
-xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
+rem xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
 xcopy "%kefir_dir%\hekate*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
 del "%kefir_dir%\hekate*.bin"
@@ -77,7 +77,7 @@ xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R /F
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
 xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
 
-"F:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
+"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 
@@ -204,7 +204,7 @@ xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
 
 rem kefir
-"F:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
+"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
 
 echo ------------------------------------------------------------------------
 echo.

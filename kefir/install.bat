@@ -274,7 +274,15 @@ if exist "%sd%:\bootloader\nyx.ini" (
 	copy "%sd%:\bootloader\nyx.ini" "%sd%:\bootloader\nyx.bkp"
 	)
 
-if exist "%sd%:\config\uberhand\packages\settings\stock" (set emu=0) 
+@REM if exist "%sd%:\config\uberhand\packages\settings\stock" (set emu=0) 
+
+if exist "%sd%:\config\uberhand\packages\settings\stock" (del "%sd%:\config\uberhand\packages\settings\stock")
+if exist "%sd%:\atmosphere\config\system_settings_emu.ini" (del "%sd%:\atmosphere\config\system_settings_emu.ini")
+if exist "%sd%:\emummc\emummc.ini_bkp" (
+	copy "%sd%:\emummc\emummc.ini_bkp" "%sd%:\emummc\emummc.ini"
+	del "%sd%:\emummc\emummc.ini_bkp"
+)
+
 
 echo ------------------------------------------------------------------------
 echo.
@@ -282,15 +290,7 @@ echo                             Installing
 echo.
 echo ------------------------------------------------------------------------
 
-
 xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
-
-if %emu%==1 (
-	if exist "%sd%:\config\uberhand\packages\settings\stock" (del "%sd%:\config\uberhand\packages\settings\stock")
-) else (
-	if exist "%sd%:\config\uberhand\packages\settings\emu" (del "%sd%:\config\uberhand\packages\settings\emu")
-	if exist "%sd%:\config\uberhand\packages\emu.ini" (copy "%sd%:\config\uberhand\packages\emu.ini" "%sd%:\switch\.packages\config.ini" /Y)
-)
 
 if %oc%==1 (
     xcopy "%sd%:\config\uberhand\packages\oc\*" "%sd%:\" /H /Y /C /R /S /E /I /F
@@ -305,8 +305,8 @@ RD /s /q "%sd%:\oc"
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
-if exist "F:\Switch\addons\themes" (xcopy "F:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
-if exist "F:\Switch\addons\atmosphere" (xcopy "F:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
+if exist "Y:\Switch\\addons\themes" (xcopy "Y:\Switch\\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
+if exist "Y:\Switch\\addons\atmosphere" (xcopy "Y:\Switch\\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
 
 if exist "%sd%:\.git" (RD /s /q "%sd%:\.git")
 
@@ -373,32 +373,32 @@ if %missioncontrol%==0 (
 if exist "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag" (del "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag")
 
 if exist "%sd%:\atmosphere" (
-	attrib -A /S /D %sd%:\atmosphere\*
-	attrib -A %sd%:\atmosphere)
+	attrib -A -H /S /D %sd%:\atmosphere\*
+	attrib -A -H %sd%:\atmosphere)
 if exist "%sd%:\atmosphere\contents" (
-	attrib -A /S /D %sd%:\atmosphere\contents\*
-	attrib -A %sd%:\atmosphere\contents)
+	attrib -A -H /S /D %sd%:\atmosphere\contents\*
+	attrib -A -H %sd%:\atmosphere\contents)
 if exist "%sd%:\bootloader" (
-	attrib -A /S /D %sd%:\bootloader\*
-	attrib -A %sd%:\bootloader)
+	attrib -A -H /S /D %sd%:\bootloader\*
+	attrib -A -H %sd%:\bootloader)
 if exist "%sd%:\config" (
-	attrib -A /S /D %sd%:\config\*
-	attrib -A %sd%:\config)
+	attrib -A -H /S /D %sd%:\config\*
+	attrib -A -H %sd%:\config)
 if exist "%sd%:\switch" (
-	attrib -A /S /D %sd%:\switch\*
-	attrib -A %sd%:\switch)
+	attrib -A -H /S /D %sd%:\switch\*
+	attrib -A -H %sd%:\switch)
 if exist "%sd%:\games" (
-	attrib -A /S /D %sd%:\games\*
-	attrib -A %sd%:\games)
+	attrib -A -H /S /D %sd%:\games\*
+	attrib -A -H %sd%:\games)
 if exist "%sd%:\themes" (
-	attrib -A /S /D %sd%:\themes\*
-	attrib -A %sd%:\themes)
-if exist "%sd%:\hbmenu.nro" (attrib -A %sd%:\hbmenu.nro)
-if exist "%sd%:\boot.dat" (attrib -A %sd%:\boot.dat)
-if exist "%sd%:\payload.bin" (attrib -A %sd%:\payload.bin)
+	attrib -A -H /S /D %sd%:\themes\*
+	attrib -A -H %sd%:\themes)
+if exist "%sd%:\hbmenu.nro" (attrib -A -H %sd%:\hbmenu.nro)
+if exist "%sd%:\boot.dat" (attrib -A -H %sd%:\boot.dat)
+if exist "%sd%:\payload.bin" (attrib -A -H %sd%:\payload.bin)
 if exist "%sd%:\pegascape" (
-	attrib -A /S /D %sd%:\pegascape\*
-	attrib -A %sd%:\pegascape)
+	attrib -A -H /S /D %sd%:\pegascape\*
+	attrib -A -H %sd%:\pegascape)
 
 goto end
 
