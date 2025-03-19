@@ -1,7 +1,5 @@
 # Kefir
 
-![kefir](images/kefir.png)
-
 ## What is Kefir
 
 This is a collection consisting of modified Atmosphere, necessary programs and scripts that install everything correctly. It was created to facilitate the installation and maintenance of software on a hacked Nintendo Switch. The changes made to Atmosphere are aimed at improving the quality of using the system itself.
