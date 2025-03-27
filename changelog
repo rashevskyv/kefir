@@ -1,5 +1,13 @@
 #### **UKR**
 **Повна підтримка 19.0.1**
+**760**
+* [**Додано**] [Sphaira 0.6.2](https://github.com/ITotalJustice/sphaira/releases/tag/0.6.2) - заміна для hbmenu з багатьма [додатковими функціями](https://switch.customfw.xyz/uk/hbl)
+* [**Видалено**] hbmenu - замінено на Sphaira 
+* [**Видалено**] [appstore.nro] - замінено на Sphaira 
+* [**Оновлено**] [tinfoil](https://tinfoil.io/Download#download) - Оновлено до версії 19
+* [**Оновлено**] [sys-con v1.5.1](https://github.com/cathery/sys-con/releases/tag/v0.6.5)
+* [**Додано**] [dbi.locations] - додано файл джерел з магазщином notUltraNX, що містить ігри для Nintendo Switch (аналог tinfoil). Длоя використання оновіть DBI до останньої версії (лише російською) та пропишіть DNS '1.1.1.1', якщо не працює. В оверлей також додана закачка цього файла для DBI 
+* [**Виправлено**] [Розгін] - помилка, через яку розгін не вмикався до оновлення через апдейтер 
 
 **758**:
 * [**Виправлено**] [Semi-Stock] - виправлено помилку, через яку не працював онлайн
@@ -31,6 +39,15 @@ ____
 #### **ENG**
 **Full support for 19.0.1**
 
+**760**
+* [**Added**] [Sphaira 0.6.2](https://github.com/ITotalJustice/sphaira/releases/tag/0.6.2) - replacement for hbmenu with many [additional features](https://switch.customfw.xyz/uk/hbl)
+* [**Removed**] hbmenu - replaced with Sphaira
+* [**Removed**] [appstore.nro] - replaced with Sphaira
+* [**Updated**] [tinfoil](https://tinfoil.io/Download#download) - Updated to version 19
+* [**Updated**] [sys-con v1.5.1](https://github.com/cathery/sys-con/releases/tag/v0.6.5)
+* [**Added**] [dbi.locations] - added a source file with notUltraNX shop, which contains games for Nintendo Switch (similar to tinfoil). To use it, update DBI to the latest version (only in Russian) and set DNS to '1.1.1.1' if not workinf
+* [**Fixed**] [Boost/Acceleration] - error that prevented boost from activating before updating through the updater
+
 **758**:
 * [**Fixed**] [Semi-Stock] - fixed an issue that caused the online mode not to work
 * [**Fixed**] [DBI] - reverted to the default English version (though not newer, it still works stably; currently, the Russian version only is being updated, which can be downloaded via Uberhand > packages > settings)
@@ -55,33 +72,3 @@ ____
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - support for 19.0.0
 * [**Updated**] [Lockpick_RCM] - support for 19.0.0
-
-____
-
-#### **RUS**
-**Полная поддержка 19.0.1**
-
-**758**:
-* [**Исправлено**] [Semi-Stock] - исправлена ошибка, из-за которой не работал онлайн-режим
-* [**Исправлено**] [DBI] - возвращена английская версия по умолчанию (хотя и не новая, но работает стабильно; сейчас обновляется только русская версия, которую можно скачать через Uberhand > packages > settings)
-
-**756**:
-* [**Исправлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - убрана пасхалка
-
-**754**:
-* [**Обновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - исправлена регрессия кнопки guide на xbox one, добавлена поддержка 8bitdo ultimate 2c и решена проблема с приоритетностью профилей hid контроллеров
-[**Добавлено**] [Кефир] - добавлен файл `warmboot_mariko/wb_14.bin` для предотвращения ошибки warmboot
-
-**753**:
-* [**Обновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - поддержка 19.0.0
-
-**752**:
-* [**Обновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами с частичной поддержкой 19.0.0, добавлены сигпатчи, добавлен фикс, исправляющий работу старых форвардеров на 19.0.0
-    * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Обновлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - поддержка 19.0.0
-
-**750**:
-* [**Обновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - собрано с последними коммитами с частичной поддержкой 19.0.0
-    * [**Подробнее об изменениях в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Обновлено**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - поддержка 19.0.0
-* [**Обновлено**] [Lockpick_RCM] - поддержка 19.0.0

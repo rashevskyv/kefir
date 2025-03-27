@@ -132,6 +132,7 @@ delfile("sd:/switch/ultimate_updater.nro");
 delfile("sd:/switch/zerotwoxci.nro");
 delfile("sd:/switch/dOPUS.nro");
 delfile("sd:/switch/tinfoil.nro");
+delfile("sd:/switch/appstore.nro");
 delfile("sd:/switch/tinfoil_batch.nro");
 delfile("sd:/switch/tinfoil_duckbill.nro");
 delfile("sd:/switch/tinfoil_usb-fix.nro");
@@ -387,12 +388,13 @@ p()
 p("Done")
 
 clear()
-p("* Remove macos related garbage. If freeze more than 5 minutes, reboot manualy")
-removemacfolders()
+# p("* Remove macos related garbage. If freeze more than 5 minutes, reboot manualy")
+# removemacfolders()
 p()
 p("Done")
 
 wait(tw = 1000)
+p("* If freeze or error, reboot manualy with holding power button")
 
 # 5. Перезагружаемся в гекату 
 clear()
