@@ -1,89 +1,25 @@
 #### **UKR**
-**Повна підтримка 19.0.1**
+**Повна підтримка 20.0.x**  
 
-**761**
-* [**Оновлено**] [Atmosphere 1.8.0e](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами
-* [**Оновлено**] [Sphaira 0.7.0](https://github.com/ITotalJustice/sphaira/releases/tag/0.7.0) - додана підтримка встановлення тайтлів через файловий менеджер
-* [**Видалено**] [tinfoil](https://tinfoil.io/Download#download) - бо нема толку від нього
-* [**Виделено**] [dbi.locations] - в них тепер все через реєстрацію консолі на сервері, то ж сенсу тримати цей конфіг немає
-* [**Виправлено**] [DBI] - виправлено видалення DBI при скачуванні через uberhand при відсутності інтернету (@olexandr_mudryi)
-
-**760**
-* [**Додано**] [Sphaira 0.6.2](https://github.com/ITotalJustice/sphaira/releases/tag/0.6.2) - заміна для hbmenu з багатьма [додатковими функціями](https://switch.customfw.xyz/uk/hbl)
-* [**Видалено**] hbmenu - замінено на Sphaira 
-* [**Видалено**] [appstore.nro] - замінено на Sphaira 
-* [**Оновлено**] [tinfoil](https://tinfoil.io/Download#download) - Оновлено до версії 19
-* [**Оновлено**] [sys-con v1.5.1](https://github.com/cathery/sys-con/releases/tag/v0.6.5)
-* [**Додано**] [dbi.locations] - додано файл джерел з магазином notUltraNX, що містить ігри для Nintendo Switch (аналог tinfoil). Для використання оновіть DBI до останньої версії (лише російською) та пропишіть DNS '1.1.1.1', якщо не працює. В оверлей також додана закачка цього файла для DBI 
-* [**Виправлено**] [Розгін] - помилка, через яку розгін не вмикався до оновлення через апдейтер 
-
-**758**:
-* [**Виправлено**] [Semi-Stock] - виправлено помилку, через яку не працював онлайн
-* [**Виправлено**] [DBI] - повернуто англійську версію за замовчанням (хоч і не новіша, але працює все одно стабільно, наразі оновлюється лише росмійськомовна версія, яку можна скачати через Uberhand > packages > settings)
-
-**756**:
-* [**Виправлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - прибрано великотку
-
-**754**:
-* [**Оновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - виправлено регресію кнопки guide на xbox one, додано підтримку 8bitdo ultimate 2c та вирішено проблему з пріоритетністю профілів hid контролерів
-* [**Додано**] [Кефір] - додан файл `warmboot_mariko/wb_14.bin` для запобігання помилки warmboot
-
-**753**:
-* [**Оновлено**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - підтримка 19.0.0
-
-**752**:
-* [**Оновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами з частковою підтримкою 19.0.0, додані сігпатчі, додан фікс, виправляючий роботу старих форвардеров на 19.0.0
+**765**
+* [**Оновлено**] [Atmosphere 1.9.0pre](https://github.com/rashevskyv/Kefirosphere) — офіційний пре-реліз  
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - підтримка 19.0.0
-
-**750**:
-* [**Оновлено**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - зібрано з останніми коммітами з частковою підтримкою 19.0.0
-    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - підтримка 19.0.0
-* [**Оновлено**] [Lockpick_RCM] - підтримка 19.0.0
+* [**Оновлено**] [hekate 6.3.0](https://github.com/CTCaer/hekate/releases/tag/v6.3.0) — підтримка 20.0.x 
+* [**Додано**] [Sys-patch 1.5.6](https://github.com/impeeza/sys-patch/releases/tag/v1.5.6) — тимчасово додано, поки немає повноцінних sigpatch'ів
+* [**Оновлено**] [Mission Control 0.13.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.0) — підтримка 20.0.x  
+* [**Оновлено**] [Lockpick_RCM_FW 20.zip] — підтримка 20.0.x  
+* [**Updated**] [Sphaira 0.9.1](https://github.com/ITotalJustice/sphaira/releases/tag) - багфікс
 
 ____
 
-#### **ENG**
-**Full support for 19.0.1**
+#### **ENG**  
+**Full support for 20.0.x**  
 
-**761**
-* [**Updated**] [Atmosphere 1.8.0e](https://github.com/rashevskyv/Kefirosphere) - built with the latest commits
-* [**Updated**] [Sphaira 0.7.0](https://github.com/ITotalJustice/sphaira/releases/tag/0.7.0) - added support for installing titles via file manager
-* [**Removed**] [tinfoil](https://tinfoil.io/Download#download) - because it's useless now
-* [**Split**] [dbi.locations] - now everything goes through console registration on the server, so there's no point keeping this config
-* [**Fixed**] [DBI] - fixed DBI deletion when downloading via uberhand with no internet connection (@olexandr_mudryi)
-
-**760**
-* [**Added**] [Sphaira 0.6.2](https://github.com/ITotalJustice/sphaira/releases/tag/0.6.2) - replacement for hbmenu with many [additional features](https://switch.customfw.xyz/uk/hbl)
-* [**Removed**] hbmenu - replaced with Sphaira
-* [**Removed**] [appstore.nro] - replaced with Sphaira
-* [**Updated**] [tinfoil](https://tinfoil.io/Download#download) - Updated to version 19
-* [**Updated**] [sys-con v1.5.1](https://github.com/cathery/sys-con/releases/tag/v0.6.5)
-* [**Added**] [dbi.locations] - added a source file with notUltraNX shop, which contains games for Nintendo Switch (similar to tinfoil). To use it, update DBI to the latest version (only in Russian) and set DNS to '1.1.1.1' if not workinf
-* [**Fixed**] [Boost/Acceleration] - error that prevented boost from activating before updating through the updater
-
-**758**:
-* [**Fixed**] [Semi-Stock] - fixed an issue that caused the online mode not to work
-* [**Fixed**] [DBI] - reverted to the default English version (though not newer, it still works stably; currently, the Russian version only is being updated, which can be downloaded via Uberhand > packages > settings)
-
-**756**:
-* [**Fixed**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - removed easter egg
-
-**754**:
-* [**Updated**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - fixed xbox one guide button regression, added 8bitdo ultimate 2c support and resolved hid controller profile priority issue
-[**Added**] [Kefir] - added `warmboot_mariko/wb_14.bin` file to prevent warmboot error
-
-**753**:
-* [**Updated**] [sys-con 1.4.2](https://github.com/o0Zz/sys-con/releases/tag/1.4.2) - support for 19.0.0
-
-**752**:
-* [**Updated**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - built with latest commits with partial support for 19.0.0, added sigpatches, added fix that corrects the operation of old forwarders on 19.0.0
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [MissionControl 0.12.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.12.0) - support for 19.0.0
-
-**750**:
-* [**Updated**] [Atmosphere 1.8.0pre](https://github.com/rashevskyv/Kefirosphere) - built with the latest commits with partial support for 19.0.0
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.2.2](https://github.com/CTCaer/hekate/) - support for 19.0.0
-* [**Updated**] [Lockpick_RCM] - support for 19.0.0
+**765**
+* [**Updated**] [Atmosphere 1.9.0pre](https://github.com/rashevskyv/Kefirosphere) — official pre-release  
+    * [**See Atmosphere changelog**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.3.0](https://github.com/CTCaer/hekate/releases/tag/v6.3.0) — 20.0.x support
+* [**Added**] [Sys-patch 1.5.6](https://github.com/impeeza/sys-patch/releases/tag/v1.5.6) — temporarily included until proper sigpatches are available
+* [**Updated**] [Mission Control 0.13.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.0) — 20.0.x support  
+* [**Updated**] [Lockpick_RCM_FW 20.zip] — 20.0.x support  
+* [**Updated**] [Sphaira 0.9.1](https://github.com/ITotalJustice/sphaira/releases/tag) - bugfix
