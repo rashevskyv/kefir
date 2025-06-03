@@ -144,6 +144,7 @@ delfile("sd:/switch/sx/locations.conf");
 delfile("sd:/atmosphere/fusee-secondary.bin");
 delfile("sd:/bootloader/payloads/fusee-primary.bin");
 delfile("sd:/switch/NX-Shell/NX-Shell.nro");
+delfile("sd:/switch/sphaira/sphaira.nro");
 
 delfile("sd:/atmosphere/fusee-secondary_atmo.bin");
 delfile("sd:/atmosphere/hbl_atmo.nsp");
@@ -228,7 +229,7 @@ deldir("sd:/atmosphere/contents/0100000000000081");
 deldir("sd:/atmosphere/contents/420000000000000B");
 deldir("sd:/config/uberhand/packages/ovrlck");
 deldir("sd:/sxos/titles/");
-deldir("sd:/sxos/bootloader");
+deldir("sd:/sxos/bootloader");e
 deldir("sd:/sxos/switch");
 deldir("sd:/sxos/exefs_patches");
 deldir("sd:/switch/games/hbmenu.nsp");
@@ -244,6 +245,7 @@ deldir("sd:/switch/LinkUser/");
 deldir("sd:/switch/incognito");
 deldir("sd:/switch/ChoiDujourNX");
 deldir("sd:/switch/nxmtp");
+deldir("sd:/switch/sphaira");
 deldir("sd:/switch/LinkUser");
 deldir("sd:/switch/nxmp");
 deldir("sd:/switch/NX-Shell");
@@ -252,6 +254,7 @@ deldir("sd:/atmo");
 deldir("sd:/oc");
 deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
+deldir("sd:/switch/.packages/DBI");
 delfile("sd:/config/uberhand/packages/settings/8gb.txt")
 delfile("sd:/config/uberhand/packages/oc_bkp/oc.ini")
 

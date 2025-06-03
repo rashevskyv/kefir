@@ -1,25 +1,35 @@
 #### **UKR**
-**Повна підтримка 20.0.x**  
+**Повна підтримка 20.1.x**  
+
+Хоч підтримка і повна, за можливістю тримайте емунанд на 19.0.1 (тоді в сісмодулях можна вимкнути sys-patch). На 20й прошивці апплетам виділяється значно менше пам'яті, через що деякі модулі та модифікації на 20.x.х можуть тупо вилітати через нестачу пам'яті. То ж 19.0.1 - краще рішення для емунанду. 
+
+[Виправлення помилки 2002-3005 при даунгрейді з 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
 
 **765**
-* [**Оновлено**] [Atmosphere 1.9.0pre](https://github.com/rashevskyv/Kefirosphere) — офіційний пре-реліз  
+* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — офіційний реліз p підтримкою 20.1.x
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate 6.3.0](https://github.com/CTCaer/hekate/releases/tag/v6.3.0) — підтримка 20.0.x 
-* [**Додано**] [Sys-patch 1.5.6](https://github.com/impeeza/sys-patch/releases/tag/v1.5.6) — тимчасово додано, поки немає повноцінних sigpatch'ів
-* [**Оновлено**] [Mission Control 0.13.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.0) — підтримка 20.0.x  
-* [**Оновлено**] [Lockpick_RCM_FW 20.zip] — підтримка 20.0.x  
-* [**Updated**] [Sphaira 0.9.1](https://github.com/ITotalJustice/sphaira/releases/tag) - багфікс
+* [**Оновлено**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — підтримка 20.1.x 
+* [**Оновлено**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — підтримка 20.1.x  
+* [**Оновлено**] [sys-con 1.5.3](https://github.com/o0Zz/sys-con/releases/tag/1.5.3) — зменшена затримка та навантаження на cpu  
+* [**Оновлено**] [Sphaira 0.11.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.11.3) - ой, купа всього. Подробніше в репозиторії 
+* [**Оновлено**] [NXThemesInstaller 2.8](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8) - повна підтримка 20.x.x
+* [**Додано**] [tinfoil](https://tinfoil.io/) - тепер живе в 'Uberhand > Packages > Software'. Після скачки запустіть через Homebrew Menu
 
 ____
 
 #### **ENG**  
-**Full support for 20.0.x**  
+**Full support for 20.1.x**
+
+Although support is full, if possible, keep emuNAND on 19.0.1 (then sys-patch can be disabled in sysmodules). On firmware 20, applets are allocated significantly less memory, which can cause some modules and modifications on 20.x.x to simply crash due to lack of memory. So, 19.0.1 is a better solution for emuNAND.
+
+[Fix for error 2002-3005 when downgrading from 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
 
 **765**
-* [**Updated**] [Atmosphere 1.9.0pre](https://github.com/rashevskyv/Kefirosphere) — official pre-release  
-    * [**See Atmosphere changelog**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.3.0](https://github.com/CTCaer/hekate/releases/tag/v6.3.0) — 20.0.x support
-* [**Added**] [Sys-patch 1.5.6](https://github.com/impeeza/sys-patch/releases/tag/v1.5.6) — temporarily included until proper sigpatches are available
-* [**Updated**] [Mission Control 0.13.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.0) — 20.0.x support  
-* [**Updated**] [Lockpick_RCM_FW 20.zip] — 20.0.x support  
-* [**Updated**] [Sphaira 0.9.1](https://github.com/ITotalJustice/sphaira/releases/tag) - bugfix
+* [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — official release with support for 20.1.x
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — support for 20.1.x
+* [**Updated**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — support for 20.1.x
+* [**Updated**] [sys-con 1.5.3](https://github.com/o0Zz/sys-con/releases/tag/1.5.3) — reduced latency and CPU load
+* [**Updated**] [Sphaira 0.11.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.11.3) - oh, a lot of things. More details in the repository
+* [**Updated**] [NXThemesInstaller 2.8](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8) - full support for 20.x.x
+* [**Added**] [tinfoil](https://tinfoil.io/) - now lives in 'Uberhand > Packages > Software'. After downloading, launch it via the Homebrew Menu
