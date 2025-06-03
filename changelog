@@ -5,7 +5,7 @@
 
 [Виправлення помилки 2002-3005 при даунгрейді з 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
 
-**765**
+**766**
 * [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — офіційний реліз p підтримкою 20.1.x
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Оновлено**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — підтримка 20.1.x 
@@ -24,7 +24,7 @@ Although support is full, if possible, keep emuNAND on 19.0.1 (then sys-patch ca
 
 [Fix for error 2002-3005 when downgrading from 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
 
-**765**
+**766**
 * [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — official release with support for 20.1.x
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — support for 20.1.x

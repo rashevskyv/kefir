@@ -229,7 +229,7 @@ deldir("sd:/atmosphere/contents/0100000000000081");
 deldir("sd:/atmosphere/contents/420000000000000B");
 deldir("sd:/config/uberhand/packages/ovrlck");
 deldir("sd:/sxos/titles/");
-deldir("sd:/sxos/bootloader");e
+deldir("sd:/sxos/bootloader");
 deldir("sd:/sxos/switch");
 deldir("sd:/sxos/exefs_patches");
 deldir("sd:/switch/games/hbmenu.nsp");
