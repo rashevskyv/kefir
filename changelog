@@ -5,10 +5,15 @@
 
 [Виправлення помилки 2002-3005 при даунгрейді з 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
 
+**767**
+* [**Оновлено**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — так, знову. Бо в минулому релізі оновив лише для 8GB збірки, а для звичайної - забув 
+* [**Оновлено**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — перезібрано, бо минула версія видавала помилки
+* [**Додано**] [Mission Control 0.13.2 BLE](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — версія з підтримкою BLE, для контролерів від Xbox Series. Завантажується через 'Uberhand > Packages > Software'
+* [**Оновлено**] [Sphaira 0.12.0](https://github.com/ITotalJustice/sphaira/releases/tag/0.12.0) - ой, купа всього. Подробніше в репозиторії 
+
 **766**
 * [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — офіційний реліз p підтримкою 20.1.x
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — підтримка 20.1.x 
 * [**Оновлено**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — підтримка 20.1.x  
 * [**Оновлено**] [sys-con 1.5.3](https://github.com/o0Zz/sys-con/releases/tag/1.5.3) — зменшена затримка та навантаження на cpu  
 * [**Оновлено**] [Sphaira 0.11.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.11.3) - ой, купа всього. Подробніше в репозиторії 
@@ -23,6 +28,12 @@ ____
 Although support is full, if possible, keep emuNAND on 19.0.1 (then sys-patch can be disabled in sysmodules). On firmware 20, applets are allocated significantly less memory, which can cause some modules and modifications on 20.x.x to simply crash due to lack of memory. So, 19.0.1 is a better solution for emuNAND.
 
 [Fix for error 2002-3005 when downgrading from 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
+
+**767**
+* [**Updated**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — yes, again. Because in the previous release, I only updated it for the 8GB build and forgot about the regular one.
+* [**Updated**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — rebuilt because the previous version was causing errors.
+* [**Added**] [Mission Control 0.13.2 BLE](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — a version with BLE support for Xbox Series controllers. Downloaded via 'Uberhand > Packages > Software'.
+* [**Updated**] [Sphaira 0.12.0](https://github.com/ITotalJustice/sphaira/releases/tag/0.12.0) - oh, a whole lot. More details in the repository.
 
 **766**
 * [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — official release with support for 20.1.x
