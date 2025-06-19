@@ -9,6 +9,8 @@
 * [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Оновлено**] [Sphaira 0.13.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.13.3) - думаю, ще пара релізів і можна буде позбутися від DBI 
+* [**Оновлено**] [EdiZon-Overlay v1.0.10](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.10) - перезібрано з новим libultrahand
+* [**Оновлено**] [sys-con 1.5.4](https://github.com/o0Zz/sys-con/releases/tag/1.5.4) — виправлено зависання системи при від'єднанні контроллера
 
 **767**
 * [**Оновлено**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — так, знову. Бо в минулому релізі оновив лише для 8GB збірки, а для звичайної - забув 
@@ -35,9 +37,11 @@ Although support is full, if possible, keep emuNAND on 19.0.1 (then sys-patch ca
 [Fix for error 2002-3005 when downgrading from 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
 
 **768**
-* [Updated] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits
+* [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits
     * [More details on Atmosphere changes](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [Updated] [Sphaira 0.13.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.13.3) - I think with a couple more releases, DBI can be gotten rid of
+* [**Updated**] [Sphaira 0.13.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.13.3) - I think with a couple more releases, DBI can be gotten rid of
+* [**Updated**] [EdiZon-Overlay v1.0.10](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.10) - recompiled with new libultrahand
+* [**Updated**] [sys-con 1.5.4](https://github.com/o0Zz/sys-con/releases/tag/1.5.4) — fixed system freeze when disconnecting controller
 
 **767**
 * [**Updated**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — yes, again. Because in the previous release, I only updated it for the 8GB build and forgot about the regular one.
