@@ -63,7 +63,7 @@ if not exist "%sd%:\switch\tinfoil\locations.bkp" (
 if exist "%sd%:\bootloader\loader.kip" (set oc=1)
 
 rem Set mission control status
-@REM set missioncontrol=0
+set missioncontrol=0
 @REM set syscon=0
 
 
@@ -112,7 +112,7 @@ if exist "%sd%:\atmosphere\contents\010000000000100C" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmosphere\contents\0000000000534C56")
 if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
-if exist "%sd%:\atmosphere\contents\420000000000000B" (RD /s /q "%sd%:\atmosphere\contents\420000000000000B")
+@REM if exist "%sd%:\atmosphere\contents\420000000000000B" (RD /s /q "%sd%:\atmosphere\contents\420000000000000B")
 if exist "%sd%:\config\uberhand\packages\ovrlck" (RD /s /q "%sd%:\config\uberhand\packages\ovrlck")
 if exist "%sd%:\config\uberhand\romfs\lyt" (RD /s /q "%sd%:\config\uberhand\romfs\lyt")
 

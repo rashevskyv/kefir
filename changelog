@@ -1,60 +1,23 @@
 #### **UKR**
-**Повна підтримка 20.1.x**  
+**Часткова підтримка 20.2.x**  
 
-Хоч підтримка і повна, за можливістю тримайте емунанд на 19.0.1 (тоді в сісмодулях можна вимкнути sys-patch). На 20й прошивці апплетам виділяється значно менше пам'яті, через що деякі модулі та модифікації на 20.x.х можуть тупо вилітати через нестачу пам'яті. То ж 19.0.1 - краще рішення для емунанду. 
+Mission Control та теми на 20.2.0 не працюють. Тому для повсякденного користування на даний момент краще з все буде відкатитися на попередню прошивку. Це можна зробити через Kefir Updater. 
 
-[Виправлення помилки 2002-3005 при даунгрейді з 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
+[Виправлення помилки 2002-3005 при даунгрейді](https://youtu.be/w3_w0S6DPWM)
 
-**768**
-* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами
+**770**
+* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтриvvки 20.2.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [Sphaira 0.13.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.13.3) - думаю, ще пара релізів і можна буде позбутися від DBI 
-* [**Оновлено**] [EdiZon-Overlay v1.0.10](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.10) - перезібрано з новим libultrahand
-* [**Оновлено**] [sys-con 1.5.4](https://github.com/o0Zz/sys-con/releases/tag/1.5.4) — виправлено зависання системи при від'єднанні контроллера
-
-**767**
-* [**Оновлено**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — так, знову. Бо в минулому релізі оновив лише для 8GB збірки, а для звичайної - забув 
-* [**Оновлено**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — перезібрано, бо минула версія видавала помилки
-* [**Додано**] [Mission Control 0.13.2 BLE](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — версія з підтримкою BLE, для контролерів від Xbox Series. Завантажується через 'Uberhand > Packages > Software'
-* [**Оновлено**] [Sphaira 0.12.0](https://github.com/ITotalJustice/sphaira/releases/tag/0.12.0) - ой, купа всього. Подробніше в репозиторії 
-
-**766**
-* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — офіційний реліз p підтримкою 20.1.x
-    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — підтримка 20.1.x  
-* [**Оновлено**] [sys-con 1.5.3](https://github.com/o0Zz/sys-con/releases/tag/1.5.3) — зменшена затримка та навантаження на cpu  
-* [**Оновлено**] [Sphaira 0.11.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.11.3) - ой, купа всього. Подробніше в репозиторії 
-* [**Оновлено**] [NXThemesInstaller 2.8](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8) - повна підтримка 20.x.x
-* [**Додано**] [tinfoil](https://tinfoil.io/) - тепер живе в 'Uberhand > Packages > Software'. Після скачки запустіть через Homebrew Menu
 
 ____
 
 #### **ENG**  
-**Full support for 20.1.x**
+**Partial support for 20.2.x**
 
-Although support is full, if possible, keep emuNAND on 19.0.1 (then sys-patch can be disabled in sysmodules). On firmware 20, applets are allocated significantly less memory, which can cause some modules and modifications on 20.x.x to simply crash due to lack of memory. So, 19.0.1 is a better solution for emuNAND.
+Mission Control and themes are not working on 20.2.0. Therefore, for daily use, it's currently better to roll back to a previous firmware version. This can be done via Kefir Updater.
 
-[Fix for error 2002-3005 when downgrading from 20.x.x to 19.0.1](https://youtu.be/w3_w0S6DPWM)
+[Fix for error 2002-3005 during downgrade](https://youtu.be/w3_w0S6DPWM)
 
-**768**
-* [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits
-    * [More details on Atmosphere changes](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [Sphaira 0.13.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.13.3) - I think with a couple more releases, DBI can be gotten rid of
-* [**Updated**] [EdiZon-Overlay v1.0.10](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.10) - recompiled with new libultrahand
-* [**Updated**] [sys-con 1.5.4](https://github.com/o0Zz/sys-con/releases/tag/1.5.4) — fixed system freeze when disconnecting controller
-
-**767**
-* [**Updated**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — yes, again. Because in the previous release, I only updated it for the 8GB build and forgot about the regular one.
-* [**Updated**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — rebuilt because the previous version was causing errors.
-* [**Added**] [Mission Control 0.13.2 BLE](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — a version with BLE support for Xbox Series controllers. Downloaded via 'Uberhand > Packages > Software'.
-* [**Updated**] [Sphaira 0.12.0](https://github.com/ITotalJustice/sphaira/releases/tag/0.12.0) - oh, a whole lot. More details in the repository.
-
-**766**
-* [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — official release with support for 20.1.x
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.3.1](https://github.com/CTCaer/hekate/releases/tag/v6.3.1) — support for 20.1.x
-* [**Updated**] [Mission Control 0.13.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.2) — support for 20.1.x
-* [**Updated**] [sys-con 1.5.3](https://github.com/o0Zz/sys-con/releases/tag/1.5.3) — reduced latency and CPU load
-* [**Updated**] [Sphaira 0.11.3](https://github.com/ITotalJustice/sphaira/releases/tag/0.11.3) - oh, a lot of things. More details in the repository
-* [**Updated**] [NXThemesInstaller 2.8](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8) - full support for 20.x.x
-* [**Added**] [tinfoil](https://tinfoil.io/) - now lives in 'Uberhand > Packages > Software'. After downloading, launch it via the Homebrew Menu
+**770**
+* [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.2.0
+    * [**More details on Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
