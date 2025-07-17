@@ -1,12 +1,18 @@
 #### **UKR**
 **Часткова підтримка 20.2.x**  
 
-Mission Control та теми на 20.2.0 не працюють. Тому для повсякденного користування на даний момент краще з все буде відкатитися на попередню прошивку. Це можна зробити через Kefir Updater. 
+Для повсякденного користування на даний момент краще з все буде відкатитися на попередню прошивку. Це можна зробити через Kefir Updater. 
 
 [Виправлення помилки 2002-3005 при даунгрейді](https://youtu.be/w3_w0S6DPWM)
 
+**771**
+* [**Оновлено**] [Atmosphere 1.9.2](https://github.com/rashevskyv/Kefirosphere) — офіційне оновлення з підтримкою 20.2.0
+    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Оновлено**] [MissionControl 0.13.3](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.3) — офіційне оновлення з підтримкою 20.2.0
+
+
 **770**
-* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтриvvки 20.2.0
+* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.2.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 
 ____
@@ -14,9 +20,14 @@ ____
 #### **ENG**  
 **Partial support for 20.2.x**
 
-Mission Control and themes are not working on 20.2.0. Therefore, for daily use, it's currently better to roll back to a previous firmware version. This can be done via Kefir Updater.
+For daily use, it's currently better to roll back to a previous firmware version. This can be done via Kefir Updater.
 
 [Fix for error 2002-3005 during downgrade](https://youtu.be/w3_w0S6DPWM)
+
+**771**
+* [**Updated**] [Atmosphere 1.9.2](https://github.com/rashevskyv/Kefirosphere) — official update with 20.2.0 support  
+    * [**More about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [MissionControl 0.13.3](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.3) — official update with 20.2.0 support
 
 **770**
 * [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.2.0
