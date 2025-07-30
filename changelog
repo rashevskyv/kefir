@@ -1,34 +1,23 @@
 #### **UKR**
-**Часткова підтримка 20.2.x**  
+**Часткова підтримка 20.3.x**  
 
-Для повсякденного користування на даний момент краще з все буде відкатитися на попередню прошивку. Це можна зробити через Kefir Updater. 
+Для повсякденного користування на даний момент краще з все буде відкатитися на попередню прошивку. Це можна зробити через Kefir Updater. Верогідно не працюють теми та Mission Control 
 
 [Виправлення помилки 2002-3005 при даунгрейді](https://youtu.be/w3_w0S6DPWM)
 
-**771**
-* [**Оновлено**] [Atmosphere 1.9.2](https://github.com/rashevskyv/Kefirosphere) — офіційне оновлення з підтримкою 20.2.0
-    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [MissionControl 0.13.3](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.3) — офіційне оновлення з підтримкою 20.2.0
-
-
-**770**
-* [**Оновлено**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.2.0
+**772**
+* [**Оновлено**] [Atmosphere 1.9.3](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.3.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 
 ____
 
 #### **ENG**  
-**Partial support for 20.2.x**
+**Partial Support for 20.3.x**
 
-For daily use, it's currently better to roll back to a previous firmware version. This can be done via Kefir Updater.
+For everyday use, it's currently best to roll back to the previous firmware. This can be done via Kefir Updater. Themes and Mission Control are likely not working.
 
-[Fix for error 2002-3005 during downgrade](https://youtu.be/w3_w0S6DPWM)
+[Fixing error 2002-3005 during downgrade](https://youtu.be/w3_w0S6DPWM)
 
-**771**
-* [**Updated**] [Atmosphere 1.9.2](https://github.com/rashevskyv/Kefirosphere) — official update with 20.2.0 support  
-    * [**More about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [MissionControl 0.13.3](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.3) — official update with 20.2.0 support
-
-**770**
-* [**Updated**] [Atmosphere 1.9.1](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.2.0
-    * [**More details on Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+**772**
+* [**Updated**] [Atmosphere 1.9.3](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.3.0  
+    * [**More about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
