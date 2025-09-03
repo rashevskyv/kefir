@@ -1,15 +1,17 @@
 #### **UKR**
-**Часткова підтримка 20.4.x**  
+**Повна підтримка 20.4.x**  
 
-**774**
+**775**
 * [**Оновлено**] [Atmosphere 1.9.4](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.4.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Оновлено**] [MissionControl 0.13.5](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.3) — офіційне оновлення з підтримкою 20.4.0
 
 ____
 
 #### **ENG**  
-**Partial Support for 20.4.x**
+**Full Support for 20.4.x**
 
-**774**
+**775**
 * [**Updated**] [Atmosphere 1.9.4](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.4.0  
     * [**More about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [MissionControl 0.13.5](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.3) — official update with 20.4.0 support
