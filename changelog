@@ -1,23 +1,15 @@
 #### **UKR**
-**Часткова підтримка 20.3.x**  
+**Часткова підтримка 20.4.x**  
 
-Для повсякденного користування на даний момент краще з все буде відкатитися на попередню прошивку. Це можна зробити через Kefir Updater. Верогідно не працюють теми та Mission Control 
-
-[Виправлення помилки 2002-3005 при даунгрейді](https://youtu.be/w3_w0S6DPWM)
-
-**772**
-* [**Оновлено**] [Atmosphere 1.9.3](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.3.0
+**774**
+* [**Оновлено**] [Atmosphere 1.9.4](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.4.0
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 
 ____
 
 #### **ENG**  
-**Partial Support for 20.3.x**
+**Partial Support for 20.4.x**
 
-For everyday use, it's currently best to roll back to the previous firmware. This can be done via Kefir Updater. Themes and Mission Control are likely not working.
-
-[Fixing error 2002-3005 during downgrade](https://youtu.be/w3_w0S6DPWM)
-
-**772**
-* [**Updated**] [Atmosphere 1.9.3](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.3.0  
+**774**
+* [**Updated**] [Atmosphere 1.9.4](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.4.0  
     * [**More about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
