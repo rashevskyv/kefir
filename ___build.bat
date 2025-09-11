@@ -57,7 +57,6 @@ set st=
 set /p st=:
 
 for %%A in ("2") do if "%st%"==%%A (goto noatmo)
-for %%A in ("Q" "q" "�" "�") do if "%st%"==%%A (GOTO END)
 
 "Y:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
@@ -78,6 +77,7 @@ xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C 
 xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
 
 "Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
+"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc.zip %working_dir%\_kefir\oc\*
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 
@@ -104,7 +104,6 @@ set /p st=:
 for %%A in ("2") do if "%st%"==%%A (set suffix="_pre")
 for %%A in ("3") do if "%st%"==%%A (set suffix="_test")
 for %%A in ("4") do if "%st%"==%%A (set suffix="_skip")
-for %%A in ("Q" "q" "�" "�") do if "%st%"==%%A (GOTO END)
 
 if %suffix%=="_skip" (GOTO skip)
 if not %suffix%=="" (GOTO start)
