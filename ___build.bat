@@ -75,6 +75,8 @@ xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R /F
 xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R /F
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
 xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
+xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
+xcopy "%working_dir%\_kefir\oc\*" "%kefir_dir%\config\uberhand\packages\oc\" /H /Y /C /R /S /E /I /F
 
 "Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
 "Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc.zip %working_dir%\_kefir\oc\*

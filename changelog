@@ -1,5 +1,9 @@
 #### **UKR**
-**Повна підтримка 20.4.x**  
+**Повна підтримка 20.4.x**
+
+**777**
+* [**Оновлено**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — невелички правки перекладу
+* [**Виправлено**] [kefir] - можливо, виправлення проблеми з чорним екраном після встановлення (але то не точно)
 
 **776**
 * [**Оновлено**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — неофіційний переклад програми. Якщо програма поводитеме себе дивно, откатіться до російської версії, або до версії 658 через оверлей
@@ -14,8 +18,12 @@
 
 ____
 
-#### **ENG**  
+#### **ENG**
 **Full Support for 20.4.x**
+
+**777**
+* [**Updated**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — minor translation tweaks
+* [**Fixed**] [kefir] — possible fix for black screen issue after installation (not 100% confirmed)
 
 **776**
 * [**Updated**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — unofficial translation of the program. If the program behaves strangely, roll back to the Russian version, or to version 658 via overlay
