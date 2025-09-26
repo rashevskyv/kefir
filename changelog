@@ -1,6 +1,10 @@
 #### **UKR**
 **Повна підтримка 20.4.x**
 
+**778**
+* [**Оновлено**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — невелички правки перекладу
+* [**Виправлено**] [kefir] - Перероблена система скачування перекладів DBI. Додано багато різних мов.
+
 **777**
 * [**Оновлено**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — невелички правки перекладу
 * [**Виправлено**] [kefir] - можливо, виправлення проблеми з чорним екраном після встановлення (але то не точно)
@@ -21,6 +25,10 @@ ____
 #### **ENG**
 **Full Support for 20.4.x**
 
+**778**
+* [**Updated**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — minor translation fixes
+* [**Fixed**] [kefir] — Reworked DBI translation download system. Added many different languages.
+
 **777**
 * [**Updated**] [DBI 810 ENG](https://github.com/rashevskyv/dbi/releases/tag/810) — minor translation tweaks
 * [**Fixed**] [kefir] — possible fix for black screen issue after installation (not 100% confirmed)
@@ -30,7 +38,6 @@ ____
 * [**Updated**] [Sys-con 1.5.4](https://github.com/o0Zz/sys-con/releases/tag/1.5.4) — bug fixes
 * [**Fixed**] [8GB DRAM mode] — fixed link to the mode supporting consoles with 8GB RAM. This mode is also hidden behind three submenus as protection against accidental activation
 * [**Fixed**] [OC Mode] — now the files required for overclocking will be downloaded from the internet. Hopefully, this finally resolves the issue where overclocking would not turn on
-
 
 **775**
 * [**Updated**] [Atmosphere 1.9.4](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.4.0  
