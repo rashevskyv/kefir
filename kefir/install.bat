@@ -63,7 +63,7 @@ if not exist "%sd%:\switch\tinfoil\locations.bkp" (
 if exist "%sd%:\bootloader\loader.kip" (set oc=1)
 
 rem Set mission control status
-set missioncontrol=0
+@REM set missioncontrol=0
 @REM set syscon=0
 
 
