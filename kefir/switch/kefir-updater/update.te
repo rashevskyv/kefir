@@ -62,7 +62,7 @@ if (!fsexists("sd:/switch/tinfoil/locations.bkp")) {
 emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
 
 # Force mission control status
-# missioncontrol=0
+missioncontrol=0
 # syscon=0
 
 # 1. Удаляем папки и файлы
