@@ -1,6 +1,11 @@
 #### **UKR**
 **Повна підтримка 20.5.x**
 
+**781**
+* [**Оновлено**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами. Виправлення в LayredFS для підтримки модів Trails in the Sky 1st Chapter Remake 
+    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Оновлено**] [NXThemes Installer 2.8.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.2) — офіційне оновлення з підтримкою 20.5.0
+
 **780**
 * [**Оновлено**] [MissionControl 0.13.6](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.6) — офіційне оновлення з підтримкою 20.5.0
 
@@ -13,6 +18,11 @@ ____
 
 #### **ENG**
 **Full support of 20.5.0**
+
+**781**
+* [**Updated**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — built from the latest commits. Fixed an issue in LayeredFS to support mods for *Trails in the Sky: First Chapter Remake*.  
+    * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [NXThemes Installer 2.8.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.2) — official update with support for firmware 20.5.0.
 
 **780**
 * [**Updated**] [MissionControl 0.13.6](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.6) — official update with 20.5.0 support
