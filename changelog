@@ -1,6 +1,13 @@
 #### **UKR**
 **Повна підтримка 20.5.x**
 
+**Версія 21.0.0 в емунанді все ще не підтримується, але з цією версією кефіра можно без проблем мати 21.0.0 в офіційній прошивці та 20.5.0 та нижче в емунанд**
+
+**783**
+* [**Оновлено**] [Warmboot] - режим сна в емунанді буде нормально працювати з прошивкою 21.0.0 
+* [**Оновлено**] [lockpick 1.9.16](https://gbatemp.net/download/lockpick_rcm-1-9-16-fw-21-0-0-zoria-source.39460/) — підтримка дампу ключів до 21.0.0
+* [**Оновлено**] [Sys-Patch Sysmodule 1.5.7 ](https://gbatemp.net/download/sys-patch-sysmodule.39463/) — підтримка прошивки 21.0.0
+
 **782**
 * [**Оновлено**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — видалена перевірка мінорної версії HOS
     * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
@@ -21,6 +28,13 @@ ____
 
 #### **ENG**
 **Full support of 20.5.0**
+
+**Version 21.0.0 in emuNAND is still not supported, but with this version of Kefir you can safely have 21.0.0 on the official firmware and 20.5.0 or lower in emuNAND**
+
+**783**
+* [**Updated**] [Warmboot] - Sleep mode in emuNAND now works properly with firmware 21.0.0  
+* [**Updated**] [lockpick 1.9.16](https://gbatemp.net/download/lockpick_rcm-1-9-16-fw-21-0-0-zoria-source.39460/) — support for key dumping up to firmware 21.0.0  
+* [**Updated**] [Sys-Patch Sysmodule 1.5.7](https://gbatemp.net/download/sys-patch-sysmodule.39463/) — support for firmware 21.0.0
 
 **782**
 * [**Updated**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — removed minor HOS version check
