@@ -100,7 +100,6 @@ if (fsexists("sd:/kefir")) {
 	deldir("sd:/atmosphere/contents/420000000007E51A");
 	deldir("sd:/atmosphere/contents/010000000000bd00");
 	delfile("sd:/atmosphere/stratosphere.romfs");
-	deldir("sd:/switch/kefir-updater");
 	deldir("sd:/switch/NX-Activity-Log/");
 	deldir("sd:/switch/fakenews-injector");
 }

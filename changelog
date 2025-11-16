@@ -1,52 +1,41 @@
 #### **UKR**
-**Повна підтримка 20.5.x**
+**Часткова підтримка 21.0.0x**
 
-**Версія 21.0.0 в емунанді все ще не підтримується, але з цією версією кефіра можно без проблем мати 21.0.0 в офіційній прошивці та 20.5.0 та нижче в емунанд**
+**ВЕРСІЯ НЕ ДЛЯ ПОВСЯКДЕННОГО КОРИСТУВАННЯ!!! Використовуйте ВИКЛЮЧНО для відката ЕМУНАНДА на 20.5.0**
+Сток відкатувати не потрібно! Якщо не маєте емунанд - створіть!
 
-**783**
-* [**Оновлено**] [Warmboot] - режим сна в емунанді буде нормально працювати з прошивкою 21.0.0 
-* [**Оновлено**] [lockpick 1.9.16](https://gbatemp.net/download/lockpick_rcm-1-9-16-fw-21-0-0-zoria-source.39460/) — підтримка дампу ключів до 21.0.0
-* [**Оновлено**] [Sys-Patch Sysmodule 1.5.7 ](https://gbatemp.net/download/sys-patch-sysmodule.39463/) — підтримка прошивки 21.0.0
+Не встановлюйте цю версію, якщо маєте прошивку нижче ніж 20.0.5
 
-**782**
-* [**Оновлено**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — видалена перевірка мінорної версії HOS
-    * [**Детальніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Оновлено**] [EdiZon Overlay 1.0.11](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.11) — перезібрано свіжими бібліотеками libultrahand 
+Що робити:  
+1. Встановіть звичним образом  
+2. Підкючіться до інтернету  
+3. Встановіть прошивку 20.5.0 на ЕМУНАНДІ через kefir-updater  
+4. [Сбросьте прошивку зі збереженням сейвів]()  
 
-**781**
-* [**Оновлено**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами. Виправлення в LayredFS для підтримки модів Trails in the Sky 1st Chapter Remake 
-* [**Оновлено**] [NXThemes Installer 2.8.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.2) — офіційне оновлення з підтримкою 20.5.0
-
-**780**
-* [**Оновлено**] [MissionControl 0.13.6](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.6) — офіційне оновлення з підтримкою 20.5.0
-
-**779**
-* [**Оновлено**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — зібрано з останніми коммітами для базової підтримки 20.5.0
-
+**784**
+* [**Updated**] [Atmosphere 1.10.0](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.0.0
+    * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [hekate 6.4.0](https://github.com/CTCaer/hekate/tree/v6.4.0) — підтримка прошивки 21.0.0
+* [**Оновлено**] [kefir-updater, sphaira] — перезібрано для підтримки прошивки 21.0.0
 
 ____
 
 #### **ENG**
-**Full support of 20.5.0**
+**Partial support for 21.0.0x**
 
-**Version 21.0.0 in emuNAND is still not supported, but with this version of Kefir you can safely have 21.0.0 on the official firmware and 20.5.0 or lower in emuNAND**
+**THIS VERSION IS NOT FOR DAILY USE!!! Use it ONLY to downgrade EMUNAND to 20.5.0**  
+You do NOT need to downgrade stock! If you don’t have emuNAND — create it!
 
-**783**
-* [**Updated**] [Warmboot] - Sleep mode in emuNAND now works properly with firmware 21.0.0  
-* [**Updated**] [lockpick 1.9.16](https://gbatemp.net/download/lockpick_rcm-1-9-16-fw-21-0-0-zoria-source.39460/) — support for key dumping up to firmware 21.0.0  
-* [**Updated**] [Sys-Patch Sysmodule 1.5.7](https://gbatemp.net/download/sys-patch-sysmodule.39463/) — support for firmware 21.0.0
+Do NOT install this version if your firmware is lower than 20.0.5.
 
-**782**
-* [**Updated**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — removed minor HOS version check
+What to do:  
+1. Install in the usual way  
+2. Connect to the internet  
+3. Install firmware 20.5.0 on EMUNAND through kefir-updater  
+4. [Reset the firmware while keeping your saves]()
+
+**784**
+* [**Updated**] [Atmosphere 1.10.0](https://github.com/rashevskyv/Kefirosphere) — support for firmware 21.0.0  
     * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [EdiZon Overlay 1.0.11](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.11) — updated libultrahand to v2.1.4
-
-**781**
-* [**Updated**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — built from the latest commits. Fixed an issue in LayeredFS to support mods for *Trails in the Sky: First Chapter Remake*.  
-* [**Updated**] [NXThemes Installer 2.8.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.2) — official update with support for firmware 20.5.0.
-
-**780**
-* [**Updated**] [MissionControl 0.13.6](https://github.com/ndeadly/MissionControl/releases/tag/v0.13.6) — official update with 20.5.0 support
-
-**779**
-* [**Updated**] [Atmosphere 1.9.5](https://github.com/rashevskyv/Kefirosphere) — built with the latest commits for basic support of 20.5.0
+* [**Updated**] [hekate 6.4.0](https://github.com/CTCaer/hekate/tree/v6.4.0) — support for firmware 21.0.0  
+* [**Updated**] [kefir-updater, sphaira] — rebuilt to support firmware 21.0.0
