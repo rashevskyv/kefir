@@ -1,16 +1,19 @@
 #### **UKR**
-**Часткова підтримка 21.0.0x**
+**Повна підтримка 21.0.0**
 
-**ВЕРСІЯ НЕ ДЛЯ ПОВСЯКДЕННОГО КОРИСТУВАННЯ!!! Використовуйте ВИКЛЮЧНО для відката ЕМУНАНДА на 20.5.0**
-Сток відкатувати не потрібно! Якщо не маєте емунанд - створіть!
+Версію можна використовувати на постійній основі, однак я все одно радив би відкатити емунанд (ТІЛЬКИ емунанд) на 20.5.0 за цією інструкцією: https://youtu.be/38qxRRnLMGA 
 
-Не встановлюйте цю версію, якщо маєте прошивку нижче ніж 20.0.5
+Чому бажано відкатити емунанд? На 21.0.0 можуть працювати не всі моди та переклади для ігор, через зменшений розмір вільної пам'яті в системі
 
-Що робити:  
-1. Встановіть звичним образом  
-2. Підкючіться до інтернету  
-3. Встановіть прошивку 20.5.0 на ЕМУНАНДІ через kefir-updater  
-4. [Сбросьте прошивку зі збереженням сейвів]()  
+**785**
+* [**Оновлено**] [hekate 6.4.1](https://github.com/CTCaer/hekate/tree/v6.4.1) — виправлені NOGC патчі для 21.0.0
+* [**Оновлено**] [MissionControl 0.14.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.0) — підтримка прошивки 21.0.0
+* [**Оновлено**] [Sys-Patch Sysmodule 1.5.8](https://gbatemp.net/download/sys-patch-sysmodule.39471/) — підтримка прошивки 21.0.0
+* [**Оновлено**] [Sysmodules 1.4.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.3) — підтримка прошивки 21.0.0
+* [**Оновлено**] [Uberhand-Overlay 2.3.2](https://github.com/efosamark/Uberhand-Overlay/releases/tag/2.3.2) — підтримка прошивки 21.0.0
+* [**Оновлено**] [EdiZon-Overlay 1.0.12](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.12) — підтримка прошивки 21.0.0
+* [**Оновлено**] [sphaira 1.0.0](https://github.com/ITotalJustice/sphaira/releases/tag/1.0.0) — підтримка прошивки 21.0.0
+* [**Оновлено**] [NXThemesInstaller 2.8.3](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.3) — підтримка прошивки 21.0.0
 
 **784**
 * [**Updated**] [Atmosphere 1.10.0](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.0.0
@@ -23,19 +26,24 @@ ____
 #### **ENG**
 **Partial support for 21.0.0x**
 
-**THIS VERSION IS NOT FOR DAILY USE!!! Use it ONLY to downgrade EMUNAND to 20.5.0**  
-You do NOT need to downgrade stock! If you don’t have emuNAND — create it!
+**Full support for 21.0.0**
 
-Do NOT install this version if your firmware is lower than 20.0.5.
+This version can be used on a daily basis, however I would still recommend downgrading emuNAND (ONLY emuNAND) to 20.5.0 using this guide: https://youtu.be/38qxRRnLMGA  
 
-What to do:  
-1. Install in the usual way  
-2. Connect to the internet  
-3. Install firmware 20.5.0 on EMUNAND through kefir-updater  
-4. [Reset the firmware while keeping your saves]()
+Why is it better to downgrade emuNAND? On 21.0.0 some mods and game translations may not work correctly due to reduced free system memory.
+
+**785**
+* [**Updated**] [hekate 6.4.1](https://github.com/CTCaer/hekate/tree/v6.4.1) — fixed NOGC patches for 21.0.0  
+* [**Updated**] [MissionControl 0.14.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.0) — support for firmware 21.0.0  
+* [**Updated**] [Sys-Patch Sysmodule 1.5.8](https://gbattemp.net/download/sys-patch-sysmodule.39471/) — support for firmware 21.0.0  
+* [**Updated**] [Sysmodules 1.4.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.3) — support for firmware 21.0.0  
+* [**Updated**] [Uberhand-Overlay 2.3.2](https://github.com/efosamark/Uberhand-Overlay/releases/tag/2.3.2) — support for firmware 21.0.0  
+* [**Updated**] [EdiZon-Overlay 1.0.12](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.12) — support for firmware 21.0.0  
+* [**Updated**] [sphaira 1.0.0](https://github.com/ITotalJustice/sphaira/releases/tag/1.0.0) — support for firmware 21.0.0  
+* [**Updated**] [NXThemesInstaller 2.8.3](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.3) — support for firmware 21.0.0  
 
 **784**
 * [**Updated**] [Atmosphere 1.10.0](https://github.com/rashevskyv/Kefirosphere) — support for firmware 21.0.0  
-    * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+    * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)  
 * [**Updated**] [hekate 6.4.0](https://github.com/CTCaer/hekate/tree/v6.4.0) — support for firmware 21.0.0  
 * [**Updated**] [kefir-updater, sphaira] — rebuilt to support firmware 21.0.0
