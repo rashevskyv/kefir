@@ -307,7 +307,9 @@ if (fsexists("sd:/emummc/emummc.ini_bkp")) {
 	movefile("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
 }
 
-if (fsexists("sd:/bootloader/loader.kip")) {
+oc=0
+
+if (oc) {
 	copydir("sd:/config/uberhand/packages/oc/atmosphere", "sd:/")
 	copydir("sd:/config/uberhand/packages/oc/bootloader", "sd:/")
 	copydir("sd:/config/uberhand/packages/oc/config", "sd:/")
