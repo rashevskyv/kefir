@@ -1,11 +1,17 @@
 #### **UKR**
-**Повна підтримка 21.0.0**
+**Повна підтримка 21.0.1**
 
 Версію можна використовувати на постійній основі, однак я все одно радив би відкатити емунанд (ТІЛЬКИ емунанд) на 20.5.0 за цією інструкцією: https://youtu.be/38qxRRnLMGA 
 
 Чому бажано відкатити емунанд? На 21.0.0 можуть працювати не всі моди та переклади для ігор, через зменшений розмір вільної пам'яті в системі
 
 Також нагадую, що для коректної роботи програм та модулів на Atmosphere 1.10.0, що встановлена в цьому релізі, вони мають бути перезібрані з ісходників, або [пропатчені](https://hbpatcher.alula.me/). Без цього вони будуть падати. Якщо при запуску кефіра в вас щось крашиться, відкатіться на kefir783, якийй використовує попередню версію Atmosphere
+
+**787**
+* [**Оновлено**] [Sys-con 1.6.0](https://github.com/o0Zz/sys-con/releases/tag/1.6.0) — виправлена підтримка прошивки 21.0.0
+* [**Оновлено**] [tinfoil](https://tinfoil.io) — пропатчено для підтримки 21.0.0. Між тим нагадую, що тінфоїл нормально не працює і взагалі виключений з составу кефіра, однак, якщо в вас в оверлеї він все ще є, то він там пропатчений. Працює чи ні, не тестував.
+* [**Оновлено**] [kefir-updater 2.25](https://github.com/rashevskyv/kefir-updater/releases) — додано переклад корейською, та попередження при даунгрейді
+* [**Змінено**] [Розгін] — відокремлені файли розгону для 783 та 787 кефірів. Якщо не використовуєте розгін, можна пропустити 
 
 **786**
 * [**Оновлено**] [Sys-Patch Sysmodule 1.5.8 v5](https://github.com/impeeza/sys-patch/releases/tag/v1.5.8) — виправлена підтримка прошивки 21.0.0
@@ -32,7 +38,7 @@
 ____
 
 #### **ENG**
-**Full support for 21.0.0**
+**Full support for 21.0.1**
 
 This version can be used on a daily basis; however, I would still recommend downgrading emuNAND (ONLY emuNAND) to 20.5.0 using this guide: https://youtu.be/38qxRRnLMGA  
 
@@ -40,6 +46,12 @@ Why is it preferable to downgrade emuNAND? On firmware 21.0.0 some mods and game
 
 Also a reminder: for proper operation of apps and sysmodules on Atmosphere 1.10.0 included in this release, they must be rebuilt from source or [patched](https://hbpatcher.alula.me/). Otherwise, they will crash.  
 If something crashes when launching Kefir, downgrade to kefir783, which uses the previous version of Atmosphere.
+
+**787**
+* [**Updated**] [Sys-con 1.6.0](https://github.com/o0Zz/sys-con/releases/tag/1.6.0) — fixed support for firmware 21.0.0  
+* [**Updated**] [tinfoil](https://tinfoil.io) — patched for 21.0.0 support. Meanwhile, a reminder that Tinfoil does not work properly and is removed from Kefir by default; however, if it’s still present in your overlay, that version is patched. Whether it actually works — not tested.  
+* [**Updated**] [kefir-updater 2.25](https://github.com/rashevskyv/kefir-updater/releases) — added Korean translation and downgrade warnings  
+* [**Changed**] [Overclocking] — separate overclocking files for Kefir 783 and 787. If you don’t use overclocking, you can skip this
 
 **786**
 * [**Updated**] [Sys-Patch Sysmodule 1.5.8 v5](https://github.com/impeeza/sys-patch/releases/tag/v1.5.8) — fixed support for firmware 21.0.0  

@@ -79,7 +79,7 @@ xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kef
 xcopy "%working_dir%\_kefir\oc\*" "%kefir_dir%\config\uberhand\packages\oc\" /H /Y /C /R /S /E /I /F
 
 "Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
-"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc.zip %working_dir%\_kefir\oc\*
+"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc_new.zip %working_dir%\_kefir\oc\*
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 

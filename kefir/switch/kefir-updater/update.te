@@ -41,7 +41,6 @@ boot=fsexists("sd:/boot.dat")
 pegascape=fsexists("sd:/pegascape")
 syscon=fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")
 missioncontrol=fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")
-# oc=!fsexists("sd:/config/uberhand/packages/kefir_ovlck")
 
 if (fsexists("sd:/switch/DBI/dbi.config")) {
 	if (fsexists("sd:/switch/DBI/dbi.config_")) {
@@ -309,12 +308,7 @@ if (fsexists("sd:/emummc/emummc.ini_bkp")) {
 
 oc=0
 
-if (oc) {
-	copydir("sd:/config/uberhand/packages/oc/atmosphere", "sd:/")
-	copydir("sd:/config/uberhand/packages/oc/bootloader", "sd:/")
-	copydir("sd:/config/uberhand/packages/oc/config", "sd:/")
-	copydir("sd:/config/uberhand/packages/oc/switch", "sd:/")
-}.else(){
+if (!oc) {
 	deldir("sd:/atmosphere/contents/00FF0000636C6BFF/")
 	delfile("sd:/atmosphere/kips/loader.kip")
 	delfile("sd:/atmosphere/kips/kefir.kip")
