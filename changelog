@@ -1,11 +1,11 @@
 #### **UKR**
 **Повна підтримка 21.0.1**
 
-Версію можна використовувати на постійній основі, однак я все одно радив би відкатити емунанд (ТІЛЬКИ емунанд) на 20.5.0 за цією інструкцією: https://youtu.be/38qxRRnLMGA 
+Версію можна використовувати на постійній основі, однак я все одно радив би відкатити емунанд (ТІЛЬКИ емунанд) на 20.5.0 через 'hekate > Payloads > TegraExplorer >  SD:/config/DowngradeFix.te', або за цією інструкцією: https://youtu.be/38qxRRnLMGA 
 
 Чому бажано відкатити емунанд? На 21.0.0 можуть працювати не всі моди та переклади для ігор, через зменшений розмір вільної пам'яті в системі
 
-Також нагадую, що для коректної роботи програм та модулів на Atmosphere 1.10.0, що встановлена в цьому релізі, вони мають бути перезібрані з ісходників, або [пропатчені](https://hbpatcher.alula.me/). Без цього вони будуть падати. Якщо при запуску кефіра в вас щось крашиться, відкатіться на kefir783, якийй використовує попередню версію Atmosphere
+Також нагадую, що для коректної роботи програм та модулів на Atmosphere 1.10.0, що встановлена в цьому релізі, вони мають бути перезібрані з ісходників, або [пропатчені](https://hbpatcher.alula.me/). Без цього вони будуть падати. Якщо при запуску кефіра в вас щось крашиться, відкатіться на kefir783, який використовує попередню версію Atmosphere
 
 **787**
 * [**Оновлено**] [Sys-con 1.6.0](https://github.com/o0Zz/sys-con/releases/tag/1.6.0) — виправлена підтримка прошивки 21.0.0
@@ -40,7 +40,7 @@ ____
 #### **ENG**
 **Full support for 21.0.1**
 
-This version can be used on a daily basis; however, I would still recommend downgrading emuNAND (ONLY emuNAND) to 20.5.0 using this guide: https://youtu.be/38qxRRnLMGA  
+This version can be used on a daily basis; however, I would still recommend downgrading emuNAND (ONLY emuNAND) to 20.5.0 with 'hekate > Payloads > TegraExplorer > SD:/config/DowngradeFix.te' or using this guide: https://youtu.be/38qxRRnLMGA  
 
 Why is it preferable to downgrade emuNAND? On firmware 21.0.0 some mods and game translations may not function due to reduced available system memory.
 
