@@ -3,11 +3,11 @@
 
 **790**
 * [**Updated**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.1.0. Прибрані зміни, через які на нових версіях Atmosphere доводилося перекомпілювати Homebrew. Старі Homebrew працюють тепер без вилетів. 
-    * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
 * [**Оновлено**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — виправлення помилок
 * [**Оновлено**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — підтримка прошивки 21.1.0
 * [**Оновлено**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — виправлення помилок
-* [**Додано**] Окремий патч для повернення 40Mb пам'яті для Homebrew. За замовчанням вимкнутий. Деякі ігри, які потребують прийняття EULA для початку гри,використовують браузер, якому памм'яті тепер не вистачає, через що маємо помилку і перезагрузку (напр. Ni No Kuni, Bioshock 3, MGS3 та інші). То ж, якщо ви використовуєте моди яким не вистачало пам'яті на ПЗ 21+, включіть цей мод. Якщо маєте ігри, що падають через нього - виключіть. Як завжди, перемикач знаходиться в 'Uberhand > packages > Settings > 40mb memory on FW20+ status'
+* [**Додано**] Окремий патч для повернення 40Mb пам'яті для Homebrew. За замовчанням вимкнутий. Деякі ігри, які потребують прийняття EULA для початку гри,використовують браузер, якому пам'яті тепер не вистачає, через що маємо помилку і перезагрузку (напр. Ni No Kuni, Bioshock 3, MGS3 та інші). То ж, якщо ви використовуєте моди яким не вистачало пам'яті на ПЗ 21+, включіть цей мод. Якщо маєте ігри, що падають через нього - виключіть. Як завжди, перемикач знаходиться в 'Uberhand > packages > Settings > 40mb memory on FW20+ status'
 * [**Додано**] Доданий відкат для бідось, що випадково використали режим для консолей, що мають 8Gb пам'яті. hekate > payloads > TegraExplorer > Remove_8GB-RAM_config.te
 
 
