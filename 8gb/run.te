@@ -1,122 +1,70 @@
-# Скрипт оновлення 8gb з точковим бекапом файлів
-# Requirements: SD mounted
+#REQUIRE SD
 
 p = println
-bkp_path = "sd:/tegraexplorer/4gb_config_backup"
-restore_script_path = "sd:/tegraexplorer/scripts/Undo_8gb_Update.te"
+bkp_base = "sd:/config/uberhand/4gb_config_backup"
+update_source = "sd:/8gb"
 
-if (fsexists("sd:/8gb")) {
+files_to_backup = [
+    "atmosphere/package3",
+    "atmosphere/reboot_payload.bin",
+    "bootloader/bootlogo_kefir.bmp",
+    "bootloader/payloads/fusee.bin",
+    "bootloader/sys/libsys_lp0.bso",
+    "bootloader/sys/libsys_minerva.bso",
+    "bootloader/sys/module_sample.bso",
+    "bootloader/sys/nyx.bin",
+    "bootloader/update.bin",
+    "payload.bin"
+]
+
+if (fsexists(update_source)) {
     
-    # === ЧАСТИНА 1: Підготовка бекапу ===
-    p("Creating specific file backup...")
+    p("Creating backup...")
     
-    if (fsexists(bkp_path)) {
-        deldir(bkp_path)
+    if (fsexists(bkp_base)) { deldir(bkp_base) }
+    
+    mkdir("sd:/config")
+    mkdir("sd:/config/uberhand")
+    mkdir(bkp_base)
+    
+    mkdir(bkp_base + "/atmosphere")
+    mkdir(bkp_base + "/bootloader")
+    mkdir(bkp_base + "/bootloader/payloads")
+    mkdir(bkp_base + "/bootloader/sys")
+
+    files_to_backup.foreach("f") {
+        src = "sd:/" + f
+        dst = bkp_base + "/" + f
+        
+        if (fsexists(src)) {
+            copyfile(src, dst)
+        }
     }
-    
-    # Створюємо структуру папок для бекапу
+
     mkdir("sd:/tegraexplorer")
-    mkdir(bkp_path)
-    mkdir(combinepath(bkp_path, "atmosphere"))
-    mkdir(combinepath(bkp_path, "bootloader"))
-    mkdir(combinepath(bkp_path, "bootloader/payloads"))
-    mkdir(combinepath(bkp_path, "bootloader/sys"))
-
-    # === ЧАСТИНА 2: Бекап конкретних файлів та генерація Undo-скрипта ===
-    
-    # Початок тексту скрипта відновлення
-    rs = "p=println\n"
-    rs = rs + "p(\"Restoring 4gb config from backup...\")\n"
-
-    # Список файлів, які ми змінюємо (і які треба зберегти)
-    # Формат: [шлях_на_sd, шлях_в_бекапі]
-    
-    # Atmosphere files
-    if (fsexists("sd:/atmosphere/package3")) {
-        copyfile("sd:/atmosphere/package3", combinepath(bkp_path, "atmosphere/package3"))
-        rs = rs + "copyfile(\"" + bkp_path + "/atmosphere/package3\", \"sd:/atmosphere/package3\")\n"
-    }
-    if (fsexists("sd:/atmosphere/reboot_payload.bin")) {
-        copyfile("sd:/atmosphere/reboot_payload.bin", combinepath(bkp_path, "atmosphere/reboot_payload.bin"))
-        rs = rs + "copyfile(\"" + bkp_path + "/atmosphere/reboot_payload.bin\", \"sd:/atmosphere/reboot_payload.bin\")\n"
-    }
-
-    # Bootloader files
-    if (fsexists("sd:/bootloader/bootlogo_kefir.bmp")) {
-        copyfile("sd:/bootloader/bootlogo_kefir.bmp", combinepath(bkp_path, "bootloader/bootlogo_kefir.bmp"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/bootlogo_kefir.bmp\", \"sd:/bootloader/bootlogo_kefir.bmp\")\n"
-    }
-    if (fsexists("sd:/bootloader/update.bin")) {
-        copyfile("sd:/bootloader/update.bin", combinepath(bkp_path, "bootloader/update.bin"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/update.bin\", \"sd:/bootloader/update.bin\")\n"
-    }
-    
-    # Bootloader Payloads
-    if (fsexists("sd:/bootloader/payloads/fusee.bin")) {
-        copyfile("sd:/bootloader/payloads/fusee.bin", combinepath(bkp_path, "bootloader/payloads/fusee.bin"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/payloads/fusee.bin\", \"sd:/bootloader/payloads/fusee.bin\")\n"
-    }
-
-    # Bootloader Sys modules
-    if (fsexists("sd:/bootloader/sys/libsys_lp0.bso")) {
-        copyfile("sd:/bootloader/sys/libsys_lp0.bso", combinepath(bkp_path, "bootloader/sys/libsys_lp0.bso"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/sys/libsys_lp0.bso\", \"sd:/bootloader/sys/libsys_lp0.bso\")\n"
-    }
-    if (fsexists("sd:/bootloader/sys/libsys_minerva.bso")) {
-        copyfile("sd:/bootloader/sys/libsys_minerva.bso", combinepath(bkp_path, "bootloader/sys/libsys_minerva.bso"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/sys/libsys_minerva.bso\", \"sd:/bootloader/sys/libsys_minerva.bso\")\n"
-    }
-    if (fsexists("sd:/bootloader/sys/module_sample.bso")) {
-        copyfile("sd:/bootloader/sys/module_sample.bso", combinepath(bkp_path, "bootloader/sys/module_sample.bso"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/sys/module_sample.bso\", \"sd:/bootloader/sys/module_sample.bso\")\n"
-    }
-    if (fsexists("sd:/bootloader/sys/nyx.bin")) {
-        copyfile("sd:/bootloader/sys/nyx.bin", combinepath(bkp_path, "bootloader/sys/nyx.bin"))
-        rs = rs + "copyfile(\"" + bkp_path + "/bootloader/sys/nyx.bin\", \"sd:/bootloader/sys/nyx.bin\")\n"
-    }
-
-    # Root payload
-    if (fsexists("sd:/payload.bin")) {
-        copyfile("sd:/payload.bin", combinepath(bkp_path, "payload.bin"))
-        rs = rs + "copyfile(\"" + bkp_path + "/payload.bin\", \"sd:/payload.bin\")\n"
-    }
-
-    p("Backup created!")
-
-    # === ЧАСТИНА 3: Завершення генерації Undo-скрипта ===
-    
-    # Додаємо команди самознищення та перезавантаження в Restore-скрипт
-    rs = rs + "p(\"Deleting restore script...\")\n"
-    rs = rs + "delfile(\"" + restore_script_path + "\")\n"
-    rs = rs + "p(\"Done! Rebooting...\")\n"
-    rs = rs + "payload(\"sd:/payload.bin\")\n"
-
-    # Записуємо скрипт
     mkdir("sd:/tegraexplorer/scripts")
-    if (writefile(restore_script_path, rs.bytes())) {
-        p("Error writing restore script!")
-        pause()
+    copyfile(update_source + "/remove.te", "sd:/tegraexplorer/scripts/Remove_8GB-RAM_config.te")
+
+    p("Installing update...")
+    
+    copydir(update_source + "/atmosphere", "sd:/")
+    copydir(update_source + "/bootloader", "sd:/")
+    copyfile(update_source + "/payload.bin", "sd:/payload.bin")
+
+    p("Cleaning up...")
+    
+    deldir(update_source)
+    delfile("sd:/startup.te")
+    
+    if (fsexists("sd:/4gb_config_backup")) {
+        deldir("sd:/4gb_config_backup")
     }
 
-    # === ЧАСТИНА 4: Накочування оновлення ===
-    p("Applying 8gb update files...")
-    
-    # Тут використовуємо copydir, бо структура тек в sd:/8gb вже правильна
-    # і вона перезапише відповідні файли
-    copydir("sd:/8gb/atmosphere", "sd:/")
-    copydir("sd:/8gb/bootloader", "sd:/")
-    copyfile("sd:/8gb/payload.bin", "sd:/payload.bin")
-
-    # === ЧАСТИНА 5: Прибирання ===
-    p("Cleaning up...")
-    deldir("sd:/8gb")
-    delfile("sd:/startup.te")
-
-    p("Finished. Rebooting.")
+    p("Done. Rebooting.")
     
     if (is_erista()) {
         payload("sd:/payload.bin")
     }.else(){
         reboot_ofw()
     }
-} 
+}

@@ -41,8 +41,6 @@ echo.
 set /P sd="Enter SD card letter: "
 if "%sd%"=="" goto :eof
 
-
-
 if not exist "%sd%:\" (
 	set word=        There is no SD card in %sd%-drive         
 	goto WRONGSD
@@ -60,13 +58,12 @@ if exist "%sd%:\switch\DBI\dbi.config" (rename %sd%:\switch\DBI\dbi.config dbi.c
 if not exist "%sd%:\switch\tinfoil\locations.bkp" (
 	if exist "%sd%:\switch\tinfoil\locations.conf" (rename %sd%:\switch\tinfoil\locations.conf locations.bkp)
 )
-if exist "%sd%:\bootloader\loader.kip" (set oc=1)
 
-rem Set mission control status
+if exist "%sd%:\atmosphere\kips\kefir.kip" (set oc=1)
+
 @REM set missioncontrol=0
 @REM set syscon=0
-set oc=0
-
+@REM set oc=0
 
 echo ------------------------------------------------------------------------
 echo.
@@ -113,6 +110,7 @@ if exist "%sd%:\atmosphere\contents\010000000000100C" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmosphere\contents\0000000000534C56")
 if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
+if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF")
 @REM if exist "%sd%:\atmosphere\contents\420000000000000B" (RD /s /q "%sd%:\atmosphere\contents\420000000000000B")
 if exist "%sd%:\config\uberhand\packages\ovrlck" (RD /s /q "%sd%:\config\uberhand\packages\ovrlck")
 if exist "%sd%:\config\uberhand\romfs\lyt" (RD /s /q "%sd%:\config\uberhand\romfs\lyt")
@@ -268,8 +266,10 @@ if exist "%sd%:\switch\fakenews-injector" (RD /s /q "%sd%:\switch\fakenews-injec
 if exist "%sd%:\sxos\sx" (RD /s /q "%sd%:\sxos\sx")
 if exist "%sd%:\switch\.packages\Semi-stock" (RD /s /q "%sd%:\switch\.packages\Semi-stock")
 if exist "%sd%:\switch\.packages\DBI" (RD /s /q "%sd%:\switch\.packages\DBI")
+if exist "%sd%:\switch\.packages\Software" (RD /s /q "%sd%:\switch\.packages\Software")
 if exist "%sd%:\config\uberhand\packages\oc_bkp\oc.ini" (RD /s /q "%sd%:\config\uberhand\packages\oc_bkp\oc.ini")
 if exist "%sd%:\config\uberhand\packages\oc" (RD /s /q "%sd%:\config\uberhand\packages\oc")
+if exist "%sd%:\config\uberhand\packages\settings\40mb.te" (del "%sd%:\config\uberhand\packages\settings\40mb.te")
 
 if exist "%sd%:\firmware" (RD /s /q "%sd%:\firmware")
 if exist "%sd%:\config\kefir-updater\firmware.zip" (del "%sd%:\config\kefir-updater\firmware.zip")
@@ -299,11 +299,10 @@ echo ------------------------------------------------------------------------
 
 xcopy "%~dp0*" "%sd%:\" /H /Y /C /R /S /E
 
-if %oc%==0 (
-    if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF\" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF\")
-    if exist "%sd%:\atmosphere\kips\kefir.kip" (del "%sd%:\atmosphere\kips\kefir.kip")
-    if exist "%sd%:\atmosphere\kips\loader.kip" (del "%sd%:\atmosphere\kips\loader.kip")
-    if exist "%sd%:\switch\.overlays\sys-clk-overlay.ovl" (del "%sd%:\switch\.overlays\sys-clk-overlay.ovl")
+if %oc%==1 (
+    if exist "%sd%:\config\oc\atmosphere\" (xcopy "%sd%:\config\oc\atmosphere\*" "%sd%:\atmosphere\" /H /Y /C /R /S /E /I)
+    if exist "%sd%:\config\oc\config\" (xcopy "%sd%:\config\oc\config\*" "%sd%:\config\" /H /Y /C /R /S /E /I)
+    if exist "%sd%:\config\oc\switch\" (xcopy "%sd%:\config\oc\switch\*" "%sd%:\switch\" /H /Y /C /R /S /E /I)
 )
 
 RD /s /q "%sd%:\oc"
@@ -312,7 +311,9 @@ if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
 if exist "Y:\Switch\\addons\atmosphere" (xcopy "Y:\Switch\\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
 if exist "Y:\Switch\\addons\config" (xcopy "Y:\Switch\\addons\config\*" "%sd%:\config" /H /Y /C /R /S /E /I)
-if exist "Y:\Switch\\addons\emuMMC" (xcopy "Y:\Switch\\addons\emuMMC\*" "%sd%:\emuMMC" /H /Y /C /R /S /E /I)
+set emuaddon=0
+if exist "%sd%:\emuMMC\SD00" AND if exist "Y:\Switch\\addons\emuMMC\" (set emuaddon=1)
+if %emuaddon%==1 (xcopy "Y:\Switch\\addons\emuMMC\*" "%sd%:\emuMMC" /H /Y /C /R /S /E /I)
 if exist "Y:\Switch\\addons\switch" (xcopy "Y:\Switch\\addons\switch\*" "%sd%:\switch" /H /Y /C /R /S /E /I)
 if exist "Y:\Switch\\addons\themes" (xcopy "Y:\Switch\\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 
@@ -355,6 +356,7 @@ if exist "%sd%:\TinGen" (RD /s /q "%sd%:\TinGen")
 if exist "%sd%:\kefir" (RD /s /q "%sd%:\kefir")
 if exist "%sd%:\switch\kefir-updater\startup.te" (del "%sd%:\switch\kefir-updater\startup.te")
 if exist "%sd%:\switch\kefir-updater\update.te" (del "%sd%:\switch\kefir-updater\update.te")
+if exist "%sd%:\switch\kefir-updater\kefir-updater.bin" (del "%sd%:\switch\kefir-updater\kefir-updater.bin")
 
 if exist "%sd%:\startup.te" (del "%sd%:\startup.te")
 

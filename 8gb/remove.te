@@ -1,0 +1,40 @@
+#REQUIRE SD
+
+p = println
+bkp_base = "sd:/config/uberhand/4gb_config_backup"
+
+p("Restoring from backup...")
+
+if (fsexists(bkp_base)) {
+    
+    if (fsexists(bkp_base + "/atmosphere")) {
+        copydir(bkp_base + "/atmosphere", "sd:/")
+    }
+
+    if (fsexists(bkp_base + "/bootloader")) {
+        copydir(bkp_base + "/bootloader", "sd:/")
+    }
+    
+    if (fsexists(bkp_base + "/payload.bin")) {
+        copyfile(bkp_base + "/payload.bin", "sd:/payload.bin")
+    }
+
+    p("Restored successfully!")
+    p("Deleting restore script and backup dir...")
+    
+    delfile("sd:/tegraexplorer/scripts/Remove_8GB-RAM_config.te")
+    deldir(bkp_base)
+    delfile("sd:/startup.te")
+
+    p("Rebooting...")
+    
+    if (is_erista()) {
+        payload("sd:/payload.bin")
+    }.else(){
+        reboot_ofw()
+    }
+
+}.else() {
+    p("Backup folder not found!")
+    pause()
+}

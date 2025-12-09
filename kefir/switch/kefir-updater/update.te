@@ -59,10 +59,12 @@ if (!fsexists("sd:/switch/tinfoil/locations.bkp")) {
 }
 
 emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
+oc=fsexists("sd:/atmosphere/kips/kefir.kip")
 
 # Force mission control status
 # missioncontrol=0
 # syscon=0
+# oc=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
@@ -98,6 +100,7 @@ if (fsexists("sd:/kefir")) {
 	deldir("sd:/atmosphere/contents/690000000000000D");
 	deldir("sd:/atmosphere/contents/420000000007E51A");
 	deldir("sd:/atmosphere/contents/010000000000bd00");
+	deldir("sd:/atmosphere/contents/00FF0000636C6BFF");
 	delfile("sd:/atmosphere/stratosphere.romfs");
 	deldir("sd:/switch/NX-Activity-Log/");
 	deldir("sd:/switch/fakenews-injector");
@@ -253,8 +256,10 @@ deldir("sd:/oc");
 deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
 deldir("sd:/switch/.packages/DBI");
+deldir("sd:/switch/.packages/Software");
 delfile("sd:/config/uberhand/packages/settings/8gb.txt")
 delfile("sd:/config/uberhand/packages/oc_bkp/oc.ini")
+delfile("sd:/config/uberhand/packages/settings/40mb.te")
 
 deldir("sd:/firmware")
 delfile("sd:/config/kefir-updater/firmware.zip")
@@ -264,8 +269,6 @@ delfile("sd:/config/kefir-updater/*.zip")
 p()
 p("Done")
 wait(tw = 1000)
-
-
 
 if (fsexists("sd:/kefir")) {
 	# 2. Копируем кефир на карту 
@@ -306,25 +309,19 @@ if (fsexists("sd:/emummc/emummc.ini_bkp")) {
 	movefile("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
 }
 
-oc=0
+if (oc) {
+	copydir("sd:/config/oc/atmosphere", "sd:/")
+	copydir("sd:/config/oc/config", "sd:/")
+	copydir("sd:/config/oc/switch", "sd:/")
 
-if (!oc) {
-	deldir("sd:/atmosphere/contents/00FF0000636C6BFF/")
-	delfile("sd:/atmosphere/kips/loader.kip")
-	delfile("sd:/atmosphere/kips/kefir.kip")
-	delfile("sd:/switch/.overlays/sys-clk-overlay.ovl")
 }
-
 
 # Чиним атрибуты и удаляем маковый мусор
 clear()
-
-clear()
-p("* Fix attributes")
-fixattrib()
+p("* Fix attributes and remove macos related garbage")
+fixandclean()
 p()
 p("Done")
-
 wait(tw = 1000)
 
 # 3. Подчищаем за собой
