@@ -1,12 +1,17 @@
 #### **UKR**
 **Повна підтримка 21.1.0**
 
+**791**
+* [**Виправлено**] [Kefir] - виправлена помилка, через яку при встановленні через апдейтер псувалися атрибути ігор
+
 **790**
-* [**Updated**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.1.0. Прибрані зміни, через які на нових версіях Atmosphere доводилося перекомпілювати Homebrew. Старі Homebrew працюють тепер без вилетів. 
+* [**Оновлено**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.1.0. Прибрані зміни, через які на нових версіях Atmosphere доводилося перекомпілювати Homebrew. Старі Homebrew працюють тепер без вилетів. 
     * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
 * [**Оновлено**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — виправлення помилок
 * [**Оновлено**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — підтримка прошивки 21.1.0
 * [**Оновлено**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — виправлення помилок
+* [**Оновлено**] [EdiZon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — скомпільовано з libultrahand v2.2.0
+* [**Оновлено**] [ovl-sysmodules v1.4.5](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.5) — скомпільовано з libultrahand v2.2.1
 * [**Додано**] Окремий патч для повернення 40Mb пам'яті для Homebrew. За замовчанням вимкнутий. Деякі ігри, які потребують прийняття EULA для початку гри,використовують браузер, якому пам'яті тепер не вистачає, через що маємо помилку і перезагрузку (напр. Ni No Kuni, Bioshock 3, MGS3 та інші). То ж, якщо ви використовуєте моди яким не вистачало пам'яті на ПЗ 21+, включіть цей мод. Якщо маєте ігри, що падають через нього - виключіть. Як завжди, перемикач знаходиться в 'Uberhand > packages > Settings > 40mb memory on FW20+ status'
 * [**Додано**] Доданий відкат для бідось, що випадково використали режим для консолей, що мають 8Gb пам'яті. hekate > payloads > TegraExplorer > Remove_8GB-RAM_config.te
 
@@ -16,12 +21,17 @@ ____
 #### **ENG**
 **Full support for 21.1.0**
 
+**791**
+* [**Fixed**] [Kefir] — fixed an issue where game attributes were corrupted when installing via the updater
+
 **790**
 * [**Updated**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — support for firmware 21.1.0. Removed the changes that previously required recompiling Homebrew on newer Atmosphere versions. Old Homebrew apps now run without crashes.  
     * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 * [**Updated**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — bug fixes  
 * [**Updated**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — support for firmware 21.1.0  
 * [**Updated**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — bug fixes  
+* [**Updated**] [EdiZon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — compiled with libultrahand v2.2.0
+* [**Updated**] [ovl-sysmodules v1.4.5](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.5) — compiled with libultrahand v2.2.1
 * [**Added**] A separate patch to restore 40MB of memory for Homebrew. Disabled by default. Some games that require EULA acceptance before starting use the browser, which now lacks enough memory and therefore crashes (e.g., Ni No Kuni, Bioshock 3, MGS3, and others).  
   So, if you use mods that lacked memory on FW 21+, enable this patch. If you have games that crash because of it — disable it. As always, the toggle is located in *Uberhand > packages > Settings > 40mb memory on FW20+ status*.  
 * [**Added**] A rollback option for users who accidentally enabled the mode intended for consoles with 8GB of RAM.  
