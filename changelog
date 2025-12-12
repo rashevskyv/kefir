@@ -1,6 +1,10 @@
 #### **UKR**
 **Повна підтримка 21.1.0**
 
+**792**
+* [**Виправлено**] [40mb fix] - виправлена помилка, через яку не вдавалося примінити фікс на еристі
+* [**Виправлено**] [TegraExplorer] - за якоюсь причиною програма відмовлялася працювати на еристах, через що оновлення через апдейтер не працювало
+
 **791**
 * [**Виправлено**] [Kefir] - виправлена помилка, через яку при встановленні через апдейтер псувалися атрибути ігор
 
@@ -20,6 +24,10 @@ ____
 
 #### **ENG**
 **Full support for 21.1.0**
+
+**792**
+* [**Fixed**] [40mb fix] — fixed an issue that prevented the fix from being applied on Erista  
+* [**Fixed**] [TegraExplorer] — for some reason the tool refused to run on Erista units, which caused updater-based updates to fail
 
 **791**
 * [**Fixed**] [Kefir] — fixed an issue where game attributes were corrupted when installing via the updater
