@@ -1,5 +1,11 @@
 #### **UKR**
-**Повна підтримка 21.1.0**
+**Повна підтримка 21.2.0**
+
+**793**
+* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.2.0.
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) - виправлення помилок
+* [**Оновлено**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — перерзібрано з новішим libultrahand 
 
 **792**
 * [**Виправлено**] [40mb fix] - виправлена помилка, через яку не вдавалося примінити фікс на еристі
@@ -23,7 +29,13 @@
 ____
 
 #### **ENG**
-**Full support for 21.1.0**
+**Full support for 21.2.0**
+
+**793**
+* [**Updated**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — firmware 21.2.0 support.
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — bug fixes
+* [**Updated**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — rebuilt with a newer libultrahand
 
 **792**
 * [**Fixed**] [40mb fix] — fixed an issue that prevented the fix from being applied on Erista  
