@@ -1,5 +1,8 @@
 #### **UKR**
-**Часткова підтримка 21.2.0**
+**Повна підтримка 21.2.0**
+
+**795**
+* [**Оновлено**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — підтримка прошивки 21.2.0.
 
 **794**
 * [**Оновлено**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 21.2.0.
@@ -13,7 +16,10 @@
 ____
 
 #### **ENG**
-**Partial support for 21.2.0**
+**Full support for 21.2.0**
+
+**795**
+* [**Updated**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — firmware 21.2.0 support
 
 **794**
 * [**Updated**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — firmware 21.2.0 support
