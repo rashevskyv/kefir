@@ -312,13 +312,13 @@ RD /s /q "%sd%:\oc"
 
 if exist "%sd%:\hekate_ctcaer_*.bin" (del "%sd%:\hekate_ctcaer_*.bin")
 
-if exist "Y:\Switch\\addons\atmosphere" (xcopy "Y:\Switch\\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
-if exist "Y:\Switch\\addons\config" (xcopy "Y:\Switch\\addons\config\*" "%sd%:\config" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\atmosphere" (xcopy "E:\Switch\addons\atmosphere\*" "%sd%:\atmosphere" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\config" (xcopy "E:\Switch\addons\config\*" "%sd%:\config" /H /Y /C /R /S /E /I)
 set emuaddon=0
-if exist "%sd%:\emuMMC\SD00" AND if exist "Y:\Switch\\addons\emuMMC\" (set emuaddon=1)
-if %emuaddon%==1 (xcopy "Y:\Switch\\addons\emuMMC\*" "%sd%:\emuMMC" /H /Y /C /R /S /E /I)
-if exist "Y:\Switch\\addons\switch" (xcopy "Y:\Switch\\addons\switch\*" "%sd%:\switch" /H /Y /C /R /S /E /I)
-if exist "Y:\Switch\\addons\themes" (xcopy "Y:\Switch\\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
+if exist "%sd%:\emuMMC\SD00" AND if exist "E:\Switch\addons\emuMMC\" (set emuaddon=1)
+if %emuaddon%==1 (xcopy "E:\Switch\addons\emuMMC\*" "%sd%:\emuMMC" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\switch" (xcopy "E:\Switch\addons\switch\*" "%sd%:\switch" /H /Y /C /R /S /E /I)
+if exist "E:\Switch\addons\themes" (xcopy "E:\Switch\addons\themes\*" "%sd%:\themes" /H /Y /C /R /S /E /I)
 
 if exist "%sd%:\.git" (RD /s /q "%sd%:\.git")
 
