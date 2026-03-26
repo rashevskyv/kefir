@@ -57,7 +57,7 @@ set /p st=:
 
 for %%A in ("2") do if "%st%"==%%A (goto noatmo)
 
-"Y:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
+"E:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
 
 :noatmo
 
@@ -81,9 +81,9 @@ xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kef
 xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
 xcopy "%working_dir%\_kefir\oc\*" "%kefir_dir%\config\uberhand\packages\oc\" /H /Y /C /R /S /E /I /F
 
-"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
-"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -x!mesosphere.bin %working_dir%\_kefir\40mb.zip %working_dir%\_kefir\40mb\*
-"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc_new.zip %working_dir%\_kefir\oc\*
+"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
+"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -x!mesosphere.bin %working_dir%\_kefir\40mb.zip %working_dir%\_kefir\40mb\*
+"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc_new.zip %working_dir%\_kefir\oc\*
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 
@@ -209,7 +209,7 @@ xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
 
 rem kefir
-"Y:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
+"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
 
 echo ------------------------------------------------------------------------
 echo.
