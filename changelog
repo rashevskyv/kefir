@@ -8,9 +8,9 @@
 Якщо ви маєте емунанд на прошивці 22, зробіть відкат за цією інструкцією - https://switch.customfw.xyz/downgrade_fw, а потім запустіть hekate > payloads > TegraExplorer > DowngradeFix.te
 
 **804**
-* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
+* [**Оновлено**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
     * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 22.0.0
+* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — підтримка прошивки 22.0.0
 * [Додано] Меню Software для Tesla Packages. 
 
 ____
@@ -25,7 +25,7 @@ ____
 If you have EmuNAND on firmware 22, downgrade using this guide - https://switch.customfw.xyz/downgrade_fw, then launch hekate > payloads > TegraExplorer > DowngradeFix.te
 
 **804**
-* [**Updated**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — preliminary support for firmware 22.0.0. It actually boots, but homebrew and EmuNAND are not working yet.
+* [**Updated**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — preliminary support for firmware 22.0.0. It actually boots, but homebrew and EmuNAND are not working yet.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — firmware 22.0.0 support
+* [**Updated**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — firmware 22.0.0 support
 * [Added] Software menu for Tesla Packages.
