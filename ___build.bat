@@ -65,10 +65,6 @@ if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
 
 rem xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
 
-xcopy "%kefir_dir%\hekate*__ram8GB.bin" "%working_dir%\_kefir\8gb\payload.bin" /H /Y /C /R
-del "%kefir_dir%\hekate*__ram8GB.bin"
-xcopy "%working_dir%\_kefir\8gb\payload.bin" "%working_dir%\_kefir\8gb\atmosphere\reboot_payload.bin" /H /Y /C /R
-
 xcopy "%kefir_dir%\hekate*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
 del "%kefir_dir%\hekate*.bin"
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R /F
@@ -77,13 +73,8 @@ xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R 
 xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R /F
 xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R /F
 xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
-xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
-xcopy "%img%\bootlogo_8gb.bmp" "%working_dir%\_kefir\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
-xcopy "%working_dir%\_kefir\oc\*" "%kefir_dir%\config\uberhand\packages\oc\" /H /Y /C /R /S /E /I /F
-
-"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\8gb.zip %working_dir%\_kefir\8gb\*
-"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -x!mesosphere.bin %working_dir%\_kefir\40mb.zip %working_dir%\_kefir\40mb\*
-"E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw %working_dir%\_kefir\oc_new.zip %working_dir%\_kefir\oc\*
+xcopy "%img%\bootlogo_8gb.bmp" "%kefir_dir%\config\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
+xcopy "%img%\bootlogo_8gb.bmp" "%kefir_dir%\config\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 
@@ -96,8 +87,8 @@ ECHO.
 ECHO.
 ECHO         1.  release
 ECHO         2.  pre
-ECHO         3.  temp
-ECHO         4.  skip
+ECHO         3.  test
+ECHO         4.  update without building zip
 ECHO.
 ECHO.
 ECHO ==============================================================

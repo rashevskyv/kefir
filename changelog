@@ -1,31 +1,31 @@
 #### **UKR**
 **Повна підтримка 21.2.0**
 
-**795**
-* [**Оновлено**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — підтримка прошивки 21.2.0.
+**Встановіть цей реліз, якщо плануєте використовувати офіційно останню прошивку. Без цього ооновлена офіційна прошивка працювати не буде!**
 
-**794**
-* [**Оновлено**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 21.2.0.
+**Підтримка 22.0.0 лише в офіційній прошивці**. Емунанд на 22 не працює, так само як і хомбрю в семісток. 
 
-**793**
-* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.2.0.
+Якщо ви маєте емунанд на прошивці 22, зробіть відкат за цією інструкцією - https://switch.customfw.xyz/downgrade_fw, а потім запустіть hekate > payloads > TegraExplorer > DowngradeFix.te
+
+**804**
+* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
     * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-* [**Оновлено**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — виправлення помилок
-* [**Оновлено**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — перерзібрано з новішим libultrahand 
+* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 22.0.0
+* [Додано] Меню Software для Tesla Packages. 
 
 ____
 
 #### **ENG**
 **Full support for 21.2.0**
 
-**795**
-* [**Updated**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — firmware 21.2.0 support
+**Install this release if you plan to use the latest official firmware. Without it, the updated official firmware will not work!**
 
-**794**
-* [**Updated**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — firmware 21.2.0 support
+**Support for 22.0.0 only on stock firmware**. EmuNAND on 22 does not work, and homebrew in semi-stock does not work either.
 
-**793**
-* [**Updated**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — firmware 21.2.0 support
+If you have EmuNAND on firmware 22, downgrade using this guide - https://switch.customfw.xyz/downgrade_fw, then launch hekate > payloads > TegraExplorer > DowngradeFix.te
+
+**804**
+* [**Updated**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — preliminary support for firmware 22.0.0. It actually boots, but homebrew and EmuNAND are not working yet.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — bug fixes
-* [**Updated**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — rebuilt with a newer libultrahand
+* [**Updated**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — firmware 22.0.0 support
+* [Added] Software menu for Tesla Packages.

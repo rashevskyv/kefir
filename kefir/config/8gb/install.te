@@ -1,0 +1,62 @@
+#REQUIRE SD
+
+p = println
+update_source = "sd:/config/8gb"
+bkp_base = update_source + "/4gb_backup"
+
+files_to_backup = [
+    "atmosphere/package3",
+    "atmosphere/reboot_payload.bin",
+    "bootloader/bootlogo_kefir.bmp",
+    "bootloader/payloads/fusee.bin",
+    "bootloader/update.bin",
+    "payload.bin"
+]
+
+if (fsexists(update_source)) {
+    
+    p("Creating backup...")
+    
+    if (fsexists(bkp_base)) { deldir(bkp_base) }
+    
+    mkdir(bkp_base)
+    
+    mkdir(bkp_base + "/atmosphere")
+    mkdir(bkp_base + "/bootloader")
+    mkdir(bkp_base + "/bootloader/payloads")
+
+    files_to_backup.foreach("f") {
+        src = "sd:/" + f
+        dst = bkp_base + "/" + f
+        
+        if (fsexists(src)) {
+            copyfile(src, dst)
+        }
+    }
+
+    mkdir("sd:/tegraexplorer")
+    mkdir("sd:/tegraexplorer/scripts")
+    copyfile(update_source + "/remove.te", "sd:/tegraexplorer/scripts/Remove_8GB-RAM_config.te")
+
+    p("Installing update...")
+    
+    copydir(update_source + "/atmosphere", "sd:/")
+    copydir(update_source + "/bootloader", "sd:/")
+    copyfile(update_source + "/payload.bin", "sd:/payload.bin")
+
+    p("Cleaning up...")
+    
+    delfile("sd:/startup.te")
+    
+    if (fsexists("sd:/4gb_backup")) {
+        deldir("sd:/4gb_backup")
+    }
+
+    p("Done. Rebooting.")
+    
+    if (is_erista()) {
+        payload("sd:/payload.bin")
+    }.else(){
+        reboot_ofw()
+    }
+}

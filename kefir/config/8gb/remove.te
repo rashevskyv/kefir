@@ -1,7 +1,7 @@
 #REQUIRE SD
 
 p = println
-bkp_base = "sd:/config/uberhand/4gb_config_backup"
+bkp_base = "sd:/config/8gb/4gb_backup"
 
 p("Restoring from backup...")
 
@@ -14,9 +14,9 @@ if (fsexists(bkp_base)) {
     if (fsexists(bkp_base + "/bootloader")) {
         copydir(bkp_base + "/bootloader", "sd:/")
     }
-    
-    if (fsexists(bkp_base + "/payload.bin")) {
-        copyfile(bkp_base + "/payload.bin", "sd:/payload.bin")
+
+    if (fsexists(bkp_base + "/bootloader/update.bin")) {
+        copyfile(bkp_base + "/bootloader/update.bin", "sd:/payload.bin")
     }
 
     p("Restored successfully!")

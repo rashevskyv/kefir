@@ -1,0 +1,12 @@
+copyfile("sd:/atmosphere/package3", "sd:/config/40mb/package3_bkp")
+copyfile("sd:/config/40mb/atmosphere/package3", "sd:/atmosphere/package3")
+copyfile("sd:/bootloader/update.bin", "sd:/payload.bin")
+copyfile("sd:/config/40mb/remove.te", "sd:/config/uberhand/packages/settings/40mb.te")
+
+delfile("sd:/startup.te")
+
+if (is_erista()) {
+	payload("sd:/payload.bin")
+}.else(){
+	reboot_ofw();
+}

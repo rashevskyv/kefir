@@ -1,0 +1,11 @@
+copyfile("sd:/config/40mb/package3_bkp", "sd:/atmosphere/package3")
+delfile("sd:/config/40mb/package3_bkp")
+copyfile("sd:/bootloader/update.bin", "sd:/payload.bin")
+
+delfile("sd:/startup.te")
+
+if (is_erista()) {
+	payload("sd:/payload.bin")
+}.else(){
+	reboot_ofw();
+}
