@@ -1,4 +1,5 @@
 # Kefir
+![Github latest downloads](https://img.shields.io/github/downloads/rashevskyv/kefir/total.svg)
 
 [Українською](README_ukr.md)
 
