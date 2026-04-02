@@ -1,0 +1,3 @@
+[submodule "4IFIR/source/sys-clk-OC"]
+	path = 4IFIR/source/sys-clk-OC
+	url = https://github.com/rashevskyv/sys-clk-OC.git
