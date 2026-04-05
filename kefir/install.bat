@@ -61,7 +61,7 @@ if not exist "%sd%:\switch\tinfoil\locations.bkp" (
 
 if exist "%sd%:\atmosphere\kips\kefir.kip" (set oc=1)
 
-set missioncontrol=0
+@REM set missioncontrol=0
 @REM set syscon=0
 @REM set oc=0
 

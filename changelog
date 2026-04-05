@@ -1,37 +1,17 @@
 #### **UKR**
 **Повна підтримка 22.0.0**
 
-Принаймні я не помітив якихось косяків чи багів. Модулі працюють, емунанд, розгін, хомбрю - все наче працює також. Ну і добре. Якщо маєте вже 22, то певно можна і не відкатуватися, якщо все працює та не викликає проблем. Якщо маєте нижчу за 22, то оновлювати емунанд на 22 точно не треба. 
-
-**805**
-* [**Оновлено**] [Atmosphere 1.11.0-pr2763](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 22.0.0. 
+**806**
+* [**Оновлено**] [Atmosphere 1.11.0](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.0.0. 
     * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-* [**Оновлено**] [Mission Control 14.2](https://github.com/eradicatinglove/MissionControl/releases/tag/v14.2) — підтримка прошивки 22.0.0. 
-* [**Оновлено**] [Lockpick_RCM 1.9.18](https://gbatemp.net/threads/lockpick_rcm-payload-official-thread.532916/page-48#post-10832437) — знімає новенькі ключі з 22ї прошивки 
-* [**Виправлено**] Неправильно працюючий розгін 
-
-**804**
-* [**Оновлено**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
-    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — підтримка прошивки 22.0.0
-* [**Додано**] Меню Software для Tesla Packages. 
+* [**Оновлено**] [Mission Control 15.0.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.0) — підтримка прошивки 22.0.0. 
 
 ____
 
 #### **ENG**
 **Full support for 22.0.0**
 
-At least I haven't noticed any issues or bugs. Modules work, EmuNAND, overclocking, and homebrew all seem to work as well. That's good. If you already have 22, you probably don't need to downgrade if everything works and causes no problems. If you are on a firmware lower than 22, you definitely should not update EmuNAND to 22.
-
-**805**
-* [**Updated**] [Atmosphere 1.11.0-pr2763](https://github.com/rashevskyv/Kefirosphere) — firmware 22.0.0 support.
+**806**
+* [**Updated**] [Atmosphere 1.11.0](https://github.com/rashevskyv/Kefirosphere) — Release. Firmware 22.0.0 support.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [Mission Control 14.2](https://github.com/eradicatinglove/MissionControl/releases/tag/v14.2) — firmware 22.0.0 support.
-* [**Updated**] [Lockpick_RCM 1.9.18](https://gbatemp.net/threads/lockpick_rcm-payload-official-thread.532916/page-48#post-10832437) — extracts new keys from firmware 22
-* [**Fixed**] Overclock
-
-**804**
-* [**Updated**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — preliminary support for firmware 22.0.0. It actually boots, but homebrew and EmuNAND are not working yet.
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — firmware 22.0.0 support
-* [**Added**] Software menu for Tesla Packages.
+* [**Updated**] [Mission Control 15.0.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.0) — firmware 22.0.0 support.
