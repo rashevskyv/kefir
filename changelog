@@ -1,15 +1,18 @@
+
+## Changelog 
 #### **UKR**
-**Повна підтримка 22.0.0**
+**Повна підтримка 22.1.0**
 
 **808**
-* [**Оновлено**] [Atmosphere 1.11.0-p2786](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.1.0. 
+* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.1.0. 
     * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-
+* [**Оновлено**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — підтримка прошивки 22.1.0. 
 ____
 
 #### **ENG**
-**Full support for 22.0.0**
+**Full support for 22.1.0**
 
 **808**
-* [**Updated**] [Atmosphere 1.11.0-p2786](https://github.com/rashevskyv/Kefirosphere) — Release. Firmware 22.1.0 support.
+* [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) — Release. Firmware 22.1.0 support.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**ОновUpdatedлено**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Firmware 22.1.0 support.
