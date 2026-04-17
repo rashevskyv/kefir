@@ -3,32 +3,24 @@
 #### **UKR**
 **Повна підтримка 22.1.0**
 
-**818**
-* [**Оновлено**] [Nxthemes Installer v4.8.3](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.3) — Нова версія інструменту.
-* [**Оновлено**] [Sys Con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — Нова версія інструменту.
-* [**Оновлено**] [Uberhand Overlay 2.3.2](https://github.com/efosamark/Uberhand-Overlay/releases/tag/2.3.2) — Нова версія інструменту.
-* [**Оновлено**] [Nx Ovlloader v1.0.7](https://github.com/WerWolv/nx-ovlloader/releases/tag/v1.0.7) — Нова версія інструменту.
-* [**Оновлено**] [Edizon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — Нова версія інструменту.
-* [**Оновлено**] [Ovl Sysmodules v1.3.1](https://github.com/WerWolv/ovl-sysmodules/releases/tag/v1.3.1) — Нова версія інструменту.
+**812**
+* [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
+* [**Оновлено**] [Hekate v6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — Додано підтримку HOS 22.0.0/22.1.0 та автоматичне налаштування розміру пам'яті при завантаженні HOS.
 
 **809**
-* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.1.0. 
-    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-* [**Оновлено**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — підтримка прошивки 22.1.0. 
+* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0. 
+    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) - Підтримка прошивки 22.1.0. 
 ____
 
 #### **ENG**
 **Full support for 22.1.0**
 
-**818**
-* [**Updated**] [Nxthemes Installer v4.8.3](https://github.com/exelix11/SwitchThemeInjector/releases/tag/v4.8.3) — New tool version.
-* [**Updated**] [Sys Con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — New tool version.
-* [**Updated**] [Uberhand Overlay 2.3.2](https://github.com/efosamark/Uberhand-Overlay/releases/tag/2.3.2) — New tool version.
-* [**Updated**] [Nx Ovlloader v1.0.7](https://github.com/WerWolv/nx-ovlloader/releases/tag/v1.0.7) — New tool version.
-* [**Updated**] [Edizon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — New tool version.
-* [**Updated**] [Ovl Sysmodules v1.3.1](https://github.com/WerWolv/ovl-sysmodules/releases/tag/v1.3.1) — New tool version.
+**812**
+* [**Updated**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — The key change is a code refactor and fixes for version 22.0.0.
+* [**Updated**] [Hekate v6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — Added support for HOS 22.0.0/22.1.0 and auto memory size configuration when booting HOS.
 
 **809**
-* [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) — Release. Firmware 22.1.0 support.
+* [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 22.1.0 support.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Firmware 22.1.0 support.
+* [**Updated**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) - Firmware 22.1.0 support. 

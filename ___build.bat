@@ -70,11 +70,7 @@ del "%kefir_dir%\hekate*.bin"
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R /F
 xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R /F
 
-xcopy "%img%\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R /F
-xcopy "%img%\kiosk.png" "%working_dir%\_kefir\kefir.png" /H /Y /C /R /F
-xcopy "%img%\bootlogo.bmp" "%kefir_dir%\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
-xcopy "%img%\bootlogo_8gb.bmp" "%kefir_dir%\config\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
-xcopy "%img%\bootlogo_8gb.bmp" "%kefir_dir%\config\8gb\bootloader\bootlogo_kefir.bmp" /H /Y /C /R /F
+xcopy "%working_dir%\_kefir\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R /F
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 

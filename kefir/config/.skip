@@ -1,0 +1,4 @@
+# Folders to skip during maintenance scan
+roms
+retroarch
+tico
