@@ -3,9 +3,8 @@
 #### **UKR**
 **Повна підтримка 22.1.0**
 
-**812**
+**813**
 * [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
-* [**Оновлено**] [Hekate v6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — Додано підтримку HOS 22.0.0/22.1.0 та автоматичне налаштування розміру пам'яті при завантаженні HOS.
 
 **809**
 * [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0. 
@@ -16,9 +15,8 @@ ____
 #### **ENG**
 **Full support for 22.1.0**
 
-**812**
+**813**
 * [**Updated**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — The key change is a code refactor and fixes for version 22.0.0.
-* [**Updated**] [Hekate v6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — Added support for HOS 22.0.0/22.1.0 and auto memory size configuration when booting HOS.
 
 **809**
 * [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 22.1.0 support.

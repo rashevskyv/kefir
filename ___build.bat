@@ -7,84 +7,31 @@ set working_dsk=D:
 set working_dir=%working_dsk%\git\dev
 set reldir=%working_dir%\_kefir\release
 set testdir=%working_dir%\_kefir\test
-set gdisk_rel=%gdisk%\release
-set gdisk_test=%gdisk%\test
 set kefir_dir=%working_dir%\_kefir\kefir
-set hekate_dir=%working_dir%\_kefir\kefir\bootloader\sys
-set hekate_build=%working_dir%\hekate\output
-set hbl_build=%working_dir%\nx-hbmenu\hbmenu.nro
 set build_dir=%working_dir%\_kefir\build
 set googledrive_dir=%reldir%
 set sd=%build_dir%
 set img=%working_dir%\_kefir\bootlogo
 set site=%working_dsk%\git\site\switch
 set suffix=""
-set dbi=%working_dsk%\Switch\dbibackend
 set /p ver=<version
 if exist "%build_dir%" (RD /s /q "%build_dir%")
 set site_inc=%site%\_includes\inc\kefir
 set site_files=%site%\files
 set site_img=%site%\images
 
-set atmo_build="%working_dir%\atmosphere-out.zip"
-set kefirupdater="%working_dir%\kefir-updater\Kefir-updater.nro"
-
-@REM if exist "%reldir%" (RD /s /q "%reldir%")
-@REM MKLINK /D "%reldir%" "%gdisk_rel%"
-
-@REM if exist "%testdir%" (RD /s /q "%testdir%")
-@REM MKLINK /D "%testdir%" "%gdisk_test%"
-
-git checkout master
-
 cls
-
-ECHO.
-ECHO.
-ECHO ==============================================================
-ECHO.
-ECHO.
-ECHO         1.  Update atmo
-ECHO         2.  Skip
-ECHO.
-ECHO.
-ECHO ==============================================================
-ECHO                                             Q.  Quit
-ECHO.
-
-set st=
-set /p st=:
-
-for %%A in ("2") do if "%st%"==%%A (goto noatmo)
-
-"E:\Switch\7zip\7za.exe" x %atmo_build% -o%kefir_dir% -y
-
-:noatmo
-
-if exist "%hbl_build%" xcopy "%hbl_build%" "%kefir_dir%\" /H /Y /C /R
-
-rem xcopy "%dbi%\DBI.nro" "%kefir_dir%\switch\DBI\DBI.nro" /H /Y /C /R
-
-xcopy "%kefir_dir%\hekate*.bin" "%kefir_dir%\payload.bin" /H /Y /C /R
-del "%kefir_dir%\hekate*.bin"
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\atmosphere\reboot_payload.bin" /H /Y /C /R /F
-xcopy "%kefir_dir%\payload.bin" "%kefir_dir%\bootloader\update.bin" /H /Y /C /R /F
-
-xcopy "%working_dir%\_kefir\kiosk.png" "%site_img%\kefir.png" /H /Y /C /R /F
 
 xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
 
 cls
 
 ECHO.
-ECHO.
 ECHO ==============================================================
 ECHO.
 ECHO.
 ECHO         1.  release
-ECHO         2.  pre
-ECHO         3.  test
-ECHO         4.  update without building zip
+ECHO         2.  test
 ECHO.
 ECHO.
 ECHO ==============================================================
@@ -94,22 +41,7 @@ ECHO.
 set st=
 set /p st=:
 
-for %%A in ("2") do if "%st%"==%%A (set suffix="_pre")
-for %%A in ("3") do if "%st%"==%%A (set suffix="_test")
-for %%A in ("4") do if "%st%"==%%A (set suffix="_skip")
-
-if %suffix%=="_skip" (GOTO skip)
-if not %suffix%=="" (GOTO start)
-
-:skip
-
-xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
-if %suffix%=="_skip" (GOTO skip2)
-
-:start
+for %%A in ("2") do if "%st%"==%%A (set suffix="_test")
 
 echo ------------------------------------------------------------------------
 echo.
@@ -125,9 +57,6 @@ xcopy "%kefir_dir%\*" "%sd%\" /H /Y /C /R /S /E
 xcopy "%kefir_dir%\payload.bin" "%sd%\" /H /Y /C /R
 
 if exist "%sd%\bootloader\hekate_ipl_*.ini" (del "%sd%\bootloader\hekate_ipl_*.ini")
-
-if exist "%sd%\switch\fakenews-injector" (RD /s /q "%sd%\switch\fakenews-injector")
-if exist "%sd%\pegascape" (RD /s /q "%sd%\pegascape")
 
 echo ------------------------------------------------------------------------
 echo.
@@ -194,6 +123,10 @@ if not %suffix%=="" (set reldir=%testdir%)
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")
 xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
+xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
 
 rem kefir
 "E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
@@ -209,12 +142,6 @@ if %suffix%=="_test" (GOTO END)
 if %suffix%=="" (set ps=%working_dsk%\git\scripts\build_kefir.ps1)
 
 if exist "%build_dir%" (RD /s /q "%build_dir%")
-
-:skip2
-if %suffix%=="_skip" (
-	set suffix=""
-	set ps=%working_dsk%\git\scripts\build_kefir.ps1
-)
 
 git add .
 git commit -m "kefir%ver%%suffix%"
