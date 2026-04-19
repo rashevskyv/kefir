@@ -3,8 +3,15 @@
 #### **UKR**
 **Повна підтримка 22.1.0**
 
+**814**
+* [**Додано**] Файл '/config/.skip' має список файлів та папок які будуть виключені з примусової перевірки атрибутів при оновленні кефіра через kefir-updater
+* [**Оновлено**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Обов'язково перевстановіть 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру, якщо користуєтесь форвардером для запуска HBL з головного екрану 
+* [**Оновлено**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — Ліміт нейтральної пам'яті підвищено з 4 МБ до 5 МБ.
+* [**Оновлено**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Додано захоплення зсуву в логах та накладенні, а також виправлено виявлення "прошитого за файлом" і "прошитого за системним патчем".
+
 **813**
 * [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
+* [**Додано**] При оновленні кефіру ключі знімаються автоматично 
 
 **809**
 * [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0. 
@@ -15,8 +22,17 @@ ____
 #### **ENG**
 **Full support for 22.1.0**
 
+**814**
+* [**Added**] The file '/config/.skip' contains a list of files and folders that will be excluded from forced attribute checks when updating kefir via kefir-updater.
+* [**Updated**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Be sure to reinstall 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game if you are using a forwarder to launch HBL from the home screen.
+* [**Updated**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — The neutral memory limit has been increased from 4 MB to 5 MB.
+* [**Updated**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Added shift capturing in logs and overlays, as well as fixed detection of "flashed by file" and "flashed by system patch."
+
 **813**
+* [**Updated**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Added offset capture in logs and overlay, and fixed detection of "patched-by-file" versus "patched-by-sys-patch".
+* [**Updated**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — The neutral memory limit has been raised from 4MB to 5MB.
 * [**Updated**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — The key change is a code refactor and fixes for version 22.0.0.
+* [**Added**] Auto dump keys after kefir update
 
 **809**
 * [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 22.1.0 support.
