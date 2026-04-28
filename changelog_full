@@ -1,0 +1,154 @@
+## Changelog
+#### **UKR**
+**Повна підтримка 22.1.0**
+
+**816**
+* [**Оновлено**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Додано підтримку прошивки 22.1.0 та виправлено обробку команд LED для контролерів Sony, що впливало на вібрацію та індикатори гравців.
+* [**Оновлено**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Оновлено libultrahand до версії 2.4.0.
+* [**Оновлено**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Оновлено віджет пам'яті до формату `libultrahand v2.4.1` та виправлено помилку зв'язування змінної `hide_widget_border`.
+
+**814**
+* [**Додано**] Файл '/config/.skip' має список файлів та папок які будуть виключені з примусової перевірки атрибутів при оновленні кефіра через kefir-updater
+* [**Оновлено**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Обов'язково перевстановіть 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру, якщо користуєтесь форвардером для запуска HBL з головного екрану 
+* [**Оновлено**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — Ліміт нейтральної пам'яті підвищено з 4 МБ до 5 МБ.
+* [**Оновлено**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Додано захоплення зсуву в логах та накладенні, а також виправлено виявлення "прошитого за файлом" і "прошитого за системним патчем".
+
+**813**
+* [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
+* [**Додано**] При оновленні кефіру ключі знімаються автоматично
+
+**809**
+* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0. 
+    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+
+**808**
+* [**Оновлено**] [Atmosphere 1.11.0-p2786](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.1.0. 
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+
+**807**
+* [**Оновлено**] [Atmosphere 1.11.0](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.0.0. 
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [Mission Control 15.0.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.0) — підтримка прошивки 22.0.0.
+
+**805**
+* [**Оновлено**] [Atmosphere 1.11.0-pr2763](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 22.0.0. 
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [Mission Control 14.2](https://github.com/eradicatinglove/MissionControl/releases/tag/v14.2) — підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Lockpick_RCM 1.9.18](https://gbatemp.net/threads/lockpick_rcm-payload-official-thread.532916/page-48#post-10832437) — знімає новенькі ключі з 22ї прошивки 
+* [**Виправлено**] Неправильно працюючий розгін
+
+**804**
+* [**Оновлено**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — підтримка прошивки 22.0.0
+* [**Додано**] Меню Software для Tesla Packages.
+
+**795**
+* [**Оновлено**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — підтримка прошивки 21.2.0.
+
+**794**
+* [**Оновлено**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 21.2.0.
+
+**793**
+* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.2.0.
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — виправлення помилок
+* [**Оновлено**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — перерзібрано з новішим libultrahand
+
+**792**
+* [**Виправлено**] [40mb fix] - виправлена помилка, через яку не вдавалося примінити фікс на еристі
+* [**Виправлено**] [TegraExplorer] - за якоюсь причиною програма відмовлялася працювати на еристах, через що оновлення через апдейтер не працювало
+
+**791**
+* [**Виправлено**] [Kefir] - виправлена помилка, через яку при встановленні через апдейтер псувалися атрибути ігор
+
+**790**
+* [**Оновлено**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.1.0. Прибрані зміни, через які на нових версіях Atmosphere доводилося перекомпілювати Homebrew. Старі Homebrew працюють тепер без вилетів. 
+    * [**Подробніше про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+* [**Оновлено**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — виправлення помилок
+* [**Оновлено**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — підтримка прошивки 21.1.0
+* [**Оновлено**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — виправлення помилок
+* [**Оновлено**] [EdiZon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — скомпільовано з libultrahand v2.2.0
+* [**Оновлено**] [ovl-sysmodules v1.4.5](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.5) — скомпільовано з libultrahand v2.2.1
+* [**Додано**] Окремий патч для повернення 40Mb пам'яті для Homebrew. За замовчанням вимкнутий. Деякі ігри, які потребують прийняття EULA для початку гри,використовують браузер, якому пам'яті тепер не вистачає, через що маємо помилку і перезагрузку (напр. Ni No Kuni, Bioshock 3, MGS3 та інші). То ж, якщо ви використовуєте моди яким не вистачало пам'яті на ПЗ 21+, включіть цей мод. Якщо маєте ігри, що падають через нього - виключіть. Як завжди, перемикач знаходиться в 'Uberhand > packages > Settings > 40mb memory on FW20+ status'
+* [**Додано**] Доданий відкат для бідось, що випадково використали режим для консолей, що мають 8Gb пам'яті. hekate > payloads > TegraExplorer > Remove_8GB-RAM_config.te
+
+____
+
+#### **ENG**
+**Full support for 22.1.0**
+
+**816**
+* [**Updated**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Added support for firmware 22.1.0 and fixed LED command handling for Sony controllers, which affected vibration and player indicators.
+* [**Updated**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Updated libultrahand to version 2.4.0.
+* [**Updated**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Updated the memory widget to the `libultrahand v2.4.1` format and fixed the variable binding error `hide_widget_border`.
+
+**814**
+* [**Added**] The file '/config/.skip' contains a list of files and folders that will be excluded from forced attribute checks when updating kefir via kefir-updater.
+* [**Updated**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Be sure to reinstall 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game if you are using a forwarder to launch HBL from the home screen.
+* [**Updated**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — The neutral memory limit has been increased from 4 MB to 5 MB.
+* [**Updated**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Added shift capturing in logs and overlays, as well as fixed detection of "flashed by file" and "flashed by system patch."
+
+**813**
+* [**Updated**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Added offset capture in logs and overlay, and fixed detection of "patched-by-file" versus "patched-by-sys-patch".
+* [**Updated**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — The neutral memory limit has been raised from 4MB to 5MB.
+* [**Updated**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — The key change is a code refactor and fixes for version 22.0.0.
+* [**Added**] Auto dump keys after kefir update
+
+**809**
+* [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 22.1.0 support.
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+
+**808**
+* [**Updated**] [Atmosphere 1.11.0-p2786](https://github.com/rashevskyv/Kefirosphere) — Release. Firmware 22.1.0 support.
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+
+**807**
+* [**Updated**] [Atmosphere 1.11.0](https://github.com/rashevskyv/Kefirosphere) — Release. Firmware 22.0.0 support.
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [Mission Control 15.0.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.0) — firmware 22.0.0 support.
+
+**805**
+* [**Updated**] [Atmosphere 1.11.0-pr2763](https://github.com/rashevskyv/Kefirosphere) — firmware 22.0.0 support.
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [Mission Control 14.2](https://github.com/eradicatinglove/MissionControl/releases/tag/v14.2) — firmware 22.0.0 support.
+* [**Updated**] [Lockpick_RCM 1.9.18](https://gbatemp.net/threads/lockpick_rcm-payload-official-thread.532916/page-48#post-10832437) — extracts new keys from firmware 22
+* [**Fixed**] Overclock
+
+**804**
+* [**Updated**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — preliminary support for firmware 22.0.0. It actually boots, but homebrew and EmuNAND are not working yet.
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — firmware 22.0.0 support
+* [**Added**] Software menu for Tesla Packages.
+
+**795**
+* [**Updated**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — firmware 21.2.0 support
+
+**794**
+* [**Updated**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — firmware 21.2.0 support
+
+**793**
+* [**Updated**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — firmware 21.2.0 support
+    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — bug fixes
+* [**Updated**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — rebuilt with a newer libultrahand
+
+**792**
+* [**Fixed**] [40mb fix] — fixed an issue that prevented the fix from being applied on Erista  
+* [**Fixed**] [TegraExplorer] — for some reason the tool refused to run on Erista units, which caused updater-based updates to fail
+
+**791**
+* [**Fixed**] [Kefir] — fixed an issue where game attributes were corrupted when installing via the updater
+
+**790**
+* [**Updated**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — support for firmware 21.1.0. Removed the changes that previously required recompiling Homebrew on newer Atmosphere versions. Old Homebrew apps now run without crashes.  
+    * [**More details about Atmosphere changes**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — bug fixes  
+* [**Updated**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — support for firmware 21.1.0  
+* [**Updated**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — bug fixes  
+* [**Updated**] [EdiZon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — compiled with libultrahand v2.2.0
+* [**Updated**] [ovl-sysmodules v1.4.5](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.5) — compiled with libultrahand v2.2.1
+* [**Added**] A separate patch to restore 40MB of memory for Homebrew. Disabled by default. Some games that require EULA acceptance before starting use the browser, which now lacks enough memory and therefore crashes (e.g., Ni No Kuni, Bioshock 3, MGS3, and others).  
+  So, if you use mods that lacked memory on FW 21+, enable this patch. If you have games that crash because of it — disable it. As always, the toggle is located in *Uberhand > packages > Settings > 40mb memory on FW20+ status*.  
+* [**Added**] A rollback option for users who accidentally enabled the mode intended for consoles with 8GB of RAM.  
+  *hekate > payloads > TegraExplorer > Remove_8GB-RAM_config.te*
