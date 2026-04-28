@@ -3,6 +3,11 @@
 #### **UKR**
 **Повна підтримка 22.1.0**
 
+**816**
+* [**Оновлено**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Додано підтримку прошивки 22.1.0 та виправлено обробку команд LED для контролерів Sony, що впливало на вібрацію та індикатори гравців.
+* [**Оновлено**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Оновлено libultrahand до версії 2.4.0.
+* [**Оновлено**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Оновлено віджет пам'яті до формату `libultrahand v2.4.1` та виправлено помилку зв'язування змінної `hide_widget_border`.
+
 **814**
 * [**Додано**] Файл '/config/.skip' має список файлів та папок які будуть виключені з примусової перевірки атрибутів при оновленні кефіра через kefir-updater
 * [**Оновлено**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Обов'язково перевстановіть 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру, якщо користуєтесь форвардером для запуска HBL з головного екрану 
@@ -16,11 +21,16 @@
 **809**
 * [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0. 
     * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
-* [**Оновлено**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) - Підтримка прошивки 22.1.0. 
+
 ____
 
 #### **ENG**
 **Full support for 22.1.0**
+
+**816**
+* [**Updated**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Added support for firmware 22.1.0 and fixed LED command handling for Sony controllers, which affected vibration and player indicators.
+* [**Updated**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Updated libultrahand to version 2.4.0.
+* [**Updated**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Updated the memory widget to the `libultrahand v2.4.1` format and fixed the variable binding error `hide_widget_border`.
 
 **814**
 * [**Added**] The file '/config/.skip' contains a list of files and folders that will be excluded from forced attribute checks when updating kefir via kefir-updater.
@@ -37,4 +47,3 @@ ____
 **809**
 * [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 22.1.0 support.
     * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-* [**Updated**] [Mission Control 0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) - Firmware 22.1.0 support. 
