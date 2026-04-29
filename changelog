@@ -2,6 +2,11 @@
 ## Changelog 
 #### **UKR**
 **Повна підтримка 22.1.0**
+Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
+Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
+
+**818**
+* [**Оновлено**] [Kefir-updater] - поліпшення у відображенні ченджлога
 
 **816**
 * [**Оновлено**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Додано підтримку прошивки 22.1.0 та виправлено обробку команд LED для контролерів Sony, що впливало на вібрацію та індикатори гравців.
@@ -26,6 +31,9 @@ ____
 
 #### **ENG**
 **Full support for 22.1.0**
+
+**818**
+* [**Updated**] [Kefir-updater] - improvements in changelog display
 
 **816**
 * [**Updated**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Added support for firmware 22.1.0 and fixed LED command handling for Sony controllers, which affected vibration and player indicators.
