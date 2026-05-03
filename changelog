@@ -5,6 +5,9 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+**819**
+* [**Виправлено**] https://github.com/rashevskyv/kefir/issues/142 - виправлена робота патченого tinfoil 
+
 **818**
 * [**Оновлено**] [Kefir-updater] - поліпшення у відображенні ченджлога
 
@@ -30,7 +33,12 @@
 ____
 
 #### **ENG**
-**Full support for 22.1.0**
+**Full support for 22.1.0**  
+The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
+The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without the forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
+
+**819**
+* [**Fixed**] https://github.com/rashevskyv/kefir/issues/142 - fixed the operation of the patched tinfoil
 
 **818**
 * [**Updated**] [Kefir-updater] - improvements in changelog display
