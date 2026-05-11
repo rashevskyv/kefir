@@ -356,6 +356,7 @@ delfile("sd:/bootloader/ini/!kefir_updater.ini")
 delfile("sd:/bootloader/ini/kefir_updater.ini")
 delfile("sd:/bootloader/res/ku.bmp")
 delfile("sd:/switch/kefirupdater/kefir-updater.bin")
+delfile("sd:/tegraexplorer/scripts/Remove_8GB-RAM_config.te")
 delfile("sd:/switch/kefirupdater/startup.te")
 deldir("sd:/switch/kefirupdater")
 

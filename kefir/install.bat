@@ -198,6 +198,7 @@ if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 if exist "%sd%:\run.te" (del "%sd%:\run.te")
 if exist "%sd%:\40mb.te" (del "%sd%:\40mb.te")
 if exist "%sd%:\remove.te" (del "%sd%:\remove.te")
+if exist "%sd%:\tegraexplorer\scripts\Remove_8GB-RAM_config.te" (del "%sd%:\tegraexplorer\scripts\Remove_8GB-RAM_config.te")
 
 if exist "%sd%:\bootloader\hekate_ipl.ini" (del "%sd%:\bootloader\hekate_ipl.ini")
 if exist "%sd%:\bootloader\ini\fullstock.ini" (del "%sd%:\bootloader\ini\fullstock.ini")
