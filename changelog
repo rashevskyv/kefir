@@ -5,30 +5,11 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
-**819**
-* [**Виправлено**] https://github.com/rashevskyv/kefir/issues/142 - виправлена робота патченого tinfoil 
-
-**818**
-* [**Оновлено**] [Kefir-updater] - поліпшення у відображенні ченджлога
-
-**816**
-* [**Оновлено**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Додано підтримку прошивки 22.1.0 та виправлено обробку команд LED для контролерів Sony, що впливало на вібрацію та індикатори гравців.
-* [**Оновлено**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Оновлено libultrahand до версії 2.4.0.
-* [**Оновлено**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Оновлено віджет пам'яті до формату `libultrahand v2.4.1` та виправлено помилку зв'язування змінної `hide_widget_border`.
-
-**814**
-* [**Додано**] Файл '/config/.skip' має список файлів та папок які будуть виключені з примусової перевірки атрибутів при оновленні кефіра через kefir-updater
-* [**Оновлено**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Обов'язково перевстановіть 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру, якщо користуєтесь форвардером для запуска HBL з головного екрану 
-* [**Оновлено**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — Ліміт нейтральної пам'яті підвищено з 4 МБ до 5 МБ.
-* [**Оновлено**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Додано захоплення зсуву в логах та накладенні, а також виправлено виявлення "прошитого за файлом" і "прошитого за системним патчем".
-
-**813**
-* [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
-* [**Додано**] При оновленні кефіру ключі знімаються автоматично 
-
-**809**
-* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0. 
-    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
+**821**
+* [**Додано**] [Ultrahand-Overlay] - замість застарілого Uberhand будемо використовувати швидший і більш гнучкий Ultrahand
+* [**Додано**] В оверлеї в 'Settings > Advanced' додано перемикач, що включає редірект сейвів в емунанді на картку. Сейви в розпакованому вигляді будуть знаходитися в 'atmosphere/saves'. Експерементально і не дуже ретельно відтестовано. 
+* [**Додано**] Автоматична система зняття ключів. При старті кефір перевіряє поточну версію емунанда та сіснанда та за потреби знімає ключі з найбільш нової версії. Автоматично і прозоро для користувача. Після цього вже запускає гекату.
+* [**Оновлено**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Додано можливість націлюватися на більше результатів, а також патч, що дозволяє запускати китайські картриджі на глобальній версії HorizonOS.
 
 ____
 
@@ -37,29 +18,8 @@ ____
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without the forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
 
-**819**
-* [**Fixed**] https://github.com/rashevskyv/kefir/issues/142 - fixed the operation of the patched tinfoil
-
-**818**
-* [**Updated**] [Kefir-updater] - improvements in changelog display
-
-**816**
-* [**Updated**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Added support for firmware 22.1.0 and fixed LED command handling for Sony controllers, which affected vibration and player indicators.
-* [**Updated**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Updated libultrahand to version 2.4.0.
-* [**Updated**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Updated the memory widget to the `libultrahand v2.4.1` format and fixed the variable binding error `hide_widget_border`.
-
-**814**
-* [**Added**] The file '/config/.skip' contains a list of files and folders that will be excluded from forced attribute checks when updating kefir via kefir-updater.
-* [**Updated**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Be sure to reinstall 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game if you are using a forwarder to launch HBL from the home screen.
-* [**Updated**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — The neutral memory limit has been increased from 4 MB to 5 MB.
-* [**Updated**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Added shift capturing in logs and overlays, as well as fixed detection of "flashed by file" and "flashed by system patch."
-
-**813**
-* [**Updated**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Added offset capture in logs and overlay, and fixed detection of "patched-by-file" versus "patched-by-sys-patch".
-* [**Updated**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — The neutral memory limit has been raised from 4MB to 5MB.
-* [**Updated**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — The key change is a code refactor and fixes for version 22.0.0.
-* [**Added**] Auto dump keys after kefir update
-
-**809**
-* [**Updated**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 22.1.0 support.
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+**821**
+* [**Added**] [Ultrahand-Overlay] - instead of the outdated Uberhand, we will use the faster and more flexible Ultrahand
+* [**Added**] In the overlay in 'Settings > Advanced', a switch has been added that enables the redirect of saves in emuNAND to the card. Saves in unpacked form will be located in 'atmosphere/saves'. Experimentally and not very thoroughly tested.
+* [**Added**] Automatic key removal system. Upon startup, Kefir checks the current version of emuNAND and sysNAND and removes keys from the most recent version if necessary. Automatically and transparently for the user. After that, it launches Hekate.
+* [**Updated**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Added the ability to target more results, as well as a patch that allows running Chinese cartridges on the global version of HorizonOS.

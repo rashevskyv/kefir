@@ -28,12 +28,6 @@ if (is_erista()){
 		a=0 fwstr()}
 		if(mountsys("SYSTEM")){maj=0}
 		fv()
-	}.else(){
-		if (fsexists("sd:/config/kefir-helper/lockpick_sys.bin")){
-			payload("sd:/config/kefir-helper/lockpick_sys.bin")
-		}.else(){
-		payload("sd:/kefir/config/kefir-helper/lockpick_sys.bin")
-		}
 	}
 }
 
@@ -266,6 +260,28 @@ deldir("sd:/firmware")
 delfile("sd:/config/kefir-updater/firmware.zip")
 delfile("sd:/config/kefir-updater/atmo.zip")
 delfile("sd:/config/kefir-updater/*.zip")
+
+if (!fsexists("sd:/switch/tinfoil/locations.bkp")) {
+	if (fsexists("sd:/switch/tinfoil/locations.conf")) {
+		if (fsexists("sd:/switch/tinfoil/locations.bkp")) {
+			delfile("sd:/switch/tinfoil/locations.bkp")
+		}
+		copyfile("sd:/switch/tinfoil/locations.conf", "sd:/switch/tinfoil/locations.bkp")
+	}
+}
+
+deldir("sd:/switch/.packages/Settings/Advanced");
+delfile("sd:/switch/.packages/Settings/Advanced");
+if (!fsexists("sd:/switch/.packages/package.ini")) {
+	delfile("sd:/switch/.packages/config.ini")
+}
+delfile("sd:/switch/.packages/Settings/config.ini");
+delfile("sd:/switch/.packages/Settings/Fan Control/config.ini");
+delfile("sd:/switch/.packages/Settings/Fan Control/Custom/config.ini");
+delfile("sd:/switch/.packages/Software/DBI/config.ini");
+delfile("sd:/switch/.packages/Software/DBI/Fan Translations/config.ini");
+delfile("sd:/switch/.packages/Theme/config.ini");
+delfile("sd:/switch/.packages/Translate Interface/config.ini");
 
 p()
 p("Done")

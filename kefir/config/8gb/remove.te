@@ -15,8 +15,8 @@ if (fsexists(bkp_base)) {
         copydir(bkp_base + "/bootloader", "sd:/")
     }
 
-    if (fsexists(bkp_base + "/bootloader/update.bin")) {
-        copyfile(bkp_base + "/bootloader/update.bin", "sd:/payload.bin")
+    if (fsexists(bkp_base + "/atmosphere/reboot_payload.bin")) {
+        copyfile(bkp_base + "/atmosphere/reboot_payload.bin", "sd:/payload.bin")
     }
 
     p("Restored successfully!")
