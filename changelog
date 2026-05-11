@@ -21,5 +21,5 @@ The old forwarder HBMenu will also launch with an error. Reinstall it from 'game
 **821**
 * [**Added**] [Ultrahand-Overlay] - instead of the outdated Uberhand, we will use the faster and more flexible Ultrahand
 * [**Added**] In the overlay in 'Settings > Advanced', a switch has been added that enables the redirect of saves in emuNAND to the card. Saves in unpacked form will be located in 'atmosphere/saves'. Experimentally and not very thoroughly tested.
-* [**Added**] Automatic key removal system. Upon startup, Kefir checks the current version of emuNAND and sysNAND and removes keys from the most recent version if necessary. Automatically and transparently for the user. After that, it launches Hekate.
+* [**Added**] Automatic key dump system. Upon startup, Kefir checks the current version of emuNAND and sysNAND and removes keys from the most recent version if necessary. Automatically and transparently for the user. After that, it launches Hekate.
 * [**Updated**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Added the ability to target more results, as well as a patch that allows running Chinese cartridges on the global version of HorizonOS.
