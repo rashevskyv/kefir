@@ -146,8 +146,9 @@ delfile("sd:/atmosphere/hbl_atmo.nsp");
 delfile("sd:/atmosphere/fusee-secondary.bin.sig");
 delfile("sd:/atmosphere/hbl.nsp.sig");
 delfile("sd:/atmosphere/hbl.json");
-delfile("sd:/atmosphere/system_settings.ini");
-delfile("sd:/atmosphere/system_settings.ini");
+if (fsexists("sd:/atmosphere/system_settings.ini")) {
+		copyfile("sd:/atmosphere/system_settings.ini", "sd:/atmosphere/system_settings.bkp")
+}
 delfile("sd:/atmosphere/kips/fs_mitm.kip");
 delfile("sd:/atmosphere/kips/ldn_mitm.kip");
 delfile("sd:/atmosphere/kips/pm.kip");
@@ -322,8 +323,13 @@ if (fsexists("sd:/kefir")) {
 }
 
 delfile("sd:/config/uberhand/packages/settings/stock")
+
 if (fsexists("sd:/emummc/emummc.ini_bkp")) {
 	movefile("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
+}
+
+if (fsexists("sd:/atmosphere/system_settings.bkp")) {
+	movefile("sd:/atmosphere/system_settings.bkp", "sd:/atmosphere/system_settings.ini")
 }
 
 if (oc) {

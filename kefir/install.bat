@@ -72,6 +72,8 @@ echo.
 echo ------------------------------------------------------------------------
 echo.
 
+if exist "%sd%:\atmosphere\config\system_settings.ini" (copy "%sd%:\atmosphere\config\system_settings.ini" "%sd%:\atmosphere\config\system_settings.bkp")
+pause
 
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches" (RD /s /q "%sd%:\atmosphere\kip_patches")
@@ -129,8 +131,6 @@ if exist "%sd%:\atmosphere\hbl.json" (del "%sd%:\atmosphere\hbl.json")
 if exist "%sd%:\atmosphere\BCT.ini" (del "%sd%:\atmosphere\BCT.ini")
 if exist "%sd%:\atmosphere\config\BCT.ini" (del "%sd%:\atmosphere\config\BCT.ini")
 if exist "%sd%:\atmosphere\package3" (del "%sd%:\atmosphere\package3")
-if exist "%sd%:\atmosphere\system_settings.ini" (del "%sd%:\atmosphere\system_settings.ini")
-if exist "%sd%:\atmosphere\loader.ini" (del "%sd%:\atmosphere\system_settings.ini")
 if exist "%sd%:\atmosphere\kips\loader.kip" (RD /s /q  "%sd%:\atmosphere\kips\loader.kip")
 if exist "%sd%:\atmosphere\kips\fs_mitm.kip" (RD /s /q  "%sd%:\atmosphere\kips\fs_mitm.kip")
 if exist "%sd%:\atmosphere\kips\ldn_mitm.kip" (RD /s /q  "%sd%:\atmosphere\kips\ldn_mitm.kip")
@@ -355,6 +355,10 @@ if exist "%sd%:\switch\DBI\dbi.config_" (
     rename %sd%:\switch\DBI\dbi.config_ dbi.config
     )
 
+if exist "%sd%:\atmosphere\config\system_settings.bkp" (
+	copy "%sd%:\atmosphere\config\system_settings.bkp" "%sd%:\atmosphere\config\system_settings.ini"
+	del "%sd%:\atmosphere\config\system_settings.bkp"
+)
 @REM if exist "%sd%:\switch\tinfoil\locations.bkp" (
 @REM     del "%sd%:\switch\tinfoil\locations.conf"
 @REM     rename %sd%:\switch\tinfoil\locations.bkp locations.conf

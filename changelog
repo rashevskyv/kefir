@@ -5,6 +5,11 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+**822**
+* [**Виправлено**] Виправлено помилку оновлення та установки начисто. 
+* [**Виправлено**] При активації редиректа сейвів, сейви зберігатимуться тепер в безпосередньо всередині папки вашого конкретного EmuNAND, а не в 'atmosphere/saves'
+* [**Оновлено**] [nx-ovlloader 2.1.0](https://github.com/ppkantorski/nx-ovlloader)
+
 **821**
 * [**Додано**] [Ultrahand-Overlay] - замість застарілого Uberhand будемо використовувати швидший і більш гнучкий Ultrahand
 * [**Додано**] В оверлеї в 'Settings > Advanced' додано перемикач, що включає редірект сейвів в емунанді на картку. Сейви в розпакованому вигляді будуть знаходитися в 'atmosphere/saves'. Експерементально і не дуже ретельно відтестовано. 
@@ -17,6 +22,11 @@ ____
 **Full support for 22.1.0**  
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without the forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
+
+**822**
+* [**Fixed**] Fixed the update and clean installation error.
+* [**Fixed**] When activating save redirection, saves will now be stored directly inside your specific EmuNAND folder, rather than in 'atmosphere/saves'
+* [**Updated**] [nx-ovlloader 2.1.0](https://github.com/ppkantorski/nx-ovlloader)
 
 **821**
 * [**Added**] [Ultrahand-Overlay] - instead of the outdated Uberhand, we will use the faster and more flexible Ultrahand
