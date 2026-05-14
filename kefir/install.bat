@@ -73,7 +73,6 @@ echo ------------------------------------------------------------------------
 echo.
 
 if exist "%sd%:\atmosphere\config\system_settings.ini" (copy "%sd%:\atmosphere\config\system_settings.ini" "%sd%:\atmosphere\config\system_settings.bkp")
-pause
 
 if exist "%sd%:\atmosphere\exefs_patches" (RD /s /q "%sd%:\atmosphere\exefs_patches")
 if exist "%sd%:\atmosphere\kip_patches" (RD /s /q "%sd%:\atmosphere\kip_patches")
