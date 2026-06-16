@@ -1,47 +1,30 @@
 
 ## Changelog 
 #### **UKR**
-**Повна підтримка 22.1.0**
+**Попередня підтримка 22.5.0 та Atmosphere 1.11.2**
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
+MissionControl поки не є сумісний з 22.5.0
 
-**824**
-* [**Виправлено**] І знову. Бісячий плаваючий баг, який я не можу в себе відтворити. 
-
-**823**
-* [**Виправлено**] Виправлено помилку оновлення та установки начисто. Сподіваюсь цього разу точно 
-
-**822**
-* [**Виправлено**] Виправлено помилку оновлення та установки начисто. 
-* [**Виправлено**] При активації редиректа сейвів, сейви зберігатимуться тепер в безпосередньо всередині папки вашого конкретного EmuNAND, а не в 'atmosphere/saves'
-* [**Оновлено**] [nx-ovlloader 2.1.0](https://github.com/ppkantorski/nx-ovlloader)
-
-**821**
-* [**Додано**] [Ultrahand-Overlay] - замість застарілого Uberhand будемо використовувати швидший і більш гнучкий Ultrahand
-* [**Додано**] В оверлеї в 'Settings > Advanced' додано перемикач, що включає редірект сейвів в емунанді на картку. Сейви в розпакованому вигляді будуть знаходитися в 'atmosphere/saves'. Експерементально і не дуже ретельно відтестовано. 
-* [**Додано**] Автоматична система зняття ключів. При старті кефір перевіряє поточну версію емунанда та сіснанда та за потреби знімає ключі з найбільш нової версії. Автоматично і прозоро для користувача. Після цього вже запускає гекату.
-* [**Оновлено**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Додано можливість націлюватися на більше результатів, а також патч, що дозволяє запускати китайські картриджі на глобальній версії HorizonOS.
+**828**
+* [**Оновлено**] [Atmosphere v1.11.2](https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.11.2) — Оновлено Atmosphere до версії v1.11.2.
+    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Оновлено**] [Sys Patch v1.6.2.2](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.2) — Оновлено sys-patch до версії v1.6.2.2.
+* [**Оновлено**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Додано встановлення тем із JPG/PNG без nxtheme, експериментальний sysmodule для виявлення оновлень домашнього меню та автоматичного видалення несумісних тем (зменшує збої при перемиканні sysmmc/emummc або оновленні прошивки), а також видобування домашнього меню без запису на SD, застосування патчів під час встановлення з зовнішніх джерел і покращене оброблення помилок.
+* [**Оновлено**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Оновлено sysmodules: знято опцію `shutdown_timeout_ms`, очищено виклики IPC та додано нове сповіщення `Shutdown IPC has failed.` у разі збою IPC, а також зібрано з актуальною `libultrahand` v2.4.5.
 
 ____
 
 #### **ENG**
-**Full support for 22.1.0**  
+**Preliminary support for 22.5.0 and Atmosphere 1.11.2**  
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
-The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without the forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
+The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl  
+MissionControl is currently not compatible with 22.5.0
 
-**824**
-* [**Fixed**] And again. An annoying floating bug that I can't reproduce on my end.
+**828**
+* [**Updated**] [Atmosphere v1.11.2](https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.11.2) — Updated Atmosphere to version v1.11.2.
+    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
+* [**Updated**] [Sys Patch v1.6.2.2](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.2) — Updated sys-patch to version v1.6.2.2.
+* [**Updated**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Added installation of themes from JPG/PNG without nxtheme, experimental sysmodule for detecting home menu updates and automatically removing incompatible themes (reduces crashes when switching sysmmc/emummc or updating firmware), as well as extracting the home menu without writing to SD, applying patches during installation from external sources, and improved error handling.
+* [**Updated**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Updated sysmodules: removed the `shutdown_timeout_ms` option, cleared IPC calls, and added a new notification `Shutdown IPC has failed.` in case of IPC failure, as well as compiled with the current `libultrahand` v2.4.5.
 
-**823**
-* [**Fixed**] Fixed the update and clean installation error. Hopefully this time for sure.
-
-**822**
-* [**Fixed**] Fixed the update and clean installation error.
-* [**Fixed**] When activating save redirection, saves will now be stored directly inside your specific EmuNAND folder, rather than in 'atmosphere/saves'
-* [**Updated**] [nx-ovlloader 2.1.0](https://github.com/ppkantorski/nx-ovlloader)
-
-**821**
-* [**Added**] [Ultrahand-Overlay] - instead of the outdated Uberhand, we will use the faster and more flexible Ultrahand
-* [**Added**] In the overlay in 'Settings > Advanced', a switch has been added that enables the redirect of saves in emuNAND to the card. Saves in unpacked form will be located in 'atmosphere/saves'. Experimentally and not very thoroughly tested.
-* [**Added**] Automatic key dump system. Upon startup, Kefir checks the current version of emuNAND and sysNAND and removes keys from the most recent version if necessary. Automatically and transparently for the user. After that, it launches Hekate.
-* [**Updated**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Added the ability to target more results, as well as a patch that allows running Chinese cartridges on the global version of HorizonOS.
