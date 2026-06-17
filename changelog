@@ -7,7 +7,7 @@
 
 MissionControl поки не є сумісний з 22.5.0
 
-**839**
+**840**
 * [**Оновлено**] [Sys Patch v1.6.2.3](https://github.com/impeeza/sys-patch/releases/tag/v1.6.2.3) — Виправлено помилку erpt для останньої версії AMS, об’єднавши зміни з pull request #38.
 * [**Оновлено**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Додано встановлення JPG/PNG як тем без nxtheme, експериментальний sysmodule для виявлення оновлень домашнього меню та автоматичного видалення несумісних тем при зміні версії прошивки, а також беззаписне на SD вилучення/патчі домашнього меню під час встановлення з зовнішніх джерел і покращене оброблення помилок.
 * [**Оновлено**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Оновлено sysmodules: знято опцію `shutdown_timeout_ms`, очищено IPC-виклики та додано нове сповіщення `Shutdown IPC has failed.` у разі провалу IPC-команди.
@@ -23,7 +23,7 @@ The old forwarder HBMenu will also launch with an error. Reinstall it from 'game
 
 MissionControl is currently not compatible with 22.5.0
 
-**839**
+**840**
 * [**Updated**] [Sys Patch v1.6.2.3](https://github.com/impeeza/sys-patch/releases/tag/v1.6.2.3) — Fixed the erpt error for the latest AMS version by merging changes from pull request #38.
 * [**Updated**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Added installation of JPG/PNG as themes without nxtheme, an experimental sysmodule for detecting home menu updates and automatically removing incompatible themes when changing firmware versions, as well as readless SD removal/patches of the home menu during installation from external sources and improved error handling.
 * [**Updated**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Updated sysmodules: removed the `shutdown_timeout_ms` option, cleaned up IPC calls, and added a new notification `Shutdown IPC has failed.` in case of IPC command failure.
