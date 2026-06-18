@@ -42,7 +42,7 @@ if (fsexists(update_source)) {
     
     copydir(update_source + "/atmosphere", "sd:/")
     copydir(update_source + "/bootloader", "sd:/")
-    copyfile(update_source + "/payload.bin", "sd:/payload.bin")
+    copyfile(update_source + "/payload.bin", "sd:/bootloader/update.bin")
 
     p("Cleaning up...")
     

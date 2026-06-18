@@ -15,10 +15,6 @@ if (fsexists(bkp_base)) {
         copydir(bkp_base + "/bootloader", "sd:/")
     }
 
-    if (fsexists(bkp_base + "/atmosphere/reboot_payload.bin")) {
-        copyfile(bkp_base + "/atmosphere/reboot_payload.bin", "sd:/payload.bin")
-    }
-
     p("Restored successfully!")
     p("Deleting restore script and backup dir...")
     

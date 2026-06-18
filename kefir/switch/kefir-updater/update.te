@@ -2,7 +2,7 @@ p=println
 pe={pause() exit()}
 boot=0
 syscon=0
-missioncontrol=0
+# missioncontrol=0
 maj=0
 pegascape=0
 oc=0
@@ -56,7 +56,7 @@ emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
 oc=fsexists("sd:/atmosphere/kips/kefir.kip")
 
 # Force mission control status
-missioncontrol=0
+# missioncontrol=0
 # syscon=0
 # oc=0
 
@@ -252,10 +252,14 @@ deldir("sd:/oc");
 deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
 deldir("sd:/switch/.packages/DBI");
-deldir("sd:/switch/.packages/Software");
+delfile("sd:/switch/.packages/Software/config.ini");
+delfile("sd:/switch/.packages/Software/DBI/config.ini");
+delfile("sd:/switch/.packages/Software/DBI/Fan Translations/config.ini");
 delfile("sd:/config/uberhand/packages/settings/8gb.txt")
 delfile("sd:/config/uberhand/packages/oc_bkp/oc.ini")
 delfile("sd:/config/uberhand/packages/settings/40mb.te")
+delfile("sd:/autorun.ico")
+delfile("sd:/autorun.inf")
 
 deldir("sd:/firmware")
 delfile("sd:/config/kefir-updater/firmware.zip")

@@ -61,7 +61,7 @@ if not exist "%sd%:\switch\tinfoil\locations.bkp" (
 
 if exist "%sd%:\atmosphere\kips\kefir.kip" (set oc=1)
 
-set missioncontrol=0
+@REM set missioncontrol=0
 @REM set syscon=0
 @REM set oc=0
 
@@ -196,6 +196,8 @@ if exist "%sd%:\startup.te" (del "%sd%:\startup.te")
 if exist "%sd%:\hekate_ipl.ini" (del "%sd%:\hekate_ipl.ini")
 if exist "%sd%:\run.te" (del "%sd%:\run.te")
 if exist "%sd%:\40mb.te" (del "%sd%:\40mb.te")
+if exist "%sd%:\autorun.ico" (del "%sd%:\autorun.ico")
+if exist "%sd%:\autorun.inf" (del "%sd%:\autorun.inf")
 if exist "%sd%:\remove.te" (del "%sd%:\remove.te")
 if exist "%sd%:\tegraexplorer\scripts\Remove_8GB-RAM_config.te" (del "%sd%:\tegraexplorer\scripts\Remove_8GB-RAM_config.te")
 
