@@ -4,6 +4,10 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+
+**850**
+* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — випадково відкатив на попередню. Повертаю 6.5.3
+
 **849**
 * [**Виправлено**] Фікс роботи хомбрю
 
@@ -25,6 +29,9 @@ ____
 **Full support for 22.5.0 and Atmosphere 1.11.2**
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
+
+**850**
+* [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — accidentally rolled back to the previous version. Returning to 6.5.3
 
 **849**
 * [**Fixed**] Homebrew functionality
