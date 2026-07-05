@@ -11,6 +11,7 @@ set theme_flag=0
 set theme=0
 set syscon=1
 set missioncontrol=1
+set nxthemes_sysmodule=0
 set bootdat=1
 set payloadbin=1
 set pegascape=1
@@ -400,6 +401,10 @@ if %syscon%==0 (
 
 if %missioncontrol%==0 (
 	del "%sd%:\atmosphere\contents\010000000000bd00\flags\boot2.flag"
+	)
+
+if %nxthemes_sysmodule%==0 (
+	if exist "%sd%:\atmosphere\contents\00FF007468656D65" (RD /s /q "%sd%:\atmosphere\contents\00FF007468656D65")
 	)
 
 if exist "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag" (del "%sd%:\atmosphere\contents\0100000000000352\flags\boot2.flag")
