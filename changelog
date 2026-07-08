@@ -4,9 +4,18 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+**872**
+* [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
+* [**Оновлено**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Оновлено sysmodules для підтримки опції «Switch 2 Style», перенесено запуск/завершення/коректне вимикання системних модулів у фоновий потік для плавної роботи UI, увімкнено динамічну рамку віджетів і виправлено підсвітку/поведінку ефекту Shake та кольори для пунктів «Static» при натисканні A.
 
-**850**
-* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — випадково відкатив на попередню. Повертаю 6.5.3
+**870**
+* [**Виправлено**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — рожева помилка нарешті здолана 
+* [**Виправлено**] [issue#51](https://github.com/rashevskyv/kefir/issues/151) — tinfoil повернено до роботи 
+* [**Виправлено**] Виправлення помилки через яку після kefir-helper переставав працювати інтернет на консолі 
+
+**857**
+* [**Оновлено**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Додано підтримку версії 22.5.0.
+* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0 та покращено роботу Nyx: додано інформацію про SD Express і детекцію SD DDR200, виправлено ліміти wafer та зависання в GPT-валидації, а також перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd і додано нові SDMMC-функції для vendor/reserved бітів та SD Express.
 
 **849**
 * [**Виправлено**] Фікс роботи хомбрю
@@ -30,8 +39,18 @@ ____
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
 
-**850**
-* [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — accidentally rolled back to the previous version. Returning to 6.5.3
+**872**
+* [**Updated**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Added support for Steam Controller 2026.
+* [**Updated**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Updated sysmodules to support the "Switch 2 Style" option, moved the launch/termination/correct shutdown of system modules to a background thread for smooth UI operation, enabled dynamic widget frames, and fixed the highlighting/behavior of the Shake effect and colors for "Static" items when pressing A.
+
+**870**
+* [**Fixed**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — the pink error has finally been overcome 
+* [**Fixed**] [issue#51](https://github.com/rashevskyv/kefir/issues/151) — tinfoil has been restored to working order 
+* [**Fixed**] Fix for the issue that caused the internet to stop working on the console after kefir-helper
+
+**857**
+* [**Updated**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Added support for version 22.5.0.
+* [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Updated support for HOS 22.5.0 and improved Nyx functionality: added information about SD Express and detection of SD DDR200, fixed wafer limits and hangs in GPT validation, renamed sdmmc_storage_execute_vendor_cmd to sdmmc_storage_vendor_cmd, and added new SDMMC functions for vendor/reserved bits and SD Express.
 
 **849**
 * [**Fixed**] Homebrew functionality
