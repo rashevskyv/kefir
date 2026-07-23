@@ -4,6 +4,9 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+**881**
+* [**Виправлено**] Прибрано core-патч 10 (зменшення розміру системного пулу пам'яті) в папку архіву та впорядковано нумерацію інших патчів. Патч видалено через помилки, до яких він призводив на старих версіях прошивок (HOS).
+
 **872**
 * [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
 * [**Оновлено**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Оновлено sysmodules для підтримки опції «Switch 2 Style», перенесено запуск/завершення/коректне вимикання системних модулів у фоновий потік для плавної роботи UI, увімкнено динамічну рамку віджетів і виправлено підсвітку/поведінку ефекту Shake та кольори для пунктів «Static» при натисканні A.
@@ -41,6 +44,9 @@ ____
 **Full support for 22.5.0 and Atmosphere 1.11.2**
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
+
+**881**
+* [**Fixed**] Archived core patch 10 (non-secure system pool size reduction) and renumbered remaining core patches. This patch was removed because it caused errors and instability on older firmware versions (HOS).
 
 **872**
 * [**Updated**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Added support for Steam Controller 2026.
