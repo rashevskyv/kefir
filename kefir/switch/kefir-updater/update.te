@@ -95,6 +95,7 @@ if (fsexists("sd:/kefir")) {
 	deldir("sd:/atmosphere/contents/420000000007E51A");
 	deldir("sd:/atmosphere/contents/010000000000bd00");
 	deldir("sd:/atmosphere/contents/00FF0000636C6BFF");
+	deldir("sd:/atmosphere/contents/00FF007468656D65");
 	delfile("sd:/atmosphere/stratosphere.romfs");
 	deldir("sd:/switch/NX-Activity-Log/");
 	deldir("sd:/switch/fakenews-injector");
@@ -252,9 +253,10 @@ deldir("sd:/oc");
 deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
 deldir("sd:/switch/.packages/DBI");
-delfile("sd:/switch/.packages/Software/config.ini");
-delfile("sd:/switch/.packages/Software/DBI/config.ini");
-delfile("sd:/switch/.packages/Software/DBI/Fan Translations/config.ini");
+deldir("sd:/switch/.packages/Settings");
+deldir("sd:/switch/.packages/Software");
+deldir("sd:/switch/.packages/Theme");
+deldir("sd:/switch/.packages/Translate Interface");
 delfile("sd:/config/uberhand/packages/settings/8gb.txt")
 delfile("sd:/config/uberhand/packages/oc_bkp/oc.ini")
 delfile("sd:/config/uberhand/packages/settings/40mb.te")

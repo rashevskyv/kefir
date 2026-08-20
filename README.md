@@ -32,7 +32,7 @@ First of all, Kefir is needed to simplify the user's life. That is, if the user 
   * [DBI](https://github.com/rashevskyv/dbi) - program for installing games via USB or from memory card
   * [Tinfoil](http://tinfoil.io) - program that allows downloading games for the console directly from the network
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - program for updating kefir via internet
-  * [Sphaira](https://github.com/ITotalJustice/sphaira/releases/) - environment for running homebrew, downloading themes and applications on switch, file manager 
+  * [Sphaira](https://github.com/NaGaa95/sphaira/releases/) - environment for running homebrew, downloading themes and applications on switch, file manager 
   * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - program for safe updating of the console's system software version
   * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector) - custom themes manager
   * [Linkalho](https://github.com/rdmrocha/linkalho) - program for linking account

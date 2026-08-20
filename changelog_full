@@ -4,8 +4,11 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
-**881**
-* [**Виправлено**] Прибрано core-патч 10 (зменшення розміру системного пулу пам'яті) в папку архіву та впорядковано нумерацію інших патчів. Патч видалено через помилки, до яких він призводив на старих версіях прошивок (HOS).
+**888**
+* [**Оновлено**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Оновлено до нової версії.
+* [**Оновлено**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Оновлено до нової версії.
+* [**Оновлено**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Додано підтримку встановлення цілих папок через MTP, фільтр для ігор з відсутніми оновленнями чи DLC, комбінацію клавіш Y для перегляду вмісту програм із меню ігор, виправлено сенсорне керування у редакторі форвардерів та покращено локалізацію.
+* [**Виправлено**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — видалений модуль що приводив до помилок
 
 **872**
 * [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
@@ -19,9 +22,6 @@
 **857**
 * [**Оновлено**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Додано підтримку версії 22.5.0.
 * [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0 та покращено роботу Nyx: додано інформацію про SD Express і детекцію SD DDR200, виправлено ліміти wafer та зависання в GPT-валидації, а також перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd і додано нові SDMMC-функції для vendor/reserved бітів та SD Express.
-
-**850**
-* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — випадково відкатив на попередню. Повертаю 6.5.3
 
 **849**
 * [**Виправлено**] Фікс роботи хомбрю
@@ -38,6 +38,93 @@
 * [**Оновлено**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Оновлено sysmodules: знято опцію `shutdown_timeout_ms`, очищено IPC-виклики та додано нове сповіщення `Shutdown IPC has failed.` у разі провалу IPC-команди.
 * [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0, покращено інформацію про SD (зокрема SD Express і детекцію DDR200), виправлено ліміти wafer та зависання в GPT-валидації в менеджері розділів, додано попередження про неправильні версії PMIC і перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd.
 
+**824**
+* [**Виправлено**] І знову. Бісячий плаваючий баг, який я не можу в себе відтворити.
+
+**823**
+* [**Виправлено**] Виправлено помилку оновлення та установки начисто. Сподіваюсь цього разу точно
+
+**822**
+* [**Виправлено**] Виправлено помилку оновлення та установки начисто. 
+* [**Виправлено**] При активації редиректа сейвів, сейви зберігатимуться тепер в безпосередньо всередині папки вашого конкретного EmuNAND, а не в 'atmosphere/saves'
+* [**Оновлено**] [nx-ovlloader 2.1.0](https://github.com/ppkantorski/nx-ovlloader)
+
+**821**
+* [**Додано**] [Ultrahand-Overlay] - замість застарілого Uberhand будемо використовувати швидший і більш гнучкий Ultrahand
+* [**Додано**] В оверлеї в 'Settings > Advanced' додано перемикач, що включає редірект сейвів в емунанді на картку. Сейви в розпакованому вигляді будуть знаходитися в 'atmosphere/saves'. Експерементально і не дуже ретельно відтестовано. 
+* [**Додано**] Автоматична система зняття ключів. При старті кефір перевіряє поточну версію емунанда та сіснанда та за потреби знімає ключі з найбільш нової версії. Автоматично і прозоро для користувача. Після цього вже запускає гекату.
+* [**Оновлено**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Додано можливість націлюватися на більше результатів, а також патч, що дозволяє запускати китайські картриджі на глобальній версії HorizonOS.
+
+**819**
+* [**Виправлено**] https://github.com/rashevskyv/kefir/issues/142 - виправлена робота патченого tinfoil
+
+**818**
+* [**Оновлено**] [Kefir-updater] - поліпшення у відображенні ченджлога
+
+**816**
+* [**Оновлено**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Додано підтримку прошивки 22.1.0 та виправлено обробку команд LED для контролерів Sony, що впливало на вібрацію та індикатори гравців.
+* [**Оновлено**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Оновлено libultrahand до версії 2.4.0.
+* [**Оновлено**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Оновлено віджет пам'яті до формату `libultrahand v2.4.1` та виправлено помилку зв'язування змінної `hide_widget_border`.
+
+**814**
+* [**Додано**] Файл '/config/.skip' має список файлів та папок які будуть виключені з примусової перевірки атрибутів при оновленні кефіра через kefir-updater
+* [**Оновлено**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Обов'язково перевстановіть 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру, якщо користуєтесь форвардером для запуска HBL з головного екрану 
+* [**Оновлено**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — Ліміт нейтральної пам'яті підвищено з 4 МБ до 5 МБ.
+* [**Оновлено**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Додано захоплення зсуву в логах та накладенні, а також виправлено виявлення "прошитого за файлом" і "прошитого за системним патчем".
+
+**813**
+* [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
+* [**Додано**] При оновленні кефіру ключі знімаються автоматично
+
+**809**
+* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0.
+
+**808**
+* [**Оновлено**] [Atmosphere 1.11.0-p2786](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.1.0.
+
+**807**
+* [**Оновлено**] [Atmosphere 1.11.0](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Mission Control 15.0.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.0) — підтримка прошивки 22.0.0.
+
+**805**
+* [**Оновлено**] [Atmosphere 1.11.0-pr2763](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Mission Control 14.2](https://github.com/eradicatinglove/MissionControl/releases/tag/v14.2) — підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Lockpick_RCM 1.9.18](https://gbatemp.net/threads/lockpick_rcm-payload-official-thread.532916/page-48#post-10832437) — знімає новенькі ключі з 22ї прошивки 
+* [**Виправлено**] Неправильно працюючий розгін
+
+**804**
+* [**Оновлено**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
+* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — підтримка прошивки 22.0.0
+* [**Додано**] Меню Software для Tesla Packages.
+
+**795**
+* [**Оновлено**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — підтримка прошивки 21.2.0.
+
+**794**
+* [**Оновлено**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 21.2.0.
+
+**793**
+* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.2.0.
+* [**Оновлено**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — виправлення помилок
+* [**Оновлено**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — перерзібрано з новішим libultrahand
+
+**792**
+* [**Виправлено**] [40mb fix] - виправлена помилка, через яку не вдавалося примінити фікс на еристі
+* [**Виправлено**] [TegraExplorer] - за якоюсь причиною програма відмовлялася працювати на еристах, через що оновлення через апдейтер не працювало
+
+**791**
+* [**Виправлено**] [Kefir] - виправлена помилка, через яку при встановленні через апдейтер псувалися атрибути ігор
+
+**790**
+* [**Оновлено**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.1.0. Прибрані зміни, через які на нових версіях Atmosphere доводилося перекомпілювати Homebrew. Старі Homebrew працюють тепер без вилетів. 
+* [**Оновлено**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — виправлення помилок
+* [**Оновлено**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — підтримка прошивки 21.1.0
+* [**Оновлено**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — виправлення помилок
+* [**Оновлено**] [EdiZon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — скомпільовано з libultrahand v2.2.0
+* [**Оновлено**] [ovl-sysmodules v1.4.5](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.5) — скомпільовано з libultrahand v2.2.1
+* [**Додано**] Окремий патч для повернення 40Mb пам'яті для Homebrew. За замовчанням вимкнутий. Деякі ігри, які потребують прийняття EULA для початку гри,використовують браузер, якому пам'яті тепер не вистачає, через що маємо помилку і перезагрузку (напр. Ni No Kuni, Bioshock 3, MGS3 та інші). То ж, якщо ви використовуєте моди яким не вистачало пам'яті на ПЗ 21+, включіть цей мод. Якщо маєте ігри, що падають через нього - виключіть. Як завжди, перемикач знаходиться в 'Uberhand > packages > Settings > 40mb memory on FW20+ status'
+* [**Додано**] Доданий відкат для бідось, що випадково використали режим для консолей, що мають 8Gb пам'яті. hekate > payloads > TegraExplorer > Remove_8GB-RAM_config.te
+
 ____
 
 #### **ENG**
@@ -45,8 +132,11 @@ ____
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
 
-**881**
-* [**Fixed**] Archived core patch 10 (non-secure system pool size reduction) and renumbered remaining core patches. This patch was removed because it caused errors and instability on older firmware versions (HOS).
+**888**
+* [**Updated**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Updated to the new version.
+* [**Updated**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Updated to the new version.
+* [**Updated**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Added support for installing entire folders via MTP, a filter for games with missing updates or DLC, the Y key combination for viewing application contents from the games menu, fixed touch controls in the forwarder editor, and improved localization.
+* [**Fixed**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — removed a module that caused errors
 
 **872**
 * [**Updated**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Added support for Steam Controller 2026.
@@ -60,9 +150,6 @@ The old forwarder HBMenu will also launch with an error. Reinstall it from 'game
 **857**
 * [**Updated**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Added support for version 22.5.0.
 * [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Updated support for HOS 22.5.0 and improved Nyx functionality: added information about SD Express and detection of SD DDR200, fixed wafer limits and hangs in GPT validation, renamed sdmmc_storage_execute_vendor_cmd to sdmmc_storage_vendor_cmd, and added new SDMMC functions for vendor/reserved bits and SD Express.
-
-**850**
-* [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — accidentally rolled back to the previous version. Returning to 6.5.3
 
 **849**
 * [**Fixed**] Homebrew functionality

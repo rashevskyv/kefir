@@ -1,17 +1,24 @@
-## Changelog 
+## Changelog
 #### **UKR**
 **Повна підтримка 22.5.0 та Atmosphere 1.11.2**
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+**888**
+* [**Оновлено**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Оновлено до нової версії.
+* [**Оновлено**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Оновлено до нової версії.
+* [**Оновлено**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Додано підтримку встановлення цілих папок через MTP, фільтр для ігор з відсутніми оновленнями чи DLC, комбінацію клавіш Y для перегляду вмісту програм із меню ігор, виправлено сенсорне керування у редакторі форвардерів та покращено локалізацію.
+* [**Виправлено**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — видалений модуль що приводив до помилок
+
 **872**
+* [**Оновлено**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Виправлено заміну forwarder/User Page, перероблено отримання іконок і назв із папок Atmosphere `/atmosphere/contents/`, усунено кілька збоїв під час перемикання екранів і графіків активності та покращено точність підрахунку часу, обробку переходів DST і відновлення з пошкоджених/відсутніх подій журналу, а також додано підтримку нових титулів із стисненим `control.nacp` і виправлено відображення місячного перегляду.
 * [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
 * [**Оновлено**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Оновлено sysmodules для підтримки опції «Switch 2 Style», перенесено запуск/завершення/коректне вимикання системних модулів у фоновий потік для плавної роботи UI, увімкнено динамічну рамку віджетів і виправлено підсвітку/поведінку ефекту Shake та кольори для пунктів «Static» при натисканні A.
 
 **870**
 * [**Виправлено**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — рожева помилка нарешті здолана 
 * [**Виправлено**] [issue#51](https://github.com/rashevskyv/kefir/issues/151) — tinfoil повернено до роботи 
-* [**Виправлено**] Виправлення помилки через яку після kefir-helper переставав працювати інтернет на консолі 
+* [**Виправлено**] Виправлення помилки через яку після kefir-helper переставав працювати інтернет на консолі
 
 **857**
 * [**Оновлено**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Додано підтримку версії 22.5.0.
@@ -21,7 +28,7 @@
 * [**Виправлено**] Фікс роботи хомбрю
 
 **847**
-* [**Виправлено**] Виправлення багів на старих прошивках 
+* [**Виправлено**] Виправлення багів на старих прошивках
 
 **841**
 * [**Оновлено**] [Missioncontrol v0.15.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.2) — Додано підтримку прошивки 22.5.0.
@@ -39,9 +46,16 @@ ____
 The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
 The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
 
+**888**
+* [**Updated**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Updated to the new version.
+* [**Updated**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Updated to the new version.
+* [**Updated**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Added support for installing entire folders via MTP, a filter for games with missing updates or DLC, the Y key combination for viewing application contents from the games menu, fixed touch controls in the forwarder editor, and improved localization.
+* [**Fixed**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — removed a module that caused errors
+
 **872**
+* [**Updated**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Fixed the replacement of forwarder/User Page, redesigned the retrieval of icons and names from the Atmosphere folders `/atmosphere/contents/`, resolved several crashes during screen and activity graph switching, improved the accuracy of time counting, handling of DST transitions, and recovery from corrupted/missing log events, as well as added support for new titles with compressed `control.nacp` and fixed the display of the monthly overview.
 * [**Updated**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Added support for Steam Controller 2026.
-* [**Updated**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Updated sysmodules to support the "Switch 2 Style" option, moved the launch/termination/correct shutdown of system modules to a background thread for smooth UI operation, enabled dynamic widget frames, and fixed the highlighting/behavior of the Shake effect and colors for "Static" items when pressing A.
+* [**Updated**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Updated sysmodules to support the "Switch 2 Style" option, moved the launch/termination/proper shutdown of system modules to a background thread for smooth UI operation, enabled dynamic widget frames, and fixed the highlighting/behavior of the Shake effect and colors for "Static" items when pressing A.
 
 **870**
 * [**Fixed**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — the pink error has finally been overcome 

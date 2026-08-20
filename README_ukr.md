@@ -31,7 +31,7 @@
   * [DBI](https://github.com/rashevskyv/dbi) - програма для встановлення ігор через USB або з карти пам'яті
   * [Tinfoil](http://tinfoil.io) - програма, що дозволяє завантажувати ігри для консолі безпосередньо з мережі
   * [Kefir Updater](https://github.com/rashevskyv/kefir-updater) - програма для оновлення kefir через інтернет
-  * [Sphaira](https://github.com/ITotalJustice/sphaira/releases/) - середовище для запуску homebrew, завантаження тем та програм на свіч, файловий менеджер 
+  * [Sphaira](https://github.com/NaGaa95/sphaira/releases/) - середовище для запуску homebrew, завантаження тем та програм на свіч, файловий менеджер 
   * [Daybreak](https://github.com/Atmosphere-NX/Atmosphere/tree/0.14.1/troposphere/daybreak) - програма для безпечного оновлення версії системного програмного забезпечення консолі
   * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector) - менеджер користувацьких тем
   * [Linkalho](https://github.com/rdmrocha/linkalho) - програма для прив'язки облікового запису

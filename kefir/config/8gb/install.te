@@ -10,6 +10,7 @@ files_to_backup = [
     "bootloader/bootlogo_kefir.bmp",
     "bootloader/payloads/fusee.bin",
     "bootloader/update.bin",
+    "atmosphere/reboot_payload.bin",
     "payload.bin"
 ]
 
@@ -43,6 +44,8 @@ if (fsexists(update_source)) {
     copydir(update_source + "/atmosphere", "sd:/")
     copydir(update_source + "/bootloader", "sd:/")
     copyfile(update_source + "/payload.bin", "sd:/bootloader/update.bin")
+    copyfile(update_source + "/payload.bin", "sd:/atmosphere/reboot_payload.bin")
+    copyfile(update_source + "/payload.bin", "sd:/payload.bin")
 
     p("Cleaning up...")
     
