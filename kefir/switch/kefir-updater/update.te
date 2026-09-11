@@ -253,10 +253,14 @@ deldir("sd:/oc");
 deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
 deldir("sd:/switch/.packages/DBI");
-deldir("sd:/switch/.packages/Settings");
-deldir("sd:/switch/.packages/Software");
-deldir("sd:/switch/.packages/Theme");
-deldir("sd:/switch/.packages/Translate Interface");
+# deldir("sd:/switch/.packages/Settings");
+# deldir("sd:/switch/.packages/Software");
+# deldir("sd:/switch/.packages/Theme");
+# deldir("sd:/switch/.packages/Translate Interface");
+delfile("sd:/switch/.packages/Software/config.ini"); #old, to remove
+delfile("sd:/switch/.packages/Software/DBI/config.ini"); #old, to remove
+delfile("sd:/switch/.packages/Software/DBI/Fan Translations/config.ini"); #old, to remove
+
 delfile("sd:/config/uberhand/packages/settings/8gb.txt")
 delfile("sd:/config/uberhand/packages/oc_bkp/oc.ini")
 delfile("sd:/config/uberhand/packages/settings/40mb.te")

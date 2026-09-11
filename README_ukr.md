@@ -36,6 +36,7 @@
   * [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector) - менеджер користувацьких тем
   * [Linkalho](https://github.com/rdmrocha/linkalho) - програма для прив'язки облікового запису
   * [NX-Activity-Log](https://github.com/aoihera/NX-Activity-Log) - програма для відстеження та візуалізації ігрової активності
+  * [pipensx](https://github.com/i3sey/pipensx/releases) - переглядач та завантажувач торентів для консолі
 6. **Встановлені модулі**. Модулі - це додаткові компоненти, які працюють всередині Atmosphere і дозволяють робити різні круті речі, наприклад, використовувати сумісні з Xbox контролери, емуляцію amiibo, розгін і т.д. На жаль, SX OS не підтримує модулі
   * [sys-con](https://github.com/o0Zz/sys-con) - модуль, який дозволяє підключати майже будь-який геймпад до консолі через USB
   * [Mission Control](https://github.com/ndeadly/MissionControl) - модуль, який дозволяє підключати майже будь-який геймпад до консолі через bluetooth

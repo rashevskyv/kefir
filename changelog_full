@@ -4,6 +4,27 @@
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
+**903**
+* [**Додано**] [wb_18.bin] - Це дозволяє мати офіційною системою 23.0.0 і загружати Emunand на прошивках нижче.
+* [**Виправлено**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Прибраний примусовий редирект в Localhost всіх сервісів Нінтендо
+* [**Оновлено**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Додано вебпанель керування завантаженнями й каталогом, встановлення LayeredFS/NSP-портів, італійську мову, відновлення перерваних завантажень і безпечніші режими сну, виходу та оновлення.
+* [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час встановлення багатьох файлів і виправлено китайську локалізацію.
+
+**901**
+* [**Додано**] [wb_18.bin] - Це дозволяє мати офіційною системою 23.0.0 і загружати Emunand на прошивках нижче.
+* [**Виправлено**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Прибраний примусовий редирект в Localhost всіх сервісів Нінтендо
+* [**Оновлено**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Додано вебпанель керування завантаженнями й каталогом, встановлення LayeredFS/NSP-портів, італійську мову, відновлення перерваних завантажень і безпечніші режими сну, виходу та оновлення.
+* [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час встановлення багатьох файлів і виправлено китайську локалізацію.
+
+**898**
+* [**Оновлено**] [pipensx 1.4.4](https://github.com/i3sey/pipensx/releases/tag/1.4.4) — Стабілізовано встановлення NSZ і великих портів, завантаження Real-Debrid та fallback з magnet на .torrent, оновлення каталогу без TLS-помилок і навігацію інтерфейсу з підказками для порожніх списків.
+
+**897**
+* [**Виправлено**] Додано виключення для `ctest.cdn.nintendo.net` у патчі блокування серверів Nintendo через DNS на emuMMC. Це дозволяє проходити перевірку з'єднання з мережею (captive portal), відкривати браузер без помилки та використовувати сторонні сервіси на кшталт Prelude / Nextendo.
+
+**891**
+* [**Додано**] [pipensx](https://github.com/i3sey/pipensx) - Програма, яка дозволяє скачувати ігри безпосередньо з Rutracker прямо на консолі, встановлюючи їх одразу в процесі скачування. Щось типу тінфойл, але з тонентами. **Будьте уважні**, в деяких країнах заборонено скачувати та роздавати ігри з торент-трекерів. **Якщо ваша країна одна з таких, то не використовуйте цю програму!**
+
 **890**
 * [**Виправлено**] Повернув випадково видалені елементи меню із оверлея
 
@@ -14,6 +35,7 @@
 * [**Виправлено**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — видалений модуль що приводив до помилок
 
 **872**
+* [**Оновлено**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Виправлено заміну forwarder/User Page, перероблено отримання іконок і назв із папок Atmosphere `/atmosphere/contents/`, усунено кілька збоїв під час перемикання екранів і графіків активності та покращено точність підрахунку часу, обробку переходів DST і відновлення з пошкоджених/відсутніх подій журналу, а також додано підтримку нових титулів із стисненим `control.nacp` і виправлено відображення місячного перегляду.
 * [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
 * [**Оновлено**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Оновлено sysmodules для підтримки опції «Switch 2 Style», перенесено запуск/завершення/коректне вимикання системних модулів у фоновий потік для плавної роботи UI, увімкнено динамічну рамку віджетів і виправлено підсвітку/поведінку ефекту Shake та кольори для пунктів «Static» при натисканні A.
 
@@ -132,8 +154,23 @@ ____
 
 #### **ENG**
 **Full support for 22.5.0 and Atmosphere 1.11.2**
-The patch for supporting old homebrew no longer works, so some old homebrew may stop functioning. To fix this, patch them via https://hbpatcher.alula.me/  
-The old forwarder HBMenu will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' via DBI as a game. To access HBMenu without a forwarder, launch Albums while holding the R button (hold until it starts). Details here - https://switch.customfw.xyz/hbl
+The patch for supporting old homebrew no longer works, so some old homebrew may stop working. To fix this, patch them via https://hbpatcher.alula.me/
+The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Albums while holding the R button (keep holding it until it launches). Details here - https://switch.customfw.xyz/hbl
+
+**903**
+* [**Added**] [wb_18.bin] - This allows having 23.0.0 as the official system and booting EmuNAND on lower firmware versions.
+* [**Fixed**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Removed the forced redirect of all Nintendo services to Localhost
+* [**Updated**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Added a web panel for managing downloads and the catalog, installation of LayeredFS/NSP ports, Italian language support, resuming interrupted downloads, and safer sleep, exit, and update modes.
+* [**Updated**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Added a data management menu and NTFS support for USB drives, resolved MTP/FTP deadlocks when installing many files, and fixed the Chinese localization.
+
+**898**
+* [**Updated**] [pipensx 1.4.4](https://github.com/i3sey/pipensx/releases/tag/1.4.4) — Stabilized installation of NSZ and large ports, Real-Debrid downloads and fallback from magnet to .torrent, catalog updates without TLS errors, and interface navigation with hints for empty lists.
+
+**897**
+* [**Fixed**] Added an exception for `ctest.cdn.nintendo.net` in the Nintendo server blocking patch via DNS on emuMMC. This allows passing the network connection check (captive portal), opening the browser without an error, and using third-party services such as Prelude / Nextendo.
+
+**891**
+* [**Added**] [pipensx](https://github.com/i3sey/pipensx) - An application that allows you to download games directly from Rutracker on the console, installing them immediately during the download process. Something like Tinfoil, but with torrents. **Be careful**, in some countries downloading and distributing games from torrent trackers is prohibited. **If your country is one of them, do not use this application!**
 
 **890**
 * [**Fixed**] Restored accidentally deleted menu items from the overlay
@@ -145,8 +182,9 @@ The old forwarder HBMenu will also launch with an error. Reinstall it from 'game
 * [**Fixed**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — removed a module that caused errors
 
 **872**
+* [**Updated**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Fixed the replacement of forwarder/User Page, redesigned the retrieval of icons and names from the Atmosphere folders `/atmosphere/contents/`, resolved several crashes during screen and activity graph switching, improved the accuracy of time counting, handling of DST transitions, and recovery from corrupted/missing log events, as well as added support for new titles with compressed `control.nacp` and fixed the display of the monthly overview.
 * [**Updated**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Added support for Steam Controller 2026.
-* [**Updated**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Updated sysmodules to support the "Switch 2 Style" option, moved the launch/termination/correct shutdown of system modules to a background thread for smooth UI operation, enabled dynamic widget frames, and fixed the highlighting/behavior of the Shake effect and colors for "Static" items when pressing A.
+* [**Updated**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Updated sysmodules to support the "Switch 2 Style" option, moved the launch/termination/proper shutdown of system modules to a background thread for smooth UI operation, enabled dynamic widget frames, and fixed the highlighting/behavior of the Shake effect and colors for "Static" items when pressing A.
 
 **870**
 * [**Fixed**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — the pink error has finally been overcome 
