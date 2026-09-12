@@ -116,7 +116,7 @@ if (!has_emummc) {
                 p("Cleaning up backups and recovery script...")
                 delfile(bkp_emummc)
                 delfile(bkp_exosphere)
-                delfile("sd:/tegraexplorer/scripts/Return_to_Kefir.te")
+                delfile("sd:/tegraexplorer/scripts/Return_to_emuMMC.te")
 
                 p("Recovery completed successfully!")
                 p("Booting payload...")
