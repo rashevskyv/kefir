@@ -1,0 +1,127 @@
+#REQUIRE SD
+
+p = println
+
+bkp_emummc = "sd:/config/semistock/emummc.ini.bkp"
+bkp_exosphere = "sd:/config/semistock/exosphere.ini.bkp"
+
+p("Checking recovery backups...")
+
+has_emummc = fsexists(bkp_emummc)
+has_exosphere = fsexists(bkp_exosphere)
+
+if (!has_emummc) {
+    p("ERROR: emuMMC backup not found:")
+    p(bkp_emummc)
+    if (!has_exosphere) {
+        p("ERROR: exosphere backup not found:")
+        p(bkp_exosphere)
+    }
+    p("Recovery aborted. Live files were not modified.")
+    pause()
+}.else() {
+    if (!has_exosphere) {
+        p("ERROR: exosphere backup not found:")
+        p(bkp_exosphere)
+        p("Recovery aborted. Live files were not modified.")
+        pause()
+    }.else() {
+        p("Restoring live INI files...")
+        mkdir("sd:/emummc")
+
+        res_emummc = copyfile(bkp_emummc, "sd:/emummc/emummc.ini")
+        res_exosphere = copyfile(bkp_exosphere, "sd:/exosphere.ini")
+
+        ini_ok = 0
+        if (res_emummc == 0) {
+            if (res_exosphere == 0) {
+                ini_ok = 1
+                p("Restored emummc.ini and exosphere.ini")
+            }.else() {
+                p("ERROR: Failed to restore exosphere.ini!")
+                p("Recovery incomplete. Backups retained for retry.")
+                pause()
+            }
+        }.else() {
+            if (res_exosphere == 0) {
+                p("ERROR: Failed to restore emummc.ini!")
+                p("Recovery incomplete. Backups retained for retry.")
+                pause()
+            }.else() {
+                p("ERROR: Failed to restore emummc.ini and exosphere.ini!")
+                p("Recovery failed. Backups retained for retry.")
+                pause()
+            }
+        }
+
+        if (ini_ok) {
+            lyt_ok = 1
+            dest_romfs = "sd:/atmosphere/contents/0100000000001000/romfs"
+            dest_lyt = "sd:/atmosphere/contents/0100000000001000/romfs/lyt"
+
+            src_sphaira = "sd:/config/sphaira/romfs/lyt"
+            src_ultrahand = "sd:/config/ultrahand/romfs/lyt"
+
+            if (fsexists(src_sphaira)) {
+                p("Restoring Sphaira theme layout...")
+                if (fsexists(dest_lyt)) {
+                    p("ERROR: Destination lyt already exists!")
+                    p("Preserving source lyt and recovery data.")
+                    lyt_ok = 0
+                    pause()
+                }.else() {
+                    mkdir("sd:/atmosphere")
+                    mkdir("sd:/atmosphere/contents")
+                    mkdir("sd:/atmosphere/contents/0100000000001000")
+                    mkdir(dest_romfs)
+                    res_lyt = movefile(src_sphaira, dest_lyt)
+                    if (res_lyt == 0) {
+                        deldir("sd:/config/sphaira/romfs")
+                        p("Restored Sphaira theme layout.")
+                    }.else() {
+                        p("ERROR: Failed to move Sphaira lyt!")
+                        p("Preserving source lyt and recovery data.")
+                        lyt_ok = 0
+                        pause()
+                    }
+                }
+            }.else() {
+                if (fsexists(src_ultrahand)) {
+                    p("Restoring Ultrahand theme layout...")
+                    if (fsexists(dest_lyt)) {
+                        p("ERROR: Destination lyt already exists!")
+                        p("Preserving source lyt and recovery data.")
+                        lyt_ok = 0
+                        pause()
+                    }.else() {
+                        mkdir("sd:/atmosphere")
+                        mkdir("sd:/atmosphere/contents")
+                        mkdir("sd:/atmosphere/contents/0100000000001000")
+                        mkdir(dest_romfs)
+                        res_lyt = movefile(src_ultrahand, dest_lyt)
+                        if (res_lyt == 0) {
+                            deldir("sd:/config/ultrahand/romfs")
+                            p("Restored Ultrahand theme layout.")
+                        }.else() {
+                            p("ERROR: Failed to move Ultrahand lyt!")
+                            p("Preserving source lyt and recovery data.")
+                            lyt_ok = 0
+                            pause()
+                        }
+                    }
+                }
+            }
+
+            if (lyt_ok) {
+                p("Cleaning up backups and recovery script...")
+                delfile(bkp_emummc)
+                delfile(bkp_exosphere)
+                delfile("sd:/tegraexplorer/scripts/Return_to_Kefir.te")
+
+                p("Recovery completed successfully!")
+                p("Booting payload...")
+                payload("sd:/payload.bin")
+            }
+        }
+    }
+}
