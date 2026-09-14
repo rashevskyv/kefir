@@ -1,22 +1,17 @@
 ## Changelog
 #### **UKR**
-**Повна підтримка 23.0.0 та Atmosphere 1.12.0**
 **Попередня підтримка 23.0.0**
-Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
-Як відкатити прошивку до попередньої можна побачити в цьому відео -
+Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки.
 
-**910**
-* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.0.0.
+**911**
 
-**906**
+
+* [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час інсталяції багатьох файлів і виправлено китайську локалізацію.**910**
 * [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 23.0.0
-
-___
 
 ____
 
 #### **ENG**
-**Full support for 23.0.0 and Atmosphere 1.12.0**
 **Preliminary support for 23.0.0**
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for the official firmware.  
 How to downgrade the firmware to a previous version can be seen in this video -
@@ -26,6 +21,11 @@ How to downgrade the firmware to a previous version can be seen in this video -
 * [**Fixed**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Removed the forced redirect of all Nintendo services to Localhost
 * [**Updated**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Added a web panel for managing downloads and the catalog, installation of LayeredFS/NSP ports, Italian language support, resuming interrupted downloads, and safer sleep, exit, and update modes.
 * [**Updated**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Added a data management menu and NTFS support for USB drives, resolved MTP/FTP deadlocks when installing many files, and fixed the Chinese localization.
+
+**911**
+* [**Updated**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Added a data management menu and NTFS support for USB drives, resolved MTP/FTP deadlock during installation of many files, and fixed the Chinese localization.**910**
+* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Preliminary support for 23.0.0
+    * [**Atmosphere change details**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 
 **910**
 * [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.0.0 support.
