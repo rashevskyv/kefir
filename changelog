@@ -1,118 +1,20 @@
-## Changelog
+## Changelog 
 #### **UKR**
-**Повна підтримка 22.5.0 та Atmosphere 1.11.2**
-Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
-Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
+**Попередня підтримка 23.0.0**
+Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
+Як відкатити прошивку до попередньої можна побачити в цьому відео -
 
-**903**
-* [**Додано**] [wb_18.bin] - Це дозволяє мати офіційною системою 23.0.0 і загружати Emunand на прошивках нижче.
-* [**Виправлено**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Прибраний примусовий редирект в Localhost всіх сервісів Нінтендо
-* [**Оновлено**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Додано вебпанель керування завантаженнями й каталогом, встановлення LayeredFS/NSP-портів, італійську мову, відновлення перерваних завантажень і безпечніші режими сну, виходу та оновлення.
-* [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час встановлення багатьох файлів і виправлено китайську локалізацію.
-
-**898**
-* [**Оновлено**] [pipensx 1.4.4](https://github.com/i3sey/pipensx/releases/tag/1.4.4) — Стабілізовано встановлення NSZ і великих портів, завантаження Real-Debrid та fallback з magnet на .torrent, оновлення каталогу без TLS-помилок і навігацію інтерфейсу з підказками для порожніх списків.
-
-**897**
-* [**Виправлено**] Додано виключення для `ctest.cdn.nintendo.net` у патчі блокування серверів Nintendo через DNS на emuMMC. Це дозволяє проходити перевірку з'єднання з мережею (captive portal), відкривати браузер без помилки та використовувати сторонні сервіси на кшталт Prelude / Nextendo.
-
-**891**
-* [**Додано**] [pipensx](https://github.com/i3sey/pipensx) - Програма, яка дозволяє скачувати ігри безпосередньо з Rutracker прямо на консолі, встановлюючи їх одразу в процесі скачування. Щось типу тінфойл, але з тонентами. **Будьте уважні**, в деяких країнах заборонено скачувати та роздавати ігри з торент-трекерів. **Якщо ваша країна одна з таких, то не використовуйте цю програму!**
-
-**890**
-* [**Виправлено**] Повернув випадково видалені елементи меню із оверлея
-
-**888**
-* [**Оновлено**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Оновлено до нової версії.
-* [**Оновлено**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Оновлено до нової версії.
-* [**Оновлено**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Додано підтримку встановлення цілих папок через MTP, фільтр для ігор з відсутніми оновленнями чи DLC, комбінацію клавіш Y для перегляду вмісту програм із меню ігор, виправлено сенсорне керування у редакторі форвардерів та покращено локалізацію.
-* [**Виправлено**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — видалений модуль що приводив до помилок
-
-**872**
-* [**Оновлено**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Виправлено заміну forwarder/User Page, перероблено отримання іконок і назв із папок Atmosphere `/atmosphere/contents/`, усунено кілька збоїв під час перемикання екранів і графіків активності та покращено точність підрахунку часу, обробку переходів DST і відновлення з пошкоджених/відсутніх подій журналу, а також додано підтримку нових титулів із стисненим `control.nacp` і виправлено відображення місячного перегляду.
-* [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
-* [**Оновлено**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Оновлено sysmodules для підтримки опції «Switch 2 Style», перенесено запуск/завершення/коректне вимикання системних модулів у фоновий потік для плавної роботи UI, увімкнено динамічну рамку віджетів і виправлено підсвітку/поведінку ефекту Shake та кольори для пунктів «Static» при натисканні A.
-
-**870**
-* [**Виправлено**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — рожева помилка нарешті здолана 
-* [**Виправлено**] [issue#51](https://github.com/rashevskyv/kefir/issues/151) — tinfoil повернено до роботи 
-* [**Виправлено**] Виправлення помилки через яку після kefir-helper переставав працювати інтернет на консолі
-
-**857**
-* [**Оновлено**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Додано підтримку версії 22.5.0.
-* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0 та покращено роботу Nyx: додано інформацію про SD Express і детекцію SD DDR200, виправлено ліміти wafer та зависання в GPT-валидації, а також перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd і додано нові SDMMC-функції для vendor/reserved бітів та SD Express.
-
-**849**
-* [**Виправлено**] Фікс роботи хомбрю
-
-**847**
-* [**Виправлено**] Виправлення багів на старих прошивках
-
-**841**
-* [**Оновлено**] [Missioncontrol v0.15.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.2) — Додано підтримку прошивки 22.5.0.
-
-**840**
-* [**Оновлено**] [Sys Patch v1.6.2.3](https://github.com/impeeza/sys-patch/releases/tag/v1.6.2.3) — Виправлено помилку erpt для останньої версії AMS, об’єднавши зміни з pull request #38.
-* [**Оновлено**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Додано встановлення JPG/PNG як тем без nxtheme, експериментальний sysmodule для виявлення оновлень домашнього меню та автоматичного видалення несумісних тем при зміні версії прошивки, а також беззаписне на SD вилучення/патчі домашнього меню під час встановлення з зовнішніх джерел і покращене оброблення помилок.
-* [**Оновлено**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Оновлено sysmodules: знято опцію `shutdown_timeout_ms`, очищено IPC-виклики та додано нове сповіщення `Shutdown IPC has failed.` у разі провалу IPC-команди.
-* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0, покращено інформацію про SD (зокрема SD Express і детекцію DDR200), виправлено ліміти wafer та зависання в GPT-валидації в менеджері розділів, додано попередження про неправильні версії PMIC і перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd.
+**910**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 23.0.0
+    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 
 
 ____
 
 #### **ENG**
-**Full support for 22.5.0 and Atmosphere 1.11.2**
-The patch for supporting old homebrew no longer works, so some old homebrew may stop working. To fix this, patch them via https://hbpatcher.alula.me/
-The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Albums while holding the R button (keep holding it until it launches). Details here - https://switch.customfw.xyz/hbl
+**Preliminary support for 23.0.0**
+Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for the official firmware.  
+How to downgrade the firmware to a previous version can be seen in this video -
 
-**903**
-* [**Added**] [wb_18.bin] - This allows having 23.0.0 as the official system and booting EmuNAND on lower firmware versions.
-* [**Fixed**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Removed the forced redirect of all Nintendo services to Localhost
-* [**Updated**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Added a web panel for managing downloads and the catalog, installation of LayeredFS/NSP ports, Italian language support, resuming interrupted downloads, and safer sleep, exit, and update modes.
-* [**Updated**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Added a data management menu and NTFS support for USB drives, resolved MTP/FTP deadlocks when installing many files, and fixed the Chinese localization.
-
-**898**
-* [**Updated**] [pipensx 1.4.4](https://github.com/i3sey/pipensx/releases/tag/1.4.4) — Stabilized installation of NSZ and large ports, Real-Debrid downloads and fallback from magnet to .torrent, catalog updates without TLS errors, and interface navigation with hints for empty lists.
-
-**897**
-* [**Fixed**] Added an exception for `ctest.cdn.nintendo.net` in the Nintendo server blocking patch via DNS on emuMMC. This allows passing the network connection check (captive portal), opening the browser without an error, and using third-party services such as Prelude / Nextendo.
-
-**891**
-* [**Added**] [pipensx](https://github.com/i3sey/pipensx) - An application that allows you to download games directly from Rutracker on the console, installing them immediately during the download process. Something like Tinfoil, but with torrents. **Be careful**, in some countries downloading and distributing games from torrent trackers is prohibited. **If your country is one of them, do not use this application!**
-
-**890**
-* [**Fixed**] Restored menu items accidentally removed from the overlay
-
-**888**
-* [**Updated**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Updated to the new version.
-* [**Updated**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Updated to the new version.
-* [**Updated**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Added support for installing entire folders via MTP, a filter for games with missing updates or DLC, the Y button shortcut for viewing application contents from the games menu, fixed touch controls in the forwarder editor, and improved localization.
-* [**Fixed**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — removed a module that caused errors
-
-**872**
-* [**Updated**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Fixed forwarder/User Page replacement, reworked icon and title retrieval from Atmosphere `/atmosphere/contents/` folders, resolved several crashes when switching activity screens and charts, and improved time counting accuracy, DST transition handling, and recovery from corrupted/missing log events; also added support for new titles with compressed `control.nacp` and fixed monthly view rendering.
-* [**Updated**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Added support for Steam Controller 2026.
-* [**Updated**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Updated sysmodules to support the “Switch 2 Style” option, moved starting/terminating/properly disabling system modules to a background thread for smoother UI operation, enabled a dynamic widget frame, and fixed the highlighting/behavior of the Shake effect and colors for “Static” items when pressing A.
-
-**870**
-* [**Fixed**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — the pink error has finally been defeated 
-* [**Fixed**] [issue#51](https://github.com/rashevskyv/kefir/issues/151) — tinfoil has been restored to working order 
-* [**Fixed**] Fixed an issue that caused the console's internet connection to stop working after kefir-helper
-
-**857**
-* [**Updated**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Added support for version 22.5.0.
-* [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Updated support for HOS 22.5.0 and improved Nyx: added SD Express information and SD DDR200 detection, fixed wafer limits and GPT validation hangs, renamed sdmmc_storage_execute_vendor_cmd to sdmmc_storage_vendor_cmd, and added new SDMMC functions for vendor/reserved bits and SD Express.
-
-**849**
-* [**Fixed**] Fixed homebrew operation
-
-**847**
-* [**Fixed**] Bug fixes on older firmware versions
-
-**841**
-* [**Updated**] [Missioncontrol v0.15.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.2) — Added support for firmware 22.5.0.
-
-**840**
-* [**Updated**] [Sys Patch v1.6.2.3](https://github.com/impeeza/sys-patch/releases/tag/v1.6.2.3) — Fixed the erpt error for the latest AMS version by merging changes from pull request #38.
-* [**Updated**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Added installation of JPG/PNG files as themes without nxtheme, an experimental sysmodule for detecting Home Menu updates and automatically removing incompatible themes when the firmware version changes, as well as SD write-free Home Menu extraction/patching when installing from external sources and improved error handling.
-* [**Updated**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Updated sysmodules: removed the `shutdown_timeout_ms` option, cleaned up IPC calls, and added a new `Shutdown IPC has failed.` notification when an IPC command fails.
-* [**Updated**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Updated HOS 22.5.0 support, improved SD information (including SD Express and DDR200 detection), fixed wafer limits and GPT validation freezes in the partition manager, added warnings about incorrect PMIC versions, and renamed sdmmc_storage_execute_vendor_cmd to sdmmc_storage_vendor_cmd.
+**910**
+* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Preliminary support for 23.0.0
+    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases) 

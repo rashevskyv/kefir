@@ -2,7 +2,7 @@ p=println
 pe={pause() exit()}
 boot=0
 syscon=0
-# missioncontrol=0
+missioncontrol=0
 maj=0
 pegascape=0
 oc=0
@@ -56,7 +56,7 @@ emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
 oc=fsexists("sd:/atmosphere/kips/kefir.kip")
 
 # Force mission control status
-# missioncontrol=0
+missioncontrol=0
 # syscon=0
 # oc=0
 
