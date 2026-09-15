@@ -1,7 +1,17 @@
 ## Changelog
 #### **UKR**
 **Попередня підтримка 23.0.0**
-Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки.
+Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
+Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
+
+**916**
+* [**Оновлено**] [Hekate & Nyx](https://github.com/CTCaer/hekate) — Інтегровано патчі з CTCaer/hekate:
+    * Додано підтримку створення файлового emuMMC змінного розміру на SD (слайдер 4–28 GiB, PR #1277).
+    * Додано кольорову індикацію температури SoC та батареї за діапазонами (PR #1248).
+    * Виправлено інклуди в BDK для надійної збірки без bdk.h (PR #1247).
+
+**912**
+* [**Оновлено**] [Lockpick_RCM 37f9657](https://github.com/impeeza/Lockpick_RCMDecScots/commits/master) — Додано підтримку прошивки 23.0.0 та версій 2 і новіших.
 
 **911**
 
@@ -9,18 +19,30 @@
 * [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час інсталяції багатьох файлів і виправлено китайську локалізацію.**910**
 * [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 23.0.0
 
+**910**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) - Попередня підтримка 23.0.0
+
 ____
 
 #### **ENG**
 **Preliminary support for 23.0.0**
-Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for the official firmware.  
-How to downgrade the firmware to a previous version can be seen in this video -
+Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
+How to downgrade - https://youtu.be/CrJJI1XWhDo
 
 **931**
 * [**Added**] [wb_18.bin] - This allows having 23.0.0 as the official system and booting EmuNAND on lower firmware versions.
 * [**Fixed**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Removed the forced redirect of all Nintendo services to Localhost
 * [**Updated**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Added a web panel for managing downloads and the catalog, installation of LayeredFS/NSP ports, Italian language support, resuming interrupted downloads, and safer sleep, exit, and update modes.
 * [**Updated**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Added a data management menu and NTFS support for USB drives, resolved MTP/FTP deadlocks when installing many files, and fixed the Chinese localization.
+
+**916**
+* [**Updated**] [Hekate & Nyx](https://github.com/CTCaer/hekate) — Integrated patches from CTCaer/hekate:
+    * Added support for creating resized SD file-based emuMMC (slider 4–28 GiB, PR #1277).
+    * Added colorized temperature display for SoC and battery based on operating ranges (PR #1248).
+    * Explicitly added missing BDK includes to fix compilation when bdk.h is omitted (PR #1247).
+
+**912**
+* [**Updated**] [Lockpick_RCM 37f9657](https://github.com/impeeza/Lockpick_RCMDecScots/commits/master) — Added support for firmware 23.0.0 and versions 2 and newer.
 
 **911**
 * [**Updated**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Added a data management menu and NTFS support for USB drives, resolved MTP/FTP deadlock during installation of many files, and fixed the Chinese localization.**910**
