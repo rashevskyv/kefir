@@ -4,6 +4,17 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**914**
+* [**Оновлено**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
+    * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Подробиці про зміни від Alula (гілка 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+
+**913**
+* [**Оновлено**] [Atmosphere 6449104](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
+    * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Подробиці про зміни від Alula (гілка 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2844](https://github.com/Atmosphere-NX/Atmosphere/pull/2844))
+* [**Додано**] [TorrentShopNX 2.10](https://github.com/Langegen/TorrentShopNX) — BitTorrent-клієнт, каталог ігор та ретро-консолей із прямою потоковою інсталяцією для Nintendo Switch. Дозволяє знаходити, завантажувати та встановлювати ігри, оновлення, DLC і ретро-роми безпосередньо на консоль.
+
 **912**
 * [**Оновлено**] [Hekate & Nyx](https://github.com/CTCaer/hekate) — Інтегровано патчі з CTCaer/hekate:
     * Додано підтримку створення файлового emuMMC змінного розміру на SD (слайдер 4–28 GiB, PR #1277).
@@ -24,6 +35,17 @@ ____
 **Preliminary support for 23.0.0**
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
+
+**914**
+* [**Updated**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
+    * [**Details of changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details of changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+
+**913**
+* [**Updated**] [Atmosphere 6449104](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
+    * [**Details of changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details of changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2844](https://github.com/Atmosphere-NX/Atmosphere/pull/2844))
+* [**Added**] [TorrentShopNX 2.10](https://github.com/Langegen/TorrentShopNX) — A BitTorrent client, game and retro console catalog with direct streaming installation for Nintendo Switch. Allows you to find, download, and install games, updates, DLC, and retro ROMs directly on the console.
 
 **912**
 * [**Updated**] [Hekate & Nyx](https://github.com/CTCaer/hekate) — Integrated patches from CTCaer/hekate:
