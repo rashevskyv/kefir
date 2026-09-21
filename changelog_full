@@ -10,6 +10,13 @@
     * Додано кольорову індикацію температури SoC та батареї за діапазонами (PR #1248).
     * Виправлено інклуди в BDK для надійної збірки без bdk.h (PR #1247).
 
+**915**
+* [**Оновлено**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
+    * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Подробиці про зміни від Alula (гілка 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Оновлено**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Виправлено спільне завантаження вибраних додаткових файлів, додано повтор невдалих завантажень, A–Z навігацію й пошук за розробником/видавцем у каталозі, інспектор мережі та створення ZIP-архівів у файловому менеджері.
+* [**Оновлено**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — Під час відкриття Games одразу показується сьогоднішній кешований каталог без повторного завантаження, а старий список лишається видимим до завершення мережевого оновлення.
+
 **914**
 * [**Оновлено**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
     * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
@@ -51,6 +58,13 @@ How to downgrade - https://youtu.be/CrJJI1XWhDo
     * Added support for creating resized SD file-based emuMMC (slider 4–28 GiB, PR #1277).
     * Added colorized temperature display for SoC and battery based on operating ranges (PR #1248).
     * Explicitly added missing BDK includes to fix compilation when bdk.h is omitted (PR #1247).
+
+**915**
+* [**Updated**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
+    * [**Details about changes in original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details about changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Updated**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Fixed shared downloading of selected additional files, added retries for failed downloads, A–Z navigation and developer/publisher search in the catalog, a network inspector, and ZIP archive creation in the file manager.
+* [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — When opening Games, today’s cached catalog is shown immediately without reloading, while the old list remains visible until the network update is complete.
 
 **914**
 * [**Updated**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere

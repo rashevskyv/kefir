@@ -4,6 +4,13 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**915**
+* [**Оновлено**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
+    * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Подробиці про зміни від Alula (гілка 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Оновлено**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Виправлено спільне завантаження вибраних додаткових файлів, додано повтор невдалих завантажень, A–Z навігацію й пошук за розробником/видавцем у каталозі, інспектор мережі та створення ZIP-архівів у файловому менеджері.
+* [**Оновлено**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — Під час відкриття Games одразу показується сьогоднішній кешований каталог без повторного завантаження, а старий список лишається видимим до завершення мережевого оновлення.
+
 **914**
 * [**Оновлено**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
     * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
@@ -36,10 +43,17 @@ ____
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
 
+**915**
+* [**Updated**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
+    * [**Details about changes in original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details about changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Updated**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Fixed shared downloading of selected additional files, added retries for failed downloads, A–Z navigation and developer/publisher search in the catalog, a network inspector, and ZIP archive creation in the file manager.
+* [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — When opening Games, today’s cached catalog is shown immediately without reloading, while the old list remains visible until the network update is complete.
+
 **914**
 * [**Updated**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
-    * [**Details of changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
-    * [**Details of changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+    * [**Details about changes in the original Atmosphere (branch 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details about changes from Alula (branch 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
 
 **913**
 * [**Updated**] [Atmosphere 6449104](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
