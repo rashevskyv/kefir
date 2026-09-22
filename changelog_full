@@ -11,9 +11,10 @@
     * Виправлено інклуди в BDK для надійної збірки без bdk.h (PR #1247).
 
 **915**
-* [**Оновлено**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
+* [**Оновлено**] [Atmosphere 21f16ff](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
     * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
     * [**Подробиці про зміни від Alula (гілка 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Оновлено**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Перезібрано з найсвіжішою версією [libultrahand](https://github.com/ppkantorski/libultrahand) (включаючи оновлений libtesla), стандартом C++26 та свіжим тулчейном libnx для стабільної роботи на нових версіях Atmosphère.
 * [**Оновлено**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Виправлено спільне завантаження вибраних додаткових файлів, додано повтор невдалих завантажень, A–Z навігацію й пошук за розробником/видавцем у каталозі, інспектор мережі та створення ZIP-архівів у файловому менеджері.
 * [**Оновлено**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — Під час відкриття Games одразу показується сьогоднішній кешований каталог без повторного завантаження, а старий список лишається видимим до завершення мережевого оновлення.
 
@@ -60,9 +61,10 @@ How to downgrade - https://youtu.be/CrJJI1XWhDo
     * Explicitly added missing BDK includes to fix compilation when bdk.h is omitted (PR #1247).
 
 **915**
-* [**Updated**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
+* [**Updated**] [Atmosphere 21f16ff](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
     * [**Details about changes in original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
     * [**Details about changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Recompiled with the latest [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), C++26 standard, and the latest libnx toolchain for stable operation on newer Atmosphère versions.
 * [**Updated**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Fixed shared downloading of selected additional files, added retries for failed downloads, A–Z navigation and developer/publisher search in the catalog, a network inspector, and ZIP archive creation in the file manager.
 * [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — When opening Games, today’s cached catalog is shown immediately without reloading, while the old list remains visible until the network update is complete.
 
