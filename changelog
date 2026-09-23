@@ -4,6 +4,16 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**917**
+* [**Оновлено**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Покращено підтримку зображень екрана завантаження hekate з автоповоротом портретних зображень, додано встановлення bootscreen-тем через API Themezer і виправлено обробку чисел із плаваючою комою.
+* [**Оновлено**] [Atmosphere 2d0fc65](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
+    * Інтегровано покращення ядра для підтримки Horizon OS 23.0.0 (коміт hexkyz `2d0fc65fd`).
+    * [PR #2855](https://github.com/Atmosphere-NX/Atmosphere/pull/2855): виправлено аварійне завершення чит-рушія `dmnt:cht` при підключенні до ігор на 23.0.0 (валідація покажчика потоків лише за їх наявності).
+    * [PR #2854](https://github.com/Atmosphere-NX/Atmosphere/pull/2854): додано 16 MB динамічної купи (stolen heap) у `fs.mitm` для гри Danganronpa V3 для запобігання крашу при завантаженні LayeredFS модів.
+    * [PR #2835](https://github.com/Atmosphere-NX/Atmosphere/pull/2835): додано підтримку знакових зміщень заголовка винятків у модулі `ro` (виправляє завантаження NRO у Assassin's Creed 3).
+    * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Подробиці про зміни від Alula (гілка 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+
 **916**
 * [**Оновлено**] [Atmosphere 21f16ff](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера
     * [**Подробиці про зміни в оригінальній Atmosphere (гілка 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
@@ -50,25 +60,34 @@ ____
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
 
+**917**
+* [**Updated**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Improved support for hekate boot screen images with automatic rotation of portrait images, added installation of bootscreen themes via the Themezer API, and fixed floating-point number handling.
+* [**Updated**] [Atmosphere 2d0fc65](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
+    * Integrated kernel improvements to support Horizon OS 23.0.0 (hexkyz commit `2d0fc65fd`).
+    * [PR #2855](https://github.com/Atmosphere-NX/Atmosphere/pull/2855): fixed a crash in the `dmnt:cht` cheat engine when attaching to games on 23.0.0 (validates thread pointers only when they exist).
+    * [PR #2854](https://github.com/Atmosphere-NX/Atmosphere/pull/2854): added 16 MB of dynamic heap (stolen heap) to `fs.mitm` for Danganronpa V3 to prevent a crash when loading LayeredFS mods.
+    * [PR #2835](https://github.com/Atmosphere-NX/Atmosphere/pull/2835): added support for signed exception header offsets in the `ro` module (fixes NRO loading in Assassin's Creed 3).
+    * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+
 **916**
 * [**Updated**] [Atmosphere 21f16ff](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
     * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
     * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
-* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), the C++26 standard, and the latest libnx toolchain for stable operation on new Atmosphère versions.
-
+* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), the C++26 standard, and the latest libnx toolchain for stable operation on newer Atmosphère versions.
 
 **915**
 * [**Updated**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
     * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
-    * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
-* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), the C++26 standard, and the latest libnx toolchain for stable operation on new Atmosphère versions.
+    * [**Details about changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), C++26 standard, and the latest libnx toolchain for stable operation on newer Atmosphère versions.
 * [**Updated**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Fixed shared downloading of selected additional files, added retries for failed downloads, A–Z navigation and developer/publisher search in the catalog, a network inspector, and ZIP archive creation in the file manager.
-* [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — When opening Games, today's cached catalog is displayed immediately without re-downloading, while the old list remains visible until the network update is complete.
+* [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — When opening Games, today's cached catalog is shown immediately without re-downloading, while the old list remains visible until the network update is complete.
 
 **914**
 * [**Updated**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
-    * [**Details of changes in the original Atmosphere (branch 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
-    * [**Details of changes from Alula (branch 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+    * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
 
 **913**
 * [**Updated**] [Atmosphere 6449104](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
