@@ -4,7 +4,17 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**918**
+* [**Оновлено**] [Atmosphere 788546f](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
+    * Підтримку прошивки 23.0.0 офіційно об'єднано з основною гілкою `master` Atmosphère (раніше впроваджені нами патчі тепер прийнято в офіційний upstream).
+    * Реалізовано повноцінну декомпресію стиснених NRO (формат LZ4 frame) для HOS 23.0.0+ та виправлено помилки в модулі `ro` (коміт hexkyz `58f2b963d`).
+    * [PR #2857](https://github.com/Atmosphere-NX/Atmosphere/pull/2857): виправлено критичні помилки декодування у свіжому декомпресорі кадрів LZ4 від hexkyz (зчитування заголовка, розміри робочого буфера та облік довжини блоків).
+    * Впроваджено стандартизацію кодової бази та безпечну обробку статусів через `R_DISCARD` (коміт hexkyz `44d9649c6`).
+    * [PR #2852](https://github.com/Atmosphere-NX/Atmosphere/pull/2852): виправлено довжини шляхів при перейменуванні файлів у `htcfs`.
+    * [**Подробиці про зміни в оригінальній Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **917**
+* [**Оновлено**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Покращено підтримку зображень екрана завантаження hekate з автоповоротом портретних зображень, додано встановлення bootscreen-тем через API Themezer і виправлено обробку чисел із плаваючою комою.
 * [**Оновлено**] [Atmosphere 2d0fc65](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
     * Інтегровано покращення ядра для підтримки Horizon OS 23.0.0 (коміт hexkyz `2d0fc65fd`).
     * [PR #2855](https://github.com/Atmosphere-NX/Atmosphere/pull/2855): виправлено аварійне завершення чит-рушія `dmnt:cht` при підключенні до ігор на 23.0.0 (валідація покажчика потоків лише за їх наявності).
@@ -57,7 +67,17 @@ ____
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
 
+**918**
+* [**Updated**] [Atmosphere 788546f](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
+    * Support for firmware 23.0.0 has been officially merged into upstream `master` (the patches we previously integrated are now part of the official upstream repository).
+    * Implemented official compressed NRO decompression (LZ4 frame format) for HOS 23.0.0+ and fixed bugs in the `ro` service (hexkyz commit `58f2b963d`).
+    * [PR #2857](https://github.com/Atmosphere-NX/Atmosphere/pull/2857): fixed critical decoding errors in the newly added LZ4 frame decompressor (header offset reading, work buffer sizing, and block header tracking).
+    * Standardized codebase result handling via `R_DISCARD` (hexkyz commit `44d9649c6`).
+    * [PR #2852](https://github.com/Atmosphere-NX/Atmosphere/pull/2852): fixed swapped path lengths when renaming files in `htcfs`.
+    * [**Details about changes in the original Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **917**
+* [**Updated**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Improved support for hekate boot screen images with automatic rotation of portrait images, added installation of bootscreen themes via the Themezer API, and fixed floating-point number handling.
 * [**Updated**] [Atmosphere 2d0fc65](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
     * Integrated kernel improvements and updates for Horizon OS 23.0.0 (hexkyz commit `2d0fc65fd`).
     * [PR #2855](https://github.com/Atmosphere-NX/Atmosphere/pull/2855): fixed `dmnt:cht` cheat engine crash when attaching to games on 23.0.0 (only validate thread pointer when thread count is non-zero).

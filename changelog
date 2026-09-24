@@ -4,6 +4,15 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**918**
+* [**Оновлено**] [Atmosphere 788546f](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
+    * Підтримку прошивки 23.0.0 офіційно об'єднано з основною гілкою `master` Atmosphère (раніше впроваджені нами патчі тепер прийнято в офіційний upstream).
+    * Реалізовано повноцінну декомпресію стиснених NRO (формат LZ4 frame) для HOS 23.0.0+ та виправлено помилки в модулі `ro` (коміт hexkyz `58f2b963d`).
+    * [PR #2857](https://github.com/Atmosphere-NX/Atmosphere/pull/2857): виправлено критичні помилки декодування у свіжому декомпресорі кадрів LZ4 від hexkyz (зчитування заголовка, розміри робочого буфера та облік довжини блоків).
+    * Впроваджено стандартизацію кодової бази та безпечну обробку статусів через `R_DISCARD` (коміт hexkyz `44d9649c6`).
+    * [PR #2852](https://github.com/Atmosphere-NX/Atmosphere/pull/2852): виправлено довжини шляхів при перейменуванні файлів у `htcfs`.
+    * [**Подробиці про зміни в оригінальній Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **917**
 * [**Оновлено**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Покращено підтримку зображень екрана завантаження hekate з автоповоротом портретних зображень, додано встановлення bootscreen-тем через API Themezer і виправлено обробку чисел із плаваючою комою.
 * [**Оновлено**] [Atmosphere 2d0fc65](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
@@ -60,40 +69,49 @@ ____
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
 
+**918**
+* [**Updated**] [Atmosphere 788546f](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
+    * Firmware 23.0.0 support has been officially merged into the main `master` branch of Atmosphère (the patches previously implemented by us have now been accepted upstream).
+    * Full decompression of compressed NROs (LZ4 frame format) for HOS 23.0.0+ has been implemented, and bugs in the `ro` module have been fixed (hexkyz commit `58f2b963d`).
+    * [PR #2857](https://github.com/Atmosphere-NX/Atmosphere/pull/2857): fixed critical decoding bugs in hexkyz's new LZ4 frame decompressor (header reading, work buffer sizes, and block length accounting).
+    * Codebase standardization and safe status handling via `R_DISCARD` have been implemented (hexkyz commit `44d9649c6`).
+    * [PR #2852](https://github.com/Atmosphere-NX/Atmosphere/pull/2852): fixed path lengths when renaming files in `htcfs`.
+    * [**Details about changes in the original Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **917**
-* [**Updated**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Improved support for hekate boot screen images with automatic rotation of portrait images, added installation of bootscreen themes via the Themezer API, and fixed floating-point number handling.
+* [**Updated**] [Nxthemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Improved support for hekate bootscreen images with automatic rotation of portrait images, added installation of bootscreen themes via the Themezer API, and fixed floating-point number handling.
 * [**Updated**] [Atmosphere 2d0fc65](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
     * Integrated kernel improvements to support Horizon OS 23.0.0 (hexkyz commit `2d0fc65fd`).
-    * [PR #2855](https://github.com/Atmosphere-NX/Atmosphere/pull/2855): fixed a crash in the `dmnt:cht` cheat engine when attaching to games on 23.0.0 (validates thread pointers only when they exist).
-    * [PR #2854](https://github.com/Atmosphere-NX/Atmosphere/pull/2854): added 16 MB of dynamic heap (stolen heap) to `fs.mitm` for Danganronpa V3 to prevent a crash when loading LayeredFS mods.
+    * [PR #2855](https://github.com/Atmosphere-NX/Atmosphere/pull/2855): fixed a `dmnt:cht` cheat engine crash when attaching to games on 23.0.0 (thread pointers are validated only when present).
+    * [PR #2854](https://github.com/Atmosphere-NX/Atmosphere/pull/2854): added 16 MB of dynamic heap (stolen heap) in `fs.mitm` for Danganronpa V3 to prevent crashes when loading LayeredFS mods.
     * [PR #2835](https://github.com/Atmosphere-NX/Atmosphere/pull/2835): added support for signed exception header offsets in the `ro` module (fixes NRO loading in Assassin's Creed 3).
-    * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
-    * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+    * [**Details on changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details on changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
 
 **916**
 * [**Updated**] [Atmosphere 21f16ff](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
     * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
     * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
-* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), the C++26 standard, and the latest libnx toolchain for stable operation on newer Atmosphère versions.
+* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), the C++26 standard, and the latest libnx toolchain for stable operation on newer versions of Atmosphère.
 
 **915**
 * [**Updated**] [Atmosphere 0411dbf](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
     * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
     * [**Details about changes by Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
-* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), C++26 standard, and the latest libnx toolchain for stable operation on newer Atmosphère versions.
-* [**Updated**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Fixed shared downloading of selected additional files, added retries for failed downloads, A–Z navigation and developer/publisher search in the catalog, a network inspector, and ZIP archive creation in the file manager.
+* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including the updated libtesla), the C++26 standard, and the latest libnx toolchain for stable operation on newer versions of Atmosphère.
+* [**Updated**] [TorrentShopNX 2.11](https://github.com/Langegen/TorrentShopNX/releases/tag/2.11) — Fixed shared downloading of selected additional files; added retries for failed downloads, A–Z navigation and developer/publisher search in the catalog, a network inspector, and ZIP archive creation in the file manager.
 * [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — When opening Games, today's cached catalog is shown immediately without re-downloading, while the old list remains visible until the network update is complete.
 
 **914**
 * [**Updated**] [Atmosphere 518e494](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
-    * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
-    * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
+    * [**Details about changes in the original Atmosphere (branch 23_support)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
+    * [**Details about changes from Alula (branch 23_support)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2847](https://github.com/Atmosphere-NX/Atmosphere/pull/2847))
 
 **913**
-* [**Updated**] [Atmosphere 6449104](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere
+* [**Updated**] [Atmosphere 6449104](https://github.com/rashevskyv/Kefirosphere) — Updated atmosphere
     * [**Details about changes in the original Atmosphere (23_support branch)**](https://github.com/Atmosphere-NX/Atmosphere/commits/23_support)
     * [**Details about changes from Alula (23_support branch)**](https://github.com/alula/Atmosphere/commits/23_support) ([PR #2844](https://github.com/Atmosphere-NX/Atmosphere/pull/2844))
-* [**Added**] [TorrentShopNX 2.10](https://github.com/Langegen/TorrentShopNX) — A BitTorrent client, game and retro console catalog with direct streaming installation for Nintendo Switch. Allows you to find, download, and install games, updates, DLC, and retro ROMs directly to the console.
+* [**Added**] [TorrentShopNX 2.10](https://github.com/Langegen/TorrentShopNX) — BitTorrent client, game and retro console catalog with direct streaming installation for Nintendo Switch. Allows you to find, download, and install games, updates, DLC, and retro ROMs directly on the console.
 
 **912**
 * [**Updated**] [Hekate & Nyx](https://github.com/CTCaer/hekate) — Integrated patches from CTCaer/hekate:
