@@ -4,6 +4,15 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**919**
+* [**Оновлено**] [Atmosphere 2ae182b](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
+    * Інтегровано офіційні виправлення сервісу `ro` від hexkyz (коміт `2ae182bd5`):
+        * Виправлено критичну помилку вивантаження (unmap) NRO-модулів з пам'яті процесу на прошивках 23.0.0+: для скасування зіставлення тепер використовується фактичний розмір NRO у купі, що запобігає витокам адресного простору та зависанням при виході з хоумбрю.
+        * Офіційно інтегровано до апстріму виправлення декомпресора кадрів LZ4 та покращено облік розмірів буферів (закрито PR #2857, #2858 та #2859).
+        * Додано безпечне очищення робочих буферів декомпресії в пам'яті після закриття сесії.
+        * Додано коректну передачу та облік розміру секції BSS у функції `ParseNro`.
+    * [**Подробиці про зміни в оригінальній Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **918**
 * [**Оновлено**] [Atmosphere 788546f](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
     * Підтримку прошивки 23.0.0 офіційно об'єднано з основною гілкою `master` Atmosphère (раніше впроваджені нами патчі тепер прийнято в офіційний upstream).
@@ -66,6 +75,15 @@ ____
 **Preliminary support for 23.0.0**
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
+
+**919**
+* [**Updated**] [Atmosphere 2ae182b](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
+    * Integrated official `ro` service fixes from hexkyz (commit `2ae182bd5`):
+        * Fixed critical NRO unmapping issue on firmware 23.0.0+: the actual NRO heap allocation size is now used for unmapping, preventing address space leaks and crashes upon exiting homebrew.
+        * Officially merged LZ4 frame decompressor fixes and buffer sizing into upstream (closing PR #2857, #2858, and #2859).
+        * Added secure zeroing of decompression work buffers in memory upon session exit.
+        * Added proper tracking and passing of BSS section sizes in `ParseNro`.
+    * [**Details about changes in the original Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
 
 **918**
 * [**Updated**] [Atmosphere 788546f](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
