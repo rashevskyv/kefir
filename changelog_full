@@ -4,7 +4,16 @@
 Підтрика 23.0.0 реалізована виключно для даунгрейду емунанда. Відкатіть емунанд через kefir-updater до версії нижче. 23.0.0 для повсякденної роботи підтримується лише для офіційної прошивки. 
 Як зробити даунгрейд - https://youtu.be/CrJJI1XWhDo
 
+**920**
+* [**Оновлено**] [Atmosphere 59e7786](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
+    * Впроваджено систему патчів пам'яті веб-аплету для Horizon OS 23.0.0+ (коміт hexkyz `59e7786a4`):
+        * Усунено критичне падіння веб-браузера (`openWeb`), магазину eShop (`systemWeb`) та офлайн-браузера (`offlineWeb`) на прошивці 23.0.0 через гострий дефіцит пам'яті в пулі системних аплетів.
+        * Додано вбудовані патчі завантажувача процесів (`loader`) для вивільнення ~9 МБ раніше зарезервованої та невикористовуваної пам'яті купи веб-аплету (`Reserved` та `ReservedTbd`).
+        * Збільшено виділення додаткової системної пам'яті в ядрі `mesosphere` для 23.0.0+ до 16 МБ, що забезпечує стабільну роботу системи без аварійних виходів за межі виділеного пулу пам'яті.
+    * [**Подробиці про зміни в оригінальній Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **919**
+* [**Оновлено**] [TorrentShopNX 2.12](https://github.com/Langegen/TorrentShopNX/releases/tag/2.12) — Поліпшено оновлення каталогу, завантаження й розпакування великих файлів, додано перегляд архівів як папок та автоматичне встановлення BIOS для восьми платформ емуляторів.
 * [**Оновлено**] [Atmosphere 2ae182b](https://github.com/rashevskyv/Kefirosphere) — Оновлена атмосфера:
     * Інтегровано офіційні виправлення сервісу `ro` від hexkyz (коміт `2ae182bd5`):
         * Виправлено критичну помилку вивантаження (unmap) NRO-модулів з пам'яті процесу на прошивках 23.0.0+: для скасування зіставлення тепер використовується фактичний розмір NRO у купі, що запобігає витокам адресного простору та зависанням при виході з хоумбрю.
@@ -76,8 +85,17 @@ ____
 Support for 23.0.0 is implemented exclusively for emuNAND downgrading. Downgrade emuNAND via kefir-updater to a version below 23.0.0. For everyday use, 23.0.0 is supported only for official firmware.  
 How to downgrade - https://youtu.be/CrJJI1XWhDo
 
+**920**
+* [**Updated**] [Atmosphere 59e7786](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
+    * Introduced web applet memory patching for Horizon OS 23.0.0+ (hexkyz commit `59e7786a4`):
+        * Resolved immediate crashes of the web browser (`openWeb`), Nintendo eShop (`systemWeb`), and offline browser (`offlineWeb`) on firmware 23.0.0 caused by severe applet pool memory constraints.
+        * Added embedded `loader` patches to reclaim ~9 MB of unused root and scene heap memory from web applets (`Reserved` and `ReservedTbd` regions).
+        * Adjusted extra system memory allocation in the `mesosphere` kernel for 23.0.0+ to 16 MB, ensuring stable execution without exceeding applet memory pool limits.
+    * [**Details about changes in the original Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/commits/master)
+
 **919**
-* [**Updated**] [Atmosphere 2ae182b](https://github.com/rashevskyv/Kefirosphere) — Updated Atmosphere:
+* [**Updated**] [TorrentShopNX 2.12](https://github.com/Langegen/TorrentShopNX/releases/tag/2.12) — Improved catalog updating, downloading and unpacking of large files, added archive browsing as folders and automatic BIOS installation for eight emulator platforms.
+* [**Updated**] [Atmosphere 2ae182b](https://github.com/rashevskyv/Kefirosphere) — Atmosphere updated:
     * Integrated official `ro` service fixes from hexkyz (commit `2ae182bd5`):
         * Fixed critical NRO unmapping issue on firmware 23.0.0+: the actual NRO heap allocation size is now used for unmapping, preventing address space leaks and crashes upon exiting homebrew.
         * Officially merged LZ4 frame decompressor fixes and buffer sizing into upstream (closing PR #2857, #2858, and #2859).
