@@ -1,8 +1,5 @@
 ## Changelog
 #### **UKR**
-**Повна підтримка 23.0.0 та 23.0.1**
-У цьому релізі реалізовано повну підтримку Horizon OS 23.0.0 та 23.0.1 для повсякденної роботи. Усі компоненти та утиліти підтримують 23.0.0+, включно із сисмодулем Mission Control, який отримав офіційне оновлення 0.16.0 із підтримкою прошивок 23.0.0/23.0.1.
-
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
@@ -46,9 +43,6 @@
 ____
 
 #### **ENG**
-**Full support for 23.0.0 and 23.0.1**
-This release introduces full support for Horizon OS 23.0.0 and 23.0.1 for everyday use. All components and utilities support 23.0.0+, including the Mission Control sysmodule which received official update 0.16.0 with firmware 23.0.0/23.0.1 support.
-
 The patch for legacy homebrew support no longer works, so some older homebrew applications may stop working. To fix this, patch them via https://hbpatcher.alula.me/
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 
