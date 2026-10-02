@@ -4,6 +4,7 @@
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 
 **922**
+* [**Оновлено**] [TorrentShopNX 2.13](https://github.com/Langegen/TorrentShopNX/releases/tag/2.13) — Додано двопанельний файловий менеджер, теми й власні шпалери, мультивибір фільтрів, перевірку сумісності та розміру NSZ перед завантаженням, а також безпечне пробудження екрана й оновлений інтерфейс каталогу.
 * [**Оновлено**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Офіційне оновлення з підтримкою прошивок Horizon OS 23.0.0 та 23.0.1:
     * Оновлено IPS-патчі `btm` та `bluetooth`, реалізовано коректну обробку скорочених CMIF-команд опитування стану пристроїв у сервісі BTM (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`).
     * Додано налаштування ходу адаптивних тригерів для контролерів DualSense (`dualsense_adaptive_trigger_travel`).
@@ -47,18 +48,19 @@ The patch for legacy homebrew support no longer works, so some older homebrew ap
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 
 **922**
-* [**Updated**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Official update with support for Horizon OS 23.0.0 and 23.0.1:
-    * Updated `btm` and `bluetooth` IPS patches and properly handled shortened CMIF device condition query commands in BTM service (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`).
-    * Added configurable travel distance setting for DualSense adaptive triggers (`dualsense_adaptive_trigger_travel`).
-    * Improved and more accurate battery level reporting for Sony controllers (DualShock 3, DualShock 4, DualSense).
-    * Expanded compatibility with JoyconDroid on Android without requiring root privileges.
-* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère build integrating community and developer improvements:
-    * [**DNS.mitm**] Implemented raw interception for new 23.0.0+ async `sfdnsres` resolver commands 99–110 (`QueryAddrInfoRequestWithOptions`, `FetchAddrInfoRequestWithOptions`, `CancelQuery`, etc.). Reliably blocks DNS leaks caused by the c-ares resolver in system background modules (`nim` during update checks, telemetry in `erpt`) at the DNS MITM level (PR #2865).
-    * [**fs.mitm**] Added support for the new `IStorageForBatchRead` interface for RomFS batch reads on Horizon OS 23.0.0+ (commands 211 `OpenDataStorageByProgramIdForBatchRead` and 10 `BatchRead`), ensuring robust LayeredFS operation and filesystem interception (PR #2867).
-    * [**fs.mitm**] Added 8 MB dynamic stolen heap allocation for *Trails in the Sky 2nd Chapter* (`0x01007A2027548000`) in `ApplicationsWithDynamicHeap`, resolving crashes caused by memory constraints (PR #2870 by masagrator).
+* [**Updated**] [TorrentShopNX 2.13](https://github.com/Langegen/TorrentShopNX/releases/tag/2.13) — Added a dual-pane file manager, themes and custom wallpapers, multi-select filters, NSZ compatibility and size checks before downloading, as well as safe screen wake-up and an updated catalog interface.
+* [**Updated**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Official update with support for Horizon OS 23.0.0 and 23.0.1 firmware:
+    * Updated the `btm` and `bluetooth` IPS patches, implemented proper handling of shortened CMIF device status polling commands in the BTM service (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`).
+    * Added adaptive trigger travel settings for DualSense controllers (`dualsense_adaptive_trigger_travel`).
+    * Improved and refined battery level indication for Sony gamepads (DualShock 3, DualShock 4, DualSense).
+    * Expanded compatibility with the Android app JoyconDroid without requiring root access.
+* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère build integrating fixes from the community and developers:
+    * [**DNS.mitm**] Implemented interception of new asynchronous CMIF resolver commands `sfdnsres` 99–110 (`QueryAddrInfoRequestWithOptions`, `FetchAddrInfoRequestWithOptions`, `CancelQuery`, etc.) for Horizon OS 23.0.0+. This reliably prevents DNS query leaks through the c-ares library in system background processes (`nim` when checking for updates, `erpt` report submission), directly at the DNS MITM level (PR #2865).
+    * [**fs.mitm**] Added support for the new `IStorageForBatchRead` interface for batch RomFS reading on Horizon OS 23.0.0+ (commands 211 `OpenDataStorageByProgramIdForBatchRead` and 10 `BatchRead`), ensuring stable LayeredFS operation and interception of file system requests (PR #2867).
+    * [**fs.mitm**] Added automatic allocation of an 8 MB dynamic heap (stolen heap) for the game *Trails in the Sky 2nd Chapter* (`0x01007A2027548000`) to the `ApplicationsWithDynamicHeap` list, fixing game crashes during loading caused by insufficient RAM (PR #2870 by masagrator).
 * [**Updated**] [libnx](https://github.com/switchbrew/libnx) — Synchronized with switchbrew upstream:
-    * Officially merged PR #741 by hexkyz with `StorageForBatchRead` commands support for Horizon OS 23.0.0+.
-    * Updated Bluetooth `btm` service structures and added shortened device info/condition query commands (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`) matching modern Horizon OS standards.
+    * Officially merged PR #741 by hexkyz with support for `StorageForBatchRead` commands at the system library level for Horizon OS 23.0.0+.
+    * Updated the Bluetooth service `btm` device status and information structures (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`) according to the standards of newer Horizon OS versions.
 
 **921**
 * [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère 1.12.0 release version:
