@@ -2,6 +2,13 @@
 #### **UKR**
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
+Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті.
+
+**923**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
+    * [**DNS.mitm**] Офіційне виправлення блокування серверів Nintendo на прошивці 23.0.0+. Надійно блокує фонові звернення консолі до Nintendo при перевірці оновлень системи та захищає від випадкового бану.
+    * [**fs.mitm**] Виправлено виліт гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
+    * [**set.mitm**] Номер версії Кефіру в «Системних налаштуваннях» консолі тепер оновлюється автоматично з файлу на карті пам'яті, без потреби перевстановлення Atmosphère.
 
 **922**
 * [**Оновлено**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Офіційне оновлення з підтримкою прошивок Horizon OS 23.0.0 та 23.0.1:
@@ -191,6 +198,13 @@ ____
 #### **ENG**
 The patch for legacy homebrew support no longer works, so some older homebrew applications may stop working. To fix this, patch them via https://hbpatcher.alula.me/
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
+Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
+
+**923**
+* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère components update:
+    * [**DNS.mitm**] Official fix for Nintendo server blocking on firmware 23.0.0+. Reliably blocks background connection requests to Nintendo during system update checks, protecting the console from telemetry leaks and bans.
+    * [**fs.mitm**] Fixed crash in *Trails in the Sky 2nd Chapter* when launching with mods due to low RAM.
+    * [**set.mitm**] The Kefir version number in System Settings is now read directly from the SD card, updating dynamically without requiring an Atmosphère reinstall.
 
 **922**
 * [**Updated**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Official update with support for Horizon OS 23.0.0 and 23.0.1:
