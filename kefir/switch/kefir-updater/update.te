@@ -111,6 +111,32 @@ delfile("sd:/switch/dbi.libusbhsfs");
 delfile("sd:/btpair/btpair.nro");
 delfile("sd:/btpair.nro");
 
+# Kefir Hub: leftovers of an unfinished profile dump/restore. Completed packs, .zip backups,
+# tegraexplorer/restore_backup and Undo_restore_if_wont_boot.te are kept.
+hubPending = "sd:/config/kefir/restore_pending"
+if (fsexists(hubPending)) { deldir(hubPending) }
+hubNt = "sd:/config/kefir/nand_transfer"
+if (fsexists(hubNt)) {
+	hubList = readdir(hubNt)
+	hubDirs = hubList.folders.copy()
+	hubDirs.foreach("hubName") {
+		hubParts = hubName.split("_staging_")
+		if (hubParts.len() > 1) { if (hubParts[0] == "") { deldir(hubNt + "/" + hubName) } }
+		hubParts = hubName.split("_restore_")
+		if (hubParts.len() > 1) { if (hubParts[0] == "") { deldir(hubNt + "/" + hubName) } }
+	}
+}
+delfile("sd:/config/kefir/reopen_hub.flag")
+delfile("sd:/config/ultrahand/notifications/kefir-reopen.notify")
+delfile("sd:/TegraExplorer/scripts/account_0010_dump.te")
+delfile("sd:/TegraExplorer/scripts/account_0010_apply_link.te")
+delfile("sd:/TegraExplorer/scripts/nand_transfer_dump_auto.te")
+delfile("sd:/TegraExplorer/scripts/nand_transfer_restore_auto.te")
+if (fsexists("sd:/startup.te")) {
+	hubRaw = readfile("sd:/startup.te")
+	if (hubRaw.find("# kefir-hub-owned".bytes()) + 1) { delfile("sd:/startup.te") }
+}
+
 delfile("sd:/install.bat");
 delfile("sd:/switch/reboot_to_payload.nro");
 delfile("sd:/switch/sx.nro");

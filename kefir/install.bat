@@ -314,6 +314,19 @@ if exist "%sd%:\emummc\emummc.ini_bkp" (
 	del "%sd%:\emummc\emummc.ini_bkp"
 )
 
+@REM Kefir Hub: leftovers of an unfinished profile dump/restore. Completed packs, .zip backups,
+@REM tegraexplorer\restore_backup and Undo_restore_if_wont_boot.te are kept.
+if exist "%sd%:\config\kefir\restore_pending" (RD /s /q "%sd%:\config\kefir\restore_pending")
+for /d %%d in ("%sd%:\config\kefir\nand_transfer\_staging_*") do (RD /s /q "%%d")
+for /d %%d in ("%sd%:\config\kefir\nand_transfer\_restore_*") do (RD /s /q "%%d")
+if exist "%sd%:\config\kefir\reopen_hub.flag" (del "%sd%:\config\kefir\reopen_hub.flag")
+if exist "%sd%:\config\ultrahand\notifications\kefir-reopen.notify" (del "%sd%:\config\ultrahand\notifications\kefir-reopen.notify")
+if exist "%sd%:\TegraExplorer\scripts\account_0010_dump.te" (del "%sd%:\TegraExplorer\scripts\account_0010_dump.te")
+if exist "%sd%:\TegraExplorer\scripts\account_0010_apply_link.te" (del "%sd%:\TegraExplorer\scripts\account_0010_apply_link.te")
+if exist "%sd%:\TegraExplorer\scripts\nand_transfer_dump_auto.te" (del "%sd%:\TegraExplorer\scripts\nand_transfer_dump_auto.te")
+if exist "%sd%:\TegraExplorer\scripts\nand_transfer_restore_auto.te" (del "%sd%:\TegraExplorer\scripts\nand_transfer_restore_auto.te")
+if exist "%sd%:\startup.te" (findstr /b /c:"# kefir-hub-owned" "%sd%:\startup.te" >nul && del "%sd%:\startup.te")
+
 
 echo ------------------------------------------------------------------------
 echo.
