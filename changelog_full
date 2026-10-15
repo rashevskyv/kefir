@@ -2,7 +2,22 @@
 #### **UKR**
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
-Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті.
+Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
+
+**925**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
+    * [**DNS.mitm**] Виправлено доступ до мережі на прошивці 23.0.0+: запити до адрес, яких немає у файлі hosts, тепер передаються системі, а не повертаються порожніми. Блокування серверів Nintendo працює як раніше.
+    * [**fs.mitm**] Офіційна реалізація перехоплення пакетного читання RomFS (`StorageForBatchRead`) від розробників Atmosphère замінила власний патч Кефіру. Додано перехоплення раніше відсутніх команд FileSystem та DataStorage, що покращує роботу LayeredFS-модів на 23.0.0+.
+    * [**fs.mitm**] Виправлено виліт азійської та японської версій гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
+    * [**libstratosphere**] Виправлено початковий стан об'єктів спільної пам'яті та пам'яті передачі в системних модулях (PR #2873).
+
+**924**
+* [**Оновлено**] [TorrentShopNX 2.14](https://github.com/Langegen/TorrentShopNX/releases/tag/2.14) — Додано сортування й статистику торрентів, назви файлів у завантаженнях, виправлено завантаження великих і багатофайлових роздач та показ скриншотів у док-режимі.
+* [**Оновлено**] [Sphaira 1.0.8](https://github.com/NaGaa95/sphaira/releases/tag/1.0.8) — Додано підтримку Ownfoil, меню альбому з вебпоширенням через QR-код і 32-бітні параметри адресного простору для форвардера, змінено керування іграми та покращено китайський і російський переклади.
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
+    * [**DNS.mitm**] Офіційне виправлення блокування серверів Nintendo на прошивці 23.0.0+. Надійно блокує фонові звернення консолі до Nintendo при перевірці оновлень системи та захищає від випадкового бану.
+    * [**fs.mitm**] Виправлено виліт гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
+    * [**set.mitm**] Номер версії Кефіру в «Системних налаштуваннях» консолі тепер оновлюється автоматично з файлу на карті пам'яті, без потреби перевстановлення Atmosphère.
 
 **923**
 * [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
@@ -199,6 +214,21 @@ ____
 The patch for legacy homebrew support no longer works, so some older homebrew applications may stop working. To fix this, patch them via https://hbpatcher.alula.me/
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
+
+**925**
+* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère component updates:
+    * [**DNS.mitm**] Fixed network access on firmware 23.0.0+: queries for hostnames that are not in the hosts file are now forwarded to the system instead of returning an empty result. Nintendo server blocking works as before.
+    * [**fs.mitm**] The official Atmosphère implementation of batch RomFS read interception (`StorageForBatchRead`) replaced Kefir's own patch. Added interception of previously missing FileSystem and DataStorage commands, improving LayeredFS mod support on 23.0.0+.
+    * [**fs.mitm**] Fixed a crash in the Asian and Japanese versions of *Trails in the Sky 2nd Chapter* when launching with mods due to insufficient RAM.
+    * [**libstratosphere**] Fixed the initial state of shared memory and transfer memory objects in system modules (PR #2873).
+
+**924**
+* [**Updated**] [TorrentShopNX 2.14](https://github.com/Langegen/TorrentShopNX/releases/tag/2.14) — Added torrent sorting and statistics, file names in downloads, fixed downloading large and multi-file torrents, and screenshot display in docked mode.
+* [**Updated**] [Sphaira 1.0.8](https://github.com/NaGaa95/sphaira/releases/tag/1.0.8) — Added Ownfoil support, an album menu with web sharing via QR code, and 32-bit address space parameters for the forwarder; changed game management and improved Chinese and Russian translations.
+* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère component updates:
+    * [**DNS.mitm**] Official fix for Nintendo server blocking on firmware 23.0.0+. Reliably blocks the console's background connections to Nintendo when checking for system updates and protects against accidental bans.
+    * [**fs.mitm**] Fixed a crash in *Trails in the Sky 2nd Chapter* when launching with mods due to insufficient RAM.
+    * [**set.mitm**] The Kefir version number in the console's “System Settings” now updates automatically from a file on the memory card, without needing to reinstall Atmosphère.
 
 **923**
 * [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère components update:
