@@ -62,6 +62,14 @@ if (fsexists("sd:/kefir")) {
 			delfile("sd:/bootloader/ini/!kefir_updater.ini")
 			deldir("sd:/kefir")
 			p("Download the update again.")
+			p("Press any button to reboot.")
+			pause()
+			# Same reboot as at the end of the update: hekate boots the old Kefir.
+			if (is_erista()) {
+				payload("sd:/payload.bin")
+			}.else(){
+				reboot_ofw();
+			}
 		}
 		pe()
 	}
