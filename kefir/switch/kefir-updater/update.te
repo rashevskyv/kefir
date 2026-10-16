@@ -329,6 +329,23 @@ if (fsexists("sd:/kefir")) {
 	clear()
 	p("* Copy kefir to SD")
 
+	# Sysmodules that are not in the new Kefir lose boot2.flag: one built for an older
+	# Atmosphere can hang the boot (black screen). Kefir Hub can turn them back on.
+	sysDir = "sd:/atmosphere/contents"
+	if (fsexists(sysDir)) {
+		sysList = readdir(sysDir)
+		sysDirs = sysList.folders.copy()
+		sysDirs.foreach("sysName") {
+			sysFlag = sysDir + "/" + sysName + "/flags/boot2.flag"
+			if (fsexists(sysFlag)) {
+				if (!fsexists("sd:/kefir/atmosphere/contents/" + sysName)) {
+					delfile(sysFlag)
+					p("  Sysmodule turned off: " + sysName)
+				}
+			}
+		}
+	}
+
 	deldir("sd:/kefir/switch/kefirupdater/")
 	copydir("sd:/kefir/atmosphere", "sd:/")
 	copydir("sd:/kefir/bootloader", "sd:/")
