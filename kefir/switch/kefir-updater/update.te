@@ -60,6 +60,37 @@ oc=fsexists("sd:/atmosphere/kips/kefir.kip")
 # syscon=0
 # oc=0
 
+# Check the new Kefir before anything is deleted: an incomplete /kefir must not
+# leave the SD card without boot files (black screen).
+if (fsexists("sd:/kefir")) {
+	kefirBad = 0
+	kefirNeed = ["atmosphere/package3", "atmosphere/stratosphere.romfs", "atmosphere/reboot_payload.bin", "bootloader/payloads/fusee.bin", "bootloader/hekate_ipl.ini", "bootloader/hekate_ipl_.ini"]
+	kefirNeed.foreach("kefirFile") {
+		if (!fsexists("sd:/kefir/" + kefirFile)) {
+			p("Missing: /kefir/" + kefirFile)
+			kefirBad = 1
+		}
+	}
+	if (boot) {
+		if (!fsexists("sd:/kefir/boot.dat")) {
+			p("Missing: /kefir/boot.dat")
+			kefirBad = 1
+		}
+	}
+	if (kefirBad) {
+		p()
+		p("The update files are incomplete. Nothing was changed.")
+		# Leave the update boot only when the normal hekate config can come back.
+		if (fsexists("sd:/kefir/bootloader/hekate_ipl_.ini")) {
+			copyfile("sd:/kefir/bootloader/hekate_ipl_.ini", "sd:/bootloader/hekate_ipl.ini")
+			delfile("sd:/bootloader/ini/!kefir_updater.ini")
+			deldir("sd:/kefir")
+			p("Download the update again.")
+		}
+		pe()
+	}
+}
+
 # 1. Удаляем папки и файлы
 p("* Removing old files")
 
@@ -173,8 +204,12 @@ delfile("sd:/atmosphere/hbl_atmo.nsp");
 delfile("sd:/atmosphere/fusee-secondary.bin.sig");
 delfile("sd:/atmosphere/hbl.nsp.sig");
 delfile("sd:/atmosphere/hbl.json");
-if (fsexists("sd:/atmosphere/system_settings.ini")) {
-		copyfile("sd:/atmosphere/system_settings.ini", "sd:/atmosphere/system_settings.bkp")
+# Keep the user's settings (fan curve, USB 3, ...): the package copy overwrites the file.
+# A backup left by a failed copy is the user's file, so it is not overwritten.
+if (!fsexists("sd:/atmosphere/config/system_settings.bkp")) {
+	if (fsexists("sd:/atmosphere/config/system_settings.ini")) {
+		copyfile("sd:/atmosphere/config/system_settings.ini", "sd:/atmosphere/config/system_settings.bkp")
+	}
 }
 delfile("sd:/atmosphere/kips/fs_mitm.kip");
 delfile("sd:/atmosphere/kips/ldn_mitm.kip");
@@ -347,14 +382,26 @@ if (fsexists("sd:/kefir")) {
 	}
 
 	deldir("sd:/kefir/switch/kefirupdater/")
-	copydir("sd:/kefir/atmosphere", "sd:/")
-	copydir("sd:/kefir/bootloader", "sd:/")
-	copydir("sd:/kefir/config", "sd:/")
+	# bootloader goes first: after a failed copy hekate still starts this update again.
+	copyErr = copydir("sd:/kefir/bootloader", "sd:/")
+	if (!copyErr) { copyErr = copydir("sd:/kefir/atmosphere", "sd:/") }
+	if (!copyErr) { copyErr = copydir("sd:/kefir/config", "sd:/") }
+	if (!copyErr) { copyErr = copydir("sd:/kefir/switch", "sd:/") }
+	if (!copyErr) { copyErr = copyfile("sd:/atmosphere/reboot_payload.bin", "sd:/payload.bin") }
+	if (!copyErr) {
+		if (boot) { copyErr = copyfile("sd:/kefir/boot.dat", "sd:/boot.dat") }
+	}
+	if (copyErr) {
+		# Keep /kefir and the update boot: the next start copies again.
+		p()
+		p("Copy error " + copyErr.str() + ". The SD card can be full.")
+		p("Free space on the SD card, then turn the console on again.")
+		p("The update will start again.")
+		pe()
+	}
 	copydir("sd:/kefir/games", "sd:/")
-	copydir("sd:/kefir/switch", "sd:/")
 
 	if(boot) {
-		copyfile("sd:/kefir/boot.dat", "sd:/boot.dat")
 		copyfile("sd:/kefir/boot.ini", "sd:/boot.ini")
 	}
 
@@ -365,7 +412,6 @@ if (fsexists("sd:/kefir")) {
 	copyfile("sd:/kefir/exosphere.ini", "sd:/exosphere.ini")
 	copyfile("sd:/kefir/hbmenu.nro", "sd:/hbmenu.nro")
 	copyfile("sd:/kefir/keys.txt", "sd:/keys.txt")
-	copyfile("sd:/atmosphere/reboot_payload.bin", "sd:/payload.bin")
 	delfile("sd:/atmosphere/stratosphere.romfs.aio");
 	delfile("sd:/atmosphere/fusee-secondary.bin.aio");
 	delfile("sd:/sept/payload.bin.aio");
@@ -381,8 +427,9 @@ if (fsexists("sd:/emummc/emummc.ini_bkp")) {
 	movefile("sd:/emummc/emummc.ini_bkp", "sd:/emummc/emummc.ini")
 }
 
-if (fsexists("sd:/atmosphere/system_settings.bkp")) {
-	movefile("sd:/atmosphere/system_settings.bkp", "sd:/atmosphere/system_settings.ini")
+if (fsexists("sd:/atmosphere/config/system_settings.bkp")) {
+	delfile("sd:/atmosphere/config/system_settings.ini")
+	movefile("sd:/atmosphere/config/system_settings.bkp", "sd:/atmosphere/config/system_settings.ini")
 }
 
 if (oc) {
