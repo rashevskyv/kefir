@@ -327,6 +327,15 @@ if exist "%sd%:\TegraExplorer\scripts\nand_transfer_dump_auto.te" (del "%sd%:\Te
 if exist "%sd%:\TegraExplorer\scripts\nand_transfer_restore_auto.te" (del "%sd%:\TegraExplorer\scripts\nand_transfer_restore_auto.te")
 if exist "%sd%:\startup.te" (findstr /b /c:"# kefir-hub-owned" "%sd%:\startup.te" >nul && del "%sd%:\startup.te")
 
+@REM Sysmodules that are not in the new Kefir lose boot2.flag: one built for an older
+@REM Atmosphere can hang the boot (black screen). Kefir Hub can turn them back on.
+for /d %%d in ("%sd%:\atmosphere\contents\*") do (
+	if exist "%%d\flags\boot2.flag" if not exist "%~dp0atmosphere\contents\%%~nxd\" (
+		del "%%d\flags\boot2.flag"
+		echo Sysmodule turned off: %%~nxd
+	)
+)
+
 
 echo ------------------------------------------------------------------------
 echo.
