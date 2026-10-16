@@ -36,30 +36,6 @@ pegascape=fsexists("sd:/pegascape")
 syscon=fsexists("sd:/atmosphere/contents/690000000000000D/flags/boot2.flag")
 missioncontrol=fsexists("sd:/atmosphere/contents/010000000000bd00/flags/boot2.flag")
 
-if (fsexists("sd:/switch/DBI/dbi.config")) {
-	if (fsexists("sd:/switch/DBI/dbi.config_")) {
-		delfile("sd:/switch/DBI/dbi.config_")
-	}
-    copyfile("sd:/switch/DBI/dbi.config", "sd:/switch/DBI/dbi.config_")
-}
-
-if (!fsexists("sd:/switch/tinfoil/locations.bkp")) {
-	if (fsexists("sd:/switch/tinfoil/locations.conf")) {
-		if (fsexists("sd:/switch/tinfoil/locations.bkp")) {
-			delfile("sd:/switch/tinfoil/locations.bkp")
-		}
-		copyfile("sd:/switch/tinfoil/locations.conf", "sd:/switch/tinfoil/locations.bkp")
-	}
-}
-
-emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
-oc=fsexists("sd:/atmosphere/kips/kefir.kip")
-
-# Force mission control status
-# missioncontrol=0
-# syscon=0
-# oc=0
-
 # Check the new Kefir before anything is deleted: an incomplete /kefir must not
 # leave the SD card without boot files (black screen).
 if (fsexists("sd:/kefir")) {
@@ -90,6 +66,30 @@ if (fsexists("sd:/kefir")) {
 		pe()
 	}
 }
+
+if (fsexists("sd:/switch/DBI/dbi.config")) {
+	if (fsexists("sd:/switch/DBI/dbi.config_")) {
+		delfile("sd:/switch/DBI/dbi.config_")
+	}
+    copyfile("sd:/switch/DBI/dbi.config", "sd:/switch/DBI/dbi.config_")
+}
+
+if (!fsexists("sd:/switch/tinfoil/locations.bkp")) {
+	if (fsexists("sd:/switch/tinfoil/locations.conf")) {
+		if (fsexists("sd:/switch/tinfoil/locations.bkp")) {
+			delfile("sd:/switch/tinfoil/locations.bkp")
+		}
+		copyfile("sd:/switch/tinfoil/locations.conf", "sd:/switch/tinfoil/locations.bkp")
+	}
+}
+
+emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
+oc=fsexists("sd:/atmosphere/kips/kefir.kip")
+
+# Force mission control status
+# missioncontrol=0
+# syscon=0
+# oc=0
 
 # 1. Удаляем папки и файлы
 p("* Removing old files")
@@ -395,8 +395,8 @@ if (fsexists("sd:/kefir")) {
 		# Keep /kefir and the update boot: the next start copies again.
 		p()
 		p("Copy error " + copyErr.str() + ". The SD card can be full.")
-		p("Free space on the SD card, then turn the console on again.")
-		p("The update will start again.")
+		p("Hold POWER to turn the console off. Free space on the SD card.")
+		p("Turn the console on: the update starts again.")
 		pe()
 	}
 	copydir("sd:/kefir/games", "sd:/")
