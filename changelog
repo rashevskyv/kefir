@@ -1,13 +1,24 @@
-## Changelog
+## Changelog 
 #### **UKR**
+**Повна підтримка 23.0.1 та Atmosphere 1.12.1**
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
+**927**
+* [**Оновлено**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.0.1.
+    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)**926**
+* [**Оновлено**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) — Оновлення до офіційного релізу Atmosphère 1.12.1:
+    * Додано підтримку прошивки 23.0.1.
+    * [**loader / mesosphere**] Перероблено патчі пам'яті веб-аплетів. Браузер, eShop та офлайн-браузер тепер бачать 1 ГБ вільної пам'яті, а купу браузерного рушія зменшено. Це виправляє вильоти під час відтворення відео в eShop та в іграх, які використовують LibAppletOff. Системним модулям знову доступно 40 МБ додаткової пам'яті замість 16 МБ.
+    * [**DNS.mitm**] Перехоплені DNS-запити тепер також передаються сервісу `bsdsocket`, щоб він коректно звільняв їхні ресурси. Перенаправлення з файлу hosts працює як раніше.
+    * Виправлено автоматичну резервну копію PRODINFO на нових ревізіях консолі, які не використовують сертифікат пристрою ECC (PR #2887).
+* [**Змінено**] Перемикач «40MB Memory» в Ultrahand (Settings) і KefirHub тепер показується лише на прошивках нижче 23.0.0. На 23.0.0+ він більше не потрібен: Atmosphère 1.12.1 сам дає 40 МБ пам'яті системним модулям.
+
 **925**
 * [**Оновлено**] [TorrentShopNX 2.15](https://github.com/Langegen/TorrentShopNX/releases/tag/2.15) — Оптимізовано стабільність завантажень на Switch і Retro, виправлено роботу архівів та помилку виходу, додано збільшення дрібного шрифту в налаштуваннях.
 * [**Оновлено**] [pipensx 1.6.3](https://github.com/i3sey/pipensx/releases/tag/1.6.3) — Оновлено вебінтерфейс для віддаленого керування бібліотекою й оновленнями, виправлено збої торрентів та встановлення, додано безпечний запас 512 МБ для NAND і трекери RuTracker для магнет-посилань.
-* [**Оновлено**] [Theme Patches fc149aa](https://github.com/exelix11/theme-patches/commit/fc149aac70306f2a50c5da6f28252140038ce6f0) — Додано підтримку прошивки Nintendo Switch 23.0.1.
+* [**Оновлено**] [Theme Patches fc149aa](https://github.com/exelix11/theme-patches/commit/fc149aac70306f2a50c5da6f28252140038ce6f0) — Додано патч екрана блокування для прошивки 23.0.1. Самі теми на 23.0.0+ поки не працюють: потрібне виправлення в Atmosphère.
 * [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
     * [**DNS.mitm**] Виправлено доступ до мережі на прошивці 23.0.0+: запити до адрес, яких немає у файлі hosts, тепер передаються системі, а не повертаються порожніми. Блокування серверів Nintendo працює як раніше.
     * [**fs.mitm**] Офіційна реалізація перехоплення пакетного читання RomFS (`StorageForBatchRead`) від розробників Atmosphère замінила власний патч Кефіру. Додано перехоплення раніше відсутніх команд FileSystem та DataStorage, що покращує роботу LayeredFS-модів на 23.0.0+.
@@ -62,15 +73,30 @@
 
 ____
 
+____
+
+____
+
 #### **ENG**
+**Full support for 23.0.1 and Atmosphere 1.12.1**
 The patch for legacy homebrew support no longer works, so some older homebrew applications may stop working. To fix this, patch them via https://hbpatcher.alula.me/
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
 
+**927**
+* [**Updated**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.0.1 support.
+    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)**926**
+* [**Updated**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) — Updated to the official Atmosphère 1.12.1 release:
+    * Added firmware 23.0.1 support.
+    * [**loader / mesosphere**] Reworked web applet memory patches. The browser, eShop, and offline browser now see 1 GB of free memory, and the browser engine heap has been reduced. This fixes crashes when playing videos in the eShop and in games that use LibAppletOff. System modules once again have access to 40 MB of additional memory instead of 16 MB.
+    * [**DNS.mitm**] Intercepted DNS requests are now also passed to the `bsdsocket` service so it can properly release their resources. Redirection from the hosts file works as before.
+    * Fixed automatic PRODINFO backup on newer console revisions that do not use the ECC device certificate (PR #2887).
+* [**Changed**] The “40MB Memory” toggle in Ultrahand (Settings) and KefirHub is now shown only on firmware below 23.0.0. It is no longer needed on 23.0.0+: Atmosphère 1.12.1 itself provides 40 MB of memory to system modules.
+
 **925**
 * [**Updated**] [TorrentShopNX 2.15](https://github.com/Langegen/TorrentShopNX/releases/tag/2.15) — Download stability on Switch and Retro has been optimized, archive handling and an exit error have been fixed, and an option to increase small font size has been added to the settings.
 * [**Updated**] [pipensx 1.6.3](https://github.com/i3sey/pipensx/releases/tag/1.6.3) — The web interface for remote library and update management has been updated, torrent and installation crashes have been fixed, and a safe 512 MB reserve for NAND and RuTracker trackers for magnet links have been added.
-* [**Updated**] [Theme Patches fc149aa](https://github.com/exelix11/theme-patches/commit/fc149aac70306f2a50c5da6f28252140038ce6f0) — Added support for Nintendo Switch firmware 23.0.1.
+* [**Updated**] [Theme Patches fc149aa](https://github.com/exelix11/theme-patches/commit/fc149aac70306f2a50c5da6f28252140038ce6f0) — Added the lock screen patch for firmware 23.0.1. Themes themselves still do not work on 23.0.0+: a fix in Atmosphère is required.
 * [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère component updates:
     * [**DNS.mitm**] Fixed network access on firmware 23.0.0+: requests to addresses not present in the hosts file are now forwarded to the system instead of returning empty. Nintendo server blocking works as before.
     * [**fs.mitm**] The official implementation of RomFS batch read interception (`StorageForBatchRead`) from the Atmosphère developers has replaced Kefir's custom patch. Added interception of previously missing FileSystem and DataStorage commands, improving LayeredFS mod functionality on 23.0.0+.
