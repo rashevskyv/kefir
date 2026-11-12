@@ -1,0 +1,11 @@
+#FFDD00 Semi-stock has moved#
+
+hekate does not start Semi-stock now.
+Start Kefir (emuMMC) and turn it on there:
+
+1. Press L + D-pad Down + R3 (Ultrahand).
+2. Press Right to open Packages.
+3. Turn on #C7EA46 Semi-Stock Status#.
+
+The console restarts into Semi-stock.
+To go back, turn the same item off.
