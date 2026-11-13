@@ -6,8 +6,9 @@
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
 **933**
-* [**Додано**] [Nextendo Network](https://nextendo.network) у Kefir Hub — онлайн-гра в підтримуваних іграх на emuMMC через сервери Nextendo. До серверів Nintendo консоль не звертається.
-    * Як увімкнути: **Інструменти** → **Налаштування Кефіра** → **Nextendo** → **Nextendo на emuMMC**, утримуйте **A**. Типово Nextendo вимкнено.
+* [**Додано**] [Nextendo Network](https://nextendo.network) у Kefir Hub — онлайн-гра в підтримуваних іграх на emuMMC. Онлайн-сервіси цих ігор ідуть на сервери Nextendo замість серверів Nintendo.
+    * Потрібен безкоштовний обліковий запис Nextendo: [реєстрація](https://nextendo.network/register).
+    * Як увімкнути: **Інструменти** → **Налаштування Кефіра** → **Nextendo** → **Nextendo на emuMMC**, утримуйте **A**. Потім прив'яжіть консоль до облікового запису Nextendo за інструкцією нижче. Типово Nextendo вимкнено.
     * Підтримувані встановлені ігри мають у списку **Ігри** зелену позначку «Онлайн» з кількістю гравців.
     * Якщо для вашої прошивки ще немає патча Nextendo, сторінка Nextendo покаже це в рядку **Статус**.
     * Оновлення Кефіру зберігає патчі Nextendo (папки `nextendo_*`).
@@ -66,8 +67,9 @@ The old HBMenu forwarder will also launch with an error. Reinstall it from 'game
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
 
 **933**
-* [**Added**] [Nextendo Network](https://nextendo.network) in Kefir Hub — online play for supported games on the emuMMC through the Nextendo servers. The console does not reach the Nintendo servers.
-    * To switch it on: **Tools** → **Kefir Settings** → **Nextendo** → **Nextendo on emuMMC**, hold **A**. Nextendo is off by default.
+* [**Added**] [Nextendo Network](https://nextendo.network) in Kefir Hub — online play for supported games on the emuMMC. The online services of these games go to the Nextendo servers instead of the Nintendo servers.
+    * A free Nextendo account is needed: [sign up](https://nextendo.network/register).
+    * To switch it on: **Tools** → **Kefir Settings** → **Nextendo** → **Nextendo on emuMMC**, hold **A**. Then link the console to your Nextendo account as the guide below describes. Nextendo is off by default.
     * Supported installed games show a green "Online" badge with the player count in the **Games** list.
     * If your firmware has no Nextendo patch yet, the Nextendo page shows it in the **Status** row.
     * A Kefir update keeps the Nextendo patches (the `nextendo_*` folders).
