@@ -6,57 +6,42 @@
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
 **933**
-* [**Додано**] [Nextendo Network](https://nextendo.network) у Kefir Hub — онлайн-гра в підтримуваних іграх на emuMMC. Онлайн-сервіси цих ігор ідуть на сервери Nextendo замість серверів Nintendo.
-    * Потрібен безкоштовний обліковий запис Nextendo: [реєстрація](https://nextendo.network/register).
-    * Як увімкнути: **Інструменти** → **Налаштування Кефіра** → **Nextendo** → **Nextendo на emuMMC**, утримуйте **A**. Потім прив'яжіть консоль до облікового запису Nextendo за інструкцією нижче. Типово Nextendo вимкнено.
-    * Підтримувані встановлені ігри мають у списку **Ігри** зелену позначку «Онлайн» з кількістю гравців.
-    * Якщо для вашої прошивки ще немає патча Nextendo, сторінка Nextendo покаже це в рядку **Статус**.
-    * Оновлення Кефіру зберігає патчі Nextendo (папки `nextendo_*`).
-    * [**Інструкція з Nextendo**](https://hub.customfw.xyz/uk/kefir-settings/#nextendo)
-* [**Оновлено**] [TorrentShopNX 2.22](https://github.com/Langegen/TorrentShopNX/releases/tag/2.22) — Черга завантажень пропускає повільні роздачі, стабілізовано рідкісні торенти, виправлено встановлення NSP, емуляторів і ретроігор та перенесено звіти про помилки на новий сервер.
-* [**Оновлено**] [pipensx 1.7.1](https://gitlab.com/pipensx-group/pipensx/-/releases/1.7.1) — Додано вебкерування завантаженнями й каталогом, теми та акцентні кольори, покращений пошук і вибір файлів, а також виправлено P2P-з’єднання, 7z-обробку та оновлення NRO.
-* [**Оновлено**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — Екран встановлення отримав детальний прогрес і швидкість, додано пропозицію перезавантажитися для дампу ключів, значок Nextendo Online з кількістю гравців, коректне оновлення запущеного файлу та виправлено видалення homebrew із папкою.
-* [**Оновлено**] [Theme Patches 47c8a5d](https://github.com/exelix11/theme-patches/commits/master) — Додано підтримку прошивки 23.5.0.
-* [**Оновлено**] [Mission Control v0.16.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.1) — Додано підтримку прошивки 23.5.0, опцію вимкнення комбінацій Home і Capture та виправлено часові мітки dscale і Bluetooth-патчі для прошивок 22.0.0+.
-* [**Оновлено**] [Hekate v6.5.5](https://github.com/CTCaer/hekate/releases/tag/v6.5.5) — Підтримка прошивки 23.5.0 у hekate, emuMMC і Nyx 1.9.5. Перевипуск від 11.11.2026 виправляє патч NOGC для FAT32-версії модуля FS.
-* [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.5.0.
-    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-
-**932**
-* [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.5.0.
-    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-
-**930**
-* [**Додано**] [Kefir Hub](https://github.com/rashevskyv/kefir-hub) — новий головний застосунок Kefir. Він замінює кілька окремих програм:
-    * Sphaira — запуск homebrew. Kefir Hub тепер стоїть на місці `hbmenu.nro`.
-    * Kefir Updater — оновлення Kefir і прошивки: **Інструменти** → **Оновлювач**.
-    * Daybreak — встановлення прошивки з архіву або папки на карті пам'яті.
-    * Linkalho — прив'язка облікового запису без мережі: **Інструменти** → **Інструменти** → **Користувачі**.
-    * Пакети Ultrahand «Kefir Menu» — налаштування Kefir, програми, теми й переклад тепер у Kefir Hub. Semi-Stock, Reboot і Shutdown лишилися в Ultrahand.
-    * DBI лишається у складі Kefir.
+* [**Додано**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — новий головний застосунок Кефіру. Він стоїть на місці `hbmenu.nro` і замінює кілька окремих програм:
+    * запуск homebrew замість Sphaira;
+    * оновлення Кефіру і прошивки замість Kefir Updater: **Інструменти** → **Оновлювач**;
+    * встановлення прошивки з архіву або папки на карті пам'яті замість Daybreak;
+    * прив'язка облікового запису без мережі замість Linkalho: **Інструменти** → **Інструменти** → **Користувачі**;
+    * налаштування Кефіру, додаткові програми, теми й переклад інтерфейсу замість пакетів Ultrahand «Kefir Menu»: **Інструменти** → **Налаштування Кефіра**;
+    * керування вентилятором замість NX-FanControl: **Крива кулера**. Kefir Hub сам запропонує встановити свій модуль вентилятора.
+    * DBI лишається у складі Кефіру. Semi-Stock, Reboot і Shutdown лишилися в Ultrahand.
     * [**Документація Kefir Hub**](https://hub.customfw.xyz/uk/)
+* [**Змінено**] Інструкції переписано під Kefir Hub. Як оновлювати Кефір і прошивку, встановлювати ігри, керувати збереженнями та налаштуваннями — у [**документації Kefir Hub**](https://hub.customfw.xyz/uk/).
+* [**Додано**] [Nextendo Network](https://nextendo.network) у Kefir Hub — онлайн-гра в підтримуваних іграх на emuMMC. Онлайн-сервіси цих ігор ідуть на сервери Nextendo замість серверів Nintendo.
+    * Потрібен безкоштовний обліковий запис Nextendo: [**реєстрація**](https://nextendo.network/register).
+    * Як увімкнути: **Інструменти** → **Налаштування Кефіра** → **Nextendo** → **Nextendo на emuMMC**, утримуйте **A**. Типово Nextendo вимкнено.
+    * Потім прив'яжіть консоль до облікового запису Nextendo за [**посібником Nextendo**](https://discord.gg/XPfeCMwnzQ).
+    * Підтримувані встановлені ігри мають у списку **Ігри** зелену позначку «Онлайн» з кількістю гравців.
+    * Оновлення Кефіру зберігає патчі Nextendo (папки `nextendo_*`).
+* [**Видалено**] Sphaira, Kefir Updater, Daybreak і Linkalho. Їх замінив Kefir Hub.
+* [**Видалено**] Пакети Ultrahand «Kefir Menu»: Settings, Software, Theme і Translate Interface. Їх замінив Kefir Hub.
+* [**Видалено**] NX-FanControl (оверлей і системний модуль). Керування вентилятором тепер у Kefir Hub.
 * [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 23.5.0:
     * fusee розпізнає новий package1 прошивки 23.5.0.
     * emuMMC працює з модулем FS прошивки 23.5.0 (FAT32 і exFAT).
     * Оновлено патчі USB 3.0 і патчі пам'яті браузера для 23.5.0.
     * Оновлення до 23.5.0 перепалює ще один запобіжник (fuse) проти даунгрейду. Тепер їх 25. Нового master key немає.
     * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.12.2)
-* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — розпізнавання прошивки 23.5.0. Без цього пункт `Full Stock` на 23.5.0 показував помилку «Unknown pkg1 version». Nyx показує 25 перепалених запобіжників як «23.5.0+».
-
-**929**
-* [**Оновлено**] [TorrentShopNX 2.21](https://github.com/Langegen/TorrentShopNX/releases/tag/2.21) — Додано підтримку версій для ігор у мультиігрових торентах, авторизацію TorrServer, добірки «Гонки» й «Спорт», чіткіші зображення та виправлено втрату даних, зависання файлового менеджера й нестабільні завантаження торентів.
-* [**Оновлено**] [pipensx 1.6.6](https://gitlab.com/pipensx-group/pipensx/-/releases/1.6.6) — Автоматизовано складання pipensx 1.6.6 на вимогу.
-* [**Оновлено**] [Sys Con 2.1.0](https://github.com/o0Zz/sys-con/releases/tag/2.1.0) — Додано підтримку Xbox Wireless Adapter, USB-клавіатур і мишей та горизонтального одиночного Joy‑Con, а також виправлено зависання в Super Mario 3D All-Stars і проблеми з керуванням, виявленням контролерів та сном.
-
-**928**
-* [**Оновлено**] [TorrentShopNX 2.20](https://github.com/Langegen/TorrentShopNX/releases/tag/2.20) — Сторінка гри й менеджер звіряють версії з каталогом, підтримують оновлення до найновішої роздачі офлайн, попереджають про новіші файли та виправляють гортання скриншотів.
-* [**Оновлено**] [Sphaira 1.0.9](https://github.com/NaGaa95/sphaira/releases/tag/1.0.9) — Додано чергу встановлення Ownfoil у фоні, архівацію ігор і вибір мови запуску для кожної гри, а також виправлено відновлення збережень, завантаження Themezer, списки WebDAV і зависання MTP-передач.
-* [**Оновлено**] [Sys Patch v1.6.3.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0) — Додано am hbxfix для прошивки 22.0.0.
-* [**Видалено**] NX-FanControl (оверлей і системний модуль), бо керування вентилятором тепер є в KefirHub (Tools → Fan curve). Коли ви відкриєте Fan curve, KefirHub сам запропонує встановити свій модуль вентилятора.
 * [**Додано**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — вимкнення окремих системних модулів і SD-модів через `system_settings.ini` ([PR #2901](https://github.com/Atmosphere-NX/Atmosphere/pull/2901)). Ключі `disabled_contents`, `syscfw_disabled_contents` і `emummc_disabled_contents` у секції `[atmosphere]` приймають до 64 ProgramId через кому. Приклад: `syscfw_disabled_contents = str!"0100000000001000"` вимикає кастомні теми лише на sysMMC. Після зміни потрібне перезавантаження.
-* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — перевірка хешів резервної копії перед відновленням ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). Режим `verification=3` (Full Hashes) у `bootloader/nyx.ini` записує файл `<назва>.sha256sums` під час бекапу і звіряє його перед відновленням BOOT0/BOOT1, GPP або RAW GPP. Пошкоджена копія на eMMC не записується. Типове значення лишається `verification=1`.
-* [**Виправлено**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — ядро mesosphere тепер зберігає всі FPU-регістри потоку, коли перемикає його під час обробника винятків користувача ([PR #2909](https://github.com/Atmosphere-NX/Atmosphere/pull/2909)). Раніше ядро зберігало лише регістри q8–q15, тому після обробника потік міг продовжити роботу з пошкодженими значеннями. Виправлення стосується homebrew і модів, які мають власний обробник винятків.
-* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — підтримка екранів Retro Remake SUPER5 і SUPER7 (IPS та OLED) ([PR #1314](https://github.com/CTCaer/hekate/pull/1314)). FHD-версії працюють у рідній роздільності 1080×1920, а інтерфейс hekate і Nyx масштабується з 720p. Nyx показує модель екрана в інформації про консоль.
+* [**Виправлено**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — ядро mesosphere тепер зберігає всі FPU-регістри потоку, коли перемикає його під час обробника винятків користувача ([PR #2909](https://github.com/Atmosphere-NX/Atmosphere/pull/2909)). Виправлення стосується homebrew і модів із власним обробником винятків.
+* [**Оновлено**] [Hekate v6.5.5](https://github.com/CTCaer/hekate/releases/tag/v6.5.5) — підтримка прошивки 23.5.0 у hekate, emuMMC і Nyx 1.9.5. Пункт `Full Stock` на 23.5.0 більше не показує помилку «Unknown pkg1 version». Nyx показує 25 перепалених запобіжників як «23.5.0+». Перевипуск від 11.11.2026 виправляє патч NOGC для FAT32-версії модуля FS.
+* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — перевірка хешів резервної копії перед відновленням ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). Режим `verification=3` (Full Hashes) у `bootloader/nyx.ini` записує файл `<назва>.sha256sums` під час бекапу і звіряє його перед відновленням BOOT0/BOOT1, GPP або RAW GPP. Типове значення лишається `verification=1`.
+* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — підтримка екранів Retro Remake SUPER5 і SUPER7 (IPS та OLED) ([PR #1314](https://github.com/CTCaer/hekate/pull/1314)).
+* [**Оновлено**] [Mission Control v0.16.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.1) — підтримка прошивки 23.5.0, опція вимкнення комбінацій Home і Capture, виправлено Bluetooth-патчі для прошивок 22.0.0+.
+* [**Оновлено**] [Theme Patches 47c8a5d](https://github.com/exelix11/theme-patches/commits/master) — підтримка прошивки 23.5.0.
+* [**Оновлено**] [Sys Con 2.1.0](https://github.com/o0Zz/sys-con/releases/tag/2.1.0) — підтримка Xbox Wireless Adapter, USB-клавіатур і мишей та горизонтального одиночного Joy‑Con; виправлено зависання в Super Mario 3D All-Stars і проблеми з виявленням контролерів та сном.
+* [**Оновлено**] [Sys Patch v1.6.3.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0) — додано am hbxfix для прошивки 22.0.0.
+* [**Оновлено**] [TorrentShopNX 2.22](https://github.com/Langegen/TorrentShopNX/releases/tag/2.22) — версії ігор у мультиігрових торентах, авторизація TorrServer, звірка версій із каталогом, черга завантажень пропускає повільні роздачі; виправлено встановлення NSP, емуляторів і ретроігор.
+* [**Оновлено**] [pipensx 1.7.1](https://gitlab.com/pipensx-group/pipensx/-/releases/1.7.1) — вебкерування завантаженнями й каталогом, теми та акцентні кольори, покращений пошук; виправлено P2P-з'єднання, обробку 7z та оновлення NRO.
 
 ____
 
@@ -67,54 +52,39 @@ The old HBMenu forwarder will also launch with an error. Reinstall it from 'game
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
 
 **933**
-* [**Added**] [Nextendo Network](https://nextendo.network) in Kefir Hub — online play for supported games on the emuMMC. The online services of these games go to the Nextendo servers instead of the Nintendo servers.
-    * A free Nextendo account is needed: [sign up](https://nextendo.network/register).
-    * To switch it on: **Tools** → **Kefir Settings** → **Nextendo** → **Nextendo on emuMMC**, hold **A**. Then link the console to your Nextendo account as the guide below describes. Nextendo is off by default.
-    * Supported installed games show a green "Online" badge with the player count in the **Games** list.
-    * If your firmware has no Nextendo patch yet, the Nextendo page shows it in the **Status** row.
-    * A Kefir update keeps the Nextendo patches (the `nextendo_*` folders).
-    * [**Nextendo guide**](https://hub.customfw.xyz/kefir-settings/#nextendo)
-* [**Updated**] [TorrentShopNX 2.22](https://github.com/Langegen/TorrentShopNX/releases/tag/2.22) — The download queue skips slow torrents, rare torrents have been stabilized, NSP, emulator, and retro game installation has been fixed, and bug reports have been moved to a new server.
-* [**Updated**] [pipensx 1.7.1](https://gitlab.com/pipensx-group/pipensx/-/releases/1.7.1) — Added web management for downloads and the catalog, themes and accent colors, improved search and file selection, and fixed P2P connections, 7z processing, and NRO updates.
-* [**Updated**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — The installation screen now features detailed progress and speed, added a reboot prompt for key dumping, a Nextendo Online icon with player count, correct updating of the running file, and fixed homebrew deletion with its folder.
-* [**Updated**] [Theme Patches 47c8a5d](https://github.com/exelix11/theme-patches/commits/master) — Added firmware 23.5.0 support.
-* [**Updated**] [Mission Control v0.16.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.1) — Added firmware 23.5.0 support, an option to disable Home and Capture button combinations, and fixed dscale timestamps and Bluetooth patches for firmware 22.0.0+.
-* [**Updated**] [Hekate v6.5.5](https://github.com/CTCaer/hekate/releases/tag/v6.5.5) — Firmware 23.5.0 support in hekate, emuMMC, and Nyx 1.9.5. The re-release from 11.11.2026 fixes the NOGC patch for the FAT32 version of the FS module.
-* [**Updated**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.5.0 support.
-    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-
-**932**
-* [**Updated**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.5.0 support.
-    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
-
-**930**
-* [**Added**] [Kefir Hub](https://github.com/rashevskyv/kefir-hub) — the new main app of Kefir. It replaces several separate apps:
-    * Sphaira — the homebrew launcher. Kefir Hub now takes the place of `hbmenu.nro`.
-    * Kefir Updater — Kefir and firmware updates: **Tools** → **Updater**.
-    * Daybreak — firmware install from an archive or a folder on the memory card.
-    * Linkalho — offline account linking: **Tools** → **Tools** → **Users**.
-    * The Ultrahand "Kefir Menu" packages — Kefir settings, software, themes and translation are now in Kefir Hub. Semi-Stock, Reboot and Shutdown stay in Ultrahand.
-    * DBI stays in Kefir.
+* [**Added**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — the new main app of Kefir. It takes the place of `hbmenu.nro` and replaces several separate apps:
+    * the homebrew launcher instead of Sphaira;
+    * Kefir and firmware updates instead of Kefir Updater: **Tools** → **Updater**;
+    * firmware install from an archive or a folder on the memory card instead of Daybreak;
+    * offline account linking instead of Linkalho: **Tools** → **Tools** → **Users**;
+    * Kefir settings, additional software, themes and interface translation instead of the Ultrahand "Kefir Menu" packages: **Tools** → **Kefir Settings**;
+    * fan control instead of NX-FanControl: **Fan curve**. Kefir Hub offers to install its own fan module.
+    * DBI stays in Kefir. Semi-Stock, Reboot and Shutdown stay in Ultrahand.
     * [**Kefir Hub documentation**](https://hub.customfw.xyz/)
+* [**Changed**] The guides are rewritten for Kefir Hub. How to update Kefir and the firmware, install games, manage saves and settings: see the [**Kefir Hub documentation**](https://hub.customfw.xyz/).
+* [**Added**] [Nextendo Network](https://nextendo.network) in Kefir Hub — online play for supported games on the emuMMC. The online services of these games go to the Nextendo servers instead of the Nintendo servers.
+    * A free Nextendo account is needed: [**sign up**](https://nextendo.network/register).
+    * To switch it on: **Tools** → **Kefir Settings** → **Nextendo** → **Nextendo on emuMMC**, hold **A**. Nextendo is off by default.
+    * Then link the console to your Nextendo account with the [**Nextendo guide**](https://discord.gg/XPfeCMwnzQ).
+    * Supported installed games show a green "Online" badge with the player count in the **Games** list.
+    * A Kefir update keeps the Nextendo patches (the `nextendo_*` folders).
+* [**Removed**] Sphaira, Kefir Updater, Daybreak and Linkalho. Kefir Hub replaces them.
+* [**Removed**] The Ultrahand "Kefir Menu" packages: Settings, Software, Theme and Translate Interface. Kefir Hub replaces them.
+* [**Removed**] NX-FanControl (overlay and system module). Fan control is now in Kefir Hub.
 * [**Updated**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) — support for firmware 23.5.0:
     * fusee recognizes the new package1 of firmware 23.5.0.
     * emuMMC works with the FS module of firmware 23.5.0 (FAT32 and exFAT).
     * Updated the USB 3.0 patches and the browser memory patches for 23.5.0.
     * The update to 23.5.0 burns one more anti-downgrade fuse. The count is now 25. There is no new master key.
-    * [**More details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.12.2)
-* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — recognition of firmware 23.5.0. Without it, the `Full Stock` entry showed the error "Unknown pkg1 version" on 23.5.0. Nyx shows 25 burnt fuses as "23.5.0+".
-
-**929**
-* [**Updated**] [TorrentShopNX 2.21](https://github.com/Langegen/TorrentShopNX/releases/tag/2.21) — Added support for game versions in multi-game torrents, TorrServer authorization, the “Racing” and “Sports” collections, sharper images, and fixed data loss, file manager freezes, and unstable torrent downloads.
-* [**Updated**] [pipensx 1.6.6](https://gitlab.com/pipensx-group/pipensx/-/releases/1.6.6) — Automated building pipensx 1.6.6 on demand.
-* [**Updated**] [Sys Con 2.1.0](https://github.com/o0Zz/sys-con/releases/tag/2.1.0) — Added support for the Xbox Wireless Adapter, USB keyboards and mice, and horizontal single Joy‑Con, and fixed freezes in Super Mario 3D All-Stars as well as issues with controls, controller detection, and sleep.
-
-**928**
-* [**Updated**] [TorrentShopNX 2.20](https://github.com/Langegen/TorrentShopNX/releases/tag/2.20) — The game page and manager compare versions with the catalog, support updating to the latest release offline, warn about newer files, and fix screenshot scrolling.
-* [**Updated**] [Sphaira 1.0.9](https://github.com/NaGaa95/sphaira/releases/tag/1.0.9) — Added a background Ownfoil installation queue, game archiving, and launch language selection for each game, as well as fixed save restoration, Themezer downloads, WebDAV lists, and MTP transfer freezes.
-* [**Updated**] [Sys Patch v1.6.3.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0) — Added am hbxfix for firmware 22.0.0.
-* [**Removed**] NX-FanControl (overlay and system module), because fan control is now available in KefirHub (Tools → Fan curve). When you open Fan curve, KefirHub will offer to install its fan module automatically.
-* [**Added**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — disabling individual system modules and SD mods via `system_settings.ini` ([PR #2901](https://github.com/Atmosphere-NX/Atmosphere/pull/2901)). The `disabled_contents`, `syscfw_disabled_contents`, and `emummc_disabled_contents` keys in the `[atmosphere]` section accept up to 64 comma-separated ProgramIds. Example: `syscfw_disabled_contents = str!"0100000000001000"` disables custom themes only on sysMMC. A reboot is required after making changes.
-* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — backup hash verification before restoration ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). The `verification=3` (Full Hashes) mode in `bootloader/nyx.ini` writes a `<name>.sha256sums` file during backup and verifies it before restoring BOOT0/BOOT1, GPP, or RAW GPP. A corrupted backup is not written to eMMC. The default value remains `verification=1`.
-* [**Fixed**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — the mesosphere kernel now saves all FPU registers of a thread when it switches the thread out during a user exception handler ([PR #2909](https://github.com/Atmosphere-NX/Atmosphere/pull/2909)). Before, the kernel saved only registers q8–q15, so the thread could continue with corrupted values after the handler. The fix affects homebrew and mods that install their own exception handler.
-* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — support for Retro Remake SUPER5 and SUPER7 screens (IPS and OLED) ([PR #1314](https://github.com/CTCaer/hekate/pull/1314)). FHD versions run at their native 1080×1920 resolution, and the hekate and Nyx interface is scaled up from 720p. Nyx shows the screen model in the console information.
+    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.12.2)
+* [**Added**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — disabling individual system modules and SD mods via `system_settings.ini` ([PR #2901](https://github.com/Atmosphere-NX/Atmosphere/pull/2901)). The `disabled_contents`, `syscfw_disabled_contents` and `emummc_disabled_contents` keys in the `[atmosphere]` section accept up to 64 comma-separated ProgramIds. Example: `syscfw_disabled_contents = str!"0100000000001000"` disables custom themes only on sysMMC. A reboot is required after a change.
+* [**Fixed**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — the mesosphere kernel now saves all FPU registers of a thread when it switches the thread out during a user exception handler ([PR #2909](https://github.com/Atmosphere-NX/Atmosphere/pull/2909)). The fix affects homebrew and mods with their own exception handler.
+* [**Updated**] [Hekate v6.5.5](https://github.com/CTCaer/hekate/releases/tag/v6.5.5) — firmware 23.5.0 support in hekate, emuMMC and Nyx 1.9.5. The `Full Stock` entry no longer shows the error "Unknown pkg1 version" on 23.5.0. Nyx shows 25 burnt fuses as "23.5.0+". The re-release from 11.11.2026 fixes the NOGC patch for the FAT32 version of the FS module.
+* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — backup hash verification before restoration ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). The `verification=3` (Full Hashes) mode in `bootloader/nyx.ini` writes a `<name>.sha256sums` file during backup and verifies it before restoring BOOT0/BOOT1, GPP or RAW GPP. The default value remains `verification=1`.
+* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — support for Retro Remake SUPER5 and SUPER7 screens (IPS and OLED) ([PR #1314](https://github.com/CTCaer/hekate/pull/1314)).
+* [**Updated**] [Mission Control v0.16.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.1) — firmware 23.5.0 support, an option to disable the Home and Capture combinations, fixed Bluetooth patches for firmware 22.0.0+.
+* [**Updated**] [Theme Patches 47c8a5d](https://github.com/exelix11/theme-patches/commits/master) — firmware 23.5.0 support.
+* [**Updated**] [Sys Con 2.1.0](https://github.com/o0Zz/sys-con/releases/tag/2.1.0) — support for the Xbox Wireless Adapter, USB keyboards and mice and a horizontal single Joy‑Con; fixed freezes in Super Mario 3D All-Stars and issues with controller detection and sleep.
+* [**Updated**] [Sys Patch v1.6.3.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0) — added am hbxfix for firmware 22.0.0.
+* [**Updated**] [TorrentShopNX 2.22](https://github.com/Langegen/TorrentShopNX/releases/tag/2.22) — game versions in multi-game torrents, TorrServer authorization, version check against the catalog, the download queue skips slow torrents; fixed NSP, emulator and retro game installation.
+* [**Updated**] [pipensx 1.7.1](https://gitlab.com/pipensx-group/pipensx/-/releases/1.7.1) — web management for downloads and the catalog, themes and accent colors, better search; fixed P2P connections, 7z processing and NRO updates.
