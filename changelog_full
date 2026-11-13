@@ -8,6 +8,255 @@
 **933**
 * [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.5.0.
 
+**932**
+* [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.5.0.
+
+**930**
+* [**Додано**] [Kefir Hub](https://github.com/rashevskyv/kefir-hub) — новий головний застосунок Kefir. Він замінює кілька окремих програм:
+    * Sphaira — запуск homebrew. Kefir Hub тепер стоїть на місці `hbmenu.nro`.
+    * Kefir Updater — оновлення Kefir і прошивки: **Інструменти** → **Оновлювач**.
+    * Daybreak — встановлення прошивки з архіву або папки на карті пам'яті.
+    * Linkalho — прив'язка облікового запису без мережі: **Інструменти** → **Інструменти** → **Користувачі**.
+    * Пакети Ultrahand «Kefir Menu» — налаштування Kefir, програми, теми й переклад тепер у Kefir Hub. Semi-Stock, Reboot і Shutdown лишилися в Ultrahand.
+    * DBI лишається у складі Kefir.
+    * [**Документація Kefir Hub**](https://hub.customfw.xyz/uk/)
+* [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 23.5.0:
+    * fusee розпізнає новий package1 прошивки 23.5.0.
+    * emuMMC працює з модулем FS прошивки 23.5.0 (FAT32 і exFAT).
+    * Оновлено патчі USB 3.0 і патчі пам'яті браузера для 23.5.0.
+    * Оновлення до 23.5.0 перепалює ще один запобіжник (fuse) проти даунгрейду. Тепер їх 25. Нового master key немає.
+* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — розпізнавання прошивки 23.5.0. Без цього пункт `Full Stock` на 23.5.0 показував помилку «Unknown pkg1 version». Nyx показує 25 перепалених запобіжників як «23.5.0+».
+
+**929**
+* [**Оновлено**] [TorrentShopNX 2.21](https://github.com/Langegen/TorrentShopNX/releases/tag/2.21) — Додано підтримку версій для ігор у мультиігрових торентах, авторизацію TorrServer, добірки «Гонки» й «Спорт», чіткіші зображення та виправлено втрату даних, зависання файлового менеджера й нестабільні завантаження торентів.
+* [**Оновлено**] [pipensx 1.6.6](https://gitlab.com/pipensx-group/pipensx/-/releases/1.6.6) — Автоматизовано складання pipensx 1.6.6 на вимогу.
+* [**Оновлено**] [Sys Con 2.1.0](https://github.com/o0Zz/sys-con/releases/tag/2.1.0) — Додано підтримку Xbox Wireless Adapter, USB-клавіатур і мишей та горизонтального одиночного Joy‑Con, а також виправлено зависання в Super Mario 3D All-Stars і проблеми з керуванням, виявленням контролерів та сном.
+
+**928**
+* [**Оновлено**] [TorrentShopNX 2.20](https://github.com/Langegen/TorrentShopNX/releases/tag/2.20) — Сторінка гри й менеджер звіряють версії з каталогом, підтримують оновлення до найновішої роздачі офлайн, попереджають про новіші файли та виправляють гортання скриншотів.
+* [**Оновлено**] [Sphaira 1.0.9](https://github.com/NaGaa95/sphaira/releases/tag/1.0.9) — Додано чергу встановлення Ownfoil у фоні, архівацію ігор і вибір мови запуску для кожної гри, а також виправлено відновлення збережень, завантаження Themezer, списки WebDAV і зависання MTP-передач.
+* [**Оновлено**] [Sys Patch v1.6.3.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0) — Додано am hbxfix для прошивки 22.0.0.
+* [**Видалено**] NX-FanControl (оверлей і системний модуль), бо керування вентилятором тепер є в KefirHub (Tools → Fan curve). Коли ви відкриєте Fan curve, KefirHub сам запропонує встановити свій модуль вентилятора.
+* [**Додано**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — вимкнення окремих системних модулів і SD-модів через `system_settings.ini` ([PR #2901](https://github.com/Atmosphere-NX/Atmosphere/pull/2901)). Ключі `disabled_contents`, `syscfw_disabled_contents` і `emummc_disabled_contents` у секції `[atmosphere]` приймають до 64 ProgramId через кому. Приклад: `syscfw_disabled_contents = str!"0100000000001000"` вимикає кастомні теми лише на sysMMC. Після зміни потрібне перезавантаження.
+* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — перевірка хешів резервної копії перед відновленням ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). Режим `verification=3` (Full Hashes) у `bootloader/nyx.ini` записує файл `<назва>.sha256sums` під час бекапу і звіряє його перед відновленням BOOT0/BOOT1, GPP або RAW GPP. Пошкоджена копія на eMMC не записується. Типове значення лишається `verification=1`.
+* [**Виправлено**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — ядро mesosphere тепер зберігає всі FPU-регістри потоку, коли перемикає його під час обробника винятків користувача ([PR #2909](https://github.com/Atmosphere-NX/Atmosphere/pull/2909)). Раніше ядро зберігало лише регістри q8–q15, тому після обробника потік міг продовжити роботу з пошкодженими значеннями. Виправлення стосується homebrew і модів, які мають власний обробник винятків.
+* [**Додано**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — підтримка екранів Retro Remake SUPER5 і SUPER7 (IPS та OLED) ([PR #1314](https://github.com/CTCaer/hekate/pull/1314)). FHD-версії працюють у рідній роздільності 1080×1920, а інтерфейс hekate і Nyx масштабується з 720p. Nyx показує модель екрана в інформації про консоль.
+
+**927**
+* [**Оновлено**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.0.1.
+
+**926**
+* [**Оновлено**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) — Оновлення до офіційного релізу Atmosphère 1.12.1:
+    * Додано підтримку прошивки 23.0.1.
+    * [**loader / mesosphere**] Перероблено патчі пам'яті веб-аплетів. Браузер, eShop та офлайн-браузер тепер бачать 1 ГБ вільної пам'яті, а купу браузерного рушія зменшено. Це виправляє вильоти під час відтворення відео в eShop та в іграх, які використовують LibAppletOff. Системним модулям знову доступно 40 МБ додаткової пам'яті замість 16 МБ.
+    * [**DNS.mitm**] Перехоплені DNS-запити тепер також передаються сервісу `bsdsocket`, щоб він коректно звільняв їхні ресурси. Перенаправлення з файлу hosts працює як раніше.
+    * Виправлено автоматичну резервну копію PRODINFO на нових ревізіях консолі, які не використовують сертифікат пристрою ECC (PR #2887).
+* [**Змінено**] Перемикач «40MB Memory» в Ultrahand (Settings) і KefirHub тепер показується лише на прошивках нижче 23.0.0. На 23.0.0+ він більше не потрібен: Atmosphère 1.12.1 сам дає 40 МБ пам'яті системним модулям.
+
+**925**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
+    * [**DNS.mitm**] Виправлено доступ до мережі на прошивці 23.0.0+: запити до адрес, яких немає у файлі hosts, тепер передаються системі, а не повертаються порожніми. Блокування серверів Nintendo працює як раніше.
+    * [**fs.mitm**] Офіційна реалізація перехоплення пакетного читання RomFS (`StorageForBatchRead`) від розробників Atmosphère замінила власний патч Кефіру. Додано перехоплення раніше відсутніх команд FileSystem та DataStorage, що покращує роботу LayeredFS-модів на 23.0.0+.
+    * [**fs.mitm**] Виправлено виліт азійської та японської версій гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
+    * [**libstratosphere**] Виправлено початковий стан об'єктів спільної пам'яті та пам'яті передачі в системних модулях (PR #2873).
+
+**924**
+* [**Оновлено**] [TorrentShopNX 2.14](https://github.com/Langegen/TorrentShopNX/releases/tag/2.14) — Додано сортування й статистику торрентів, назви файлів у завантаженнях, виправлено завантаження великих і багатофайлових роздач та показ скриншотів у док-режимі.
+* [**Оновлено**] [Sphaira 1.0.8](https://github.com/NaGaa95/sphaira/releases/tag/1.0.8) — Додано підтримку Ownfoil, меню альбому з вебпоширенням через QR-код і 32-бітні параметри адресного простору для форвардера, змінено керування іграми та покращено китайський і російський переклади.
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
+    * [**DNS.mitm**] Офіційне виправлення блокування серверів Nintendo на прошивці 23.0.0+. Надійно блокує фонові звернення консолі до Nintendo при перевірці оновлень системи та захищає від випадкового бану.
+    * [**fs.mitm**] Виправлено виліт гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
+    * [**set.mitm**] Номер версії Кефіру в «Системних налаштуваннях» консолі тепер оновлюється автоматично з файлу на карті пам'яті, без потреби перевстановлення Atmosphère.
+
+**923**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
+    * [**DNS.mitm**] Офіційне виправлення блокування серверів Nintendo на прошивці 23.0.0+. Надійно блокує фонові звернення консолі до Nintendo при перевірці оновлень системи та захищає від випадкового бану.
+    * [**fs.mitm**] Виправлено виліт гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
+    * [**set.mitm**] Номер версії Кефіру в «Системних налаштуваннях» консолі тепер оновлюється автоматично з файлу на карті пам'яті, без потреби перевстановлення Atmosphère.
+
+**922**
+* [**Оновлено**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Офіційне оновлення з підтримкою прошивок Horizon OS 23.0.0 та 23.0.1:
+    * Оновлено IPS-патчі `btm` та `bluetooth`, реалізовано коректну обробку скорочених CMIF-команд опитування стану пристроїв у сервісі BTM (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`).
+    * Додано налаштування ходу адаптивних тригерів для контролерів DualSense (`dualsense_adaptive_trigger_travel`).
+    * Покращено та уточнено індикацію рівня заряду акумулятора для геймпадів Sony (DualShock 3, DualShock 4, DualSense).
+    * Розширено сумісність з Android-додатком JoyconDroid без необхідності наявності root-прав.
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Збірка Atmosphère з інтеграцією виправлень спільноти та розробників:
+    * [**DNS.mitm**] Впроваджено перехоплення нових асинхронних CMIF-команд резолвера `sfdnsres` 99–110 (`QueryAddrInfoRequestWithOptions`, `FetchAddrInfoRequestWithOptions`, `CancelQuery` тощо) для Horizon OS 23.0.0+. Це надійно запобігає витоку DNS-запитів через бібліотеку c-ares у системних фонових процесах (`nim` при перевірці оновлень, відправка звітів `erpt`) безпосередньо на рівні DNS MITM (PR #2865).
+    * [**fs.mitm**] Додано підтримку нового інтерфейсу `IStorageForBatchRead` для пакетного читання RomFS на Horizon OS 23.0.0+ (команди 211 `OpenDataStorageByProgramIdForBatchRead` та 10 `BatchRead`), що забезпечує стабільну роботу LayeredFS та перехоплення звернень до файлової системи (PR #2867).
+    * [**fs.mitm**] Додано автоматичне виділення 8 МБ динамічної купи (stolen heap) для гри *Trails in the Sky 2nd Chapter* (`0x01007A2027548000`) у переліку `ApplicationsWithDynamicHeap`, що усуває падіння гри під час завантаження через дефіцит оперативної пам'яті (PR #2870 від masagrator).
+* [**Оновлено**] [libnx](https://github.com/switchbrew/libnx) — Синхронізовано з апстрімом switchbrew:
+    * Офіційно влито PR #741 від hexkyz із підтримкою команд `StorageForBatchRead` на рівні системної бібліотеки для Horizon OS 23.0.0+.
+    * Оновлено структури стану та інформації пристроїв Bluetooth-сервісу `btm` (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`) відповідно до стандартів нових версій Horizon OS.
+
+**921**
+* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Релізна версія Atmosphère 1.12.0:
+    * Офіційний ванільний реліз Atmosphère 1.12.0 з повною підтримкою прошивки Horizon OS 23.0.0 (усі зміни офіційно інтегровано в мастер-гілку апстріму).
+    * Впроваджено систему патчів пам'яті веб-аплету для Horizon OS 23.0.0+:
+        * Усунено критичне падіння веб-браузера (`openWeb`), магазину eShop (`systemWeb`) та офлайн-браузера (`offlineWeb`) на прошивці 23.0.0 через гострий дефіцит пам'яті в системному пулі аплетів.
+        * Додано вбудовані патчі завантажувача процесів (`loader`) для вивільнення ~9 МБ раніше зарезервованої та невикористовуваної пам'яті купи веб-аплету (`Reserved` та `ReservedTbd`).
+        * Збільшено виділення додаткової системної пам'яті в ядрі `mesosphere` для 23.0.0+ до 16 МБ, що забезпечує стабільну роботу системи без виходів за межі виділеного пулу пам'яті.
+    * Повноцінна декомпресія стиснених NRO (формат LZ4 frame) для HOS 23.0.0+ та виправлення сервісу `ro` (коректне скасування зіставлення NRO за фактичним розміром у купі для запобігання витокам пам'яті та зависанням при виході з хоумбрю).
+    * Інтегровано покращення стабільності: усунення аварійного завершення чит-рушія `dmnt:cht` при підключенні до ігор на 23.0.0 (PR #2855), 16 МБ динамічної купи (stolen heap) у `fs.mitm` для роботи LayeredFS модів Danganronpa V3 (PR #2854), коректні шляхи при перейменуванні файлів у `htcfs` (PR #2852), підтримка знакових зміщень заголовка винятків у модулі `ro` для Assassin's Creed 3 (PR #2835 masagrator).
+    * Повна сумісність варіантів 8GB DRAM та Overclock (kefir.kip / 4IFIR).
+* [**Оновлено**] [Hekate v6.5.4 & Nyx v1.9.4](https://github.com/CTCaer/hekate/releases/tag/v6.5.4) — Офіційне оновлення з підтримкою Horizon OS 23.0.0 та окремо інтегрованими патчами Кефіру:
+    * Підтримка передачі ключів автозавантаження preboot autokeys handoff (автоматичний старт Hekate після автодампу ключів без додаткових запитів).
+    * Вимкнено перевірку підпису kefir payload та відключено примусовий авто-чейнлоад payload.bin.
+    * Додано підтримку створення файлового emuMMC зменшеного розміру на SD (слайдер 4–28 GiB, дефолт 5 GiB, PR #1277).
+    * Додано кольорову індикацію температури SoC та батареї за робочими діапазонами у Nyx GUI (PR #1248).
+    * Виправлено явні інклуди у BDK для надійної збірки без bdk.h (PR #1247).
+* [**Оновлено**] [Sys Con 2.0.0](https://github.com/o0Zz/sys-con/releases/tag/2.0.0) — Додано MITM-режим, підтримку вібрації, гіроскопа, SInput і мережевих UDP-контролерів, а також суттєво зменшено споживання RAM і ROM.
+* [**Додано**] [TorrentShopNX 2.12](https://github.com/Langegen/TorrentShopNX/releases/tag/2.12) — BitTorrent-клієнт, каталог ігор та ретро-консолей із прямою потоковою інсталяцією для Nintendo Switch. Дозволяє знаходити, завантажувати та встановлювати ігри, оновлення, DLC і ретро-роми безпосередньо на консоль. Поліпшено оновлення каталогу, завантаження й розпакування великих файлів, додано перегляд архівів як папок, A–Z навігацію, пошук за авторами та автоматичне встановлення BIOS для восьми платформ емуляторів.
+* [**Оновлено**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Перезібрано з найсвіжішою версією [libultrahand](https://github.com/ppkantorski/libultrahand) (включаючи оновлений libtesla), стандартом C++26 та свіжим тулчейном libnx для стабільної роботи на нових версіях Atmosphère та прошивці 23.0.0.
+* [**Оновлено**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — Оптимізовано кешування каталогу Games без повторних мережевих оновлень, стабілізовано фонове завантаження та виправлено відображення списків.
+* [**Оновлено**] [Lockpick_RCM 37f9657](https://github.com/impeeza/Lockpick_RCMDecScots/commits/master) — Оновлено Lockpick_RCM від розробників 4IFIR (DecScots & impeeza): додано підтримку зняття ключів для Horizon OS 23.0.0 та master key revision 2 і новіших.
+* [**Оновлено**] [NxThemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Покращено підтримку зображень екрана завантаження hekate з автоповоротом портретних зображень, додано встановлення bootscreen-тем через API Themezer і виправлено обробку чисел із плаваючою комою.
+
+**903**
+* [**Додано**] [wb_18.bin] - Це дозволяє мати офіційною системою 23.0.0 і загружати Emunand на прошивках нижче.
+* [**Виправлено**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Прибраний примусовий редирект в Localhost всіх сервісів Нінтендо
+* [**Оновлено**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Додано вебпанель керування завантаженнями й каталогом, встановлення LayeredFS/NSP-портів, італійську мову, відновлення перерваних завантажень і безпечніші режими сну, виходу та оновлення.
+* [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час встановлення багатьох файлів і виправлено китайську локалізацію.
+
+**901**
+* [**Додано**] [wb_18.bin] - Це дозволяє мати офіційною системою 23.0.0 і загружати Emunand на прошивках нижче.
+* [**Виправлено**] [issue#160](https://github.com/rashevskyv/kefir/issues/160) — Прибраний примусовий редирект в Localhost всіх сервісів Нінтендо
+* [**Оновлено**] [pipensx 1.5.0](https://github.com/i3sey/pipensx/releases/tag/1.5.0) — Додано вебпанель керування завантаженнями й каталогом, встановлення LayeredFS/NSP-портів, італійську мову, відновлення перерваних завантажень і безпечніші режими сну, виходу та оновлення.
+* [**Оновлено**] [Sphaira 1.0.7](https://github.com/NaGaa95/sphaira/releases/tag/1.0.7) — Додано меню керування даними й підтримку NTFS для USB-накопичувачів, усунено взаємне блокування MTP/FTP під час встановлення багатьох файлів і виправлено китайську локалізацію.
+
+**898**
+* [**Оновлено**] [pipensx 1.4.4](https://github.com/i3sey/pipensx/releases/tag/1.4.4) — Стабілізовано встановлення NSZ і великих портів, завантаження Real-Debrid та fallback з magnet на .torrent, оновлення каталогу без TLS-помилок і навігацію інтерфейсу з підказками для порожніх списків.
+
+**897**
+* [**Виправлено**] Додано виключення для `ctest.cdn.nintendo.net` у патчі блокування серверів Nintendo через DNS на emuMMC. Це дозволяє проходити перевірку з'єднання з мережею (captive portal), відкривати браузер без помилки та використовувати сторонні сервіси на кшталт Prelude / Nextendo.
+
+**891**
+* [**Додано**] [pipensx](https://github.com/i3sey/pipensx) - Програма, яка дозволяє скачувати ігри безпосередньо з Rutracker прямо на консолі, встановлюючи їх одразу в процесі скачування. Щось типу тінфойл, але з тонентами. **Будьте уважні**, в деяких країнах заборонено скачувати та роздавати ігри з торент-трекерів. **Якщо ваша країна одна з таких, то не використовуйте цю програму!**
+
+**890**
+* [**Виправлено**] Повернув випадково видалені елементи меню із оверлея
+
+**888**
+* [**Оновлено**] [Nxthemes Installer nxt-3.0.1](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1) — Оновлено до нової версії.
+* [**Оновлено**] [Sys Con 1.7.0](https://github.com/o0Zz/sys-con/releases/tag/1.7.0) — Оновлено до нової версії.
+* [**Оновлено**] [Sphaira 1.0.6](https://github.com/NaGaa95/sphaira/releases/tag/1.0.6) — Додано підтримку встановлення цілих папок через MTP, фільтр для ігор з відсутніми оновленнями чи DLC, комбінацію клавіш Y для перегляду вмісту програм із меню ігор, виправлено сенсорне керування у редакторі форвардерів та покращено локалізацію.
+* [**Виправлено**] [issue#153](https://github.com/rashevskyv/kefir/issues/153) — видалений модуль що приводив до помилок
+
+**872**
+* [**Оновлено**] [NX-Activity-Log 1.5.8.a](https://github.com/aoihera/NX-Activity-Log/releases/tag/1.5.8.a) — Виправлено заміну forwarder/User Page, перероблено отримання іконок і назв із папок Atmosphere `/atmosphere/contents/`, усунено кілька збоїв під час перемикання екранів і графіків активності та покращено точність підрахунку часу, обробку переходів DST і відновлення з пошкоджених/відсутніх подій журналу, а також додано підтримку нових титулів із стисненим `control.nacp` і виправлено відображення місячного перегляду.
+* [**Оновлено**] [Sys Con 1.6.3](https://github.com/o0Zz/sys-con/releases/tag/1.6.3) — Додано підтримку Steam Controller 2026.
+* [**Оновлено**] [Ovl Sysmodules v1.5.3](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.3) — Оновлено sysmodules для підтримки опції «Switch 2 Style», перенесено запуск/завершення/коректне вимикання системних модулів у фоновий потік для плавної роботи UI, увімкнено динамічну рамку віджетів і виправлено підсвітку/поведінку ефекту Shake та кольори для пунктів «Static» при натисканні A.
+
+**870**
+* [**Виправлено**] [issue#145](https://github.com/rashevskyv/kefir/issues/145) — рожева помилка нарешті здолана 
+* [**Виправлено**] [issue#51](https://github.com/rashevskyv/kefir/issues/151) — tinfoil повернено до роботи 
+* [**Виправлено**] Виправлення помилки через яку після kefir-helper переставав працювати інтернет на консолі
+
+**857**
+* [**Оновлено**] [Theme Patches e9ba165](https://github.com/exelix11/theme-patches/commit/e9ba1657163f24df4aaca5bfd7d2919a6209cfa3) — Додано підтримку версії 22.5.0.
+* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0 та покращено роботу Nyx: додано інформацію про SD Express і детекцію SD DDR200, виправлено ліміти wafer та зависання в GPT-валидації, а також перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd і додано нові SDMMC-функції для vendor/reserved бітів та SD Express.
+
+**849**
+* [**Виправлено**] Фікс роботи хомбрю
+
+**847**
+* [**Виправлено**] Виправлення багів на старих прошивках
+
+**841**
+* [**Оновлено**] [Missioncontrol v0.15.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.2) — Додано підтримку прошивки 22.5.0.
+
+**840**
+* [**Оновлено**] [Sys Patch v1.6.2.3](https://github.com/impeeza/sys-patch/releases/tag/v1.6.2.3) — Виправлено помилку erpt для останньої версії AMS, об’єднавши зміни з pull request #38.
+* [**Оновлено**] [Nxthemes Installer nxt-2.9](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9) — Додано встановлення JPG/PNG як тем без nxtheme, експериментальний sysmodule для виявлення оновлень домашнього меню та автоматичного видалення несумісних тем при зміні версії прошивки, а також беззаписне на SD вилучення/патчі домашнього меню під час встановлення з зовнішніх джерел і покращене оброблення помилок.
+* [**Оновлено**] [Ovl Sysmodules v1.5.2](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.2) — Оновлено sysmodules: знято опцію `shutdown_timeout_ms`, очищено IPC-виклики та додано нове сповіщення `Shutdown IPC has failed.` у разі провалу IPC-команди.
+* [**Оновлено**] [Hekate v6.5.3](https://github.com/CTCaer/hekate/releases/tag/v6.5.3) — Оновлено підтримку HOS 22.5.0, покращено інформацію про SD (зокрема SD Express і детекцію DDR200), виправлено ліміти wafer та зависання в GPT-валидації в менеджері розділів, додано попередження про неправильні версії PMIC і перейменовано sdmmc_storage_execute_vendor_cmd на sdmmc_storage_vendor_cmd.
+
+**824**
+* [**Виправлено**] І знову. Бісячий плаваючий баг, який я не можу в себе відтворити.
+
+**823**
+* [**Виправлено**] Виправлено помилку оновлення та установки начисто. Сподіваюсь цього разу точно
+
+**822**
+* [**Виправлено**] Виправлено помилку оновлення та установки начисто. 
+* [**Виправлено**] При активації редиректа сейвів, сейви зберігатимуться тепер в безпосередньо всередині папки вашого конкретного EmuNAND, а не в 'atmosphere/saves'
+* [**Оновлено**] [nx-ovlloader 2.1.0](https://github.com/ppkantorski/nx-ovlloader)
+
+**821**
+* [**Додано**] [Ultrahand-Overlay] - замість застарілого Uberhand будемо використовувати швидший і більш гнучкий Ultrahand
+* [**Додано**] В оверлеї в 'Settings > Advanced' додано перемикач, що включає редірект сейвів в емунанді на картку. Сейви в розпакованому вигляді будуть знаходитися в 'atmosphere/saves'. Експерементально і не дуже ретельно відтестовано. 
+* [**Додано**] Автоматична система зняття ключів. При старті кефір перевіряє поточну версію емунанда та сіснанда та за потреби знімає ключі з найбільш нової версії. Автоматично і прозоро для користувача. Після цього вже запускає гекату.
+* [**Оновлено**] [Sys Patch v1.6.2.0](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.2.0) — Додано можливість націлюватися на більше результатів, а також патч, що дозволяє запускати китайські картриджі на глобальній версії HorizonOS.
+
+**819**
+* [**Виправлено**] https://github.com/rashevskyv/kefir/issues/142 - виправлена робота патченого tinfoil
+
+**818**
+* [**Оновлено**] [Kefir-updater] - поліпшення у відображенні ченджлога
+
+**816**
+* [**Оновлено**] [Missioncontrol v0.15.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1) — Додано підтримку прошивки 22.1.0 та виправлено обробку команд LED для контролерів Sony, що впливало на вібрацію та індикатори гравців.
+* [**Оновлено**] [Edizon Overlay v1.0.15](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15) — Оновлено libultrahand до версії 2.4.0.
+* [**Оновлено**] [Ovl Sysmodules v1.5.0](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.5.0) — Оновлено віджет пам'яті до формату `libultrahand v2.4.1` та виправлено помилку зв'язування змінної `hide_widget_border`.
+
+**814**
+* [**Додано**] Файл '/config/.skip' має список файлів та папок які будуть виключені з примусової перевірки атрибутів при оновленні кефіра через kefir-updater
+* [**Оновлено**] [`Homebrew menu [03DB12780BD84000][v0].nsp`] — Обов'язково перевстановіть 'games/Homebrew menu [03DB12780BD84000][v0].nsp' через DBI як гру, якщо користуєтесь форвардером для запуска HBL з головного екрану 
+* [**Оновлено**] [Ovl Sysmodules v1.4.9](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.9) — Ліміт нейтральної пам'яті підвищено з 4 МБ до 5 МБ.
+* [**Оновлено**] [Sys Patch v1.6.1](https://github.com/borntohonk/sys-patch/releases/tag/v1.6.1) — Додано захоплення зсуву в логах та накладенні, а також виправлено виявлення "прошитого за файлом" і "прошитого за системним патчем".
+
+**813**
+* [**Оновлено**] [Sys Patch v1.6.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.0) — Основна зміна - рефакторинг коду та виправлення для версії 22.0.0.
+* [**Додано**] При оновленні кефіру ключі знімаються автоматично
+
+**809**
+* [**Оновлено**] [Atmosphere 1.11.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 22.1.0.
+
+**808**
+* [**Оновлено**] [Atmosphere 1.11.0-p2786](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.1.0.
+
+**807**
+* [**Оновлено**] [Atmosphere 1.11.0](https://github.com/rashevskyv/Kefirosphere) — Реліз. Підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Mission Control 15.0.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.15.0) — підтримка прошивки 22.0.0.
+
+**805**
+* [**Оновлено**] [Atmosphere 1.11.0-pr2763](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Mission Control 14.2](https://github.com/eradicatinglove/MissionControl/releases/tag/v14.2) — підтримка прошивки 22.0.0. 
+* [**Оновлено**] [Lockpick_RCM 1.9.18](https://gbatemp.net/threads/lockpick_rcm-payload-official-thread.532916/page-48#post-10832437) — знімає новенькі ключі з 22ї прошивки 
+* [**Виправлено**] Неправильно працюючий розгін
+
+**804**
+* [**Оновлено**] [Atmosphere 1.11.0-pr2753](https://github.com/rashevskyv/Kefirosphere) — попередня підтримка прошивки 22.0.0. Фактично вона запускається, але хомбрю та емунанд ще не працюють. 
+* [**Оновлено**] [hekate 6.5.2](https://github.com/CTCaer/hekate/releases/tag/v6.5.2) — підтримка прошивки 22.0.0
+* [**Додано**] Меню Software для Tesla Packages.
+
+**795**
+* [**Оновлено**] [Mission Control v0.14.2](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.2) — підтримка прошивки 21.2.0.
+
+**794**
+* [**Оновлено**] [hekate 6.5.0](https://github.com/CTCaer/hekate/releases/tag/v6.5.0) — підтримка прошивки 21.2.0.
+
+**793**
+* [**Оновлено**] [Atmosphere 1.10.2](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.2.0.
+* [**Оновлено**] [ovl-sysmodules v1.4.7](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.7) — виправлення помилок
+* [**Оновлено**] [Sys-con 1.6.2](https://github.com/o0Zz/sys-con/releases/tag/1.6.2) — перерзібрано з новішим libultrahand
+
+**792**
+* [**Виправлено**] [40mb fix] - виправлена помилка, через яку не вдавалося примінити фікс на еристі
+* [**Виправлено**] [TegraExplorer] - за якоюсь причиною програма відмовлялася працювати на еристах, через що оновлення через апдейтер не працювало
+
+**791**
+* [**Виправлено**] [Kefir] - виправлена помилка, через яку при встановленні через апдейтер псувалися атрибути ігор
+
+**790**
+* [**Оновлено**] [Atmosphere 1.10.1](https://github.com/rashevskyv/Kefirosphere) — підтримка прошивки 21.1.0. Прибрані зміни, через які на нових версіях Atmosphere доводилося перекомпілювати Homebrew. Старі Homebrew працюють тепер без вилетів. 
+* [**Оновлено**] [hekate 6.4.2](https://github.com/CTCaer/hekate/releases/tag/v6.4.2) — виправлення помилок
+* [**Оновлено**] [MissionControl 0.14.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.14.1) — підтримка прошивки 21.1.0
+* [**Оновлено**] [Sys-con 1.6.1](https://github.com/o0Zz/sys-con/releases/tag/1.6.1) — виправлення помилок
+* [**Оновлено**] [EdiZon Overlay v1.0.14](https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.14) — скомпільовано з libultrahand v2.2.0
+* [**Оновлено**] [ovl-sysmodules v1.4.5](https://github.com/ppkantorski/ovl-sysmodules/releases/tag/v1.4.5) — скомпільовано з libultrahand v2.2.1
+* [**Додано**] Окремий патч для повернення 40Mb пам'яті для Homebrew. За замовчанням вимкнутий. Деякі ігри, які потребують прийняття EULA для початку гри,використовують браузер, якому пам'яті тепер не вистачає, через що маємо помилку і перезагрузку (напр. Ni No Kuni, Bioshock 3, MGS3 та інші). То ж, якщо ви використовуєте моди яким не вистачало пам'яті на ПЗ 21+, включіть цей мод. Якщо маєте ігри, що падають через нього - виключіть. Як завжди, перемикач знаходиться в 'Uberhand > packages > Settings > 40mb memory on FW20+ status'
+* [**Додано**] Доданий відкат для бідось, що випадково використали режим для консолей, що мають 8Gb пам'яті. hekate > payloads > TegraExplorer > Remove_8GB-RAM_config.te
+
 ____
 
 #### **ENG**
@@ -46,9 +295,12 @@ Custom themes do not work on firmware 23.0.0+. If your console crashes during bo
 * [**Updated**] [Sys Con 2.1.0](https://github.com/o0Zz/sys-con/releases/tag/2.1.0) — Added support for the Xbox Wireless Adapter, USB keyboards and mice, and horizontal single Joy‑Con, and fixed freezes in Super Mario 3D All-Stars as well as issues with controls, controller detection, and sleep.
 
 **928**
-* [**Removed**] NX-FanControl (overlay and system module), because fan control is now in KefirHub (Tools → Fan curve). When you open Fan curve, KefirHub offers to install its own fan module.
-* [**Added**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — disable individual system modules and SD mods through `system_settings.ini` ([PR #2901](https://github.com/Atmosphere-NX/Atmosphere/pull/2901)). The keys `disabled_contents`, `syscfw_disabled_contents` and `emummc_disabled_contents` in the `[atmosphere]` section accept up to 64 comma-separated ProgramIds. Example: `syscfw_disabled_contents = str!"0100000000001000"` disables custom themes on sysMMC only. Reboot after changes.
-* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — backup hash validation before restore ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). The `verification=3` (Full Hashes) mode in `bootloader/nyx.ini` writes a `<name>.sha256sums` file during backup and checks it before restoring BOOT0/BOOT1, GPP or RAW GPP. A corrupted backup is not written to the eMMC. The default stays `verification=1`.
+* [**Updated**] [TorrentShopNX 2.20](https://github.com/Langegen/TorrentShopNX/releases/tag/2.20) — The game page and manager compare versions with the catalog, support updating to the latest release offline, warn about newer files, and fix screenshot scrolling.
+* [**Updated**] [Sphaira 1.0.9](https://github.com/NaGaa95/sphaira/releases/tag/1.0.9) — Added a background Ownfoil installation queue, game archiving, and launch language selection for each game, as well as fixed save restoration, Themezer downloads, WebDAV lists, and MTP transfer freezes.
+* [**Updated**] [Sys Patch v1.6.3.0](https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0) — Added am hbxfix for firmware 22.0.0.
+* [**Removed**] NX-FanControl (overlay and system module), because fan control is now available in KefirHub (Tools → Fan curve). When you open Fan curve, KefirHub will offer to install its fan module automatically.
+* [**Added**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — disabling individual system modules and SD mods via `system_settings.ini` ([PR #2901](https://github.com/Atmosphere-NX/Atmosphere/pull/2901)). The `disabled_contents`, `syscfw_disabled_contents`, and `emummc_disabled_contents` keys in the `[atmosphere]` section accept up to 64 comma-separated ProgramIds. Example: `syscfw_disabled_contents = str!"0100000000001000"` disables custom themes only on sysMMC. A reboot is required after making changes.
+* [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — backup hash verification before restoration ([PR #1310](https://github.com/CTCaer/hekate/pull/1310)). The `verification=3` (Full Hashes) mode in `bootloader/nyx.ini` writes a `<name>.sha256sums` file during backup and verifies it before restoring BOOT0/BOOT1, GPP, or RAW GPP. A corrupted backup is not written to eMMC. The default value remains `verification=1`.
 * [**Fixed**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — the mesosphere kernel now saves all FPU registers of a thread when it switches the thread out during a user exception handler ([PR #2909](https://github.com/Atmosphere-NX/Atmosphere/pull/2909)). Before, the kernel saved only registers q8–q15, so the thread could continue with corrupted values after the handler. The fix affects homebrew and mods that install their own exception handler.
 * [**Added**] [Hekate / Nyx](https://github.com/CTCaer/hekate) — support for Retro Remake SUPER5 and SUPER7 screens (IPS and OLED) ([PR #1314](https://github.com/CTCaer/hekate/pull/1314)). FHD versions run at their native 1080×1920 resolution, and the hekate and Nyx interface is scaled up from 720p. Nyx shows the screen model in the console information.
 
