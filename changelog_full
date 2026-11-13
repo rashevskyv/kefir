@@ -5,6 +5,9 @@
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
+**934**
+* [**Додано**] [Hekate](https://github.com/CTCaer/hekate) — автоматичний дамп warmboot на Mariko. Під час кожного запуску hekate перевіряє, чи є на карті пам'яті warmboot для перепалених запобіжників. Якщо його немає, hekate бере warmboot з package1 sysMMC і зберігає його в `warmboot_mariko/` та `bootloader/sys/l4t/sc7exit_b01.bin`. Заходити для цього в офіційну прошивку не треба. Це потрібно, коли офіційна прошивка після оновлення перепалила запобіжники, а emuMMC лишилася на старішій версії: без такого файлу вона не запускається або не прокидається зі сну. Ідея з [Warmboot-Extractor](https://github.com/sthetix/Warmboot-Extractor).
+
 **933**
 * [**Додано**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — новий головний застосунок Кефіру. Він стоїть на місці `hbmenu.nro` і замінює кілька окремих програм:
     * запуск homebrew замість Sphaira;
@@ -264,6 +267,9 @@ ____
 The patch for legacy homebrew support no longer works, so some older homebrew applications may stop working. To fix this, patch them via https://hbpatcher.alula.me/
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
+
+**934**
+* [**Added**] [Hekate](https://github.com/CTCaer/hekate) — automatic warmboot dump on Mariko. At every start hekate checks that the SD card has a warmboot for the burnt fuses. If there is none, hekate takes the warmboot from the sysMMC package1 and saves it to `warmboot_mariko/` and `bootloader/sys/l4t/sc7exit_b01.bin`. You do not need to boot the official firmware for this. It is needed when the official firmware burnt fuses after an update while the emuMMC stays on an older version: without this file it does not boot or does not wake from sleep. Idea from [Warmboot-Extractor](https://github.com/sthetix/Warmboot-Extractor).
 
 **933**
 * [**Added**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — the new main app of Kefir. It takes the place of `hbmenu.nro` and replaces several separate apps:
