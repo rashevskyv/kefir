@@ -1,150 +1,22 @@
 ## Changelog 
 #### **UKR**
-**Повна підтримка 23.0.1 та Atmosphere 1.12.1**
+**Повна підтримка 23.5.0 та Atmosphere 1.12.2**
 Патч для підтримки старого homebrew більше не працює, тому деякі старі homebrew можуть перестати працювати. Щоб це виправити, пропачте їх через https://hbpatcher.alula.me/
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
-**927**
-* [**Оновлено**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.0.1.
-    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)**926**
-* [**Оновлено**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) — Оновлення до офіційного релізу Atmosphère 1.12.1:
-    * Додано підтримку прошивки 23.0.1.
-    * [**loader / mesosphere**] Перероблено патчі пам'яті веб-аплетів. Браузер, eShop та офлайн-браузер тепер бачать 1 ГБ вільної пам'яті, а купу браузерного рушія зменшено. Це виправляє вильоти під час відтворення відео в eShop та в іграх, які використовують LibAppletOff. Системним модулям знову доступно 40 МБ додаткової пам'яті замість 16 МБ.
-    * [**DNS.mitm**] Перехоплені DNS-запити тепер також передаються сервісу `bsdsocket`, щоб він коректно звільняв їхні ресурси. Перенаправлення з файлу hosts працює як раніше.
-    * Виправлено автоматичну резервну копію PRODINFO на нових ревізіях консолі, які не використовують сертифікат пристрою ECC (PR #2887).
-* [**Змінено**] Перемикач «40MB Memory» в Ultrahand (Settings) і KefirHub тепер показується лише на прошивках нижче 23.0.0. На 23.0.0+ він більше не потрібен: Atmosphère 1.12.1 сам дає 40 МБ пам'яті системним модулям.
-
-**925**
-* [**Оновлено**] [TorrentShopNX 2.15](https://github.com/Langegen/TorrentShopNX/releases/tag/2.15) — Оптимізовано стабільність завантажень на Switch і Retro, виправлено роботу архівів та помилку виходу, додано збільшення дрібного шрифту в налаштуваннях.
-* [**Оновлено**] [pipensx 1.6.3](https://github.com/i3sey/pipensx/releases/tag/1.6.3) — Оновлено вебінтерфейс для віддаленого керування бібліотекою й оновленнями, виправлено збої торрентів та встановлення, додано безпечний запас 512 МБ для NAND і трекери RuTracker для магнет-посилань.
-* [**Оновлено**] [Theme Patches fc149aa](https://github.com/exelix11/theme-patches/commit/fc149aac70306f2a50c5da6f28252140038ce6f0) — Додано патч екрана блокування для прошивки 23.0.1. Самі теми на 23.0.0+ поки не працюють: потрібне виправлення в Atmosphère.
-* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
-    * [**DNS.mitm**] Виправлено доступ до мережі на прошивці 23.0.0+: запити до адрес, яких немає у файлі hosts, тепер передаються системі, а не повертаються порожніми. Блокування серверів Nintendo працює як раніше.
-    * [**fs.mitm**] Офіційна реалізація перехоплення пакетного читання RomFS (`StorageForBatchRead`) від розробників Atmosphère замінила власний патч Кефіру. Додано перехоплення раніше відсутніх команд FileSystem та DataStorage, що покращує роботу LayeredFS-модів на 23.0.0+.
-    * [**fs.mitm**] Виправлено виліт азійської та японської версій гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
-    * [**libstratosphere**] Виправлено початковий стан об'єктів спільної пам'яті та пам'яті передачі в системних модулях (PR #2873).
-
-**924**
-* [**Оновлено**] [TorrentShopNX 2.14](https://github.com/Langegen/TorrentShopNX/releases/tag/2.14) — Додано сортування й статистику торрентів, назви файлів у завантаженнях, виправлено завантаження великих і багатофайлових роздач та показ скриншотів у док-режимі.
-* [**Оновлено**] [Sphaira 1.0.8](https://github.com/NaGaa95/sphaira/releases/tag/1.0.8) — Додано підтримку Ownfoil, меню альбому з вебпоширенням через QR-код і 32-бітні параметри адресного простору для форвардера, змінено керування іграми та покращено китайський і російський переклади.
-* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Оновлення компонентів Atmosphère:
-    * [**DNS.mitm**] Офіційне виправлення блокування серверів Nintendo на прошивці 23.0.0+. Надійно блокує фонові звернення консолі до Nintendo при перевірці оновлень системи та захищає від випадкового бану.
-    * [**fs.mitm**] Виправлено виліт гри *Trails in the Sky 2nd Chapter* при запуску з модами через брак оперативної пам'яті.
-    * [**set.mitm**] Номер версії Кефіру в «Системних налаштуваннях» консолі тепер оновлюється автоматично з файлу на карті пам'яті, без потреби перевстановлення Atmosphère.
-
-**922**
-* [**Оновлено**] [TorrentShopNX 2.13](https://github.com/Langegen/TorrentShopNX/releases/tag/2.13) — Додано двопанельний файловий менеджер, теми й власні шпалери, мультивибір фільтрів, перевірку сумісності та розміру NSZ перед завантаженням, а також безпечне пробудження екрана й оновлений інтерфейс каталогу.
-* [**Оновлено**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Офіційне оновлення з підтримкою прошивок Horizon OS 23.0.0 та 23.0.1:
-    * Оновлено IPS-патчі `btm` та `bluetooth`, реалізовано коректну обробку скорочених CMIF-команд опитування стану пристроїв у сервісі BTM (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`).
-    * Додано налаштування ходу адаптивних тригерів для контролерів DualSense (`dualsense_adaptive_trigger_travel`).
-    * Покращено та уточнено індикацію рівня заряду акумулятора для геймпадів Sony (DualShock 3, DualShock 4, DualSense).
-    * Розширено сумісність з Android-додатком JoyconDroid без необхідності наявності root-прав.
-* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Збірка Atmosphère з інтеграцією виправлень спільноти та розробників:
-    * [**DNS.mitm**] Впроваджено перехоплення нових асинхронних CMIF-команд резолвера `sfdnsres` 99–110 (`QueryAddrInfoRequestWithOptions`, `FetchAddrInfoRequestWithOptions`, `CancelQuery` тощо) для Horizon OS 23.0.0+. Це надійно запобігає витоку DNS-запитів через бібліотеку c-ares у системних фонових процесах (`nim` при перевірці оновлень, відправка звітів `erpt`) безпосередньо на рівні DNS MITM (PR #2865).
-    * [**fs.mitm**] Додано підтримку нового інтерфейсу `IStorageForBatchRead` для пакетного читання RomFS на Horizon OS 23.0.0+ (команди 211 `OpenDataStorageByProgramIdForBatchRead` та 10 `BatchRead`), що забезпечує стабільну роботу LayeredFS та перехоплення звернень до файлової системи (PR #2867).
-    * [**fs.mitm**] Додано автоматичне виділення 8 МБ динамічної купи (stolen heap) для гри *Trails in the Sky 2nd Chapter* (`0x01007A2027548000`) у переліку `ApplicationsWithDynamicHeap`, що усуває падіння гри під час завантаження через дефіцит оперативної пам'яті (PR #2870 від masagrator).
-* [**Оновлено**] [libnx](https://github.com/switchbrew/libnx) — Синхронізовано з апстрімом switchbrew:
-    * Офіційно влито PR #741 від hexkyz із підтримкою команд `StorageForBatchRead` на рівні системної бібліотеки для Horizon OS 23.0.0+.
-    * Оновлено структури стану та інформації пристроїв Bluetooth-сервісу `btm` (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`) відповідно до стандартів нових версій Horizon OS.
-
-**921**
-* [**Оновлено**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Релізна версія Atmosphère 1.12.0:
-    * Офіційний ванільний реліз Atmosphère 1.12.0 з повною підтримкою прошивки Horizon OS 23.0.0 (усі зміни офіційно інтегровано в мастер-гілку апстріму).
-    * Впроваджено систему патчів пам'яті веб-аплету для Horizon OS 23.0.0+:
-        * Усунено критичне падіння веб-браузера (`openWeb`), магазину eShop (`systemWeb`) та офлайн-браузера (`offlineWeb`) на прошивці 23.0.0 через гострий дефіцит пам'яті в системному пулі аплетів.
-        * Додано вбудовані патчі завантажувача процесів (`loader`) для вивільнення ~9 МБ раніше зарезервованої та невикористовуваної пам'яті купи веб-аплету (`Reserved` та `ReservedTbd`).
-        * Збільшено виділення додаткової системної пам'яті в ядрі `mesosphere` для 23.0.0+ до 16 МБ, що забезпечує стабільну роботу системи без виходів за межі виділеного пулу пам'яті.
-    * Повноцінна декомпресія стиснених NRO (формат LZ4 frame) для HOS 23.0.0+ та виправлення сервісу `ro` (коректне скасування зіставлення NRO за фактичним розміром у купі для запобігання витокам пам'яті та зависанням при виході з хоумбрю).
-    * Інтегровано покращення стабільності: усунення аварійного завершення чит-рушія `dmnt:cht` при підключенні до ігор на 23.0.0 (PR #2855), 16 МБ динамічної купи (stolen heap) у `fs.mitm` для роботи LayeredFS модів Danganronpa V3 (PR #2854), коректні шляхи при перейменуванні файлів у `htcfs` (PR #2852), підтримка знакових зміщень заголовка винятків у модулі `ro` для Assassin's Creed 3 (PR #2835 masagrator).
-    * Повна сумісність варіантів 8GB DRAM та Overclock (kefir.kip / 4IFIR).
-* [**Оновлено**] [Hekate v6.5.4 & Nyx v1.9.4](https://github.com/CTCaer/hekate/releases/tag/v6.5.4) — Офіційне оновлення з підтримкою Horizon OS 23.0.0 та окремо інтегрованими патчами Кефіру:
-    * Підтримка передачі ключів автозавантаження preboot autokeys handoff (автоматичний старт Hekate після автодампу ключів без додаткових запитів).
-    * Вимкнено перевірку підпису kefir payload та відключено примусовий авто-чейнлоад payload.bin.
-    * Додано підтримку створення файлового emuMMC зменшеного розміру на SD (слайдер 4–28 GiB, дефолт 5 GiB, PR #1277).
-    * Додано кольорову індикацію температури SoC та батареї за робочими діапазонами у Nyx GUI (PR #1248).
-    * Виправлено явні інклуди у BDK для надійної збірки без bdk.h (PR #1247).
-* [**Оновлено**] [Sys Con 2.0.0](https://github.com/o0Zz/sys-con/releases/tag/2.0.0) — Додано MITM-режим, підтримку вібрації, гіроскопа, SInput і мережевих UDP-контролерів, а також суттєво зменшено споживання RAM і ROM.
-* [**Додано**] [TorrentShopNX 2.12](https://github.com/Langegen/TorrentShopNX/releases/tag/2.12) — BitTorrent-клієнт, каталог ігор та ретро-консолей із прямою потоковою інсталяцією для Nintendo Switch. Дозволяє знаходити, завантажувати та встановлювати ігри, оновлення, DLC і ретро-роми безпосередньо на консоль. Поліпшено оновлення каталогу, завантаження й розпакування великих файлів, додано перегляд архівів як папок, A–Z навігацію, пошук за авторами та автоматичне встановлення BIOS для восьми платформ емуляторів.
-* [**Оновлено**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Перезібрано з найсвіжішою версією [libultrahand](https://github.com/ppkantorski/libultrahand) (включаючи оновлений libtesla), стандартом C++26 та свіжим тулчейном libnx для стабільної роботи на нових версіях Atmosphère та прошивці 23.0.0.
-* [**Оновлено**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — Оптимізовано кешування каталогу Games без повторних мережевих оновлень, стабілізовано фонове завантаження та виправлено відображення списків.
-* [**Оновлено**] [Lockpick_RCM 37f9657](https://github.com/impeeza/Lockpick_RCMDecScots/commits/master) — Оновлено Lockpick_RCM від розробників 4IFIR (DecScots & impeeza): додано підтримку зняття ключів для Horizon OS 23.0.0 та master key revision 2 і новіших.
-* [**Оновлено**] [NxThemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Покращено підтримку зображень екрана завантаження hekate з автоповоротом портретних зображень, додано встановлення bootscreen-тем через API Themezer і виправлено обробку чисел із плаваючою комою.
-
-____
-
-____
+**933**
+* [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.5.0.
+    * [**Подробиці про зміни в Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 
 ____
 
 #### **ENG**
-**Full support for 23.0.1 and Atmosphere 1.12.1**
+**Full support for 23.5.0 and Atmosphere 1.12.2**
 The patch for legacy homebrew support no longer works, so some older homebrew applications may stop working. To fix this, patch them via https://hbpatcher.alula.me/
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
 
-**927**
-* [**Updated**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.0.1 support.
-    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)**926**
-* [**Updated**] [Atmosphere 1.12.1](https://github.com/rashevskyv/Kefirosphere) — Updated to the official Atmosphère 1.12.1 release:
-    * Added firmware 23.0.1 support.
-    * [**loader / mesosphere**] Reworked web applet memory patches. The browser, eShop, and offline browser now see 1 GB of free memory, and the browser engine heap has been reduced. This fixes crashes when playing videos in the eShop and in games that use LibAppletOff. System modules once again have access to 40 MB of additional memory instead of 16 MB.
-    * [**DNS.mitm**] Intercepted DNS requests are now also passed to the `bsdsocket` service so it can properly release their resources. Redirection from the hosts file works as before.
-    * Fixed automatic PRODINFO backup on newer console revisions that do not use the ECC device certificate (PR #2887).
-* [**Changed**] The “40MB Memory” toggle in Ultrahand (Settings) and KefirHub is now shown only on firmware below 23.0.0. It is no longer needed on 23.0.0+: Atmosphère 1.12.1 itself provides 40 MB of memory to system modules.
-
-**925**
-* [**Updated**] [TorrentShopNX 2.15](https://github.com/Langegen/TorrentShopNX/releases/tag/2.15) — Download stability on Switch and Retro has been optimized, archive handling and an exit error have been fixed, and an option to increase small font size has been added to the settings.
-* [**Updated**] [pipensx 1.6.3](https://github.com/i3sey/pipensx/releases/tag/1.6.3) — The web interface for remote library and update management has been updated, torrent and installation crashes have been fixed, and a safe 512 MB reserve for NAND and RuTracker trackers for magnet links have been added.
-* [**Updated**] [Theme Patches fc149aa](https://github.com/exelix11/theme-patches/commit/fc149aac70306f2a50c5da6f28252140038ce6f0) — Added the lock screen patch for firmware 23.0.1. Themes themselves still do not work on 23.0.0+: a fix in Atmosphère is required.
-* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère component updates:
-    * [**DNS.mitm**] Fixed network access on firmware 23.0.0+: requests to addresses not present in the hosts file are now forwarded to the system instead of returning empty. Nintendo server blocking works as before.
-    * [**fs.mitm**] The official implementation of RomFS batch read interception (`StorageForBatchRead`) from the Atmosphère developers has replaced Kefir's custom patch. Added interception of previously missing FileSystem and DataStorage commands, improving LayeredFS mod functionality on 23.0.0+.
-    * [**fs.mitm**] Fixed a crash in the Asian and Japanese versions of *Trails in the Sky 2nd Chapter* when launching with mods due to insufficient RAM.
-    * [**libstratosphere**] Fixed the initial state of shared memory and transfer memory objects in system modules (PR #2873).
-
-**924**
-* [**Updated**] [TorrentShopNX 2.14](https://github.com/Langegen/TorrentShopNX/releases/tag/2.14) — Added torrent sorting and statistics, file names in downloads, fixed downloading large and multi-file torrents, and screenshot display in docked mode.
-* [**Updated**] [Sphaira 1.0.8](https://github.com/NaGaa95/sphaira/releases/tag/1.0.8) — Added Ownfoil support, an album menu with web sharing via QR code, and 32-bit address space parameters for the forwarder; changed game management and improved Chinese and Russian translations.
-* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère component updates:
-    * [**DNS.mitm**] Official fix for Nintendo server blocking on firmware 23.0.0+. Reliably blocks the console's background connections to Nintendo when checking for system updates and protects against accidental bans.
-    * [**fs.mitm**] Fixed a crash in *Trails in the Sky 2nd Chapter* when launching with mods due to insufficient RAM.
-    * [**set.mitm**] The Kefir version number in the console's “System Settings” now updates automatically from a file on the memory card, without needing to reinstall Atmosphère.
-
-**922**
-* [**Updated**] [TorrentShopNX 2.13](https://github.com/Langegen/TorrentShopNX/releases/tag/2.13) — Added a dual-pane file manager, themes and custom wallpapers, multi-select filters, NSZ compatibility and size checks before downloading, as well as safe screen wake-up and an updated catalog interface.
-* [**Updated**] [Mission Control 0.16.0](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0) — Official update with support for Horizon OS 23.0.0 and 23.0.1 firmware:
-    * Updated the `btm` and `bluetooth` IPS patches, implemented proper handling of shortened CMIF device status polling commands in the BTM service (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`).
-    * Added adaptive trigger travel settings for DualSense controllers (`dualsense_adaptive_trigger_travel`).
-    * Improved and refined battery level indication for Sony gamepads (DualShock 3, DualShock 4, DualSense).
-    * Expanded compatibility with the Android app JoyconDroid without requiring root access.
-* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère build integrating fixes from the community and developers:
-    * [**DNS.mitm**] Implemented interception of new asynchronous CMIF resolver commands `sfdnsres` 99–110 (`QueryAddrInfoRequestWithOptions`, `FetchAddrInfoRequestWithOptions`, `CancelQuery`, etc.) for Horizon OS 23.0.0+. This reliably prevents DNS query leaks through the c-ares library in system background processes (`nim` when checking for updates, `erpt` report submission), directly at the DNS MITM level (PR #2865).
-    * [**fs.mitm**] Added support for the new `IStorageForBatchRead` interface for batch RomFS reading on Horizon OS 23.0.0+ (commands 211 `OpenDataStorageByProgramIdForBatchRead` and 10 `BatchRead`), ensuring stable LayeredFS operation and interception of file system requests (PR #2867).
-    * [**fs.mitm**] Added automatic allocation of an 8 MB dynamic heap (stolen heap) for the game *Trails in the Sky 2nd Chapter* (`0x01007A2027548000`) to the `ApplicationsWithDynamicHeap` list, fixing game crashes during loading caused by insufficient RAM (PR #2870 by masagrator).
-* [**Updated**] [libnx](https://github.com/switchbrew/libnx) — Synchronized with switchbrew upstream:
-    * Officially merged PR #741 by hexkyz with support for `StorageForBatchRead` commands at the system library level for Horizon OS 23.0.0+.
-    * Updated the Bluetooth service `btm` device status and information structures (`btmGetDeviceConditionShortened`, `btmGetDeviceInfoShortened`) according to the standards of newer Horizon OS versions.
-
-**921**
-* [**Updated**] [Atmosphere 1.12.0](https://github.com/rashevskyv/Kefirosphere) — Atmosphère 1.12.0 release version:
-    * Official vanilla release of Atmosphère 1.12.0 with full support for Horizon OS 23.0.0 (all experimental changes officially merged into upstream master).
-    * Implemented web applet memory patching system for Horizon OS 23.0.0+:
-        * Resolved critical crashes of the web browser (`openWeb`), Nintendo eShop (`systemWeb`), and offline browser (`offlineWeb`) on firmware 23.0.0 caused by severe applet pool memory constraints.
-        * Added embedded process loader (`loader`) patches to reclaim ~9 MB of previously reserved and unused web applet heap memory (`Reserved` and `ReservedTbd`).
-        * Increased additional system memory allocation in the `mesosphere` kernel for 23.0.0+ to 16 MB, ensuring stable system execution without exceeding applet memory pool limits.
-    * Full decompression of compressed NROs (LZ4 frame format) for HOS 23.0.0+ and `ro` service fixes (accurate heap unmapping to prevent address space leaks and freezes when exiting homebrew).
-    * Integrated stability improvements: resolved `dmnt:cht` cheat engine crash when attaching to games on 23.0.0 (PR #2855), added 16 MB stolen heap allocation in `fs.mitm` for Danganronpa V3 LayeredFS mods (PR #2854), fixed swapped path lengths when renaming files in `htcfs` (PR #2852), and added support for signed exception info offsets in the `ro` module for Assassin's Creed 3 (PR #2835 by masagrator).
-    * Full compatibility for 8GB DRAM and Overclock variants (kefir.kip / 4IFIR).
-* [**Updated**] [Hekate v6.5.4 & Nyx v1.9.4](https://github.com/CTCaer/hekate/releases/tag/v6.5.4) — Official update with Horizon OS 23.0.0 support and custom integrated Kefir patches:
-    * Added preboot autokeys handoff (automatic boot into Hekate following automatic key dumping without manual prompts).
-    * Disabled kefir payload verification and removed forced auto-chainloading of payload.bin.
-    * Added support for creating resized SD file-based emuMMC (slider 4–28 GiB, default 5 GiB, PR #1277).
-    * Added colorized SoC and battery temperature display based on operating ranges in Nyx GUI (PR #1248).
-    * Explicitly added missing BDK includes for reliable compilation without bdk.h (PR #1247).
-* [**Updated**] [Sys Con 2.0.0](https://github.com/o0Zz/sys-con/releases/tag/2.0.0) — Added MITM mode, support for vibration, gyroscope, SInput, and network UDP controllers, and significantly reduced RAM and ROM usage.
-* [**Added**] [TorrentShopNX 2.12](https://github.com/Langegen/TorrentShopNX/releases/tag/2.12) — BitTorrent client, game & retro console catalog with direct streaming installation for Nintendo Switch. Improved catalog updates, downloading and unpacking of large files, added archive browsing as folders, A–Z navigation, search by author/publisher, and automatic BIOS installation for eight emulator platforms.
-* [**Updated**] [EdiZon-Overlay](https://github.com/proferabg/EdiZon-Overlay) — Rebuilt with the latest version of [libultrahand](https://github.com/ppkantorski/libultrahand) (including updated libtesla), C++26 standard, and the latest libnx toolchain for stable operation on newer Atmosphère versions and firmware 23.0.0.
-* [**Updated**] [pipensx 1.6.2](https://github.com/i3sey/pipensx/releases/tag/1.6.2) — Optimized Games catalog caching without redundant network requests, stabilized background downloading, and fixed list rendering.
-* [**Updated**] [Lockpick_RCM 37f9657](https://github.com/impeeza/Lockpick_RCMDecScots/commits/master) — Updated Lockpick_RCM from 4IFIR developers (DecScots & impeeza): added key dumping support for Horizon OS 23.0.0 and master key revision 2 and newer.
-* [**Updated**] [NxThemes Installer nxt-3.0.2](https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2) — Improved support for hekate boot screen images with automatic rotation of portrait images, added installation of bootscreen themes via the Themezer API, and fixed floating-point number handling.
+**933**
+* [**Updated**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.5.0 support.
+    * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)

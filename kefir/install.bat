@@ -61,7 +61,7 @@ if not exist "%sd%:\switch\tinfoil\locations.bkp" (
 
 if exist "%sd%:\atmosphere\kips\kefir.kip" (set oc=1)
 
-@REM set missioncontrol=0
+set missioncontrol=0
 @REM set syscon=0
 @REM set oc=0
 
@@ -110,6 +110,8 @@ if exist "%sd%:\atmosphere\contents\0100000000001000" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\010000000000100C" (RD /s /q "%sd%:\atmosphere\contents\010000000000100C")
 if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmosphere\contents\0000000000534C56")
 if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
+if exist "%sd%:\atmosphere\contents\00FF46554E43544C" (RD /s /q "%sd%:\atmosphere\contents\00FF46554E43544C")
+if exist "%sd%:\switch\.overlays\NX-FanControl.ovl" (del "%sd%:\switch\.overlays\NX-FanControl.ovl")
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
 if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF")
 if exist "%sd%:\atmosphere\contents\00FF007468656D65" (RD /s /q "%sd%:\atmosphere\contents\00FF007468656D65")
@@ -244,6 +246,9 @@ if exist "%sd%:\switch\kefirupdater.nro" (del "%sd%:\switch\kefirupdater.nro")
 if exist "%sd%:\switch\kefir-updater.nro" (del "%sd%:\switch\kefir-updater.nro")
 if exist "%sd%:\switch\daybreak.nro" (del "%sd%:\switch\daybreak.nro")
 if exist "%sd%:\switch\daybreak\daybreak.nro" (del "%sd%:\switch\daybreak\daybreak.nro")
+if exist "%sd%:\switch\daybreak" (RD /s /q "%sd%:\switch\daybreak")
+if exist "%sd%:\switch\linkalho" (RD /s /q "%sd%:\switch\linkalho")
+if exist "%sd%:\switch\kefir-updater\kefir-updater.nro" (del "%sd%:\switch\kefir-updater\kefir-updater.nro")
 if exist "%sd%:\switch\kefirupdater\cheats.zip" (del "%sd%:\switch\kefirupdater\cheats.zip")
 if exist "%sd%:\switch\kefirupdater\kefir.zip" (del "%sd%:\switch\kefirupdater\kefir.zip")
 if exist "%sd%:\switch\kefirupdater\firmware.zip" (del "%sd%:\switch\kefirupdater\firmware.zip")

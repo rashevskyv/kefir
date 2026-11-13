@@ -95,7 +95,7 @@ emunand=!fsexists("sd:/config/uberhand/packages/settings/stock")
 oc=fsexists("sd:/atmosphere/kips/kefir.kip")
 
 # Force mission control status
-# missioncontrol=0
+missioncontrol=0
 # syscon=0
 # oc=0
 
@@ -128,7 +128,18 @@ if (fsexists("sd:/kefir")) {
 	delfile("sd:/boot.dat");
 	delfile("sd:/boot.ini");
 
-	deldir("sd:/atmosphere/exefs_patches");
+	# exefs_patches: every folder except nextendo_* (Kefir Hub installs and owns those; the Kefir zip has none)
+	xpRoot = "sd:/atmosphere/exefs_patches"
+	if (fsexists(xpRoot)) {
+		xpList = readdir(xpRoot)
+		xpDirs = xpList.folders.copy()
+		xpDirs.foreach("xpName") {
+			xpKeep = 0
+			xpParts = xpName.split("nextendo_")
+			if (xpParts.len() > 1) { if (xpParts[0] == "") { xpKeep = 1 } }
+			if (xpKeep == 0) { deldir(xpRoot + "/" + xpName) }
+		}
+	}
 	deldir("sd:/atmosphere/kip_patches");
 	deldir("sd:/atmosphere/contents/690000000000000D");
 	deldir("sd:/atmosphere/contents/420000000007E51A");
@@ -293,6 +304,8 @@ deldir("sd:/atmosphere/contents/0100000000001013");
 deldir("sd:/atmosphere/contents/010000000000100C");
 deldir("sd:/atmosphere/contents/0000000000534C56");
 deldir("sd:/atmosphere/contents/0100000000000081");
+deldir("sd:/atmosphere/contents/00FF46554E43544C");
+delfile("sd:/switch/.overlays/NX-FanControl.ovl");
 # deldir("sd:/atmosphere/contents/420000000000000B");
 deldir("sd:/config/uberhand/packages/ovrlck");
 deldir("sd:/sxos/titles/");
@@ -322,10 +335,13 @@ deldir("sd:/oc");
 deldir("sd:/config/uberhand/packages/oc");
 deldir("sd:/switch/.packages/Semi-stock");
 deldir("sd:/switch/.packages/DBI");
-# deldir("sd:/switch/.packages/Settings");
-# deldir("sd:/switch/.packages/Software");
-# deldir("sd:/switch/.packages/Theme");
-# deldir("sd:/switch/.packages/Translate Interface");
+# Kefir Hub replaces these Ultrahand packages, Daybreak and Linkalho
+deldir("sd:/switch/.packages/Settings");
+deldir("sd:/switch/.packages/Software");
+deldir("sd:/switch/.packages/Theme");
+deldir("sd:/switch/.packages/Translate Interface");
+deldir("sd:/switch/daybreak");
+deldir("sd:/switch/linkalho");
 delfile("sd:/switch/.packages/Software/config.ini"); #old, to remove
 delfile("sd:/switch/.packages/Software/DBI/config.ini"); #old, to remove
 delfile("sd:/switch/.packages/Software/DBI/Fan Translations/config.ini"); #old, to remove
