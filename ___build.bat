@@ -22,7 +22,8 @@ set site_img=%site%\images
 
 cls
 
-xcopy "%working_dir%\_kefir\version" "%kefir_dir%\switch\kefir-updater\" /H /Y /C /R
+rem kefir-updater\version has three lines: release, supported firmware, 4IFIR firmware.
+rem bump_version.py and build.py write it. Copying the one-line _kefir\version here erased lines 2-3.
 
 cls
 
@@ -123,10 +124,8 @@ if not %suffix%=="" (set reldir=%testdir%)
 if exist "%reldir%" (del /F /S /Q "%reldir%\*")
 xcopy "%working_dir%\_kefir\changelog*" "%reldir%\" /H /Y /C /R
 xcopy "%working_dir%\_kefir\version" "%reldir%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\version" "%site_files%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\changelog" "%site_inc%\" /H /Y /C /R
-xcopy "%working_dir%\_kefir\changelog" "%site_files%\" /H /Y /C /R
+rem site: version, changelog, cover and the supported-firmware vars, from one source
+python "%working_dir%\Kefirosphere\utilities\update_site.py"
 
 rem kefir
 "E:\Switch\7zip\7za.exe" a -tzip -mx9 -r0 -ssw -xr!.gitignore -xr!kefir_installer -xr!desktop.ini -xr!___build.bat -xr!hekate_ctcaer_*.bin -xr!kefir.png -xr!___build_test.bat -xr!install1.bat -xr!release -xr!release_test -xr!.git -xr!build -xr!emu.cmd -x!version -xr!changelog* -xr!README.md -xr!install1.bat %reldir%\kefir%ver%%suffix%.zip %kefir_dir%\*
