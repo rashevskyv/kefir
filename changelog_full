@@ -6,6 +6,18 @@
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
 **933**
+* [**Додано**] [Nextendo Network](https://nextendo.network) у Kefir Hub — онлайн-гра в підтримуваних іграх на emuMMC через сервери Nextendo. До серверів Nintendo консоль не звертається.
+    * Як увімкнути: **Інструменти** → **Налаштування Кефіра** → **Nextendo** → **Nextendo на emuMMC**, утримуйте **A**. Типово Nextendo вимкнено.
+    * Підтримувані встановлені ігри мають у списку **Ігри** зелену позначку «Онлайн» з кількістю гравців.
+    * Якщо для вашої прошивки ще немає патча Nextendo, сторінка Nextendo покаже це в рядку **Статус**.
+    * Оновлення Кефіру зберігає патчі Nextendo (папки `nextendo_*`).
+    * [**Інструкція з Nextendo**](https://hub.customfw.xyz/uk/kefir-settings/#nextendo)
+* [**Оновлено**] [TorrentShopNX 2.22](https://github.com/Langegen/TorrentShopNX/releases/tag/2.22) — Черга завантажень пропускає повільні роздачі, стабілізовано рідкісні торенти, виправлено встановлення NSP, емуляторів і ретроігор та перенесено звіти про помилки на новий сервер.
+* [**Оновлено**] [pipensx 1.7.1](https://gitlab.com/pipensx-group/pipensx/-/releases/1.7.1) — Додано вебкерування завантаженнями й каталогом, теми та акцентні кольори, покращений пошук і вибір файлів, а також виправлено P2P-з’єднання, 7z-обробку та оновлення NRO.
+* [**Оновлено**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — Екран встановлення отримав детальний прогрес і швидкість, додано пропозицію перезавантажитися для дампу ключів, значок Nextendo Online з кількістю гравців, коректне оновлення запущеного файлу та виправлено видалення homebrew із папкою.
+* [**Оновлено**] [Theme Patches 47c8a5d](https://github.com/exelix11/theme-patches/commits/master) — Додано підтримку прошивки 23.5.0.
+* [**Оновлено**] [Mission Control v0.16.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.1) — Додано підтримку прошивки 23.5.0, опцію вимкнення комбінацій Home і Capture та виправлено часові мітки dscale і Bluetooth-патчі для прошивок 22.0.0+.
+* [**Оновлено**] [Hekate v6.5.5](https://github.com/CTCaer/hekate/releases/tag/v6.5.5) — Підтримка прошивки 23.5.0 у hekate, emuMMC і Nyx 1.9.5. Перевипуск від 11.11.2026 виправляє патч NOGC для FAT32-версії модуля FS.
 * [**Оновлено**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Реліз. Підтримка прошивки 23.5.0.
 
 **932**
@@ -266,6 +278,18 @@ The old HBMenu forwarder will also launch with an error. Reinstall it from 'game
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
 
 **933**
+* [**Added**] [Nextendo Network](https://nextendo.network) in Kefir Hub — online play for supported games on the emuMMC through the Nextendo servers. The console does not reach the Nintendo servers.
+    * To switch it on: **Tools** → **Kefir Settings** → **Nextendo** → **Nextendo on emuMMC**, hold **A**. Nextendo is off by default.
+    * Supported installed games show a green "Online" badge with the player count in the **Games** list.
+    * If your firmware has no Nextendo patch yet, the Nextendo page shows it in the **Status** row.
+    * A Kefir update keeps the Nextendo patches (the `nextendo_*` folders).
+    * [**Nextendo guide**](https://hub.customfw.xyz/kefir-settings/#nextendo)
+* [**Updated**] [TorrentShopNX 2.22](https://github.com/Langegen/TorrentShopNX/releases/tag/2.22) — The download queue skips slow torrents, rare torrents have been stabilized, NSP, emulator, and retro game installation has been fixed, and bug reports have been moved to a new server.
+* [**Updated**] [pipensx 1.7.1](https://gitlab.com/pipensx-group/pipensx/-/releases/1.7.1) — Added web management for downloads and the catalog, themes and accent colors, improved search and file selection, and fixed P2P connections, 7z processing, and NRO updates.
+* [**Updated**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — The installation screen now features detailed progress and speed, added a reboot prompt for key dumping, a Nextendo Online icon with player count, correct updating of the running file, and fixed homebrew deletion with its folder.
+* [**Updated**] [Theme Patches 47c8a5d](https://github.com/exelix11/theme-patches/commits/master) — Added firmware 23.5.0 support.
+* [**Updated**] [Mission Control v0.16.1](https://github.com/ndeadly/MissionControl/releases/tag/v0.16.1) — Added firmware 23.5.0 support, an option to disable Home and Capture button combinations, and fixed dscale timestamps and Bluetooth patches for firmware 22.0.0+.
+* [**Updated**] [Hekate v6.5.5](https://github.com/CTCaer/hekate/releases/tag/v6.5.5) — Firmware 23.5.0 support in hekate, emuMMC, and Nyx 1.9.5. The re-release from 11.11.2026 fixes the NOGC patch for the FAT32 version of the FS module.
 * [**Updated**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) - Release. Firmware 23.5.0 support.
     * [**Details about changes in Atmosphere**](https://github.com/Atmosphere-NX/Atmosphere/releases)
 
@@ -281,7 +305,7 @@ Custom themes do not work on firmware 23.0.0+. If your console crashes during bo
     * Linkalho — offline account linking: **Tools** → **Tools** → **Users**.
     * The Ultrahand "Kefir Menu" packages — Kefir settings, software, themes and translation are now in Kefir Hub. Semi-Stock, Reboot and Shutdown stay in Ultrahand.
     * DBI stays in Kefir.
-    * [**Kefir Hub documentation**](https://hub.customfw.xyz/en/)
+    * [**Kefir Hub documentation**](https://hub.customfw.xyz/)
 * [**Updated**] [Atmosphere 1.12.2](https://github.com/rashevskyv/Kefirosphere) — support for firmware 23.5.0:
     * fusee recognizes the new package1 of firmware 23.5.0.
     * emuMMC works with the FS module of firmware 23.5.0 (FAT32 and exFAT).
