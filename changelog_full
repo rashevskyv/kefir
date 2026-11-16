@@ -7,6 +7,7 @@
 
 **934**
 * [**Додано**] [Hekate](https://github.com/CTCaer/hekate) — автоматичний дамп warmboot на Mariko. Під час кожного запуску hekate перевіряє, чи є на карті пам'яті warmboot для перепалених запобіжників. Якщо його немає, hekate бере warmboot з package1 sysMMC і зберігає його в `warmboot_mariko/` та `bootloader/sys/l4t/sc7exit_b01.bin`. Заходити для цього в офіційну прошивку не треба. Це потрібно, коли офіційна прошивка після оновлення перепалила запобіжники, а emuMMC лишилася на старішій версії: без такого файлу вона не запускається або не прокидається зі сну. Ідея з [Warmboot-Extractor](https://github.com/sthetix/Warmboot-Extractor).
+* [**Виправлено**] [TegraExplorer](https://github.com/rashevskyv/TegraExplorer) — биті ключі або ключі з іншої консолі більше не блокують автоматичні скрипти, зокрема оновлення. Якщо `switch/prod.keys` не відкриває NAND цієї консолі, TegraExplorer видаляє файл і знімає ключі заново через Lockpick_RCM. Раніше старий файл лишався на карті пам'яті, і TegraExplorer щоразу показував помилку «Keys could not be verified».
 
 **933**
 * [**Додано**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — новий головний застосунок Кефіру. Він стоїть на місці `hbmenu.nro` і замінює кілька окремих програм:
@@ -270,6 +271,7 @@ Custom themes do not work on firmware 23.0.0+. If your console crashes during bo
 
 **934**
 * [**Added**] [Hekate](https://github.com/CTCaer/hekate) — automatic warmboot dump on Mariko. At every start hekate checks that the SD card has a warmboot for the burnt fuses. If there is none, hekate takes the warmboot from the sysMMC package1 and saves it to `warmboot_mariko/` and `bootloader/sys/l4t/sc7exit_b01.bin`. You do not need to boot the official firmware for this. It is needed when the official firmware burnt fuses after an update while the emuMMC stays on an older version: without this file it does not boot or does not wake from sleep. Idea from [Warmboot-Extractor](https://github.com/sthetix/Warmboot-Extractor).
+* [**Fixed**] [TegraExplorer](https://github.com/rashevskyv/TegraExplorer) — broken keys or keys from another console no longer block the automatic scripts, such as the update. If `switch/prod.keys` does not open the NAND of this console, TegraExplorer deletes the file and dumps the keys again with Lockpick_RCM. Before, the old file stayed on the memory card, and TegraExplorer showed the "Keys could not be verified" error every time.
 
 **933**
 * [**Added**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — the new main app of Kefir. It takes the place of `hbmenu.nro` and replaces several separate apps:
