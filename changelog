@@ -5,7 +5,10 @@
 Старий форвардер HBMenu буде також запускатися з помилкою. Перевстановіть його з `games/Homebrew menu [03DB12780BD84000][v0].nsp` через DBI як гру. Щоб потрапити в HBMenu без форвардера, запустіть Альбоми, утримуючи кнопку R (тримайте, поки не запуститься). Подробиці тут - https://switch.customfw.xyz/hbl
 Кастомні теми не працюють на прошивці 23.0.0+. Якщо консоль видає помилку під час увімкнення — видаліть папку `atmosphere/contents/0100000000001000/` з карти пам'яті
 
-**934**
+**938**
+* [**Видалено**] Ultrahand-Reload (`switch/Ultrahand-Reload`). Він приходив разом з [nx-ovlloader](https://github.com/ppkantorski/nx-ovlloader), а Кефіру не потрібен. Під час оновлення його папка видаляється з карти пам'яті.
+
+**937**
 * [**Оновлено**] [Kefir Hub 0.14.394](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.394) — зміни після 0.14.372:
     * **Інструменти** → **Кошик**. Видалені резервні копії збережень, пакети профілів і користувачі тепер не стираються, а потрапляють у кошик. Їх можна відновити протягом 30 днів. Кожне видалення і відновлення записується в `/config/kefir/actions.log`.
     * Автоматична резервна копія збережень. Під час кожного запуску Kefir Hub у фоні копіює збереження, які змінилися. Налаштування: **Збереження** → **Автоматична резервна копія** (вивантаження копій, ліміт розміру, виключені ігри).
@@ -26,7 +29,7 @@
 * [**Оновлено**] [Ultrahand Overlay v2.5.4](https://github.com/ppkantorski/Ultrahand-Overlay/releases/tag/v2.5.4) — Кефір тепер ставить офіційний Ultrahand замість власної збірки. Перемикання в Semi-stock, вимкнення і перезавантаження підтверджуються утриманням кнопки A. Нове: команди `home-press` і `home-hold`, пункт пам'яті 10 МБ, виправлено протікання натискань в eShop. У пакеті з’явився `switch/Ultrahand-Reload/Ultrahand-Reload.nro` з офіційного релізу.
 * [**Оновлено**] [nx-ovlloader v2.0.3](https://github.com/ppkantorski/nx-ovlloader/releases/tag/v2.0.3) — нові стандартні розміри пам'яті для різних версій HOS, внутрішній heap збільшено до 32 КБ.
 * [**Виправлено**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — fusee тепер правильно ставить патч NOGC у FAT32-версію (без exFAT) модуля FS прошивки 23.5.0 ([коміт 3e89150](https://github.com/Atmosphere-NX/Atmosphere/commit/3e8915011e1de89f595462d929c1cc3294470896)). Раніше fusee записував одну з двох частин патча за неправильною адресою. Виправлення стосується запуску через fusee.
-* [**Виправлено**] [Sys Con](https://github.com/o0Zz/sys-con) — за замовчуванням тепер режим `hiddbg` замість `mitm`. З `mitm` після Super Mario Odyssey 1.3.0 або Zelda BOTW 1.6.0 наступна програма запускалася з чорним екраном (HOS 23.0.1). У режимі `hiddbg` USB-контролери не мають вібрації та гіроскопа в іграх. Повернути `mitm` можна в `config/sys-con/config.ini` (`mode=mitm`).
+* [**Виправлено**] [Sys Con](https://github.com/o0Zz/sys-con) — виправлено чорний екран після деяких ігор Nintendo, наприклад Super Mario Odyssey та The Legend of Zelda: Breath of the Wild: після виходу з такої гри наступна програма запускалася з чорним екраном. Для цього sys-con за замовчуванням працює в режимі `hiddbg` замість `mitm`. У режимі `hiddbg` USB-контролери не мають вібрації та гіроскопа в іграх. Повернути `mitm` можна в `config/sys-con/config.ini` (`mode=mitm`).
 
 **933**
 * [**Додано**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — новий головний застосунок Кефіру. Він стоїть на місці `hbmenu.nro` і замінює кілька окремих програм:
@@ -74,7 +77,10 @@ The patch for legacy homebrew support no longer works, so some older homebrew ap
 The old HBMenu forwarder will also launch with an error. Reinstall it from 'games/Homebrew menu [03DB12780BD84000][v0].nsp' through DBI as a game. To access HBMenu without the forwarder, launch Album while holding the R button (hold until it opens). Details here - https://switch.customfw.xyz/hbl
 Custom themes do not work on firmware 23.0.0+. If your console crashes during boot, delete the 'atmosphere/contents/0100000000001000/' folder from your SD card.
 
-**934**
+**938**
+* [**Removed**] Ultrahand-Reload (`switch/Ultrahand-Reload`). It came with [nx-ovlloader](https://github.com/ppkantorski/nx-ovlloader), and Kefir does not need it. The update deletes its folder from the SD card.
+
+**937**
 * [**Updated**] [Kefir Hub 0.14.394](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.394) — changes since 0.14.372:
     * **Tools** → **Trash**. Deleted save backups, profile packs and users are no longer erased: they go to the Trash. You can restore them for 30 days. Every delete and restore is written to `/config/kefir/actions.log`.
     * Automatic save backup. At every start Kefir Hub copies, in the background, the saves that changed. Settings: **Saves** → **Auto backup** (upload, size limit, excluded games).
@@ -95,7 +101,7 @@ Custom themes do not work on firmware 23.0.0+. If your console crashes during bo
 * [**Updated**] [Ultrahand Overlay v2.5.4](https://github.com/ppkantorski/Ultrahand-Overlay/releases/tag/v2.5.4) — Kefir now ships the official Ultrahand instead of its own build. Switching to Semi-stock, shutdown and reboot are confirmed by holding the A button. New: the `home-press` and `home-hold` commands, a 10 MB memory option, a fix for button presses leaking into the eShop. The package now has `switch/Ultrahand-Reload/Ultrahand-Reload.nro` from the official release.
 * [**Updated**] [nx-ovlloader v2.0.3](https://github.com/ppkantorski/nx-ovlloader/releases/tag/v2.0.3) — new default memory sizes for each HOS version, the internal heap is now 32 KB.
 * [**Fixed**] [Atmosphere](https://github.com/rashevskyv/Kefirosphere) — fusee now applies the NOGC patch correctly to the FAT32 (non-exFAT) version of the FS module on firmware 23.5.0 ([commit 3e89150](https://github.com/Atmosphere-NX/Atmosphere/commit/3e8915011e1de89f595462d929c1cc3294470896)). Before, fusee wrote one of the two patch parts at a wrong address. The fix is for boot through fusee.
-* [**Fixed**] [Sys Con](https://github.com/o0Zz/sys-con) — the default mode is now `hiddbg` instead of `mitm`. With `mitm`, the next app started with a black screen after Super Mario Odyssey 1.3.0 or Zelda BOTW 1.6.0 (HOS 23.0.1). In `hiddbg` mode USB controllers have no rumble and no motion in games. To get `mitm` back, set `mode=mitm` in `config/sys-con/config.ini`.
+* [**Fixed**] [Sys Con](https://github.com/o0Zz/sys-con) — fixed the black screen after some Nintendo games, for example Super Mario Odyssey and The Legend of Zelda: Breath of the Wild: after you exit such a game, the next app started with a black screen. For this, sys-con now runs in `hiddbg` mode by default instead of `mitm`. In `hiddbg` mode USB controllers have no rumble and no motion in games. To get `mitm` back, set `mode=mitm` in `config/sys-con/config.ini`.
 
 **933**
 * [**Added**] [Kefir Hub 0.14.372](https://github.com/rashevskyv/kefir-hub/releases/tag/0.14.372) — the new main app of Kefir. It takes the place of `hbmenu.nro` and replaces several separate apps:

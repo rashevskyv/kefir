@@ -112,6 +112,7 @@ if exist "%sd%:\atmosphere\contents\0000000000534C56" (RD /s /q "%sd%:\atmospher
 if exist "%sd%:\atmosphere\contents\0100000000000081" (RD /s /q "%sd%:\atmosphere\contents\0100000000000081")
 if exist "%sd%:\atmosphere\contents\00FF46554E43544C" (RD /s /q "%sd%:\atmosphere\contents\00FF46554E43544C")
 if exist "%sd%:\switch\.overlays\NX-FanControl.ovl" (del "%sd%:\switch\.overlays\NX-FanControl.ovl")
+if exist "%sd%:\switch\Ultrahand-Reload" (RD /s /q "%sd%:\switch\Ultrahand-Reload")
 if exist "%sd%:\atmosphere\contents\010000000000bd00" (RD /s /q "%sd%:\atmosphere\contents\010000000000bd00")
 if exist "%sd%:\atmosphere\contents\00FF0000636C6BFF" (RD /s /q "%sd%:\atmosphere\contents\00FF0000636C6BFF")
 if exist "%sd%:\atmosphere\contents\00FF007468656D65" (RD /s /q "%sd%:\atmosphere\contents\00FF007468656D65")

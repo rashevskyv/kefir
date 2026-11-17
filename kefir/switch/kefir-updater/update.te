@@ -149,6 +149,7 @@ if (fsexists("sd:/kefir")) {
 	delfile("sd:/atmosphere/stratosphere.romfs");
 	deldir("sd:/switch/NX-Activity-Log/");
 	deldir("sd:/switch/fakenews-injector");
+	deldir("sd:/switch/Ultrahand-Reload");
 }
 
 delfile("sd:/hekate_ctcaer*.bin");
